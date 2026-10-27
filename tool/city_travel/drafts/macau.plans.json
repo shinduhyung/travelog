@@ -1,0 +1,782 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "Heritage lovers who want the historic centre on foot, with a harbour finish.",
+      "days": [
+        {
+          "title": "Historic centre, harbour and sunset",
+          "stops": [
+            {
+              "place": "ruins",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Go early to avoid crowds. Check opening hours on the day."
+            },
+            {
+              "place": "guia",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "Climb for clear views in the morning. Check opening hours on the day."
+            },
+            {
+              "place": "red_market",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Morning market for a light snack. Usually closes early afternoon."
+            },
+            {
+              "place": "ama",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Taxi from Senado Square is short. Check opening hours on the day."
+            },
+            {
+              "place": "tower",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Aim for sunset. Check the sunset time for the day."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Food-focused visitors who want market stalls, Taipa cafés and a night street market.",
+      "days": [
+        {
+          "title": "Markets, Taipa cafés and street food",
+          "stops": [
+            {
+              "place": "red_market",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Best in the morning. Good for breakfast and local snacks."
+            },
+            {
+              "place": "ama",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Short walk or taxi from the market. Check opening hours on the day."
+            },
+            {
+              "place": "taipa_houses",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Taxi or bus across the bridge to Taipa. Closed one day a week, so check."
+            },
+            {
+              "place": "rua_cunha",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Egg tarts, pork chop buns and coffee. Shops open daytime, check on the day.",
+              "meal": true
+            },
+            {
+              "place": "taipa_market",
+              "at": "18:00",
+              "minutes": 75,
+              "note": "Evening street market for dinner. Usually open in the evening."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day-nightlife",
+      "length": "day",
+      "style": "nightlife",
+      "nights": 0,
+      "for": "Casino and show fans who want a Cotai Strip day that ends with late-night bars.",
+      "days": [
+        {
+          "title": "Cotai Strip, shows and casino floors",
+          "stops": [
+            {
+              "place": "aqua",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Best on a weekday or a rainy day. Check hours on the day."
+            },
+            {
+              "place": "jiuzhouyang",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Same strip, short walk from Aqua World. Check hours on the day."
+            },
+            {
+              "place": "lionsgate",
+              "at": "18:00",
+              "minutes": 150,
+              "note": "Evening is the best time for the shows. Check the schedule on the day."
+            },
+            {
+              "place": "morpheus",
+              "at": "21:00",
+              "minutes": 60,
+              "note": "Evening show. Check hours on the day."
+            },
+            {
+              "place": "grand_lisboa",
+              "at": "22:30",
+              "minutes": 45,
+              "note": "Open 24 hours. Taxi back to Senado Square. Check specific areas on the day."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Heritage walk on foot in Senado Square, then the Outer Harbour sights on day two.",
+      "days": [
+        {
+          "title": "Senado Square and dusk at the ruins",
+          "stops": [
+            {
+              "place": "senado",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Start here. The square is open all day, so it is a good first stop."
+            },
+            {
+              "place": "penha_hill",
+              "at": "16:45",
+              "minutes": 45,
+              "note": "Late afternoon view over the historic centre. Check hours on the day."
+            },
+            {
+              "place": "ruins",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Go near dusk for photos. Hours vary, so check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Early start around the Outer Harbour",
+          "stops": [
+            {
+              "place": "lou_lim_ioc",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Morning is the best time for the garden. Check hours on the day."
+            },
+            {
+              "place": "guia",
+              "at": "09:45",
+              "minutes": 75,
+              "note": "Clear views in the morning. Walk up from Senado Square."
+            },
+            {
+              "place": "ama",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Go in the morning. Taxi or bus to the Outer Harbour, about 15 to 25 minutes."
+            },
+            {
+              "place": "tower",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Indoor, with sunset views. Check the closing time on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Senado Square"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Macanese food from a morning market, Taipa Village cafés and a night food market.",
+      "days": [
+        {
+          "title": "Market breakfast and the Outer Harbour",
+          "stops": [
+            {
+              "place": "red_market",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Best in the morning. Hours end early afternoon, so check on the day."
+            },
+            {
+              "place": "ama",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Temple visit after your market snack. Morning is best."
+            },
+            {
+              "place": "tower",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Sunset views. Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Taipa Village: cafés and street food",
+          "stops": [
+            {
+              "place": "rua_cunha",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch and egg tarts on the street. Shops open in the daytime, so check on the day."
+            },
+            {
+              "place": "taipa_houses",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Old Portuguese-style houses. Closed one day a week, so check first."
+            },
+            {
+              "place": "taipa_market",
+              "at": "18:30",
+              "minutes": 75,
+              "note": "Evening street market for dinner. Usually open in the evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Senado Square"
+    },
+    {
+      "id": "1n-nightlife",
+      "length": "1n",
+      "style": "nightlife",
+      "nights": 1,
+      "for": "Casino nights in Senado Square, then the big resorts and shows on the Cotai Strip.",
+      "days": [
+        {
+          "title": "Senado Square evening",
+          "stops": [
+            {
+              "place": "senado",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Easy first stop before dark. The square is open into the evening."
+            },
+            {
+              "place": "ruins",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Go at dusk for photos. Check hours on the day."
+            },
+            {
+              "place": "grand_lisboa",
+              "at": "19:30",
+              "minutes": 45,
+              "note": "Iconic casino. Open 24 hours, but check which areas are open."
+            }
+          ]
+        },
+        {
+          "title": "Cotai Strip: shows and late night",
+          "stops": [
+            {
+              "place": "aqua",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Indoor pool and rides. A good choice on a rainy day. Check hours."
+            },
+            {
+              "place": "jiuzhouyang",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Cultural stop before the evening. Check hours on the day."
+            },
+            {
+              "place": "morpheus",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Evening show and bar. Check the schedule on the day."
+            },
+            {
+              "place": "lionsgate",
+              "at": "20:30",
+              "minutes": 150,
+              "note": "Late-evening entertainment and bars. Usually open until late; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Senado Square and Cotai Strip"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Heritage lovers who want the UNESCO historic centre on foot, then a slower Taipa afternoon.",
+      "days": [
+        {
+          "title": "Senado Square heritage walk",
+          "stops": [
+            {
+              "place": "ruins",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Go early for fewer people. Check opening hours on the day."
+            },
+            {
+              "place": "guia",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "Morning gives the clearest views. Check opening hours on the day."
+            },
+            {
+              "place": "lou_lim_ioc",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Quiet garden a short walk from Senado Square."
+            },
+            {
+              "place": "penha_hill",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Late afternoon light is best for the view."
+            },
+            {
+              "place": "senado",
+              "at": "18:15",
+              "minutes": 60,
+              "note": "Evening square, good for dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Outer Harbour, then Taipa",
+          "stops": [
+            {
+              "place": "ama",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Morning is the best time to visit."
+            },
+            {
+              "place": "red_market",
+              "at": "09:45",
+              "minutes": 60,
+              "note": "Usually open until early afternoon. Good for a morning snack."
+            },
+            {
+              "place": "taipa_houses",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Closed one day a week. Check on the day. Take a taxi or bus from the harbour."
+            },
+            {
+              "place": "rua_cunha",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Cafés and shops, best late morning or afternoon."
+            },
+            {
+              "place": "taipa_market",
+              "at": "18:30",
+              "minutes": 75,
+              "note": "Evening street market. Usually open in the evening, check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Senado Square & Outer Harbour"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want Macanese dishes, a food walk and a relaxed Taipa street market.",
+      "days": [
+        {
+          "title": "Market breakfast and food walk",
+          "stops": [
+            {
+              "place": "red_market",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning visit. Open until early afternoon, check on the day."
+            },
+            {
+              "place": "ama",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Walk or take a short taxi from the market."
+            },
+            {
+              "place": "tower",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Sunset is the best time. Check closing time on the day."
+            },
+            {
+              "place": "senado_food_walk",
+              "at": "19:30",
+              "minutes": 150,
+              "note": "Tasting walk through Senado Square. Book ahead and check times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Taipa village food day",
+          "stops": [
+            {
+              "place": "ruins",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Early visit before the crowds. Check opening hours on the day."
+            },
+            {
+              "place": "taipa_houses",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Closed one day a week. Check on the day."
+            },
+            {
+              "place": "rua_cunha",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Lunch stop. Cafés and shops are open in the daytime."
+            },
+            {
+              "place": "taipa_market",
+              "at": "18:00",
+              "minutes": 75,
+              "note": "Evening street food. Usually open in the evening, check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Senado Square & Taipa Village"
+    },
+    {
+      "id": "2n-nightlife",
+      "length": "2n",
+      "style": "nightlife",
+      "nights": 2,
+      "for": "Casino and show fans who want a full day on the Cotai Strip and late nights on Senado Square.",
+      "days": [
+        {
+          "title": "Cotai Strip day and night",
+          "stops": [
+            {
+              "place": "ocean",
+              "at": "09:00",
+              "minutes": 300,
+              "note": "Weekday mornings are quieter. Check opening hours on the day."
+            },
+            {
+              "place": "lionsgate",
+              "at": "17:30",
+              "minutes": 150,
+              "note": "Evening is best. Usually open until late, check on the day."
+            },
+            {
+              "place": "morpheus",
+              "at": "20:30",
+              "minutes": 60,
+              "note": "Evening show. Check times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Harbour views and Senado nights",
+          "stops": [
+            {
+              "place": "tower",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Sunset from the top. Check closing time on the day."
+            },
+            {
+              "place": "senado",
+              "at": "18:45",
+              "minutes": 60,
+              "note": "Dinner and people-watching in the square."
+            },
+            {
+              "place": "grand_lisboa",
+              "at": "20:00",
+              "minutes": 45,
+              "note": "Open 24 hours. Check the areas you want on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Cotai Strip & Senado Square"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Heritage walks in the historic centre, with a harbour day and a Taipa day.",
+      "stay_area": "Senado Square",
+      "days": [
+        {
+          "title": "Historic centre at dawn and dusk",
+          "stops": [
+            {
+              "place": "ruins",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Go early to avoid the crowds. Hours vary, so check on the day."
+            },
+            {
+              "place": "guia",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "Clear views in the morning. Check opening hours on the day."
+            },
+            {
+              "place": "lou_lim_ioc",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Usually open in daytime. Check on the day."
+            },
+            {
+              "place": "senado",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Good for the evening atmosphere."
+            }
+          ]
+        },
+        {
+          "title": "Outer Harbour: market, temple and sunset",
+          "stops": [
+            {
+              "place": "red_market",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning market. Usually closes early afternoon."
+            },
+            {
+              "place": "ama",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Visit in the morning. Check hours on the day."
+            },
+            {
+              "place": "tower",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Aim for sunset. Times change through the year."
+            }
+          ]
+        },
+        {
+          "title": "Taipa Village and back to Senado",
+          "stops": [
+            {
+              "place": "taipa_houses",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Closed one day a week. Check on the day."
+            },
+            {
+              "place": "rua_cunha",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Good for a late-morning lunch of Macanese snacks."
+            },
+            {
+              "place": "taipa_market",
+              "at": "18:00",
+              "minutes": 75,
+              "note": "Evening street market. Check the schedule on the day."
+            },
+            {
+              "place": "penha_hill",
+              "at": "20:30",
+              "minutes": 45,
+              "note": "View over the old town. Check hours first."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Egg tarts, pork chop buns and Macanese home cooking, with a food walk.",
+      "stay_area": "Senado Square",
+      "days": [
+        {
+          "title": "Morning ruins, then the food walk",
+          "stops": [
+            {
+              "place": "ruins",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Early start. Hours vary, so check on the day."
+            },
+            {
+              "place": "guia",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "Morning views. Check hours on the day."
+            },
+            {
+              "place": "senado_food_walk",
+              "at": "16:30",
+              "minutes": 150,
+              "note": "Guided food tour. Book ahead if you can. Check times on the day."
+            },
+            {
+              "place": "senado",
+              "at": "19:15",
+              "minutes": 60,
+              "note": "Finish the evening in the square."
+            }
+          ]
+        },
+        {
+          "title": "Outer Harbour market morning",
+          "stops": [
+            {
+              "place": "red_market",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Best food shopping in the morning. Closes early afternoon."
+            },
+            {
+              "place": "ama",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Temple visit close to the market. Check hours on the day."
+            },
+            {
+              "place": "tower",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Sunset views. Dining options inside."
+            }
+          ]
+        },
+        {
+          "title": "Taipa for lunch and the night market",
+          "stops": [
+            {
+              "place": "taipa_houses",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Closed one day a week. Check on the day."
+            },
+            {
+              "place": "rua_cunha",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Cafés and bakeries for lunch. Check opening hours."
+            },
+            {
+              "place": "taipa_market",
+              "at": "18:30",
+              "minutes": 75,
+              "note": "Evening food stalls. Good for dinner. Check on the day."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3n-nightlife",
+      "length": "3n",
+      "style": "nightlife",
+      "nights": 3,
+      "for": "Casino resorts, light shows and late bars on the Cotai Strip.",
+      "stay_area": "Cotai Strip",
+      "days": [
+        {
+          "title": "Senado at dusk and late casino",
+          "stops": [
+            {
+              "place": "ruins",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Dusk photos. Hours vary, so check on the day."
+            },
+            {
+              "place": "senado",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Square is lively in the evening."
+            },
+            {
+              "place": "grand_lisboa",
+              "at": "20:00",
+              "minutes": 45,
+              "note": "Open 24 hours. Check specific areas on the day."
+            }
+          ]
+        },
+        {
+          "title": "Cotai Strip: Ocean Kingdom and evening shows",
+          "stops": [
+            {
+              "place": "ocean",
+              "at": "09:00",
+              "minutes": 300,
+              "note": "Weekday mornings are quieter. Check hours on the day."
+            },
+            {
+              "place": "lionsgate",
+              "at": "19:00",
+              "minutes": 150,
+              "note": "Evening entertainment. Check times on the day."
+            },
+            {
+              "place": "morpheus",
+              "at": "22:00",
+              "minutes": 60,
+              "note": "Late show. Check hours and tickets first."
+            }
+          ]
+        },
+        {
+          "title": "Harbour morning, sunset, then casinos",
+          "stops": [
+            {
+              "place": "red_market",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning market, then head to the harbour."
+            },
+            {
+              "place": "ama",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Quiet in the morning. Check hours on the day."
+            },
+            {
+              "place": "tower",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Sunset from the tower. Check times on the day."
+            },
+            {
+              "place": "grand_lisboa",
+              "at": "20:30",
+              "minutes": 45,
+              "note": "Last night in the casino area. Open 24 hours."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

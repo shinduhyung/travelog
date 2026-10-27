@@ -1,0 +1,189 @@
+{
+  "currency": "VND",
+  "usd_rate": 25831.1533,
+  "intro_line": "Beaches, dragon bridges and sea views, all within easy reach.",
+  "intro": "Da Nang rewards visitors with long sandy beaches, a lively food scene and easy trips to nearby Hoi An. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "beach",
+      "label": "Beaches"
+    },
+    {
+      "id": "food",
+      "label": "Street food"
+    },
+    {
+      "id": "culture",
+      "label": "Old town"
+    },
+    {
+      "id": "adventure",
+      "label": "Motorbike"
+    },
+    {
+      "id": "history",
+      "label": "Museums"
+    }
+  ],
+  "areas": [
+    "My Khe Beach",
+    "Hai Chau (District 1)",
+    "Son Tra Peninsula",
+    "Tran Cao Van (Thanh Khe)"
+  ],
+  "taxi": {
+    "flag_day": 15000,
+    "flag_airport": 15000,
+    "per_km": 15000,
+    "min_fare": 15000
+  },
+  "road_factor": 1.3,
+  "city_kmh": 20,
+  "transit_facts": [
+    "No metro or tram. The city has 19 local bus lines, all new and air-conditioned, with a flat 8,000 ₫ fare inside city limits.",
+    "Use the DanaBus app or danangbus.vn for routes. Avoid the look-alike danabus.vn site, which has outdated prices.",
+    "Taxis are reasonable. Mai Linh, Vinasun and Song Han are reliable. Grab is widely used and shows prices upfront.",
+    "Motorbike taxis (xe ôm) are cheap for short hops. Helmets are required by law, so insist the driver provides one.",
+    "Rent a scooter or 4-speed bike near Tran Cao Van. Driving is chaotic, so many visitors hire a car with a driver.",
+    "Electric bicycles need no licence and suit city travel. Walking works well along the beach and in central streets. No ferry serves the city."
+  ],
+  "airports": [
+    {
+      "code": "DAD",
+      "name": "Da Nang International Airport",
+      "primary": true,
+      "note": "Main airport for the city, about 3-4 km southwest of the centre.",
+      "options": [
+        {
+          "mode": "City Bus #6 or #10",
+          "to": "Centre and My Khe Beach",
+          "price": "8,000 ₫",
+          "time": "check locally",
+          "note": "Cheapest option. Buses cross the Han River toward the centre."
+        },
+        {
+          "mode": "Walking",
+          "to": "City centre",
+          "price": "Free",
+          "time": "check locally",
+          "note": "Only for travellers with very light luggage."
+        },
+        {
+          "mode": "Grab",
+          "to": "Any district",
+          "price": "check locally",
+          "time": "10-20 min",
+          "note": "Walk to the dedicated pickup point across the taxi lines."
+        },
+        {
+          "mode": "Taxi (Mai Linh, Vinasun, Song Han)",
+          "to": "Any district",
+          "price": "around 70,000 ₫",
+          "time": "10-20 min",
+          "note": "Use the meter. Airport wardens can radio a taxi for you."
+        },
+        {
+          "mode": "Motorbike taxi",
+          "to": "Nearby districts",
+          "price": "check locally",
+          "time": "10-20 min",
+          "note": "Agree the fare first. Ask for a helmet."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Ba Na Hills Cable Car",
+    "Golden Bridge",
+    "Dragon Bridge, Da Nang",
+    "Lady Buddha",
+    "Hoi An Old Town",
+    "My Khe Beach",
+    "An Bang Beach",
+    "Asia Park",
+    "Da Nang Bay",
+    "Hoi An Basket Boat",
+    "Hoi An Night Market",
+    "Japanese Covered Bridge",
+    "Museum of Cham Sculpture",
+    "Sun World Ba Na Hills",
+    "VinWonders Nam Hoi An"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Da Nang",
+      "https://en.wikivoyage.org/wiki/Da%20Nang"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    16.06778,
+    108.22083
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 24,
+      "low": 20,
+      "rain_days": 20
+    },
+    {
+      "high": 24,
+      "low": 20,
+      "rain_days": 13
+    },
+    {
+      "high": 27,
+      "low": 22,
+      "rain_days": 10
+    },
+    {
+      "high": 30,
+      "low": 24,
+      "rain_days": 8
+    },
+    {
+      "high": 32,
+      "low": 26,
+      "rain_days": 13
+    },
+    {
+      "high": 34,
+      "low": 27,
+      "rain_days": 10
+    },
+    {
+      "high": 33,
+      "low": 27,
+      "rain_days": 16
+    },
+    {
+      "high": 33,
+      "low": 27,
+      "rain_days": 17
+    },
+    {
+      "high": 31,
+      "low": 26,
+      "rain_days": 22
+    },
+    {
+      "high": 28,
+      "low": 24,
+      "rain_days": 26
+    },
+    {
+      "high": 27,
+      "low": 23,
+      "rain_days": 24
+    },
+    {
+      "high": 24,
+      "low": 21,
+      "rain_days": 25
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

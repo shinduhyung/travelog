@@ -1,0 +1,282 @@
+{
+  "styles": [
+    {
+      "id": "beach",
+      "label": "Beaches",
+      "blurb": "Pebble beaches, sea swims and sunset walks along the Promenade."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Socca, market stalls and seafront dinners in the Old Town."
+    },
+    {
+      "id": "culture",
+      "label": "Old Town",
+      "blurb": "Narrow lanes, baroque churches and the Cours Saleya market."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Vieux Nice",
+      "range": [
+        110,
+        260
+      ],
+      "why": "Walk to the Old Town lanes, Cours Saleya market and the seafront; best for food lovers, but streets are narrow and lively at night.",
+      "center": [
+        43.695,
+        7.275
+      ]
+    },
+    {
+      "area": "Promenade des Anglais",
+      "range": [
+        150,
+        400
+      ],
+      "why": "Sea views and the beach are right outside; a short walk to the Old Town and tram line 2 at the airport route.",
+      "center": [
+        43.695,
+        7.262
+      ]
+    },
+    {
+      "area": "Carré d'Or",
+      "range": [
+        120,
+        300
+      ],
+      "why": "Quiet shopping streets between the station and the sea; good value and an easy tram ride to the airport.",
+      "center": [
+        43.7015,
+        7.265
+      ]
+    },
+    {
+      "area": "Cimiez",
+      "range": [
+        130,
+        320
+      ],
+      "why": "Leafy hill district with the Matisse and Chagall museums; calmer nights but a steeper walk or a bus or taxi to the sea.",
+      "center": [
+        43.723,
+        7.277
+      ]
+    }
+  ],
+  "food": [
+    "Try socca, a thin chickpea flour pancake, at a counter in the Old Town. Eat it hot and sold by the slice.",
+    "Visit the Cours Saleya market in the morning for fruit, cheese and olives. Check the day, as the market hours change in winter.",
+    "Order pissaladière (onion tart) and pan bagnat (tuna roll) for a cheap lunch. Expect about €6-12 at a simple bakery.",
+    "Book seafront or Old Town dinners ahead in summer. Prices vary a lot, so check the menu before you sit down.",
+    "Stay away from restaurants with staff outside calling you in. Walk a few streets off the main square for better food."
+  ],
+  "more_time": [
+    "Take a bus trip to Monaco or Eze for a half day. Lignes d'Azur buses cost €1.70 a ride, so validate each trip.",
+    "Spend a day in Cannes or Antibes. Check bus or train times on the day, as schedules change.",
+    "Go to Corsica for a longer break. Ferries run from Nice port, so check local schedules before you go."
+  ],
+  "type_month_fit": {
+    "beach": [
+      0.2,
+      0.25,
+      0.45,
+      0.65,
+      0.85,
+      1,
+      1,
+      1,
+      0.9,
+      0.6,
+      0.35,
+      0.2
+    ],
+    "food": [
+      0.6,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.75,
+      0.7
+    ],
+    "culture": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      0.9,
+      0.75,
+      0.75,
+      0.9,
+      0.95,
+      0.8,
+      0.65
+    ],
+    "art": [
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.75,
+      0.65,
+      0.6,
+      0.6,
+      0.7,
+      0.75,
+      0.85,
+      0.85
+    ],
+    "romance": [
+      0.55,
+      0.6,
+      0.7,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.75,
+      0.55,
+      0.5
+    ]
+  },
+  "best_for": [
+    "food",
+    "culture",
+    "romance"
+  ],
+  "recommend": {
+    "why": "Two nights give you time for the Old Town, one beach day and a museum visit without rushing."
+  },
+  "month_notes": [
+    "Jan: Cool, about 5-13°C, with around 6 rain days. Good for museums and quiet city walks.",
+    "Feb: Still cool, about 6-13°C, with around 7 rain days. Pack a warm layer for evenings.",
+    "Mar: Mild, about 7-15°C, with around 7 rain days. Spring starts; sights are quieter.",
+    "Apr: Pleasant, about 10-18°C, with around 8 rain days. Good for walking and first sea views.",
+    "May: Warm, about 14-21°C, with around 9 rain days. A strong time for the Old Town and fewer crowds.",
+    "Jun: Warm, about 18-25°C, with around 7 rain days. Beach season begins; book stays early.",
+    "Jul: Hot, about 21-28°C, with around 3 rain days. Busy and sunny; swim early or late.",
+    "Aug: Hottest, about 21-29°C, with around 4 rain days. Peak crowds and prices; plan shade breaks.",
+    "Sep: Warm, about 18-25°C, with around 6 rain days. Sea is still warm and crowds ease.",
+    "Oct: Mild, about 14-21°C, with around 9 rain days. Good for food and culture; pack a light rain jacket.",
+    "Nov: Cool, about 9-16°C, with around 9 rain days. Quieter streets and fewer beach days.",
+    "Dec: Cool, about 6-14°C, with around 6 rain days. Quiet city; check opening hours before you go."
+  ],
+  "climate_guide": {
+    "summary": "Mild Mediterranean climate: warm, sunny summers and mild winters, with rain spread across the year.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to June and September",
+        "text": "Highs of about 21-25°C and fewer rain days than autumn. Good for walking and the beach."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot summers (July and August)",
+        "text": "Highs of 28-29°C and the fewest rain days, around 3-4. Go to the beach early and rest in the afternoon."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest in May and October",
+        "text": "About 9 rain days a month. Keep a compact umbrella and plan museum visits for showery days."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool winters",
+        "text": "Lows of about 5-7°C from December to February. Bring a warm jacket for evenings by the sea."
+      },
+      {
+        "icon": "🌅",
+        "title": "Shoulder seasons",
+        "text": "April and October are mild, with highs of 18-21°C. Good for sightseeing with smaller crowds."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers for changing temperatures, comfortable walking shoes for the hills, sun hat and sunscreen for summer, and a light rain jacket for autumn."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Tram line 2 to the airport and centre, then walk the Old Town and seafront.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "best": false,
+        "text": "No metro in Nice. Use tram line 2 and buses instead."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": false,
+        "text": "Lignes d'Azur buses charge €1.70 a ride, with a transfer allowed within 74 minutes. Buy a top-up card or pay with contactless. Always validate."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": false,
+        "text": "Taxis are pricey and some overcharge. Uber and Bolt both operate, with a ride-share pick-up zone at the airport."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "best": false,
+        "text": "Driving is hard in the centre: one-way streets and scarce metered parking. Use an underground car park, roughly €8-10 a day."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is walkable. Old Town and the seafront are close to each other."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "best": true,
+        "text": "Tram line 2 links the airport with the centre (Jean Médecin). It runs about every 8 minutes on weekdays, roughly 04:30 to after midnight."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "best": false,
+        "text": "Ferries run from Nice port to Corsica. Check local schedules before you go."
+      },
+      {
+        "mode": "Shared bikes / e-scooters",
+        "has": true,
+        "best": false,
+        "text": "Shared bikes and e-scooters are available in parts of the city."
+      }
+    ]
+  }
+}

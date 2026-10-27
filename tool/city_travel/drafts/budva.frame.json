@@ -1,0 +1,269 @@
+{
+  "styles": [
+    {
+      "id": "beach",
+      "label": "Beaches",
+      "blurb": "Sandy coves, a long seafront promenade and boat trips to Sveti Nikola island."
+    },
+    {
+      "id": "history",
+      "label": "Old Town",
+      "blurb": "Walled stone streets, small churches and a harbour view in one walk."
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "blurb": "Beach clubs by day and busy bars and clubs along the coast after dark."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Old Town",
+      "range": [
+        120,
+        400
+      ],
+      "why": "Walled-town streets, the harbour and most restaurants are a short walk away. Quiet at night, but it has steep, narrow lanes and no parking.",
+      "center": [
+        42.2864,
+        18.84
+      ]
+    },
+    {
+      "area": "Slovenska Plaža",
+      "range": [
+        90,
+        300
+      ],
+      "why": "The main town beach, close to the centre and the promenade. Good for easy walks into town and for beach days.",
+      "center": [
+        42.28,
+        18.843
+      ]
+    },
+    {
+      "area": "Bečići",
+      "range": [
+        110,
+        350
+      ],
+      "why": "A long sandy beach with many hotels and beach clubs. Best for beach-focused stays; it is a short taxi ride to the Old Town.",
+      "center": [
+        42.287,
+        18.873
+      ]
+    },
+    {
+      "area": "Rafailovići",
+      "range": [
+        100,
+        320
+      ],
+      "why": "A quieter, small-bay area with rocky swimming spots and sea views. Good for a calm stay; expect taxi rides for nightlife.",
+      "center": [
+        42.266,
+        18.881
+      ]
+    }
+  ],
+  "food": [
+    "Try fresh grilled fish and seafood platters at harbour restaurants in the Old Town and along the marina.",
+    "Order local black risotto (crni rižoto) or grilled squid where the menu lists it, and ask for the catch of the day.",
+    "Eat at the Old Town cafés in the morning and the seafront restaurants at sunset; prices are higher right by the walls.",
+    "Look for local bakeries and burek or pljeskavica stands for a cheap lunch away from the main promenade.",
+    "Check menus for euro prices and whether a service charge is included before you order."
+  ],
+  "more_time": [
+    "Take a boat trip to Sveti Nikola island or a nearby beach. Tourist boats are not cheap, so compare prices at the marina first.",
+    "Spend a day in Herceg Novi. Intercity buses run about every 30 minutes for around €6 each way.",
+    "Visit Kotor or Perast for a historic day trip. Check bus or taxi times before you go, as schedules change by season."
+  ],
+  "type_month_fit": {
+    "beach": [
+      0.1,
+      0.1,
+      0.2,
+      0.3,
+      0.6,
+      0.85,
+      1,
+      1,
+      0.85,
+      0.5,
+      0.2,
+      0.1
+    ],
+    "history": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      1,
+      0.9,
+      0.85,
+      0.85,
+      0.95,
+      0.9,
+      0.7,
+      0.7
+    ],
+    "nightlife": [
+      0.3,
+      0.3,
+      0.4,
+      0.5,
+      0.7,
+      0.9,
+      1,
+      1,
+      0.9,
+      0.6,
+      0.3,
+      0.3
+    ],
+    "food": [
+      0.5,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.8,
+      0.6,
+      0.5
+    ],
+    "culture": [
+      0.6,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.9,
+      0.8,
+      0.8,
+      0.9,
+      0.9,
+      0.7,
+      0.6
+    ]
+  },
+  "best_for": [
+    "beach",
+    "nightlife",
+    "history"
+  ],
+  "recommend": {
+    "why": "Two nights give you a full beach day, an Old Town evening and time for a boat trip or a day trip to Kotor."
+  },
+  "month_notes": [
+    "Jan: Cold (5–11°C) with 13 rain days. Quiet off-season; many places are closed.",
+    "Feb: Cool (7–13°C) and rainy on 12 days. Good for quiet walks, not beach days.",
+    "Mar: Mild (8–15°C) with 14 rain days. Spring starts; check opening hours.",
+    "Apr: Warmer (11–18°C) with 12 rain days. Good for sightseeing and walks.",
+    "May: Pleasant (16–22°C) with 14 rain days. Sea still cool; bring a light layer.",
+    "Jun: Warm (21–27°C) with 9 rain days. Beaches and bars open; start booking early.",
+    "Jul: Hot (23–30°C) with only 5 rain days. Peak season; crowds and high prices.",
+    "Aug: Hottest month (24–31°C) with 7 rain days. Peak crowds; go to the beach early or late.",
+    "Sep: Still warm (19–26°C) with 11 rain days. Good weather with fewer crowds.",
+    "Oct: Mild (15–21°C) with 11 rain days. Good for walking and seafood.",
+    "Nov: Cool (11–17°C) with 14 rain days. Off-season; many beach venues close.",
+    "Dec: Cold (7–13°C) with 12 rain days. Quiet off-season; pack a warm jacket."
+  ],
+  "climate_guide": {
+    "summary": "Mediterranean climate: hot, dry summers and mild, wetter winters. The sea is warmest from July to September.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: June to September",
+        "text": "Warm days of 21–31°C and very few rainy days in July and August. Best for beaches and nightlife."
+      },
+      {
+        "icon": "🥵",
+        "title": "Peak heat (July and August)",
+        "text": "Highs of 30–31°C. Swim early or late, and use shade in the Old Town."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain mostly in winter",
+        "text": "Between 11 and 14 rain days a month from October to May. Pack a light waterproof jacket."
+      },
+      {
+        "icon": "🌊",
+        "title": "Sea temperature",
+        "text": "Warmest from late July to September. The water is cold for most of the year."
+      },
+      {
+        "icon": "🥶",
+        "title": "Cool winters",
+        "text": "Lows of 5–8°C in January and February. Many beach venues and some restaurants close."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes for summer, a warm layer for evenings, comfortable walking shoes for stone streets, and a swimsuit."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Walk within the centre and take a metered taxi or book through MonteGO for longer trips.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram. Don't plan around rail."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": false,
+        "text": "Local buses are limited. Intercity buses leave from the bus station, about a 20-minute walk from the Old Town. Herceg Novi buses run about every 30 minutes for around €6."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis cost around €5 for a ride within town. Use a metered taxi with a visible rate card, or book through MonteGO for upfront fare estimates."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "best": false,
+        "text": "Driving is hard in summer. Traffic is heavy and Old Town parking is scarce and costly. Leave the car outside the centre."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is about 2 km², and the promenade links the coast. Walking is the easiest way to get around."
+      },
+      {
+        "mode": "Tourist boat",
+        "has": true,
+        "best": false,
+        "text": "Tourist boats run to nearby beaches and Sveti Nikola island. They are not cheap, and there are no €1 water taxis."
+      }
+    ]
+  }
+}

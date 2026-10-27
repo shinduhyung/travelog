@@ -1,0 +1,37 @@
+$ deepseek_prep.py Granada
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 964 out 1533
+Granada: 5 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Granada
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 3655 out 2698
+Granada: 0 problems
+
+$ deepseek_city.py Granada --stage places
+Granada: places
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 1627 out 5801
+
+$ deepseek_city.py Granada --stage frame
+Granada: frame
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 3443 out 4038
+
+$ deepseek_city.py Granada --stage plans
+Granada: plans
+  plans for day
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 2816 out 2594
+  plans for 1n
+  claude tokens in 2816 out 3067
+  plans for 2n
+  claude tokens in 2823 out 3302
+  plans for 3n
+  claude tokens in 2817 out 4495
+
+$ merge_city.py Granada
+WARN  old_town: 8537 km from the center (day trip?)
+Granada: 18 places, 12 plans, 0 errors, 1 warnings
+wrote itineraries/granada.json and planner/granada.json
+

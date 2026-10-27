@@ -1,0 +1,209 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro_line": "Moorish palaces and winding white lanes beneath snowy mountain peaks.",
+  "intro": "Granada rewards slow walkers with palaces, tea houses, and Alhambra views at sunset, plus tapas bars along steep, winding lanes. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Tapas"
+    },
+    {
+      "id": "romance",
+      "label": "Romance"
+    },
+    {
+      "id": "nature",
+      "label": "Mountains"
+    }
+  ],
+  "areas": [
+    "Centro",
+    "Albayzin",
+    "Realejo",
+    "Sacromonte"
+  ],
+  "taxi": {
+    "flag_day": 2.5,
+    "flag_airport": 3.5,
+    "per_km": 1.1,
+    "min_fare": 5
+  },
+  "road_factor": 1.3,
+  "city_kmh": 18,
+  "transit_facts": [
+    "One metro line runs in Granada. A single ticket costs about €1.65 (Nov 2024). A rechargeable green travel card costs €1.50 at tobacco shops and needs at least €5 of credit.",
+    "Local buses cover most sights. Alhambra Buses (C30 to the Alhambra, C31 to Albayzin, C34 to Sacromonte) cost €1.60 per trip (Nov 2024). Multi-trip cards cost €5, €10 or €20.",
+    "Taxis are easy to find. Ride apps such as Uber or Cabify: check locally.",
+    "Driving in the centre is restricted. Camera-enforced limits apply, so park outside the historic core or use a garage such as Parking HH Maristas.",
+    "Walking is the best way to see the old quarters, but streets are steep, narrow and uneven. Buses help on the hills.",
+    "No ferry service applies to Granada."
+  ],
+  "airports": [
+    {
+      "code": "GRX",
+      "name": "Federico Garcia Lorca Airport",
+      "primary": true,
+      "note": "Small regional airport with domestic and a few budget international flights, about 15 km west of the centre.",
+      "options": [
+        {
+          "mode": "Airport bus (Alsa)",
+          "to": "Gran Via de Colon (opposite the cathedral) or Palacio de Congresos",
+          "price": "€3",
+          "time": "about 60 min",
+          "note": "Runs about 11 times a day per route and is often timed to plane arrivals."
+        },
+        {
+          "mode": "Airport bus (Alsa, faster route)",
+          "to": "Granada Bus Station (north of the city)",
+          "price": "€3",
+          "time": "check locally",
+          "note": "Faster route; transfer to a local bus or taxi from there."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€28",
+          "time": "about 30 min",
+          "note": "Quoted fare; use the official taxi rank outside arrivals."
+        },
+        {
+          "mode": "Ride app (Uber / Cabify)",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "about 30 min",
+          "note": "Availability at the airport can be limited; confirm before you fly."
+        }
+      ]
+    },
+    {
+      "code": "AGP",
+      "name": "Málaga-Costa del Sol Airport",
+      "primary": false,
+      "note": "Main budget-airline hub about 130 km south-west of Granada, with far more international routes.",
+      "options": [
+        {
+          "mode": "Train (Cercanías to María Zambrano station, then Renfe with change at Bobadilla)",
+          "to": "Granada Train Station",
+          "price": "check locally",
+          "time": "about 2.5-3 h",
+          "note": "Cheapest option, but the connection at Bobadilla takes planning."
+        },
+        {
+          "mode": "Airport bus (Alsa / Movelia)",
+          "to": "Granada Bus Station",
+          "price": "check locally",
+          "time": "about 2 h",
+          "note": "Direct coaches run on set times; book ahead in peak season."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "about 2 h",
+          "note": "Expensive for this distance; agree the fare or use the metered rank."
+        },
+        {
+          "mode": "Carpool (BlaBlaCar)",
+          "to": "Granada",
+          "price": "check locally",
+          "time": "about 2 h",
+          "note": "Often cheaper than trains or buses in Andalusia, but book in advance."
+        }
+      ]
+    }
+  ],
+  "max_km": 80,
+  "place_landmarks": [
+    "Alhambra",
+    "Generalife",
+    "Albayzín",
+    "Granada Cathedral",
+    "Royal Chapel of Granada",
+    "Granada Old Town"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Granada",
+      "https://en.wikivoyage.org/wiki/Granada"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    37.18817,
+    -3.60667
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 13,
+      "low": 3,
+      "rain_days": 7
+    },
+    {
+      "high": 15,
+      "low": 4,
+      "rain_days": 7
+    },
+    {
+      "high": 17,
+      "low": 6,
+      "rain_days": 12
+    },
+    {
+      "high": 20,
+      "low": 8,
+      "rain_days": 9
+    },
+    {
+      "high": 25,
+      "low": 12,
+      "rain_days": 6
+    },
+    {
+      "high": 30,
+      "low": 16,
+      "rain_days": 3
+    },
+    {
+      "high": 35,
+      "low": 21,
+      "rain_days": 2
+    },
+    {
+      "high": 35,
+      "low": 21,
+      "rain_days": 2
+    },
+    {
+      "high": 29,
+      "low": 16,
+      "rain_days": 4
+    },
+    {
+      "high": 24,
+      "low": 12,
+      "rain_days": 7
+    },
+    {
+      "high": 17,
+      "low": 7,
+      "rain_days": 8
+    },
+    {
+      "high": 15,
+      "low": 5,
+      "rain_days": 6
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

@@ -1,0 +1,247 @@
+{
+ "city": "Granada",
+ "trips": [
+  {
+   "place": "Sevilla",
+   "label": "Seville",
+   "position": {
+    "id": 17428473,
+    "name": "Sevilla",
+    "city": "Sevilla",
+    "lat": 37.21552,
+    "lng": -5.43585
+   },
+   "town": {
+    "name": "Sevilla",
+    "lat": 37.38283,
+    "lng": -5.97317
+   },
+   "road": {
+    "km": 247,
+    "min": 176,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 270.0,
+    "currency": "EUR"
+   },
+   "modes": {
+    "train": {
+     "from": "€3",
+     "from_usd": 4.0,
+     "avg": "€21",
+     "time": "2h 15m",
+     "per_day": 26,
+     "source": "https://www.omio.com/trains/granada/seville"
+    },
+    "bus": {
+     "from": "$23-$55",
+     "time": "3h",
+     "via": "Granada Estación de Autobuses to Sevilla, Estación de Autobuses (Plaza de Armas)",
+     "source": "https://www.rome2rio.com/s/Granada/Seville"
+    }
+   },
+   "route_note": "Buses (about 2.5 to 3 hours) are the most direct option; trains usually require a change in Córdoba or Antequera, so check schedules.",
+   "see": [
+    "Seville Cathedral and Giralda",
+    "Real Alcázar",
+    "Barrio Santa Cruz",
+    "Plaza de España"
+   ],
+   "visit": "Full day",
+   "tour_query": "Seville day trip from Granada",
+   "quests": [
+    "Seville Cathedral",
+    "Alcázar of Seville",
+    "Giralda",
+    "Plaza de España, Seville",
+    "Setas de Sevilla",
+    "Triana Bridge",
+    "Torre del Oro",
+    "Ramon Sanchez Pizjuan"
+   ],
+   "recommended": "train",
+   "why": "The train is the quickest listed option at 2h 15m, with 26 departures a day, though the route note says changes may be needed.",
+   "stars": 5,
+   "know": [
+    "The route note says trains usually require a change in Córdoba or Antequera, so check schedules for a direct service.",
+    "The bus is the most direct option at about 3h and arrives at Plaza de Armas."
+   ]
+  },
+  {
+   "place": "Córdoba",
+   "label": "",
+   "position": {
+    "id": 378536,
+    "name": "Córdoba",
+    "city": "Cordoba",
+    "lat": 37.88333,
+    "lng": -4.76667
+   },
+   "town": {
+    "name": "Córdoba",
+    "lat": 37.89155,
+    "lng": -4.77275
+   },
+   "road": {
+    "km": 162,
+    "min": 128,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 180.0,
+    "currency": "EUR"
+   },
+   "modes": {
+    "train": {
+     "from": "€5",
+     "from_usd": 6.0,
+     "avg": "€37",
+     "time": "1h 23m",
+     "per_day": 8,
+     "source": "https://www.omio.com/trains/granada/cordoba"
+    }
+   },
+   "route_note": "Direct regional trains and buses run roughly every hour or two, taking about 2 hours; the Mezquita is a short walk from the Córdoba station area.",
+   "see": [
+    "Mezquita-Catedral",
+    "Judería (Jewish Quarter)",
+    "Alcázar de los Reyes Cristianos",
+    "Calleja de las Flores",
+    "Patio courtyards (May festival, if in season)"
+   ],
+   "visit": "Full day",
+   "tour_query": "Córdoba day trip from Granada",
+   "quests": [
+    "Mezquita-Cathedral of Córdoba",
+    "Alcázar de los Reyes Cristianos",
+    "Roman Bridge of Córdoba",
+    "Noor"
+   ],
+   "recommended": "train",
+   "why": "The train takes 1h 23m, the fastest option, with 8 departures a day.",
+   "stars": 4,
+   "know": [
+    "The Mezquita is a short walk from the Córdoba station area.",
+    "Train service runs about 8 times a day, so check timetables for your return."
+   ]
+  },
+  {
+   "place": "Málaga",
+   "label": "",
+   "position": {
+    "id": 378660,
+    "name": "Málaga",
+    "city": "Málaga",
+    "lat": 36.72001,
+    "lng": -4.42033
+   },
+   "town": {
+    "name": "Málaga",
+    "lat": 36.72016,
+    "lng": -4.42034
+   },
+   "road": {
+    "km": 130,
+    "min": 102,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 150.0,
+    "currency": "EUR"
+   },
+   "modes": {
+    "train": {
+     "from": "€3",
+     "from_usd": 3.0,
+     "avg": "€18",
+     "time": "1h 21m",
+     "per_day": 24,
+     "source": "https://www.omio.com/trains/granada/malaga"
+    },
+    "bus": {
+     "from": "$12-$35",
+     "time": "1h 45m",
+     "via": "Granada Estación de Autobuses to Malaga Eeaa",
+     "source": "https://www.rome2rio.com/s/Granada/M%C3%A1laga"
+    }
+   },
+   "route_note": "Frequent direct buses take about 1.5 to 2 hours and drop you near the city centre; trains are slower and less frequent.",
+   "see": [
+    "Málaga Cathedral",
+    "Alcazaba",
+    "Picasso Museum",
+    "Calle Larios and the old town"
+   ],
+   "visit": "Full day",
+   "tour_query": "Málaga day trip from Granada",
+   "quests": [
+    "Alcazaba of Málaga",
+    "Málaga Cathedral",
+    "La Malagueta"
+   ],
+   "recommended": "train",
+   "why": "The train takes 1h 21m with 24 departures a day, faster than the 1h 45m bus.",
+   "stars": 3,
+   "know": [
+    "The bus drops you near the city centre, which may suit you better than the train station.",
+    "The route note describes trains as slower and less frequent, which conflicts with the listed timings, so check before travelling."
+   ]
+  },
+  {
+   "place": "Nerja",
+   "label": "",
+   "position": {
+    "id": 378705,
+    "name": "Nerja",
+    "city": "Nerja",
+    "lat": 36.75855,
+    "lng": -3.88727
+   },
+   "town": {
+    "name": "Nerja",
+    "lat": 36.75278,
+    "lng": -3.8744
+   },
+   "road": {
+    "km": 95,
+    "min": 71,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 110.0,
+    "currency": "EUR"
+   },
+   "modes": {
+    "bus": {
+     "from": "$16-$23",
+     "time": "2h 48m",
+     "via": "Granada Estación de Autobuses to Maro Empalme",
+     "source": "https://www.rome2rio.com/s/Granada/Nerja"
+    }
+   },
+   "route_note": "Direct buses from Granada's bus station take about 1.5 hours to Nerja; the caves are a short taxi or local bus ride from the town centre.",
+   "see": [
+    "Balcón de Europa",
+    "Nerja Caves",
+    "Maro-Cerro Gordo cliff path",
+    "Frigiliana village (short bus ride)"
+   ],
+   "visit": "Full day",
+   "tour_query": "Nerja and Frigiliana day trip from Granada",
+   "quests": [
+    "Burriana Beach"
+   ],
+   "recommended": "tour",
+   "why": "The listed bus time of 2h 48m exceeds 2.5 hours each way, and the caves need a further taxi or local bus ride from the town centre.",
+   "stars": 3,
+   "know": [
+    "The route note gives about 1.5 hours by bus, but the listed time is 2h 48m, so verify the journey length.",
+    "The caves are a short taxi or local bus ride from the town centre."
+   ]
+  }
+ ],
+ "problems": [
+  "Pampaneira: not a town in cities15000.json (ES), dropped"
+ ]
+}

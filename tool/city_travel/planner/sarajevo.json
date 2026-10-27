@@ -1,0 +1,495 @@
+{
+  "city": "Sarajevo",
+  "checked": "October 2026",
+  "intro_line": "Ottoman lanes, Austro-Hungarian facades, and mountains at the edge of town.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Baščaršija",
+        "Marijin Dvor",
+        "Centar",
+        "Vratnik"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Cuisine",
+      "areas": [
+        "Baščaršija",
+        "Marijin Dvor",
+        "Centar",
+        "Vratnik"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Baščaršija",
+        "Marijin Dvor",
+        "Centar",
+        "Vratnik"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Mountains",
+      "areas": [
+        "Baščaršija",
+        "Marijin Dvor",
+        "Centar",
+        "Vratnik"
+      ]
+    },
+    {
+      "id": "adventure",
+      "label": "Cycling",
+      "areas": [
+        "Baščaršija",
+        "Marijin Dvor",
+        "Centar",
+        "Vratnik"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 5,
+        "low": -4,
+        "rain_days": 15,
+        "note": "Very cold, with highs near 5°C and lows around -4°C. Expect 15 rainy days. Dress in layers and plan indoor sights."
+      },
+      {
+        "high": 9,
+        "low": -1,
+        "rain_days": 11,
+        "note": "Still cold, with highs near 9°C and lows around -1°C. Fewer rainy days (about 11)."
+      },
+      {
+        "high": 11,
+        "low": 1,
+        "rain_days": 13,
+        "note": "Cool spring weather, with highs near 11°C and lows around 1°C. Pack a warm jacket and an umbrella."
+      },
+      {
+        "high": 16,
+        "low": 4,
+        "rain_days": 12,
+        "note": "Mild, with highs near 16°C and lows around 4°C. Good for walking the old town and cycling."
+      },
+      {
+        "high": 20,
+        "low": 9,
+        "rain_days": 16,
+        "note": "Warm and changeable, with highs near 20°C and lows around 9°C. 16 rainy days, so keep an umbrella handy."
+      },
+      {
+        "high": 24,
+        "low": 14,
+        "rain_days": 14,
+        "note": "Pleasant, with highs near 24°C and lows around 14°C. Good time for river cycling and outdoor cafés."
+      },
+      {
+        "high": 27,
+        "low": 16,
+        "rain_days": 11,
+        "note": "Hottest month, with highs near 27°C and lows around 16°C. Start walks early and carry water."
+      },
+      {
+        "high": 27,
+        "low": 16,
+        "rain_days": 10,
+        "note": "Hot, with highs near 27°C and lows around 16°C. Only 10 rainy days, so it is a good month for trips."
+      },
+      {
+        "high": 22,
+        "low": 12,
+        "rain_days": 10,
+        "note": "Warm, with highs near 22°C and lows around 12°C. Long, clear days for cycling and the mountains."
+      },
+      {
+        "high": 18,
+        "low": 7,
+        "rain_days": 9,
+        "note": "Mild and dry, with highs near 18°C and lows around 7°C. Good for walking and the autumn colours."
+      },
+      {
+        "high": 12,
+        "low": 3,
+        "rain_days": 11,
+        "note": "Cool, with highs near 12°C and lows around 3°C. Pack layers for evenings."
+      },
+      {
+        "high": 8,
+        "low": 0,
+        "rain_days": 11,
+        "note": "Cold, with highs near 8°C and lows around 0°C. Dress warmly and plan indoor sights for some afternoons."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.75,
+      0.9,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.85,
+      0.8
+    ],
+    "history": [
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.75,
+      0.9,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "nature": [
+      0.4,
+      0.5,
+      0.6,
+      0.8,
+      0.95,
+      1,
+      0.9,
+      0.9,
+      0.95,
+      0.85,
+      0.6,
+      0.45
+    ],
+    "adventure": [
+      0.3,
+      0.35,
+      0.5,
+      0.8,
+      0.95,
+      1,
+      0.9,
+      0.85,
+      0.9,
+      0.8,
+      0.5,
+      0.3
+    ]
+  },
+  "places": {
+    "bascarsija": {
+      "types": [
+        "culture",
+        "history",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon or early evening",
+      "area": "Baščaršija",
+      "popularity": 5
+    },
+    "latin_bridge": {
+      "types": [
+        "history"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Any time; quieter early morning",
+      "area": "Centar",
+      "popularity": 4
+    },
+    "gazi_husrev_mosque": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Midday or late afternoon, outside prayer times",
+      "area": "Baščaršija",
+      "popularity": 4
+    },
+    "tunnel_museum": {
+      "types": [
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Late morning on a clear day",
+      "area": "Centar",
+      "popularity": 5
+    },
+    "city_hall": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning light on the façade",
+      "area": "Marijin Dvor",
+      "popularity": 4
+    },
+    "eternal_flame": {
+      "types": [
+        "history"
+      ],
+      "minutes": 15,
+      "setting": "outdoor",
+      "best": "Any time",
+      "area": "Marijin Dvor",
+      "popularity": 3
+    },
+    "cevapi": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunch or early dinner",
+      "area": "Baščaršija",
+      "popularity": 5
+    },
+    "markale_market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Centar",
+      "popularity": 3
+    },
+    "yellow_bastion": {
+      "types": [
+        "nature",
+        "history"
+      ],
+      "minutes": 40,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Vratnik",
+      "popularity": 4
+    },
+    "vratnik_walk": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Vratnik",
+      "popularity": 3
+    },
+    "trebevic_cable_car": {
+      "types": [
+        "nature",
+        "adventure"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Clear morning or late afternoon",
+      "area": "Centar",
+      "popularity": 4
+    },
+    "walking_tour_city": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Start of your visit",
+      "area": "Baščaršija",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Two nights give you a full day in the old town, a tram ride out to Ilidža and time for a Mostar day trip."
+  },
+  "airports": [
+    {
+      "code": "SJJ",
+      "name": "Sarajevo International Airport",
+      "primary": true,
+      "note": "Main hub, about 7 km southwest of the centre. Flights can be delayed by fog in winter.",
+      "options": [
+        {
+          "mode": "Airport bus (Centrotrans)",
+          "to": "Baščaršija",
+          "price": "5 KM one way",
+          "time": "20-30 min",
+          "note": "Runs roughly hourly 05:30-22:00. Pay the driver on boarding. First bag up to 23 kg is included."
+        },
+        {
+          "mode": "Trolleybus 103 via Dobrinja",
+          "to": "Trg Austrijski (cross Latin Bridge to Old Town)",
+          "price": "1.80 KM",
+          "time": "about 25 min plus a 600 m walk",
+          "note": "Walk from the terminal to the stop at Bulevar Mimara Sinana. Pay the driver in KM cash. Avoid lines 107 and 108 for Old Town."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "15-20 KM",
+          "time": "check locally",
+          "note": "Insist on the meter. Some drivers quote double to foreigners. Refuse any fixed price list and any airport supplement."
+        },
+        {
+          "mode": "Ride apps",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Availability in Sarajevo is unconfirmed. Check locally before you travel."
+        }
+      ]
+    },
+    {
+      "code": "TZL",
+      "name": "Tuzla Airport",
+      "primary": false,
+      "note": "Budget Wizz Air base about 120 km north of Sarajevo. Long transfer.",
+      "options": [
+        {
+          "mode": "Airport bus (direct)",
+          "to": "Sarajevo",
+          "price": "€22 one way",
+          "time": "about 2 hours",
+          "note": "Runs direct to meet Wizz flights. Check the operator for current times."
+        },
+        {
+          "mode": "Standard bus via Tuzla",
+          "to": "Sarajevo",
+          "price": "check locally",
+          "time": "about 3 hours plus transfer",
+          "note": "Cheaper, but needs a change in Tuzla. Buses to Tuzla cost about 11 KM."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Sarajevo",
+      "https://en.wikivoyage.org/wiki/Sarajevo"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "culture",
+    "food"
+  ],
+  "transit": {
+    "best": "Trams for the centre and Ilidža, walking the old town, and taxis with a meter for late trips.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "There is no metro in Sarajevo. Use trams and trolleybuses instead."
+      },
+      {
+        "mode": "Tram / Trolleybus",
+        "has": true,
+        "best": true,
+        "text": "Trams and trolleybuses run the city. Tram 3 runs the full line from Ilidža to the centre. Tram 1 and 4 serve the central loop. A single ticket costs 2.20 KM and a day ticket costs 7.10 KM. Buy in the Javni prevoz KS app, from drivers or at GRAS kiosks."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses cover routes beyond the trams. Buy tickets from the driver for 2.20 KM. Pre-bought tram tickets are not valid on buses."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Legitimate taxis have a TAXI sign and plates with TA. Insist on the meter and ask for a receipt. Official firms include Paja 1522, Žuti 033 66 35 55 and Samir & Emir 1516. Taxis are the main scam risk, so avoid unmarked cars."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is not recommended in the Old Town, where streets are steep, narrow and one-way. Parking is very hard to find. A car is only useful for trips outside the city."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Walking is the best way to see the centre. Street signs are scarce, so use a map app."
+      },
+      {
+        "mode": "Bike rental (Nextbike)",
+        "has": true,
+        "text": "Nextbike has about 14 stations along the tram lines. You get 30 free minutes per day, then 1.50 KM after that. Separate bike lanes run along the river and main boulevard for over 5 km."
+      },
+      {
+        "mode": "Ferry",
+        "has": false,
+        "text": "No ferry service operates in the city."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Continental climate with cold, snowy winters and warm, fairly dry summers. Rain is spread through the year.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to June and September",
+        "text": "Highs around 20–24°C with mild nights. Ideal for walking, cycling and the mountains."
+      },
+      {
+        "icon": "🥶",
+        "title": "Cold winters (December to February)",
+        "text": "Highs near 5–9°C and lows below freezing. Wear warm layers and waterproof shoes for icy streets."
+      },
+      {
+        "icon": "🔥",
+        "title": "Hot summers (July and August)",
+        "text": "Highs around 27°C. Walk early or late in the day and carry water."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain year-round",
+        "text": "Between 9 and 16 rainy days a month. Carry a compact umbrella in every season."
+      },
+      {
+        "icon": "🏔️",
+        "title": "Mountain weather changes fast",
+        "text": "Higher ground is cooler than the city centre. Check the forecast before any hike or ride."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Warm layers, a waterproof jacket, comfortable walking shoes and a small umbrella. Pack light clothing for summer days."
+      }
+    ]
+  }
+}

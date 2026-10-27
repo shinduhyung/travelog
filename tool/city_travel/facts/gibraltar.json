@@ -1,0 +1,228 @@
+{
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro_line": "A tiny British outpost where the Rock meets Mediterranean light.",
+  "intro": "Gibraltar packs the Upper Rock, wild macaques and old fortifications into under 7 km², rewarding every slow walk with new views. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    }
+  ],
+  "areas": [
+    "Main Street",
+    "Catalan Bay",
+    "Europa Point",
+    "Ocean Village"
+  ],
+  "taxi": {
+    "flag_day": 4,
+    "flag_airport": 5,
+    "per_km": 1.5,
+    "min_fare": 4
+  },
+  "road_factor": 1.3,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Gibraltar has no metro or tram. The local currency is the Gibraltar pound (£, GBP), not USD.",
+    "Citibus (routes 5 and 10) and Gibraltar Bus Company (other routes) run the buses. Single fares start at £1.00 to £1.80.",
+    "Bus fares are flat, so distance does not change the price. Gibraltar Bus needs exact change or card; Citibus takes cash only.",
+    "Taxis are the easiest way up the steep roads. Check locally for ride-app coverage, as Uber is not reliably available.",
+    "Driving is on the right. Much of the old centre has narrow, one-way streets and very limited parking, so park in La Línea and walk across the border.",
+    "Walking covers most of the town. A cable car links the town with the Upper Rock, and a cruise port sits at the western end of Waterport Road."
+  ],
+  "airports": [
+    {
+      "code": "GIB",
+      "name": "Gibraltar International Airport",
+      "primary": true,
+      "note": "Main hub with flights from London and UK regions, about 1 km from the centre.",
+      "options": [
+        {
+          "mode": "Bus 5 or 10",
+          "to": "Town centre",
+          "price": "£1.40-£1.80",
+          "time": "10-15 min",
+          "note": "Cheapest option; Citibus takes cash only."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Town centre",
+          "price": "£5-£8",
+          "time": "5-10 min",
+          "note": "Ask the fare before getting in if no meter is visible."
+        },
+        {
+          "mode": "Ride app",
+          "to": "Town centre",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Availability is limited; check locally."
+        },
+        {
+          "mode": "Walk",
+          "to": "Town centre",
+          "price": "Free",
+          "time": "20-30 min",
+          "note": "Possible but steep; the airport sits next to the runway and border area."
+        }
+      ]
+    },
+    {
+      "code": "AGP",
+      "name": "Málaga Airport",
+      "primary": false,
+      "note": "Popular alternative in Spain with many destinations, about 120 km east.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "Gibraltar via La Línea",
+          "price": "check locally",
+          "time": "about 3 hours",
+          "note": "Only a few services a day; change at La Línea."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Gibraltar",
+          "price": "check locally",
+          "time": "about 1.5-2 hours",
+          "note": "Expensive for a one-way trip; confirm fare first."
+        },
+        {
+          "mode": "Car hire",
+          "to": "Gibraltar",
+          "price": "check locally",
+          "time": "about 1.5-2 hours",
+          "note": "Park in La Línea to avoid the Gibraltar one-way system."
+        }
+      ]
+    },
+    {
+      "code": "XRY",
+      "name": "Jerez Airport",
+      "primary": false,
+      "note": "Second choice in Spain, about 90 km away despite being closer than Málaga for some routes.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "La Línea or Algeciras",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Limited services; check timetables."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Gibraltar",
+          "price": "check locally",
+          "time": "about 1-1.5 hours",
+          "note": "Confirm the fare before starting."
+        },
+        {
+          "mode": "Car hire",
+          "to": "Gibraltar",
+          "price": "check locally",
+          "time": "about 1-1.5 hours",
+          "note": "Park in La Línea and walk across."
+        }
+      ]
+    }
+  ],
+  "max_km": 80,
+  "place_landmarks": [
+    "Gibraltar Great Siege Tunnels",
+    "Moorish Castle",
+    "Main Street & Casemates Square"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Gibraltar",
+      "https://en.wikivoyage.org/wiki/Gibraltar"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    36.1408,
+    -5.3536
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 16,
+      "low": 10,
+      "rain_days": 9
+    },
+    {
+      "high": 16,
+      "low": 11,
+      "rain_days": 8
+    },
+    {
+      "high": 18,
+      "low": 11,
+      "rain_days": 11
+    },
+    {
+      "high": 20,
+      "low": 13,
+      "rain_days": 8
+    },
+    {
+      "high": 23,
+      "low": 16,
+      "rain_days": 4
+    },
+    {
+      "high": 26,
+      "low": 19,
+      "rain_days": 2
+    },
+    {
+      "high": 30,
+      "low": 21,
+      "rain_days": 0
+    },
+    {
+      "high": 30,
+      "low": 22,
+      "rain_days": 1
+    },
+    {
+      "high": 27,
+      "low": 20,
+      "rain_days": 5
+    },
+    {
+      "high": 23,
+      "low": 17,
+      "rain_days": 8
+    },
+    {
+      "high": 19,
+      "low": 13,
+      "rain_days": 8
+    },
+    {
+      "high": 17,
+      "low": 11,
+      "rain_days": 8
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

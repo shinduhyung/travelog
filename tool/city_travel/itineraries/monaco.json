@@ -1,0 +1,1080 @@
+{
+  "city": "Monaco",
+  "checked": "October 2026",
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro": "Monaco rewards visitors who like easy walks, grand views, and a bit of glamour in a very small space. Escalators, harbours, and seaside trails make it simple to explore on foot. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 43.6692,
+      "west": 7.2422,
+      "north": 43.7994,
+      "east": 7.534,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 8,
+      "flag_airport": 10,
+      "per_km": 2.2,
+      "min_fare": 15
+    },
+    "road_factor": 1.3,
+    "city_kmh": 20,
+    "notes": [
+      "Monaco has no metro or tram. The train station connects to Nice, Menton and Cap d'Ail on the coastal line, with 2-4 services per hour.",
+      "Urban buses run on five routes (1, 2, 4, 5, 6) from about 06:00 to 21:00. A single ticket is €2 on board, or €1.50 from a machine at the stop. A day pass is about €5.50 (2016 price, check locally). A night bus runs on a circular route from 22:00 to 04:00.",
+      "Taxis cannot be hailed on the street. Use the stands on Avenue de Monte Carlo or at the station, or ask your hotel. Agree the fare first or make sure the meter runs.",
+      "Uber and Bolt are banned for pickups in Monaco. You can be dropped off in Monaco, but to leave you must walk to France or order a ride starting in France.",
+      "Driving is hard. Street parking is scarce, so use a garage and check the Monapass app. Rent a scooter or car in Nice if you prefer to drive in.",
+      "Walking is the best option. Seven public escalators and lifts are free. The Bateau Bus across Port Hercule costs €2 in daylight. Bicycles and e-bikes suit fit riders, given the steep hills."
+    ],
+    "sources": []
+  },
+  "places": {
+    "palace": {
+      "name": "Prince's Palace of Monaco",
+      "landmark": "Prince's Palace of Monaco",
+      "kind": "sight",
+      "lat": 43.7315,
+      "lon": 7.4198,
+      "price": 25,
+      "price_text": "About USD 20-30 adults, check on the day",
+      "hours": "Usually daily in summer, shorter hours in winter; check on the day",
+      "tip": "Arrive before 11:30 for the changing of the guard at 11:55, which is held daily.",
+      "source": "https://www.palais.mc"
+    },
+    "oceano": {
+      "name": "Oceanographic Museum",
+      "landmark": "Oceanographic Museum",
+      "kind": "museum",
+      "lat": 43.7302,
+      "lon": 7.4226,
+      "price": 25,
+      "price_text": "About USD 20-30 adults, check on the day",
+      "hours": "Usually daily; check on the day",
+      "tip": "Plan about 90 minutes, and see the top aquarium floor before the rooftop terrace.",
+      "source": "https://www.oceano.org"
+    },
+    "cathedral": {
+      "name": "Saint Nicholas Cathedral",
+      "landmark": "Saint Nicholas Cathedral",
+      "kind": "sight",
+      "lat": 43.7296,
+      "lon": 7.4214,
+      "price": 0,
+      "price_text": "Free entry",
+      "hours": "Usually daily, with a midday closure; check on the day",
+      "tip": "Step in quietly for a few minutes; it is a short stop near the palace.",
+      "source": ""
+    },
+    "paloma": {
+      "name": "Paloma Beach",
+      "landmark": "Paloma Beach",
+      "kind": "beach",
+      "lat": 43.6842,
+      "lon": 7.34,
+      "price": 0,
+      "price_text": "Public beach, free; loungers cost extra",
+      "hours": "Daytime in season; check on the day",
+      "tip": "Bring your own towel and water, as the beach is small and busy in summer.",
+      "source": ""
+    },
+    "barbagiuan": {
+      "name": "Barbagiuan",
+      "landmark": "Barbagiuan",
+      "kind": "sight",
+      "lat": 43.7384,
+      "lon": 7.4246,
+      "price": null,
+      "price_text": "Check on the day",
+      "hours": "Check on the day",
+      "tip": "Details could not be verified, so confirm the opening and entry rules on arrival.",
+      "source": ""
+    },
+    "koaland": {
+      "name": "Koaland",
+      "landmark": "Koaland",
+      "kind": "activity",
+      "lat": 43.7844,
+      "lon": 7.5055,
+      "price": null,
+      "price_text": "Check on the day",
+      "hours": "Check on the day",
+      "tip": "Details could not be verified, so confirm the opening times and any age limits before visiting.",
+      "source": ""
+    },
+    "zygo": {
+      "name": "Zygo Park",
+      "landmark": "Zygo Park",
+      "kind": "park",
+      "lat": 43.7001,
+      "lon": 7.2707,
+      "price": 0,
+      "price_text": "Free entry, check on the day",
+      "hours": "Daytime; check on the day",
+      "tip": "Details could not be verified, so check whether it is open before walking there.",
+      "source": ""
+    },
+    "condamine": {
+      "name": "Condamine Market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 43.7298,
+      "lon": 7.422,
+      "price": 15,
+      "price_text": "About USD 10-25 for a snack or lunch",
+      "hours": "Usually Mon-Sat, mornings; check on the day",
+      "tip": "Go in the morning for fresh produce and a quick local lunch at the stalls.",
+      "source": ""
+    },
+    "casino": {
+      "name": "Monte Carlo Casino",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 43.7396,
+      "lon": 7.428,
+      "price": 20,
+      "price_text": "Entry fee applies, check on the day; ID and dress code may apply",
+      "hours": "Usually afternoon to late; check on the day",
+      "tip": "Bring photo ID and dress smartly, as the rules apply even when you only visit the rooms.",
+      "source": ""
+    },
+    "exotic": {
+      "name": "Exotic Garden of Monaco",
+      "landmark": null,
+      "kind": "park",
+      "lat": 43.7283,
+      "lon": 7.419,
+      "price": 15,
+      "price_text": "About USD 10-20 adults, check on the day",
+      "hours": "Daytime; check on the day",
+      "tip": "Walk the cliff path for sea views over the harbour.",
+      "source": ""
+    },
+    "harbour": {
+      "name": "Port Hercule harbour walk",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 43.7335,
+      "lon": 7.427,
+      "price": 0,
+      "price_text": "Free to walk; boat tours extra",
+      "hours": "Open all day",
+      "tip": "Walk the marina at dusk to see the yachts lit up.",
+      "source": ""
+    },
+    "viewpoint": {
+      "name": "Rock viewpoint at Monaco-Ville",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 43.7305,
+      "lon": 7.4235,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open all day",
+      "tip": "Stand on the rock edge for the best view of the harbour and the coast.",
+      "source": ""
+    },
+    "oldtown": {
+      "name": "Monaco-Ville old town walk",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 43.7306,
+      "lon": 7.424,
+      "price": 0,
+      "price_text": "Free to walk; guided tours extra",
+      "hours": "Open all day",
+      "tip": "Start at the palace square and wander the narrow streets; allow time for photos.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-romance",
+      "length": "day",
+      "style": "romance",
+      "nights": 0,
+      "for": "A slow day of cliff views, a beach afternoon and a casino evening, for couples.",
+      "days": [
+        {
+          "title": "Cliffs, beach and casino",
+          "stops": [
+            {
+              "place": "viewpoint",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Clear mornings give the best sea views."
+            },
+            {
+              "place": "condamine",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Market stalls for a relaxed brunch. Usually Mon-Sat mornings; check on the day."
+            },
+            {
+              "place": "paloma",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Warm afternoons are best in season. Check the beach hours on the day."
+            },
+            {
+              "place": "casino",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Usually opens in the afternoon. Check dress rules before you go."
+            },
+            {
+              "place": "harbour",
+              "at": "19:30",
+              "minutes": 45,
+              "note": "Walk the harbour around sunset. Check the sunset time for your date."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "The Prince's Palace, the old town and the cathedral, all within walking distance.",
+      "days": [
+        {
+          "title": "Palace and old town",
+          "stops": [
+            {
+              "place": "palace",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Best in late morning. Hours are shorter in winter; check on the day."
+            },
+            {
+              "place": "cathedral",
+              "at": "11:45",
+              "minutes": 20,
+              "note": "Usually has a midday closure. Check the hours before you go."
+            },
+            {
+              "place": "oldtown",
+              "at": "12:10",
+              "minutes": 90,
+              "note": "Walk the narrow streets. Morning is quieter, but this is a good midday walk too."
+            },
+            {
+              "place": "oceano",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Indoor stop for a midday break from the heat. Check the hours on the day."
+            },
+            {
+              "place": "barbagiuan",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "A small historic spot in the old town. Check the hours on the day."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Gardens, sea views and a beach swim along the coast, with a harbour sunset to finish.",
+      "days": [
+        {
+          "title": "Gardens, coast and sunset",
+          "stops": [
+            {
+              "place": "exotic",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Cool mornings in spring are best. Check the opening time on the day."
+            },
+            {
+              "place": "viewpoint",
+              "at": "09:45",
+              "minutes": 30,
+              "note": "Clear mornings give good views over the rock."
+            },
+            {
+              "place": "condamine",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Lunch at the market. Usually Mon-Sat mornings; check on the day."
+            },
+            {
+              "place": "paloma",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Go for a swim in the warm afternoon, in season. Check beach hours on the day."
+            },
+            {
+              "place": "harbour",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Walk the harbour at sunset. Check the sunset time for your date."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1n-romance",
+      "length": "1n",
+      "style": "romance",
+      "nights": 1,
+      "for": "Couples who want sea views, a harbour sunset and a casino evening.",
+      "stay_area": "Monte Carlo",
+      "days": [
+        {
+          "title": "Beach, harbour and casino",
+          "stops": [
+            {
+              "place": "paloma",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Best on warm afternoons in season. Check the hours on the day."
+            },
+            {
+              "place": "harbour",
+              "at": "18:15",
+              "minutes": 45,
+              "note": "Aim for sunset. Check the sunset time for your date."
+            },
+            {
+              "place": "casino",
+              "at": "19:15",
+              "minutes": 60,
+              "note": "Usually open from the afternoon into the evening. Check dress rules and ID on the day."
+            }
+          ]
+        },
+        {
+          "title": "Cliff views and the Palace",
+          "stops": [
+            {
+              "place": "viewpoint",
+              "at": "08:45",
+              "minutes": 30,
+              "note": "Clear mornings give the best view."
+            },
+            {
+              "place": "cathedral",
+              "at": "09:45",
+              "minutes": 20,
+              "note": "Usually closed around midday. Check on the day."
+            },
+            {
+              "place": "palace",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Late morning is the best time. Hours shorter in winter."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "History fans who want the Palace, the old town and the cathedral.",
+      "stay_area": "Monaco-Ville",
+      "days": [
+        {
+          "title": "Old town and the Palace",
+          "stops": [
+            {
+              "place": "cathedral",
+              "at": "09:00",
+              "minutes": 20,
+              "note": "Usually closed around midday. Check on the day."
+            },
+            {
+              "place": "oldtown",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Go early, before crowds."
+            },
+            {
+              "place": "palace",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Late morning is best. Hours shorter in winter."
+            },
+            {
+              "place": "barbagiuan",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Check the hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Museums and the garden",
+          "stops": [
+            {
+              "place": "exotic",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning is best, especially in spring."
+            },
+            {
+              "place": "oceano",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Indoors, so good around midday. Check the hours on the day."
+            },
+            {
+              "place": "condamine",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Food market. Usually mornings only, so check the hours."
+            },
+            {
+              "place": "koaland",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Check the hours on the day."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Walkers and swimmers who want harbour paths, gardens and a sunset by the water.",
+      "stay_area": "Monte Carlo",
+      "days": [
+        {
+          "title": "Parks, beach and harbour",
+          "stops": [
+            {
+              "place": "zygo",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning is best. Check the hours on the day."
+            },
+            {
+              "place": "condamine",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Food market, mornings only. Good for a snack."
+            },
+            {
+              "place": "paloma",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Warm afternoons in late spring to early autumn are best."
+            },
+            {
+              "place": "harbour",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Aim for sunset. Check the time for your date."
+            }
+          ]
+        },
+        {
+          "title": "Garden, cliffs and old town",
+          "stops": [
+            {
+              "place": "exotic",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Morning is best, especially in spring."
+            },
+            {
+              "place": "viewpoint",
+              "at": "09:45",
+              "minutes": 30,
+              "note": "Clear mornings give the best view."
+            },
+            {
+              "place": "oldtown",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Walk the old town before the crowds arrive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2n-romance",
+      "length": "2n",
+      "style": "romance",
+      "nights": 2,
+      "for": "Couples who want sea views, a slow harbour dinner and a casino evening.",
+      "stay_area": "Monte Carlo",
+      "days": [
+        {
+          "title": "Monte Carlo beach, harbour and casino",
+          "stops": [
+            {
+              "place": "paloma",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Warm afternoons are best. Check on the day that the beach is open."
+            },
+            {
+              "place": "harbour",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Walk the harbour at sunset. Check the sunset time for your dates."
+            },
+            {
+              "place": "casino",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Usually open from the afternoon until late. Dress smartly. Check the entry rules on the day."
+            }
+          ]
+        },
+        {
+          "title": "Monaco-Ville old town and sunset view",
+          "stops": [
+            {
+              "place": "oldtown",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Go early, before the crowds arrive."
+            },
+            {
+              "place": "cathedral",
+              "at": "10:45",
+              "minutes": 20,
+              "note": "Closes at midday. Check the hours on the day."
+            },
+            {
+              "place": "palace",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Late morning is a good time. Hours are shorter in winter. Check on the day."
+            },
+            {
+              "place": "viewpoint",
+              "at": "18:45",
+              "minutes": 30,
+              "note": "Best at sunset for sea views. Finish the evening with a slow dinner nearby."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "History lovers who want the palace, the old town and the royal family's stories.",
+      "stay_area": "Monaco-Ville",
+      "days": [
+        {
+          "title": "Old town and the Prince's Palace",
+          "stops": [
+            {
+              "place": "oldtown",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Walk the old streets before the crowds arrive."
+            },
+            {
+              "place": "cathedral",
+              "at": "10:45",
+              "minutes": 20,
+              "note": "Closes at midday. Check the hours on the day."
+            },
+            {
+              "place": "palace",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Late morning is a good time. Hours are shorter in winter. Check on the day."
+            },
+            {
+              "place": "barbagiuan",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Check the hours on the day. Good for a quiet break after the palace."
+            }
+          ]
+        },
+        {
+          "title": "Museum and gardens",
+          "stops": [
+            {
+              "place": "exotic",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Best in the morning, especially in spring. Check the hours on the day."
+            },
+            {
+              "place": "oceano",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Indoor, so it works well if the weather turns. Check the hours on the day."
+            },
+            {
+              "place": "viewpoint",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Clear evening views over the rock and the harbour."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Sea lovers who want harbour walks, a Mediterranean swim and a relaxed coast day.",
+      "stay_area": "Monte Carlo",
+      "days": [
+        {
+          "title": "Gardens, museum and rock views",
+          "stops": [
+            {
+              "place": "exotic",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Best in the morning, especially in spring. Check the hours on the day."
+            },
+            {
+              "place": "oceano",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Good midday choice, and a dry option on rainy days. Check the hours on the day."
+            },
+            {
+              "place": "viewpoint",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Best at sunset or on clear mornings. Check the sunset time for your dates."
+            }
+          ]
+        },
+        {
+          "title": "Park, beach and harbour",
+          "stops": [
+            {
+              "place": "zygo",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Best in the morning or late afternoon. Check the hours on the day."
+            },
+            {
+              "place": "paloma",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Warm afternoons from late spring to early autumn are best. Check on the day that the beach is open."
+            },
+            {
+              "place": "harbour",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Open all day. Watch the boats come in at sunset."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3n-romance",
+      "length": "3n",
+      "style": "romance",
+      "nights": 3,
+      "for": "Couples who want sea views, a casino night and slow harbour dinners.",
+      "stay_area": "Monte Carlo",
+      "days": [
+        {
+          "title": "Arrive, casino and harbour",
+          "stops": [
+            {
+              "place": "casino",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Dress smartly. Some rooms have a dress code; check on the day."
+            },
+            {
+              "place": "harbour",
+              "at": "19:30",
+              "minutes": 45,
+              "note": "Sunset walk along Port Hercule. Dine on the waterfront nearby."
+            }
+          ]
+        },
+        {
+          "title": "Beach and cliff views",
+          "stops": [
+            {
+              "place": "paloma",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Sand beach in season. Bring a towel and water."
+            },
+            {
+              "place": "zygo",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Shaded park for a short rest after the beach."
+            },
+            {
+              "place": "viewpoint",
+              "at": "18:45",
+              "minutes": 30,
+              "note": "Best at sunset. Check the sunset time on the day."
+            }
+          ]
+        },
+        {
+          "title": "Palace and old town",
+          "stops": [
+            {
+              "place": "palace",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Changing of the guard is at set times; check on the day."
+            },
+            {
+              "place": "oldtown",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Narrow lanes with sea views. Quieter early in the day."
+            },
+            {
+              "place": "cathedral",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Closes at midday, so visit in the afternoon. Quiet and calm."
+            },
+            {
+              "place": "viewpoint",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Rock views over the harbour at sunset."
+            }
+          ]
+        },
+        {
+          "title": "Last morning in La Condamine",
+          "stops": [
+            {
+              "place": "condamine",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Usually Monday to Saturday, mornings only. Closed Sundays; check on the day."
+            },
+            {
+              "place": "harbour",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Easy walk before you leave."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "History lovers who want the palace, the old town and the royal family's stories.",
+      "stay_area": "Monaco-Ville",
+      "days": [
+        {
+          "title": "Palace and old town",
+          "stops": [
+            {
+              "place": "palace",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Royal apartments and the guard ceremony. Check times on the day."
+            },
+            {
+              "place": "oldtown",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Walk the lanes around the palace."
+            },
+            {
+              "place": "cathedral",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Final resting place of the royal family. Closes at midday."
+            }
+          ]
+        },
+        {
+          "title": "Gardens and the museum",
+          "stops": [
+            {
+              "place": "exotic",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Best in the morning. Cactus terraces with sea views."
+            },
+            {
+              "place": "oceano",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Indoor. Good for a midday visit."
+            },
+            {
+              "place": "koaland",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Fontvieille. Check opening hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Hidden history on the rock",
+          "stops": [
+            {
+              "place": "barbagiuan",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Old quarter with local stories. Check hours on the day."
+            },
+            {
+              "place": "cathedral",
+              "at": "10:30",
+              "minutes": 20,
+              "note": "Visit before the midday closure."
+            },
+            {
+              "place": "viewpoint",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Clear morning views over the port."
+            }
+          ]
+        },
+        {
+          "title": "Market and casino",
+          "stops": [
+            {
+              "place": "condamine",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Mornings only, Monday to Saturday. Closed Sundays; check on the day."
+            },
+            {
+              "place": "casino",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Late afternoon visit. Smart dress is expected."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Coast lovers who want harbour walks, swims and a Riviera day.",
+      "stay_area": "Monte Carlo",
+      "days": [
+        {
+          "title": "Harbour and beach",
+          "stops": [
+            {
+              "place": "paloma",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Swim in season. Check beach hours on the day."
+            },
+            {
+              "place": "zygo",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Shaded park with garden paths."
+            },
+            {
+              "place": "harbour",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Sunset walk. Eat nearby."
+            }
+          ]
+        },
+        {
+          "title": "Gardens and the sea",
+          "stops": [
+            {
+              "place": "exotic",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Best in the morning, before the heat."
+            },
+            {
+              "place": "viewpoint",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Clear views along the coast."
+            },
+            {
+              "place": "oceano",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Indoor. Good for a midday break."
+            }
+          ]
+        },
+        {
+          "title": "Beach day and sunset",
+          "stops": [
+            {
+              "place": "zygo",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Early walk before the crowds."
+            },
+            {
+              "place": "paloma",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Late morning swim. Check season hours."
+            },
+            {
+              "place": "harbour",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Sunset by the boats."
+            }
+          ]
+        },
+        {
+          "title": "Last morning in La Condamine",
+          "stops": [
+            {
+              "place": "condamine",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Fresh produce. Mornings only, Monday to Saturday; check on the day."
+            },
+            {
+              "place": "viewpoint",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Final views before you leave."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "styles": [
+    {
+      "id": "romance",
+      "label": "Romance",
+      "blurb": "Sea views from the cliffs, a casino evening and slow dinners by the harbour."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "The Prince's Palace, the old town and the royal family's stories."
+    },
+    {
+      "id": "nature",
+      "label": "Coast",
+      "blurb": "Harbour walks, Mediterranean swims and a day along the Riviera coast."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip",
+      "recommended": true
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Monte Carlo",
+      "range": [
+        450,
+        1500
+      ],
+      "why": "Near the Casino, Opera and main hotels; the most glamour and the highest prices. Good for a romantic trip.",
+      "center": [
+        43.7396,
+        7.4277
+      ]
+    },
+    {
+      "area": "Monaco-Ville",
+      "range": [
+        300,
+        900
+      ],
+      "why": "The old walled town on the Rock, with the Palace, cathedral and museums. Quiet at night, but many steep steps.",
+      "center": [
+        43.7313,
+        7.4236
+      ]
+    },
+    {
+      "area": "La Condamine",
+      "range": [
+        200,
+        600
+      ],
+      "why": "Flat, central and close to the train station, the harbour and the bus routes. Often the best value.",
+      "center": [
+        43.7322,
+        7.4217
+      ]
+    },
+    {
+      "area": "Fontvieille",
+      "range": [
+        250,
+        700
+      ],
+      "why": "Modern and calm, next to the Stade Louis II and the Princess Grace Rose Garden. Good for a longer stay.",
+      "center": [
+        43.7265,
+        7.413
+      ]
+    }
+  ],
+  "food": [
+    "Try Monegasque dishes such as barbagiuan (small fried pastries with greens or cheese) and stocafi (dried cod stew). Ask at local bistros.",
+    "Eat lunch at the Condamine market hall for fresh produce and quick local plates. Prices are lower than the Monte Carlo cafés.",
+    "For a harbour dinner, pick a terrace at Port Hercule or La Condamine. Book ahead in summer and during Grand Prix week.",
+    "Monaco is small and expensive. Cafés and bakeries near the station are a good budget choice for breakfast and snacks.",
+    "Restaurant prices include service charges in most places. Check the bill and menu prices before you order wine."
+  ],
+  "more_time": [
+    "Take the train to Menton (2-4 services per hour) for a quieter old town and lemon-tree gardens. Check the schedule on the day.",
+    "Swap a day for Nice by train for its old town, the Promenade des Anglais and the flower market.",
+    "Add a short trip to Eze village by bus or coach from Nice, with views over the sea and a hilltop garden. Check times locally."
+  ]
+}

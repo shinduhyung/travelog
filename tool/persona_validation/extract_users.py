@@ -131,11 +131,17 @@ def main():
                 for log in logs:
                     if isinstance(log, dict):
                         flight = select(log, FLIGHT_KEYS)
-                        flight.setdefault('airlineCode', airline.get('code'))
+                        # AirlineProvider overrides stale/null per-log airline codes.
+                        flight['airlineCode'] = airline.get('code')
                         flights.append(flight)
         row['flights'] = flights
         history = decode(user, 'airport_visit_history', {})
         row['airport_visit_counts'] = {k: len(v) for k, v in history.items() if isinstance(v, list)} if isinstance(history, dict) else {}
+        row['transfer_airport_count'] = sum(
+            any(isinstance(e, dict) and any(e.get(flag) is True for flag in
+                ('isTransfer', 'isLayover', 'isStopover')) for e in entries)
+            for entries in history.values() if isinstance(entries, list)
+        ) if isinstance(history, dict) else 0
         row['airport_ratings'] = {k: v for k, v in (decode(user, 'airport_ratings', {}) or {}).items() if numeric(v)}
         # Landmark IDs, ratings and visit frequencies only; no free text/dates.
         for prefix, visited_key in [('landmark', 'visited_landmarks'), ('unesco', 'unesco_visited_sites')]:
@@ -145,11 +151,19 @@ def main():
             row[prefix + '_ratings'] = {k: v for k, v in ratings.items() if numeric(v)} if isinstance(ratings, dict) else {}
         connections = decode(user, 'saved_flight_connections', [])
         row['connections'] = []
+        transfer_ids = set()
         if isinstance(connections, list):
             for connection in connections:
                 if isinstance(connection, dict):
+                    transfer_ids.update(connection.get('flightLogIds', []))
                     legs = connection.get('connections', [])
                     row['connections'].extend(select(v, ('duration', 'type')) for v in legs if isinstance(v, dict))
+        # Preserve membership as an aggregate only, never write account-specific log IDs.
+        row['transfer_flight_count'] = sum(
+            log.get('id') in transfer_ids and not log.get('isCanceled', False)
+            for airline in airlines if isinstance(airline, dict)
+            for log in airline.get('logs', []) if isinstance(log, dict)
+        ) if isinstance(airlines, list) else 0
         n_country = sum(v.get('isVisited') is True and not v.get('hasLived', False) for v in row['countries'].values())
         n_city = sum(not v.get('hasLived', False) and not v.get('isHome', False) and not v.get('isWishlisted', False) for v in row['cities'].values())
         n_flight = sum(not v.get('isCanceled', False) for v in flights)

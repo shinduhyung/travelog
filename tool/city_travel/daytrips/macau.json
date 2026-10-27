@@ -1,0 +1,127 @@
+{
+ "city": "Macau",
+ "trips": [
+  {
+   "place": "Hong Kong",
+   "label": "",
+   "position": {
+    "id": 314572,
+    "name": "Hong Kong",
+    "city": "Tsuen Wan",
+    "lat": 22.31577,
+    "lng": 113.9357
+   },
+   "town": {
+    "name": "Hong Kong",
+    "lat": 22.27832,
+    "lng": 114.17469
+   },
+   "road": {
+    "km": 87,
+    "min": 77,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 460,
+    "currency": "MOP"
+   },
+   "modes": {
+    "bus": {
+     "from": "$6-$23",
+     "time": "1h 30m",
+     "via": "Sands Macao to Jordan Station",
+     "source": "https://www.rome2rio.com/s/Macau/Hong%20Kong"
+    }
+   },
+   "route_note": "Take a turbo jet ferry from the Macau Outer Harbour or Macau Ferry Terminal to Hong Kong's Sheung Wan or Central pier, about one hour, then use the MTR metro to reach your sights.",
+   "see": [
+    "Victoria Peak",
+    "Star Ferry harbour crossing",
+    "Central and Sheung Wan",
+    "Temple Street Night Market",
+    "Tian Tan Buddha (Lantau, optional)"
+   ],
+   "visit": "Full day",
+   "tour_query": "Hong Kong day trip from Macau",
+   "quests": [
+    "Victoria Peak",
+    "Bank of China Tower",
+    "Man Mo Temple",
+    "M+ Museum",
+    "Tai Kwun",
+    "Avenue of Stars",
+    "1881 Heritage",
+    "Xiqu Centre"
+   ],
+   "recommended": "bus",
+   "why": "The direct bus from Sands Macao to Jordan Station is simpler than the ferry-plus-metro route and drops you near the city's sights.",
+   "stars": 5,
+   "know": [
+    "The turbo jet ferry from Macau Outer Harbour or Macau Ferry Terminal takes about one hour, faster than the bus's 1h 30m.",
+    "Bring your passport for border crossing."
+   ]
+  },
+  {
+   "place": "Guangzhou",
+   "label": "",
+   "position": {
+    "id": 17400482,
+    "name": "Guangzhou, Guangzhou South railway station",
+    "city": "Guangzhou",
+    "lat": 22.98905,
+    "lng": 113.2697
+   },
+   "town": {
+    "name": "Guangzhou",
+    "lat": 23.11667,
+    "lng": 113.25
+   },
+   "road": {
+    "km": 135,
+    "min": 100,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 700,
+    "currency": "MOP"
+   },
+   "modes": {
+    "bus": {
+     "from": "$5-$16",
+     "time": "2h 20m",
+     "via": "Zhuhai Gongbei to Guangzhou Landmark Hotel",
+     "source": "https://www.rome2rio.com/s/Macau/Guangzhou"
+    }
+   },
+   "route_note": "Take an intercity bus from Macau to Zhuhai or Gongbei, then a high-speed train from Zhuhai to Guangzhou South, which takes about two to three hours in total, and use the metro to reach the city centre.",
+   "see": [
+    "Canton Tower",
+    "Shamian Island",
+    "Chen Clan Ancestral Hall",
+    "Beijing Road pedestrian street"
+   ],
+   "visit": "Full day",
+   "tour_query": "Guangzhou day trip from Macau",
+   "quests": [
+    "Guangdong Museum",
+    "Canton Tower",
+    "Tianhe Stadium",
+    "Guangzhou Opera House",
+    "Jiang by Chef Fei",
+    "Imperial Treasure Fine Chinese Cuisine, Guangzhou",
+    "Taian Table, GuangZhou",
+    "Sun Yat-sen University"
+   ],
+   "recommended": "bus",
+   "why": "The direct bus to Guangzhou Landmark Hotel takes 2h 20m, avoiding the multiple transfers needed by train.",
+   "stars": 3,
+   "know": [
+    "The train route via Zhuhai and Guangzhou South takes about two to three hours and requires several changes.",
+    "Bring your passport for border crossing."
+   ]
+  }
+ ],
+ "problems": [
+  "Zhuhai: not a town in cities15000.json (MO), dropped"
+ ]
+}

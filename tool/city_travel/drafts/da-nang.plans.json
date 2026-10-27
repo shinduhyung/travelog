@@ -1,0 +1,727 @@
+{
+  "plans": [
+    {
+      "id": "day-beach",
+      "length": "day",
+      "style": "beach",
+      "nights": 0,
+      "for": "Sunrise on Son Tra, a long swim at My Khe, and a sunset finish at An Bang.",
+      "stay_area": "My Khe Beach",
+      "days": [
+        {
+          "title": "Sunrise, sand and sunset",
+          "stops": [
+            {
+              "place": "son_tra_viewpoint",
+              "at": "05:30",
+              "minutes": 90,
+              "note": "Go for sunrise. Bring a light layer, as it can be windy up top."
+            },
+            {
+              "place": "my_khe",
+              "at": "08:00",
+              "minutes": 180,
+              "note": "Swim and rest in the morning. Lifeguards are on duty in season, so check the flags."
+            },
+            {
+              "place": "an_bang",
+              "at": "16:00",
+              "minutes": 150,
+              "note": "Seafood by the water, then stay for sunset. Check on the day for seafood stalls."
+            },
+            {
+              "place": "dragon_bridge",
+              "at": "21:00",
+              "minutes": 45,
+              "note": "Fire and water show on weekend nights only. On other nights, the bridge is still lit.",
+              "by": "taxi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Morning market and cooking class, then street food and a night market.",
+      "stay_area": "Hai Chau (District 1)",
+      "days": [
+        {
+          "title": "Market, class and night eats",
+          "stops": [
+            {
+              "place": "han_market",
+              "at": "07:00",
+              "minutes": 60,
+              "note": "Go early for the freshest produce and a light breakfast. Opens roughly 06:00."
+            },
+            {
+              "place": "hoi_an_cooking",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Morning session. Book ahead; sessions are usually in the morning or afternoon.",
+              "by": "taxi"
+            },
+            {
+              "place": "tran_cao_van",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Street food for dinner. Starts roughly 17:00, so arrive early for seats."
+            },
+            {
+              "place": "night_market",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Snacks and sweets to finish. Closes roughly 22:30.",
+              "by": "taxi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "Early hilltop temple, midday museum break, and Hoi An's lanterns at dusk.",
+      "stay_area": "Hai Chau (District 1)",
+      "days": [
+        {
+          "title": "Temple, museum and old town",
+          "stops": [
+            {
+              "place": "lady_buddha",
+              "at": "06:30",
+              "minutes": 90,
+              "note": "Cooler air early on. Hours roughly 06:00–18:00; check on the day."
+            },
+            {
+              "place": "cham_museum",
+              "at": "12:00",
+              "minutes": 75,
+              "note": "Indoor, so good for the midday heat. Roughly 07:30–17:00; check on the day.",
+              "by": "taxi"
+            },
+            {
+              "place": "japanese_bridge",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Best at dusk. Roughly 07:30–21:30."
+            },
+            {
+              "place": "hoi_an_old_town",
+              "at": "18:15",
+              "minutes": 180,
+              "note": "Lanterns come on after dark. Streets are open all day; ticketed sites roughly 07:30–21:30."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1n-beach",
+      "length": "1n",
+      "style": "beach",
+      "nights": 1,
+      "for": "Sand, sunset and seafood for travellers who want to slow down by the water.",
+      "stay_area": "My Khe Beach",
+      "days": [
+        {
+          "title": "Arrive, An Bang sunset and seafood",
+          "stops": [
+            {
+              "place": "an_bang",
+              "at": "16:30",
+              "minutes": 150,
+              "note": "Go for the sunset. Seafood stalls line the sand in the evening."
+            },
+            {
+              "place": "tran_cao_van",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Food street in Thanh Khe, about 15 minutes by taxi from My Khe. Usually open from about 17:00."
+            }
+          ]
+        },
+        {
+          "title": "Sunrise swim, then the bridge",
+          "stops": [
+            {
+              "place": "my_khe",
+              "at": "06:00",
+              "minutes": 180,
+              "note": "Cooler air and quiet sand. Lifeguards are on duty in season, so check the flags."
+            },
+            {
+              "place": "han_market",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Indoor market for a late breakfast. Usually open from about 06:00."
+            },
+            {
+              "place": "dragon_bridge",
+              "at": "21:00",
+              "minutes": 45,
+              "note": "Fire and water show on weekend nights. Check the show times on the day."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Local eats from market stalls to night markets, with a cooking class in the morning.",
+      "stay_area": "Hai Chau (District 1)",
+      "days": [
+        {
+          "title": "Market and beach-side seafood",
+          "stops": [
+            {
+              "place": "han_market",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Indoor market. Usually open until about 18:00."
+            },
+            {
+              "place": "an_bang",
+              "at": "17:30",
+              "minutes": 150,
+              "note": "Sunset, then seafood by the sand."
+            },
+            {
+              "place": "tran_cao_van",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Late dinner street. Usually open until about 23:00."
+            }
+          ]
+        },
+        {
+          "title": "Cook, eat and wander",
+          "stops": [
+            {
+              "place": "hoi_an_cooking",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Morning session. Book ahead and confirm the time."
+            },
+            {
+              "place": "cham_museum",
+              "at": "13:30",
+              "minutes": 75,
+              "note": "Indoor and cool. Usually open until about 17:00."
+            },
+            {
+              "place": "night_market",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Lanterns and street food. Usually open from about 17:00 to 22:30."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Our pick for most visitors: a hilltop temple at sunrise, Cham sculpture, then the old town at dusk.",
+      "stay_area": "Hai Chau (District 1)",
+      "days": [
+        {
+          "title": "Temple hill and museum",
+          "stops": [
+            {
+              "place": "lady_buddha",
+              "at": "06:15",
+              "minutes": 90,
+              "note": "Cooler air early. Usually open from about 06:00 to 18:00; check on the day."
+            },
+            {
+              "place": "son_tra_viewpoint",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Sea and city views on the peninsula. Open all day."
+            },
+            {
+              "place": "cham_museum",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Midday is cool inside. Usually open until about 17:00."
+            },
+            {
+              "place": "dragon_bridge",
+              "at": "19:30",
+              "minutes": 45,
+              "note": "Fire and water show on weekend nights. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Old town and lanterns",
+          "stops": [
+            {
+              "place": "hoi_an_old_town",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "Ticketed sites usually open from about 07:30 to 21:30. Streets stay open all day."
+            },
+            {
+              "place": "japanese_bridge",
+              "at": "17:45",
+              "minutes": 30,
+              "note": "Best at dusk. Usually open until about 21:30."
+            },
+            {
+              "place": "basket_boat",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Late-afternoon boats run until about 18:00, so check the last trip."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2n-beach",
+      "length": "2n",
+      "style": "beach",
+      "nights": 2,
+      "for": "Sand, sunrise swims and seafood by the water, with one early morning on Son Tra.",
+      "days": [
+        {
+          "title": "Son Tra sunrise, then My Khe",
+          "stops": [
+            {
+              "place": "son_tra_viewpoint",
+              "at": "05:45",
+              "minutes": 90,
+              "note": "Go for sunrise. Bring water and a light layer."
+            },
+            {
+              "place": "lady_buddha",
+              "at": "07:30",
+              "minutes": 90,
+              "note": "Opens around 06:00. Cooler air before the heat builds.",
+              "by": "taxi"
+            },
+            {
+              "place": "my_khe",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Lifeguards in season. Check flags before you swim."
+            },
+            {
+              "place": "an_bang",
+              "at": "16:00",
+              "minutes": 150,
+              "note": "Stay for sunset. Seafood stalls line the sand in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Morning swim, city lights",
+          "stops": [
+            {
+              "place": "my_khe",
+              "at": "07:00",
+              "minutes": 180,
+              "note": "Morning is the calmest time on the sand."
+            },
+            {
+              "place": "han_market",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Opens around 06:00. Good for a snack or seafood lunch.",
+              "by": "taxi"
+            },
+            {
+              "place": "asia_park",
+              "at": "17:00",
+              "minutes": 180,
+              "note": "Open roughly 09:00 to 22:00. Stay for the lit-up Sun Wheel."
+            },
+            {
+              "place": "dragon_bridge",
+              "at": "21:00",
+              "minutes": 45,
+              "note": "Fire and water show runs on weekend nights. Check the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "My Khe Beach"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Morning markets, a cooking class, and night street food across the city.",
+      "days": [
+        {
+          "title": "Market, cooking class, night market",
+          "stops": [
+            {
+              "place": "han_market",
+              "at": "07:30",
+              "minutes": 60,
+              "note": "Opens around 06:00. Go early for the best choice."
+            },
+            {
+              "place": "hoi_an_cooking",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Morning session. Book ahead. Lunch is usually included."
+            },
+            {
+              "place": "cham_museum",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Indoor and cool. Good midday break from the heat."
+            },
+            {
+              "place": "night_market",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Open roughly 17:00 to 22:30. Try several stalls and share plates."
+            }
+          ]
+        },
+        {
+          "title": "Beach snacks and street food",
+          "stops": [
+            {
+              "place": "an_bang",
+              "at": "14:30",
+              "minutes": 150,
+              "note": "Stay for sunset. Seafood and grilled snacks along the sand."
+            },
+            {
+              "place": "tran_cao_van",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Food street, roughly 17:00 to 23:00. Short taxi ride from the beach.",
+              "by": "taxi"
+            },
+            {
+              "place": "dragon_bridge",
+              "at": "20:45",
+              "minutes": 45,
+              "note": "Fire and water show on weekend nights. Check the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hai Chau (District 1)"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Cham sculpture, old streets and the Son Tra temple, with lanterns in the evening.",
+      "days": [
+        {
+          "title": "Lady Buddha and Cham sculpture",
+          "stops": [
+            {
+              "place": "lady_buddha",
+              "at": "06:30",
+              "minutes": 90,
+              "note": "Opens around 06:00. Cooler early on, so go before the heat.",
+              "by": "taxi"
+            },
+            {
+              "place": "cham_museum",
+              "at": "11:00",
+              "minutes": 75,
+              "note": "Indoor and cool. Opens around 07:30 and closes around 17:00."
+            },
+            {
+              "place": "han_market",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch stop. Open roughly 06:00 to 18:00.",
+              "by": "walk"
+            },
+            {
+              "place": "dragon_bridge",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Open all day. Fire show on weekend nights only."
+            }
+          ]
+        },
+        {
+          "title": "Old town by morning boat, lanterns at night",
+          "stops": [
+            {
+              "place": "basket_boat",
+              "at": "07:00",
+              "minutes": 30,
+              "note": "Early boats run roughly 07:00 to 18:00. Calm water and quiet light."
+            },
+            {
+              "place": "hoi_an_old_town",
+              "at": "08:00",
+              "minutes": 180,
+              "note": "Ticketed sites open around 07:30. Walk the old streets before the crowds."
+            },
+            {
+              "place": "japanese_bridge",
+              "at": "18:45",
+              "minutes": 30,
+              "note": "Best at dusk. Open roughly 07:30 to 21:30."
+            },
+            {
+              "place": "hoi_an_old_town",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Lanterns come on after dark. Evening is the best time here."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hai Chau (District 1)"
+    },
+    {
+      "id": "3n-beach",
+      "length": "3n",
+      "style": "beach",
+      "nights": 3,
+      "for": "Sand, sunrise swims and seafood by the water, with one quick Son Tra trip.",
+      "stay_area": "My Khe Beach",
+      "days": [
+        {
+          "title": "Arrive, sunset at An Bang",
+          "stops": [
+            {
+              "place": "an_bang",
+              "at": "16:30",
+              "minutes": 150,
+              "note": "Go for the sunset. Bring water and sunscreen."
+            },
+            {
+              "place": "tran_cao_van",
+              "at": "19:15",
+              "minutes": 90,
+              "note": "Seafood and local dishes. Check the stalls on the day."
+            }
+          ]
+        },
+        {
+          "title": "Sunrise, then My Khe",
+          "stops": [
+            {
+              "place": "son_tra_viewpoint",
+              "at": "05:45",
+              "minutes": 90,
+              "note": "Best at sunrise. Take a taxi or ride-hailing car, and check the road on the day."
+            },
+            {
+              "place": "my_khe",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Morning swim. Lifeguards are on duty in season, so swim between the flags."
+            },
+            {
+              "place": "da_nang_bay",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Evening boat ride. Boats usually run in the evening, so check times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Temple and a weekend show",
+          "stops": [
+            {
+              "place": "lady_buddha",
+              "at": "06:00",
+              "minutes": 90,
+              "note": "Cooler early on. Check opening hours on the day."
+            },
+            {
+              "place": "my_khe",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Last swim before you leave the beach."
+            },
+            {
+              "place": "dragon_bridge",
+              "at": "20:30",
+              "minutes": 45,
+              "note": "The fire and water show runs on weekend nights. On weekdays the bridge is still open."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Mì Quảng, seafood and night markets, with a cooking class in Hoi An.",
+      "stay_area": "Downtown Da Nang",
+      "days": [
+        {
+          "title": "Market breakfast and food street",
+          "stops": [
+            {
+              "place": "han_market",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Breakfast and local snacks. Indoor, so it is cool."
+            },
+            {
+              "place": "cham_museum",
+              "at": "11:00",
+              "minutes": 75,
+              "note": "Indoor escape from the heat. Check hours on the day."
+            },
+            {
+              "place": "tran_cao_van",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner street. Go early for a seat."
+            }
+          ]
+        },
+        {
+          "title": "Hoi An day",
+          "stops": [
+            {
+              "place": "hoi_an_cooking",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Morning class. Book ahead, and check the session times."
+            },
+            {
+              "place": "hoi_an_old_town",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "Walk the old streets. Ticketed sites open roughly 07:30 to 21:30."
+            },
+            {
+              "place": "night_market",
+              "at": "18:45",
+              "minutes": 90,
+              "note": "Street food. Market runs roughly 17:00 to 22:30."
+            }
+          ]
+        },
+        {
+          "title": "Seafood by the water",
+          "stops": [
+            {
+              "place": "han_market",
+              "at": "07:00",
+              "minutes": 60,
+              "note": "Early start for the market. Opens roughly 06:00."
+            },
+            {
+              "place": "an_bang",
+              "at": "16:30",
+              "minutes": 150,
+              "note": "Seafood on the sand at sunset."
+            },
+            {
+              "place": "dragon_bridge",
+              "at": "20:30",
+              "minutes": 45,
+              "note": "Fire and water show on weekend nights, so check the day."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Cham sculpture, temples on Son Tra and a slow walk through Hoi An's old streets.",
+      "stay_area": "Hai Chau (District 1)",
+      "days": [
+        {
+          "title": "Museum and river at dusk",
+          "stops": [
+            {
+              "place": "cham_museum",
+              "at": "08:30",
+              "minutes": 75,
+              "note": "Go early before the heat builds. Closes roughly 17:00."
+            },
+            {
+              "place": "japanese_bridge",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Best at dusk. Open roughly 07:30 to 21:30."
+            },
+            {
+              "place": "da_nang_bay",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Evening boat ride. Check departure times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Son Tra temples and mountain",
+          "stops": [
+            {
+              "place": "lady_buddha",
+              "at": "06:00",
+              "minutes": 90,
+              "note": "Cooler air early. Open roughly 06:00 to 18:00, so check on the day."
+            },
+            {
+              "place": "bana_cable",
+              "at": "08:00",
+              "minutes": 300,
+              "note": "Cable car up the mountain. Opening hours are roughly 07:30 to 17:00, varies by season."
+            },
+            {
+              "place": "golden_bridge",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Within Ba Na Hills hours, so finish before the park closes."
+            }
+          ]
+        },
+        {
+          "title": "Hoi An old streets",
+          "stops": [
+            {
+              "place": "basket_boat",
+              "at": "07:00",
+              "minutes": 30,
+              "note": "Early boat trip. Runs roughly 07:00 to 18:00."
+            },
+            {
+              "place": "hoi_an_old_town",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Walk the old streets. Ticketed sites open roughly 07:30 to 21:30."
+            },
+            {
+              "place": "night_market",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Lanterns and street food. Market runs roughly 17:00 to 22:30."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

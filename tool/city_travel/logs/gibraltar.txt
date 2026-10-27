@@ -1,0 +1,36 @@
+$ deepseek_prep.py Gibraltar
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 944 out 1195
+Gibraltar: 3 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Gibraltar
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 4521 out 3013
+Gibraltar: 0 problems
+
+$ deepseek_city.py Gibraltar --stage places
+Gibraltar: places
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 1621 out 3770
+
+$ deepseek_city.py Gibraltar --stage frame
+Gibraltar: frame
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 3430 out 4129
+
+$ deepseek_city.py Gibraltar --stage plans
+Gibraltar: plans
+  plans for day
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 1895 out 1970
+  plans for 1n
+  claude tokens in 1895 out 2615
+  plans for 2n
+  claude tokens in 1902 out 2492
+  plans for 3n
+  claude tokens in 1896 out 3569
+
+$ merge_city.py Gibraltar
+Gibraltar: 9 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/gibraltar.json and planner/gibraltar.json
+

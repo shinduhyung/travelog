@@ -1,0 +1,955 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "A one-day culture route: the Markale market at dawn, then the old town's mosques and bazaar.",
+      "stay_area": "Baščaršija",
+      "days": [
+        {
+          "title": "Market, City Hall, mosque and bazaar",
+          "stops": [
+            {
+              "place": "markale_market",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Go early for the freshest stalls. Typically open from 07:00. Check on the day."
+            },
+            {
+              "place": "city_hall",
+              "at": "09:15",
+              "minutes": 30,
+              "note": "Best seen in morning light on the façade. Interior hours vary."
+            },
+            {
+              "place": "cevapi",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch stop. Most grills open around 10:00. Check on the day."
+            },
+            {
+              "place": "gazi_husrev_mosque",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Closed to visitors during prayers. Check times before you go."
+            },
+            {
+              "place": "bascarsija",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "Late afternoon is the best time. Browse the bazaar and watch the Sebilj fountain."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "A one-day walk through the 1990s war story, from Latin Bridge to the Tunnel of Hope.",
+      "stay_area": "Centar",
+      "days": [
+        {
+          "title": "Latin Bridge, Tunnel of Hope and sunset",
+          "stops": [
+            {
+              "place": "latin_bridge",
+              "at": "09:00",
+              "minutes": 20,
+              "note": "Quieter early in the morning."
+            },
+            {
+              "place": "tunnel_museum",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Late morning is best on a clear day. Usually open 09:00 to 18:00. Check on the day."
+            },
+            {
+              "place": "cevapi",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch stop in the old quarter."
+            },
+            {
+              "place": "eternal_flame",
+              "at": "13:00",
+              "minutes": 15,
+              "note": "Always open. Short stop on the way to City Hall."
+            },
+            {
+              "place": "city_hall",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Exterior is always visible. Interior hours vary."
+            },
+            {
+              "place": "yellow_bastion",
+              "at": "18:30",
+              "minutes": 40,
+              "note": "Go for sunset. Check the sunset time for your date."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A slow day of market breakfasts, grilled ćevapi and bazaar coffee in the old quarter.",
+      "stay_area": "Baščaršija",
+      "days": [
+        {
+          "title": "Market, ćevapi and bazaar coffee",
+          "stops": [
+            {
+              "place": "markale_market",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Early morning is best. Typically open 07:00 to 17:00. Check on the day."
+            },
+            {
+              "place": "cevapi",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch is the best time for ćevapi. Most grills open around 10:00. Check on the day."
+            },
+            {
+              "place": "gazi_husrev_mosque",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Visit outside prayer times. Check on the day."
+            },
+            {
+              "place": "bascarsija",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Sit with Bosnian coffee and baklava while the light fades."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Bazaar, mosques and old-town cafés for first-time visitors who want culture over war history.",
+      "days": [
+        {
+          "title": "Old town walk and bazaar",
+          "stops": [
+            {
+              "place": "walking_tour_city",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Free tour. Check the start times on the day. Good way to get your bearings."
+            },
+            {
+              "place": "gazi_husrev_mosque",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Closed to visitors during prayers. Check times on the day."
+            },
+            {
+              "place": "cevapi",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Lunch at a grill in Baščaršija. Most open around 10:00 to 22:00."
+            },
+            {
+              "place": "bascarsija",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Shops close around 20:00. Stay for the cafés in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Market, city hall and Vratnik",
+          "stops": [
+            {
+              "place": "markale_market",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Go early. Usually open 07:00 to 17:00."
+            },
+            {
+              "place": "city_hall",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Best light on the façade in the morning. Interior hours vary."
+            },
+            {
+              "place": "vratnik_walk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Quiet streets and old houses. Easy to walk at your own pace."
+            },
+            {
+              "place": "yellow_bastion",
+              "at": "19:30",
+              "minutes": 40,
+              "note": "Aim for sunset. Check the sunset time on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Baščaršija & Centar"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "A gentle walk through the 1990s war story, with the Tunnel of Hope and Latin Bridge.",
+      "days": [
+        {
+          "title": "Old town and Latin Bridge",
+          "stops": [
+            {
+              "place": "walking_tour_city",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Free tour. Good start to hear the city's history. Check times on the day."
+            },
+            {
+              "place": "cevapi",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Lunch break. Most grills open around 10:00 to 22:00."
+            },
+            {
+              "place": "latin_bridge",
+              "at": "13:15",
+              "minutes": 20,
+              "note": "Where the 1914 shots were fired. Quieter early in the day."
+            },
+            {
+              "place": "eternal_flame",
+              "at": "14:00",
+              "minutes": 15,
+              "note": "Always open. Short walk from the bridge."
+            },
+            {
+              "place": "city_hall",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Look at the outside. Interior hours vary, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Tunnel of Hope and the bazaar",
+          "stops": [
+            {
+              "place": "tunnel_museum",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Best on a clear day in late morning. Usually open 09:00 to 18:00, check on the day."
+            },
+            {
+              "place": "gazi_husrev_mosque",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Closed to visitors during prayers. Check times on the day."
+            },
+            {
+              "place": "bascarsija",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Old bazaar and shops. Stay into the evening if you like."
+            },
+            {
+              "place": "yellow_bastion",
+              "at": "19:30",
+              "minutes": 40,
+              "note": "Good view. Aim for sunset, check the time on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Baščaršija & Centar"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Ćevapi, market stalls and slow coffee in the old quarter.",
+      "days": [
+        {
+          "title": "Market and ćevapi",
+          "stops": [
+            {
+              "place": "markale_market",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Fresh produce and breakfast. Usually open 07:00 to 17:00."
+            },
+            {
+              "place": "cevapi",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Lunch at a grill. Go before the queues build up."
+            },
+            {
+              "place": "bascarsija",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Coffee and sweets in the cafés. Shops close around 20:00."
+            },
+            {
+              "place": "yellow_bastion",
+              "at": "19:30",
+              "minutes": 40,
+              "note": "Sunset view. Check the time on the day."
+            }
+          ]
+        },
+        {
+          "title": "Vratnik and a second grill",
+          "stops": [
+            {
+              "place": "gazi_husrev_mosque",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Closed to visitors during prayers. Check times on the day."
+            },
+            {
+              "place": "vratnik_walk",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Walk up through the old streets. Good before lunch."
+            },
+            {
+              "place": "cevapi",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Try a different grill for comparison. Most open around 10:00 to 22:00."
+            },
+            {
+              "place": "latin_bridge",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Short stop on the way back down to the old town."
+            },
+            {
+              "place": "bascarsija",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Evening coffee and baklava in the bazaar."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Baščaršija & Centar"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Mosques, bazaar and old-town cafés for first-time visitors who want to see the city's Ottoman and Austro-Hungarian layers.",
+      "days": [
+        {
+          "title": "Arrive and old town",
+          "stops": [
+            {
+              "place": "walking_tour_city",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Good first orientation. Check the slot times on the day."
+            },
+            {
+              "place": "cevapi",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch in Baščaršija. Grills usually open from about 10:00."
+            },
+            {
+              "place": "gazi_husrev_mosque",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Closed to visitors during prayers. Check the hours on the day."
+            },
+            {
+              "place": "bascarsija",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Best in late afternoon. Shops usually close around 20:00."
+            }
+          ]
+        },
+        {
+          "title": "Bridge, city hall and the bastion",
+          "stops": [
+            {
+              "place": "city_hall",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Morning light on the façade. Interior hours vary."
+            },
+            {
+              "place": "latin_bridge",
+              "at": "10:15",
+              "minutes": 20,
+              "note": "Quieter early in the day. Short walk from City Hall."
+            },
+            {
+              "place": "vratnik_walk",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Narrow old-town lanes uphill from Baščaršija."
+            },
+            {
+              "place": "eternal_flame",
+              "at": "14:30",
+              "minutes": 15,
+              "note": "Open at all times. Close to City Hall."
+            },
+            {
+              "place": "yellow_bastion",
+              "at": "18:30",
+              "minutes": 40,
+              "note": "Best at sunset. Check sunset time for the season."
+            }
+          ]
+        },
+        {
+          "title": "Market and last evening",
+          "stops": [
+            {
+              "place": "markale_market",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Early morning is best. Usually closes around 17:00."
+            },
+            {
+              "place": "tunnel_museum",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Usually open from 09:00 to 18:00. Check on the day."
+            },
+            {
+              "place": "trebevic_cable_car",
+              "at": "13:30",
+              "minutes": 180,
+              "note": "Check weather. It may be closed in bad weather."
+            },
+            {
+              "place": "bascarsija",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Final evening in the old town cafés."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Baščaršija"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Wartime sites, Latin Bridge and the Tunnel of Hope, with the old town as a base for the 1990s war story.",
+      "days": [
+        {
+          "title": "Arrive and the war story begins",
+          "stops": [
+            {
+              "place": "walking_tour_city",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Start of visit. Covers the city's history. Check slot times."
+            },
+            {
+              "place": "latin_bridge",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Site of the 1914 assassination. Quieter early."
+            },
+            {
+              "place": "cevapi",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Lunch. Grills usually open from about 10:00."
+            },
+            {
+              "place": "eternal_flame",
+              "at": "15:00",
+              "minutes": 15,
+              "note": "Always open. Short walk from City Hall."
+            },
+            {
+              "place": "city_hall",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Exterior is always visible. Interior hours vary."
+            }
+          ]
+        },
+        {
+          "title": "Tunnel and hills",
+          "stops": [
+            {
+              "place": "tunnel_museum",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Best late morning on a clear day. Usually 09:00 to 18:00."
+            },
+            {
+              "place": "trebevic_cable_car",
+              "at": "13:00",
+              "minutes": 180,
+              "note": "Clear mornings or late afternoon are best. Check weather."
+            },
+            {
+              "place": "yellow_bastion",
+              "at": "18:30",
+              "minutes": 40,
+              "note": "Sunset view over the old town. Check sunset time."
+            }
+          ]
+        },
+        {
+          "title": "Old town and mosque",
+          "stops": [
+            {
+              "place": "vratnik_walk",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning is best. Uphill lanes."
+            },
+            {
+              "place": "gazi_husrev_mosque",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Outside prayer times. Check hours on the day."
+            },
+            {
+              "place": "markale_market",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch area. Usually closes around 17:00."
+            },
+            {
+              "place": "bascarsija",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Late afternoon in the bazaar."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Baščaršija"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Ćevapi, burek, baklava and Bosnian coffee, eaten slowly in the old quarter.",
+      "days": [
+        {
+          "title": "Market and first ćevapi",
+          "stops": [
+            {
+              "place": "markale_market",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Early morning is best. Usually closes around 17:00."
+            },
+            {
+              "place": "cevapi",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch. Grills usually open from about 10:00."
+            },
+            {
+              "place": "gazi_husrev_mosque",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Outside prayer times. Check hours on the day."
+            },
+            {
+              "place": "bascarsija",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Coffee and baklava in the bazaar cafés."
+            }
+          ]
+        },
+        {
+          "title": "Walk, bridge and dinner",
+          "stops": [
+            {
+              "place": "walking_tour_city",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Food and history on foot. Check slot times."
+            },
+            {
+              "place": "latin_bridge",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Quick stop near the centre."
+            },
+            {
+              "place": "cevapi",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Early dinner. Grills usually close around 22:00."
+            },
+            {
+              "place": "bascarsija",
+              "at": "20:00",
+              "minutes": 60,
+              "note": "Evening stroll. Shops usually close around 20:00."
+            }
+          ]
+        },
+        {
+          "title": "Slow morning and views",
+          "stops": [
+            {
+              "place": "vratnik_walk",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning walk, then coffee back down in the old town."
+            },
+            {
+              "place": "city_hall",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Exterior is always visible. Interior hours vary."
+            },
+            {
+              "place": "yellow_bastion",
+              "at": "18:30",
+              "minutes": 40,
+              "note": "Sunset view. Check sunset time for the season."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Baščaršija"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-time visitors who want the bazaar, mosques and old-town cafés, with a slow pace.",
+      "days": [
+        {
+          "title": "Old town orientation",
+          "stops": [
+            {
+              "place": "walking_tour_city",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Free. Check the start times on the day. Good way to get your bearings."
+            },
+            {
+              "place": "cevapi",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Lunch in Baščaršija. Most grills open around 10:00 to 22:00."
+            },
+            {
+              "place": "gazi_husrev_mosque",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Closed to visitors during prayers. Check times on the day."
+            },
+            {
+              "place": "bascarsija",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Late afternoon is the best light. Shops usually close around 20:00."
+            }
+          ]
+        },
+        {
+          "title": "Morning market, city hall and the hills",
+          "stops": [
+            {
+              "place": "markale_market",
+              "at": "07:30",
+              "minutes": 45,
+              "note": "Go early. Typically closes around 17:00."
+            },
+            {
+              "place": "city_hall",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Best seen from outside in the morning light. Interior hours vary."
+            },
+            {
+              "place": "eternal_flame",
+              "at": "09:45",
+              "minutes": 15,
+              "note": "Always open. A short stop on the way."
+            },
+            {
+              "place": "vratnik_walk",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Quiet lanes up the hill. Wear comfortable shoes."
+            },
+            {
+              "place": "yellow_bastion",
+              "at": "19:15",
+              "minutes": 40,
+              "note": "Aim for sunset. Check the time on the day."
+            }
+          ]
+        },
+        {
+          "title": "Bridge, mosque and bazaar",
+          "stops": [
+            {
+              "place": "latin_bridge",
+              "at": "08:30",
+              "minutes": 20,
+              "note": "Quieter in the early morning."
+            },
+            {
+              "place": "tunnel_museum",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Late morning on a clear day. Hours roughly 09:00 to 18:00, check on the day."
+            },
+            {
+              "place": "cevapi",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Lunch. Try it before the afternoon crowds."
+            },
+            {
+              "place": "gazi_husrev_mosque",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Outside prayer times. Check the schedule first."
+            },
+            {
+              "place": "bascarsija",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Evening café time. Good for a last look at the old town."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Baščaršija & Centar"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Visitors who want the 1990s war story, from Latin Bridge to the Tunnel of Hope.",
+      "days": [
+        {
+          "title": "Old town and the Latin Bridge",
+          "stops": [
+            {
+              "place": "walking_tour_city",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Free. Covers the city's history. Check start times."
+            },
+            {
+              "place": "latin_bridge",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Short walk from the old town. Open all day."
+            },
+            {
+              "place": "tunnel_museum",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Hours roughly 09:00 to 18:00. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Civic sites and the hills",
+          "stops": [
+            {
+              "place": "city_hall",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Best seen from outside in the morning light."
+            },
+            {
+              "place": "eternal_flame",
+              "at": "09:45",
+              "minutes": 15,
+              "note": "Always open. Short stop."
+            },
+            {
+              "place": "vratnik_walk",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Walk through the old-town lanes."
+            },
+            {
+              "place": "cevapi",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch in Baščaršija."
+            },
+            {
+              "place": "trebevic_cable_car",
+              "at": "15:00",
+              "minutes": 180,
+              "note": "Can close in bad weather. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Market, mosque and sunset",
+          "stops": [
+            {
+              "place": "markale_market",
+              "at": "07:30",
+              "minutes": 45,
+              "note": "Early morning. Typically closes around 17:00."
+            },
+            {
+              "place": "gazi_husrev_mosque",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Midday, outside prayer times. Check on the day."
+            },
+            {
+              "place": "bascarsija",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Lunch and a slow look at the bazaar."
+            },
+            {
+              "place": "yellow_bastion",
+              "at": "18:45",
+              "minutes": 40,
+              "note": "Aim for sunset. Check the time on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centar & Vratnik"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Food lovers who want ćevapi, burek and Bosnian coffee, eaten slowly in the old quarter.",
+      "days": [
+        {
+          "title": "Market and first ćevapi",
+          "stops": [
+            {
+              "place": "markale_market",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Early morning is best. Typically closes around 17:00."
+            },
+            {
+              "place": "bascarsija",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Browse the shops and try coffee in a café."
+            },
+            {
+              "place": "cevapi",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Lunch. Most grills open around 10:00 to 22:00."
+            },
+            {
+              "place": "gazi_husrev_mosque",
+              "at": "14:15",
+              "minutes": 45,
+              "note": "Outside prayer times. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Old-town lanes and evening",
+          "stops": [
+            {
+              "place": "walking_tour_city",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Free. Good for learning the food history."
+            },
+            {
+              "place": "latin_bridge",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Short stop. Open all day."
+            },
+            {
+              "place": "cevapi",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Early dinner. Try a second spot to compare."
+            },
+            {
+              "place": "bascarsija",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Evening café time. Shops usually close around 20:00."
+            }
+          ]
+        },
+        {
+          "title": "Hilltop views and a last meal",
+          "stops": [
+            {
+              "place": "vratnik_walk",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Walk before the heat of the day."
+            },
+            {
+              "place": "city_hall",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Best seen from outside."
+            },
+            {
+              "place": "eternal_flame",
+              "at": "11:50",
+              "minutes": 15,
+              "note": "Always open."
+            },
+            {
+              "place": "cevapi",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch before you leave."
+            },
+            {
+              "place": "yellow_bastion",
+              "at": "18:45",
+              "minutes": 40,
+              "note": "Aim for sunset. Check the time on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Baščaršija & Centar"
+    }
+  ]
+}

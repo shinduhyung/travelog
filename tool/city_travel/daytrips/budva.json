@@ -1,0 +1,164 @@
+{
+ "city": "Budva",
+ "trips": [
+  {
+   "place": "Kotor",
+   "label": "",
+   "position": {
+    "id": 450233,
+    "name": "Kotor",
+    "city": "Kotor",
+    "lat": 42.42067,
+    "lng": 18.76825
+   },
+   "town": {
+    "name": "Kotor",
+    "lat": 42.42067,
+    "lng": 18.76825
+   },
+   "road": {
+    "km": 21,
+    "min": 28,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 20.0,
+    "currency": "USD"
+   },
+   "modes": {
+    "bus": {
+     "from": "$3-$14",
+     "time": "35m",
+     "via": "Budva, Autobuska Stanica to Kotor, Autobuska Stanica",
+     "source": "https://www.rome2rio.com/s/Budva/Kotor"
+    }
+   },
+   "route_note": "Take a direct bus from Budva bus station to Kotor bus station, about 1 hour, with frequent departures; the old town is a short walk from the bus station.",
+   "see": [
+    "Kotor Old Town walls",
+    "St. Tryphon Cathedral",
+    "Cats Museum",
+    "Kotor Fortress climb",
+    "Bay of Kotor waterfront"
+   ],
+   "visit": "Half day",
+   "tour_query": "Kotor day trip from Budva",
+   "quests": [
+    "Kotor Old Town",
+    "Mausoleum of Njegoš on Lovćen",
+    "Bay of Kotor Cruise"
+   ],
+   "recommended": "bus",
+   "why": "The direct bus takes about 35 minutes, departs frequently, and drops you a short walk from the old town.",
+   "stars": 5,
+   "know": [
+    "Kotor's old town is a UNESCO World Heritage site.",
+    "The bus station is a short walk from the old town, so you don't need a taxi at either end.",
+    "Wear sturdy shoes, since the old town streets and the climb to the fortress walls are steep."
+   ]
+  },
+  {
+   "place": "Perast",
+   "label": "",
+   "position": {
+    "id": null,
+    "name": "Perast",
+    "city": "Perast",
+    "lat": 42.4872,
+    "lng": 18.6978
+   },
+   "town": {
+    "name": "Perast",
+    "lat": 42.4872,
+    "lng": 18.6978
+   },
+   "road": {
+    "km": 36,
+    "min": 51,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 30.0,
+    "currency": "USD"
+   },
+   "modes": {},
+   "route_note": "Take a bus from Budva to Kotor bus station, then a local bus or taxi along the bay to Perast, about 30 minutes; allow extra time for return connections.",
+   "see": [
+    "Church of Our Lady of the Rocks",
+    "Perast waterfront",
+    "Perast palazzos",
+    "Boat trip to the islets"
+   ],
+   "visit": "Half day",
+   "tour_query": "Perast and Kotor day trip from Budva",
+   "quests": [
+    "Perast"
+   ],
+   "recommended": "taxi",
+   "why": "The trip is about 51 minutes by road, and the bus route needs a change at Kotor with uncertain connections, so a taxi (about 30 USD) is the simpler choice.",
+   "stars": 4,
+   "know": [
+    "Allow extra time for the return connections if you go by bus.",
+    "Perast is small and walkable, so a few hours is usually enough.",
+    "Boats to Our Lady of the Rocks run from Perast."
+   ]
+  },
+  {
+   "place": "Cetinje",
+   "label": "",
+   "position": {
+    "id": 450239,
+    "name": "Cetinje",
+    "city": "Cetinje",
+    "lat": 42.39063,
+    "lng": 18.91417
+   },
+   "town": {
+    "name": "Cetinje",
+    "lat": 42.39063,
+    "lng": 18.91417
+   },
+   "road": {
+    "km": 31,
+    "min": 42,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 30.0,
+    "currency": "USD"
+   },
+   "modes": {
+    "bus": {
+     "from": "$2-$14",
+     "time": "37m",
+     "via": "Budva, Autobuska Stanica to Cetinje, Autobuska Stanica",
+     "source": "https://www.rome2rio.com/s/Budva/Cetinje"
+    }
+   },
+   "route_note": "Take a direct bus from Budva to Cetinje bus station, about 1 hour via the mountain road; buses run regularly and the centre is walkable from the station.",
+   "see": [
+    "Njegoš Museum (Biljarda)",
+    "Cetinje Monastery",
+    "Royal Palace museums",
+    "Cetinje Old Town"
+   ],
+   "visit": "Half day",
+   "tour_query": "Cetinje day trip from Budva",
+   "quests": [
+    "Cetinje Monastery"
+   ],
+   "recommended": "bus",
+   "why": "The direct bus takes about 37 minutes over the mountain road and drops you in the walkable centre.",
+   "stars": 3,
+   "know": [
+    "Cetinje was the historic royal capital of Montenegro, with several museums and historic buildings in the centre.",
+    "The centre is walkable from the bus station, so the bus alone covers the trip.",
+    "The route climbs into the mountains, so expect winding roads and some motion sickness risk on the bus."
+   ]
+  }
+ ],
+ "problems": [
+  "Stari Bar: not a town in cities15000.json (ME), dropped",
+  "Ulcinj: not a town in cities15000.json (ME), dropped"
+ ]
+}

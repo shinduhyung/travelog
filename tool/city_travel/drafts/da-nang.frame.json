@@ -1,0 +1,276 @@
+{
+  "styles": [
+    {
+      "id": "beach",
+      "label": "Beaches",
+      "blurb": "My Khe sand, sunrise swims and seafood by the water."
+    },
+    {
+      "id": "food",
+      "label": "Eats",
+      "blurb": "Mì Quảng, seafood and night markets, all within easy reach."
+    },
+    {
+      "id": "culture",
+      "label": "Heritage",
+      "blurb": "Cham sculpture, the Marble Mountains and quiet old streets."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "My Khe Beach",
+      "range": [
+        1000000,
+        3500000
+      ],
+      "why": "Closest to the sand and the seafront walk. Many resorts and mid-range hotels. Good base for beach days.",
+      "center": [
+        16.06,
+        108.247
+      ]
+    },
+    {
+      "area": "Hai Chau (District 1)",
+      "range": [
+        600000,
+        2500000
+      ],
+      "why": "The city centre, near the Dragon Bridge, Han Market and most restaurants. Easy bus and taxi links.",
+      "center": [
+        16.07,
+        108.222
+      ]
+    },
+    {
+      "area": "Son Tra Peninsula",
+      "range": [
+        1500000,
+        6000000
+      ],
+      "why": "Quiet, green and near the sea. Few shops nearby, so plan on taxis or Grab for dinner. Best for resorts.",
+      "center": [
+        16.115,
+        108.27
+      ]
+    },
+    {
+      "area": "Tran Cao Van (Thanh Khe)",
+      "range": [
+        300000,
+        1200000
+      ],
+      "why": "Budget guesthouses and cafés. Popular with backpackers and the place to rent a scooter or bike.",
+      "center": [
+        16.058,
+        108.2
+      ]
+    }
+  ],
+  "food": [
+    "Try mì Quảng, the local turmeric noodle dish with a little broth, and bánh xèo, the crispy pancake.",
+    "Han Market is the easiest place to sample fresh seafood and local snacks in one visit.",
+    "Eat at busy local stalls. Pick the places with a queue of locals and plastic stools.",
+    "Seafood restaurants along the beach road are good for dinner. Check prices on the menu before ordering.",
+    "Ask for water and ice carefully. Stick to bottled water if your stomach is sensitive."
+  ],
+  "more_time": [
+    "Ba Na Hills: a mountain resort with a long cable car ride. Check prices and opening times on the day.",
+    "Hoi An: an old trading town about 45 minutes away by car or taxi, depending on traffic. Good for a half-day or evening.",
+    "Marble Mountains: stone caves and small temples close to the beach. Easy to add to a half-day, with a taxi or bike."
+  ],
+  "type_month_fit": {
+    "beach": [
+      0.25,
+      0.3,
+      0.55,
+      0.85,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.6,
+      0.3,
+      0.25,
+      0.25
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.85,
+      0.85,
+      0.8
+    ],
+    "culture": [
+      0.8,
+      0.85,
+      0.9,
+      0.85,
+      0.75,
+      0.7,
+      0.7,
+      0.7,
+      0.6,
+      0.6,
+      0.7,
+      0.75
+    ],
+    "adventure": [
+      0.4,
+      0.6,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.6,
+      0.6,
+      0.4,
+      0.25,
+      0.3,
+      0.35
+    ],
+    "history": [
+      0.85,
+      0.8,
+      0.7,
+      0.6,
+      0.6,
+      0.6,
+      0.6,
+      0.6,
+      0.7,
+      0.8,
+      0.85,
+      0.9
+    ]
+  },
+  "best_for": [
+    "beach",
+    "food",
+    "adventure"
+  ],
+  "recommend": {
+    "why": "Two nights give you a beach day, a food walk and a Marble Mountains or Hoi An trip without rushing."
+  },
+  "month_notes": [
+    "January: Cool at 20–24°C with about 20 rain days. Pack a light jacket and plan indoor sights on wet days.",
+    "February: Mild at 20–24°C with about 13 rain days. Good for sightseeing and motorbike trips.",
+    "March: Warm at 22–27°C with about 10 rain days. One of the best months for beaches and outings.",
+    "April: Hot at 24–30°C with about 8 rain days. The driest month, so good for beaches and motorbike rides.",
+    "May: Hot at 26–32°C with about 13 rain days. Start early for outdoor plans and bring sunscreen.",
+    "June: Very hot at 27–34°C with about 10 rain days. Swim in the morning and rest in the heat of the afternoon.",
+    "July: Hot at 27–33°C with about 16 rain days. Expect some short showers, so keep a light rain jacket handy.",
+    "August: Hot at 27–33°C with about 17 rain days. Warm sea and frequent short storms, so plan flexible days.",
+    "September: Warm at 26–31°C with about 22 rain days. Rain picks up, so pack a rain jacket and focus on food and museums.",
+    "October: Mild at 24–28°C with about 26 rain days. Wet month, so plan indoor visits and check the forecast daily.",
+    "November: Cool at 23–27°C with about 24 rain days. Wet and breezy; good for museums and cafés.",
+    "December: Cool at 21–24°C with about 25 rain days. Lots of rain, so pack waterproof gear and plan indoor days."
+  ],
+  "climate_guide": {
+    "summary": "Tropical coastal climate: hot, humid and sunny from spring to summer, with a wetter season from autumn to early winter.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: March to August",
+        "text": "Mostly dry days at 24–34°C with fewer rain days. Good for beaches, sea swims and motorbike trips."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet season: September to December",
+        "text": "Rain falls on 22–26 days a month. Showers come and go, so plan indoor sights and keep rain gear in your bag."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot afternoons (May to August)",
+        "text": "Highs reach 32–34°C. Do outdoor sights before 11:00 and rest in the afternoon."
+      },
+      {
+        "icon": "💧",
+        "title": "Humidity year-round",
+        "text": "Air feels heavy, especially near the sea. Carry water and wear light, breathable clothes."
+      },
+      {
+        "icon": "🌊",
+        "title": "Sea conditions change",
+        "text": "Waves can be rough in the wet months. Check local warnings and follow lifeguard flags at the beach."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes, a hat, strong sunscreen, a compact rain jacket and a light layer for air-conditioned rooms. Bring modest clothes for temples."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Grab or taxi for most trips; city buses if you are saving money and have time.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram. Do not plan around rail in the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "19 new, air-conditioned local bus lines with a flat 8,000 ₫ fare inside city limits. Use the DanaBus app or danangbus.vn for routes. Avoid the look-alike danabus.vn site, which has outdated prices."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Mai Linh, Vinasun and Song Han are reliable taxi firms. Grab is widely used and shows prices upfront."
+      },
+      {
+        "mode": "Motorbike taxi (xe ôm)",
+        "has": true,
+        "text": "Cheap for short hops. Helmets are required by law, so insist the driver gives you one."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is chaotic, so many visitors hire a car with a driver instead of driving themselves."
+      },
+      {
+        "mode": "Scooter or bike rental",
+        "has": true,
+        "text": "Rent a scooter or 4-speed bike near Tran Cao Van. Electric bicycles need no licence and suit city travel."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Works well along the beach and in central streets."
+      },
+      {
+        "mode": "Ferry",
+        "has": false,
+        "text": "No ferry serves the city."
+      }
+    ]
+  }
+}

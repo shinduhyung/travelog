@@ -1,0 +1,16 @@
+$ deepseek_city.py Da Nang --stage plans
+Da Nang: plans
+  plans for day
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 2952 out 2120
+  plans for 1n
+  claude tokens in 2952 out 3049
+  plans for 2n
+  claude tokens in 2959 out 4234
+  plans for 3n
+  claude tokens in 2953 out 4097
+
+$ merge_city.py Da Nang
+Da Nang: 19 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/da-nang.json and planner/da-nang.json
+

@@ -1,0 +1,36 @@
+$ deepseek_prep.py Macau
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 1256 out 1482
+Macau: 5 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Macau
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 6457 out 1897
+Macau: 0 problems
+
+$ deepseek_city.py Macau --stage places
+Macau: places
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 1730 out 6063
+
+$ deepseek_city.py Macau --stage frame
+Macau: frame
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 3410 out 3810
+
+$ deepseek_city.py Macau --stage plans
+Macau: plans
+  plans for day
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 2724 out 2460
+  plans for 1n
+  claude tokens in 2724 out 3278
+  plans for 2n
+  claude tokens in 2731 out 3595
+  plans for 3n
+  claude tokens in 2725 out 3628
+
+$ merge_city.py Macau
+Macau: 18 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/macau.json and planner/macau.json
+

@@ -1,0 +1,491 @@
+{
+  "city": "Gibraltar",
+  "checked": "October 2026",
+  "intro_line": "A tiny British outpost where the Rock meets Mediterranean light.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Main Street",
+        "Catalan Bay",
+        "Europa Point",
+        "Ocean Village"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Main Street",
+        "Catalan Bay",
+        "Europa Point",
+        "Ocean Village"
+      ]
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "areas": [
+        "Main Street",
+        "Catalan Bay",
+        "Europa Point",
+        "Ocean Village"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Main Street",
+        "Catalan Bay",
+        "Europa Point",
+        "Ocean Village"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Main Street",
+        "Catalan Bay",
+        "Europa Point",
+        "Ocean Village"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 16,
+        "low": 10,
+        "rain_days": 9,
+        "note": "Jan: Mild and wet, highs near 16°C and about 9 rainy days. Pack a light jacket and waterproofs."
+      },
+      {
+        "high": 16,
+        "low": 11,
+        "rain_days": 8,
+        "note": "Feb: Cool and damp, highs near 16°C with about 8 rainy days. Good for quiet museum visits."
+      },
+      {
+        "high": 18,
+        "low": 11,
+        "rain_days": 11,
+        "note": "Mar: Highs near 18°C and the wettest month at about 11 rain days. Bring an umbrella for the Upper Rock."
+      },
+      {
+        "high": 20,
+        "low": 13,
+        "rain_days": 8,
+        "note": "Apr: Pleasant, highs near 20°C with about 8 rain days. Good weather for walking and wildlife."
+      },
+      {
+        "high": 23,
+        "low": 16,
+        "rain_days": 4,
+        "note": "May: Warm and mostly dry, highs near 23°C with about 4 rain days. Ideal for outdoor sightseeing."
+      },
+      {
+        "high": 26,
+        "low": 19,
+        "rain_days": 2,
+        "note": "Jun: Hot and sunny, highs near 26°C with only about 2 rain days. Start walks early."
+      },
+      {
+        "high": 30,
+        "low": 21,
+        "rain_days": 0,
+        "note": "Jul: Hottest and driest, highs near 30°C with no rain days on average. Plan shade and water."
+      },
+      {
+        "high": 30,
+        "low": 22,
+        "rain_days": 1,
+        "note": "Aug: Hot and nearly dry, highs near 30°C with about 1 rain day. Keep outdoor walks short."
+      },
+      {
+        "high": 27,
+        "low": 20,
+        "rain_days": 5,
+        "note": "Sep: Still warm, highs near 27°C with about 5 rain days. Good for the Upper Rock after the heat eases."
+      },
+      {
+        "high": 23,
+        "low": 17,
+        "rain_days": 8,
+        "note": "Oct: Mild, highs near 23°C with about 8 rain days. A strong month for walking and sightseeing."
+      },
+      {
+        "high": 19,
+        "low": 13,
+        "rain_days": 8,
+        "note": "Nov: Cooler, highs near 19°C with about 8 rain days. Good for food and town walks."
+      },
+      {
+        "high": 17,
+        "low": 11,
+        "rain_days": 8,
+        "note": "Dec: Cool and damp, highs near 17°C with about 8 rain days. Pack layers for the Upper Rock wind."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "history": [
+      0.9,
+      0.9,
+      0.95,
+      1,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.85,
+      0.95,
+      0.95,
+      0.9
+    ],
+    "nature": [
+      0.7,
+      0.75,
+      0.9,
+      1,
+      0.95,
+      0.7,
+      0.5,
+      0.5,
+      0.8,
+      0.95,
+      0.85,
+      0.75
+    ],
+    "adventure": [
+      0.7,
+      0.75,
+      0.9,
+      1,
+      0.85,
+      0.65,
+      0.5,
+      0.5,
+      0.75,
+      0.9,
+      0.85,
+      0.75
+    ],
+    "culture": [
+      0.9,
+      0.9,
+      0.95,
+      1,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.85,
+      0.95,
+      0.95,
+      0.9
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.95,
+      1,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.9
+    ]
+  },
+  "places": {
+    "siege": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Morning, before tour groups build up; any season",
+      "area": "Main Street",
+      "popularity": 4
+    },
+    "moorish": {
+      "types": [
+        "history",
+        "adventure"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon for soft light; avoid hot midday in summer",
+      "area": "Main Street",
+      "popularity": 4
+    },
+    "casemates": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening, when the square is busiest",
+      "area": "Main Street",
+      "popularity": 5
+    },
+    "upper": {
+      "types": [
+        "nature",
+        "adventure"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Early morning in spring or autumn; cooler and clearer",
+      "area": "Main Street",
+      "popularity": 5
+    },
+    "cable": {
+      "types": [
+        "nature",
+        "adventure"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning on a clear day for the best views",
+      "area": "Main Street",
+      "popularity": 4
+    },
+    "europa": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset or on a clear day",
+      "area": "Europa Point",
+      "popularity": 3
+    },
+    "catalan": {
+      "types": [
+        "nature",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Warm months for swimming; any time for walking",
+      "area": "Catalan Bay",
+      "popularity": 3
+    },
+    "ocean": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Ocean Village",
+      "popularity": 4
+    },
+    "museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Any time; good on a rainy day",
+      "area": "Main Street",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "A day trip is enough: the Upper Rock, St Michael's Cave, the main tunnels and the old town fit one day, so no overnight stay is needed."
+  },
+  "airports": [
+    {
+      "code": "GIB",
+      "name": "Gibraltar International Airport",
+      "primary": true,
+      "note": "Main hub with flights from London and UK regions, about 1 km from the centre.",
+      "options": [
+        {
+          "mode": "Bus 5 or 10",
+          "to": "Town centre",
+          "price": "£1.40-£1.80",
+          "time": "10-15 min",
+          "note": "Cheapest option; Citibus takes cash only."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Town centre",
+          "price": "£5-£8",
+          "time": "5-10 min",
+          "note": "Ask the fare before getting in if no meter is visible."
+        },
+        {
+          "mode": "Ride app",
+          "to": "Town centre",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Availability is limited; check locally."
+        },
+        {
+          "mode": "Walk",
+          "to": "Town centre",
+          "price": "Free",
+          "time": "20-30 min",
+          "note": "Possible but steep; the airport sits next to the runway and border area."
+        }
+      ]
+    },
+    {
+      "code": "AGP",
+      "name": "Málaga Airport",
+      "primary": false,
+      "note": "Popular alternative in Spain with many destinations, about 120 km east.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "Gibraltar via La Línea",
+          "price": "check locally",
+          "time": "about 3 hours",
+          "note": "Only a few services a day; change at La Línea."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Gibraltar",
+          "price": "check locally",
+          "time": "about 1.5-2 hours",
+          "note": "Expensive for a one-way trip; confirm fare first."
+        },
+        {
+          "mode": "Car hire",
+          "to": "Gibraltar",
+          "price": "check locally",
+          "time": "about 1.5-2 hours",
+          "note": "Park in La Línea to avoid the Gibraltar one-way system."
+        }
+      ]
+    },
+    {
+      "code": "XRY",
+      "name": "Jerez Airport",
+      "primary": false,
+      "note": "Second choice in Spain, about 90 km away despite being closer than Málaga for some routes.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "La Línea or Algeciras",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Limited services; check timetables."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Gibraltar",
+          "price": "check locally",
+          "time": "about 1-1.5 hours",
+          "note": "Confirm the fare before starting."
+        },
+        {
+          "mode": "Car hire",
+          "to": "Gibraltar",
+          "price": "check locally",
+          "time": "about 1-1.5 hours",
+          "note": "Park in La Línea and walk across."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Gibraltar",
+      "https://en.wikivoyage.org/wiki/Gibraltar"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "nature",
+    "adventure"
+  ],
+  "transit": {
+    "best": "Walk most of the old town and use taxis for the steep roads up to the Upper Rock.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "Gibraltar has no metro or tram. Don't plan around rail."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Citibus (routes 5 and 10) and Gibraltar Bus Company run the routes. Single fares start at £1.00 to £1.80 and are flat. Gibraltar Bus needs exact change or card; Citibus takes cash only."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are the easiest way up the steep roads. Check locally for ride-app coverage, as Uber is not reliably available."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Drive on the right. Much of the old centre has narrow one-way streets and very limited parking. Park in La Línea and walk across the border."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Walking covers most of the town. Wear comfortable shoes for steep, uneven streets."
+      },
+      {
+        "mode": "Cable car",
+        "has": true,
+        "text": "A cable car links the town with the Upper Rock. Good for the top of the Rock without a steep climb."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mild Mediterranean climate: warm summers, cool damp winters and a lot of sun between spring and autumn.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to October",
+        "text": "Highs of about 23–30°C and few rain days. Ideal for the Upper Rock and sea views."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot summers (July and August)",
+        "text": "Highs near 30°C and lows around 21–22°C. Walk early or late and carry water."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest in winter",
+        "text": "December to March sees about 8–11 rain days per month. Carry a light waterproof jacket."
+      },
+      {
+        "icon": "🌬️",
+        "title": "Windy on the Rock",
+        "text": "The Upper Rock is exposed. Expect gusts on high paths, especially in winter."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool evenings",
+        "text": "Lows drop to about 10–11°C in winter. Pack a warm layer for evenings out."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes for steep streets, sunscreen and a hat for summer, and a light jacket and umbrella for winter."
+      }
+    ]
+  }
+}

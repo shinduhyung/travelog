@@ -1,0 +1,197 @@
+{
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro_line": "Ottoman lanes, Austro-Hungarian facades, and mountains at the edge of town.",
+  "intro": "Sarajevo rewards visitors who wander without a fixed plan. Its old bazaar, riverside walks and war-era history reveal more the longer you stay. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Cuisine"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "nature",
+      "label": "Mountains"
+    },
+    {
+      "id": "adventure",
+      "label": "Cycling"
+    }
+  ],
+  "areas": [
+    "Baščaršija",
+    "Marijin Dvor",
+    "Centar",
+    "Vratnik"
+  ],
+  "taxi": {
+    "flag_day": 1.9,
+    "flag_airport": 1.9,
+    "per_km": 1.2,
+    "min_fare": 1.9
+  },
+  "road_factor": 1.3,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Currency is the Bosnian convertible mark (KM), not USD. Prices below are in KM unless noted.",
+    "Trams and trolleybuses run the city. Tram 3 runs the full line from Ilidža to the centre. Tram 1 and 4 serve the central loop. There is no metro.",
+    "Single tram, trolleybus or bus ticket costs 2.20 KM. Day ticket is 7.10 KM. Buy in the Javni prevoz KS app, from drivers, or at GRAS kiosks. Bus tickets are bought from the driver, and pre-bought tram tickets are not valid on buses.",
+    "Taxis are the main scam risk. Legitimate taxis have a TAXI sign and plates with TA. Insist on the meter and ask for a receipt. Official firms include Paja 1522, Žuti 033 66 35 55 and Samir & Emir 1516.",
+    "Driving is not recommended in the Old Town, where streets are steep, narrow and one-way. Parking is very hard to find.",
+    "Walking is the best way to see the centre. Street signs are scarce, so use a map app. Nextbike rental has about 14 stations along the tram lines, with 30 free minutes per day and 1.50 KM after that. Separate bike lanes run along the river and main boulevard for over 5 km.",
+    "No ferry service operates in the city."
+  ],
+  "airports": [
+    {
+      "code": "SJJ",
+      "name": "Sarajevo International Airport",
+      "primary": true,
+      "note": "Main hub, about 7 km southwest of the centre. Flights can be delayed by fog in winter.",
+      "options": [
+        {
+          "mode": "Airport bus (Centrotrans)",
+          "to": "Baščaršija",
+          "price": "5 KM one way",
+          "time": "20-30 min",
+          "note": "Runs roughly hourly 05:30-22:00. Pay the driver on boarding. First bag up to 23 kg is included."
+        },
+        {
+          "mode": "Trolleybus 103 via Dobrinja",
+          "to": "Trg Austrijski (cross Latin Bridge to Old Town)",
+          "price": "1.80 KM",
+          "time": "about 25 min plus a 600 m walk",
+          "note": "Walk from the terminal to the stop at Bulevar Mimara Sinana. Pay the driver in KM cash. Avoid lines 107 and 108 for Old Town."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "15-20 KM",
+          "time": "check locally",
+          "note": "Insist on the meter. Some drivers quote double to foreigners. Refuse any fixed price list and any airport supplement."
+        },
+        {
+          "mode": "Ride apps",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Availability in Sarajevo is unconfirmed. Check locally before you travel."
+        }
+      ]
+    },
+    {
+      "code": "TZL",
+      "name": "Tuzla Airport",
+      "primary": false,
+      "note": "Budget Wizz Air base about 120 km north of Sarajevo. Long transfer.",
+      "options": [
+        {
+          "mode": "Airport bus (direct)",
+          "to": "Sarajevo",
+          "price": "€22 one way",
+          "time": "about 2 hours",
+          "note": "Runs direct to meet Wizz flights. Check the operator for current times."
+        },
+        {
+          "mode": "Standard bus via Tuzla",
+          "to": "Sarajevo",
+          "price": "check locally",
+          "time": "about 3 hours plus transfer",
+          "note": "Cheaper, but needs a change in Tuzla. Buses to Tuzla cost about 11 KM."
+        }
+      ]
+    }
+  ],
+  "max_km": 80,
+  "place_landmarks": [
+    "Baščaršija",
+    "Latin Bridge",
+    "Gazi Husrev-bey Mosque",
+    "Sarajevo Tunnel Museum (Tunnel of Hope)",
+    "Sarajevo City Hall (Vijećnica)",
+    "Eternal Flame",
+    "Ćevapi"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Sarajevo",
+      "https://en.wikivoyage.org/wiki/Sarajevo"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    43.8563,
+    18.4131
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 5,
+      "low": -4,
+      "rain_days": 15
+    },
+    {
+      "high": 9,
+      "low": -1,
+      "rain_days": 11
+    },
+    {
+      "high": 11,
+      "low": 1,
+      "rain_days": 13
+    },
+    {
+      "high": 16,
+      "low": 4,
+      "rain_days": 12
+    },
+    {
+      "high": 20,
+      "low": 9,
+      "rain_days": 16
+    },
+    {
+      "high": 24,
+      "low": 14,
+      "rain_days": 14
+    },
+    {
+      "high": 27,
+      "low": 16,
+      "rain_days": 11
+    },
+    {
+      "high": 27,
+      "low": 16,
+      "rain_days": 10
+    },
+    {
+      "high": 22,
+      "low": 12,
+      "rain_days": 10
+    },
+    {
+      "high": 18,
+      "low": 7,
+      "rain_days": 9
+    },
+    {
+      "high": 12,
+      "low": 3,
+      "rain_days": 11
+    },
+    {
+      "high": 8,
+      "low": 0,
+      "rain_days": 11
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

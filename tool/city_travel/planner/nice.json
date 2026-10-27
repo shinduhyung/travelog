@@ -1,0 +1,521 @@
+{
+  "city": "Nice",
+  "checked": "October 2026",
+  "intro_line": "Sun-washed promenades, painted old streets, and the sea right at the door.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "beach",
+      "label": "Beaches",
+      "areas": [
+        "Vieux Nice",
+        "Promenade des Anglais",
+        "Carré d'Or",
+        "Cimiez"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Vieux Nice",
+        "Promenade des Anglais",
+        "Carré d'Or",
+        "Cimiez"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Old Town",
+      "areas": [
+        "Vieux Nice",
+        "Promenade des Anglais",
+        "Carré d'Or",
+        "Cimiez"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Museums",
+      "areas": [
+        "Vieux Nice",
+        "Promenade des Anglais",
+        "Carré d'Or",
+        "Cimiez"
+      ]
+    },
+    {
+      "id": "romance",
+      "label": "Sea views",
+      "areas": [
+        "Vieux Nice",
+        "Promenade des Anglais",
+        "Carré d'Or",
+        "Cimiez"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 13,
+        "low": 5,
+        "rain_days": 6,
+        "note": "Jan: Cool, about 5-13°C, with around 6 rain days. Good for museums and quiet city walks."
+      },
+      {
+        "high": 13,
+        "low": 6,
+        "rain_days": 7,
+        "note": "Feb: Still cool, about 6-13°C, with around 7 rain days. Pack a warm layer for evenings."
+      },
+      {
+        "high": 15,
+        "low": 7,
+        "rain_days": 7,
+        "note": "Mar: Mild, about 7-15°C, with around 7 rain days. Spring starts; sights are quieter."
+      },
+      {
+        "high": 18,
+        "low": 10,
+        "rain_days": 8,
+        "note": "Apr: Pleasant, about 10-18°C, with around 8 rain days. Good for walking and first sea views."
+      },
+      {
+        "high": 21,
+        "low": 14,
+        "rain_days": 9,
+        "note": "May: Warm, about 14-21°C, with around 9 rain days. A strong time for the Old Town and fewer crowds."
+      },
+      {
+        "high": 25,
+        "low": 18,
+        "rain_days": 7,
+        "note": "Jun: Warm, about 18-25°C, with around 7 rain days. Beach season begins; book stays early."
+      },
+      {
+        "high": 28,
+        "low": 21,
+        "rain_days": 3,
+        "note": "Jul: Hot, about 21-28°C, with around 3 rain days. Busy and sunny; swim early or late."
+      },
+      {
+        "high": 29,
+        "low": 21,
+        "rain_days": 4,
+        "note": "Aug: Hottest, about 21-29°C, with around 4 rain days. Peak crowds and prices; plan shade breaks."
+      },
+      {
+        "high": 25,
+        "low": 18,
+        "rain_days": 6,
+        "note": "Sep: Warm, about 18-25°C, with around 6 rain days. Sea is still warm and crowds ease."
+      },
+      {
+        "high": 21,
+        "low": 14,
+        "rain_days": 9,
+        "note": "Oct: Mild, about 14-21°C, with around 9 rain days. Good for food and culture; pack a light rain jacket."
+      },
+      {
+        "high": 16,
+        "low": 9,
+        "rain_days": 9,
+        "note": "Nov: Cool, about 9-16°C, with around 9 rain days. Quieter streets and fewer beach days."
+      },
+      {
+        "high": 14,
+        "low": 6,
+        "rain_days": 6,
+        "note": "Dec: Cool, about 6-14°C, with around 6 rain days. Quiet city; check opening hours before you go."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "beach": [
+      0.2,
+      0.25,
+      0.45,
+      0.65,
+      0.85,
+      1,
+      1,
+      1,
+      0.9,
+      0.6,
+      0.35,
+      0.2
+    ],
+    "food": [
+      0.6,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.75,
+      0.7
+    ],
+    "culture": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      0.9,
+      0.75,
+      0.75,
+      0.9,
+      0.95,
+      0.8,
+      0.65
+    ],
+    "art": [
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.75,
+      0.65,
+      0.6,
+      0.6,
+      0.7,
+      0.75,
+      0.85,
+      0.85
+    ],
+    "romance": [
+      0.55,
+      0.6,
+      0.7,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.75,
+      0.55,
+      0.5
+    ]
+  },
+  "places": {
+    "promenade": {
+      "types": [
+        "beach",
+        "romance"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning or sunset; spring and autumn are calmer",
+      "area": "Promenade des Anglais",
+      "popularity": 5
+    },
+    "cathedral": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Weekday mornings, when it is quieter",
+      "area": "Carré d'Or",
+      "popularity": 4
+    },
+    "paloma": {
+      "types": [
+        "beach"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late spring to early autumn, mornings",
+      "area": "Promenade des Anglais",
+      "popularity": 3
+    },
+    "antibes": {
+      "types": [
+        "romance",
+        "beach"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Warm, dry days in season",
+      "area": "Promenade des Anglais",
+      "popularity": 3
+    },
+    "cannes-festival": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "May, if your dates match",
+      "area": "Promenade des Anglais",
+      "popularity": 4
+    },
+    "koaland": {
+      "types": [
+        "romance"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Check on the day",
+      "area": "Promenade des Anglais",
+      "popularity": 2
+    },
+    "croisette": {
+      "types": [
+        "beach",
+        "romance"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon in spring or autumn",
+      "area": "Promenade des Anglais",
+      "popularity": 4
+    },
+    "suquet": {
+      "types": [
+        "culture",
+        "romance"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning, before the crowds",
+      "area": "Vieux Nice",
+      "popularity": 4
+    },
+    "miserables": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Daytime, in dry weather",
+      "area": "Vieux Nice",
+      "popularity": 2
+    },
+    "oceanographic": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday mornings",
+      "area": "Promenade des Anglais",
+      "popularity": 4
+    },
+    "palace": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning, before noon",
+      "area": "Promenade des Anglais",
+      "popularity": 4
+    },
+    "zygo": {
+      "types": [
+        "romance"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Spring or autumn afternoons",
+      "area": "Cimiez",
+      "popularity": 2
+    },
+    "cours-saleya": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Morning, Tuesday to Sunday",
+      "area": "Vieux Nice",
+      "popularity": 5
+    },
+    "castle-hill": {
+      "types": [
+        "romance",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Vieux Nice",
+      "popularity": 5
+    },
+    "matisse": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekday mornings",
+      "area": "Cimiez",
+      "popularity": 4
+    },
+    "old-town-tour": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Lunch or late afternoon",
+      "area": "Vieux Nice",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "One night works: the Promenade, Vieux Nice, Cours Saleya, and the castle hill form one walking day, and skipping beach time makes two nights unnecessary."
+  },
+  "airports": [
+    {
+      "code": "NCE",
+      "name": "Nice Côte d'Azur Airport",
+      "primary": true,
+      "note": "Main airport for Nice, on a landfill at the western edge, about 7 km from the centre.",
+      "options": [
+        {
+          "mode": "Bus 12",
+          "to": "Old Town via Promenade des Anglais",
+          "price": "€1.70",
+          "time": "30-40 min",
+          "note": "Runs roughly 05:30 to 21:00. Use the underpass to reach Terminal 1 from the outbound stop."
+        },
+        {
+          "mode": "Tram line 2",
+          "to": "Jean Médecin station, city centre",
+          "price": "€10 one-way (l'Aéro pass)",
+          "time": "20-25 min",
+          "note": "Ride free to Grand Arénas, then buy a €1.70 ticket for the rest of your trip. Cheapest option is the free ride plus the regular ticket."
+        },
+        {
+          "mode": "Ride share (Uber / Bolt)",
+          "to": "City centre",
+          "price": "€15-20",
+          "time": "15-25 min",
+          "note": "Use the marked ride-share zone. Traffic can slow it down."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€20-30",
+          "time": "15-25 min",
+          "note": "Agree the fare or check the meter. Taxi drivers at the rank have a reputation for overcharging."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Nice",
+      "https://en.wikivoyage.org/wiki/Nice"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "culture",
+    "romance"
+  ],
+  "transit": {
+    "best": "Tram line 2 to the airport and centre, then walk the Old Town and seafront.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "best": false,
+        "text": "No metro in Nice. Use tram line 2 and buses instead."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": false,
+        "text": "Lignes d'Azur buses charge €1.70 a ride, with a transfer allowed within 74 minutes. Buy a top-up card or pay with contactless. Always validate."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": false,
+        "text": "Taxis are pricey and some overcharge. Uber and Bolt both operate, with a ride-share pick-up zone at the airport."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "best": false,
+        "text": "Driving is hard in the centre: one-way streets and scarce metered parking. Use an underground car park, roughly €8-10 a day."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is walkable. Old Town and the seafront are close to each other."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "best": true,
+        "text": "Tram line 2 links the airport with the centre (Jean Médecin). It runs about every 8 minutes on weekdays, roughly 04:30 to after midnight."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "best": false,
+        "text": "Ferries run from Nice port to Corsica. Check local schedules before you go."
+      },
+      {
+        "mode": "Shared bikes / e-scooters",
+        "has": true,
+        "best": false,
+        "text": "Shared bikes and e-scooters are available in parts of the city."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mild Mediterranean climate: warm, sunny summers and mild winters, with rain spread across the year.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to June and September",
+        "text": "Highs of about 21-25°C and fewer rain days than autumn. Good for walking and the beach."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot summers (July and August)",
+        "text": "Highs of 28-29°C and the fewest rain days, around 3-4. Go to the beach early and rest in the afternoon."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest in May and October",
+        "text": "About 9 rain days a month. Keep a compact umbrella and plan museum visits for showery days."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool winters",
+        "text": "Lows of about 5-7°C from December to February. Bring a warm jacket for evenings by the sea."
+      },
+      {
+        "icon": "🌅",
+        "title": "Shoulder seasons",
+        "text": "April and October are mild, with highs of 18-21°C. Good for sightseeing with smaller crowds."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers for changing temperatures, comfortable walking shoes for the hills, sun hat and sunscreen for summer, and a light rain jacket for autumn."
+      }
+    ]
+  }
+}

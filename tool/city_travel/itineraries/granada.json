@@ -1,0 +1,1109 @@
+{
+  "city": "Granada",
+  "checked": "October 2026",
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro": "Granada rewards slow walkers with palaces, tea houses, and Alhambra views at sunset, plus tapas bars along steep, winding lanes. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 37.1688,
+      "west": -3.6074,
+      "north": 37.1906,
+      "east": -3.5762,
+      "zoom": 13
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 2.5,
+      "flag_airport": 3.5,
+      "per_km": 1.1,
+      "min_fare": 5
+    },
+    "road_factor": 1.3,
+    "city_kmh": 18,
+    "notes": [
+      "One metro line runs in Granada. A single ticket costs about €1.65 (Nov 2024). A rechargeable green travel card costs €1.50 at tobacco shops and needs at least €5 of credit.",
+      "Local buses cover most sights. Alhambra Buses (C30 to the Alhambra, C31 to Albayzin, C34 to Sacromonte) cost €1.60 per trip (Nov 2024). Multi-trip cards cost €5, €10 or €20.",
+      "Taxis are easy to find. Ride apps such as Uber or Cabify: check locally.",
+      "Driving in the centre is restricted. Camera-enforced limits apply, so park outside the historic core or use a garage such as Parking HH Maristas.",
+      "Walking is the best way to see the old quarters, but streets are steep, narrow and uneven. Buses help on the hills.",
+      "No ferry service applies to Granada."
+    ],
+    "sources": []
+  },
+  "places": {
+    "alhambra": {
+      "name": "Alhambra",
+      "landmark": "Alhambra",
+      "kind": "sight",
+      "lat": 37.176,
+      "lon": -3.588,
+      "price": 19,
+      "price_text": "Approx. €10–20 general entry, varies by ticket type; Nasrid Palaces need a timed slot",
+      "hours": "Daily, roughly 08:30–20:00 in peak season; check on the day",
+      "tip": "Book a timed entry online weeks ahead, because daytime slots sell out fast.",
+      "source": "https://www.alhambra-patronato.es"
+    },
+    "generalife": {
+      "name": "Generalife",
+      "landmark": "Generalife",
+      "kind": "sight",
+      "lat": 37.177,
+      "lon": -3.583,
+      "price": 0,
+      "price_text": "Included in Alhambra ticket with a timed slot; check current rules",
+      "hours": "Daily, roughly 08:30–20:00 in season; check on the day",
+      "tip": "Visit the gardens and water channels after the palaces, when the crowds have thinned.",
+      "source": "https://www.alhambra-patronato.es"
+    },
+    "albayzin": {
+      "name": "Albayzín",
+      "landmark": "Albayzín",
+      "kind": "sight",
+      "lat": 37.1783,
+      "lon": -3.5938,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Open streets, always accessible",
+      "tip": "Wander the whitewashed lanes and stop at small squares for views of the Alhambra.",
+      "source": ""
+    },
+    "granada_cathedral": {
+      "name": "Granada Cathedral",
+      "landmark": "Granada Cathedral",
+      "kind": "sight",
+      "lat": 37.1752,
+      "lon": -3.6006,
+      "price": 7,
+      "price_text": "Approx. €5–8 entry; check current price",
+      "hours": "Mon–Sat roughly 10:30–18:30; Sun afternoons only; check on the day",
+      "tip": "Go up to the roof for views, and check the chapel opening times before you go.",
+      "source": "https://www.catedraldegranada.com"
+    },
+    "royal_chapel": {
+      "name": "Royal Chapel of Granada",
+      "landmark": "Royal Chapel of Granada",
+      "kind": "museum",
+      "lat": 37.1755,
+      "lon": -3.6004,
+      "price": 6,
+      "price_text": "Approx. €5–7 entry; check current price",
+      "hours": "Mon–Sat roughly 10:30–18:30; Sun afternoons; check on the day",
+      "tip": "See the royal tombs of Ferdinand and Isabella, then the small museum with their personal items.",
+      "source": ""
+    },
+    "old_town": {
+      "name": "Granada Old Town",
+      "landmark": "Granada Old Town",
+      "kind": "sight",
+      "lat": 11.9298,
+      "lon": -85.956,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Open streets, always accessible",
+      "tip": "Start at Plaza Bib-Rambla and walk toward the cathedral through the shopping streets.",
+      "source": ""
+    },
+    "alhambra_palaces": {
+      "name": "Nasrid Palaces",
+      "landmark": "Alhambra",
+      "kind": "sight",
+      "lat": 37.176,
+      "lon": -3.588,
+      "price": null,
+      "price_text": "Included in Alhambra ticket; timed slot required",
+      "hours": "Timed slots through the day; check on the day",
+      "tip": "Book the palace slot first, since it is the most limited part of the ticket.",
+      "source": "https://www.alhambra-patronato.es"
+    },
+    "alhambra_night": {
+      "name": "Alhambra night visit",
+      "landmark": "Alhambra",
+      "kind": "tour",
+      "lat": 37.176,
+      "lon": -3.588,
+      "price": null,
+      "price_text": "Approx. €15–25 for night tickets; check current price",
+      "hours": "Evenings in season; check on the day",
+      "tip": "Choose a night ticket for a quieter, lit-up visit, and bring a light jacket.",
+      "source": "https://www.alhambra-patronato.es"
+    },
+    "generalife_gardens": {
+      "name": "Generalife gardens",
+      "landmark": "Generalife",
+      "kind": "park",
+      "lat": 37.177,
+      "lon": -3.583,
+      "price": null,
+      "price_text": "Included in Alhambra ticket",
+      "hours": "Same as Generalife; check on the day",
+      "tip": "Walk the long pool and cypress paths for the quietest part of the complex.",
+      "source": "https://www.alhambra-patronato.es"
+    },
+    "cathedral_roof": {
+      "name": "Cathedral roof and tower visit",
+      "landmark": "Granada Cathedral",
+      "kind": "sight",
+      "lat": 37.1752,
+      "lon": -3.6006,
+      "price": null,
+      "price_text": "Included in cathedral ticket or extra; check on the day",
+      "hours": "Tied to cathedral hours; check on the day",
+      "tip": "Climb to the roof early, since the stairs get busy by late morning.",
+      "source": "https://www.catedraldegranada.com"
+    },
+    "albayzin_sunset": {
+      "name": "Albayzín sunset walk",
+      "landmark": "Albayzín",
+      "kind": "tour",
+      "lat": 37.1783,
+      "lon": -3.5938,
+      "price": null,
+      "price_text": "Free to walk; guided tours approx. €15–30",
+      "hours": "Best 1 hour before sunset; check on the day",
+      "tip": "Plan to reach the viewpoints 30 minutes before sunset to find a spot.",
+      "source": ""
+    },
+    "royal_chapel_tombs": {
+      "name": "Royal tombs and museum",
+      "landmark": "Royal Chapel of Granada",
+      "kind": "museum",
+      "lat": 37.1755,
+      "lon": -3.6004,
+      "price": null,
+      "price_text": "Included in chapel entry",
+      "hours": "Same as chapel; check on the day",
+      "tip": "Look at the Gothic tombs first, then the museum rooms with paintings and royal objects.",
+      "source": ""
+    },
+    "sacromonte_flamenco": {
+      "name": "Sacromonte flamenco show",
+      "landmark": null,
+      "kind": "show",
+      "lat": 37.183,
+      "lon": -3.583,
+      "price": 30,
+      "price_text": "Approx. €25–40 incl. one drink; check current price",
+      "hours": "Evening shows, usually one or two sittings; check on the day",
+      "tip": "Book a cave venue in advance and ask whether drinks are included.",
+      "source": ""
+    },
+    "san_agustin_market": {
+      "name": "San Agustín food market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 37.177,
+      "lon": -3.5972,
+      "price": null,
+      "price_text": "Pay for what you eat; tapas approx. €3–8",
+      "hours": "Typically weekday daytime; check on the day",
+      "tip": "Sample local produce and tapas, and ask vendors what is in season.",
+      "source": ""
+    },
+    "hammam": {
+      "name": "Hammam Al Ándalus baths",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 37.1763,
+      "lon": -3.5977,
+      "price": 30,
+      "price_text": "Approx. €25–40 per session; check current price",
+      "hours": "Daily sessions; booking required; check on the day",
+      "tip": "Book a time slot ahead and bring flip-flops and a towel if the venue says to.",
+      "source": ""
+    },
+    "mirador_san_nicolas": {
+      "name": "Mirador de San Nicolás",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 37.1846,
+      "lon": -3.5914,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open all day",
+      "tip": "Go at sunset for the classic view of the Alhambra and the Sierra Nevada.",
+      "source": ""
+    },
+    "darro_walk": {
+      "name": "Carrera del Darro riverside walk",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 37.1748,
+      "lon": -3.5937,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open all day",
+      "tip": "Walk the river path below the Albayzín for a calm, shady stroll.",
+      "source": ""
+    },
+    "realejo_walk": {
+      "name": "Realejo Jewish quarter walk",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 37.1755,
+      "lon": -3.5935,
+      "price": 0,
+      "price_text": "Free to walk; guided tours approx. €15–25",
+      "hours": "Open streets, always accessible",
+      "tip": "Stroll the quiet streets, then stop for a drink at a local bar.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Best for first-timers who want the Alhambra and the cathedral in one day. Book Alhambra tickets early.",
+      "days": [
+        {
+          "title": "Alhambra, Generalife and Centro",
+          "stops": [
+            {
+              "place": "alhambra",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Book a timed entry in advance. The Nasrid Palaces are inside. Go early, when it is cooler and quieter."
+            },
+            {
+              "place": "generalife",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Gardens and summer palace, a short walk from the Alhambra. Good for a late lunch break nearby."
+            },
+            {
+              "place": "granada_cathedral",
+              "at": "15:00",
+              "minutes": 75,
+              "note": "Mon–Sat hours roughly 10:30–18:30. On Sundays it opens in the afternoon only. Check on the day."
+            },
+            {
+              "place": "royal_chapel",
+              "at": "16:30",
+              "minutes": 50,
+              "note": "Closes with the cathedral. Weekday visits are calmer. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Albayzin & Centro"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Best for visitors who want to eat well: market lunch, a long walk, and tapas in the old town.",
+      "days": [
+        {
+          "title": "Market, old town and tapas",
+          "stops": [
+            {
+              "place": "realejo_walk",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Jewish quarter streets, quiet and easy to walk. Good before the lunch rush."
+            },
+            {
+              "place": "san_agustin_market",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Lunch stop. Usually open on weekday daytime only. Check on the day."
+            },
+            {
+              "place": "hammam",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Booking required. Good after a long walk. Check on the day."
+            },
+            {
+              "place": "old_town",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Evening tapas. A free tapa usually comes with each drink. Good for long evening strolls."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro"
+    },
+    {
+      "id": "day-romance",
+      "length": "day",
+      "style": "romance",
+      "nights": 0,
+      "for": "Best for couples who want garden views, white lanes and flamenco at night.",
+      "days": [
+        {
+          "title": "Riverside, gardens, sunset and flamenco",
+          "stops": [
+            {
+              "place": "darro_walk",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Riverside path below the Albayzín. Quiet in the morning."
+            },
+            {
+              "place": "generalife_gardens",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Late afternoon light is the best time. Hours follow the Generalife. Check on the day."
+            },
+            {
+              "place": "albayzin_sunset",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Start about an hour before sunset. Check the sunset time for the date."
+            },
+            {
+              "place": "sacromonte_flamenco",
+              "at": "21:30",
+              "minutes": 75,
+              "note": "Evening show, usually one or two sittings. Book ahead. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Albayzin & Sacromonte"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Visitors who want the Alhambra and its palaces, with a weekday in the old town.",
+      "days": [
+        {
+          "title": "Alhambra and Albayzín",
+          "stops": [
+            {
+              "place": "alhambra",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Book a timed entry for the Nasrid Palaces ahead of time. Check the opening hours on the day."
+            },
+            {
+              "place": "generalife",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Gardens and summer palace. Go in the afternoon if you can."
+            },
+            {
+              "place": "albayzin",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Steep, narrow lanes. Wear comfortable shoes."
+            }
+          ]
+        },
+        {
+          "title": "Cathedral, chapel and old town (Mon–Sat)",
+          "stops": [
+            {
+              "place": "granada_cathedral",
+              "at": "10:30",
+              "minutes": 75,
+              "note": "Mon–Sat only, roughly 10:30–18:30. Sunday afternoons only. Check on the day."
+            },
+            {
+              "place": "royal_chapel",
+              "at": "11:50",
+              "minutes": 50,
+              "note": "Same hours as the cathedral. Weekday mornings are quieter."
+            },
+            {
+              "place": "san_agustin_market",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch stop. Weekday daytime hours. Check on the day."
+            },
+            {
+              "place": "old_town",
+              "at": "14:45",
+              "minutes": 120,
+              "note": "Open streets. Good for a relaxed late afternoon walk."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Visitors who like tapas, market lunches and long evenings out.",
+      "days": [
+        {
+          "title": "Old town, market and flamenco",
+          "stops": [
+            {
+              "place": "old_town",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Start with a drink and free tapas in the bars around the old town."
+            },
+            {
+              "place": "san_agustin_market",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Weekday lunch at the market stalls. Check the hours on the day."
+            },
+            {
+              "place": "realejo_walk",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Walk the old Jewish quarter and stop for a snack on the way."
+            },
+            {
+              "place": "sacromonte_flamenco",
+              "at": "20:00",
+              "minutes": 75,
+              "note": "Evening show. Book a seat ahead. Check the sitting times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Darro, Alhambra and Albayzín evening",
+          "stops": [
+            {
+              "place": "darro_walk",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Quiet riverside start before the crowds."
+            },
+            {
+              "place": "alhambra",
+              "at": "09:45",
+              "minutes": 180,
+              "note": "Book your entry time in advance. Check the opening hours on the day."
+            },
+            {
+              "place": "albayzin",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Tapas bars and terraces in the evening. Expect a steep climb."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro"
+    },
+    {
+      "id": "1n-romance",
+      "length": "1n",
+      "style": "romance",
+      "nights": 1,
+      "for": "Couples who want sunset views, Albayzín lanes and an evening flamenco show.",
+      "days": [
+        {
+          "title": "Sunset over the Alhambra",
+          "stops": [
+            {
+              "place": "generalife",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Late afternoon light in the gardens. Check the hours on the day."
+            },
+            {
+              "place": "albayzin_sunset",
+              "at": "17:15",
+              "minutes": 90,
+              "note": "Best about one hour before sunset. Check the sunset time on the day."
+            },
+            {
+              "place": "mirador_san_nicolas",
+              "at": "19:00",
+              "minutes": 40,
+              "note": "Sunset view across the Alhambra."
+            },
+            {
+              "place": "sacromonte_flamenco",
+              "at": "20:30",
+              "minutes": 75,
+              "note": "Evening flamenco show. Book a seat ahead."
+            }
+          ]
+        },
+        {
+          "title": "Palaces, river and hammam",
+          "stops": [
+            {
+              "place": "alhambra_palaces",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning light is best in the palaces. Timed slots. Check on the day."
+            },
+            {
+              "place": "darro_walk",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Easy riverside stroll."
+            },
+            {
+              "place": "hammam",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Book ahead. Good after a long day of walking."
+            },
+            {
+              "place": "alhambra_night",
+              "at": "21:00",
+              "minutes": 90,
+              "note": "Evening visits run in season. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Albayzín"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "First-time visitors who want the Alhambra, the palaces and the cathedral.",
+      "days": [
+        {
+          "title": "Alhambra and Albayzin",
+          "stops": [
+            {
+              "place": "alhambra",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Book a timed entry in advance. Palaces are best in the morning light."
+            },
+            {
+              "place": "generalife",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Gardens are best in late afternoon. Check opening hours on the day."
+            },
+            {
+              "place": "albayzin",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Walk up the lanes to the viewpoints. Sunset times change through the year."
+            }
+          ]
+        },
+        {
+          "title": "Centro churches and lunch",
+          "stops": [
+            {
+              "place": "royal_chapel",
+              "at": "10:30",
+              "minutes": 50,
+              "note": "Weekday mornings are quietest. Mon–Sat roughly 10:30–18:30; Sunday afternoons only. Check on the day."
+            },
+            {
+              "place": "granada_cathedral",
+              "at": "11:30",
+              "minutes": 75,
+              "note": "Mon–Sat roughly 10:30–18:30; Sunday afternoons only. Check on the day."
+            },
+            {
+              "place": "san_agustin_market",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch stop. Usually open weekday daytime. Check on the day."
+            },
+            {
+              "place": "realejo_walk",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Walk the old Jewish quarter in the afternoon."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Food lovers who want market lunches, free tapas and a long evening out.",
+      "days": [
+        {
+          "title": "Market lunch and tapas crawl",
+          "stops": [
+            {
+              "place": "san_agustin_market",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch at the stalls. Usually open weekday daytime. Check on the day."
+            },
+            {
+              "place": "realejo_walk",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Walk off lunch in the old Jewish quarter."
+            },
+            {
+              "place": "old_town",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Evening tapas. Free tapas often come with your drink. Prices vary by bar."
+            }
+          ]
+        },
+        {
+          "title": "Alhambra, then flamenco",
+          "stops": [
+            {
+              "place": "alhambra",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Book a timed entry in advance. Go early before the heat."
+            },
+            {
+              "place": "darro_walk",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Shaded riverside walk down toward the centre for lunch nearby."
+            },
+            {
+              "place": "albayzin",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Late afternoon views and a tapas stop in the lanes."
+            },
+            {
+              "place": "sacromonte_flamenco",
+              "at": "20:30",
+              "minutes": 75,
+              "note": "Evening show, usually one or two sittings. Book ahead. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro & Albayzin"
+    },
+    {
+      "id": "2n-romance",
+      "length": "2n",
+      "style": "romance",
+      "nights": 2,
+      "for": "Couples who want sunset views over the Alhambra and quiet whitewashed lanes.",
+      "days": [
+        {
+          "title": "Alhambra morning and sunset in Albayzin",
+          "stops": [
+            {
+              "place": "alhambra",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Book a timed entry in advance. Early visits are calmer."
+            },
+            {
+              "place": "hammam",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Book ahead. Late afternoon, after a walk, is the best time."
+            },
+            {
+              "place": "albayzin_sunset",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Start about 1 hour before sunset. Check sunset time on the day."
+            }
+          ]
+        },
+        {
+          "title": "River walk, gardens and a show",
+          "stops": [
+            {
+              "place": "darro_walk",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Quiet riverside walk in the morning."
+            },
+            {
+              "place": "generalife",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Late afternoon in the gardens. Check opening hours on the day."
+            },
+            {
+              "place": "sacromonte_flamenco",
+              "at": "20:30",
+              "minutes": 75,
+              "note": "Evening flamenco. Book ahead. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Albayzin & Centro"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "First-timers who want the Alhambra, the Nasrid palaces and the cathedral, with timed tickets booked ahead.",
+      "days": [
+        {
+          "title": "Centro: cathedral and chapel",
+          "stops": [
+            {
+              "place": "granada_cathedral",
+              "at": "10:30",
+              "minutes": 75,
+              "note": "Mon–Sat mornings are best. Sunday is afternoons only. Check on the day."
+            },
+            {
+              "place": "san_agustin_market",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Light lunch at the market. Usually weekdays only."
+            },
+            {
+              "place": "royal_chapel",
+              "at": "14:00",
+              "minutes": 50,
+              "note": "Check opening days. Weekday mornings are quieter if you can move it."
+            },
+            {
+              "place": "old_town",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "Wander the old streets as the light softens."
+            }
+          ]
+        },
+        {
+          "title": "Alhambra and Generalife",
+          "stops": [
+            {
+              "place": "alhambra_palaces",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Timed slot. Book tickets weeks ahead, as they sell out."
+            },
+            {
+              "place": "alhambra",
+              "at": "10:30",
+              "minutes": 180,
+              "note": "Rest of the complex. Bring water and wear comfortable shoes."
+            },
+            {
+              "place": "generalife",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Gardens and terraces. Check the closing time."
+            },
+            {
+              "place": "darro_walk",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Riverside walk back down toward the centre."
+            }
+          ]
+        },
+        {
+          "title": "Albayzín and Sacromonte",
+          "stops": [
+            {
+              "place": "realejo_walk",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Jewish quarter in Realejo. Easy to walk from the centre."
+            },
+            {
+              "place": "albayzin",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Whitewashed lanes and small squares. Open streets."
+            },
+            {
+              "place": "mirador_san_nicolas",
+              "at": "18:00",
+              "minutes": 40,
+              "note": "Views over the Alhambra. Go near sunset."
+            },
+            {
+              "place": "sacromonte_flamenco",
+              "at": "20:00",
+              "minutes": 75,
+              "note": "Evening show. Check sittings and book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro & Albayzín"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Tapas lovers who want market lunches, free tapas with drinks and long evenings out.",
+      "days": [
+        {
+          "title": "Centro markets and old town tapas",
+          "stops": [
+            {
+              "place": "granada_cathedral",
+              "at": "10:30",
+              "minutes": 75,
+              "note": "Morning visit before the crowds. Check hours on the day."
+            },
+            {
+              "place": "san_agustin_market",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Market lunch. Usually weekdays only."
+            },
+            {
+              "place": "old_town",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Evening tapas crawl. Free tapas come with many drinks."
+            }
+          ]
+        },
+        {
+          "title": "Realejo and the Alhambra",
+          "stops": [
+            {
+              "place": "alhambra",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Book tickets in advance. Morning light is best."
+            },
+            {
+              "place": "realejo_walk",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch in the Jewish quarter, then a stroll."
+            },
+            {
+              "place": "hammam",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Book ahead. A good rest after a day of walking."
+            },
+            {
+              "place": "old_town",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Tapas bars in the old town. Eat slowly."
+            }
+          ]
+        },
+        {
+          "title": "Riverside and flamenco",
+          "stops": [
+            {
+              "place": "darro_walk",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Easy morning walk along the river."
+            },
+            {
+              "place": "san_agustin_market",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Second market lunch. Check weekday hours."
+            },
+            {
+              "place": "albayzin",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Explore the lanes and find a terrace for a drink."
+            },
+            {
+              "place": "sacromonte_flamenco",
+              "at": "20:00",
+              "minutes": 75,
+              "note": "Evening flamenco show. Check sittings and book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro & Albayzín"
+    },
+    {
+      "id": "3n-romance",
+      "length": "3n",
+      "style": "romance",
+      "nights": 3,
+      "for": "Couples who want sunset views, whitewashed lanes and an evening flamenco show.",
+      "days": [
+        {
+          "title": "Riverside and sunset in Albayzín",
+          "stops": [
+            {
+              "place": "darro_walk",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Quiet riverside walk in the morning."
+            },
+            {
+              "place": "albayzin",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Wander the lanes and stop for a drink."
+            },
+            {
+              "place": "albayzin_sunset",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Best about one hour before sunset. Check the time on the day."
+            }
+          ]
+        },
+        {
+          "title": "Alhambra and Generalife at golden hour",
+          "stops": [
+            {
+              "place": "alhambra_palaces",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Timed slot. Book ahead, as tickets sell out."
+            },
+            {
+              "place": "generalife",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Late afternoon gardens are the most romantic."
+            },
+            {
+              "place": "mirador_san_nicolas",
+              "at": "19:00",
+              "minutes": 40,
+              "note": "Sunset views over the Alhambra."
+            }
+          ]
+        },
+        {
+          "title": "Slow afternoon and flamenco",
+          "stops": [
+            {
+              "place": "realejo_walk",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Relaxed morning walk through the Jewish quarter."
+            },
+            {
+              "place": "hammam",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Book ahead. Good after a long walk."
+            },
+            {
+              "place": "sacromonte_flamenco",
+              "at": "20:00",
+              "minutes": 75,
+              "note": "Evening show. Check sittings and book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Albayzín & Centro"
+    }
+  ],
+  "styles": [
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "The Alhambra, the Generalife and the Nasrid palaces."
+    },
+    {
+      "id": "food",
+      "label": "Tapas",
+      "blurb": "Free tapas with your drink, market stalls and long evenings out."
+    },
+    {
+      "id": "romance",
+      "label": "Romance",
+      "blurb": "Sunset views over the Alhambra and whitewashed lanes in Albayzin."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night",
+      "recommended": true
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Centro",
+      "range": [
+        70,
+        180
+      ],
+      "why": "Central base near Plaza Nueva and the Cathedral. Easy walks, many restaurants, but busy and noisy at night.",
+      "center": [
+        37.1765,
+        -3.5995
+      ]
+    },
+    {
+      "area": "Albayzin",
+      "range": [
+        80,
+        220
+      ],
+      "why": "Historic hillside quarter facing the Alhambra. Great views and romantic streets, but steep and uneven. Bring comfortable shoes.",
+      "center": [
+        37.18,
+        -3.589
+      ]
+    },
+    {
+      "area": "Realejo",
+      "range": [
+        60,
+        160
+      ],
+      "why": "Calm former Jewish quarter with local bars and a relaxed feel. Quieter than Centro and close to the historic core.",
+      "center": [
+        37.179,
+        -3.604
+      ]
+    },
+    {
+      "area": "Sacromonte",
+      "range": [
+        60,
+        150
+      ],
+      "why": "Cave-house neighbourhood known for flamenco. Atmospheric, but far from the centre and best reached by bus or taxi at night.",
+      "center": [
+        37.187,
+        -3.584
+      ]
+    }
+  ],
+  "food": [
+    "Tapas often come free with a drink in many bars. Order a drink and ask what comes with it; check on the day.",
+    "Try the local dish of habas con jamón (broad beans with ham) and piononos, a small rolled sponge cake.",
+    "Eat early or book ahead for dinner. Many kitchens open around 20:00 to 21:00 and fill quickly in high season.",
+    "Visit a covered market such as Mercado San Agustín for fresh produce and cheap snacks.",
+    "Plan a tapas crawl in Centro or Realejo, where bars are close together and walkable."
+  ],
+  "more_time": [
+    "Mountain fans: take a day trip to the Sierra Nevada. Check bus times and snow conditions before you go.",
+    "Villages and walks: visit the white villages of the Alpujarras by bus or tour. Check services, as they run less often.",
+    "Wider day trip: visit Córdoba or Sevilla for more Moorish and Andalusian history. Check train or coach times in advance."
+  ]
+}

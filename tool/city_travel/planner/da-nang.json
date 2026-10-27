@@ -1,0 +1,556 @@
+{
+  "city": "Da Nang",
+  "checked": "October 2026",
+  "intro_line": "Beaches, dragon bridges and sea views, all within easy reach.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "beach",
+      "label": "Beaches",
+      "areas": [
+        "My Khe Beach",
+        "Hai Chau (District 1)",
+        "Son Tra Peninsula",
+        "Tran Cao Van (Thanh Khe)"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Street food",
+      "areas": [
+        "My Khe Beach",
+        "Hai Chau (District 1)",
+        "Son Tra Peninsula",
+        "Tran Cao Van (Thanh Khe)"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Old town",
+      "areas": [
+        "My Khe Beach",
+        "Hai Chau (District 1)",
+        "Son Tra Peninsula",
+        "Tran Cao Van (Thanh Khe)"
+      ]
+    },
+    {
+      "id": "adventure",
+      "label": "Motorbike",
+      "areas": [
+        "My Khe Beach",
+        "Hai Chau (District 1)",
+        "Son Tra Peninsula",
+        "Tran Cao Van (Thanh Khe)"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "Museums",
+      "areas": [
+        "My Khe Beach",
+        "Hai Chau (District 1)",
+        "Son Tra Peninsula",
+        "Tran Cao Van (Thanh Khe)"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 24,
+        "low": 20,
+        "rain_days": 20,
+        "note": "January: Cool at 20–24°C with about 20 rain days. Pack a light jacket and plan indoor sights on wet days."
+      },
+      {
+        "high": 24,
+        "low": 20,
+        "rain_days": 13,
+        "note": "February: Mild at 20–24°C with about 13 rain days. Good for sightseeing and motorbike trips."
+      },
+      {
+        "high": 27,
+        "low": 22,
+        "rain_days": 10,
+        "note": "March: Warm at 22–27°C with about 10 rain days. One of the best months for beaches and outings."
+      },
+      {
+        "high": 30,
+        "low": 24,
+        "rain_days": 8,
+        "note": "April: Hot at 24–30°C with about 8 rain days. The driest month, so good for beaches and motorbike rides."
+      },
+      {
+        "high": 32,
+        "low": 26,
+        "rain_days": 13,
+        "note": "May: Hot at 26–32°C with about 13 rain days. Start early for outdoor plans and bring sunscreen."
+      },
+      {
+        "high": 34,
+        "low": 27,
+        "rain_days": 10,
+        "note": "June: Very hot at 27–34°C with about 10 rain days. Swim in the morning and rest in the heat of the afternoon."
+      },
+      {
+        "high": 33,
+        "low": 27,
+        "rain_days": 16,
+        "note": "July: Hot at 27–33°C with about 16 rain days. Expect some short showers, so keep a light rain jacket handy."
+      },
+      {
+        "high": 33,
+        "low": 27,
+        "rain_days": 17,
+        "note": "August: Hot at 27–33°C with about 17 rain days. Warm sea and frequent short storms, so plan flexible days."
+      },
+      {
+        "high": 31,
+        "low": 26,
+        "rain_days": 22,
+        "note": "September: Warm at 26–31°C with about 22 rain days. Rain picks up, so pack a rain jacket and focus on food and museums."
+      },
+      {
+        "high": 28,
+        "low": 24,
+        "rain_days": 26,
+        "note": "October: Mild at 24–28°C with about 26 rain days. Wet month, so plan indoor visits and check the forecast daily."
+      },
+      {
+        "high": 27,
+        "low": 23,
+        "rain_days": 24,
+        "note": "November: Cool at 23–27°C with about 24 rain days. Wet and breezy; good for museums and cafés."
+      },
+      {
+        "high": 24,
+        "low": 21,
+        "rain_days": 25,
+        "note": "December: Cool at 21–24°C with about 25 rain days. Lots of rain, so pack waterproof gear and plan indoor days."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "beach": [
+      0.25,
+      0.3,
+      0.55,
+      0.85,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.6,
+      0.3,
+      0.25,
+      0.25
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.85,
+      0.85,
+      0.8
+    ],
+    "culture": [
+      0.8,
+      0.85,
+      0.9,
+      0.85,
+      0.75,
+      0.7,
+      0.7,
+      0.7,
+      0.6,
+      0.6,
+      0.7,
+      0.75
+    ],
+    "adventure": [
+      0.4,
+      0.6,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.6,
+      0.6,
+      0.4,
+      0.25,
+      0.3,
+      0.35
+    ],
+    "history": [
+      0.85,
+      0.8,
+      0.7,
+      0.6,
+      0.6,
+      0.6,
+      0.6,
+      0.6,
+      0.7,
+      0.8,
+      0.85,
+      0.9
+    ]
+  },
+  "places": {
+    "bana_cable": {
+      "types": [
+        "adventure",
+        "history"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Early morning, clear days",
+      "area": "Son Tra Peninsula",
+      "popularity": 5
+    },
+    "golden_bridge": {
+      "types": [
+        "adventure",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Son Tra Peninsula",
+      "popularity": 5
+    },
+    "dragon_bridge": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Weekend evening, about 21:00",
+      "area": "Hai Chau (District 1)",
+      "popularity": 5
+    },
+    "lady_buddha": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning for cooler air",
+      "area": "Son Tra Peninsula",
+      "popularity": 4
+    },
+    "hoi_an_old_town": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Evening for lanterns",
+      "area": "Hai Chau (District 1)",
+      "popularity": 5
+    },
+    "my_khe": {
+      "types": [
+        "beach"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "My Khe Beach",
+      "popularity": 5
+    },
+    "an_bang": {
+      "types": [
+        "beach",
+        "food"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Late afternoon for sunset",
+      "area": "My Khe Beach",
+      "popularity": 4
+    },
+    "asia_park": {
+      "types": [
+        "adventure"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Evening for the lit-up Sun Wheel",
+      "area": "Hai Chau (District 1)",
+      "popularity": 3
+    },
+    "da_nang_bay": {
+      "types": [
+        "adventure",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Hai Chau (District 1)",
+      "popularity": 3
+    },
+    "basket_boat": {
+      "types": [
+        "culture",
+        "adventure"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Early morning or late afternoon",
+      "area": "Hai Chau (District 1)",
+      "popularity": 4
+    },
+    "night_market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Hai Chau (District 1)",
+      "popularity": 5
+    },
+    "japanese_bridge": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Dusk",
+      "area": "Hai Chau (District 1)",
+      "popularity": 5
+    },
+    "cham_museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Midday to escape heat",
+      "area": "Hai Chau (District 1)",
+      "popularity": 4
+    },
+    "sun_world": {
+      "types": [
+        "adventure",
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Son Tra Peninsula",
+      "popularity": 4
+    },
+    "vinwonders": {
+      "types": [
+        "adventure"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Full day, weekdays",
+      "area": "Hai Chau (District 1)",
+      "popularity": 4
+    },
+    "han_market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Hai Chau (District 1)",
+      "popularity": 4
+    },
+    "son_tra_viewpoint": {
+      "types": [
+        "adventure",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunrise or late afternoon",
+      "area": "Son Tra Peninsula",
+      "popularity": 4
+    },
+    "tran_cao_van": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Tran Cao Van (Thanh Khe)",
+      "popularity": 3
+    },
+    "hoi_an_cooking": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Hai Chau (District 1)",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "One night suits you: one day covers the Cham Museum, Marble Mountains, the Dragon Bridge and an evening meal, without a Hoi An trip."
+  },
+  "airports": [
+    {
+      "code": "DAD",
+      "name": "Da Nang International Airport",
+      "primary": true,
+      "note": "Main airport for the city, about 3-4 km southwest of the centre.",
+      "options": [
+        {
+          "mode": "City Bus #6 or #10",
+          "to": "Centre and My Khe Beach",
+          "price": "8,000 ₫",
+          "time": "check locally",
+          "note": "Cheapest option. Buses cross the Han River toward the centre."
+        },
+        {
+          "mode": "Walking",
+          "to": "City centre",
+          "price": "Free",
+          "time": "check locally",
+          "note": "Only for travellers with very light luggage."
+        },
+        {
+          "mode": "Grab",
+          "to": "Any district",
+          "price": "check locally",
+          "time": "10-20 min",
+          "note": "Walk to the dedicated pickup point across the taxi lines."
+        },
+        {
+          "mode": "Taxi (Mai Linh, Vinasun, Song Han)",
+          "to": "Any district",
+          "price": "around 70,000 ₫",
+          "time": "10-20 min",
+          "note": "Use the meter. Airport wardens can radio a taxi for you."
+        },
+        {
+          "mode": "Motorbike taxi",
+          "to": "Nearby districts",
+          "price": "check locally",
+          "time": "10-20 min",
+          "note": "Agree the fare first. Ask for a helmet."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Da Nang",
+      "https://en.wikivoyage.org/wiki/Da%20Nang"
+    ]
+  ],
+  "best_for": [
+    "beach",
+    "food",
+    "adventure"
+  ],
+  "transit": {
+    "best": "Grab or taxi for most trips; city buses if you are saving money and have time.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram. Do not plan around rail in the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "19 new, air-conditioned local bus lines with a flat 8,000 ₫ fare inside city limits. Use the DanaBus app or danangbus.vn for routes. Avoid the look-alike danabus.vn site, which has outdated prices."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Mai Linh, Vinasun and Song Han are reliable taxi firms. Grab is widely used and shows prices upfront."
+      },
+      {
+        "mode": "Motorbike taxi (xe ôm)",
+        "has": true,
+        "text": "Cheap for short hops. Helmets are required by law, so insist the driver gives you one."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is chaotic, so many visitors hire a car with a driver instead of driving themselves."
+      },
+      {
+        "mode": "Scooter or bike rental",
+        "has": true,
+        "text": "Rent a scooter or 4-speed bike near Tran Cao Van. Electric bicycles need no licence and suit city travel."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Works well along the beach and in central streets."
+      },
+      {
+        "mode": "Ferry",
+        "has": false,
+        "text": "No ferry serves the city."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Tropical coastal climate: hot, humid and sunny from spring to summer, with a wetter season from autumn to early winter.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: March to August",
+        "text": "Mostly dry days at 24–34°C with fewer rain days. Good for beaches, sea swims and motorbike trips."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet season: September to December",
+        "text": "Rain falls on 22–26 days a month. Showers come and go, so plan indoor sights and keep rain gear in your bag."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot afternoons (May to August)",
+        "text": "Highs reach 32–34°C. Do outdoor sights before 11:00 and rest in the afternoon."
+      },
+      {
+        "icon": "💧",
+        "title": "Humidity year-round",
+        "text": "Air feels heavy, especially near the sea. Carry water and wear light, breathable clothes."
+      },
+      {
+        "icon": "🌊",
+        "title": "Sea conditions change",
+        "text": "Waves can be rough in the wet months. Check local warnings and follow lifeguard flags at the beach."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes, a hat, strong sunscreen, a compact rain jacket and a light layer for air-conditioned rooms. Bring modest clothes for temples."
+      }
+    ]
+  }
+}

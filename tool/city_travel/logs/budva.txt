@@ -1,0 +1,36 @@
+$ deepseek_prep.py Budva
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 1003 out 1631
+Budva: 5 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Budva
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 2477 out 2759
+Budva: 0 problems
+
+$ deepseek_city.py Budva --stage places
+Budva: places
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 1674 out 4211
+
+$ deepseek_city.py Budva --stage frame
+Budva: frame
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 3481 out 3804
+
+$ deepseek_city.py Budva --stage plans
+Budva: plans
+  plans for day
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 2330 out 2459
+  plans for 1n
+  claude tokens in 2330 out 3272
+  plans for 2n
+  claude tokens in 2337 out 2562
+  plans for 3n
+  claude tokens in 2331 out 3681
+
+$ merge_city.py Budva
+Budva: 13 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/budva.json and planner/budva.json
+

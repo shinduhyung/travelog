@@ -1,0 +1,16 @@
+$ deepseek_city.py Seville --stage plans
+Seville: plans
+  plans for day
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 2624 out 2408
+  plans for 1n
+  claude tokens in 2624 out 2894
+  plans for 2n
+  claude tokens in 2631 out 3065
+  plans for 3n
+  claude tokens in 2625 out 5595
+
+$ merge_city.py Seville
+Seville: 17 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/seville.json and planner/seville.json
+

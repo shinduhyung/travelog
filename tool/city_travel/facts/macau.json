@@ -1,0 +1,188 @@
+{
+  "currency": "MOP",
+  "usd_rate": 8.0729,
+  "intro_line": "Portuguese tiles, neon casinos, and sea breezes meet at the edge of China.",
+  "intro": "Macau rewards visitors with a compact UNESCO-listed historic centre, Portuguese colonial churches, and some of the best Cantonese and Macanese food in the region. Its casino resorts, waterfront trails, and easy day trips add variety to every visit. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Heritage"
+    },
+    {
+      "id": "food",
+      "label": "Macanese"
+    },
+    {
+      "id": "history",
+      "label": "Colonial"
+    },
+    {
+      "id": "nightlife",
+      "label": "Casinos"
+    },
+    {
+      "id": "family",
+      "label": "Resorts"
+    }
+  ],
+  "areas": [
+    "Senado Square",
+    "Outer Harbour",
+    "Taipa Village",
+    "Cotai Strip"
+  ],
+  "taxi": {
+    "flag_day": 21,
+    "flag_airport": 26,
+    "per_km": 5,
+    "min_fare": 21
+  },
+  "road_factor": 1.3,
+  "city_kmh": 18,
+  "transit_facts": [
+    "Light Rail (LRT) Taipa Line links Taipa, Cotai, and the Barra area. Check locally for current routes.",
+    "Buses cover the peninsula and islands. Pay with a Macau Pass card or exact cash coins. Check locally for fares.",
+    "Taxis are plentiful and cheap. Ask for the meter. Ride-hailing apps have limited availability, so check locally.",
+    "Driving is not recommended. Roads are congested and parking is scarce and costly.",
+    "The historic centre is best explored on foot. Taipa and Coloane suit cycling and shuttle buses.",
+    "Ferries run from Outer Harbour and Taipa to Hong Kong, Shenzhen, and Zhuhai, so you can plan day trips by boat."
+  ],
+  "airports": [
+    {
+      "code": "MFM",
+      "name": "Macau International Airport",
+      "primary": true,
+      "note": "Main airport in Taipa, about 7 km from the centre.",
+      "options": [
+        {
+          "mode": "Airport bus AP1",
+          "to": "Outer Harbour ferry terminal",
+          "price": "check locally",
+          "time": "25-35 min",
+          "note": "Cheapest direct link to the peninsula; pay by Macau Pass or cash."
+        },
+        {
+          "mode": "Bus",
+          "to": "Taipa and Cotai hotels",
+          "price": "check locally",
+          "time": "15-30 min",
+          "note": "Several routes serve the island hotels; ask staff for the right stop."
+        },
+        {
+          "mode": "Light Rail",
+          "to": "Taipa and Cotai",
+          "price": "check locally",
+          "time": "15-25 min",
+          "note": "Useful if your hotel is near a Taipa Line station; check the current route."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Historic centre or Cotai",
+          "price": "MOP 80-150",
+          "time": "15-25 min",
+          "note": "Use the airport taxi rank; the airport surcharge applies."
+        },
+        {
+          "mode": "Ride-hailing app",
+          "to": "Anywhere in Macau",
+          "price": "check locally",
+          "time": "15-25 min",
+          "note": "Availability is limited, so check locally before you rely on it."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Ruins of St. Paul's",
+    "Senado Square",
+    "Guia Fortress",
+    "A-Ma Temple",
+    "Macau Tower",
+    "Chimelong Ocean Kingdom",
+    "Grand Lisboa",
+    "Jiuzhouyang",
+    "Lionsgate Entertainment World",
+    "Macau Aqua World",
+    "Mercado Vermelho",
+    "Morpheus",
+    "Taipa Houses",
+    "Taipa Village Street Market"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Macau",
+      "https://en.wikivoyage.org/wiki/Macau"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    22.1987,
+    113.5439
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 19,
+      "low": 14,
+      "rain_days": 6
+    },
+    {
+      "high": 20,
+      "low": 15,
+      "rain_days": 7
+    },
+    {
+      "high": 23,
+      "low": 18,
+      "rain_days": 12
+    },
+    {
+      "high": 25,
+      "low": 21,
+      "rain_days": 14
+    },
+    {
+      "high": 28,
+      "low": 25,
+      "rain_days": 21
+    },
+    {
+      "high": 30,
+      "low": 27,
+      "rain_days": 24
+    },
+    {
+      "high": 31,
+      "low": 27,
+      "rain_days": 23
+    },
+    {
+      "high": 30,
+      "low": 27,
+      "rain_days": 26
+    },
+    {
+      "high": 30,
+      "low": 26,
+      "rain_days": 21
+    },
+    {
+      "high": 27,
+      "low": 23,
+      "rain_days": 11
+    },
+    {
+      "high": 25,
+      "low": 20,
+      "rain_days": 7
+    },
+    {
+      "high": 20,
+      "low": 14,
+      "rain_days": 4
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

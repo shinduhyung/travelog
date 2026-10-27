@@ -1,0 +1,751 @@
+{
+  "plans": [
+    {
+      "id": "day-beach",
+      "length": "day",
+      "style": "beach",
+      "nights": 0,
+      "for": "A sea-and-sun day for visitors who want the Promenade, the beaches and a sunset walk.",
+      "days": [
+        {
+          "title": "Promenade, beaches and sunset",
+          "stops": [
+            {
+              "place": "promenade",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Quiet at this hour. Walk the length of the Promenade des Anglais."
+            },
+            {
+              "place": "paloma",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Check season and opening hours on the day. Mornings are best."
+            },
+            {
+              "place": "croisette",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Late afternoon is pleasant. Good for a sunset walk."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Promenade des Anglais"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A market-and-lunch day for visitors who want Old Town flavours and a slow pace.",
+      "days": [
+        {
+          "title": "Market, old town lanes and food walk",
+          "stops": [
+            {
+              "place": "cours-saleya",
+              "at": "08:30",
+              "minutes": 75,
+              "note": "Morning market, Tuesday to Sunday. Check on the day, as it may not run on Mondays."
+            },
+            {
+              "place": "suquet",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Go before the crowds. The old fishing quarter is open all day."
+            },
+            {
+              "place": "old-town-tour",
+              "at": "12:00",
+              "minutes": 180,
+              "note": "Lunch-time food walk through the Old Town. Check tour times on the day."
+            },
+            {
+              "place": "castle-hill",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset views over the bay. Check seasonal hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux Nice"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "A museum-and-old-lanes day for visitors who want churches, history and views.",
+      "days": [
+        {
+          "title": "Churches, lanes and hilltop views",
+          "stops": [
+            {
+              "place": "cathedral",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Weekday mornings are quieter. Check hours on the day."
+            },
+            {
+              "place": "cours-saleya",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Morning market, Tuesday to Sunday. Check on the day."
+            },
+            {
+              "place": "suquet",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Old fishing quarter with a lively morning feel."
+            },
+            {
+              "place": "miserables",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Daytime visit in dry weather. Check hours on the day."
+            },
+            {
+              "place": "castle-hill",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Sunset viewpoint. Check sunset time for the date."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux Nice"
+    },
+    {
+      "id": "1n-beach",
+      "length": "1n",
+      "style": "beach",
+      "nights": 1,
+      "for": "Sea swims, pebble beaches and sunset walks along the Promenade. Best in spring or autumn.",
+      "stay_area": "Promenade des Anglais",
+      "days": [
+        {
+          "title": "Morning beach, sunset walk",
+          "stops": [
+            {
+              "place": "paloma",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Pebble beach. Check season and hours on the day."
+            },
+            {
+              "place": "croisette",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Easy walk along the seafront. Go late afternoon."
+            },
+            {
+              "place": "promenade",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Sunset walk. Check the sunset time for your dates."
+            }
+          ]
+        },
+        {
+          "title": "Antibes day trip, last walk",
+          "stops": [
+            {
+              "place": "antibes",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Seaside market and beaches. Check seasonal opening."
+            },
+            {
+              "place": "promenade",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Final evening walk. Check event closures on the day."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Socca, market stalls and seafront dinners in the Old Town.",
+      "stay_area": "Vieux Nice",
+      "days": [
+        {
+          "title": "Market, Old Town and food walk",
+          "stops": [
+            {
+              "place": "cours-saleya",
+              "at": "09:00",
+              "minutes": 75,
+              "note": "Morning market. Check market days on the day."
+            },
+            {
+              "place": "suquet",
+              "at": "10:45",
+              "minutes": 90,
+              "note": "Old quarter with views of the harbour. Go before the crowds."
+            },
+            {
+              "place": "old-town-tour",
+              "at": "13:00",
+              "minutes": 180,
+              "note": "Lunch-time food walk. Check start time on the day."
+            },
+            {
+              "place": "castle-hill",
+              "at": "18:45",
+              "minutes": 60,
+              "note": "Sunset viewpoint, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Quiet morning, seafront dinner",
+          "stops": [
+            {
+              "place": "cathedral",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Quieter on weekday mornings. Check hours on the day."
+            },
+            {
+              "place": "miserables",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Outdoor streets in dry weather. Check hours on the day."
+            },
+            {
+              "place": "croisette",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Late afternoon by the sea, then dinner on the Promenade."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Narrow lanes, baroque churches and the Cours Saleya market.",
+      "stay_area": "Vieux Nice",
+      "days": [
+        {
+          "title": "Old Town churches and market",
+          "stops": [
+            {
+              "place": "cathedral",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Baroque church. Go on a weekday morning for fewer people."
+            },
+            {
+              "place": "cours-saleya",
+              "at": "10:30",
+              "minutes": 75,
+              "note": "Morning market. Check market days on the day."
+            },
+            {
+              "place": "suquet",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Old quarter and harbour views. Lunch nearby."
+            },
+            {
+              "place": "castle-hill",
+              "at": "18:45",
+              "minutes": 60,
+              "note": "Sunset viewpoint. Check seasonal hours."
+            }
+          ]
+        },
+        {
+          "title": "Museums on the hill",
+          "stops": [
+            {
+              "place": "oceanographic",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Indoor museum. Best on weekday mornings."
+            },
+            {
+              "place": "matisse",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Art museum in Cimiez. Closed some days; check on the day. Taxi or bus from the centre."
+            },
+            {
+              "place": "zygo",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Quiet park nearby. Check hours on the day."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2n-beach",
+      "length": "2n",
+      "style": "beach",
+      "nights": 2,
+      "for": "Sea swims and sunset walks on the Promenade des Anglais, with one longer beach morning.",
+      "days": [
+        {
+          "title": "Promenade sunset",
+          "stops": [
+            {
+              "place": "croisette",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Sea-facing walk. Good for settling in after arrival."
+            },
+            {
+              "place": "promenade",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Sunset walk. Check sunset time on the day."
+            }
+          ]
+        },
+        {
+          "title": "Beach morning and Antibes",
+          "stops": [
+            {
+              "place": "paloma",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Best from late spring to early autumn. Check season and hours on the day."
+            },
+            {
+              "place": "antibes",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "Seasonal opening. Check on the day. Bring a hat in warm weather."
+            }
+          ]
+        },
+        {
+          "title": "Early swim and last beach time",
+          "stops": [
+            {
+              "place": "promenade",
+              "at": "07:30",
+              "minutes": 90,
+              "note": "Early morning is the calmest time."
+            },
+            {
+              "place": "koaland",
+              "at": "11:00",
+              "minutes": 150,
+              "note": "Check hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Promenade des Anglais"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Market mornings, socca-style lunches and a food walk through the Old Town.",
+      "days": [
+        {
+          "title": "Old Town market and food walk",
+          "stops": [
+            {
+              "place": "cours-saleya",
+              "at": "08:30",
+              "minutes": 75,
+              "note": "Morning market, Tuesday to Sunday. Skip it on Mondays."
+            },
+            {
+              "place": "suquet",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Go before the crowds."
+            },
+            {
+              "place": "old-town-tour",
+              "at": "12:30",
+              "minutes": 180,
+              "note": "Lunch-time food walk. Check start times on the day."
+            },
+            {
+              "place": "castle-hill",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Sunset view over the old roofs. Check sunset time."
+            }
+          ]
+        },
+        {
+          "title": "Seafront morning and late food walk",
+          "stops": [
+            {
+              "place": "promenade",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Easy walk to start the day."
+            },
+            {
+              "place": "old-town-tour",
+              "at": "15:00",
+              "minutes": 180,
+              "note": "Late afternoon tour. Good for an early dinner after."
+            }
+          ]
+        },
+        {
+          "title": "Last market visit",
+          "stops": [
+            {
+              "place": "cours-saleya",
+              "at": "08:30",
+              "minutes": 75,
+              "note": "Check it is open on your day. Buy picnic food for the walk."
+            },
+            {
+              "place": "suquet",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Quiet hour before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux Nice"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Old Town churches and markets, then museums on quiet weekday mornings.",
+      "days": [
+        {
+          "title": "Old Town and the cathedral",
+          "stops": [
+            {
+              "place": "cathedral",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Weekday mornings are quieter. Check hours on the day."
+            },
+            {
+              "place": "cours-saleya",
+              "at": "10:30",
+              "minutes": 75,
+              "note": "Morning market, Tuesday to Sunday."
+            },
+            {
+              "place": "miserables",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Check hours on the day. Best in dry weather."
+            },
+            {
+              "place": "castle-hill",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Sunset viewpoint. Check sunset time."
+            }
+          ]
+        },
+        {
+          "title": "Cimiez and the seafront",
+          "stops": [
+            {
+              "place": "matisse",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Weekday mornings are best. Closed some days, so check on the day."
+            },
+            {
+              "place": "oceanographic",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Check seasonal hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Monaco morning and last Old Town visit",
+          "stops": [
+            {
+              "place": "palace",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Go before noon. Check hours on the day."
+            },
+            {
+              "place": "suquet",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Old Town walk before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux Nice"
+    },
+    {
+      "id": "3n-beach",
+      "length": "3n",
+      "style": "beach",
+      "nights": 3,
+      "for": "Sea swims, pebble beaches and sunset walks along the Promenade.",
+      "days": [
+        {
+          "title": "Promenade and Paloma",
+          "stops": [
+            {
+              "place": "promenade",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Early morning is calmer. Check for event closures."
+            },
+            {
+              "place": "paloma",
+              "at": "10:15",
+              "minutes": 120,
+              "note": "Check season and hours on the day. Bring water and sun cover."
+            },
+            {
+              "place": "croisette",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Late afternoon walk along La Croisette."
+            },
+            {
+              "place": "koaland",
+              "at": "19:30",
+              "minutes": 150,
+              "note": "Check hours on the day. Dinner by the sea."
+            }
+          ]
+        },
+        {
+          "title": "Antibes day trip",
+          "stops": [
+            {
+              "place": "antibes",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Seasonal opening. Check on the day. Warm, dry days are best."
+            },
+            {
+              "place": "promenade",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Back on the Promenade for an evening stroll."
+            },
+            {
+              "place": "castle-hill",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Sunset view. Check the time for that day."
+            }
+          ]
+        },
+        {
+          "title": "Last swim and departure",
+          "stops": [
+            {
+              "place": "promenade",
+              "at": "07:30",
+              "minutes": 90,
+              "note": "Quiet early walk before you leave."
+            },
+            {
+              "place": "oceanographic",
+              "at": "09:15",
+              "minutes": 120,
+              "note": "Indoor, good if the weather turns. Weekday mornings are quieter. Check seasonal hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Promenade des Anglais"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Market stalls, socca in the Old Town and seafront dinners.",
+      "days": [
+        {
+          "title": "Market and Old Town lunch",
+          "stops": [
+            {
+              "place": "cours-saleya",
+              "at": "09:00",
+              "minutes": 75,
+              "note": "Morning market, Tuesday to Sunday. Check Mondays on the day."
+            },
+            {
+              "place": "suquet",
+              "at": "10:45",
+              "minutes": 90,
+              "note": "Go before the crowds. Old fishing quarter lanes."
+            },
+            {
+              "place": "old-town-tour",
+              "at": "13:00",
+              "minutes": 180,
+              "note": "Food walk. Usually daytime tours. Check on the day."
+            },
+            {
+              "place": "castle-hill",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Sunset view over the rooftops. Check the time for that day."
+            }
+          ]
+        },
+        {
+          "title": "Quiet morning and seafront dinner",
+          "stops": [
+            {
+              "place": "cathedral",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Weekday mornings are quieter. Check hours on the day."
+            },
+            {
+              "place": "miserables",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Outdoor sights in the Old Town. Dry weather is best. Check on the day."
+            },
+            {
+              "place": "cours-saleya",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Lunch at the market stalls. Check Mondays on the day."
+            },
+            {
+              "place": "croisette",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Seafront dinner. Open all day."
+            }
+          ]
+        },
+        {
+          "title": "Early market and departure",
+          "stops": [
+            {
+              "place": "cours-saleya",
+              "at": "08:00",
+              "minutes": 75,
+              "note": "Buy breakfast and local treats for the road. Tuesday to Sunday."
+            },
+            {
+              "place": "promenade",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Short walk along the sea before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux Nice & Promenade des Anglais"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Narrow lanes, baroque churches, museums and the Cours Saleya market.",
+      "days": [
+        {
+          "title": "Old Town lanes and market",
+          "stops": [
+            {
+              "place": "suquet",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning is best, before the crowds."
+            },
+            {
+              "place": "cours-saleya",
+              "at": "11:30",
+              "minutes": 75,
+              "note": "Market runs Tuesday to Sunday. Check Mondays on the day."
+            },
+            {
+              "place": "cathedral",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Baroque church in Carré d'Or. Check hours on the day."
+            },
+            {
+              "place": "castle-hill",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Sunset view. Check the time for that day."
+            }
+          ]
+        },
+        {
+          "title": "Cimiez museums and Old Town",
+          "stops": [
+            {
+              "place": "matisse",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Weekday mornings are quieter. Closed some days, so check on the day."
+            },
+            {
+              "place": "zygo",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Park near the museum. Check hours on the day."
+            },
+            {
+              "place": "miserables",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Old Town sights outdoors. Dry weather is best. Check hours on the day."
+            },
+            {
+              "place": "old-town-tour",
+              "at": "16:30",
+              "minutes": 180,
+              "note": "Late afternoon food walk. Usually daytime tours. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Museum morning and departure",
+          "stops": [
+            {
+              "place": "oceanographic",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Weekday mornings are best. Check seasonal hours on the day."
+            },
+            {
+              "place": "promenade",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Final walk along the sea before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux Nice & Promenade des Anglais"
+    }
+  ]
+}

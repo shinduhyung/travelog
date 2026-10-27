@@ -1,0 +1,231 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro_line": "Renaissance masterpieces, river views, and streets best explored on foot.",
+  "intro": "Florence rewards slow walkers with Renaissance art, lively markets, and river views around nearly every corner. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "romance",
+      "label": "Romance"
+    }
+  ],
+  "areas": [
+    "Santa Maria Novella",
+    "San Lorenzo",
+    "Santa Croce",
+    "Oltrarno"
+  ],
+  "taxi": {
+    "flag_day": 4.5,
+    "flag_airport": 25,
+    "per_km": 1.2,
+    "min_fare": 10
+  },
+  "road_factor": 1.3,
+  "city_kmh": 18,
+  "transit_facts": [
+    "Tram T2 links the airport to Santa Maria Novella station and runs until about 00:30 on weekdays and 02:00 on weekends; the route takes about 20 minutes.",
+    "Tram 1 runs from Villa Constanza Park & Ride through the western suburbs to Santa Maria Novella, about 25 minutes, every 3 to 10 minutes.",
+    "AutolineeToscane buses serve the city. Tap a contactless Visa, Mastercard or Amex card, or buy a €1.70 paper ticket before boarding; a 90-minute hop-on, hop-off window applies.",
+    "Taxis have few stands and are hard to hail on the street. Book by phone or use the stand at Santa Maria Novella, and carry cash. Check locally whether Uber or FreeNow is available.",
+    "Driving inside the historic centre is restricted by camera and fines are high. Park at Park & Ride sites and walk or take the bus in.",
+    "Most of the centre is flat and walkable in about 30 minutes end to end. Shared city bikes are available, and cycle paths help you bypass the old streets."
+  ],
+  "airports": [
+    {
+      "code": "FLR",
+      "name": "Firenze Peretola Airport (Amerigo Vespucci)",
+      "primary": true,
+      "note": "Main local airport, about 4-5 km northwest of the centre, with limited and pricier flights.",
+      "options": [
+        {
+          "mode": "Tram T2",
+          "to": "Santa Maria Novella station, then Piazza San Marco",
+          "price": "€1.70",
+          "time": "about 20 min",
+          "note": "Cheapest option. Buy tickets from machines at the stop with cash or card."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Historic centre",
+          "price": "€25 flat, plus €1 per large bag",
+          "time": "15-20 min",
+          "note": "Fixed fare to the historic centre. Ask for the flat rate before you get in."
+        },
+        {
+          "mode": "Ride app",
+          "to": "Historic centre",
+          "price": "check locally",
+          "time": "15-25 min",
+          "note": "Availability varies, so check locally before you rely on it."
+        }
+      ]
+    },
+    {
+      "code": "BLQ",
+      "name": "Bologna Guglielmo Marconi Airport",
+      "primary": false,
+      "note": "Preferred alternative for many flights, about 1 hour from Florence by car or train.",
+      "options": [
+        {
+          "mode": "Airport bus + train",
+          "to": "Bologna Centrale, then train to Firenze SMN",
+          "price": "check locally",
+          "time": "about 2-2.5 hr total",
+          "note": "Use the airport shuttle to Bologna Centrale, then take a direct train to Florence."
+        },
+        {
+          "mode": "Train",
+          "to": "Firenze SMN",
+          "price": "check locally",
+          "time": "about 1 hr",
+          "note": "Only after you reach Bologna Centrale. Book early for better fares."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Florence",
+          "price": "check locally",
+          "time": "about 1 hr",
+          "note": "Taxi drivers may refuse the long trip to Florence late at night."
+        }
+      ]
+    },
+    {
+      "code": "PSA",
+      "name": "Pisa International Airport (Galileo Galilei)",
+      "primary": false,
+      "note": "Fewer flights than Bologna, about 1.5 hours from Florence by train.",
+      "options": [
+        {
+          "mode": "Airport shuttle + train",
+          "to": "Pisa Centrale, then train to Firenze SMN",
+          "price": "check locally",
+          "time": "about 2-2.5 hr total",
+          "note": "Shuttle to Pisa Centrale, then take a regional or fast train to Florence."
+        },
+        {
+          "mode": "Train",
+          "to": "Firenze SMN",
+          "price": "check locally",
+          "time": "about 1.5 hr",
+          "note": "Train from Pisa Centrale. Check schedules before you travel."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Florence",
+          "price": "check locally",
+          "time": "about 1.5 hr",
+          "note": "Expensive for a long trip, and drivers may not agree to go at night."
+        }
+      ]
+    }
+  ],
+  "max_km": 80,
+  "place_landmarks": [
+    "Florence Cathedral",
+    "Uffizi Gallery",
+    "Galleria dell'Accademia",
+    "Ponte Vecchio",
+    "Palazzo Vecchio",
+    "Basilica of Santa Croce, Florence",
+    "Boboli Gardens",
+    "Annunciation",
+    "Arno River",
+    "David",
+    "Pitti Palace",
+    "Primavera",
+    "The Birth of Venus"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Florence",
+      "https://en.wikivoyage.org/wiki/Florence"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    43.77925,
+    11.24626
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 11,
+      "low": 2,
+      "rain_days": 10
+    },
+    {
+      "high": 13,
+      "low": 3,
+      "rain_days": 11
+    },
+    {
+      "high": 15,
+      "low": 5,
+      "rain_days": 10
+    },
+    {
+      "high": 19,
+      "low": 7,
+      "rain_days": 10
+    },
+    {
+      "high": 23,
+      "low": 12,
+      "rain_days": 14
+    },
+    {
+      "high": 28,
+      "low": 16,
+      "rain_days": 8
+    },
+    {
+      "high": 32,
+      "low": 19,
+      "rain_days": 4
+    },
+    {
+      "high": 32,
+      "low": 19,
+      "rain_days": 6
+    },
+    {
+      "high": 27,
+      "low": 15,
+      "rain_days": 9
+    },
+    {
+      "high": 21,
+      "low": 12,
+      "rain_days": 12
+    },
+    {
+      "high": 15,
+      "low": 7,
+      "rain_days": 12
+    },
+    {
+      "high": 12,
+      "low": 3,
+      "rain_days": 12
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

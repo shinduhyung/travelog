@@ -7,6 +7,7 @@ from functools import lru_cache
 from pathlib import Path
 
 ASSETS = Path(__file__).resolve().parents[2] / "assets"
+ALIAS = {"Seville": "Sevilla", "Florence": "Firenze"}  # cities15000 spelling for the hub name
 CAPITALS = {"New Delhi"}  # national capitals among the fallback cities
 
 
@@ -31,7 +32,7 @@ def load_cities():
         rows.setdefault(r["name"], []).append(r)
     for h in hubs:
         iso2 = next((by_iata.get(i) for i in h.get("iata", []) if by_iata.get(i)), None)
-        alts = [h["name"], h["name"].replace("St. ", "Saint ")]
+        alts = [h["name"], h["name"].replace("St. ", "Saint "), ALIAS.get(h["name"], h["name"])]
         cand = [r for a in alts for r in rows.get(a, []) if r["country_code"] == iso2] or rows.get(h["name"], [])
         if not cand:
             continue

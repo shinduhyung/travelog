@@ -1,0 +1,575 @@
+{
+  "city": "Granada",
+  "checked": "October 2026",
+  "intro_line": "Moorish palaces and winding white lanes beneath snowy mountain peaks.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Centro",
+        "Albayzin",
+        "Realejo",
+        "Sacromonte"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Centro",
+        "Albayzin",
+        "Realejo",
+        "Sacromonte"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Tapas",
+      "areas": [
+        "Centro",
+        "Albayzin",
+        "Realejo",
+        "Sacromonte"
+      ]
+    },
+    {
+      "id": "romance",
+      "label": "Romance",
+      "areas": [
+        "Centro",
+        "Albayzin",
+        "Realejo",
+        "Sacromonte"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Mountains",
+      "areas": [
+        "Centro",
+        "Albayzin",
+        "Realejo",
+        "Sacromonte"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 13,
+        "low": 3,
+        "rain_days": 7,
+        "note": "Jan: Cold, with highs around 13°C and lows near 3°C. Rain on about 7 days. Bring warm layers for the Alhambra."
+      },
+      {
+        "high": 15,
+        "low": 4,
+        "rain_days": 7,
+        "note": "Feb: Mild but chilly, highs around 15°C and lows near 4°C. Rain on about 7 days. Good for quiet sightseeing."
+      },
+      {
+        "high": 17,
+        "low": 6,
+        "rain_days": 12,
+        "note": "Mar: Spring starts. Highs around 17°C and lows near 6°C. Rain on about 12 days, so pack a light jacket."
+      },
+      {
+        "high": 20,
+        "low": 8,
+        "rain_days": 9,
+        "note": "Apr: Pleasant, highs around 20°C and lows near 8°C. Rain on about 9 days. Good for walking the hills."
+      },
+      {
+        "high": 25,
+        "low": 12,
+        "rain_days": 6,
+        "note": "May: Warm and sunny, highs around 25°C and lows near 12°C. Rain on about 6 days. Book Alhambra tickets early."
+      },
+      {
+        "high": 30,
+        "low": 16,
+        "rain_days": 3,
+        "note": "Jun: Hot, highs around 30°C and lows near 16°C. Rain on about 3 days. Visit the Alhambra early in the morning."
+      },
+      {
+        "high": 35,
+        "low": 21,
+        "rain_days": 2,
+        "note": "Jul: Very hot, highs around 35°C and lows near 21°C. Rain on about 2 days. Plan indoor visits for midday."
+      },
+      {
+        "high": 35,
+        "low": 21,
+        "rain_days": 2,
+        "note": "Aug: Very hot, highs around 35°C and lows near 21°C. Rain on about 2 days. Evenings are the best time to be outdoors."
+      },
+      {
+        "high": 29,
+        "low": 16,
+        "rain_days": 4,
+        "note": "Sep: Still warm, highs around 29°C and lows near 16°C. Rain on about 4 days. A good month for sightseeing."
+      },
+      {
+        "high": 24,
+        "low": 12,
+        "rain_days": 7,
+        "note": "Oct: Mild, highs around 24°C and lows near 12°C. Rain on about 7 days. One of the best months to visit."
+      },
+      {
+        "high": 17,
+        "low": 7,
+        "rain_days": 8,
+        "note": "Nov: Cool, highs around 17°C and lows near 7°C. Rain on about 8 days. Quieter streets and easier hotel prices."
+      },
+      {
+        "high": 15,
+        "low": 5,
+        "rain_days": 6,
+        "note": "Dec: Cold, highs around 15°C and lows near 5°C. Rain on about 6 days. Pack warm clothes for evening walks."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "history": [
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.6,
+      0.5,
+      0.5,
+      0.8,
+      0.9,
+      0.9,
+      0.85
+    ],
+    "culture": [
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.7,
+      0.6,
+      0.6,
+      0.85,
+      0.9,
+      0.9,
+      0.85
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.9,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.85,
+      0.9,
+      0.9,
+      0.8
+    ],
+    "romance": [
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.85,
+      0.7,
+      0.7,
+      0.85,
+      0.95,
+      0.9,
+      0.8
+    ],
+    "nature": [
+      0.6,
+      0.6,
+      0.7,
+      0.85,
+      0.9,
+      0.8,
+      0.5,
+      0.5,
+      0.8,
+      0.9,
+      0.7,
+      0.5
+    ]
+  },
+  "places": {
+    "alhambra": {
+      "types": [
+        "history",
+        "culture",
+        "romance"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Early morning or late afternoon; spring and autumn are most comfortable",
+      "area": "Albayzin",
+      "popularity": 5
+    },
+    "generalife": {
+      "types": [
+        "nature",
+        "history",
+        "romance"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon in spring or early autumn",
+      "area": "Albayzin",
+      "popularity": 4
+    },
+    "albayzin": {
+      "types": [
+        "history",
+        "culture",
+        "romance"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon to sunset",
+      "area": "Albayzin",
+      "popularity": 5
+    },
+    "granada_cathedral": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "mixed",
+      "best": "Late morning; avoid the midday tour rush",
+      "area": "Centro",
+      "popularity": 4
+    },
+    "royal_chapel": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 50,
+      "setting": "indoor",
+      "best": "Weekday mornings",
+      "area": "Centro",
+      "popularity": 4
+    },
+    "old_town": {
+      "types": [
+        "history",
+        "culture",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning or evening",
+      "area": "Centro",
+      "popularity": 4
+    },
+    "alhambra_palaces": {
+      "types": [
+        "history",
+        "culture",
+        "romance"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Morning, when the light is good",
+      "area": "Albayzin",
+      "popularity": 5
+    },
+    "alhambra_night": {
+      "types": [
+        "history",
+        "romance"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Spring and summer evenings",
+      "area": "Albayzin",
+      "popularity": 4
+    },
+    "generalife_gardens": {
+      "types": [
+        "nature",
+        "romance"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Albayzin",
+      "popularity": 4
+    },
+    "cathedral_roof": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Mid-morning on a clear day",
+      "area": "Centro",
+      "popularity": 3
+    },
+    "albayzin_sunset": {
+      "types": [
+        "romance",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset, spring and autumn",
+      "area": "Albayzin",
+      "popularity": 5
+    },
+    "royal_chapel_tombs": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 40,
+      "setting": "indoor",
+      "best": "Weekday mornings",
+      "area": "Centro",
+      "popularity": 3
+    },
+    "sacromonte_flamenco": {
+      "types": [
+        "culture",
+        "romance"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Evening, any season",
+      "area": "Sacromonte",
+      "popularity": 5
+    },
+    "san_agustin_market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Centro",
+      "popularity": 3
+    },
+    "hammam": {
+      "types": [
+        "romance",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Late afternoon, after a long walk",
+      "area": "Centro",
+      "popularity": 3
+    },
+    "mirador_san_nicolas": {
+      "types": [
+        "romance",
+        "nature"
+      ],
+      "minutes": 40,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Albayzin",
+      "popularity": 5
+    },
+    "darro_walk": {
+      "types": [
+        "nature",
+        "history",
+        "romance"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning or evening",
+      "area": "Albayzin",
+      "popularity": 4
+    },
+    "realejo_walk": {
+      "types": [
+        "history",
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late morning or afternoon",
+      "area": "Realejo",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "One night suits you: book the Alhambra for one time slot, then split the Albayzín sunset and the cathedral across your arrival and departure days."
+  },
+  "airports": [
+    {
+      "code": "GRX",
+      "name": "Federico Garcia Lorca Airport",
+      "primary": true,
+      "note": "Small regional airport with domestic and a few budget international flights, about 15 km west of the centre.",
+      "options": [
+        {
+          "mode": "Airport bus (Alsa)",
+          "to": "Gran Via de Colon (opposite the cathedral) or Palacio de Congresos",
+          "price": "€3",
+          "time": "about 60 min",
+          "note": "Runs about 11 times a day per route and is often timed to plane arrivals."
+        },
+        {
+          "mode": "Airport bus (Alsa, faster route)",
+          "to": "Granada Bus Station (north of the city)",
+          "price": "€3",
+          "time": "check locally",
+          "note": "Faster route; transfer to a local bus or taxi from there."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€28",
+          "time": "about 30 min",
+          "note": "Quoted fare; use the official taxi rank outside arrivals."
+        },
+        {
+          "mode": "Ride app (Uber / Cabify)",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "about 30 min",
+          "note": "Availability at the airport can be limited; confirm before you fly."
+        }
+      ]
+    },
+    {
+      "code": "AGP",
+      "name": "Málaga-Costa del Sol Airport",
+      "primary": false,
+      "note": "Main budget-airline hub about 130 km south-west of Granada, with far more international routes.",
+      "options": [
+        {
+          "mode": "Train (Cercanías to María Zambrano station, then Renfe with change at Bobadilla)",
+          "to": "Granada Train Station",
+          "price": "check locally",
+          "time": "about 2.5-3 h",
+          "note": "Cheapest option, but the connection at Bobadilla takes planning."
+        },
+        {
+          "mode": "Airport bus (Alsa / Movelia)",
+          "to": "Granada Bus Station",
+          "price": "check locally",
+          "time": "about 2 h",
+          "note": "Direct coaches run on set times; book ahead in peak season."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "about 2 h",
+          "note": "Expensive for this distance; agree the fare or use the metered rank."
+        },
+        {
+          "mode": "Carpool (BlaBlaCar)",
+          "to": "Granada",
+          "price": "check locally",
+          "time": "about 2 h",
+          "note": "Often cheaper than trains or buses in Andalusia, but book in advance."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Granada",
+      "https://en.wikivoyage.org/wiki/Granada"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "culture",
+    "food"
+  ],
+  "transit": {
+    "best": "Walk the old quarters, and use city buses for the hills and the Alhambra.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "One metro line runs in Granada. A single ticket costs about €1.65 (Nov 2024). A rechargeable green travel card costs €1.50 at tobacco shops and needs at least €5 of credit."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "Alhambra Buses cover most sights: C30 to the Alhambra, C31 to Albayzin and C34 to Sacromonte. Each trip costs €1.60 (Nov 2024). Multi-trip cards cost €5, €10 or €20."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are easy to find. Ride apps such as Uber or Cabify are available; check locally."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving in the centre is restricted, with camera-enforced limits. Park outside the historic core or use a garage such as Parking HH Maristas."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Walking is the best way to see the old quarters, but streets are steep, narrow and uneven. Buses help on the hills."
+      },
+      {
+        "mode": "Ferry",
+        "has": false,
+        "text": "No ferry service applies to Granada."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Continental climate with hot summers, cold winters and a clear shoulder season in spring and autumn.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April to May and October",
+        "text": "Highs around 20–25°C with fewer crowds. Ideal for the Alhambra and long walks in the old quarters."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot summer (June to August)",
+        "text": "Highs around 30–35°C and lows near 16–21°C. Visit sights early or late and rest at midday."
+      },
+      {
+        "icon": "🥶",
+        "title": "Cold winter (December to February)",
+        "text": "Highs around 13–15°C and lows near 3–5°C. Bring a warm jacket for evenings and early mornings."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain is most likely in March and November",
+        "text": "Around 8–12 rainy days in those months. Pack a light waterproof and check the forecast before day trips."
+      },
+      {
+        "icon": "☀️",
+        "title": "Sunny most of the year",
+        "text": "Rain falls on only 2–4 days in June to August. Sunscreen and a hat matter from late spring onward."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable shoes with good grip for steep, uneven streets. Layers for cool evenings, plus sun protection in summer."
+      }
+    ]
+  }
+}

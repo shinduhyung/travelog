@@ -1,0 +1,718 @@
+{
+  "plans": [
+    {
+      "id": "day-beach",
+      "length": "day",
+      "style": "beach",
+      "nights": 0,
+      "for": "Sandy coves and a seafront walk for a relaxed summer day.",
+      "days": [
+        {
+          "title": "Beach morning, sunset walk",
+          "stops": [
+            {
+              "place": "fishmarket",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Go early for the catch. Morning hours only, check on the day."
+            },
+            {
+              "place": "stefanbeach",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Best June to September, mornings. Daytime hours, check on the day."
+            },
+            {
+              "place": "mogren",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Late afternoon is the best time. Short walk along the coast from Old Town."
+            },
+            {
+              "place": "promenade",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Sunset walk along the Riviera."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Walled stone streets, a monastery and a harbour view in one day.",
+      "days": [
+        {
+          "title": "Old Town, Cetinje and sunset",
+          "stops": [
+            {
+              "place": "oldtown",
+              "at": "08:00",
+              "minutes": 120,
+              "note": "Early morning is quietest. Shops and museums open around 09:00, check on the day."
+            },
+            {
+              "place": "cetinje",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Short drive from Budva. Dress modestly. Open roughly 08:00 to 18:00, check on the day."
+            },
+            {
+              "place": "prut",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch of local smoked ham. Lunch hours roughly 11:00 to 18:00, check on the day."
+            },
+            {
+              "place": "viewpoint",
+              "at": "17:00",
+              "minutes": 20,
+              "note": "Late afternoon light on Sveti Stefan. Short drive from Budva."
+            },
+            {
+              "place": "promenade",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Sunset along the Riviera."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town"
+    },
+    {
+      "id": "day-nightlife",
+      "length": "day",
+      "style": "nightlife",
+      "nights": 0,
+      "for": "A lazy beach afternoon that turns into a busy night on the coast.",
+      "days": [
+        {
+          "title": "Lunch, beach, then bars",
+          "stops": [
+            {
+              "place": "prut",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch before the beach. Lunch hours roughly 11:00 to 18:00, check on the day."
+            },
+            {
+              "place": "mogren",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "Late afternoon is best in summer. Daytime hours, check on the day."
+            },
+            {
+              "place": "promenade",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Sunset drinks along the Riviera."
+            },
+            {
+              "place": "nightlife",
+              "at": "20:30",
+              "minutes": 120,
+              "note": "Bars and clubs open from about 19:00 in summer. Closes around 02:00, check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town"
+    },
+    {
+      "id": "1n-beach",
+      "length": "1n",
+      "style": "beach",
+      "nights": 1,
+      "for": "Sandy coves and a long seafront, with a late-afternoon sunset on the promenade.",
+      "days": [
+        {
+          "title": "Fish market, Sveti Stefan beach and sunset",
+          "stops": [
+            {
+              "place": "fishmarket",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Morning stalls are busiest early. Check hours on the day."
+            },
+            {
+              "place": "stefanbeach",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Daytime beach in summer. Short drive from the Old Town, so check taxi or bus options."
+            },
+            {
+              "place": "viewpoint",
+              "at": "17:30",
+              "minutes": 20,
+              "note": "Best in late afternoon for soft light on the islet."
+            },
+            {
+              "place": "promenade",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Sunset walk along the seafront."
+            }
+          ]
+        },
+        {
+          "title": "Mogren Beach and the Old Town",
+          "stops": [
+            {
+              "place": "oldtown",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Walk the walls and streets before the heat builds up."
+            },
+            {
+              "place": "mogren",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Sandy beach in the Old Town. Late afternoon is best in summer."
+            },
+            {
+              "place": "promenade",
+              "at": "18:45",
+              "minutes": 60,
+              "note": "Sunset, then dinner nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Stone streets, a Sveti Stefan viewpoint and a country trip to Cetinje.",
+      "days": [
+        {
+          "title": "Old Town walk and Sveti Stefan",
+          "stops": [
+            {
+              "place": "fishmarket",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Morning market, roughly 07:00 to 13:00. Check on the day."
+            },
+            {
+              "place": "oldtown",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Early start is calmer. Shops and museums open around 09:00 in summer."
+            },
+            {
+              "place": "stefan",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Islet access is limited. Check on the day."
+            },
+            {
+              "place": "viewpoint",
+              "at": "17:30",
+              "minutes": 20,
+              "note": "Late afternoon is best for photos."
+            }
+          ]
+        },
+        {
+          "title": "Cetinje and lunch",
+          "stops": [
+            {
+              "place": "cetinje",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Roughly 08:00 to 18:00. Dress modestly. Short drive from Budva."
+            },
+            {
+              "place": "prut",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Lunch stop. Kitchen open roughly 11:00 to 18:00. Combine with Cetinje."
+            },
+            {
+              "place": "oldtown",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Sunset walk back through the stone streets."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town"
+    },
+    {
+      "id": "1n-nightlife",
+      "length": "1n",
+      "style": "nightlife",
+      "nights": 1,
+      "for": "Beach by day, then the bars and clubs of the Old Town after dark.",
+      "days": [
+        {
+          "title": "Beach afternoon and the nightlife strip",
+          "stops": [
+            {
+              "place": "mogren",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Daytime beach in summer. Beach clubs nearby, check on the day."
+            },
+            {
+              "place": "promenade",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Sunset drinks along the seafront."
+            },
+            {
+              "place": "nightlife",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Busiest in summer evenings, roughly 19:00 to 02:00. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Late beach, sunset and bars",
+          "stops": [
+            {
+              "place": "stefanbeach",
+              "at": "11:00",
+              "minutes": 180,
+              "note": "Mornings are calmer. Check opening hours and the drive."
+            },
+            {
+              "place": "viewpoint",
+              "at": "17:30",
+              "minutes": 20,
+              "note": "Late afternoon is best for views of the islet."
+            },
+            {
+              "place": "nightlife",
+              "at": "20:30",
+              "minutes": 120,
+              "note": "Second night on the strip. Arrive later for a livelier crowd."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town"
+    },
+    {
+      "id": "2n-beach",
+      "length": "2n",
+      "style": "beach",
+      "nights": 2,
+      "for": "Sandy coves and a seafront walk, with the Sveti Stefan views on the second day.",
+      "stay_area": "Old Town",
+      "days": [
+        {
+          "title": "Old Town coves and sunset promenade",
+          "stops": [
+            {
+              "place": "fishmarket",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Hours roughly 07:00–13:00. Check on the day."
+            },
+            {
+              "place": "mogren",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Walk to the beach from the Old Town. Best June to September."
+            },
+            {
+              "place": "promenade",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Open all day. Good for sunset."
+            }
+          ]
+        },
+        {
+          "title": "Sveti Stefan beach and viewpoint",
+          "stops": [
+            {
+              "place": "stefanbeach",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Morning is best. Hours roughly 08:00–19:00 in summer. Check on the day."
+            },
+            {
+              "place": "viewpoint",
+              "at": "17:30",
+              "minutes": 20,
+              "note": "Open all day. Late light is soft."
+            },
+            {
+              "place": "stefan",
+              "at": "17:55",
+              "minutes": 45,
+              "note": "Islet access is limited. Check on the day."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Walled stone streets, a harbour view, and a monastery day trip.",
+      "stay_area": "Old Town",
+      "days": [
+        {
+          "title": "Old Town walls and harbour",
+          "stops": [
+            {
+              "place": "fishmarket",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Hours roughly 07:00–13:00. Check on the day."
+            },
+            {
+              "place": "oldtown",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Early start is quieter. Shops and museums roughly 09:00–20:00 in summer."
+            },
+            {
+              "place": "promenade",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Open all day. Good for sunset."
+            }
+          ]
+        },
+        {
+          "title": "Cetinje and Njeguši",
+          "stops": [
+            {
+              "place": "cetinje",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Short drive from Budva. Dress modestly. Roughly 08:00–18:00."
+            },
+            {
+              "place": "prut",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Lunch stop. Roughly 11:00–18:00. Check on the day."
+            },
+            {
+              "place": "viewpoint",
+              "at": "16:00",
+              "minutes": 20,
+              "note": "Open all day. Late afternoon light."
+            },
+            {
+              "place": "stefan",
+              "at": "16:25",
+              "minutes": 45,
+              "note": "Islet access is limited. Check on the day."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2n-nightlife",
+      "length": "2n",
+      "style": "nightlife",
+      "nights": 2,
+      "for": "Beach by day, bars and clubs on the Old Town strip after dark.",
+      "stay_area": "Old Town",
+      "days": [
+        {
+          "title": "Beach afternoon and nightlife strip",
+          "stops": [
+            {
+              "place": "mogren",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Daytime beach. Late afternoon is best in summer."
+            },
+            {
+              "place": "promenade",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Open all day. Good for sunset drinks."
+            },
+            {
+              "place": "nightlife",
+              "at": "21:00",
+              "minutes": 120,
+              "note": "Evenings roughly 19:00–02:00 in summer. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Sveti Stefan beach and late bars",
+          "stops": [
+            {
+              "place": "stefanbeach",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Hours roughly 08:00–19:00 in summer. Check on the day."
+            },
+            {
+              "place": "prut",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch stop. Roughly 11:00–18:00. Check on the day."
+            },
+            {
+              "place": "viewpoint",
+              "at": "17:30",
+              "minutes": 20,
+              "note": "Open all day. Good for sunset."
+            },
+            {
+              "place": "nightlife",
+              "at": "21:00",
+              "minutes": 120,
+              "note": "Busy in summer evenings. Check on the day."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3n-beach",
+      "length": "3n",
+      "style": "beach",
+      "nights": 3,
+      "for": "Sandy coves, a seafront walk and a morning at Sveti Stefan for beach lovers.",
+      "days": [
+        {
+          "title": "Old Town beach and sunset walk",
+          "stops": [
+            {
+              "place": "mogren",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Sandy cove a short walk from the old walls. Check summer opening times on the day."
+            },
+            {
+              "place": "promenade",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Walk the seafront at sunset. Open all day."
+            }
+          ]
+        },
+        {
+          "title": "Sveti Stefan coast",
+          "stops": [
+            {
+              "place": "stefanbeach",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Best June to September. Go in the morning. Check hours on the day."
+            },
+            {
+              "place": "viewpoint",
+              "at": "17:00",
+              "minutes": 20,
+              "note": "Look back at the islet in soft late light."
+            },
+            {
+              "place": "stefan",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Islet access is limited. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Early fish market and boat trip",
+          "stops": [
+            {
+              "place": "fishmarket",
+              "at": "07:30",
+              "minutes": 45,
+              "note": "Morning market, roughly 07:00 to 13:00. Check on the day."
+            },
+            {
+              "place": "cruise",
+              "at": "09:30",
+              "minutes": 300,
+              "note": "Usually half-day or full-day from Budva or Kotor. Check departure times and weather."
+            },
+            {
+              "place": "mogren",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Late afternoon is best for a swim. Back in Budva after the cruise."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town & Rafailovići"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Walled stone streets, small churches and mountain views for first-time visitors.",
+      "days": [
+        {
+          "title": "Early market and Old Town walk",
+          "stops": [
+            {
+              "place": "fishmarket",
+              "at": "07:30",
+              "minutes": 45,
+              "note": "Best early. Morning hours roughly 07:00 to 13:00."
+            },
+            {
+              "place": "oldtown",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Walk the walls and streets before the crowds. Museums close around 20:00 in summer."
+            },
+            {
+              "place": "promenade",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Harbour walk to end the day. Good for sunset."
+            }
+          ]
+        },
+        {
+          "title": "Cetinje and lunch on the mountain",
+          "stops": [
+            {
+              "place": "cetinje",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Dress modestly. Roughly 08:00 to 18:00. Short drive from Budva."
+            },
+            {
+              "place": "prut",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Lunch stop. Usually open from 11:00. Check on the day."
+            },
+            {
+              "place": "stefan",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Late afternoon light is soft here. Islet access is limited."
+            }
+          ]
+        },
+        {
+          "title": "Kotor day trip",
+          "stops": [
+            {
+              "place": "kotor",
+              "at": "08:00",
+              "minutes": 180,
+              "note": "Early start. Wall climb and churches roughly 08:00 to 19:00. Check on the day."
+            },
+            {
+              "place": "oldtown",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Back in Budva for an afternoon walk through the old streets."
+            },
+            {
+              "place": "promenade",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Evening seafront walk."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town"
+    },
+    {
+      "id": "3n-nightlife",
+      "length": "3n",
+      "style": "nightlife",
+      "nights": 3,
+      "for": "Beach clubs by day and busy bars along the coast after dark.",
+      "days": [
+        {
+          "title": "Beach afternoon and seafront nights",
+          "stops": [
+            {
+              "place": "mogren",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Late afternoon is best in summer. Check daytime hours on the day."
+            },
+            {
+              "place": "promenade",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Sunset stroll before the bars open."
+            },
+            {
+              "place": "nightlife",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Evenings roughly 19:00 to 02:00 in summer. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Sveti Stefan and late evening",
+          "stops": [
+            {
+              "place": "stefanbeach",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "June to September, mornings are best. Check hours."
+            },
+            {
+              "place": "viewpoint",
+              "at": "17:00",
+              "minutes": 20,
+              "note": "Quick stop for the view."
+            },
+            {
+              "place": "nightlife",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Bars and clubs along the coast. Late hours in summer."
+            }
+          ]
+        },
+        {
+          "title": "Old Town by day, bars by night",
+          "stops": [
+            {
+              "place": "oldtown",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Morning walk through the streets. Shops open roughly 09:00 to 20:00 in summer."
+            },
+            {
+              "place": "stefan",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Quick stop for the late afternoon view."
+            },
+            {
+              "place": "nightlife",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Last night in Budva. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town & Rafailovići"
+    }
+  ]
+}

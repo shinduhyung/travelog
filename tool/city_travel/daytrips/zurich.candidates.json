@@ -19,7 +19,13 @@
    "Lake Lucerne boat cruise"
   ],
   "visit": "Full day",
-  "tour_query": "Lucerne day trip from Zurich"
+  "tour_query": "Lucerne day trip from Zurich",
+  "cc": "CH",
+  "force_town": {
+   "name": "Lucerne",
+   "lat": 47.0502,
+   "lng": 8.3093
+  }
  },
  {
   "town": "Interlaken",
@@ -108,5 +114,33 @@
   ],
   "visit": "Half day",
   "tour_query": "Winterthur day trip from Zurich"
+ },
+ {
+  "town": "Vaduz",
+  "place": "Vaduz",
+  "search": "Vaduz",
+  "omio_from": "zurich",
+  "omio_to": "vaduz",
+  "r2r_from": "Zurich",
+  "r2r_to": "Vaduz",
+  "landmark_at": [
+   47.141,
+   9.5209
+  ],
+  "route_note": "Take the train from Zurich HB to Sargans, then PostBus to Vaduz; the whole trip is about 1.5-2 hours and the town centre is walkable.",
+  "see": [
+   "Vaduz Castle",
+   "Kunstmuseum Liechtenstein",
+   "Städtle",
+   "Liechtenstein National Museum"
+  ],
+  "visit": "Half day",
+  "tour_query": "Vaduz day trip from Zurich",
+  "cc": "LI",
+  "force_town": {
+   "name": "Vaduz",
+   "lat": 47.141,
+   "lng": 9.5209
+  }
  }
 ]

@@ -1,0 +1,36 @@
+$ deepseek_prep.py Nice
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 1129 out 1393
+Nice: 3 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Nice
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 6012 out 2123
+Nice: 0 problems
+
+$ deepseek_city.py Nice --stage places
+Nice: places
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 1707 out 5123
+
+$ deepseek_city.py Nice --stage frame
+Nice: frame
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 3443 out 4597
+
+$ deepseek_city.py Nice --stage plans
+Nice: plans
+  plans for day
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 2520 out 1847
+  plans for 1n
+  claude tokens in 2520 out 2882
+  plans for 2n
+  claude tokens in 2527 out 3412
+  plans for 3n
+  claude tokens in 2521 out 3897
+
+$ merge_city.py Nice
+Nice: 16 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/nice.json and planner/nice.json
+

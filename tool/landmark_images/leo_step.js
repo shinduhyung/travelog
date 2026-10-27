@@ -26,8 +26,13 @@ await (async () => {  // top-level await: the javascript tool returns the result
   ta.dispatchEvent(new Event('input', {bubbles: true}));
   await new Promise(r => setTimeout(r, 800));
   if (ta.value !== window.LEO_PROMPT) return 'STOP: prompt not set';
-  const btn = [...document.querySelectorAll('button')].find(b => /^\s*Generate/.test(b.innerText));
-  const label = btn ? btn.innerText.replace(/\s+/g, ' ').trim() : '';
+  // The button can take a few seconds to re-render after the prompt changes; wait up to 10 s before judging it.
+  let btn, label = '';
+  for (let i = 0; i < 20 && label !== 'Generate 8'; i++) {
+    btn = [...document.querySelectorAll('button')].find(b => /^\s*Generate/.test(b.innerText));
+    label = btn ? btn.innerText.replace(/\s+/g, ' ').trim() : '';
+    if (label !== 'Generate 8') await new Promise(r => setTimeout(r, 500));
+  }
   if (label !== 'Generate 8') return 'STOP: button reads "' + label + '"';
   if (btn.disabled) return 'WAIT: button disabled';
   const before = credits(), seen = new Set(imgs());

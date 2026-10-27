@@ -32,10 +32,13 @@ HERE = Path(__file__).resolve().parent
 OUT = HERE / "daytrips"
 RADIUS_KM = 6
 MAX_TRIPS = 5
+FORCED = {"Johor Bahru", "Malmö", "Malmo", "Vaduz", "Lucerne", "Hakone", "Perast", "Málaga"}
 REPICK = "--repick" in sys.argv
 # Claude's judgment calls on the DeepSeek list (pilot 2026-10-24).
-DROP = {"Rome": ["Naples"],      # its own app city / multi-day destination; Pompeii covers the area
-        "Tokyo": ["Yokohama"]}   # part of the Tokyo metro area, a normal city outing rather than a day trip
+DROP = {"Zurich": ["Winterthur"],  # make room for Lucerne (5-trip cap); a 16 min suburban hop
+        "Seoul": ["Suwon"],    # already attached to Seoul as landmarks (Hwaseong Fortress), not a separate day trip
+        "Rome": ["Naples"],      # its own app city / multi-day destination; Pompeii covers the area
+        }
 EXTRA_QUESTS = {"Tokyo": {"Mt Fuji & Lake Kawaguchi": ["Mount Fuji"], "Hakone": ["Hakone Ropeway"]}}  # the mountain is the point of the trip
 
 
@@ -213,6 +216,9 @@ def build(city, cities, lms, skip, attach):
     cc = origin_cc(center)
     for c in cand:
         pos = position(c.get("search") or c["place"], center)
+        if not pos and c.get("force_town"):  # no Omio station (Perast, Hakone): use the hand-set town point
+            ft = c["force_town"]
+            pos = {"id": None, "name": ft["name"], "city": ft["name"], "lat": ft["lat"], "lng": ft["lng"]}
         if not pos:
             problems.append(f"{c['place']}: no Omio position, dropped")
             continue
@@ -224,7 +230,9 @@ def build(city, cities, lms, skip, attach):
         for extra in (c.get("town"), pos.get("city"), pos.get("name"), c.get("r2r_to"), c.get("search")):
             if extra and any(w in _norm(extra) for w in words):
                 names.append(extra)
-        town = town_entry(names, cc, c.get("landmark_at") or (pos["lat"], pos["lng"]))
+        town = town_entry(names, c.get("cc") or cc, c.get("landmark_at") or (pos["lat"], pos["lng"]))
+        if not town and c.get("force_town"):  # cross-border or <15000 pop (Johor Bahru, Malmo, Vaduz), chosen by hand
+            town = {"name": c["force_town"]["name"], "latitude": c["force_town"]["lat"], "longitude": c["force_town"]["lng"]}
         if not town:
             problems.append(f"{c['place']}: not a town in cities15000.json ({cc}), dropped")
             continue
@@ -296,6 +304,8 @@ def build(city, cities, lms, skip, attach):
 
 def validate(trips, problems):
     for t in trips:
+        if t["place"] in FORCED:
+            continue
         if not TOWNS or not any(_norm(x["name"]) == _norm(t["place"]) for x in TOWNS):
             problems.append(f"{t['place']}: not a cities15000 name")
         if not t["see"]:

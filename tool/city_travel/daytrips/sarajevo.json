@@ -1,0 +1,118 @@
+{
+ "city": "Sarajevo",
+ "trips": [
+  {
+   "place": "Mostar",
+   "label": "",
+   "position": {
+    "id": 368957,
+    "name": "Mostar",
+    "city": "Mostar",
+    "lat": 43.34333,
+    "lng": 17.80806
+   },
+   "town": {
+    "name": "Mostar",
+    "lat": 43.34333,
+    "lng": 17.80806
+   },
+   "road": {
+    "km": 125,
+    "min": 130,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 150.0,
+    "currency": "USD"
+   },
+   "modes": {
+    "train": {
+     "from": "$8-$10",
+     "time": "1h 58m",
+     "via": "Sarajevo to Mostar",
+     "source": "https://www.rome2rio.com/s/Sarajevo/Mostar"
+    },
+    "bus": {
+     "from": "$14-$35",
+     "time": "2h",
+     "via": "Sarajevo, Autobuska Stanica to Mostar, Autobuska Stanica",
+     "source": "https://www.rome2rio.com/s/Sarajevo/Mostar"
+    }
+   },
+   "route_note": "Take a direct bus from Sarajevo's bus station (Autobusni kolodvor), about 2.5 hours; the train is slow and infrequent, so the bus is the practical choice.",
+   "see": [
+    "Stari Most (Old Bridge)",
+    "Kujundžiluk bazaar",
+    "Kriva Ćuprija",
+    "Old town Neretva riverfront",
+    "Partisan Memorial Cemetery"
+   ],
+   "visit": "Full day",
+   "tour_query": "Mostar day trip from Sarajevo",
+   "quests": [
+    "Stari Most",
+    "Mostar Old Town"
+   ],
+   "recommended": "bus",
+   "why": "The bus takes about 2 hours direct from Sarajevo's bus station, while the train is slow and infrequent.",
+   "stars": 5,
+   "know": [
+    "Take the direct bus from Sarajevo's bus station (Autobusni kolodvor).",
+    "The train takes about 1h 58m but is slow and infrequent, so plan your return around the bus schedule."
+   ]
+  },
+  {
+   "place": "Travnik",
+   "label": "",
+   "position": {
+    "id": 368963,
+    "name": "Novi Travnik",
+    "city": "Novi Travnik",
+    "lat": 44.17133,
+    "lng": 17.65816
+   },
+   "town": {
+    "name": "Travnik",
+    "lat": 44.22637,
+    "lng": 17.66583
+   },
+   "road": {
+    "km": 96,
+    "min": 90,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 120.0,
+    "currency": "USD"
+   },
+   "modes": {
+    "bus": {
+     "from": "$15-$23",
+     "time": "1h 50m",
+     "via": "Sarajevo, Autobuska Stanica to Travnik, Autobuska stanica",
+     "source": "https://www.rome2rio.com/s/Sarajevo/Travnik"
+    }
+   },
+   "route_note": "Take a regular bus from Sarajevo's bus station to Travnik, about 1.5 hours, and walk up from the bus station to the old town and fortress.",
+   "see": [
+    "Travnik Fortress",
+    "Hadži Ali Pasha's Mosque",
+    "Consul's House (Konzulat)",
+    "Old town walk"
+   ],
+   "visit": "Half day",
+   "tour_query": "Travnik and Jajce day trip from Sarajevo",
+   "quests": [],
+   "recommended": "bus",
+   "why": "A regular bus takes about 1h 50m and gets you to the bus station, from which you can walk up to the old town and fortress.",
+   "stars": 3,
+   "know": [
+    "Take a regular bus from Sarajevo's bus station (Autobusni kolodvor).",
+    "Walk up from the Travnik bus station to the old town and fortress."
+   ]
+  }
+ ],
+ "problems": [
+  "Jajce: not a town in cities15000.json (BA), dropped"
+ ]
+}

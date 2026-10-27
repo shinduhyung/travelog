@@ -1,0 +1,522 @@
+{
+  "city": "Seville",
+  "checked": "October 2026",
+  "intro_line": "Orange blossom, flamenco and tapas under the Andalusian sun.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Santa Cruz",
+        "Triana",
+        "El Arenal",
+        "Macarena"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Tapas",
+      "areas": [
+        "Santa Cruz",
+        "Triana",
+        "El Arenal",
+        "Macarena"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Santa Cruz",
+        "Triana",
+        "El Arenal",
+        "Macarena"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Flamenco",
+      "areas": [
+        "Santa Cruz",
+        "Triana",
+        "El Arenal",
+        "Macarena"
+      ]
+    },
+    {
+      "id": "romance",
+      "label": "Romance",
+      "areas": [
+        "Santa Cruz",
+        "Triana",
+        "El Arenal",
+        "Macarena"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 16,
+        "low": 6,
+        "rain_days": 5,
+        "note": "Jan: Mild and cool, 6–16°C with 5 rainy days. Good for sightseeing."
+      },
+      {
+        "high": 18,
+        "low": 8,
+        "rain_days": 4,
+        "note": "Feb: Mild, 8–18°C with 4 rainy days. Quiet and pleasant."
+      },
+      {
+        "high": 21,
+        "low": 10,
+        "rain_days": 10,
+        "note": "Mar: Warm spring, 10–21°C, with the most rain days (10). Pack a light umbrella."
+      },
+      {
+        "high": 23,
+        "low": 12,
+        "rain_days": 7,
+        "note": "Apr: Pleasant, 12–23°C with 7 rainy days. Great for walking."
+      },
+      {
+        "high": 29,
+        "low": 15,
+        "rain_days": 4,
+        "note": "May: Warm, 15–29°C and mostly dry (4 rainy days). Ideal, but busy."
+      },
+      {
+        "high": 33,
+        "low": 19,
+        "rain_days": 1,
+        "note": "Jun: Very hot, 19–33°C with almost no rain. Plan indoor visits midday."
+      },
+      {
+        "high": 37,
+        "low": 22,
+        "rain_days": 0,
+        "note": "Jul: Extremely hot, 22–37°C and dry. Go out early or after dark."
+      },
+      {
+        "high": 37,
+        "low": 22,
+        "rain_days": 0,
+        "note": "Aug: Extremely hot, 22–37°C and dry. Same as July; keep midday for shade."
+      },
+      {
+        "high": 32,
+        "low": 19,
+        "rain_days": 3,
+        "note": "Sep: Still hot, 19–32°C with 3 rainy days. Evenings start to cool."
+      },
+      {
+        "high": 27,
+        "low": 16,
+        "rain_days": 7,
+        "note": "Oct: Comfortable, 16–27°C with 7 rainy days. A strong month to visit."
+      },
+      {
+        "high": 20,
+        "low": 11,
+        "rain_days": 7,
+        "note": "Nov: Mild, 11–20°C with 7 rainy days. Good for walking and tapas."
+      },
+      {
+        "high": 17,
+        "low": 8,
+        "rain_days": 6,
+        "note": "Dec: Cool, 8–17°C with 6 rainy days. Good for culture, with some rain."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.6,
+      0.35,
+      0.35,
+      0.7,
+      0.95,
+      0.95,
+      0.85
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.7,
+      0.5,
+      0.5,
+      0.8,
+      0.95,
+      0.95,
+      0.9
+    ],
+    "history": [
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.85,
+      0.6,
+      0.35,
+      0.35,
+      0.7,
+      0.95,
+      0.95,
+      0.85
+    ],
+    "art": [
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.6,
+      0.4,
+      0.4,
+      0.75,
+      0.9,
+      0.9,
+      0.85
+    ],
+    "romance": [
+      0.85,
+      0.85,
+      0.95,
+      0.95,
+      0.85,
+      0.6,
+      0.35,
+      0.35,
+      0.7,
+      0.9,
+      0.9,
+      0.85
+    ]
+  },
+  "places": {
+    "cathedral": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Morning, Oct–Apr",
+      "area": "Santa Cruz",
+      "popularity": 5
+    },
+    "alcazar": {
+      "types": [
+        "history",
+        "art",
+        "romance"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Early morning, spring or autumn",
+      "area": "Santa Cruz",
+      "popularity": 5
+    },
+    "giralda": {
+      "types": [
+        "history",
+        "art"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Late afternoon for good light",
+      "area": "Santa Cruz",
+      "popularity": 5
+    },
+    "plaza-espana": {
+      "types": [
+        "art",
+        "history",
+        "romance"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or sunset",
+      "area": "Santa Cruz",
+      "popularity": 5
+    },
+    "torre-oro": {
+      "types": [
+        "history"
+      ],
+      "minutes": 40,
+      "setting": "mixed",
+      "best": "Late morning",
+      "area": "El Arenal",
+      "popularity": 4
+    },
+    "guadalquivir": {
+      "types": [
+        "romance",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "El Arenal",
+      "popularity": 4
+    },
+    "river-cruise": {
+      "types": [
+        "history",
+        "romance"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset, spring or autumn",
+      "area": "El Arenal",
+      "popularity": 4
+    },
+    "isla-magica": {
+      "types": [
+        "history"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Spring or early autumn, when it is open",
+      "area": "Triana",
+      "popularity": 3
+    },
+    "pizjuan": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Match days in the season",
+      "area": "Macarena",
+      "popularity": 3
+    },
+    "semana-santa": {
+      "types": [
+        "culture",
+        "history",
+        "romance"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Holy Week, late evening",
+      "area": "Macarena",
+      "popularity": 5
+    },
+    "setas": {
+      "types": [
+        "art"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Santa Cruz",
+      "popularity": 4
+    },
+    "triana-bridge": {
+      "types": [
+        "romance",
+        "history"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Triana",
+      "popularity": 4
+    },
+    "mercado-triana": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Triana",
+      "popularity": 4
+    },
+    "santa-cruz-walk": {
+      "types": [
+        "history",
+        "romance"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Santa Cruz",
+      "popularity": 5
+    },
+    "calle-betis-view": {
+      "types": [
+        "romance"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Triana",
+      "popularity": 4
+    },
+    "flamenco-show": {
+      "types": [
+        "culture",
+        "art",
+        "romance"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Triana",
+      "popularity": 5
+    },
+    "maria-luisa": {
+      "types": [
+        "romance"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning, spring or autumn",
+      "area": "El Arenal",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Two nights give you time for the Alcázar, the cathedral, a flamenco show and a tapas evening without rushing."
+  },
+  "airports": [
+    {
+      "code": "SVQ",
+      "name": "Sevilla Airport",
+      "primary": true,
+      "note": "Main airport for Seville, about 8 km from the centre (10 km by road).",
+      "options": [
+        {
+          "mode": "Airport bus EA (Tussam)",
+          "to": "Plaza de Armas bus station, with stops by Santa Cruz and the south of the centre",
+          "price": "€6 one way",
+          "time": "35 min",
+          "note": "Runs every 15 min, 05:00–00:30. Buy from machines by the stop or on the bus."
+        },
+        {
+          "mode": "Ride app (Cabify, Uber or Bolt)",
+          "to": "Any address in the centre",
+          "price": "check locally",
+          "time": "15–25 min",
+          "note": "Pick-up is on the ground level of the parking garage, just left of the arrivals exit."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Any address in the centre",
+          "price": "€12–18",
+          "time": "15–25 min",
+          "note": "Fares are regulated. Two people should not pay more than about €25 in town."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Seville",
+      "https://en.wikivoyage.org/wiki/Seville"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "art",
+    "food"
+  ],
+  "transit": {
+    "best": "Walk the old town, since the main sights are compact. Use buses or taxis for longer trips.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "One line runs south-west to south-east and misses the old town. Tickets cost €1.30 for one zone."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "City buses are frequent and cover most of the city. A single fare is €1.40, or €0.35–0.38 with a rechargeable bonobus card."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are easy to find. Cabify, Uber, Bolt and FreeNow all operate, and Cabify is the local favourite. Check the fare before you ride."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving in the old city is tricky. Park in a hotel garage, and never leave anything in the car because break-ins are common."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Walking is the best way to see the sights, since the main points are compact."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "text": "Trams run about 2 km from Prado de San Sebastián to Plaza Nueva, past the cathedral. Most visitors walk this stretch instead."
+      },
+      {
+        "mode": "Bike share and scooters",
+        "has": true,
+        "text": "Sevici bikes and Lime scooters are available around the city."
+      },
+      {
+        "mode": "Ferry",
+        "has": false,
+        "text": "There is no ferry."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Hot, dry summers and mild, sunny winters. Spring and autumn are the best times to walk the old city.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: March to May and October to November",
+        "text": "Mild days, roughly 16–27°C, and comfortable evenings. Best for walking and outdoor tapas."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is extreme (June to August)",
+        "text": "Highs reach about 33–37°C with almost no rain. Visit sights early, rest midday and go out again after dark."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain is mostly in winter and spring",
+        "text": "Rainy days cluster from October to March, with the most in March. Showers are usually short."
+      },
+      {
+        "icon": "🌙",
+        "title": "Cool winter evenings",
+        "text": "December to February can dip to about 6–8°C at night. Bring a jacket for evening walks."
+      },
+      {
+        "icon": "🧴",
+        "title": "Strong sun, even in spring",
+        "text": "Sun is strong from April. Use sunscreen, a hat and water, and seek shade in the middle of the day."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes for summer, layers for winter, comfortable walking shoes for cobbled streets, and a small umbrella for spring and autumn."
+      }
+    ]
+  }
+}

@@ -1,0 +1,275 @@
+{
+  "styles": [
+    {
+      "id": "romance",
+      "label": "Romance",
+      "blurb": "Sea views from the cliffs, a casino evening and slow dinners by the harbour."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "The Prince's Palace, the old town and the royal family's stories."
+    },
+    {
+      "id": "nature",
+      "label": "Coast",
+      "blurb": "Harbour walks, Mediterranean swims and a day along the Riviera coast."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Monte Carlo",
+      "range": [
+        450,
+        1500
+      ],
+      "why": "Near the Casino, Opera and main hotels; the most glamour and the highest prices. Good for a romantic trip.",
+      "center": [
+        43.7396,
+        7.4277
+      ]
+    },
+    {
+      "area": "Monaco-Ville",
+      "range": [
+        300,
+        900
+      ],
+      "why": "The old walled town on the Rock, with the Palace, cathedral and museums. Quiet at night, but many steep steps.",
+      "center": [
+        43.7313,
+        7.4236
+      ]
+    },
+    {
+      "area": "La Condamine",
+      "range": [
+        200,
+        600
+      ],
+      "why": "Flat, central and close to the train station, the harbour and the bus routes. Often the best value.",
+      "center": [
+        43.7322,
+        7.4217
+      ]
+    },
+    {
+      "area": "Fontvieille",
+      "range": [
+        250,
+        700
+      ],
+      "why": "Modern and calm, next to the Stade Louis II and the Princess Grace Rose Garden. Good for a longer stay.",
+      "center": [
+        43.7265,
+        7.413
+      ]
+    }
+  ],
+  "food": [
+    "Try Monegasque dishes such as barbagiuan (small fried pastries with greens or cheese) and stocafi (dried cod stew). Ask at local bistros.",
+    "Eat lunch at the Condamine market hall for fresh produce and quick local plates. Prices are lower than the Monte Carlo cafés.",
+    "For a harbour dinner, pick a terrace at Port Hercule or La Condamine. Book ahead in summer and during Grand Prix week.",
+    "Monaco is small and expensive. Cafés and bakeries near the station are a good budget choice for breakfast and snacks.",
+    "Restaurant prices include service charges in most places. Check the bill and menu prices before you order wine."
+  ],
+  "more_time": [
+    "Take the train to Menton (2-4 services per hour) for a quieter old town and lemon-tree gardens. Check the schedule on the day.",
+    "Swap a day for Nice by train for its old town, the Promenade des Anglais and the flower market.",
+    "Add a short trip to Eze village by bus or coach from Nice, with views over the sea and a hilltop garden. Check times locally."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.7,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.7,
+      0.7,
+      0.8,
+      0.8,
+      0.7,
+      0.7
+    ],
+    "food": [
+      0.6,
+      0.6,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.6
+    ],
+    "romance": [
+      0.4,
+      0.4,
+      0.5,
+      0.7,
+      0.8,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.5,
+      0.4
+    ],
+    "history": [
+      0.7,
+      0.7,
+      0.8,
+      0.8,
+      0.85,
+      0.85,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.7,
+      0.7
+    ],
+    "nature": [
+      0.4,
+      0.4,
+      0.5,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.85,
+      0.7,
+      0.5,
+      0.4
+    ]
+  },
+  "best_for": [
+    "romance",
+    "history",
+    "nature"
+  ],
+  "recommend": {
+    "why": "Two days cover the Palace, the old town, the harbour and a casino visit without rushing; add a night if you want a Menton or Nice day trip."
+  },
+  "month_notes": [
+    "Jan: Cold and quiet, around 5–12°C with 5 rainy days. Good for museums and low-season rates.",
+    "Feb: Still cool, 6–13°C and 7 rainy days. Pack a warm coat and book indoor sights.",
+    "Mar: Mild, 7–15°C with 7 rain days. Spring walks start to work well.",
+    "Apr: Pleasant, 10–17°C and 8 rain days. Gardens begin to bloom.",
+    "May: Warm and bright, 14–21°C with 9 rain days, though showers are often short.",
+    "Jun: Lovely, 19–25°C and 8 rain days. Sea swims start and the crowds grow.",
+    "Jul: Hot and busy, 22–28°C with only 3 rain days. Book hotels early.",
+    "Aug: Hottest month, 21–29°C and 4 rain days. Swim early or late, and expect high prices.",
+    "Sep: Warm and calm, 18–25°C with 7 rain days. One of the best months for sea and sights.",
+    "Oct: Mild, 14–21°C with 9 rain days. Good for walking and fewer visitors.",
+    "Nov: Cool, 9–16°C and 9 rain days. Quiet streets and off-season prices.",
+    "Dec: Cool and damp, 6–13°C with 7 rain days. Festive lights, but pack a jacket."
+  ],
+  "climate_guide": {
+    "summary": "Mild Mediterranean climate: warm, sunny summers, cool wet winters, and the sea keeps temperatures steady.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to June and September to October",
+        "text": "Warm days around 19–25°C and fewer crowds than midsummer. Good for walks and sea views."
+      },
+      {
+        "icon": "🔥",
+        "title": "Hot summers (July and August)",
+        "text": "Highs near 28–29°C and the busiest, most expensive months. Swim early and rest in the middle of the day."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain is spread through the year",
+        "text": "About 7–9 rainy days from October to May. Showers are often brief, so carry a small umbrella."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool winter evenings",
+        "text": "Lows of 5–7°C from December to February. Pack a warm layer for the harbour at night."
+      },
+      {
+        "icon": "🚶",
+        "title": "Steep streets",
+        "text": "The old town and hills have many steps and slopes all year. Comfortable shoes matter more than the weather."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers for the sea breeze, comfortable walking shoes, sunscreen and a light jacket. Smart-casual clothes for the casino."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Walk the central area, use the train to Nice or Menton, and take the Bateau Bus across the harbour.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "Monaco has no metro or tram. Plan around the train and buses instead."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": false,
+        "text": "Five urban routes (1, 2, 4, 5, 6) run from about 06:00 to 21:00. A single ticket is €2 on board, or €1.50 from a machine at the stop. A day pass is about €5.50 (2016 price, check locally). A night bus runs on a circular route from 22:00 to 04:00."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": false,
+        "text": "Taxis cannot be hailed on the street. Use the stands on Avenue de Monte Carlo or at the station, or ask your hotel. Agree the fare first or make sure the meter runs. Uber and Bolt cannot pick up in Monaco."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "best": false,
+        "text": "Driving is hard and street parking is scarce. Use a garage and check the Monapass app. Renting a scooter or car in Nice is an option if you prefer to drive in."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The best way to get around. Seven public escalators and lifts are free. Bicycles and e-bikes suit fit riders, given the steep hills."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "best": true,
+        "text": "The station connects to Nice, Menton and Cap d'Ail on the coastal line, with 2-4 services per hour."
+      },
+      {
+        "mode": "Bateau Bus (ferry)",
+        "has": true,
+        "best": false,
+        "text": "Crosses Port Hercule for €2 in daylight. A quick way between the harbour areas."
+      }
+    ]
+  }
+}

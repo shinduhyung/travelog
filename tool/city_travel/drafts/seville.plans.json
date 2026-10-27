@@ -1,0 +1,748 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "First-timers who want the big sights of Santa Cruz in one day.",
+      "days": [
+        {
+          "title": "Santa Cruz icons",
+          "stops": [
+            {
+              "place": "santa-cruz-walk",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Walk the old lanes before the crowds arrive."
+            },
+            {
+              "place": "alcazar",
+              "at": "10:45",
+              "minutes": 120,
+              "note": "Hours roughly 09:30–17:00. Check on the day."
+            },
+            {
+              "place": "cathedral",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Roughly Mon–Sat 11:00–17:00. Sunday afternoons only. Check on the day."
+            },
+            {
+              "place": "giralda",
+              "at": "14:45",
+              "minutes": 45,
+              "note": "Same hours as the cathedral. Climb for city views."
+            },
+            {
+              "place": "setas",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Wooden lookout next to the old town. Good for the late light."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Santa Cruz"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Food lovers who want a market lunch and a tapas evening in Triana.",
+      "days": [
+        {
+          "title": "Triana market and tapas",
+          "stops": [
+            {
+              "place": "torre-oro",
+              "at": "10:30",
+              "minutes": 40,
+              "note": "Roughly Tue–Sun 10:00–14:00. Check on the day. Skip if closed."
+            },
+            {
+              "place": "mercado-triana",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Lunch at the market. Roughly Mon–Sat mornings to afternoon. Check on the day."
+            },
+            {
+              "place": "triana-bridge",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Short stop on the bridge after lunch."
+            },
+            {
+              "place": "calle-betis-view",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Tapas bar crawl along Calle Betis. Check bar hours on the day. Sunset viewpoint nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Triana"
+    },
+    {
+      "id": "day-art",
+      "length": "day",
+      "style": "art",
+      "nights": 0,
+      "for": "Flamenco fans who want a show in Triana after a full day of sights.",
+      "days": [
+        {
+          "title": "Old town art and a flamenco night",
+          "stops": [
+            {
+              "place": "plaza-espana",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Open all day. Best before the heat and the crowds."
+            },
+            {
+              "place": "setas",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Roughly daily 09:30 to midnight. Check on the day."
+            },
+            {
+              "place": "alcazar",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Hours roughly 09:30–17:00. Check on the day."
+            },
+            {
+              "place": "triana-bridge",
+              "at": "18:45",
+              "minutes": 20,
+              "note": "Cross into Triana before the show."
+            },
+            {
+              "place": "flamenco-show",
+              "at": "20:00",
+              "minutes": 75,
+              "note": "Usually evening performances. Check on the day and book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Santa Cruz and Triana"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Santa Cruz history: the cathedral, the Alcázar and the old lanes.",
+      "days": [
+        {
+          "title": "Cathedral and Setas",
+          "stops": [
+            {
+              "place": "cathedral",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Usually Mon–Sat 11:00–17:00, Sun afternoons only. Check on the day."
+            },
+            {
+              "place": "setas",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Go near sunset for the best light."
+            }
+          ]
+        },
+        {
+          "title": "Alcázar and old town",
+          "stops": [
+            {
+              "place": "santa-cruz-walk",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Quiet lanes before the crowds."
+            },
+            {
+              "place": "alcazar",
+              "at": "10:45",
+              "minutes": 120,
+              "note": "Open roughly 09:30–17:00. Book a timed ticket ahead."
+            },
+            {
+              "place": "torre-oro",
+              "at": "13:15",
+              "minutes": 40,
+              "note": "Usually Tue–Sun 10:00–14:00. Closed Mondays. Check on the day."
+            },
+            {
+              "place": "plaza-espana",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Open all day. Good for photos."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Santa Cruz"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Market snacks, tapas lanes and long dinners by the river.",
+      "days": [
+        {
+          "title": "Triana market and sunset",
+          "stops": [
+            {
+              "place": "mercado-triana",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch. Usually Mon–Sat mornings to afternoon. Check on the day."
+            },
+            {
+              "place": "triana-bridge",
+              "at": "18:30",
+              "minutes": 20,
+              "note": "Short walk across for sunset views."
+            },
+            {
+              "place": "calle-betis-view",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Riverside viewpoint, then tapas on Calle Betis."
+            }
+          ]
+        },
+        {
+          "title": "Old town tapas and the river",
+          "stops": [
+            {
+              "place": "santa-cruz-walk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Walk the lanes, then stop for a coffee."
+            },
+            {
+              "place": "torre-oro",
+              "at": "12:00",
+              "minutes": 40,
+              "note": "Usually Tue–Sun 10:00–14:00. Check on the day."
+            },
+            {
+              "place": "guadalquivir",
+              "at": "18:45",
+              "minutes": 60,
+              "note": "Walk the riverbank at sunset, then go for a long tapas dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Triana and Santa Cruz"
+    },
+    {
+      "id": "1n-art",
+      "length": "1n",
+      "style": "art",
+      "nights": 1,
+      "for": "Flamenco in Triana, then the old town's modern and historic art.",
+      "days": [
+        {
+          "title": "Sunset in Triana and flamenco",
+          "stops": [
+            {
+              "place": "calle-betis-view",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset viewpoint on the river."
+            },
+            {
+              "place": "flamenco-show",
+              "at": "20:00",
+              "minutes": 75,
+              "note": "Usually evening performances. Book ahead. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Setas, the square and the cathedral",
+          "stops": [
+            {
+              "place": "setas",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Open from 09:30. Go early for the views and fewer people."
+            },
+            {
+              "place": "plaza-espana",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Open all day. Best in the morning."
+            },
+            {
+              "place": "cathedral",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Usually Mon–Sat 11:00–17:00, Sun afternoons only. Check on the day."
+            },
+            {
+              "place": "guadalquivir",
+              "at": "18:45",
+              "minutes": 60,
+              "note": "Sunset walk along the river."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Santa Cruz"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Our pick for first-timers: the Alcázar and cathedral in Santa Cruz, then river and sunset views.",
+      "days": [
+        {
+          "title": "Santa Cruz palaces and lanes",
+          "stops": [
+            {
+              "place": "alcazar",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Go early to beat the crowds. Opening hours vary, so check on the day."
+            },
+            {
+              "place": "santa-cruz-walk",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Walk the narrow lanes around the old town."
+            },
+            {
+              "place": "cathedral",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Hours are roughly 11:00–17:00 on weekdays and Saturdays, with Sunday afternoons only. Check on the day."
+            },
+            {
+              "place": "giralda",
+              "at": "15:15",
+              "minutes": 45,
+              "note": "Tower climb. Good light in the late afternoon."
+            }
+          ]
+        },
+        {
+          "title": "Riverside and sunset",
+          "stops": [
+            {
+              "place": "plaza-espana",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Open all day. Best in the morning before the heat."
+            },
+            {
+              "place": "torre-oro",
+              "at": "10:45",
+              "minutes": 40,
+              "note": "Usually Tue–Sun 10:00–14:00. Check on the day."
+            },
+            {
+              "place": "river-cruise",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Several departures daily, mostly afternoon and evening. Book ahead if you can."
+            },
+            {
+              "place": "setas",
+              "at": "20:15",
+              "minutes": 60,
+              "note": "Rooftop walkway. Hours run into the evening, so check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Santa Cruz & El Arenal"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Market lunches, tapas bars and a long dinner by the river.",
+      "days": [
+        {
+          "title": "Lanes, market and Triana bars",
+          "stops": [
+            {
+              "place": "santa-cruz-walk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Early start for quiet lanes and bakery stops."
+            },
+            {
+              "place": "mercado-triana",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch at the market. Usually Mon–Sat, mornings into the afternoon. Check on the day."
+            },
+            {
+              "place": "calle-betis-view",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Walk along the river before the evening tapas rush."
+            },
+            {
+              "place": "triana-bridge",
+              "at": "19:45",
+              "minutes": 20,
+              "note": "Good sunset view on the way to dinner."
+            }
+          ]
+        },
+        {
+          "title": "El Arenal and tapas by the river",
+          "stops": [
+            {
+              "place": "plaza-espana",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Open all day. Quiet in the morning."
+            },
+            {
+              "place": "torre-oro",
+              "at": "10:45",
+              "minutes": 40,
+              "note": "Usually Tue–Sun 10:00–14:00. Check on the day."
+            },
+            {
+              "place": "river-cruise",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening departures. Good for a drink on the water."
+            },
+            {
+              "place": "setas",
+              "at": "20:30",
+              "minutes": 60,
+              "note": "End the night with a view. Check hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Triana & Santa Cruz"
+    },
+    {
+      "id": "2n-art",
+      "length": "2n",
+      "style": "art",
+      "nights": 2,
+      "for": "Flamenco in Triana, with the Alcázar and cathedral for daytime.",
+      "days": [
+        {
+          "title": "Old town art and Giralda",
+          "stops": [
+            {
+              "place": "alcazar",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Palace gardens and rooms. Opening hours vary, so check on the day."
+            },
+            {
+              "place": "cathedral",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Usually Mon–Sat 11:00–17:00, with Sunday afternoons only. Check on the day."
+            },
+            {
+              "place": "giralda",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Same hours as the cathedral. Climb for the city view."
+            }
+          ]
+        },
+        {
+          "title": "Triana and a flamenco evening",
+          "stops": [
+            {
+              "place": "mercado-triana",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch. Usually Mon–Sat mornings into the afternoon. Check on the day."
+            },
+            {
+              "place": "triana-bridge",
+              "at": "16:00",
+              "minutes": 20,
+              "note": "Walk across for the river view."
+            },
+            {
+              "place": "calle-betis-view",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset viewpoint along the river."
+            },
+            {
+              "place": "flamenco-show",
+              "at": "20:30",
+              "minutes": 75,
+              "note": "Evening performances. Book ahead and check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Santa Cruz & Triana"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the big sights: the Alcázar, the cathedral and Giralda, with Flamenco on the last night.",
+      "days": [
+        {
+          "title": "Alcázar and the old town",
+          "stops": [
+            {
+              "place": "alcazar",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Go early. Roughly 09:30–17:00, check on the day."
+            },
+            {
+              "place": "santa-cruz-walk",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Wander the narrow lanes around the palace walls."
+            },
+            {
+              "place": "mercado-triana",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch across the river in Triana. Mornings to afternoon, Mon–Sat."
+            },
+            {
+              "place": "triana-bridge",
+              "at": "19:45",
+              "minutes": 20,
+              "note": "Sunset views over the river. Check sunset time."
+            }
+          ]
+        },
+        {
+          "title": "Cathedral, Giralda and the square",
+          "stops": [
+            {
+              "place": "torre-oro",
+              "at": "10:00",
+              "minutes": 40,
+              "note": "Roughly Tue–Sun 10:00–14:00. Closed Mondays, check on the day."
+            },
+            {
+              "place": "cathedral",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Roughly Mon–Sat 11:00–17:00. Sunday afternoons only, check on the day."
+            },
+            {
+              "place": "giralda",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Late light is best. Same hours as the cathedral."
+            },
+            {
+              "place": "plaza-espana",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Open all day. Good at sunset."
+            }
+          ]
+        },
+        {
+          "title": "Parks, Triana and Flamenco",
+          "stops": [
+            {
+              "place": "maria-luisa",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Cool morning walk in the park, best in spring or autumn."
+            },
+            {
+              "place": "mercado-triana",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch at the market. Mon–Sat, check on the day."
+            },
+            {
+              "place": "calle-betis-view",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Sunset viewpoint on Calle Betis."
+            },
+            {
+              "place": "flamenco-show",
+              "at": "20:30",
+              "minutes": 75,
+              "note": "Evening shows. Book ahead, check times on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Santa Cruz"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Food lovers who want market lunches, sunset drinks and long tapas evenings.",
+      "days": [
+        {
+          "title": "Triana market and riverside tapas",
+          "stops": [
+            {
+              "place": "mercado-triana",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Market snacks and lunch. Mon–Sat mornings to afternoon, check on the day."
+            },
+            {
+              "place": "calle-betis-view",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Sunset drinks. Bars line the street, so stop for tapas on the way."
+            }
+          ]
+        },
+        {
+          "title": "Santa Cruz lanes and tapas dinner",
+          "stops": [
+            {
+              "place": "santa-cruz-walk",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Browse the old town in the morning before the lunch crowds."
+            },
+            {
+              "place": "alcazar",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Roughly 09:30–17:00, check on the day. Eat a light lunch near the walls after."
+            },
+            {
+              "place": "setas",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Sunset from the rooftop. Plan a long tapas dinner in Santa Cruz afterwards."
+            }
+          ]
+        },
+        {
+          "title": "Market breakfast and riverside finale",
+          "stops": [
+            {
+              "place": "mercado-triana",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Early snacks at the market. Mornings only, check on the day."
+            },
+            {
+              "place": "maria-luisa",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Rest in the shade after a big morning of eating."
+            },
+            {
+              "place": "guadalquivir",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Sunset walk along the river, then a last tapas dinner nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Santa Cruz"
+    },
+    {
+      "id": "3n-art",
+      "length": "3n",
+      "style": "art",
+      "nights": 3,
+      "for": "Art and flamenco fans who want Moorish architecture, city views and live shows in Triana.",
+      "days": [
+        {
+          "title": "Alcázar, old town and Setas",
+          "stops": [
+            {
+              "place": "alcazar",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Early start for the Mudéjar palace halls. Roughly 09:30–17:00, check on the day."
+            },
+            {
+              "place": "santa-cruz-walk",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Lanes and small squares, good for photos."
+            },
+            {
+              "place": "setas",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Modern wooden structure. Best at sunset, check opening times."
+            }
+          ]
+        },
+        {
+          "title": "Cathedral, Giralda and the square",
+          "stops": [
+            {
+              "place": "cathedral",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Roughly Mon–Sat 11:00–17:00. Sunday afternoons only, check on the day."
+            },
+            {
+              "place": "giralda",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Tower views. Late afternoon light is best."
+            },
+            {
+              "place": "plaza-espana",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Tiled alcoves and fountains. Good at sunset."
+            }
+          ]
+        },
+        {
+          "title": "Triana and a flamenco night",
+          "stops": [
+            {
+              "place": "mercado-triana",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch at the market. Mon–Sat, check on the day."
+            },
+            {
+              "place": "calle-betis-view",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Sunset view of the river and the old town."
+            },
+            {
+              "place": "flamenco-show",
+              "at": "20:30",
+              "minutes": 75,
+              "note": "Usually evening shows. Book ahead, check times on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Santa Cruz"
+    }
+  ]
+}

@@ -171,10 +171,72 @@
     "Kronborg Castle is open year-round but hours vary by season",
     "Combine with a stroll around the harbor and old town"
    ]
+  },
+  {
+   "place": "Malmö",
+   "label": "",
+   "position": {
+    "id": 17200836,
+    "name": "Malmö Port",
+    "city": "Malmö",
+    "lat": 55.62718,
+    "lng": 12.99069
+   },
+   "town": {
+    "name": "Malmö",
+    "lat": 55.60587,
+    "lng": 13.00073
+   },
+   "road": {
+    "km": 41,
+    "min": 45,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 660,
+    "currency": "DKK"
+   },
+   "modes": {
+    "train": {
+     "from": "€7",
+     "from_usd": 8.0,
+     "avg": "€15",
+     "time": "27m",
+     "per_day": 93,
+     "source": "https://www.omio.com/trains/copenhagen/malmo"
+    },
+    "bus": {
+     "from": "$10-$110",
+     "time": "1h",
+     "via": "Copenhagen Ingerslevsgade to Malmo Norra Vallgatan",
+     "source": "https://www.rome2rio.com/s/Copenhagen/Malmo"
+    }
+   },
+   "route_note": "Øresundståg trains cross the bridge from Copenhagen Central to Malmö Central in about 35 minutes, no changes needed.",
+   "see": [
+    "Malmöhus Castle and museums",
+    "Turning Torso",
+    "Gamla Staden old town",
+    "Ribersborg beach and promenade"
+   ],
+   "visit": "Full day",
+   "tour_query": "Malmö day trip from Copenhagen",
+   "quests": [
+    "Turning Torso",
+    "Stortorget, Malmö",
+    "Vollmers"
+   ],
+   "recommended": "train",
+   "why": "The train is fastest (27m) and runs frequently (93 per day) with no changes, dropping you at Malmö Central.",
+   "stars": 3,
+   "know": [
+    "Trains run 93 times per day.",
+    "No changes are needed; the Øresund bridge crossing is direct.",
+    "The bus takes about 1h and needs a change of stop in the city."
+   ]
   }
  ],
  "problems": [
-  "Malmö: not a town in cities15000.json (DK), dropped",
   "Dragør: not a town in cities15000.json (DK), dropped"
  ]
 }

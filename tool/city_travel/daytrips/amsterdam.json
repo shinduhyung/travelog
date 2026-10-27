@@ -1,5 +1,194 @@
 {
  "city": "Amsterdam",
- "trips": [],
+ "trips": [
+  {
+   "place": "Utrecht",
+   "label": "",
+   "position": {
+    "id": 4810644,
+    "name": "Utrecht Leidsche Rijn",
+    "city": "Utrecht",
+    "lat": 52.09896,
+    "lng": 5.06523
+   },
+   "town": {
+    "name": "Utrecht",
+    "lat": 52.09083,
+    "lng": 5.12222
+   },
+   "road": {
+    "km": 44,
+    "min": 45,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 110.0,
+    "currency": "EUR"
+   },
+   "modes": {
+    "train": {
+     "from": "€10",
+     "from_usd": 12.0,
+     "avg": "€11",
+     "time": "23m",
+     "per_day": 22,
+     "source": "https://www.omio.com/trains/amsterdam/utrecht"
+    },
+    "bus": {
+     "from": "$3-$6",
+     "time": "27m",
+     "via": "Amsterdam Centraal Station to Utrecht Centraal station",
+     "source": "https://www.rome2rio.com/s/Amsterdam/Utrecht"
+    }
+   },
+   "route_note": "Frequent direct trains run from Amsterdam Centraal to Utrecht Centraal in about 30 minutes; the old centre and canals are a short walk away.",
+   "see": [
+    "Dom Tower",
+    "Oudegracht canals",
+    "Centraal Museum",
+    "Railway Museum"
+   ],
+   "visit": "Half day",
+   "tour_query": "Utrecht day trip from Amsterdam",
+   "quests": [
+    "Dom Tower",
+    "Rietveld Schröder House"
+   ],
+   "recommended": "train",
+   "why": "The train takes 23 minutes, runs 22 times a day, and drops you at Utrecht Centraal near the old centre and canals.",
+   "stars": 4,
+   "know": [
+    "Trains run frequently, so you rarely need to book ahead.",
+    "The historic centre and canals are best explored on foot once you arrive."
+   ]
+  },
+  {
+   "place": "The Hague",
+   "label": "",
+   "position": {
+    "id": 340717,
+    "name": "Den Haag Mariahoeve",
+    "city": "Voorburg",
+    "lat": 52.09053,
+    "lng": 4.36897
+   },
+   "town": {
+    "name": "The Hague",
+    "lat": 52.07667,
+    "lng": 4.29861
+   },
+   "road": {
+    "km": 66,
+    "min": 58,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 170.0,
+    "currency": "EUR"
+   },
+   "modes": {
+    "train": {
+     "from": "€3",
+     "from_usd": 4.0,
+     "avg": "€16",
+     "time": "33m",
+     "per_day": 20,
+     "source": "https://www.omio.com/trains/amsterdam/the-hague"
+    },
+    "bus": {
+     "from": "$4-$9",
+     "time": "40m",
+     "via": "Amsterdam Sloterdijk to The Hague",
+     "source": "https://www.rome2rio.com/s/Amsterdam/The%20Hague"
+    }
+   },
+   "route_note": "Direct intercity trains run from Amsterdam Centraal to Den Haag Centraal in under an hour; trams reach the Binnenhof and the Mauritshuis.",
+   "see": [
+    "Binnenhof",
+    "Mauritshuis",
+    "Peace Palace",
+    "Scheveningen beach"
+   ],
+   "visit": "Half day",
+   "tour_query": "The Hague day trip from Amsterdam",
+   "quests": [
+    "Binnenhof",
+    "Peace Palace",
+    "Mauritshuis",
+    "Scheveningen Pier",
+    "Girl With A Pearl Earring",
+    "Handelingenkamer",
+    "Familiepark Drievliet",
+    "Madurodam"
+   ],
+   "recommended": "train",
+   "why": "The intercity train takes 33 minutes, runs 20 times a day, and reaches Den Haag Centraal, with trams to the Binnenhof and Mauritshuis.",
+   "stars": 4,
+   "know": [
+    "Check the timetable before you travel, as services vary through the day.",
+    "Trams connect the station to the Binnenhof and Mauritshuis, so a tram is easier than walking."
+   ]
+  },
+  {
+   "place": "Eindhoven",
+   "label": "",
+   "position": {
+    "id": 314031,
+    "name": "Eindhoven Airport",
+    "city": "Eindhoven",
+    "lat": 51.45079,
+    "lng": 5.37669
+   },
+   "town": {
+    "name": "Eindhoven",
+    "lat": 51.44083,
+    "lng": 5.47778
+   },
+   "road": {
+    "km": 123,
+    "min": 105,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 310.0,
+    "currency": "EUR"
+   },
+   "modes": {
+    "train": {
+     "from": "€3",
+     "from_usd": 4.0,
+     "avg": "€26",
+     "time": "49m",
+     "per_day": 36,
+     "source": "https://www.omio.com/trains/amsterdam/eindhoven"
+    },
+    "bus": {
+     "from": "$12-$19",
+     "time": "2h 10m",
+     "via": "Amsterdam Central Station to Eindhoven Station",
+     "source": "https://www.rome2rio.com/s/Amsterdam/Eindhoven"
+    }
+   },
+   "route_note": "Direct intercity trains run from Amsterdam Centraal to Eindhoven Centraal in about 1 hour 15 minutes, then the city centre is a short walk.",
+   "see": [
+    "Philips Museum",
+    "Van Abbemuseum",
+    "Strijp-S design district",
+    "Stadhuisplein"
+   ],
+   "visit": "Half day",
+   "tour_query": "Eindhoven day trip from Amsterdam",
+   "quests": [
+    "Philips Stadion"
+   ],
+   "recommended": "train",
+   "why": "The direct train takes 49 minutes and runs 36 times a day, with the city centre a short walk from the station.",
+   "stars": 2,
+   "know": [
+    "Eindhoven is more modern and industrial than the historic Dutch cities, so set expectations accordingly.",
+    "Trains are frequent, but check the timetable for your return."
+   ]
+  }
+ ],
  "problems": []
 }

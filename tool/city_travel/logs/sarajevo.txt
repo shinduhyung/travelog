@@ -1,0 +1,16 @@
+$ deepseek_city.py Sarajevo --stage plans
+Sarajevo: plans
+  plans for day
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 2280 out 2736
+  plans for 1n
+  claude tokens in 2280 out 3581
+  plans for 2n
+  claude tokens in 2287 out 3565
+  plans for 3n
+  claude tokens in 2281 out 3902
+
+$ merge_city.py Sarajevo
+Sarajevo: 12 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/sarajevo.json and planner/sarajevo.json
+

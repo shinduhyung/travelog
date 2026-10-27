@@ -1,0 +1,36 @@
+$ deepseek_prep.py Monaco
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 1138 out 1406
+Monaco: 4 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Monaco
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 5800 out 2718
+Monaco: 0 problems
+
+$ deepseek_city.py Monaco --stage places
+Monaco: places
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 1654 out 3946
+
+$ deepseek_city.py Monaco --stage frame
+Monaco: frame
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 3563 out 3853
+
+$ deepseek_city.py Monaco --stage plans
+Monaco: plans
+  plans for day
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 2206 out 3173
+  plans for 1n
+  claude tokens in 2206 out 3053
+  plans for 2n
+  claude tokens in 2213 out 2804
+  plans for 3n
+  claude tokens in 2207 out 3601
+
+$ merge_city.py Monaco
+Monaco: 13 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/monaco.json and planner/monaco.json
+

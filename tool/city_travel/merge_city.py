@@ -75,7 +75,7 @@ def main():
             warn(f"{pid}: area '{p.get('area')}' not one of the hotel areas")
         if p.get("lat") is not None and p.get("kind") != "tour":
             d = km(center, (p["lat"], p["lon"]))
-            if d > facts.get("max_km", 60):
+            if d > (facts.get("max_km") or 60):
                 warn(f"{pid}: {d:.0f} km from the center (day trip?)")
         elif p.get("kind") not in ("tour",):
             warn(f"{pid}: no coordinates")

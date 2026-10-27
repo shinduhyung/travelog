@@ -86,7 +86,7 @@
    },
    "modes": {
     "train": {
-     "from": "$6-$12",
+     "from": "$6-$11",
      "time": "1h 14m",
      "via": "Porto Sao Bento to Guimaraes",
      "source": "https://www.rome2rio.com/s/Porto/Guimaraes"
@@ -176,6 +176,65 @@
     "Canals are a short walk from the station",
     "Trains leave from Campanhã or São Bento",
     "Frequent direct services"
+   ]
+  },
+  {
+   "place": "Coimbra",
+   "label": "",
+   "position": {
+    "id": 1002807,
+    "name": "Coimbra-B",
+    "city": "Coimbra",
+    "lat": 40.22472,
+    "lng": -8.44057
+   },
+   "town": {
+    "name": "Coimbra",
+    "lat": 40.20564,
+    "lng": -8.41955
+   },
+   "road": {
+    "km": 119,
+    "min": 84,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 120.0,
+    "currency": "EUR"
+   },
+   "modes": {
+    "train": {
+     "from": "$13-$23",
+     "time": "1h 1m",
+     "via": "Porto Campanha to Coimbra-B",
+     "source": "https://www.rome2rio.com/s/Porto/Coimbra"
+    },
+    "bus": {
+     "from": "$8-$17",
+     "time": "1h 20m",
+     "via": "Porto to Coimbra",
+     "source": "https://www.rome2rio.com/s/Porto/Coimbra"
+    }
+   },
+   "route_note": "Direct Alfa Pendular and Intercidades trains run to Coimbra-B, then a short shuttle train or taxi to the university and old town.",
+   "see": [
+    "University of Coimbra",
+    "Biblioteca Joanina",
+    "Old Cathedral",
+    "Quinta das Lágrimas"
+   ],
+   "visit": "Full day",
+   "tour_query": "Coimbra day trip from Porto",
+   "quests": [
+    "University of Coimbra Library",
+    "Portugal dos Pequenitos"
+   ],
+   "recommended": "train",
+   "why": "The direct train takes about 1h 1m from Porto Campanha to Coimbra-B, faster than the bus at about 1h 20m, with a short shuttle or taxi to the old town.",
+   "stars": 4,
+   "know": [
+    "Coimbra-B station is outside the old town, so plan a short shuttle train or taxi to reach the university and historic centre.",
+    "Check the timetable for return trains, since the source gives no per-day frequency."
    ]
   },
   {

@@ -143,7 +143,10 @@ def build(city, cities, all_lms):
     v, d = rec["values"], rec["dimensions"]
     center = (v["latitude"], v["longitude"])
     country = d.get("country", "")
-    lms = [lm["name"] for lm in landmark_section.collect(city, center, all_lms, set(cities))]
+    lm_recs = landmark_section.collect(city, center, all_lms, set(cities))
+    lms = [lm["name"] for lm in lm_recs]
+    # Towns the page's landmarks belong to (Suwon -> Seoul, Vatican City -> Rome) so searching them finds this city.
+    lm_towns = sorted({lm["city"] for lm in lm_recs if lm.get("city") and lm["city"] != city})
     with ThreadPoolExecutor(6) as ex:
         lm_wd = dict(zip(lms, ex.map(lambda n: wd_match(re.sub(r"\s*\(.*?\)", "", n), center, 60), lms)))
     ai = ai_extra(city, country, lms)
@@ -151,8 +154,8 @@ def build(city, cities, all_lms):
     city_kw = clean([city, *wd_match(city, center, 40), *ai.get("city", [])])
     country_kw = clean([country, *wd_country(d.get("country_iso", "")), *ai.get("country", [])])
     lm_kw = {n: clean([n, *lm_wd.get(n, []), *ai_lm.get(n, [])]) for n in lms}
-    every = clean([*city_kw, *country_kw, *(w for ws in lm_kw.values() for w in ws)])
-    return {"city": city_kw, "country": country_kw, "landmarks": lm_kw, "all": every}
+    every = clean([*city_kw, *country_kw, *lm_towns, *(w for ws in lm_kw.values() for w in ws)])
+    return {"city": city_kw, "country": country_kw, "nearby_towns": lm_towns, "landmarks": lm_kw, "all": every}
 
 
 def main(args):

@@ -1,0 +1,179 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro_line": "Sun-washed promenades, painted old streets, and the sea right at the door.",
+  "intro": "Nice rewards visitors who wander: the Old Town, the Promenade des Anglais, and easy day trips along the Riviera all sit close together. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "beach",
+      "label": "Beaches"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "culture",
+      "label": "Old Town"
+    },
+    {
+      "id": "art",
+      "label": "Museums"
+    },
+    {
+      "id": "romance",
+      "label": "Sea views"
+    }
+  ],
+  "areas": [
+    "Vieux Nice",
+    "Promenade des Anglais",
+    "Carré d'Or",
+    "Cimiez"
+  ],
+  "taxi": {
+    "flag_day": 4,
+    "flag_airport": 20,
+    "per_km": 1.6,
+    "min_fare": 12
+  },
+  "road_factor": 1.3,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Tram line 2 links the airport with the centre (Jean Médecin). It runs about every 8 minutes on weekdays, roughly 04:30 to after midnight.",
+    "Lignes d'Azur buses charge €1.70 a ride, with a transfer allowed within 74 minutes. Buy a top-up card or pay with contactless. Always validate.",
+    "Taxis are pricey and some overcharge. Uber and Bolt both operate, with a ride-share pick-up zone at the airport.",
+    "Driving is hard in the centre: one-way streets and scarce metered parking. Use an underground car park, roughly €8-10 a day.",
+    "The centre is walkable. Old Town and the seafront are close. Shared bikes and e-scooters are available in parts of the city.",
+    "Ferries run from Nice port to Corsica. Check local schedules before you go."
+  ],
+  "airports": [
+    {
+      "code": "NCE",
+      "name": "Nice Côte d'Azur Airport",
+      "primary": true,
+      "note": "Main airport for Nice, on a landfill at the western edge, about 7 km from the centre.",
+      "options": [
+        {
+          "mode": "Bus 12",
+          "to": "Old Town via Promenade des Anglais",
+          "price": "€1.70",
+          "time": "30-40 min",
+          "note": "Runs roughly 05:30 to 21:00. Use the underpass to reach Terminal 1 from the outbound stop."
+        },
+        {
+          "mode": "Tram line 2",
+          "to": "Jean Médecin station, city centre",
+          "price": "€10 one-way (l'Aéro pass)",
+          "time": "20-25 min",
+          "note": "Ride free to Grand Arénas, then buy a €1.70 ticket for the rest of your trip. Cheapest option is the free ride plus the regular ticket."
+        },
+        {
+          "mode": "Ride share (Uber / Bolt)",
+          "to": "City centre",
+          "price": "€15-20",
+          "time": "15-25 min",
+          "note": "Use the marked ride-share zone. Traffic can slow it down."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€20-30",
+          "time": "15-25 min",
+          "note": "Agree the fare or check the meter. Taxi drivers at the rank have a reputation for overcharging."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Promenade des Anglais",
+    "Saint Nicholas Cathedral",
+    "Paloma Beach",
+    "Antibes Land",
+    "Cannes Film Festival",
+    "Koaland",
+    "La Croisette",
+    "Le Suquet",
+    "Les Misérables",
+    "Oceanographic Museum",
+    "Prince's Palace of Monaco",
+    "Zygo Park"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Nice",
+      "https://en.wikivoyage.org/wiki/Nice"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    43.7102,
+    7.262
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 13,
+      "low": 5,
+      "rain_days": 6
+    },
+    {
+      "high": 13,
+      "low": 6,
+      "rain_days": 7
+    },
+    {
+      "high": 15,
+      "low": 7,
+      "rain_days": 7
+    },
+    {
+      "high": 18,
+      "low": 10,
+      "rain_days": 8
+    },
+    {
+      "high": 21,
+      "low": 14,
+      "rain_days": 9
+    },
+    {
+      "high": 25,
+      "low": 18,
+      "rain_days": 7
+    },
+    {
+      "high": 28,
+      "low": 21,
+      "rain_days": 3
+    },
+    {
+      "high": 29,
+      "low": 21,
+      "rain_days": 4
+    },
+    {
+      "high": 25,
+      "low": 18,
+      "rain_days": 6
+    },
+    {
+      "high": 21,
+      "low": 14,
+      "rain_days": 9
+    },
+    {
+      "high": 16,
+      "low": 9,
+      "rain_days": 9
+    },
+    {
+      "high": 14,
+      "low": 6,
+      "rain_days": 6
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

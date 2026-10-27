@@ -1,5 +1,56 @@
 {
  "city": "Singapore",
- "trips": [],
+ "trips": [
+  {
+   "place": "Johor Bahru",
+   "label": "",
+   "position": {
+    "id": 17306752,
+    "name": "Johor Bahru Sentral",
+    "city": "Johor Bahru",
+    "lat": 1.46297,
+    "lng": 103.76463
+   },
+   "town": {
+    "name": "Johor Bahru",
+    "lat": 1.4655,
+    "lng": 103.7578
+   },
+   "road": {
+    "km": 22,
+    "min": 26,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 30.0,
+    "currency": "SGD"
+   },
+   "modes": {
+    "bus": {
+     "from": "$3-$10",
+     "time": "1h",
+     "via": "Queen Street Terminal to JB Custom Out",
+     "source": "https://www.rome2rio.com/s/Singapore/Johor%20Bahru"
+    }
+   },
+   "route_note": "Take the shuttle train or a bus from Woodlands or Queen Street to Johor Bahru across the Causeway; allow time for two immigration checks.",
+   "see": [
+    "Sultan Abu Bakar State Mosque",
+    "Johor Bahru Old Chinese Temple",
+    "Arulmigu Sri Rajakaliamman Glass Temple",
+    "Danga Bay"
+   ],
+   "visit": "Full day",
+   "tour_query": "Johor Bahru day trip from Singapore",
+   "quests": [],
+   "recommended": "bus",
+   "why": "The direct bus from Queen Street Terminal is cheap and takes about 1 hour, far less than the 30 SGD taxi for a similar road distance.",
+   "stars": 3,
+   "know": [
+    "Allow extra time for two immigration checks at the Causeway.",
+    "Bus fares start from about $3-$10, and the shuttle train from Woodlands is an alternative."
+   ]
+  }
+ ],
  "problems": []
 }

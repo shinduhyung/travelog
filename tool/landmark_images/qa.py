@@ -40,7 +40,7 @@ def check(item):
             r = json.load(urllib.request.urlopen(req, timeout=90))
             txt = "".join(b.get("text", "") for b in r["content"] if b["type"] == "text")
             d = json.loads(txt[txt.index("{"): txt.rindex("}") + 1])
-            d["pass"] = (not d["people"]) and d["subject_ok"] and not d["text"]
+            d["pass"] = (not d["people"]) and d["subject_ok"] and (not d["text"] or row.get("allow_text", False))
             return f, d
         except Exception as e:  # retry, then leave it for the next pass
             err = e

@@ -60,6 +60,66 @@
    ]
   },
   {
+   "place": "Hakone",
+   "label": "",
+   "position": {
+    "id": 388931,
+    "name": "Hakone",
+    "city": "Hakone",
+    "lat": 35.18333,
+    "lng": 139.03333
+   },
+   "town": {
+    "name": "Hakone",
+    "lat": 35.2326,
+    "lng": 139.1069
+   },
+   "road": {
+    "km": 83,
+    "min": 81,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 33700,
+    "currency": "JPY"
+   },
+   "modes": {
+    "train": {
+     "from": null,
+     "time": "1h 27m",
+     "via": "Shinjuku Station to Hakone-Yumoto",
+     "source": "https://www.rome2rio.com/s/Tokyo/Hakone-Yumoto"
+    },
+    "bus": {
+     "from": "$6-$22",
+     "time": "2h 22m",
+     "via": "Shinjuku Expressway Bus Terminal to Tomei Matsuda",
+     "source": "https://www.rome2rio.com/s/Tokyo/Hakone-Yumoto"
+    }
+   },
+   "route_note": "Take the Odakyu Romancecar from Shinjuku to Hakone-Yumoto, then use the Hakone Tozan railway, cable car, and ropeway to loop around the sights.",
+   "see": [
+    "Lake Ashi and pirate ship cruise",
+    "Hakone Ropeway and Owakudani",
+    "Hakone Shrine",
+    "Open-Air Museum",
+    "Onsen in Hakone-Yumoto"
+   ],
+   "visit": "Full day",
+   "tour_query": "Hakone day trip from Tokyo",
+   "quests": [
+    "Hakone Ropeway"
+   ],
+   "recommended": "train",
+   "why": "The Odakyu Romancecar takes about 1h 27m from Shinjuku, and the Hakone Tozan railway, cable car, and ropeway connect the sights in one loop, so it beats the 2h 22m bus and the 81-minute drive.",
+   "stars": 5,
+   "know": [
+    "Romancecar seats are reserved, so book ahead on busy days and weekends.",
+    "Mount Fuji views depend on clear weather, so check the forecast before you go.",
+    "Rail and cable car sights are spread across the area, so allow a full day for the loop."
+   ]
+  },
+  {
    "place": "Nikkō",
    "label": "",
    "position": {
@@ -139,13 +199,13 @@
    },
    "modes": {
     "train": {
-     "from": "$10-$13",
+     "from": "$9-$13",
      "time": "1h 58m",
      "via": "Shinjuku Station to Kawaguchiko",
      "source": "https://www.rome2rio.com/s/Tokyo/Kawaguchiko"
     },
     "bus": {
-     "from": "$16-$70",
+     "from": "$16-$65",
      "time": "1h 45m",
      "via": "Shinjuku Expressway Bus Terminal to Kawaguchiko Sta.",
      "source": "https://www.rome2rio.com/s/Tokyo/Kawaguchiko"
@@ -173,9 +233,62 @@
     "Mt. Fuji views are clearest in the cooler months and early morning",
     "Local buses connect the lake viewpoints once you arrive"
    ]
+  },
+  {
+   "place": "Yokohama",
+   "label": "",
+   "position": {
+    "id": 17313349,
+    "name": "Yokohama International Passenger Terminal",
+    "city": "Yokohama",
+    "lat": 35.45182,
+    "lng": 139.64751
+   },
+   "town": {
+    "name": "Yokohama",
+    "lat": 35.43333,
+    "lng": 139.65
+   },
+   "road": {
+    "km": 36,
+    "min": 40,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 14900,
+    "currency": "JPY"
+   },
+   "modes": {
+    "train": {
+     "from": "$2-$7",
+     "time": "29m",
+     "via": "Tōkyō Station to Yokohama",
+     "source": "https://www.rome2rio.com/s/Tokyo/Yokohama"
+    }
+   },
+   "route_note": "Take the JR Tokaido or Yokosuka Line from Tokyo Station or the Tokyu Toyoko Line from Shibuya directly to Yokohama, about 30 minutes.",
+   "see": [
+    "Minato Mirai waterfront",
+    "Cup Noodles Museum",
+    "Chinatown",
+    "Sankeien Garden",
+    "Red Brick Warehouse"
+   ],
+   "visit": "Half day",
+   "tour_query": "Yokohama day trip from Tokyo",
+   "quests": [
+    "Yokohama Red Brick Warehouse",
+    "Minato Mirai 21",
+    "Yokohama Cosmo World"
+   ],
+   "recommended": "train",
+   "why": "The train takes about 29 minutes directly from Tokyo Station, which is far faster and cheaper than the 40-minute drive or the 14900 JPY taxi.",
+   "stars": 4,
+   "know": [
+    "Direct JR and Tokyu lines run frequently, so no planning or booking is needed.",
+    "Yokohama Chinatown and the Minato Mirai waterfront are both walkable from the station."
+   ]
   }
  ],
- "problems": [
-  "Hakone: not a town in cities15000.json (JP), dropped"
- ]
+ "problems": []
 }

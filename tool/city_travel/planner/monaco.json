@@ -1,0 +1,481 @@
+{
+  "city": "Monaco",
+  "checked": "October 2026",
+  "intro_line": "Glittering casinos and yachts packed onto a tiny, steep coastline.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Monte Carlo",
+        "Monaco-Ville",
+        "La Condamine",
+        "Fontvieille"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Monte Carlo",
+        "Monaco-Ville",
+        "La Condamine",
+        "Fontvieille"
+      ]
+    },
+    {
+      "id": "romance",
+      "label": "Romance",
+      "areas": [
+        "Monte Carlo",
+        "Monaco-Ville",
+        "La Condamine",
+        "Fontvieille"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Monte Carlo",
+        "Monaco-Ville",
+        "La Condamine",
+        "Fontvieille"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Coast",
+      "areas": [
+        "Monte Carlo",
+        "Monaco-Ville",
+        "La Condamine",
+        "Fontvieille"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 12,
+        "low": 5,
+        "rain_days": 5,
+        "note": "Jan: Cold and quiet, around 5–12°C with 5 rainy days. Good for museums and low-season rates."
+      },
+      {
+        "high": 13,
+        "low": 6,
+        "rain_days": 7,
+        "note": "Feb: Still cool, 6–13°C and 7 rainy days. Pack a warm coat and book indoor sights."
+      },
+      {
+        "high": 15,
+        "low": 7,
+        "rain_days": 7,
+        "note": "Mar: Mild, 7–15°C with 7 rain days. Spring walks start to work well."
+      },
+      {
+        "high": 17,
+        "low": 10,
+        "rain_days": 8,
+        "note": "Apr: Pleasant, 10–17°C and 8 rain days. Gardens begin to bloom."
+      },
+      {
+        "high": 21,
+        "low": 14,
+        "rain_days": 9,
+        "note": "May: Warm and bright, 14–21°C with 9 rain days, though showers are often short."
+      },
+      {
+        "high": 25,
+        "low": 19,
+        "rain_days": 8,
+        "note": "Jun: Lovely, 19–25°C and 8 rain days. Sea swims start and the crowds grow."
+      },
+      {
+        "high": 28,
+        "low": 22,
+        "rain_days": 3,
+        "note": "Jul: Hot and busy, 22–28°C with only 3 rain days. Book hotels early."
+      },
+      {
+        "high": 29,
+        "low": 21,
+        "rain_days": 4,
+        "note": "Aug: Hottest month, 21–29°C and 4 rain days. Swim early or late, and expect high prices."
+      },
+      {
+        "high": 25,
+        "low": 18,
+        "rain_days": 7,
+        "note": "Sep: Warm and calm, 18–25°C with 7 rain days. One of the best months for sea and sights."
+      },
+      {
+        "high": 21,
+        "low": 14,
+        "rain_days": 9,
+        "note": "Oct: Mild, 14–21°C with 9 rain days. Good for walking and fewer visitors."
+      },
+      {
+        "high": 16,
+        "low": 9,
+        "rain_days": 9,
+        "note": "Nov: Cool, 9–16°C and 9 rain days. Quiet streets and off-season prices."
+      },
+      {
+        "high": 13,
+        "low": 6,
+        "rain_days": 7,
+        "note": "Dec: Cool and damp, 6–13°C with 7 rain days. Festive lights, but pack a jacket."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.7,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.7,
+      0.7,
+      0.8,
+      0.8,
+      0.7,
+      0.7
+    ],
+    "food": [
+      0.6,
+      0.6,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.6
+    ],
+    "romance": [
+      0.4,
+      0.4,
+      0.5,
+      0.7,
+      0.8,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.5,
+      0.4
+    ],
+    "history": [
+      0.7,
+      0.7,
+      0.8,
+      0.8,
+      0.85,
+      0.85,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.7,
+      0.7
+    ],
+    "nature": [
+      0.4,
+      0.4,
+      0.5,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.85,
+      0.7,
+      0.5,
+      0.4
+    ]
+  },
+  "places": {
+    "palace": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late morning, spring or autumn",
+      "area": "Monaco-Ville",
+      "popularity": 5
+    },
+    "oceano": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Midday or rainy days",
+      "area": "Monaco-Ville",
+      "popularity": 5
+    },
+    "cathedral": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Any time, outside service times",
+      "area": "Monaco-Ville",
+      "popularity": 3
+    },
+    "paloma": {
+      "types": [
+        "nature",
+        "romance"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Warm afternoons, late spring to early autumn",
+      "area": "Monte Carlo",
+      "popularity": 3
+    },
+    "barbagiuan": {
+      "types": [
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Check on the day",
+      "area": "Monaco-Ville",
+      "popularity": 2
+    },
+    "koaland": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Check on the day",
+      "area": "Fontvieille",
+      "popularity": 2
+    },
+    "zygo": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Monte Carlo",
+      "popularity": 2
+    },
+    "condamine": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "La Condamine",
+      "popularity": 4
+    },
+    "casino": {
+      "types": [
+        "culture",
+        "romance"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Late afternoon or evening",
+      "area": "Monte Carlo",
+      "popularity": 5
+    },
+    "exotic": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning, spring",
+      "area": "Monaco-Ville",
+      "popularity": 4
+    },
+    "harbour": {
+      "types": [
+        "romance",
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Monte Carlo",
+      "popularity": 4
+    },
+    "viewpoint": {
+      "types": [
+        "nature",
+        "romance"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset or clear mornings",
+      "area": "Monaco-Ville",
+      "popularity": 4
+    },
+    "oldtown": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning, before crowds",
+      "area": "Monaco-Ville",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "A day trip is enough: the palace, old town, harbor, and Monte Carlo are walkable, and rail links from Nice or Menton make overnight stays unnecessary."
+  },
+  "airports": [
+    {
+      "code": "NCE",
+      "name": "Nice Côte d'Azur Airport",
+      "primary": true,
+      "note": "Main airport for Monaco, about 19 km straight-line from the centre.",
+      "options": [
+        {
+          "mode": "Tram + train",
+          "to": "Monaco train station via Grand Arénas",
+          "price": "€6",
+          "time": "40-60 min",
+          "note": "Cheapest route. Check connections and validate tickets before boarding."
+        },
+        {
+          "mode": "Route 80 express shuttle",
+          "to": "Hotel stops across Monaco",
+          "price": "€19.50",
+          "time": "45-70 min",
+          "note": "Runs about every 30 minutes. Good if your hotel is on a stop."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Any address in Monaco",
+          "price": "€60-90",
+          "time": "30-40 min",
+          "note": "Agree the fare in advance or insist on the meter."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "Any address in Monaco",
+          "price": "check locally",
+          "time": "30-40 min",
+          "note": "Drop-off in Monaco is allowed, but pickups there are not."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Monaco",
+      "https://en.wikivoyage.org/wiki/Monaco"
+    ]
+  ],
+  "best_for": [
+    "romance",
+    "history",
+    "nature"
+  ],
+  "transit": {
+    "best": "Walk the central area, use the train to Nice or Menton, and take the Bateau Bus across the harbour.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "Monaco has no metro or tram. Plan around the train and buses instead."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": false,
+        "text": "Five urban routes (1, 2, 4, 5, 6) run from about 06:00 to 21:00. A single ticket is €2 on board, or €1.50 from a machine at the stop. A day pass is about €5.50 (2016 price, check locally). A night bus runs on a circular route from 22:00 to 04:00."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": false,
+        "text": "Taxis cannot be hailed on the street. Use the stands on Avenue de Monte Carlo or at the station, or ask your hotel. Agree the fare first or make sure the meter runs. Uber and Bolt cannot pick up in Monaco."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "best": false,
+        "text": "Driving is hard and street parking is scarce. Use a garage and check the Monapass app. Renting a scooter or car in Nice is an option if you prefer to drive in."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The best way to get around. Seven public escalators and lifts are free. Bicycles and e-bikes suit fit riders, given the steep hills."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "best": true,
+        "text": "The station connects to Nice, Menton and Cap d'Ail on the coastal line, with 2-4 services per hour."
+      },
+      {
+        "mode": "Bateau Bus (ferry)",
+        "has": true,
+        "best": false,
+        "text": "Crosses Port Hercule for €2 in daylight. A quick way between the harbour areas."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mild Mediterranean climate: warm, sunny summers, cool wet winters, and the sea keeps temperatures steady.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to June and September to October",
+        "text": "Warm days around 19–25°C and fewer crowds than midsummer. Good for walks and sea views."
+      },
+      {
+        "icon": "🔥",
+        "title": "Hot summers (July and August)",
+        "text": "Highs near 28–29°C and the busiest, most expensive months. Swim early and rest in the middle of the day."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain is spread through the year",
+        "text": "About 7–9 rainy days from October to May. Showers are often brief, so carry a small umbrella."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool winter evenings",
+        "text": "Lows of 5–7°C from December to February. Pack a warm layer for the harbour at night."
+      },
+      {
+        "icon": "🚶",
+        "title": "Steep streets",
+        "text": "The old town and hills have many steps and slopes all year. Comfortable shoes matter more than the weather."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers for the sea breeze, comfortable walking shoes, sunscreen and a light jacket. Smart-casual clothes for the casino."
+      }
+    ]
+  }
+}

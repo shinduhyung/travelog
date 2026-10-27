@@ -1,0 +1,110 @@
+== Macau
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 736 out 1934
+Macau: 0 trips
+  ! Hong Kong: not a town in cities15000.json (MO), dropped
+  ! Zhuhai: not a town in cities15000.json (MO), dropped
+  ! Guangzhou: not a town in cities15000.json (MO), dropped
+== Monaco
+  claude tokens in 737 out 1824
+Monaco: 0 trips
+  ! Nice: not a town in cities15000.json (MC), dropped
+  ! Cannes: not a town in cities15000.json (MC), dropped
+  ! Menton: not a town in cities15000.json (MC), dropped
+  ! Eze: not a town in cities15000.json (MC), dropped
+== Granada
+  claude tokens in 736 out 1902
+  claude tokens in 1103 out 1366
+Granada: 4 trips
+  5* Sevilla | rec train 2h 15m €3 | road 247 km 176 min | taxi 270 | modes train,bus | quests 8: Seville Cathedral; Alcázar of Seville; Giralda; Plaza de España, Seville; Setas de Sevilla; Triana Bridge; Torre del Oro; Ramon Sanchez Pizjuan
+  4* Córdoba | rec train 1h 23m €5 | road 162 km 128 min | taxi 180 | modes train | quests 4: Mezquita-Cathedral of Córdoba; Alcázar de los Reyes Cristianos; Roman Bridge of Córdoba; Noor
+  3* Málaga | rec train 1h 21m €3 | road 130 km 102 min | taxi 150 | modes train,bus | quests 3: Alcazaba of Málaga; Málaga Cathedral; La Malagueta
+  3* Nerja | rec tour   | road 95 km 71 min | taxi 110 | modes bus | quests 1: Burriana Beach
+  ! Pampaneira: not a town in cities15000.json (ES), dropped
+== Budva
+  claude tokens in 736 out 2490
+  claude tokens in 682 out 710
+Budva: 2 trips
+  5* Kotor | rec bus 35m $3-$14 | road 21 km 28 min | taxi 20 | modes bus | quests 3: Kotor Old Town; Mausoleum of Njegoš on Lovćen; Bay of Kotor Cruise
+  3* Cetinje | rec bus 37m $2-$14 | road 31 km 42 min | taxi 30 | modes bus | quests 1: Cetinje Monastery
+  ! Perast: no Omio position, dropped
+  ! Stari Bar: not a town in cities15000.json (ME), dropped
+  ! Ulcinj: not a town in cities15000.json (ME), dropped
+== Gibraltar
+  claude tokens in 739 out 1788
+Gibraltar: 0 trips
+  ! Ronda: not a town in cities15000.json (GI), dropped
+  ! Cadiz: not a town in cities15000.json (GI), dropped
+  ! Tangier: not a town in cities15000.json (GI), dropped
+  ! Malaga: not a town in cities15000.json (GI), dropped
+== Nice
+  claude tokens in 736 out 1940
+  fetch failed https://www.omio.com/trains/nice/antibes: Failed to perform, curl: (56) Recv failure: Connection was reset. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+  claude tokens in 980 out 913
+Nice: 3 trips
+  4* Cannes | rec train 20m €9 | road 34 km 35 min | taxi 60 | modes train,bus | quests 4: Le Suquet; La Villa Archange; Cannes Film Festival; La Croisette
+  4* Antibes | rec train 11m €6 | road 22 km 29 min | taxi 40 | modes train,bus | quests 1: Antibes Land
+  2* Menton | rec train 27m €7 | road 30 km 31 min | taxi 50 | modes train,bus | quests 3: Mirazur; Blue Bay Marcel Ravin; Koaland
+  ! Monaco: not a town in cities15000.json (FR), dropped
+  ! Saint-Paul-de-Vence: not a town in cities15000.json (FR), dropped
+== Florence
+  claude tokens in 736 out 3000
+Florence: 0 trips
+== Da Nang
+  claude tokens in 738 out 1741
+  claude tokens in 739 out 878
+Da Nang: 2 trips
+  5* Hoi An | rec taxi   | road 32 km 30 min | taxi 495000 | modes bus | quests 6: Hoi An Old Town; Japanese Covered Bridge; Hoi An Night Market; Hoi An Basket Boat; VinWonders Nam Hoi An; An Bang Beach
+  3* Hue | rec tour   | road 95 km 85 min | taxi 1440000 | modes train,bus | quests 3: The Imperial City; Thien Mu Pagoda; Perfume River
+  ! Duy Xuyen: not a town in cities15000.json (VN), dropped
+== Sarajevo
+Traceback (most recent call last):
+  File "C:\Users\ahnlee123\Desktop\jidoapp\tool\city_travel\daytrips.py", line 346, in <module>
+    build(city, cities, lms, skip, set(scope.get("attach", {}).get(city, [])))
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ahnlee123\Desktop\jidoapp\tool\city_travel\daytrips.py", line 209, in build
+    cand = ds.ask(CANDIDATES_SYS, json.dumps({"city": city, "skip": sorted(attach),
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                "format": {"trips": ["..."]}}), 3000).get("trips", [])[:MAX_TRIPS]
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ahnlee123\Desktop\jidoapp\tool\city_travel\deepseek_city.py", line 97, in ask
+    return ask_claude(system, user, max_tokens)
+  File "C:\Users\ahnlee123\Desktop\jidoapp\tool\city_travel\deepseek_city.py", line 77, in ask_claude
+    with urllib.request.urlopen(req, timeout=300) as r:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\urllib\request.py", line 187, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\urllib\request.py", line 487, in open
+    response = self._open(req, data)
+  File "C:\Python314\Lib\urllib\request.py", line 504, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Python314\Lib\urllib\request.py", line 464, in _call_chain
+    result = func(*args)
+  File "C:\Python314\Lib\urllib\request.py", line 1369, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        context=self._context)
+                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\urllib\request.py", line 1325, in do_open
+    r = h.getresponse()
+  File "C:\Python314\Lib\http\client.py", line 1450, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\http\client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\http\client.py", line 297, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\socket.py", line 725, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Python314\Lib\ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TimeoutError: The read operation timed out

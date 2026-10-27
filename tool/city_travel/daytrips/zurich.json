@@ -63,6 +63,72 @@
    ]
   },
   {
+   "place": "Lucerne",
+   "label": "",
+   "position": {
+    "id": 346622,
+    "name": "Luzern Verkehrshaus",
+    "city": "Lucerne",
+    "lat": 47.05394,
+    "lng": 8.33724
+   },
+   "town": {
+    "name": "Lucerne",
+    "lat": 47.0502,
+    "lng": 8.3093
+   },
+   "road": {
+    "km": 52,
+    "min": 44,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 220,
+    "currency": "CHF"
+   },
+   "modes": {
+    "train": {
+     "from": "€10",
+     "from_usd": 11.0,
+     "avg": "€24",
+     "time": "35m",
+     "per_day": 18,
+     "source": "https://www.omio.com/trains/zurich/lucerne"
+    },
+    "bus": {
+     "from": "$2-$4",
+     "time": "50m",
+     "via": "Zurich Central Bus Station Sihlquai to Lucerne Landenbergstrasse",
+     "source": "https://www.rome2rio.com/s/Zurich/Lucerne"
+    }
+   },
+   "route_note": "Direct InterCity trains run from Zurich HB to Lucerne in about 45 minutes with no changes.",
+   "see": [
+    "Chapel Bridge and Water Tower",
+    "Lion Monument",
+    "Old Town walls and Musegg ramparts",
+    "Lake Lucerne boat cruise"
+   ],
+   "visit": "Full day",
+   "tour_query": "Lucerne day trip from Zurich",
+   "quests": [
+    "Kapellbrücke (Chapel Bridge)",
+    "Lucerne Old Town",
+    "Lion Monument",
+    "Museggmauer (City Walls)",
+    "Crash Landing on You",
+    "Colonnade",
+    "Lake Lucerne Panoramic Yacht"
+   ],
+   "recommended": "train",
+   "why": "Direct InterCity trains are the fastest option and drop you in Lucerne's centre, with no changes needed.",
+   "stars": 4,
+   "know": [
+    "Around 18 direct trains run per day from Zurich HB.",
+    "Trains take about 35 minutes; the route note cites about 45, so allow for variation."
+   ]
+  },
+  {
    "place": "Interlaken",
    "label": "",
    "position": {
@@ -96,7 +162,7 @@
      "source": "https://www.omio.com/trains/zurich/interlaken"
     },
     "bus": {
-     "from": "$27-$32",
+     "from": "$27-$31",
      "time": "1h 57m",
      "via": "Zürich HB Schweizerhof to Interlaken Sonnenhof",
      "source": "https://www.rome2rio.com/s/Zurich/Interlaken"
@@ -174,57 +240,67 @@
    ]
   },
   {
-   "place": "Winterthur",
+   "place": "Vaduz",
    "label": "",
    "position": {
-    "id": 344740,
-    "name": "Winterthur Töss",
-    "city": "Winterthur",
-    "lat": 47.48981,
-    "lng": 8.70931
+    "id": 336906,
+    "name": "Schaan-Vaduz",
+    "city": "Schaan",
+    "lat": 47.1683,
+    "lng": 9.5078
    },
    "town": {
-    "name": "Winterthur",
-    "lat": 47.50564,
-    "lng": 8.72413
+    "name": "Vaduz",
+    "lat": 47.14151,
+    "lng": 9.52154
    },
    "road": {
-    "km": 26,
-    "min": 25,
+    "km": 110,
+    "min": 80,
     "source": "OSRM"
    },
    "taxi": {
-    "amount": 110,
+    "amount": 450,
     "currency": "CHF"
    },
    "modes": {
     "train": {
-     "from": "$9-$16",
-     "time": "16m",
-     "via": "Zürich Stadelhofen to Winterthur",
-     "source": "https://www.rome2rio.com/s/Zurich/Winterthur"
+     "from": "$22-$70",
+     "time": "1h 8m",
+     "via": "Zuerich Hb to Buchs Sg",
+     "source": "https://www.rome2rio.com/s/Zurich/Vaduz"
+    },
+    "bus": {
+     "from": null,
+     "time": "2h 39m",
+     "via": "Feldkirch, Bahnhof to Vaduz, Städtle",
+     "source": "https://www.rome2rio.com/s/Zurich/Vaduz"
     }
    },
-   "route_note": "Frequent direct S-Bahn and IC trains take about 25-30 minutes from Zurich HB to Winterthur.",
+   "route_note": "Take the train from Zurich HB to Sargans, then PostBus to Vaduz; the whole trip is about 1.5-2 hours and the town centre is walkable.",
    "see": [
-    "Old Town and Marktgasse",
-    "Oskar Reinhart Collection Am Römerholz",
-    "Technorama science centre",
-    "Stadtpark and Kunstmuseum"
+    "Vaduz Castle",
+    "Kunstmuseum Liechtenstein",
+    "Städtle",
+    "Liechtenstein National Museum"
    ],
    "visit": "Half day",
-   "tour_query": "Winterthur day trip from Zurich",
-   "quests": [],
+   "tour_query": "Vaduz day trip from Zurich",
+   "quests": [
+    "Vaduz Castle",
+    "St. Florin Cathedral",
+    "Liechtenstein National Museum",
+    "Käsknöpfle",
+    "Minigolf-Sportanlag"
+   ],
    "recommended": "train",
-   "why": "Frequent direct trains take only 16 minutes, much faster than driving or bus.",
-   "stars": 2,
+   "why": "The train to Buchs SG takes about 1h 8m, roughly half the bus time of 2h 39m, and a short connection gets you to the compact, walkable town centre.",
+   "stars": 3,
    "know": [
-    "Museums and old town suit a half-day visit",
-    "Check museum closing days, many shut on Mondays"
+    "Vaduz Castle is the Prince of Liechtenstein's residence and its interior is generally closed to visitors, but the grounds and views are accessible.",
+    "Liechtenstein uses the Swiss franc, and the town is small enough to see in a few hours."
    ]
   }
  ],
- "problems": [
-  "Lucerne: not a town in cities15000.json (CH), dropped"
- ]
+ "problems": []
 }

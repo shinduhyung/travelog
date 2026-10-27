@@ -1,0 +1,570 @@
+{
+  "city": "Florence",
+  "checked": "October 2026",
+  "intro_line": "Renaissance masterpieces, river views, and streets best explored on foot.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Santa Maria Novella",
+        "San Lorenzo",
+        "Santa Croce",
+        "Oltrarno"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Santa Maria Novella",
+        "San Lorenzo",
+        "Santa Croce",
+        "Oltrarno"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Santa Maria Novella",
+        "San Lorenzo",
+        "Santa Croce",
+        "Oltrarno"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Santa Maria Novella",
+        "San Lorenzo",
+        "Santa Croce",
+        "Oltrarno"
+      ]
+    },
+    {
+      "id": "romance",
+      "label": "Romance",
+      "areas": [
+        "Santa Maria Novella",
+        "San Lorenzo",
+        "Santa Croce",
+        "Oltrarno"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 11,
+        "low": 2,
+        "rain_days": 10,
+        "note": "Cold and short days, around 11°C high and 2°C low. Quiet streets and lower prices."
+      },
+      {
+        "high": 13,
+        "low": 3,
+        "rain_days": 11,
+        "note": "Still cold, about 13°C high. Good for museums, with rain on around 11 days."
+      },
+      {
+        "high": 15,
+        "low": 5,
+        "rain_days": 10,
+        "note": "Spring starts, around 15°C high. Pack layers for chilly mornings."
+      },
+      {
+        "high": 19,
+        "low": 7,
+        "rain_days": 10,
+        "note": "Mild and bright, around 19°C high. Good walking weather."
+      },
+      {
+        "high": 23,
+        "low": 12,
+        "rain_days": 14,
+        "note": "Warm, around 23°C high. Rain on about 14 days, so carry a light jacket."
+      },
+      {
+        "high": 28,
+        "low": 16,
+        "rain_days": 8,
+        "note": "Hot and busy, around 28°C high. Plan museums in the morning."
+      },
+      {
+        "high": 32,
+        "low": 19,
+        "rain_days": 4,
+        "note": "Peak heat near 32°C high. Walk early and rest midday."
+      },
+      {
+        "high": 32,
+        "low": 19,
+        "rain_days": 6,
+        "note": "Very hot, around 32°C high and dry. Many locals are away; book early."
+      },
+      {
+        "high": 27,
+        "low": 15,
+        "rain_days": 9,
+        "note": "Warm, around 27°C high. Crowds ease and evenings are pleasant."
+      },
+      {
+        "high": 21,
+        "low": 12,
+        "rain_days": 12,
+        "note": "Mild, around 21°C high. Good for walking and wine tours."
+      },
+      {
+        "high": 15,
+        "low": 7,
+        "rain_days": 12,
+        "note": "Cool, about 15°C high. Rain on about 12 days; bring a jacket."
+      },
+      {
+        "high": 12,
+        "low": 3,
+        "rain_days": 12,
+        "note": "Cold and wet at times, around 12°C high. Christmas lights in the centre."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "art": [
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.8,
+      0.6,
+      0.6,
+      0.85,
+      0.95,
+      0.95,
+      0.9
+    ],
+    "food": [
+      0.7,
+      0.75,
+      0.9,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.7,
+      0.9,
+      1,
+      0.9,
+      0.75
+    ],
+    "history": [
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.8,
+      0.6,
+      0.6,
+      0.85,
+      0.95,
+      0.95,
+      0.9
+    ],
+    "culture": [
+      0.8,
+      0.85,
+      0.95,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.9,
+      0.8
+    ],
+    "romance": [
+      0.7,
+      0.8,
+      0.95,
+      1,
+      0.95,
+      0.85,
+      0.6,
+      0.65,
+      0.9,
+      0.95,
+      0.85,
+      0.7
+    ]
+  },
+  "places": {
+    "duomo": {
+      "types": [
+        "art",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Early morning, before the crowds",
+      "area": "San Lorenzo",
+      "popularity": 5
+    },
+    "uffizi": {
+      "types": [
+        "art",
+        "history"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Early morning or late afternoon",
+      "area": "Santa Maria Novella",
+      "popularity": 5
+    },
+    "accademia": {
+      "types": [
+        "art",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Morning on weekdays",
+      "area": "San Lorenzo",
+      "popularity": 5
+    },
+    "ponte": {
+      "types": [
+        "history",
+        "romance"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Oltrarno",
+      "popularity": 5
+    },
+    "vecchio": {
+      "types": [
+        "history",
+        "art"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Late afternoon",
+      "area": "Santa Maria Novella",
+      "popularity": 4
+    },
+    "santacroce": {
+      "types": [
+        "history",
+        "art",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Late morning",
+      "area": "Santa Croce",
+      "popularity": 4
+    },
+    "boboli": {
+      "types": [
+        "romance",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Spring or early autumn, on a dry day",
+      "area": "Oltrarno",
+      "popularity": 4
+    },
+    "pitti": {
+      "types": [
+        "art",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Late morning, before the gardens",
+      "area": "Oltrarno",
+      "popularity": 4
+    },
+    "annunciation": {
+      "types": [
+        "art"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Early in your Uffizi visit",
+      "area": "Santa Maria Novella",
+      "popularity": 4
+    },
+    "arno": {
+      "types": [
+        "romance",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset and early evening",
+      "area": "Santa Maria Novella",
+      "popularity": 4
+    },
+    "david": {
+      "types": [
+        "art",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning on weekdays",
+      "area": "San Lorenzo",
+      "popularity": 5
+    },
+    "primavera": {
+      "types": [
+        "art"
+      ],
+      "minutes": 15,
+      "setting": "indoor",
+      "best": "Early in your Uffizi visit",
+      "area": "Santa Maria Novella",
+      "popularity": 5
+    },
+    "venus": {
+      "types": [
+        "art"
+      ],
+      "minutes": 15,
+      "setting": "indoor",
+      "best": "Early in your Uffizi visit",
+      "area": "Santa Maria Novella",
+      "popularity": 5
+    },
+    "mercato": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "San Lorenzo",
+      "popularity": 4
+    },
+    "michelangelo": {
+      "types": [
+        "romance",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Oltrarno",
+      "popularity": 5
+    },
+    "oltrarno": {
+      "types": [
+        "culture",
+        "romance"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late morning or afternoon",
+      "area": "Oltrarno",
+      "popularity": 4
+    },
+    "foodtour": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Santa Maria Novella",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Two nights give you time for the main galleries, a day walking the centre and one evening out without rushing."
+  },
+  "airports": [
+    {
+      "code": "FLR",
+      "name": "Firenze Peretola Airport (Amerigo Vespucci)",
+      "primary": true,
+      "note": "Main local airport, about 4-5 km northwest of the centre, with limited and pricier flights.",
+      "options": [
+        {
+          "mode": "Tram T2",
+          "to": "Santa Maria Novella station, then Piazza San Marco",
+          "price": "€1.70",
+          "time": "about 20 min",
+          "note": "Cheapest option. Buy tickets from machines at the stop with cash or card."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Historic centre",
+          "price": "€25 flat, plus €1 per large bag",
+          "time": "15-20 min",
+          "note": "Fixed fare to the historic centre. Ask for the flat rate before you get in."
+        },
+        {
+          "mode": "Ride app",
+          "to": "Historic centre",
+          "price": "check locally",
+          "time": "15-25 min",
+          "note": "Availability varies, so check locally before you rely on it."
+        }
+      ]
+    },
+    {
+      "code": "BLQ",
+      "name": "Bologna Guglielmo Marconi Airport",
+      "primary": false,
+      "note": "Preferred alternative for many flights, about 1 hour from Florence by car or train.",
+      "options": [
+        {
+          "mode": "Airport bus + train",
+          "to": "Bologna Centrale, then train to Firenze SMN",
+          "price": "check locally",
+          "time": "about 2-2.5 hr total",
+          "note": "Use the airport shuttle to Bologna Centrale, then take a direct train to Florence."
+        },
+        {
+          "mode": "Train",
+          "to": "Firenze SMN",
+          "price": "check locally",
+          "time": "about 1 hr",
+          "note": "Only after you reach Bologna Centrale. Book early for better fares."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Florence",
+          "price": "check locally",
+          "time": "about 1 hr",
+          "note": "Taxi drivers may refuse the long trip to Florence late at night."
+        }
+      ]
+    },
+    {
+      "code": "PSA",
+      "name": "Pisa International Airport (Galileo Galilei)",
+      "primary": false,
+      "note": "Fewer flights than Bologna, about 1.5 hours from Florence by train.",
+      "options": [
+        {
+          "mode": "Airport shuttle + train",
+          "to": "Pisa Centrale, then train to Firenze SMN",
+          "price": "check locally",
+          "time": "about 2-2.5 hr total",
+          "note": "Shuttle to Pisa Centrale, then take a regional or fast train to Florence."
+        },
+        {
+          "mode": "Train",
+          "to": "Firenze SMN",
+          "price": "check locally",
+          "time": "about 1.5 hr",
+          "note": "Train from Pisa Centrale. Check schedules before you travel."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Florence",
+          "price": "check locally",
+          "time": "about 1.5 hr",
+          "note": "Expensive for a long trip, and drivers may not agree to go at night."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Florence",
+      "https://en.wikivoyage.org/wiki/Florence"
+    ]
+  ],
+  "best_for": [
+    "art",
+    "history",
+    "food"
+  ],
+  "transit": {
+    "best": "Walk the centre; use the tram from the airport and Park & Ride sites, and buses for longer trips.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "Florence has no metro. Use trams, buses or walking inside the city."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "best": true,
+        "text": "Tram T2 links the airport to Santa Maria Novella, about 20 minutes, running until about 00:30 on weekdays and 02:00 on weekends. Tram 1 runs from Villa Constanza Park & Ride through the western suburbs to Santa Maria Novella, about 25 minutes, every 3 to 10 minutes."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "AutolineeToscane buses serve the city. Tap a contactless Visa, Mastercard or Amex card, or buy a €1.70 paper ticket before boarding. A 90-minute hop-on, hop-off window applies."
+      },
+      {
+        "mode": "Taxi / Uber / FreeNow",
+        "has": true,
+        "text": "Taxis have few stands and are hard to hail on the street. Book by phone or use the stand at Santa Maria Novella, and carry cash. Check locally whether Uber or FreeNow is available."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving inside the historic centre is restricted by camera and fines are high. Park at Park & Ride sites and walk or take the bus in."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Most of the centre is flat and walkable in about 30 minutes end to end. Shared city bikes are available, and cycle paths help you bypass the old streets."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mild Mediterranean-style climate: warm summers, cool winters and rain on about 10 days a month most of the year.",
+    "items": [
+      {
+        "icon": "🌤️",
+        "title": "Best time: April to June and September to October",
+        "text": "Highs around 19–28°C with fewer extremes. Good for walking the centre and sitting outdoors."
+      },
+      {
+        "icon": "🔥",
+        "title": "Hot summers (July and August)",
+        "text": "Highs near 32°C and lows near 19°C. Visit galleries in the morning and walk in the shade."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool winters (December to February)",
+        "text": "Highs around 11–13°C and lows near 2–3°C. Pack a warm coat for evenings."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain on about 10 days a month",
+        "text": "Rain is spread through the year, with fewer wet days in July and August. Carry a small umbrella or jacket."
+      },
+      {
+        "icon": "🚶",
+        "title": "Walk early or late",
+        "text": "Most sights are close together. Start before 9:00 in summer to beat heat and crowds."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes, layers for cool evenings, sun hat in summer and modest clothing for churches."
+      }
+    ]
+  }
+}

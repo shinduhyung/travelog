@@ -1,0 +1,547 @@
+{
+  "city": "Macau",
+  "checked": "October 2026",
+  "intro_line": "Portuguese tiles, neon casinos, and sea breezes meet at the edge of China.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Heritage",
+      "areas": [
+        "Senado Square",
+        "Outer Harbour",
+        "Taipa Village",
+        "Cotai Strip"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Macanese",
+      "areas": [
+        "Senado Square",
+        "Outer Harbour",
+        "Taipa Village",
+        "Cotai Strip"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "Colonial",
+      "areas": [
+        "Senado Square",
+        "Outer Harbour",
+        "Taipa Village",
+        "Cotai Strip"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Casinos",
+      "areas": [
+        "Senado Square",
+        "Outer Harbour",
+        "Taipa Village",
+        "Cotai Strip"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Resorts",
+      "areas": [
+        "Senado Square",
+        "Outer Harbour",
+        "Taipa Village",
+        "Cotai Strip"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 19,
+        "low": 14,
+        "rain_days": 6,
+        "note": "Jan: Cool at 14–19°C with 6 rain days. Good for walking the historic centre."
+      },
+      {
+        "high": 20,
+        "low": 15,
+        "rain_days": 7,
+        "note": "Feb: Cool at 15–20°C with 7 rain days. Pack a light jacket for evenings."
+      },
+      {
+        "high": 23,
+        "low": 18,
+        "rain_days": 12,
+        "note": "Mar: Mild at 18–23°C with 12 rain days. Showers are more frequent, so carry a compact umbrella."
+      },
+      {
+        "high": 25,
+        "low": 21,
+        "rain_days": 14,
+        "note": "Apr: Warm at 21–25°C with 14 rain days. Pleasant for outdoor sights between showers."
+      },
+      {
+        "high": 28,
+        "low": 25,
+        "rain_days": 21,
+        "note": "May: Hot at 25–28°C with 21 rain days. Humid, so plan indoor breaks in the afternoon."
+      },
+      {
+        "high": 30,
+        "low": 27,
+        "rain_days": 24,
+        "note": "Jun: Very hot at 27–30°C with 24 rain days. Expect frequent rain and heavy humidity."
+      },
+      {
+        "high": 31,
+        "low": 27,
+        "rain_days": 23,
+        "note": "Jul: Very hot at 27–31°C with 23 rain days. Start walking early and rest in the afternoon."
+      },
+      {
+        "high": 30,
+        "low": 27,
+        "rain_days": 26,
+        "note": "Aug: Hot at 27–30°C with 26 rain days. The wettest month, so keep plans flexible."
+      },
+      {
+        "high": 30,
+        "low": 26,
+        "rain_days": 21,
+        "note": "Sep: Hot at 26–30°C with 21 rain days. Check typhoon warnings before travel."
+      },
+      {
+        "high": 27,
+        "low": 23,
+        "rain_days": 11,
+        "note": "Oct: Pleasant at 23–27°C with 11 rain days. One of the best months for sightseeing."
+      },
+      {
+        "high": 25,
+        "low": 20,
+        "rain_days": 7,
+        "note": "Nov: Mild at 20–25°C with 7 rain days. Comfortable for walking and day trips."
+      },
+      {
+        "high": 20,
+        "low": 14,
+        "rain_days": 4,
+        "note": "Dec: Cool at 14–20°C with 4 rain days. Dry and good for sightseeing, with cool nights."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.9,
+      0.95,
+      0.7,
+      0.5,
+      0.4,
+      0.35,
+      0.35,
+      0.5,
+      0.9,
+      0.95,
+      0.9
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.95,
+      0.85,
+      0.75,
+      0.7,
+      0.7,
+      0.7,
+      0.8,
+      0.95,
+      0.95,
+      0.9
+    ],
+    "history": [
+      0.9,
+      0.9,
+      0.95,
+      0.7,
+      0.5,
+      0.4,
+      0.35,
+      0.35,
+      0.5,
+      0.9,
+      0.95,
+      0.9
+    ],
+    "nightlife": [
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.9,
+      0.9,
+      0.9
+    ],
+    "family": [
+      0.9,
+      0.85,
+      0.9,
+      0.85,
+      0.75,
+      0.6,
+      0.55,
+      0.55,
+      0.65,
+      0.85,
+      0.9,
+      0.9
+    ]
+  },
+  "places": {
+    "ruins": {
+      "types": [
+        "history",
+        "culture",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early morning before the crowds, or dusk for photos",
+      "area": "Senado Square",
+      "popularity": 5
+    },
+    "senado": {
+      "types": [
+        "history",
+        "culture",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon to evening",
+      "area": "Senado Square",
+      "popularity": 5
+    },
+    "guia": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Morning for clear views",
+      "area": "Senado Square",
+      "popularity": 4
+    },
+    "ama": {
+      "types": [
+        "culture",
+        "history",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Outer Harbour",
+      "popularity": 4
+    },
+    "tower": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Sunset",
+      "area": "Outer Harbour",
+      "popularity": 4
+    },
+    "ocean": {
+      "types": [
+        "family"
+      ],
+      "minutes": 300,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Cotai Strip",
+      "popularity": 4
+    },
+    "grand_lisboa": {
+      "types": [
+        "nightlife",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Senado Square",
+      "popularity": 4
+    },
+    "jiuzhouyang": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Check on the day",
+      "area": "Cotai Strip",
+      "popularity": 2
+    },
+    "lionsgate": {
+      "types": [
+        "family",
+        "nightlife"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Cotai Strip",
+      "popularity": 3
+    },
+    "aqua": {
+      "types": [
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday or rainy day",
+      "area": "Cotai Strip",
+      "popularity": 3
+    },
+    "red_market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Outer Harbour",
+      "popularity": 3
+    },
+    "morpheus": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Cotai Strip",
+      "popularity": 3
+    },
+    "taipa_houses": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning or late afternoon",
+      "area": "Taipa Village",
+      "popularity": 4
+    },
+    "taipa_market": {
+      "types": [
+        "food",
+        "culture",
+        "family"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Taipa Village",
+      "popularity": 4
+    },
+    "rua_cunha": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late morning or afternoon",
+      "area": "Taipa Village",
+      "popularity": 4
+    },
+    "lou_lim_ioc": {
+      "types": [
+        "culture",
+        "family",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Senado Square",
+      "popularity": 3
+    },
+    "penha_hill": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Senado Square",
+      "popularity": 3
+    },
+    "senado_food_walk": {
+      "types": [
+        "food",
+        "history",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Late afternoon or evening",
+      "area": "Senado Square",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "One night works well for Senado Square, St. Paul's ruins, Monte Fort, Taipa, and evening city life, though a Hong Kong day trip also works."
+  },
+  "airports": [
+    {
+      "code": "MFM",
+      "name": "Macau International Airport",
+      "primary": true,
+      "note": "Main airport in Taipa, about 7 km from the centre.",
+      "options": [
+        {
+          "mode": "Airport bus AP1",
+          "to": "Outer Harbour ferry terminal",
+          "price": "check locally",
+          "time": "25-35 min",
+          "note": "Cheapest direct link to the peninsula; pay by Macau Pass or cash."
+        },
+        {
+          "mode": "Bus",
+          "to": "Taipa and Cotai hotels",
+          "price": "check locally",
+          "time": "15-30 min",
+          "note": "Several routes serve the island hotels; ask staff for the right stop."
+        },
+        {
+          "mode": "Light Rail",
+          "to": "Taipa and Cotai",
+          "price": "check locally",
+          "time": "15-25 min",
+          "note": "Useful if your hotel is near a Taipa Line station; check the current route."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Historic centre or Cotai",
+          "price": "MOP 80-150",
+          "time": "15-25 min",
+          "note": "Use the airport taxi rank; the airport surcharge applies."
+        },
+        {
+          "mode": "Ride-hailing app",
+          "to": "Anywhere in Macau",
+          "price": "check locally",
+          "time": "15-25 min",
+          "note": "Availability is limited, so check locally before you rely on it."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Macau",
+      "https://en.wikivoyage.org/wiki/Macau"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "history",
+    "nightlife"
+  ],
+  "transit": {
+    "best": "Walk the historic centre, then use buses with a Macau Pass card or taxis to cover longer distances.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "Macau has no metro system. Use the Light Rail or buses instead."
+      },
+      {
+        "mode": "Light Rail (LRT)",
+        "has": true,
+        "text": "The Taipa Line links Taipa, Cotai and the Barra area. Check locally for current routes."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "Buses cover the peninsula and islands. Pay with a Macau Pass card or exact cash coins. Check locally for fares."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are plentiful and cheap. Ask for the meter. Ride-hailing apps have limited availability, so check locally."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Driving is not recommended. Roads are congested and parking is scarce and costly."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The historic centre is best explored on foot. Taipa and Coloane suit cycling and shuttle buses."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries run from Outer Harbour and Taipa to Hong Kong, Shenzhen and Zhuhai, so you can plan day trips by boat."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Subtropical climate: hot, humid summers with heavy rain, and mild, drier winters.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: October to December",
+        "text": "Highs of about 23–27°C, with fewer rain days. Good for walking the historic centre."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot and wet (June to September)",
+        "text": "Highs of about 27–31°C, with 21–26 rain days a month. Plan indoor visits for the afternoon."
+      },
+      {
+        "icon": "💧",
+        "title": "Humid most of the year",
+        "text": "Humidity is high from May to September. Carry water and dress in light fabrics."
+      },
+      {
+        "icon": "🌂",
+        "title": "Rain is common in summer",
+        "text": "Summer brings frequent showers. Bring a compact umbrella or light rain jacket."
+      },
+      {
+        "icon": "🌀",
+        "title": "Typhoon season",
+        "text": "Typhoons are possible from about July to September. Check weather warnings and ferry status before travel."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light breathable clothes, sunscreen and a rain layer. Bring a warm layer for winter evenings."
+      }
+    ]
+  }
+}

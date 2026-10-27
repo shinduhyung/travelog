@@ -1,0 +1,848 @@
+{
+  "plans": [
+    {
+      "id": "day-art",
+      "length": "day",
+      "style": "art",
+      "nights": 0,
+      "for": "Art lovers who want the big galleries in one day, with David first thing and the Uffizi in the afternoon.",
+      "days": [
+        {
+          "title": "Accademia, Duomo, Uffizi",
+          "stops": [
+            {
+              "place": "accademia",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Book a timed ticket ahead. Michelangelo's David is inside, so you can see it on the same visit. Closed Monday."
+            },
+            {
+              "place": "duomo",
+              "at": "10:15",
+              "minutes": 120,
+              "note": "Opens about 10:00 on weekdays. Sunday hours are limited, so check on the day. About 5 minutes on foot from the Accademia."
+            },
+            {
+              "place": "mercato",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch at the central market. Good for a quick sit-down meal."
+            },
+            {
+              "place": "uffizi",
+              "at": "14:00",
+              "minutes": 150,
+              "note": "Closed Monday. Go to the Annunciation, Primavera and The Birth of Venus early in your visit. About 15 minutes on foot from the market.",
+              "by": "walk"
+            },
+            {
+              "place": "vecchio",
+              "at": "17:00",
+              "minutes": 75,
+              "note": "Open daily until about 19:00. Late afternoon is a good time to visit. Right by the Uffizi."
+            }
+          ]
+        }
+      ],
+      "stay_area": "San Lorenzo & Santa Maria Novella"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Food fans who want market lunches, an Oltrarno walk and an evening food and wine tour.",
+      "days": [
+        {
+          "title": "Market, Oltrarno and a food tour",
+          "stops": [
+            {
+              "place": "mercato",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Open from about 10:00 until midnight. Good for a light first meal and local snacks."
+            },
+            {
+              "place": "oltrarno",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Many shops close on Sunday, so check on the day. Shops are usually open about 10:00 to 19:00. Cross the river on foot.",
+              "by": "walk"
+            },
+            {
+              "place": "ponte",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Open all day. Stop by for a short look, then come back at sunset if you can."
+            },
+            {
+              "place": "foodtour",
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Evening tour with food and wine. Check the meeting point and times when you book."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Santa Maria Novella"
+    },
+    {
+      "id": "day-romance",
+      "length": "day",
+      "style": "romance",
+      "nights": 0,
+      "for": "Couples who want slow gardens, a riverside walk and a hilltop view at sunset.",
+      "days": [
+        {
+          "title": "Palace, gardens and sunset",
+          "stops": [
+            {
+              "place": "pitti",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Visit in the late morning, before the gardens get busy."
+            },
+            {
+              "place": "boboli",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Behind the Pitti Palace. Open from about 08:15 until sunset. Best in spring or early autumn on a dry day. Closing time varies, so check on the day.",
+              "by": "walk"
+            },
+            {
+              "place": "oltrarno",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Relaxed walk through workshops and small squares. Many shops close on Sunday, so check on the day."
+            },
+            {
+              "place": "michelangelo",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Always open. The view is best at sunset, so arrive about an hour before it sets."
+            },
+            {
+              "place": "ponte",
+              "at": "19:45",
+              "minutes": 30,
+              "note": "Downhill and back across the river. Lovely in the evening light.",
+              "by": "walk"
+            }
+          ]
+        }
+      ],
+      "stay_area": "Oltrarno"
+    },
+    {
+      "id": "1n-art",
+      "length": "1n",
+      "style": "art",
+      "nights": 1,
+      "for": "Gallery-focused day in Santa Maria Novella, then the Accademia and David, with a quiet Oltrarno morning.",
+      "days": [
+        {
+          "title": "Uffizi, Palazzo Vecchio and the Accademia",
+          "stops": [
+            {
+              "place": "uffizi",
+              "at": "08:30",
+              "minutes": 150,
+              "note": "Book a timed ticket in advance. Closed Monday. Visit the Annunciation, Primavera and The Birth of Venus early in your visit, while rooms are quieter."
+            },
+            {
+              "place": "vecchio",
+              "at": "11:15",
+              "minutes": 75,
+              "note": "Opens about 09:00 to 19:00 daily. Check on the day for late Friday openings."
+            },
+            {
+              "place": "mercato",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch at the market hall. Open from about 10:00."
+            },
+            {
+              "place": "accademia",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Closed Monday. Michelangelo's David is inside, so allow time for it. Weekday mornings are quieter if you can move this earlier."
+            }
+          ]
+        },
+        {
+          "title": "Oltrarno and Santa Croce",
+          "stops": [
+            {
+              "place": "santacroce",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "Mon to Sat mornings. On Sundays it opens only in the afternoon, so check on the day."
+            },
+            {
+              "place": "pitti",
+              "at": "11:15",
+              "minutes": 120,
+              "note": "Closed Monday. Check the hours on the day."
+            },
+            {
+              "place": "ponte",
+              "at": "13:45",
+              "minutes": 30,
+              "note": "Open all day. Crossing on foot is free."
+            },
+            {
+              "place": "oltrarno",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Many shops close on Sunday, so check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Santa Maria Novella"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Market lunches, trattorias and a wine-and-food evening in a walkable centre.",
+      "days": [
+        {
+          "title": "Cathedral, market and a food tour",
+          "stops": [
+            {
+              "place": "duomo",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Weekday hours about 10:00 to 17:00. Check Sunday hours on the day."
+            },
+            {
+              "place": "mercato",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Lunch at the market hall. Stalls range from snacks to full meals."
+            },
+            {
+              "place": "accademia",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Closed Monday. Book ahead if you want David at a set time."
+            },
+            {
+              "place": "vecchio",
+              "at": "15:30",
+              "minutes": 75,
+              "note": "Opens about 09:00 to 19:00 daily."
+            },
+            {
+              "place": "foodtour",
+              "at": "18:30",
+              "minutes": 180,
+              "note": "Evening food and wine tour. Check the start time and meeting point when you book."
+            }
+          ]
+        },
+        {
+          "title": "Oltrarno eats and a last look",
+          "stops": [
+            {
+              "place": "oltrarno",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Look for workshops and food shops. Many close on Sunday."
+            },
+            {
+              "place": "santacroce",
+              "at": "12:30",
+              "minutes": 75,
+              "note": "Mon to Sat mornings. On Sundays it opens only in the afternoon, so check on the day."
+            },
+            {
+              "place": "mercato",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Second lunch stop. Kitchens may be busy in the afternoon."
+            }
+          ]
+        }
+      ],
+      "stay_area": "San Lorenzo"
+    },
+    {
+      "id": "1n-romance",
+      "length": "1n",
+      "style": "romance",
+      "nights": 1,
+      "for": "Riverside walks, hilltop views and quiet evenings after the crowds leave.",
+      "days": [
+        {
+          "title": "Gardens, hilltop and sunset",
+          "stops": [
+            {
+              "place": "pitti",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Closed Monday. Go early to beat the crowds."
+            },
+            {
+              "place": "boboli",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Open from about 08:15 until sunset. Best on a dry day. Check closing time on the day."
+            },
+            {
+              "place": "oltrarno",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Slow walk through the workshops. Many close on Sunday."
+            },
+            {
+              "place": "michelangelo",
+              "at": "18:45",
+              "minutes": 60,
+              "note": "Go up for the sunset view over the city. Check sunset time for the day."
+            }
+          ]
+        },
+        {
+          "title": "Cathedral, river and evening walk",
+          "stops": [
+            {
+              "place": "duomo",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Weekday hours about 10:00 to 17:00. Check Sunday hours on the day."
+            },
+            {
+              "place": "mercato",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Relaxed lunch at the market hall."
+            },
+            {
+              "place": "vecchio",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Late afternoon is the best time. Opens about 09:00 to 19:00 daily."
+            },
+            {
+              "place": "ponte",
+              "at": "18:15",
+              "minutes": 30,
+              "note": "Best at sunset. Open all day."
+            },
+            {
+              "place": "arno",
+              "at": "18:50",
+              "minutes": 45,
+              "note": "Riverside walk into the early evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Oltrarno"
+    },
+    {
+      "id": "2n-art",
+      "length": "2n",
+      "style": "art",
+      "nights": 2,
+      "for": "Two gallery-led days. Book the Accademia and Uffizi slots in advance and avoid Mondays, when both are closed.",
+      "days": [
+        {
+          "title": "David and the Duomo area",
+          "stops": [
+            {
+              "place": "accademia",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Tue–Sun, about 08:15 opening. See David first, before the tour groups arrive. Check the hours on the day."
+            },
+            {
+              "place": "duomo",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Weekday hours about 10:00–17:00. Check the climb and the ticket time on the day."
+            },
+            {
+              "place": "mercato",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch at the market hall. Open from about 10:00."
+            },
+            {
+              "place": "vecchio",
+              "at": "15:30",
+              "minutes": 75,
+              "note": "Daily about 09:00–19:00. Walk over from the market, about 10 minutes."
+            }
+          ]
+        },
+        {
+          "title": "Uffizi, Santa Croce and the bridge",
+          "stops": [
+            {
+              "place": "uffizi",
+              "at": "08:30",
+              "minutes": 150,
+              "note": "Tue–Sun, about 08:15–18:30. Go to the Annunciation, Primavera and The Birth of Venus first, since they are in the same gallery."
+            },
+            {
+              "place": "santacroce",
+              "at": "12:00",
+              "minutes": 75,
+              "note": "Mon–Sat about 09:30–17:30. Sunday afternoons only. Check on the day."
+            },
+            {
+              "place": "ponte",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Open all day. Best at sunset, so check the sunset time for your dates."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Santa Maria Novella and San Lorenzo"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Two days of markets, lunches and a long evening tasting. Some shops close on Sundays, so plan the Oltrarno walk for another day.",
+      "days": [
+        {
+          "title": "Market, Oltrarno and the river",
+          "stops": [
+            {
+              "place": "mercato",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Daily from about 10:00. Lunch here, and sample the stalls on the upper floor. Check on the day."
+            },
+            {
+              "place": "oltrarno",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Shops about 10:00–19:00. Many close on Sunday, so check on the day. Stop for coffee or a snack on the way."
+            },
+            {
+              "place": "arno",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Open all day. A calm walk along the river before dinner."
+            },
+            {
+              "place": "ponte",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Open all day. Look over the bridge before the evening crowds."
+            }
+          ]
+        },
+        {
+          "title": "Gallery lunch and the food tour",
+          "stops": [
+            {
+              "place": "uffizi",
+              "at": "08:30",
+              "minutes": 150,
+              "note": "Tue–Sun, about 08:15–18:30. Closed Monday. Reserve an early slot."
+            },
+            {
+              "place": "mercato",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch at the market. Open from about 10:00, so it works after the Uffizi."
+            },
+            {
+              "place": "michelangelo",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Always open. Walk up for the view, then head back down to the centre."
+            },
+            {
+              "place": "foodtour",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Evening food and wine tour. Hours vary, so check the start time and meeting point before you book."
+            }
+          ]
+        }
+      ],
+      "stay_area": "San Lorenzo and Santa Maria Novella"
+    },
+    {
+      "id": "2n-romance",
+      "length": "2n",
+      "style": "romance",
+      "nights": 2,
+      "for": "Slow riverside afternoons, hilltop views and quiet dinners. Plan the Boboli Gardens for a dry day in spring or early autumn.",
+      "days": [
+        {
+          "title": "Oltrarno and the sunset bridge",
+          "stops": [
+            {
+              "place": "pitti",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Tue–Sun, about 08:15–18:50. Closed Monday. Go in late morning, before the gardens."
+            },
+            {
+              "place": "mercato",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Lunch at the market. Open from about 10:00."
+            },
+            {
+              "place": "oltrarno",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Wander the small lanes. Many shops close on Sunday, so check on the day."
+            },
+            {
+              "place": "ponte",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Open all day. Best at sunset, so check the time for your dates."
+            }
+          ]
+        },
+        {
+          "title": "Duomo morning and the gardens",
+          "stops": [
+            {
+              "place": "duomo",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Weekday hours from about 10:00. Sunday is limited, so check on the day. Go early for fewer crowds."
+            },
+            {
+              "place": "arno",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Open all day. An easy walk along the river on the way to lunch."
+            },
+            {
+              "place": "boboli",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Open daily from about 08:15 until sunset. Best on a dry day, and closing times vary. Check on the day."
+            },
+            {
+              "place": "michelangelo",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Always open. Sunset views over the city. Finish with dinner back in the centre."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Oltrarno and Santa Maria Novella"
+    },
+    {
+      "id": "3n-art",
+      "length": "3n",
+      "style": "art",
+      "nights": 3,
+      "for": "Gallery lovers who want the Uffizi, Accademia and Pitti planned around opening days.",
+      "days": [
+        {
+          "title": "David and the Duomo",
+          "stops": [
+            {
+              "place": "accademia",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Closed Monday. Book a timed ticket in advance. Weekday mornings are quietest."
+            },
+            {
+              "place": "david",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Inside the Accademia, so it uses the same ticket."
+            },
+            {
+              "place": "mercato",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Lunch at the market hall. Opens around 10:00."
+            },
+            {
+              "place": "duomo",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Check the hours on the day. Sundays are limited."
+            },
+            {
+              "place": "arno",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Walk along the river as the light fades."
+            }
+          ]
+        },
+        {
+          "title": "Uffizi and Palazzo Vecchio",
+          "stops": [
+            {
+              "place": "uffizi",
+              "at": "08:30",
+              "minutes": 150,
+              "note": "Closed Monday. Book a timed entry. Go to Primavera and The Birth of Venus first, before the crowds build."
+            },
+            {
+              "place": "annunciation",
+              "at": "08:30",
+              "minutes": 20,
+              "note": "Part of the Uffizi visit, so see it on the way in."
+            },
+            {
+              "place": "santacroce",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Open Monday to Saturday. Sunday afternoons only, so check on the day."
+            },
+            {
+              "place": "vecchio",
+              "at": "16:30",
+              "minutes": 75,
+              "note": "Best in the late afternoon. Opens daily around 09:00."
+            },
+            {
+              "place": "ponte",
+              "at": "18:45",
+              "minutes": 30,
+              "note": "Open all day. Best at sunset."
+            }
+          ]
+        },
+        {
+          "title": "Pitti, gardens and a sunset view",
+          "stops": [
+            {
+              "place": "pitti",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed Monday. Go early, before the gardens fill up."
+            },
+            {
+              "place": "boboli",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Pick a dry day. Closing time changes through the year."
+            },
+            {
+              "place": "oltrarno",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Many shops close on Sunday. Check the hours on the day."
+            },
+            {
+              "place": "michelangelo",
+              "at": "18:45",
+              "minutes": 60,
+              "note": "Always open. Go for the sunset view over the city."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Santa Maria Novella"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want markets, wine bars and a food tour on a walkable centre.",
+      "days": [
+        {
+          "title": "Oltrarno and the river",
+          "stops": [
+            {
+              "place": "mercato",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch at the market. Opens around 10:00 until late."
+            },
+            {
+              "place": "oltrarno",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Wander the workshops. Many close on Sunday."
+            },
+            {
+              "place": "ponte",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Open all day. Good for an early evening look."
+            },
+            {
+              "place": "arno",
+              "at": "19:15",
+              "minutes": 45,
+              "note": "A short river walk before dinner."
+            }
+          ]
+        },
+        {
+          "title": "Duomo, market and food tour",
+          "stops": [
+            {
+              "place": "duomo",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Go early. Check the hours on the day."
+            },
+            {
+              "place": "mercato",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Second market lunch. Try the stalls on the upper floor."
+            },
+            {
+              "place": "vecchio",
+              "at": "14:30",
+              "minutes": 75,
+              "note": "Daily around 09:00 to 19:00. Some Fridays open later."
+            },
+            {
+              "place": "foodtour",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Evening food and wine tour. Book ahead and check times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Gallery morning and a sunset",
+          "stops": [
+            {
+              "place": "accademia",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Closed Monday. Weekday mornings are quietest."
+            },
+            {
+              "place": "mercato",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Coffee and a snack before lunch. Opens around 10:00."
+            },
+            {
+              "place": "santacroce",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Open Monday to Saturday. Sunday afternoons only."
+            },
+            {
+              "place": "michelangelo",
+              "at": "18:45",
+              "minutes": 60,
+              "note": "Always open. Best at sunset with a drink from the hilltop kiosk."
+            }
+          ]
+        }
+      ],
+      "stay_area": "San Lorenzo"
+    },
+    {
+      "id": "3n-romance",
+      "length": "3n",
+      "style": "romance",
+      "nights": 3,
+      "for": "Couples who want quiet river walks, hilltop views and slow dinners.",
+      "days": [
+        {
+          "title": "Oltrarno slow morning",
+          "stops": [
+            {
+              "place": "pitti",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Visit before the gardens get busy."
+            },
+            {
+              "place": "boboli",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Best on a dry day in spring or early autumn."
+            },
+            {
+              "place": "oltrarno",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Browse quiet streets. Many shops close on Sunday."
+            },
+            {
+              "place": "ponte",
+              "at": "19:30",
+              "minutes": 30,
+              "note": "Open all day. Check sunset time on the day."
+            }
+          ]
+        },
+        {
+          "title": "Duomo, lunch and river evening",
+          "stops": [
+            {
+              "place": "duomo",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Go early for fewer people. Check hours on the day."
+            },
+            {
+              "place": "mercato",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Easy lunch. Opens around 10:00."
+            },
+            {
+              "place": "vecchio",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Daily around 09:00 to 19:00."
+            },
+            {
+              "place": "arno",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Early evening walk along the river."
+            }
+          ]
+        },
+        {
+          "title": "Uffizi and hilltop sunset",
+          "stops": [
+            {
+              "place": "uffizi",
+              "at": "08:30",
+              "minutes": 150,
+              "note": "Closed Monday. Book a timed entry. Early visits are calmer."
+            },
+            {
+              "place": "mercato",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Relaxed lunch at the market hall."
+            },
+            {
+              "place": "santacroce",
+              "at": "13:30",
+              "minutes": 75,
+              "note": "Open Monday to Saturday. Sunday afternoons only."
+            },
+            {
+              "place": "michelangelo",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Always open. Best at sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Oltrarno"
+    }
+  ]
+}

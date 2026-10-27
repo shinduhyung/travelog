@@ -1,0 +1,519 @@
+{
+  "city": "Budva",
+  "checked": "October 2026",
+  "intro_line": "Walled old town, golden beaches, and the Adriatic at your doorstep.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "beach",
+      "label": "Beaches",
+      "areas": [
+        "Old Town",
+        "Slovenska Plaža",
+        "Bečići",
+        "Rafailovići"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "Old Town",
+      "areas": [
+        "Old Town",
+        "Slovenska Plaža",
+        "Bečići",
+        "Rafailovići"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Old Town",
+        "Slovenska Plaža",
+        "Bečići",
+        "Rafailovići"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Seafood",
+      "areas": [
+        "Old Town",
+        "Slovenska Plaža",
+        "Bečići",
+        "Rafailovići"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Old Town",
+        "Slovenska Plaža",
+        "Bečići",
+        "Rafailovići"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 11,
+        "low": 5,
+        "rain_days": 13,
+        "note": "Jan: Cold (5–11°C) with 13 rain days. Quiet off-season; many places are closed."
+      },
+      {
+        "high": 13,
+        "low": 7,
+        "rain_days": 12,
+        "note": "Feb: Cool (7–13°C) and rainy on 12 days. Good for quiet walks, not beach days."
+      },
+      {
+        "high": 15,
+        "low": 8,
+        "rain_days": 14,
+        "note": "Mar: Mild (8–15°C) with 14 rain days. Spring starts; check opening hours."
+      },
+      {
+        "high": 18,
+        "low": 11,
+        "rain_days": 12,
+        "note": "Apr: Warmer (11–18°C) with 12 rain days. Good for sightseeing and walks."
+      },
+      {
+        "high": 22,
+        "low": 16,
+        "rain_days": 14,
+        "note": "May: Pleasant (16–22°C) with 14 rain days. Sea still cool; bring a light layer."
+      },
+      {
+        "high": 27,
+        "low": 21,
+        "rain_days": 9,
+        "note": "Jun: Warm (21–27°C) with 9 rain days. Beaches and bars open; start booking early."
+      },
+      {
+        "high": 30,
+        "low": 23,
+        "rain_days": 5,
+        "note": "Jul: Hot (23–30°C) with only 5 rain days. Peak season; crowds and high prices."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 7,
+        "note": "Aug: Hottest month (24–31°C) with 7 rain days. Peak crowds; go to the beach early or late."
+      },
+      {
+        "high": 26,
+        "low": 19,
+        "rain_days": 11,
+        "note": "Sep: Still warm (19–26°C) with 11 rain days. Good weather with fewer crowds."
+      },
+      {
+        "high": 21,
+        "low": 15,
+        "rain_days": 11,
+        "note": "Oct: Mild (15–21°C) with 11 rain days. Good for walking and seafood."
+      },
+      {
+        "high": 17,
+        "low": 11,
+        "rain_days": 14,
+        "note": "Nov: Cool (11–17°C) with 14 rain days. Off-season; many beach venues close."
+      },
+      {
+        "high": 13,
+        "low": 7,
+        "rain_days": 12,
+        "note": "Dec: Cold (7–13°C) with 12 rain days. Quiet off-season; pack a warm jacket."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "beach": [
+      0.1,
+      0.1,
+      0.2,
+      0.3,
+      0.6,
+      0.85,
+      1,
+      1,
+      0.85,
+      0.5,
+      0.2,
+      0.1
+    ],
+    "history": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      1,
+      0.9,
+      0.85,
+      0.85,
+      0.95,
+      0.9,
+      0.7,
+      0.7
+    ],
+    "nightlife": [
+      0.3,
+      0.3,
+      0.4,
+      0.5,
+      0.7,
+      0.9,
+      1,
+      1,
+      0.9,
+      0.6,
+      0.3,
+      0.3
+    ],
+    "food": [
+      0.5,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.8,
+      0.6,
+      0.5
+    ],
+    "culture": [
+      0.6,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.9,
+      0.8,
+      0.8,
+      0.9,
+      0.9,
+      0.7,
+      0.6
+    ]
+  },
+  "places": {
+    "oldtown": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Early morning or sunset; spring and autumn",
+      "area": "Old Town",
+      "popularity": 5
+    },
+    "stefan": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon for soft light",
+      "area": "Rafailovići",
+      "popularity": 5
+    },
+    "stefanbeach": {
+      "types": [
+        "beach"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "June to September, mornings",
+      "area": "Rafailovići",
+      "popularity": 4
+    },
+    "cruise": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Morning departure; May to October",
+      "area": "Old Town",
+      "popularity": 5
+    },
+    "kotor": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Early morning; spring and autumn",
+      "area": "Old Town",
+      "popularity": 5
+    },
+    "cetinje": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning, with a short drive from Budva",
+      "area": "Old Town",
+      "popularity": 3
+    },
+    "fishmarket": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Old Town",
+      "popularity": 3
+    },
+    "mogren": {
+      "types": [
+        "beach"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "June to September, late afternoon",
+      "area": "Old Town",
+      "popularity": 4
+    },
+    "promenade": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Old Town",
+      "popularity": 4
+    },
+    "viewpoint": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Rafailovići",
+      "popularity": 4
+    },
+    "lovcen": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Clear morning; late spring to early autumn",
+      "area": "Old Town",
+      "popularity": 3
+    },
+    "nightlife": {
+      "types": [
+        "nightlife"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Summer evenings",
+      "area": "Old Town",
+      "popularity": 4
+    },
+    "prut": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Lunchtime; combine with Cetinje",
+      "area": "Old Town",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "A day trip is enough, as the walled old town and citadel can be reached from Kotor or Tivat."
+  },
+  "airports": [
+    {
+      "code": "TIV",
+      "name": "Tivat Airport",
+      "primary": true,
+      "note": "Closest airport for Budva, about 16–20 km away.",
+      "options": [
+        {
+          "mode": "Mediteran Express shuttle",
+          "to": "Budva old town",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Shuttle schedules vary; confirm whether it serves Tivat before relying on it."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Budva old town",
+          "price": "€25–35",
+          "time": "25–35 min",
+          "note": "Agree a fixed price before the ride."
+        },
+        {
+          "mode": "MonteGO app",
+          "to": "Budva old town",
+          "price": "check locally",
+          "time": "25–35 min",
+          "note": "Shows upfront fare estimates for airport transfers."
+        }
+      ]
+    },
+    {
+      "code": "TGD",
+      "name": "Podgorica Airport",
+      "primary": false,
+      "note": "Larger regional airport about 65 km away.",
+      "options": [
+        {
+          "mode": "Bus to Podgorica then bus to Budva",
+          "to": "Budva bus station",
+          "price": "€7",
+          "time": "about 2 hours plus transfers",
+          "note": "Check the bus schedule online before travel."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Budva old town",
+          "price": "€50–100",
+          "time": "1–1.5 hours",
+          "note": "Agree one fixed price for the whole ride; do not rely on the meter."
+        },
+        {
+          "mode": "MonteGO app",
+          "to": "Budva old town",
+          "price": "check locally",
+          "time": "1–1.5 hours",
+          "note": "Provides upfront fare estimates."
+        }
+      ]
+    },
+    {
+      "code": "DBV",
+      "name": "Dubrovnik Airport",
+      "primary": false,
+      "note": "Croatian airport about 80 km away with many European flights.",
+      "options": [
+        {
+          "mode": "Adriatic Lines ferry",
+          "to": "Budva harbour",
+          "price": "check locally",
+          "time": "about 2 hours from Dubrovnik port",
+          "note": "Ferry runs mainly in high season; reach the port from the airport first."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Budva old town",
+          "price": "€90",
+          "time": "about 1.5–2 hours",
+          "note": "Confirm the fixed price before departure."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Budva",
+      "https://en.wikivoyage.org/wiki/Budva"
+    ]
+  ],
+  "best_for": [
+    "beach",
+    "nightlife",
+    "history"
+  ],
+  "transit": {
+    "best": "Walk within the centre and take a metered taxi or book through MonteGO for longer trips.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram. Don't plan around rail."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": false,
+        "text": "Local buses are limited. Intercity buses leave from the bus station, about a 20-minute walk from the Old Town. Herceg Novi buses run about every 30 minutes for around €6."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis cost around €5 for a ride within town. Use a metered taxi with a visible rate card, or book through MonteGO for upfront fare estimates."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "best": false,
+        "text": "Driving is hard in summer. Traffic is heavy and Old Town parking is scarce and costly. Leave the car outside the centre."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is about 2 km², and the promenade links the coast. Walking is the easiest way to get around."
+      },
+      {
+        "mode": "Tourist boat",
+        "has": true,
+        "best": false,
+        "text": "Tourist boats run to nearby beaches and Sveti Nikola island. They are not cheap, and there are no €1 water taxis."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mediterranean climate: hot, dry summers and mild, wetter winters. The sea is warmest from July to September.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: June to September",
+        "text": "Warm days of 21–31°C and very few rainy days in July and August. Best for beaches and nightlife."
+      },
+      {
+        "icon": "🥵",
+        "title": "Peak heat (July and August)",
+        "text": "Highs of 30–31°C. Swim early or late, and use shade in the Old Town."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain mostly in winter",
+        "text": "Between 11 and 14 rain days a month from October to May. Pack a light waterproof jacket."
+      },
+      {
+        "icon": "🌊",
+        "title": "Sea temperature",
+        "text": "Warmest from late July to September. The water is cold for most of the year."
+      },
+      {
+        "icon": "🥶",
+        "title": "Cool winters",
+        "text": "Lows of 5–8°C in January and February. Many beach venues and some restaurants close."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes for summer, a warm layer for evenings, comfortable walking shoes for stone streets, and a swimsuit."
+      }
+    ]
+  }
+}

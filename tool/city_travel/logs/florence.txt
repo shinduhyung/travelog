@@ -1,0 +1,26 @@
+$ deepseek_city.py Florence --stage places
+Florence: places
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 1709 out 5156
+
+$ deepseek_city.py Florence --stage frame
+Florence: frame
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 3514 out 3465
+
+$ deepseek_city.py Florence --stage plans
+Florence: plans
+  plans for day
+  DeepSeek 401; using Claude Haiku
+  claude tokens in 2750 out 3213
+  plans for 1n
+  claude tokens in 2750 out 4492
+  plans for 2n
+  claude tokens in 2757 out 3884
+  plans for 3n
+  claude tokens in 2751 out 4561
+
+$ merge_city.py Florence
+Florence: 17 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/florence.json and planner/florence.json
+

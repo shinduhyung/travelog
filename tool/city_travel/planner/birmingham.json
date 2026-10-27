@@ -1,0 +1,567 @@
+{
+  "city": "Birmingham",
+  "checked": "October 2026",
+  "intro_line": "Birmingham: canals, curries and a bull called Ozzy.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "City Centre",
+        "Brindleyplace",
+        "Jewellery Quarter",
+        "Digbeth"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "City Centre",
+        "Brindleyplace",
+        "Jewellery Quarter",
+        "Digbeth"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "City Centre",
+        "Brindleyplace",
+        "Jewellery Quarter",
+        "Digbeth"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "City Centre",
+        "Brindleyplace",
+        "Jewellery Quarter",
+        "Digbeth"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "City Centre",
+        "Brindleyplace",
+        "Jewellery Quarter",
+        "Digbeth"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 7,
+        "low": 2,
+        "rain_days": 12,
+        "note": "Jan: cold, highs near 7°C and about 12 rain days. Pack a warm waterproof coat."
+      },
+      {
+        "high": 8,
+        "low": 2,
+        "rain_days": 11,
+        "note": "Feb: similar to January, highs around 8°C. Short daylight; plan indoor sights."
+      },
+      {
+        "high": 10,
+        "low": 3,
+        "rain_days": 14,
+        "note": "Mar: still cool at 10°C with the most rain days (14). Keep an umbrella handy."
+      },
+      {
+        "high": 12,
+        "low": 4,
+        "rain_days": 12,
+        "note": "Apr: milder at 12°C, around 12 rain days. Good for walking the canals."
+      },
+      {
+        "high": 16,
+        "low": 7,
+        "rain_days": 12,
+        "note": "May: pleasant at 16°C. A good month for outdoor sightseeing."
+      },
+      {
+        "high": 19,
+        "low": 10,
+        "rain_days": 13,
+        "note": "Jun: warmer at 19°C, 13 rain days. Long evenings suit canal-side dinners."
+      },
+      {
+        "high": 21,
+        "low": 12,
+        "rain_days": 14,
+        "note": "Jul: warmest month, highs near 21°C but 14 rain days. Bring a light rain layer."
+      },
+      {
+        "high": 20,
+        "low": 12,
+        "rain_days": 11,
+        "note": "Aug: similar to July at 20°C with fewer rain days (11). Busy school-holiday crowds."
+      },
+      {
+        "high": 18,
+        "low": 10,
+        "rain_days": 13,
+        "note": "Sep: mild at 18°C, 13 rain days. Comfortable for museums and markets."
+      },
+      {
+        "high": 14,
+        "low": 8,
+        "rain_days": 12,
+        "note": "Oct: cooler at 14°C, around 12 rain days. Pack layers."
+      },
+      {
+        "high": 10,
+        "low": 5,
+        "rain_days": 13,
+        "note": "Nov: chilly at 10°C with 13 rain days. Indoor plans are safest."
+      },
+      {
+        "high": 8,
+        "low": 4,
+        "rain_days": 14,
+        "note": "Dec: cold at 8°C and 14 rain days. Christmas markets and warm pubs help."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.6
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.6
+    ],
+    "shopping": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.75
+    ],
+    "nightlife": [
+      0.7,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.75,
+      0.7
+    ]
+  },
+  "places": {
+    "peaky-blinders": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Daytime, any season",
+      "area": "City Centre",
+      "popularity": 4
+    },
+    "villa-park": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday mornings",
+      "area": "City Centre",
+      "popularity": 3
+    },
+    "university-birmingham": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday daytime",
+      "area": "City Centre",
+      "popularity": 3
+    },
+    "university-warwick": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday daytime",
+      "area": "City Centre",
+      "popularity": 2
+    },
+    "chesters": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch or early evening",
+      "area": "City Centre",
+      "popularity": 2
+    },
+    "bullring-market": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekday lunchtime",
+      "area": "City Centre",
+      "popularity": 5
+    },
+    "library-viewpoint": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Afternoon",
+      "area": "City Centre",
+      "popularity": 4
+    },
+    "canal-walk": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon or evening",
+      "area": "Brindleyplace",
+      "popularity": 4
+    },
+    "jewellery-quarter-walk": {
+      "types": [
+        "culture",
+        "shopping",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekday daytime",
+      "area": "Jewellery Quarter",
+      "popularity": 3
+    },
+    "digbeth-street-art": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Digbeth",
+      "popularity": 3
+    },
+    "balti-tour": {
+      "types": [
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "City Centre",
+      "popularity": 3
+    },
+    "cadbury-world": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "City Centre",
+      "popularity": 4
+    },
+    "thinktank": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy days or school holidays",
+      "area": "City Centre",
+      "popularity": 3
+    },
+    "gas-street-basin": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Brindleyplace",
+      "popularity": 4
+    },
+    "st-philips": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Midday",
+      "area": "City Centre",
+      "popularity": 3
+    },
+    "mailbox": {
+      "types": [
+        "food",
+        "nightlife",
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "City Centre",
+      "popularity": 3
+    },
+    "selfridges": {
+      "types": [
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "City Centre",
+      "popularity": 4
+    },
+    "hippodrome": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "City Centre",
+      "popularity": 3
+    },
+    "cannon-hill-park": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunny afternoon",
+      "area": "City Centre",
+      "popularity": 3
+    },
+    "coffin-works": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday",
+      "area": "Jewellery Quarter",
+      "popularity": 2
+    },
+    "brindleyplace-food": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Dinner",
+      "area": "Brindleyplace",
+      "popularity": 3
+    },
+    "grand-central": {
+      "types": [
+        "shopping"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "City Centre",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "One night suits you, covering the canals, Brindleyplace and one museum or gallery in a day."
+  },
+  "airports": [
+    {
+      "code": "BHX",
+      "name": "Birmingham International Airport",
+      "primary": true,
+      "note": "Main airport, about 11 km east of the centre.",
+      "options": [
+        {
+          "mode": "Train",
+          "to": "Birmingham New Street",
+          "price": "£2.50-3.60",
+          "time": "10-20 min",
+          "note": "Free Air-Rail Link connects terminal to Birmingham International station."
+        },
+        {
+          "mode": "Bus 900",
+          "to": "City centre",
+          "price": "£2.20",
+          "time": "25-40 min",
+          "note": "Runs every 20-30 min; no transfers included."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "£20-25",
+          "time": "20-30 min",
+          "note": "Drop-off at airport costs a fee; rail is often quicker at peak."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "£18-28",
+          "time": "20-30 min",
+          "note": "Check app price; airport pickup fees may apply."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Birmingham",
+      "https://en.wikivoyage.org/wiki/Birmingham"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "nightlife"
+  ],
+  "transit": {
+    "best": "Walk in the compact centre; use buses or the tram for longer hops.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "West Midlands Metro trams link the centre with Wolverhampton and Edgbaston; fares are a few pounds."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "Frequent National Express West Midlands buses; a Daysaver day ticket costs about £4–5."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Metered taxis; Uber and Bolt both operate in the city."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Easy on motorways but the centre is congested and parking is costly."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is compact and mostly pedestrianised, so walking is best for short trips."
+      },
+      {
+        "mode": "Cycling",
+        "has": true,
+        "text": "Possible but cycle lanes are few; canal towpaths make pleasant routes."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Temperate and changeable: mild summers, cool wet winters, and rain possible in any month.",
+    "items": [
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "Expect 11–14 rain days every month. Showers are often short; carry a small umbrella."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Mild summers",
+        "text": "July and August peak near 20–21°C. Rarely hot; evenings cool to about 12°C."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool winters",
+        "text": "January and February highs near 7–8°C, lows around 2°C. A warm coat is essential."
+      },
+      {
+        "icon": "🌤️",
+        "title": "Best months",
+        "text": "May to September is warmest and brightest, though rain never stops entirely."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket and comfortable shoes for wet pavements."
+      },
+      {
+        "icon": "☁️",
+        "title": "Grey skies are normal",
+        "text": "Overcast days are common. Plan indoor backups like museums and food halls."
+      }
+    ]
+  }
+}
