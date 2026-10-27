@@ -14,6 +14,7 @@ import '../widgets/charts.dart';
 import '../widgets/flag.dart';
 import 'common.dart';
 import 'compare/compare_screen.dart';
+import 'duels_screen.dart';
 import 'leaderboard_screen.dart';
 import 'new_duel_sheet.dart';
 import 'profile_screen.dart';
@@ -205,6 +206,15 @@ class _FriendsScreenState extends State<FriendsScreen> {
             )
           else
             IconButton(tooltip: 'Refresh from Travelog', onPressed: store.sync, icon: const Icon(Icons.sync)),
+          IconButton(
+            tooltip: 'Duels',
+            icon: Badge(
+              isLabelVisible: store.incomingInvites.isNotEmpty,
+              label: Text('${store.incomingInvites.length}'),
+              child: const Icon(Icons.bolt_rounded),
+            ),
+            onPressed: () => Navigator.push(context, socialRoute<void>((_) => const DuelsScreen())),
+          ),
           if (store.friends.isNotEmpty)
             IconButton(
               tooltip: 'More rankings',

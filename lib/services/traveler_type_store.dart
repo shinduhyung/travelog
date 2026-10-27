@@ -20,7 +20,7 @@ class TravelerTypeStore {
   TravelerTypeStore._();
 
   /// 점수 계산식을 바꿀 때마다 올린다. 이전 버전 결과는 자동으로 폐기된다.
-  static const int currentVersion = 2;
+  static const int currentVersion = 3;
 
   static const String resultKey = 'ai_analysis_result';
   static const String updatedAtField = 'ai_analysis_updated_at';
@@ -42,6 +42,7 @@ class TravelerTypeStore {
     final parsed = _parse(json);
     if (parsed == null) return false;
     if (parsed['engine_version'] != currentVersion) return false;
+    if (parsed['summary']?['has_signal'] == false) return false;
     final scores = parsed['summary']?['persona_scores'];
     return scores is List && scores.isNotEmpty;
   }
@@ -66,6 +67,15 @@ class TravelerTypeStore {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString(resultKey, json);
     return _push(json);
+  }
+
+  /// A new analysis with no evidence must not resurrect an older leading type.
+  static Future<void> clearResult() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove(resultKey);
+    await prefs.remove(_legacyTypeKey);
+    final user = FirebaseAuth.instance.currentUser;
+    if (user != null) await _deleteServer(user.uid);
   }
 
   static Future<bool> _push(String json) async {

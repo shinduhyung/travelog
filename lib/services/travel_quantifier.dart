@@ -1,8 +1,6 @@
 // lib/services/travel_quantifier.dart
 
 import 'dart:math';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/providers/city_provider.dart';
 import 'package:jidoapp/providers/airline_provider.dart';
@@ -21,6 +19,37 @@ class TravelQuantifier {
     required this.airlineProvider,
     required this.airportProvider,
   });
+
+  /// Missing records must not become neutral/negative evidence for a type.
+  Set<String> get observedAxes {
+    final countries = _getValidCountries();
+    final cities = _getValidCities();
+    final flights = airlineProvider.allFlightLogs.where((log) => !log.isCanceled).toList();
+    final axes = <String>{};
+    if (countries.isNotEmpty) {
+      axes.addAll(['continentDistribution', 'countryDistribution']);
+      final stats = _calculateRatingStats(countries, cities);
+      for (final entry in {
+        'countryWealth': _countryWealthScores,
+        'countryType': _countryTypeScores,
+        'countryNightlife': _countryNightlifeScores,
+      }.entries) {
+        if (countries.any((name) => entry.value.containsKey(countryProvider.countryNameToIsoMap[name]) &&
+            _getWeight(countryProvider.visitDetails[name]?.rating ?? 0, stats) != 0)) {
+          axes.add(entry.key);
+        }
+      }
+    }
+    if (cities.isNotEmpty) axes.add('cityDistribution');
+    if (airportProvider.visitedAirports.isNotEmpty) {
+      axes.addAll(['airportDistribution', 'transferAirportScore']);
+    }
+    if (flights.isNotEmpty) axes.addAll(['airlineDistribution', 'transferFlightScore']);
+    if (flights.any((log) => airlineProvider.parseDuration(log.duration) > 0 && log.times > 0)) {
+      axes.add('airlineTime');
+    }
+    return axes;
+  }
 
   TravelFeatures quantify() {
     final validCountries = _getValidCountries();
@@ -173,7 +202,7 @@ class TravelQuantifier {
   Map<String, int> _getCityCounts(List<String> cities) {
     Map<String, int> counts = {};
     for (var cName in cities) {
-      counts[cName] = 1;
+      counts[cName] = cityProvider.visitDetails[cName]?.visitDateRanges.length ?? 0;
     }
     return counts;
   }

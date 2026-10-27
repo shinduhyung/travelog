@@ -11,6 +11,7 @@ import 'screens/duel_game_screen.dart';
 import 'screens/duels_screen.dart';
 import 'screens/friends_screen.dart';
 import 'screens/profile_screen.dart';
+import 'screens/stats_screen.dart';
 import 'services/social_store.dart';
 import 'theme.dart';
 import 'widgets/world_map.dart';
@@ -62,6 +63,8 @@ class SocialHub {
   static Future<void> openFriends(BuildContext context) => _open(context, (_) => const FriendsScreen());
 
   static Future<void> openDuels(BuildContext context) => _open(context, (_) => const DuelsScreen());
+
+  static Future<void> openStats(BuildContext context) => _open(context, (_) => const StatsScreen());
 
   static Future<void> _open(BuildContext context, Widget Function(SocialStore store) page) async {
     final store = SocialHub.store;

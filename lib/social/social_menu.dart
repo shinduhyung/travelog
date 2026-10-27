@@ -1,4 +1,4 @@
-// My Trips 화면의 Travelog Social 메뉴: 보석빛 카드 + 바로가기 3개 (프로필 / 친구 / 대결)
+// My Trips 화면의 Travelog Social 메뉴: 보석빛 카드 + 바로가기 3개 (프로필 / 친구 / 통계)
 import 'package:flutter/material.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 
@@ -9,14 +9,14 @@ class SocialMenu extends StatelessWidget {
     required this.onOpen,
     required this.onProfile,
     required this.onFriends,
-    required this.onDuels,
+    required this.onStats,
   });
 
   final int duelInvites;
   final VoidCallback onOpen;
   final VoidCallback onProfile;
   final VoidCallback onFriends;
-  final VoidCallback onDuels;
+  final VoidCallback onStats;
 
   @override
   Widget build(BuildContext context) {
@@ -32,11 +32,12 @@ class SocialMenu extends StatelessWidget {
             ),
             const SizedBox(width: 8),
             Expanded(
-              child: SocialShortcut(icon: Icons.group_rounded, label: 'Friends', onTap: onFriends),
+              // 대결은 Friends 화면에서 친구를 골라 시작하므로, 받은 신청 배지도 여기에 단다
+              child: SocialShortcut(icon: Icons.group_rounded, label: 'Friends', badge: duelInvites, onTap: onFriends),
             ),
             const SizedBox(width: 8),
             Expanded(
-              child: SocialShortcut(icon: Icons.bolt_rounded, label: 'Duels', badge: duelInvites, onTap: onDuels),
+              child: SocialShortcut(icon: Icons.bar_chart_rounded, label: 'Stats', onTap: onStats),
             ),
           ],
         ),

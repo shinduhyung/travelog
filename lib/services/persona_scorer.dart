@@ -10,6 +10,7 @@
 // 순서로 계산한다.
 
 import 'dart:math';
+import 'dart:convert';
 
 class PersonaScore {
   final String id;
@@ -22,14 +23,16 @@ class PersonaScoreResult {
   final List<PersonaScore> scores; // 내림차순
   final double gap; // 1위와 2위의 점수 차 (0~1)
   final double coverage; // 계산에 쓰인 가중치 비율 (0~1)
+  final bool hasSignal;
 
-  const PersonaScoreResult(this.scores, this.gap, this.coverage);
+  const PersonaScoreResult(this.scores, this.gap, this.coverage,
+      {this.hasSignal = true});
 
   /// 1·2위가 사실상 접전이면 true (혼합형으로 표시)
   bool get isClose => gap < 0.08;
 
   /// 데이터가 부족해 결과가 불안정하면 true
-  bool get lowData => coverage < 0.6;
+  bool get lowData => coverage < 0.6 || !hasSignal;
 }
 
 class PersonaScorer {
@@ -38,21 +41,51 @@ class PersonaScorer {
   static const double temperature = 0.5;
   static const int _calibrationSamples = 1500;
   static const double _calibrationSigma = 0.4;
+  static final Map<String, List<List<double>>> _calibrationCache = {};
 
   /// [prototypes]: archetype_prototypes JSON (id, label, data{axis:{P,W}})
   /// [user]: 축 이름 -> -1..1. 없는 키는 "데이터 없음"으로 취급해 제외한다.
   static PersonaScoreResult score(
       List<dynamic> prototypes, Map<String, double> user) {
     final types = prototypes.cast<Map<String, dynamic>>();
+    if (types.isEmpty) {
+      return const PersonaScoreResult([], 0, 0, hasSignal: false);
+    }
+    final knownAxes = <String>{
+      for (final t in types) ...(t['data'] as Map<String, dynamic>).keys,
+    };
+    // Canonical order keeps calibration independent of JSON/map insertion order.
+    final orderedKeys = user.keys.where((k) => knownAxes.contains(k) && user[k]!.isFinite).toList()..sort();
+    user = {for (final k in orderedKeys) k: user[k]!.clamp(-1.0, 1.0).toDouble()};
     final axes = user.keys.toSet();
+    var usedW = 0.0, allW = 0.0;
+    for (final t in types) {
+      final data = t['data'] as Map<String, dynamic>;
+      for (final e in data.entries) {
+        final w = (e.value['W'] as num).toDouble();
+        allW += w;
+        if (axes.contains(e.key)) usedW += w;
+      }
+    }
+    final coverage = allW == 0 ? 0.0 : usedW / allW;
+    final hasSignal = user.values.any((v) => v.abs() > 1e-9);
+    if (!hasSignal) {
+      // A missing or entirely neutral vector does not identify a leading type.
+      return PersonaScoreResult([
+        for (final t in types)
+          PersonaScore(t['id'] as String, t['label'] as String, 1 / types.length),
+      ], 0, 0, hasSignal: false);
+    }
 
     final raw = [for (final t in types) _similarity(t, user)];
 
     // 기준 집단에서 타입별 평균/표준편차를 구해 편향 제거.
     // 사용자와 같은 축 집합으로 계산해야 마스크가 달라도 공정하다.
+    final cacheKey = jsonEncode([prototypes, axes.toList()]);
+    final cached = _calibrationCache[cacheKey];
     final rng = Random(12345);
     final samples = List.generate(types.length, (_) => <double>[]);
-    for (var n = 0; n < _calibrationSamples; n++) {
+    for (var n = 0; cached == null && n < _calibrationSamples; n++) {
       final u = <String, double>{
         for (final k in axes)
           k: (_gauss(rng) * _calibrationSigma).clamp(-1.0, 1.0).toDouble(),
@@ -63,38 +96,40 @@ class PersonaScorer {
     }
 
     final z = <double>[];
+    final stats = <List<double>>[];
     for (var i = 0; i < types.length; i++) {
-      final mean = samples[i].reduce((a, b) => a + b) / samples[i].length;
-      final variance = samples[i]
+      final mean = cached?[i][0] ?? samples[i].reduce((a, b) => a + b) / samples[i].length;
+      final variance = cached == null ? samples[i]
               .map((v) => (v - mean) * (v - mean))
               .reduce((a, b) => a + b) /
-          samples[i].length;
-      final sd = max(sqrt(variance), 1e-6);
+          samples[i].length : 0.0;
+      final sd = cached?[i][1] ?? max(sqrt(variance), 1e-6);
+      stats.add([mean, sd]);
       z.add((raw[i] - mean) / sd);
+    }
+    if (cached == null) {
+      if (_calibrationCache.length >= 128) {
+        _calibrationCache.remove(_calibrationCache.keys.first);
+      }
+      _calibrationCache[cacheKey] = stats;
     }
 
     final maxZ = z.reduce(max);
     final exps = [for (final v in z) exp((v - maxZ) / temperature)];
     final total = exps.reduce((a, b) => a + b);
+    // Shrink sparse results towards an equal mix. Coverage is an evidence
+    // heuristic, not a statistically calibrated confidence/probability.
+    final strength = (coverage / 0.6).clamp(0.0, 1.0).toDouble();
 
     final out = <PersonaScore>[
       for (var i = 0; i < types.length; i++)
         PersonaScore(types[i]['id'] as String, types[i]['label'] as String,
-            exps[i] / total),
+            strength * exps[i] / total + (1 - strength) / types.length),
     ]..sort((a, b) => b.score.compareTo(a.score));
 
     final gap = out.length > 1 ? out[0].score - out[1].score : out[0].score;
 
-    var usedW = 0.0, allW = 0.0;
-    for (final t in types) {
-      final data = t['data'] as Map<String, dynamic>;
-      for (final e in data.entries) {
-        final w = (e.value['W'] as num).toDouble();
-        allW += w;
-        if (axes.contains(e.key)) usedW += w;
-      }
-    }
-    return PersonaScoreResult(out, gap, allW == 0 ? 0 : usedW / allW);
+    return PersonaScoreResult(out, gap, coverage);
   }
 
   /// 1 - D / (2 * sumW): 값이 있는 축만, 가중치 합으로 정규화한 0~1 유사도.

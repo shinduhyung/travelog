@@ -2,11 +2,8 @@
 
 import 'dart:convert';
 import 'dart:math';
-import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
-import 'package:jidoapp/models/city_visit_detail_model.dart';
-import 'package:jidoapp/models/trip_log_entry.dart';
 import 'package:jidoapp/providers/airline_provider.dart';
 import 'package:jidoapp/providers/airport_provider.dart';
 import 'package:jidoapp/providers/city_provider.dart';
@@ -15,8 +12,6 @@ import 'package:jidoapp/providers/trip_log_provider.dart';
 import 'package:jidoapp/services/persona_scorer.dart';
 import 'package:jidoapp/services/traveler_type_store.dart';
 import 'package:jidoapp/services/travel_quantifier.dart';
-import 'package:jidoapp/travel_persona/travel_features.dart';
-import 'package:provider/provider.dart';
 
 import 'package:jidoapp/providers/personality_provider.dart';
 
@@ -44,13 +39,14 @@ class TravelPersonaEngine {
     _apiKey = envKey;
   }
 
+  // DNA signs follow PersonalityProvider: +planned, +documenter, +relaxed.
   static const String _archetypePrototypesJson = r'''
 [
   {
     "id": "identity_seeker",
     "label": "Identity Seeker",
     "data": {
-      "solo_social": {"P": 1.0, "W": 3}, "nature_culture": {"P": 0.2, "W": 2}, "relaxed_intensive": {"P": -0.6, "W": 2}, "planned_spontaneous": {"P": 0.4, "W": 1}, "budget_luxury": {"P": 0.3, "W": 1}, "transit_drive": {"P": 0.4, "W": 1}, "documenter_minimalist": {"P": -0.5, "W": 2}, "morning_night": {"P": 0.6, "W": 1},
+      "solo_social": {"P": 1.0, "W": 3}, "nature_culture": {"P": 0.2, "W": 2}, "relaxed_intensive": {"P": -0.6, "W": 2}, "planned_spontaneous": {"P": -0.4, "W": 1}, "budget_luxury": {"P": 0.3, "W": 1}, "transit_drive": {"P": 0.4, "W": 1}, "documenter_minimalist": {"P": 0.5, "W": 2}, "morning_night": {"P": 0.6, "W": 1},
       "continentDistribution": {"P": 0.2, "W": 1}, "countryDistribution": {"P": 0.0, "W": 0}, "cityDistribution": {"P": -0.4, "W": 1}, "airportDistribution": {"P": 0.0, "W": 0}, "airlineDistribution": {"P": 0.0, "W": 0},
       "countryWealth": {"P": -0.4, "W": 1}, "cityWealth": {"P": -0.3, "W": 1}, "countryType": {"P": -0.2, "W": 1}, "cityType": {"P": -0.5, "W": 1}, "countryNightlife": {"P": -0.7, "W": 1}, "cityNightlife": {"P": -0.8, "W": 1},
       "airlineTime": {"P": 0.5, "W": 1}, "transferAirportScore": {"P": 0.3, "W": 1}, "transferFlightScore": {"P": 0.3, "W": 1},
@@ -61,7 +57,7 @@ class TravelPersonaEngine {
     "id": "wildlife_earth_enthusiast",
     "label": "Wildlife & Earth Enthusiast",
     "data": {
-      "solo_social": {"P": 0.7, "W": 2}, "nature_culture": {"P": 1.0, "W": 3}, "relaxed_intensive": {"P": 0.4, "W": 1}, "planned_spontaneous": {"P": 0.2, "W": 2}, "budget_luxury": {"P": 0.5, "W": 2}, "transit_drive": {"P": -0.8, "W": 2}, "documenter_minimalist": {"P": 0.2, "W": 1}, "morning_night": {"P": 0.9, "W": 2},
+      "solo_social": {"P": 0.7, "W": 2}, "nature_culture": {"P": 1.0, "W": 3}, "relaxed_intensive": {"P": 0.4, "W": 1}, "planned_spontaneous": {"P": -0.2, "W": 2}, "budget_luxury": {"P": 0.5, "W": 2}, "transit_drive": {"P": -0.8, "W": 2}, "documenter_minimalist": {"P": -0.2, "W": 1}, "morning_night": {"P": 0.9, "W": 2},
       "continentDistribution": {"P": 0.3, "W": 1}, "countryDistribution": {"P": 0.0, "W": 1}, "cityDistribution": {"P": -0.8, "W": 1}, "airportDistribution": {"P": -0.5, "W": 1}, "airlineDistribution": {"P": 0.0, "W": 1},
       "countryWealth": {"P": 0.0, "W": 0}, "cityWealth": {"P": 0.0, "W": 0}, "countryType": {"P": -1.0, "W": 2}, "cityType": {"P": -1.0, "W": 2}, "countryNightlife": {"P": -0.9, "W": 1}, "cityNightlife": {"P": -1.0, "W": 1},
       "airlineTime": {"P": 0.4, "W": 1}, "transferAirportScore": {"P": 0.6, "W": 1}, "transferFlightScore": {"P": 0.6, "W": 1},
@@ -72,7 +68,7 @@ class TravelPersonaEngine {
     "id": "cultural_decoder",
     "label": "Cultural Decoder",
     "data": {
-      "solo_social": {"P": -0.2, "W": 2}, "nature_culture": {"P": -1.0, "W": 3}, "relaxed_intensive": {"P": -0.3, "W": 1}, "planned_spontaneous": {"P": -0.4, "W": 1}, "budget_luxury": {"P": -0.6, "W": 2}, "transit_drive": {"P": 0.8, "W": 2}, "documenter_minimalist": {"P": -0.8, "W": 2}, "morning_night": {"P": -0.3, "W": 2},
+      "solo_social": {"P": -0.2, "W": 2}, "nature_culture": {"P": -1.0, "W": 3}, "relaxed_intensive": {"P": -0.3, "W": 1}, "planned_spontaneous": {"P": 0.4, "W": 1}, "budget_luxury": {"P": -0.6, "W": 2}, "transit_drive": {"P": 0.8, "W": 2}, "documenter_minimalist": {"P": 0.8, "W": 2}, "morning_night": {"P": -0.3, "W": 2},
       "continentDistribution": {"P": 0.0, "W": 0}, "countryDistribution": {"P": 0.0, "W": 0}, "cityDistribution": {"P": 0.8, "W": 1}, "airportDistribution": {"P": 0.6, "W": 1}, "airlineDistribution": {"P": 0.0, "W": 0},
       "countryWealth": {"P": 0.6, "W": 1}, "cityWealth": {"P": 0.8, "W": 1}, "countryType": {"P": 0.9, "W": 2}, "cityType": {"P": 1.0, "W": 2}, "countryNightlife": {"P": 0.3, "W": 1}, "cityNightlife": {"P": 0.5, "W": 1},
       "airlineTime": {"P": 0.0, "W": 0}, "transferAirportScore": {"P": -0.5, "W": 1}, "transferFlightScore": {"P": -0.5, "W": 1},
@@ -83,7 +79,7 @@ class TravelPersonaEngine {
     "id": "global_connector",
     "label": "Global Connector",
     "data": {
-      "solo_social": {"P": -0.9, "W": 3}, "nature_culture": {"P": 0.0, "W": 1}, "relaxed_intensive": {"P": 0.6, "W": 2}, "planned_spontaneous": {"P": 0.9, "W": 3}, "budget_luxury": {"P": 1.0, "W": 3}, "transit_drive": {"P": 0.9, "W": 2}, "documenter_minimalist": {"P": -0.4, "W": 1}, "morning_night": {"P": -0.8, "W": 2},
+      "solo_social": {"P": -0.9, "W": 3}, "nature_culture": {"P": 0.0, "W": 1}, "relaxed_intensive": {"P": 0.6, "W": 2}, "planned_spontaneous": {"P": -0.9, "W": 3}, "budget_luxury": {"P": 1.0, "W": 3}, "transit_drive": {"P": 0.9, "W": 2}, "documenter_minimalist": {"P": 0.4, "W": 1}, "morning_night": {"P": -0.8, "W": 2},
       "continentDistribution": {"P": 0.6, "W": 1}, "countryDistribution": {"P": 0.7, "W": 1}, "cityDistribution": {"P": 0.8, "W": 1}, "airportDistribution": {"P": 0.7, "W": 1}, "airlineDistribution": {"P": 0.9, "W": 1},
       "countryWealth": {"P": -0.7, "W": 1}, "cityWealth": {"P": -0.6, "W": 1}, "countryType": {"P": 0.2, "W": 1}, "cityType": {"P": 0.4, "W": 1}, "countryNightlife": {"P": 0.8, "W": 1}, "cityNightlife": {"P": 0.9, "W": 2},
       "airlineTime": {"P": 0.2, "W": 1}, "transferAirportScore": {"P": 0.8, "W": 1}, "transferFlightScore": {"P": 0.8, "W": 1},
@@ -94,7 +90,7 @@ class TravelPersonaEngine {
     "id": "joy_collector",
     "label": "Joy Collector",
     "data": {
-      "solo_social": {"P": -0.5, "W": 2}, "nature_culture": {"P": -0.3, "W": 2}, "relaxed_intensive": {"P": -1.0, "W": 3}, "planned_spontaneous": {"P": -0.6, "W": 2}, "budget_luxury": {"P": -1.0, "W": 3}, "transit_drive": {"P": -0.5, "W": 2}, "documenter_minimalist": {"P": 0.6, "W": 1}, "morning_night": {"P": 0.0, "W": 0},
+      "solo_social": {"P": -0.5, "W": 2}, "nature_culture": {"P": -0.3, "W": 2}, "relaxed_intensive": {"P": -1.0, "W": 3}, "planned_spontaneous": {"P": 0.6, "W": 2}, "budget_luxury": {"P": -1.0, "W": 3}, "transit_drive": {"P": -0.5, "W": 2}, "documenter_minimalist": {"P": -0.6, "W": 1}, "morning_night": {"P": 0.0, "W": 0},
       "continentDistribution": {"P": -0.5, "W": 1}, "countryDistribution": {"P": -0.6, "W": 1}, "cityDistribution": {"P": -0.5, "W": 1}, "airportDistribution": {"P": 0.0, "W": 0}, "airlineDistribution": {"P": -0.7, "W": 1},
       "countryWealth": {"P": 0.7, "W": 1}, "cityWealth": {"P": 0.9, "W": 2}, "countryType": {"P": 0.3, "W": 1}, "cityType": {"P": 0.2, "W": 1}, "countryNightlife": {"P": 0.2, "W": 1}, "cityNightlife": {"P": 0.4, "W": 1},
       "airlineTime": {"P": -0.2, "W": 1}, "transferAirportScore": {"P": -0.9, "W": 1}, "transferFlightScore": {"P": -0.9, "W": 1},
@@ -105,7 +101,7 @@ class TravelPersonaEngine {
     "id": "achievement_hunter",
     "label": "Achievement Hunter",
     "data": {
-      "solo_social": {"P": 0.5, "W": 3}, "nature_culture": {"P": 0.0, "W": 2}, "relaxed_intensive": {"P": 1.0, "W": 3}, "planned_spontaneous": {"P": -0.8, "W": 3}, "budget_luxury": {"P": 0.0, "W": 2}, "transit_drive": {"P": 0.6, "W": 2}, "documenter_minimalist": {"P": -1.0, "W": 2}, "morning_night": {"P": 0.7, "W": 1},
+      "solo_social": {"P": 0.5, "W": 3}, "nature_culture": {"P": 0.0, "W": 2}, "relaxed_intensive": {"P": -1.0, "W": 3}, "planned_spontaneous": {"P": 0.8, "W": 3}, "budget_luxury": {"P": 0.0, "W": 2}, "transit_drive": {"P": 0.6, "W": 2}, "documenter_minimalist": {"P": 1.0, "W": 2}, "morning_night": {"P": 0.7, "W": 1},
       "continentDistribution": {"P": 1.0, "W": 2}, "countryDistribution": {"P": 1.0, "W": 2}, "cityDistribution": {"P": 1.0, "W": 2}, "airportDistribution": {"P": 1.0, "W": 2}, "airlineDistribution": {"P": 0.8, "W": 1},
       "countryWealth": {"P": 0.0, "W": 1}, "cityWealth": {"P": 0.0, "W": 1}, "countryType": {"P": 0.0, "W": 0}, "cityType": {"P": 0.0, "W": 0}, "countryNightlife": {"P": 0.0, "W": 1}, "cityNightlife": {"P": 0.0, "W": 1},
       "airlineTime": {"P": -0.6, "W": 1}, "transferAirportScore": {"P": 0.4, "W": 1}, "transferFlightScore": {"P": 0.4, "W": 1},
@@ -116,7 +112,7 @@ class TravelPersonaEngine {
     "id": "efficiency_maximizer",
     "label": "Efficiency Maximizer",
     "data": {
-      "solo_social": {"P": -1.0, "W": 3}, "nature_culture": {"P": -0.5, "W": 1}, "relaxed_intensive": {"P": 1.0, "W": 3}, "planned_spontaneous": {"P": -1.0, "W": 3}, "budget_luxury": {"P": -0.4, "W": 2}, "transit_drive": {"P": -0.7, "W": 2}, "documenter_minimalist": {"P": -0.2, "W": 1}, "morning_night": {"P": 0.5, "W": 1},
+      "solo_social": {"P": -1.0, "W": 3}, "nature_culture": {"P": -0.5, "W": 1}, "relaxed_intensive": {"P": -1.0, "W": 3}, "planned_spontaneous": {"P": 1.0, "W": 3}, "budget_luxury": {"P": -0.4, "W": 2}, "transit_drive": {"P": -0.7, "W": 2}, "documenter_minimalist": {"P": 0.2, "W": 1}, "morning_night": {"P": 0.5, "W": 1},
       "continentDistribution": {"P": -0.8, "W": 1}, "countryDistribution": {"P": -0.9, "W": 1}, "cityDistribution": {"P": -0.7, "W": 1}, "airportDistribution": {"P": -0.8, "W": 1}, "airlineDistribution": {"P": -0.6, "W": 1},
       "countryWealth": {"P": 0.8, "W": 1}, "cityWealth": {"P": 0.7, "W": 1}, "countryType": {"P": 0.5, "W": 1}, "cityType": {"P": 0.4, "W": 1}, "countryNightlife": {"P": -0.6, "W": 1}, "cityNightlife": {"P": -0.8, "W": 1},
       "airlineTime": {"P": -0.5, "W": 1}, "transferAirportScore": {"P": -0.8, "W": 1}, "transferFlightScore": {"P": -0.8, "W": 1},
@@ -127,7 +123,7 @@ class TravelPersonaEngine {
     "id": "inner_sanctuary_seeker",
     "label": "Inner Sanctuary Seeker",
     "data": {
-      "solo_social": {"P": 0.0, "W": 2}, "nature_culture": {"P": 0.8, "W": 2}, "relaxed_intensive": {"P": 0.9, "W": 3}, "planned_spontaneous": {"P": 0.5, "W": 3}, "budget_luxury": {"P": 0.2, "W": 2}, "transit_drive": {"P": -0.3, "W": 2}, "documenter_minimalist": {"P": 0.8, "W": 2}, "morning_night": {"P": 0.4, "W": 1},
+      "solo_social": {"P": 0.0, "W": 2}, "nature_culture": {"P": 0.8, "W": 2}, "relaxed_intensive": {"P": 0.9, "W": 3}, "planned_spontaneous": {"P": -0.5, "W": 3}, "budget_luxury": {"P": 0.2, "W": 2}, "transit_drive": {"P": -0.3, "W": 2}, "documenter_minimalist": {"P": -0.8, "W": 2}, "morning_night": {"P": 0.4, "W": 1},
       "continentDistribution": {"P": 0.4, "W": 1}, "countryDistribution": {"P": 0.3, "W": 1}, "cityDistribution": {"P": 0.0, "W": 1}, "airportDistribution": {"P": 0.0, "W": 1}, "airlineDistribution": {"P": 0.0, "W": 0},
       "countryWealth": {"P": 0.0, "W": 0}, "cityWealth": {"P": 0.0, "W": 0}, "countryType": {"P": -0.6, "W": 3}, "cityType": {"P": -0.4, "W": 1}, "countryNightlife": {"P": 0.3, "W": 1}, "cityNightlife": {"P": 0.4, "W": 1},
       "airlineTime": {"P": 0.0, "W": 0}, "transferAirportScore": {"P": 0.3, "W": 0}, "transferFlightScore": {"P": 0.3, "W": 0},
@@ -138,7 +134,7 @@ class TravelPersonaEngine {
     "id": "sensory_immersionist",
     "label": "Sensory Immersionist",
     "data": {
-      "solo_social": {"P": -0.4, "W": 2}, "nature_culture": {"P": -0.2, "W": 2}, "relaxed_intensive": {"P": -0.9, "W": 3}, "planned_spontaneous": {"P": 0.7, "W": 2}, "budget_luxury": {"P": 0.4, "W": 1}, "transit_drive": {"P": 0.5, "W": 1}, "documenter_minimalist": {"P": 0.9, "W": 2}, "morning_night": {"P": 0.0, "W": 2},
+      "solo_social": {"P": -0.4, "W": 2}, "nature_culture": {"P": -0.2, "W": 2}, "relaxed_intensive": {"P": 0.9, "W": 3}, "planned_spontaneous": {"P": -0.7, "W": 2}, "budget_luxury": {"P": 0.4, "W": 1}, "transit_drive": {"P": 0.5, "W": 1}, "documenter_minimalist": {"P": -0.9, "W": 2}, "morning_night": {"P": 0.0, "W": 2},
       "continentDistribution": {"P": -0.4, "W": 1}, "countryDistribution": {"P": -0.7, "W": 1}, "cityDistribution": {"P": -0.9, "W": 2}, "airportDistribution": {"P": -0.8, "W": 1}, "airlineDistribution": {"P": -0.6, "W": 1},
       "countryWealth": {"P": -0.3, "W": 1}, "cityWealth": {"P": -0.2, "W": 1}, "countryType": {"P": -0.4, "W": 1}, "cityType": {"P": -0.5, "W": 1}, "countryNightlife": {"P": -0.4, "W": 1}, "cityNightlife": {"P": -0.5, "W": 1},
       "airlineTime": {"P": 0.0, "W": 0}, "transferAirportScore": {"P": 0.0, "W": 0}, "transferFlightScore": {"P": -0.5, "W": 0},
@@ -149,7 +145,7 @@ class TravelPersonaEngine {
     "id": "freedom_drifter",
     "label": "Freedom Drifter",
     "data": {
-      "solo_social": {"P": 0.8, "W": 2}, "nature_culture": {"P": -0.6, "W": 2}, "relaxed_intensive": {"P": -0.5, "W": 2}, "planned_spontaneous": {"P": 1.0, "W": 3}, "budget_luxury": {"P": 0.4, "W": 2}, "transit_drive": {"P": 0.7, "W": 2}, "documenter_minimalist": {"P": 0.5, "W": 2}, "morning_night": {"P": -0.4, "W": 2},
+      "solo_social": {"P": 0.8, "W": 2}, "nature_culture": {"P": -0.6, "W": 2}, "relaxed_intensive": {"P": -0.5, "W": 2}, "planned_spontaneous": {"P": -1.0, "W": 3}, "budget_luxury": {"P": 0.4, "W": 2}, "transit_drive": {"P": 0.7, "W": 2}, "documenter_minimalist": {"P": -0.5, "W": 2}, "morning_night": {"P": -0.4, "W": 2},
       "continentDistribution": {"P": 0.2, "W": 1}, "countryDistribution": {"P": -0.3, "W": 1}, "cityDistribution": {"P": -0.6, "W": 1}, "airportDistribution": {"P": -0.5, "W": 1}, "airlineDistribution": {"P": 0.0, "W": 0},
       "countryWealth": {"P": 0.3, "W": 1}, "cityWealth": {"P": 0.4, "W": 1}, "countryType": {"P": 0.6, "W": 1}, "cityType": {"P": 0.8, "W": 2}, "countryNightlife": {"P": 0.2, "W": 1}, "cityNightlife": {"P": 0.3, "W": 1},
       "airlineTime": {"P": 0.0, "W": 0}, "transferAirportScore": {"P": 0.0, "W": 0}, "transferFlightScore": {"P": 0.0, "W": 0},
@@ -169,18 +165,18 @@ class TravelPersonaEngine {
       ) async {
     _ensureModel();
 
-    if (_apiKey == null) {
-      throw Exception('DeepSeek API key initialization failed');
-    }
-
-    if (!personalityProvider.isCalculated) {
+    if (!personalityProvider.isCalculated && personalityProvider.responses.isNotEmpty) {
+      await personalityProvider.loadQuestions();
       personalityProvider.calculateScores();
     }
-    final dnaScores = personalityProvider.finalScores;
+    // Older accounts can have calculated=true and eight 50s without any answers.
+    final dnaScores = personalityProvider.responses.isNotEmpty
+        ? personalityProvider.finalScores : <String, double>{};
 
     Map<String, double> dnaNormalized = {};
     for (final entry in dnaScores.entries) {
       final v = entry.value;
+      if (!v.isFinite) continue;
       dnaNormalized[entry.key] = ((v - 50.0) / 50.0).clamp(-1.0, 1.0);
     }
 
@@ -192,6 +188,7 @@ class TravelPersonaEngine {
     );
 
     final calculatedFeatures = quantifier.quantify();
+    final observedTravelAxes = quantifier.observedAxes;
 
     // 값이 없는 축은 0.0으로 채우지 않고 빼둔다 (PersonaScorer가 계산에서 제외).
     final fullFeatureVector = <String, double>{
@@ -208,6 +205,8 @@ class TravelPersonaEngine {
       "transferAirportScore": calculatedFeatures.transferAirportScore,
       "transferFlightScore": calculatedFeatures.transferFlightScore,
     };
+    fullFeatureVector.removeWhere((key, value) =>
+        !dnaNormalized.containsKey(key) && !observedTravelAxes.contains(key));
 
     final rawCityVisitData = _getRawCityVisitList(cityProvider);
     final rawTripLogs = _getRawTripLogList(tripLogProvider);
@@ -216,6 +215,9 @@ class TravelPersonaEngine {
     // 1단계: AI는 도시/랜드마크 13개 축만 추정한다 (점수 계산은 하지 않음).
     String aiNote = 'Success';
     try {
+      if (_apiKey == null || (rawCityVisitData.isEmpty && rawTripLogs.isEmpty)) {
+        throw StateError('No API key or city/log evidence');
+      }
       final axesPayload = {
         "visited_cities": rawCityVisitData,
         "trip_logs": rawTripLogs,
@@ -243,6 +245,9 @@ class TravelPersonaEngine {
     // 3단계: AI는 설명문만 작성 (실패해도 점수 결과는 유지).
     var explanation = '';
     try {
+      if (_apiKey == null || !result.hasSignal) {
+        throw StateError('No API key or discriminating evidence');
+      }
       final top = result.scores.take(3).map((s) => {"label": s.label, "score": s.score}).toList();
       final explainPayload = {
         "top_types": top,
@@ -259,7 +264,9 @@ class TravelPersonaEngine {
       final explainJson = await _callDeepSeek(_explainSystemPrompt, jsonEncode(explainPayload));
       explanation = ((jsonDecode(explainJson) as Map<String, dynamic>)['ai_explanation'] as String?) ?? '';
     } catch (e) {
-      explanation = 'Explanation unavailable: $e';
+      explanation = result.hasSignal
+          ? 'These relative scores are based on your recorded travel preferences. Add more travel records to refine your result.'
+          : 'Add quiz answers or travel records to discover your traveler type.';
     }
 
     return jsonEncode({
@@ -271,6 +278,7 @@ class TravelPersonaEngine {
         "persona_scores": personaScores,
         "is_close": result.isClose,
         "low_data": result.lowData,
+        "has_signal": result.hasSignal,
         "score_gap": result.gap,
         "data_coverage": result.coverage,
         "debug_info": aiNote,
@@ -342,7 +350,7 @@ Output STRICT JSON: {"ai_explanation": "..."}
       final detail = entry.value;
       final cityName = entry.key;
 
-      if (cityName == homeCity || detail.hasLived) continue;
+      if (cityName == homeCity || detail.hasLived || !cityProvider.isVisited(cityName)) continue;
 
       final cityModel = cityProvider.getCityDetail(cityName);
 

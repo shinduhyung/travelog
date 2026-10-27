@@ -1,5 +1,8 @@
+import 'dart:ui' as ui;
+import 'dart:math' as math;
 // lib/screens/my_trips_tab_screen.dart
 import 'package:jidoapp/widgets/new_tag.dart';
+import 'package:jidoapp/widgets/next_adventure_card.dart';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
@@ -377,48 +380,41 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                 Stack(
                   clipBehavior: Clip.none,
                   children: [
-                    Container(
-                      height: 300,
+                    SizedBox(
+                      height: MediaQuery.of(context).padding.top + 120,
                       width: double.infinity,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(40),
-                          bottomRight: Radius.circular(40),
-                        ),
-                        image: DecorationImage(
-                          image: AssetImage('assets/icons/app_logo.png'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
+                      child: CustomPaint(painter: _HeaderWavePainter(MediaQuery.of(context).padding.top + 44)),
                     ),
                     SafeArea(
                       bottom: false,
-                      child: Container(
-                        height: 220,
-                        padding: const EdgeInsets.symmetric(horizontal: 28),
-                        alignment: Alignment.centerLeft,
-                        child:  Text(
-                          tr('Travelog'),
-                          style: TextStyle(
-                            fontSize: 42,
-                            fontWeight: FontWeight.w900,
-                            color: Colors.white,
-                            letterSpacing: -0.5,
-                            fontFamily: 'Pretendard',
-                            height: 1.0,
-                            shadows: [
-                              Shadow(
-                                offset: Offset(0, 2),
-                                blurRadius: 10.0,
-                                color: Color.fromARGB(120, 0, 0, 0),
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(28, 10, 28, 0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Image.asset(
+                              'assets/icons/header_plane.png',
+                              height: 44,
+                              fit: BoxFit.contain,
+                            ),
+                            const SizedBox(width: 14),
+                            Text(
+                              tr('Travelog'),
+                              style: const TextStyle(
+                                fontSize: 34,
+                                fontWeight: FontWeight.w800,
+                                color: Color(0xFF1A1D2E),
+                                letterSpacing: -0.5,
+                                fontFamily: 'Pretendard',
+                                height: 1.0,
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 220, left: 24, right: 24),
+                      padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top + 84, left: 24, right: 24),
                       child: _buildProfileSection(context),
                     ),
                   ],
@@ -801,8 +797,10 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                     onOpen: () => _openSocial(SocialHub.openFriends),
                     onProfile: () => _openSocial(SocialHub.openProfile),
                     onFriends: () => _openSocial(SocialHub.openFriends),
-                    onDuels: () => _openSocial(SocialHub.openDuels),
+                    onStats: () => _openSocial(SocialHub.openStats),
                   ),
+                  const SizedBox(height: 14),
+                  const NextAdventureCard(),
                   const SizedBox(height: 18),
 
                   GestureDetector(
@@ -1305,4 +1303,37 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
       },
     );
   }
+}
+
+
+/// 상단 파스텔 물결 배경 (하늘색 / 연보라 / 살구색 세 겹).
+class _HeaderWavePainter extends CustomPainter {
+  _HeaderWavePainter(this.top);
+
+  final double top;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    canvas.drawRect(Offset.zero & size, Paint()..color = Colors.white);
+    void wave(double y, double amp, double phase, Color a, Color b) {
+      final path = ui.Path()..moveTo(0, size.height);
+      path.lineTo(0, y);
+      for (double x = 0; x <= size.width; x += 4) {
+        path.lineTo(x, y - amp * math.sin(x / size.width * math.pi * 1.6 + phase));
+      }
+      path.lineTo(size.width, size.height);
+      path.close();
+      canvas.drawPath(
+        path,
+        Paint()..shader = LinearGradient(colors: [a, b]).createShader(Offset(0, top) & Size(size.width, size.height - top)),
+      );
+    }
+
+    wave(top + 22, 14, 0.2, const Color(0xFFBDE8F5), const Color(0xFFD5F0F8));
+    wave(top + 42, 12, 1.4, const Color(0xFFDCD6F2), const Color(0xFFE8E4F7));
+    wave(top + 64, 10, 2.6, const Color(0xFFFCE6D8), const Color(0xFFFDF1E8));
+  }
+
+  @override
+  bool shouldRepaint(_HeaderWavePainter old) => old.top != top;
 }

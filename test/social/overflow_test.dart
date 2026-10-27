@@ -8,7 +8,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:jidoapp/social/screens/compare/compare_screen.dart';
 import 'package:jidoapp/social/screens/duels_screen.dart';
 import 'package:jidoapp/social/screens/friends_screen.dart';
+import 'package:jidoapp/social/models/global_stats.dart';
 import 'package:jidoapp/social/screens/leaderboard_screen.dart';
+import 'package:jidoapp/social/screens/stats_screen.dart';
+import 'package:jidoapp/social/services/global_stats_service.dart';
 
 import 'fixtures.dart';
 
@@ -17,12 +20,24 @@ void main() {
 
   setUpAll(setUpTestWorld);
 
-  setUp(() => collectLayoutErrors(layoutErrors));
+  setUp(() {
+    collectLayoutErrors(layoutErrors);
+    GlobalStatsService.instance.debugLoader = () async => GlobalStats.fromMap({
+          'updatedAt': '2026-10-27',
+          'metrics': {
+            for (final k in ['countries_total', 'countries_asia', 'gawc_cities', 'flights'])
+              k: {'mean': 8.4, 'median': 6, 'hist': {'1': 5, '3': 9, '6': 7, '12': 4, '40': 1}},
+          },
+        });
+  });
+
+  tearDown(() => GlobalStatsService.instance.debugLoader = null);
 
   final screens = <String, Widget Function()>{
     'friends': () => const FriendsScreen(),
     'duels': () => const DuelsScreen(),
     'leaderboard': () => const LeaderboardScreen(),
+    'stats': () => const StatsScreen(),
     for (var t = 0; t < CompareScreen.tabs.length; t++) 'compare-tab$t': () => CompareScreen(friendUid: 'f1', initialTab: t),
     for (var t = 0; t < CompareScreen.tabs.length; t++) 'compare-sparse-tab$t': () => CompareScreen(friendUid: 'f3', initialTab: t),
   };

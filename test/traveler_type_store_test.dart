@@ -20,6 +20,13 @@ void main() {
     expect(TravelerTypeStore.isValid(_result(version: TravelerTypeStore.currentVersion)), isTrue);
   });
 
+  test('non-discriminating uniform result must not become a cached leading type', () {
+    final value = jsonDecode(_result(version: TravelerTypeStore.currentVersion));
+    value['summary']['has_signal'] = false;
+    expect(TravelerTypeStore.isValid(jsonEncode(value)), isFalse);
+    expect(TravelerTypeStore.isValid(_result(version: 2)), isFalse);
+  });
+
   test('empty scores / garbage / null are invalid', () {
     expect(TravelerTypeStore.isValid(_result(version: TravelerTypeStore.currentVersion, scores: false)), isFalse);
     expect(TravelerTypeStore.isValid('not json'), isFalse);

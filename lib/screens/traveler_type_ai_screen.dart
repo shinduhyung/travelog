@@ -1,6 +1,5 @@
 // lib/screens/traveler_type_ai_screen.dart
 import 'dart:convert';
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
@@ -25,7 +24,6 @@ class TravelerTypeAiScreen extends StatefulWidget {
 
 class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
   bool _isLoading = false;
-  String? _rawResult;
   Map<String, dynamic>? _parsed;
   String? _error;
 
@@ -68,7 +66,6 @@ class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
         if (_hasValidScores(parsed) && TravelerTypeStore.isValid(savedJson)) {
           if (mounted) {
             setState(() {
-              _rawResult = savedJson;
               _parsed = parsed;
             });
           }
@@ -89,7 +86,6 @@ class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
     setState(() {
       _isLoading = true;
       _error = null;
-      _rawResult = 'Running analysis...';
       _parsed = null;
     });
 
@@ -117,7 +113,6 @@ class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
       // (or get treated as "successful" on the next app launch).
       if (mounted) {
         setState(() {
-          _rawResult = result;
           _parsed = parsed;
           _isLoading = false;
         });
@@ -125,14 +120,15 @@ class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
 
       // 로컬 저장 + Firestore 저장. 서버 저장이 실패해도 로컬에는 남고,
       // 다음 앱 시작/로그인 때 TravelerTypeStore.sync가 다시 올린다.
-      if (_hasValidScores(parsed)) {
+      if (parsed['summary']?['has_signal'] == false) {
+        await TravelerTypeStore.clearResult();
+      } else if (_hasValidScores(parsed)) {
         await TravelerTypeStore.saveResult(result);
       }
     } catch (e) {
       if (mounted) {
         setState(() {
           _error = 'Analysis failed: $e';
-          _rawResult = 'Analysis failed: $e';
           _isLoading = false;
         });
       }
@@ -243,6 +239,12 @@ class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
       final types = (_parsed!['summary']?['persona_scores'] as List<dynamic>?)
           ?.cast<Map<String, dynamic>>() ?? [];
       final summary = _parsed!['summary'] as Map<String, dynamic>?;
+      if (summary?['has_signal'] == false) {
+        return Padding(
+          padding: const EdgeInsets.all(24),
+          child: Text(tr('Add quiz answers or travel records to discover your traveler type.')),
+        );
+      }
 
       if (types.isEmpty) {
         final debugInfo = summary?['debug_info'] as String? ?? 'Unknown error in scoring process.';
@@ -264,22 +266,7 @@ class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
           return scoreB.compareTo(scoreA);
         });
 
-      // Score Adjustment Logic (Midpoint Min-Max Stretch)
-      final List<double> rawScores = sortedTypes
-          .map((t) => (t['score'] as num).toDouble() * 100)
-          .toList();
-
-      double mRaw = rawScores.reduce(min);
-      double MRaw = rawScores.reduce(max);
-
-      double aBound = mRaw / 2.0;
-      double bBound = (100.0 + MRaw) / 2.0;
-
-      double range = bBound - aBound;
-      if (range == 0) range = 1.0; // Prevent division by zero
-
       final topType = sortedTypes.first;
-      final topTypeLabel = topType['label'] ?? topType['id'] ?? '';
       final aiExplanation = summary?['ai_explanation'] as String? ?? 'Analysis rationale not available.';
 
       return Column(
@@ -296,15 +283,22 @@ class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
                 color: Colors.grey.shade900),
           ),
           const SizedBox(height: 12),
+          Text(tr('Relative scores across the 10 traveler types; not probabilities.')),
+          if (summary?['low_data'] == true)
+            Padding(
+              padding: const EdgeInsets.only(top: 8),
+              child: Text(tr('This result is provisional. Add more quiz answers or travel records.')),
+            ),
+          if (summary?['is_close'] == true && sortedTypes.length > 1)
+            Padding(
+              padding: const EdgeInsets.only(top: 8),
+              child: Text('${tr('Blended type')}: ${tr(sortedTypes[0]['label'] as String)} + ${tr(sortedTypes[1]['label'] as String)}'),
+            ),
+          const SizedBox(height: 12),
 
           ...sortedTypes.asMap().entries.map((entry) {
-            final index = entry.key;
             final t = entry.value;
-
-            // Apply Midpoint Stretch
-            double currentRaw = rawScores[index];
-            double adjustedScore = ((currentRaw - aBound) / range) * 100.0;
-            adjustedScore = adjustedScore.clamp(0.0, 100.0);
+            final adjustedScore = (t['score'] as num).toDouble() * 100;
 
             final label = t['label'] ?? t['id'] ?? '';
             final isTopType = t['id'] == topType['id'];
@@ -315,7 +309,7 @@ class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
               child: Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: isTopType ? mint.withOpacity(0.1) : Colors.white,
+                  color: isTopType ? mint.withValues(alpha: 0.1) : Colors.white,
                   borderRadius: BorderRadius.circular(16),
                   border: Border.all(
                       color: isTopType ? darkMint : Colors.grey.shade200,
@@ -323,7 +317,7 @@ class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
                   boxShadow: [
                     if (isTopType)
                       BoxShadow(
-                          color: darkMint.withOpacity(0.1),
+                          color: darkMint.withValues(alpha: 0.1),
                           blurRadius: 10,
                           offset: const Offset(0, 4))
                   ],

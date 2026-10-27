@@ -33,7 +33,7 @@ void main() {
                         onOpen: () {},
                         onProfile: () {},
                         onFriends: () {},
-                        onDuels: () {},
+                        onStats: () {},
                       ),
                     ),
                   ),
