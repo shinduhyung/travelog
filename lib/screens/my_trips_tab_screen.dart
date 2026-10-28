@@ -1,5 +1,3 @@
-import 'dart:ui' as ui;
-import 'dart:math' as math;
 // lib/screens/my_trips_tab_screen.dart
 import 'package:jidoapp/widgets/new_tag.dart';
 import 'package:jidoapp/widgets/next_adventure_card.dart';
@@ -381,27 +379,53 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                   clipBehavior: Clip.none,
                   children: [
                     SizedBox(
-                      height: MediaQuery.of(context).padding.top + 120,
+                      height: MediaQuery.of(context).padding.top + 164,
                       width: double.infinity,
-                      child: CustomPaint(painter: _HeaderWavePainter(MediaQuery.of(context).padding.top + 44)),
+                      child: Stack(
+                        children: [
+                          const Positioned.fill(child: ColoredBox(color: Colors.white)),
+                          Positioned(
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            height: 112,
+                            child: Image.asset('assets/icons/header_clouds.png', fit: BoxFit.fill),
+                          ),
+                          Positioned(
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            height: 26,
+                            child: const DecoratedBox(
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  colors: [Color(0x00F8F9FA), Color(0xFFF8F9FA)],
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                     SafeArea(
                       bottom: false,
                       child: Padding(
-                        padding: const EdgeInsets.fromLTRB(28, 10, 28, 0),
+                        padding: const EdgeInsets.fromLTRB(28, 20, 28, 0),
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Image.asset(
                               'assets/icons/header_plane.png',
-                              height: 44,
+                              height: 30,
                               fit: BoxFit.contain,
                             ),
-                            const SizedBox(width: 14),
+                            const SizedBox(width: 10),
                             Text(
                               tr('Travelog'),
                               style: const TextStyle(
-                                fontSize: 34,
+                                fontSize: 24,
                                 fontWeight: FontWeight.w800,
                                 color: Color(0xFF1A1D2E),
                                 letterSpacing: -0.5,
@@ -414,7 +438,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top + 84, left: 24, right: 24),
+                      padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top + 114, left: 24, right: 24),
                       child: _buildProfileSection(context),
                     ),
                   ],
@@ -1305,35 +1329,3 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
   }
 }
 
-
-/// 상단 파스텔 물결 배경 (하늘색 / 연보라 / 살구색 세 겹).
-class _HeaderWavePainter extends CustomPainter {
-  _HeaderWavePainter(this.top);
-
-  final double top;
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    canvas.drawRect(Offset.zero & size, Paint()..color = Colors.white);
-    void wave(double y, double amp, double phase, Color a, Color b) {
-      final path = ui.Path()..moveTo(0, size.height);
-      path.lineTo(0, y);
-      for (double x = 0; x <= size.width; x += 4) {
-        path.lineTo(x, y - amp * math.sin(x / size.width * math.pi * 1.6 + phase));
-      }
-      path.lineTo(size.width, size.height);
-      path.close();
-      canvas.drawPath(
-        path,
-        Paint()..shader = LinearGradient(colors: [a, b]).createShader(Offset(0, top) & Size(size.width, size.height - top)),
-      );
-    }
-
-    wave(top + 22, 14, 0.2, const Color(0xFFBDE8F5), const Color(0xFFD5F0F8));
-    wave(top + 42, 12, 1.4, const Color(0xFFDCD6F2), const Color(0xFFE8E4F7));
-    wave(top + 64, 10, 2.6, const Color(0xFFFCE6D8), const Color(0xFFFDF1E8));
-  }
-
-  @override
-  bool shouldRepaint(_HeaderWavePainter old) => old.top != top;
-}

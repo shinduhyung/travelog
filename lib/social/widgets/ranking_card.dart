@@ -169,10 +169,10 @@ class _Row extends StatelessWidget {
                 Text(row.label,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(fontSize: 13.5, fontWeight: FontWeight.w700, color: Color(0xFF111827), height: 1.1)),
+                    style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFF111827), height: 1.0)),
                 if (row.sub != null)
-                  Text(row.sub!, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 9.5, color: Color(0xFF9CA3AF), height: 1.1)),
-                const SizedBox(height: 3),
+                  Text(row.sub!, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 9, color: Color(0xFF9CA3AF), height: 1.0)),
+                const SizedBox(height: 2),
                 ClipRRect(
                   borderRadius: BorderRadius.circular(4),
                   child: Stack(children: [

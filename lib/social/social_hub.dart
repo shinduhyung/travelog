@@ -101,7 +101,16 @@ Route<T> socialRoute<T>(WidgetBuilder builder) => MaterialPageRoute<T>(
       settings: const RouteSettings(name: socialRouteName),
       builder: (context) {
         final store = SocialHub.store;
-        final page = Theme(data: SocialHub.theme, child: DuelInviteListener(child: Builder(builder: builder)));
+        // 안드로이드 하단 네비게이션 바에 내용이 가리지 않도록 화면을 그 위에서 끝낸다
+        final page = Theme(
+          data: SocialHub.theme,
+          child: Builder(
+            builder: (context) => ColoredBox(
+              color: Theme.of(context).scaffoldBackgroundColor,
+              child: SafeArea(top: false, child: DuelInviteListener(child: Builder(builder: builder))),
+            ),
+          ),
+        );
         return store == null ? page : SocialScope(store: store, child: page);
       },
     );
