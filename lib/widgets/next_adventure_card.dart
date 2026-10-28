@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:jidoapp/widgets/new_tag.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -39,8 +40,47 @@ String _photoUrl(String name) {
   return 'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/ranked_cities%2F$file.jpg.jpg?alt=media';
 }
 
-String _landmarkUrl(String name) =>
-    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/countrydex%2F${_snake(name)}.jpg?alt=media';
+/// 국가/도시 화면과 같은 랜드마크 사진: new_countrydex/{iso3}_{이름}.webp, 없으면 m_{이름}.webp
+List<String> _landmarkUrls(Landmark l) {
+  final snake = _snake(l.name);
+  if (snake.isEmpty) return const [];
+  const base = 'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/new_countrydex%2F';
+  final suffix = l.attributes.any((a) => a == 'Painting' || a == 'Artwork') ? '.webp?alt=media&v=painting-square-20261023' : '.webp?alt=media';
+  return [
+    if (l.countriesIsoA3.isNotEmpty) '$base${l.countriesIsoA3.first.toLowerCase()}_$snake$suffix',
+    '$base' 'm_$snake$suffix',
+  ];
+}
+
+/// 후보 주소를 차례로 시도하는 이미지
+Widget _fallbackImage(List<String> urls, int i, {double? width, double? height, required Widget fallback}) {
+  if (i >= urls.length) return fallback;
+  return CachedNetworkImage(
+    imageUrl: urls[i],
+    width: width,
+    height: height,
+    fit: BoxFit.cover,
+    placeholder: (_, __) => Container(width: width, height: height, color: const Color(0xFFF1F5F9)),
+    errorWidget: (_, __, ___) => _fallbackImage(urls, i + 1, width: width, height: height, fallback: fallback),
+  );
+}
+
+/// 새로 만든 도시 여행 가이드 페이지 (assets/city_trip_pages.json: 도시 이름 -> 주소)
+class _GuideUrls {
+  static Map<String, String>? _cache;
+
+  static Future<Map<String, String>> load() async {
+    if (_cache != null) return _cache!;
+    try {
+      final raw = json.decode(await rootBundle.loadString('assets/city_trip_pages.json')) as Map;
+      _cache = {for (final e in raw.entries) '${e.key}': '${e.value}'};
+    } catch (_) {
+      _cache = {};
+    }
+    return _cache!;
+  }
+}
+
 
 const _accents = {
   'à': 'a', 'á': 'a', 'â': 'a', 'ã': 'a', 'ä': 'a', 'å': 'a', 'ā': 'a', 'ă': 'a', 'ą': 'a',
@@ -68,17 +108,20 @@ String _norm(String s) {
 
 /// 검색 결과 하나를 눌렀을 때 호출 쪽으로 돌려주는 값
 class _Pick {
-  const _Pick.city(City this.city)
+  const _Pick.city(City this.city, {this.guideUrl})
       : landmark = null,
         country = null;
   const _Pick.landmark(Landmark this.landmark)
       : city = null,
+        guideUrl = null,
         country = null;
   const _Pick.country(Country this.country)
       : city = null,
+        guideUrl = null,
         landmark = null;
 
   final City? city;
+  final String? guideUrl;
   final Landmark? landmark;
   final Country? country;
 }
@@ -129,15 +172,21 @@ class NextAdventureCard extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 4),
-              child: RichText(
-                maxLines: 1,
-                text: const TextSpan(
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800, letterSpacing: -0.2),
-                  children: [
-                    TextSpan(text: 'Next ', style: TextStyle(color: Color(0xFF111827))),
-                    TextSpan(text: 'Adventure', style: TextStyle(color: Color(0xFF0AA4C8))),
-                  ],
-                ),
+              child: Row(
+                children: [
+                  RichText(
+                    maxLines: 1,
+                    text: const TextSpan(
+                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800, letterSpacing: -0.2),
+                      children: [
+                        TextSpan(text: 'Next ', style: TextStyle(color: Color(0xFF111827))),
+                        TextSpan(text: 'Adventure', style: TextStyle(color: Color(0xFF0AA4C8))),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  const NewTag(),
+                ],
               ),
             ),
             const SizedBox(height: 12),
@@ -235,11 +284,10 @@ void _showLandmarkSheet(BuildContext context, Landmark lm) {
               borderRadius: BorderRadius.circular(20),
               child: AspectRatio(
                 aspectRatio: 16 / 10,
-                child: CachedNetworkImage(
-                  imageUrl: _landmarkUrl(lm.name),
-                  fit: BoxFit.cover,
-                  placeholder: (_, __) => Container(color: const Color(0xFFF1F5F9)),
-                  errorWidget: (_, __, ___) => Container(color: color.withOpacity(0.12), child: Icon(Icons.account_balance_rounded, size: 48, color: color)),
+                child: _fallbackImage(
+                  _landmarkUrls(lm),
+                  0,
+                  fallback: Container(color: color.withOpacity(0.12), child: Icon(Icons.account_balance_rounded, size: 48, color: color)),
                 ),
               ),
             ),
@@ -307,6 +355,7 @@ class _SearchSheet extends StatefulWidget {
 class _SearchSheetState extends State<_SearchSheet> {
   final _controller = TextEditingController();
   List<_GuideEntry> _guides = const [];
+  Map<String, String> _guideUrls = const {};
   Set<String> _withPhoto = const {};
   String _query = '';
 
@@ -329,6 +378,7 @@ class _SearchSheetState extends State<_SearchSheet> {
     final kw = await _readJson('assets/city_search_keywords.json');
     final pages = await _readJson('assets/city_trip_pages.json');
     final ranked = await _readJson('assets/city_rank.json');
+    final urls = await _GuideUrls.load();
     final entries = <_GuideEntry>[
       for (final name in pages.keys)
         _GuideEntry('$name', kw['$name'] is Map ? kw['$name'] as Map : const {}),
@@ -336,6 +386,7 @@ class _SearchSheetState extends State<_SearchSheet> {
     if (!mounted) return;
     setState(() {
       _guides = entries;
+      _guideUrls = urls;
       _withPhoto = ranked.keys.map((e) => e.toString()).toSet();
     });
   }
@@ -408,11 +459,12 @@ class _SearchSheetState extends State<_SearchSheet> {
 
     final sections = <Widget>[];
     if (q.isEmpty) {
-      final popular = <City>[
-        for (final g in _guides)
-          if (byName[g.name] != null) byName[g.name]!,
-      ]..sort((a, b) => b.population.compareTo(a.population));
-      sections.addAll(_section('City guides', [for (final c in popular.take(14)) _cityRow(c, guide: true)]));
+      // 검색 전에는 주요 도시 몇 개만 예시로 보여준다
+      const examples = ['Paris', 'London', 'Tokyo', 'New York City', 'Rome'];
+      sections.addAll(_section('Popular', [
+        for (final n in examples)
+          if (byName[n] != null) _cityRow(byName[n]!, guide: _guideUrls.containsKey(n)),
+      ]));
     } else {
       final guideHits = _guideHits(q, byName);
       final guideNames = {for (final h in guideHits) h.city.name};
@@ -634,7 +686,22 @@ class _SearchSheetState extends State<_SearchSheet> {
       if (c.isoA3 == iso3) country = c;
     }
     return _row(
-      thumb: _thumb(url: _landmarkUrl(l.name), fallback: const Icon(Icons.account_balance_rounded, color: Color(0xFF94A3B8))),
+      thumb: ClipRRect(
+        borderRadius: BorderRadius.circular(14),
+        child: _fallbackImage(
+          _landmarkUrls(l),
+          0,
+          width: 52,
+          height: 52,
+          fallback: Container(
+            width: 52,
+            height: 52,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(color: const Color(0xFFF1F5F9), borderRadius: BorderRadius.circular(14)),
+            child: const Icon(Icons.account_balance_rounded, color: Color(0xFF94A3B8)),
+          ),
+        ),
+      ),
       title: l.name,
       sub: '${country == null ? '' : '${_flag(country.isoA2)} '}${l.city}${country == null ? '' : ', ${country.name}'}',
       onTap: () => Navigator.pop(context, _Pick.landmark(l)),

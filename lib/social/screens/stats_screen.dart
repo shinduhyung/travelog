@@ -1,8 +1,12 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:http/http.dart' as http;
+import 'package:path_provider/path_provider.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:jidoapp/services/subscription_service.dart';
 import 'package:jidoapp/widgets/stat_lock_guard.dart';
 
@@ -10,7 +14,6 @@ import '../models/global_stats.dart';
 import '../models/social_profile.dart';
 import '../services/country_rarity.dart';
 import '../services/global_stats_service.dart';
-import '../services/local_rankings.dart';
 import '../services/my_stat_values.dart';
 import '../data/geo_data.dart';
 import '../services/social_store.dart';
@@ -19,7 +22,6 @@ import '../theme.dart';
 import '../widgets/avatar.dart';
 import '../widgets/cards.dart';
 import '../widgets/flag.dart';
-import '../widgets/ranking_card.dart';
 
 /// 메인 화면 Social 메뉴의 Stats:
 ///  1) My Stats: 내 기록을 전체 유저와 비교 (상위 %, 평균, 중앙값, 희귀도 점수)
@@ -959,8 +961,6 @@ class _RankingsTab extends StatefulWidget {
 }
 
 class _RankingsTabState extends State<_RankingsTab> with AutomaticKeepAliveClientMixin {
-  late final List<Future<RankingData?>> _local = [for (final s in localRankingSpecs) LocalRankings.build(s)];
-
   @override
   bool get wantKeepAlive => true;
 
@@ -969,71 +969,7 @@ class _RankingsTabState extends State<_RankingsTab> with AutomaticKeepAliveClien
     super.build(context);
     return ListView(
       padding: const EdgeInsets.fromLTRB(16, 12, 16, 32),
-      children: [
-        const _SiteCollections(),
-        const _Heading('World rankings'),
-        for (var i = 0; i < localRankingSpecs.length; i++) _Ranked(id: localRankingSpecs[i].id, future: _local[i]),
-      ],
-    );
-  }
-}
-
-class _Heading extends StatelessWidget {
-  const _Heading(this.text);
-
-  final String text;
-
-  @override
-  Widget build(BuildContext context) => Padding(
-        padding: const EdgeInsets.fromLTRB(4, 4, 4, 10),
-        child: Text(text, style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)),
-      );
-}
-
-class _Ranked extends StatelessWidget {
-  const _Ranked({required this.id, required this.future});
-
-  final String id;
-  final Future<RankingData?> future;
-
-  @override
-  Widget build(BuildContext context) {
-    return FutureBuilder<RankingData?>(
-      future: future,
-      builder: (context, snap) {
-        if (snap.connectionState != ConnectionState.done) {
-          return const AspectRatio(aspectRatio: RankingCard.designWidth / RankingCard.designHeight, child: Center(child: CircularProgressIndicator()));
-        }
-        final data = snap.data;
-        if (data == null) return const SizedBox.shrink();
-        return Padding(
-          padding: const EdgeInsets.only(bottom: 16),
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(24),
-              boxShadow: AppColors.cardShadow,
-            ),
-            clipBehavior: Clip.antiAlias,
-            child: Stack(
-              children: [
-                RankingCard(data: data),
-                Positioned(
-                  top: 6,
-                  right: 6,
-                  child: Builder(
-                    builder: (btnContext) => IconButton.filledTonal(
-                      tooltip: 'Share',
-                      visualDensity: VisualDensity.compact,
-                      icon: const Icon(Icons.ios_share_rounded, size: 18),
-                      onPressed: () => shareRankingCard(btnContext, data, id: id),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        );
-      },
+      children: const [_SiteCollections()],
     );
   }
 }
@@ -1048,6 +984,18 @@ class _SiteItem {
   final String category;
   final String slug;
   final String title;
+
+  /// 목록용 제목을 앞부분(Most visited)과 지역/주제 부분으로 나눈다.
+  (String, String) get titleParts {
+    final parts = title.split(' — ');
+    if (parts.length >= 2) {
+      final head = parts.first.replaceAll(' destinations', '').replaceAll(RegExp(r'\s+'), ' ').trim();
+      return (head, parts.sublist(1).join(' '));
+    }
+    final m = RegExp(r'^(Most visited|Least visited)\s+(.*)$', caseSensitive: false).firstMatch(title);
+    if (m != null) return (m.group(1)!, m.group(2)!);
+    return ('', title);
+  }
 
   /// 목록용 짧은 제목: "Most visited destinations — Africa" -> "Most visited · Africa"
   String get shortTitle {
@@ -1184,12 +1132,13 @@ class _SiteCollectionsState extends State<_SiteCollections> {
 const _boardKinds = ['countries', 'cities', 'landmarks'];
 
 class _BoardRow {
-  const _BoardRow({required this.label, this.sub, this.iso2, required this.value});
+  const _BoardRow({required this.label, this.sub, this.iso2, required this.value, this.barColor = AppColors.label});
 
   final String label;
   final String? sub;
   final String? iso2;
   final double value;
+  final Color barColor;
 }
 
 /// Travelog 유저 방문율 순위표 (assets/user_rankings.json)
@@ -1204,6 +1153,14 @@ class _UserBoards {
   static Future<Map<String, List<_BoardRow>>> _read() async {
     if (!GeoData.isLoaded) await GeoData.load();
     final geo = GeoData.I;
+    final colorRows = json.decode(await rootBundle.loadString('assets/country_color.json')) as List;
+    final countryColors = <String, Color>{};
+    for (final entry in colorRows) {
+      final hex = (entry['theme_color_hex'] as String?)?.replaceFirst('#', '');
+      final value = hex == null || hex.length != 6 ? null : int.tryParse(hex, radix: 16);
+      if (value != null) countryColors[entry['iso_a2'] as String] = Color(0xFF000000 | value);
+    }
+    Color countryColor(String? iso2) => countryColors[iso2] ?? AppColors.label;
     final raw = json.decode(await rootBundle.loadString('assets/user_rankings.json')) as Map;
     List<(String, double)> list(String k) => [for (final e in raw[k] as List) (e[0] as String, (e[1] as num).toDouble())];
 
@@ -1213,11 +1170,11 @@ class _UserBoards {
       final c = geo.countryByName(name);
       if (c == null) continue;
       seen.add(c.iso3);
-      countries.add(_BoardRow(label: c.name, sub: c.continent, iso2: c.iso2, value: v));
+      countries.add(_BoardRow(label: c.name, sub: c.continent, iso2: c.iso2, value: v, barColor: countryColor(c.iso2)));
     }
     final rest = [for (final c in geo.countries.values) if (!seen.contains(c.iso3)) c]..sort((a, b) => a.name.compareTo(b.name));
     for (final c in rest) {
-      countries.add(_BoardRow(label: c.name, sub: c.continent, iso2: c.iso2, value: 0));
+      countries.add(_BoardRow(label: c.name, sub: c.continent, iso2: c.iso2, value: 0, barColor: countryColor(c.iso2)));
     }
 
     final cities = <_BoardRow>[];
@@ -1225,7 +1182,7 @@ class _UserBoards {
       final meta = geo.cities[name];
       if (meta == null) continue;
       final c = geo.countryByIso2(meta.iso2);
-      cities.add(_BoardRow(label: displayCityName(name), sub: c?.name, iso2: c?.iso2, value: v));
+      cities.add(_BoardRow(label: displayCityName(name), sub: c?.name, iso2: c?.iso2, value: v, barColor: countryColor(c?.iso2)));
       if (cities.length == 200) break;
     }
 
@@ -1234,7 +1191,7 @@ class _UserBoards {
       final meta = geo.landmarks[name];
       if (meta == null) continue;
       final c = geo.countryByIso3(meta.iso3);
-      landmarks.add(_BoardRow(label: name, sub: c?.name, iso2: c?.iso2, value: v));
+      landmarks.add(_BoardRow(label: name, sub: c?.name, iso2: c?.iso2, value: v, barColor: countryColor(c?.iso2)));
       if (landmarks.length == 500) break;
     }
     return {'countries': countries, 'cities': cities, 'landmarks': landmarks};
@@ -1390,7 +1347,7 @@ class _BoardLine extends StatelessWidget {
                   child: Stack(
                     children: [
                       Container(height: 4, color: AppColors.line),
-                      FractionallySizedBox(widthFactor: (row.value / maxValue).clamp(0.0, 1.0).toDouble(), child: Container(height: 4, color: AppColors.mint.withValues(alpha: rank <= 3 ? 1 : 0.55))),
+                      FractionallySizedBox(widthFactor: (row.value / maxValue).clamp(0.0, 1.0).toDouble(), child: Container(height: 4, color: row.barColor)),
                     ],
                   ),
                 ),
@@ -1431,6 +1388,41 @@ class _SitePoster extends StatelessWidget {
   }
 }
 
+/// "Most visited" 뒤의 지역 이름만 테마색으로 칠한다 (항목마다 조금씩 다른 색).
+class _ColoredTitle extends StatelessWidget {
+  const _ColoredTitle({required this.item});
+
+  final _SiteItem item;
+
+  static const _palette = [
+    Color(0xFFC8566F),
+    Color(0xFF6366F1),
+    Color(0xFF8B5CF6),
+    Color(0xFF0EA5E9),
+    Color(0xFF14B8A6),
+    Color(0xFFF59E0B),
+    Color(0xFFEC4899),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    final (prefix, rest) = item.titleParts;
+    final hash = item.slug.codeUnits.fold<int>(0, (a, b) => a + b);
+    final color = prefix.isEmpty ? AppColors.ink : _palette[hash % _palette.length];
+    return RichText(
+      maxLines: 1,
+      overflow: TextOverflow.ellipsis,
+      text: TextSpan(
+        style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 14, color: AppColors.ink),
+        children: [
+          if (prefix.isNotEmpty) TextSpan(text: '$prefix · '),
+          TextSpan(text: rest, style: TextStyle(color: color)),
+        ],
+      ),
+    );
+  }
+}
+
 class _SiteLockedRow extends StatelessWidget {
   const _SiteLockedRow({required this.item});
 
@@ -1454,7 +1446,7 @@ class _SiteLockedRow extends StatelessWidget {
                 children: [
                   Icon(SubscriptionService.instance.isPremium ? Icons.bar_chart_rounded : Icons.lock_rounded, size: 18, color: AppColors.label),
                   const SizedBox(width: 10),
-                  Expanded(child: Text(item.shortTitle, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 14))),
+                  Expanded(child: _ColoredTitle(item: item)),
                   const Icon(Icons.chevron_right_rounded, color: AppColors.label),
                 ],
               ),
@@ -1479,23 +1471,53 @@ class _SiteImagePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(item.title, maxLines: 1, overflow: TextOverflow.ellipsis)),
       body: StatLockGuard(
         statKey: 'site.${item.slug}',
         locked: locked,
-        child: InteractiveViewer(
-          minScale: 1,
-          maxScale: 4,
-          child: Center(
-            child: CachedNetworkImage(
-              imageUrl: item.imageUrl,
-              fit: BoxFit.contain,
-              placeholder: (_, _) => const CircularProgressIndicator(),
-              errorWidget: (_, _, _) => const EmptyHint('Could not load the image.'),
+        child: Stack(
+          children: [
+            Positioned.fill(
+              child: InteractiveViewer(
+                minScale: 1,
+                maxScale: 4,
+                child: Center(
+                  child: CachedNetworkImage(
+                    imageUrl: item.imageUrl,
+                    fit: BoxFit.contain,
+                    placeholder: (_, _) => const CircularProgressIndicator(),
+                    errorWidget: (_, _, _) => const EmptyHint('Could not load the image.'),
+                  ),
+                ),
+              ),
             ),
-          ),
+            Positioned(
+              top: MediaQuery.of(context).padding.top + 8,
+              right: 12,
+              child: Builder(
+                builder: (btnContext) => IconButton.filledTonal(
+                  tooltip: 'Share',
+                  icon: const Icon(Icons.ios_share_rounded, size: 20),
+                  onPressed: () => _shareSiteImage(btnContext, item),
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
   }
 }
+
+Future<void> _shareSiteImage(BuildContext context, _SiteItem item) async {
+  final box = context.findRenderObject() as RenderBox?;
+  final origin = box == null ? null : box.localToGlobal(Offset.zero) & box.size;
+  try {
+    final res = await http.get(Uri.parse(item.imageUrl));
+    if (res.statusCode != 200) return;
+    final dir = await getTemporaryDirectory();
+    final file = File('${dir.path}/travelog_${item.slug}.webp');
+    await file.writeAsBytes(res.bodyBytes);
+    await SharePlus.instance.share(ShareParams(files: [XFile(file.path)], sharePositionOrigin: origin));
+  } catch (_) {}
+}
+
