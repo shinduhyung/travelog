@@ -17,11 +17,10 @@ class RewardedUnlockService extends ChangeNotifier {
 
   static final RewardedUnlockService instance = RewardedUnlockService._();
 
-  // rewarded_main (Android). iOS has no rewarded unit yet; while this stays
-  // empty the promo card simply hides the "watch video" button on iOS.
+  // rewarded_main — separate units for Android and iOS.
   static const String _androidAdUnitId =
       'ca-app-pub-3945470636956441/3552803597';
-  static const String _iosAdUnitId = '';
+  static const String _iosAdUnitId = 'ca-app-pub-3945470636956441/7035398704';
 
   static String get _adUnitId =>
       Platform.isIOS ? _iosAdUnitId : _androidAdUnitId;

@@ -3,6 +3,8 @@
 // Travelog Social 앱(travelog_social)의 화면을 그대로 옮겨 왔다. 그 앱에서는 MaterialApp 바로 아래에
 // SocialScope를 두었지만, 여기서는 Travelog의 MaterialApp을 건드리지 않도록 소셜 화면을 열 때마다
 // [socialRoute]가 SocialScope + 소셜 테마를 씌운다. 스토어는 처음 열 때 만들어서 계속 쓴다.
+import 'dart:async';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -69,6 +71,8 @@ class SocialHub {
   static Future<void> _open(BuildContext context, Widget Function(SocialStore store) page) async {
     final store = SocialHub.store;
     if (store == null) return;
+    // 열 때마다 Travelog 기록을 다시 요약한다 (스토어는 계속 쓰므로 처음 동기화가 오래될 수 있다)
+    unawaited(store.sync());
     if (!_dataReady) {
       final navigator = Navigator.of(context);
       showDialog<void>(

@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'dart:async';
@@ -267,7 +266,7 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
     final index = _selectedStatIndex;
     final isPremiumTier = index >= 3;
 
-    if (Platform.isAndroid && isPremiumTier) {
+    if (isPremiumTier) {
       final authProvider = Provider.of<AuthProvider>(context, listen: false);
       if (authProvider.user == null) {
         if (!mounted) return;
@@ -299,7 +298,7 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
   }
 
   Future<void> _captureAndUpdateWidget() async {
-    if (!Platform.isAndroid) return;
+    if (!HomeWidgetService.isSupported) return;
     if (!mounted) return;
     try {
       final provider = context.read<CountryProvider>();

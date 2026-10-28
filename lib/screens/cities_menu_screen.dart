@@ -1,4 +1,3 @@
-import 'dart:io';
 // lib/screens/cities_menu_screen.dart
 
 import 'dart:math';
@@ -59,7 +58,7 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
     final index = _selectedStatIndex;
     final isPremiumTier = index >= 3;
 
-    if (Platform.isAndroid && isPremiumTier) {
+    if (isPremiumTier) {
       final authProvider = Provider.of<AuthProvider>(context, listen: false);
       if (authProvider.user == null) {
         if (!mounted) return;
@@ -390,7 +389,7 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
   }
 
   Future<void> _captureAndUpdateWidget() async {
-    if (!Platform.isAndroid) return;
+    if (!HomeWidgetService.isSupported) return;
     if (!mounted || _widgetUpdated) return;
     _widgetUpdated = true;
     try {
