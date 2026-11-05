@@ -101,6 +101,27 @@ class AppLocale extends ChangeNotifier with WidgetsBindingObserver {
   /// Completes once a pending download for the current language settles.
   Future<void> get ready => _downloads[code] ?? Future.value();
 
+  /// A catalog that lands after the first frame changes no locale, so widgets
+  /// that were already built (const tabs kept in an IndexedStack, pages under
+  /// a Navigator) would stay in English. Rebuild the whole tree once; state
+  /// and navigation are kept.
+  @override
+  void notifyListeners() {
+    super.notifyListeners();
+    scheduleMicrotask(_rebuildAll);
+  }
+
+  void _rebuildAll() {
+    final root = WidgetsBinding.instance.rootElement;
+    if (root == null) return;
+    void visit(Element element) {
+      element.markNeedsBuild();
+      element.visitChildren(visit);
+    }
+
+    visit(root);
+  }
+
   Future<void> load() async {
     _catalogCode = null;
     _setManifest(await store.manifest());
