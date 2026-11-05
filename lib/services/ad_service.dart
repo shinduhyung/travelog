@@ -1,3 +1,4 @@
+import 'package:jidoapp/services/preserved_ad_pause.dart';
 import 'dart:async';
 import 'package:jidoapp/services/screen_tracking.dart';
 import 'dart:io';
@@ -110,8 +111,8 @@ class AdService {
   // GameAdService라는 별개의 광고 세계가 대신 돌아가는 동안, 메인 실험은
   // "그 시간만큼 얼어붙어 있던 것"처럼 취급). pauseForGames()/
   // resumeForGames() 참고.
-  bool _isGamesActive = false;
-  DateTime? _gamesPauseStartedAt;
+  final _preservedPause = PreservedAdPause();
+  final Object _gamesPauseToken = Object();
 
   // [추가] 튜토리얼 종료 직후 딱 1회, 터치와 무관하게 180초 동안 광고를
   // 억제하기 위한 플래그. 이 유예 기간 중엔 터치 트리거가 완전히 무시되고
@@ -268,34 +269,25 @@ class AdService {
   // 통째로 존재하지 않았던 것처럼 처리함 — 그래서 게임에서 나오는
   // 순간 "쌓여있던 그대로" 이어짐.
   void pauseForGames() {
-    if (_isGamesActive) return;
-    _isGamesActive = true;
-    _gamesPauseStartedAt = DateTime.now();
+    _preservedPause.begin(_gamesPauseToken, DateTime.now());
     _refreshTimerState();
-    debugPrint(
-      '[AdService] games area entered - main ad triggers paused (preserved)',
-    );
   }
 
-  void resumeForGames() {
-    if (!_isGamesActive) return;
-    _isGamesActive = false;
+  void resumeForGames() => _resumePreservedPause(_gamesPauseToken);
 
-    final pauseStart = _gamesPauseStartedAt;
-    _gamesPauseStartedAt = null;
-
-    if (pauseStart != null && _lastShownAt != null) {
-      final pausedDuration = DateTime.now().difference(pauseStart);
-      // 게임에 머문 시간만큼 기준 시각을 뒤로 밀어서, 그 구간이
-      // 경과시간 계산에서 통째로 빠지도록 함 — 즉 시간 트리거를
-      // "그 시간만큼 얼어붙어 있던 것"처럼 되돌림.
-      _lastShownAt = _lastShownAt!.add(pausedDuration);
-    }
-
+  /// Each survey owns a token, so closing another paused screen cannot resume it.
+  Object pauseForPersonalityTest() {
+    final token = Object();
+    _preservedPause.begin(token, DateTime.now());
     _refreshTimerState();
-    debugPrint(
-      '[AdService] games area exited - main ad triggers resumed (preserved)',
-    );
+    return token;
+  }
+
+  void resumeForPersonalityTest(Object token) => _resumePreservedPause(token);
+
+  void _resumePreservedPause(Object token) {
+    _lastShownAt = _preservedPause.end(token, DateTime.now(), _lastShownAt);
+    _refreshTimerState();
   }
 
   /// 지금 광고를 멈춰야 하는 상태인지.
@@ -304,7 +296,7 @@ class AdService {
     if (_isTutorialActive) return true;
     if (_isUiOverlayActive) return true;
     if (_isOnboardingActive) return true;
-    if (_isGamesActive) return true;
+    if (_preservedPause.isPaused) return true;
     if (_isCountrySelectionActive && !_countryScreenAdsEnabledForGroup)
       return true;
     return false;
@@ -319,7 +311,7 @@ class AdService {
   /// 평소 쿨다운(_cooldownSeconds=130초) 대신 180초를 사용한다.
   void _refreshTimerState() {
     _timeTriggerTimer?.cancel();
-    if (_shouldPauseAds) return;
+    if (!_mobileAdsInitialized || _shouldPauseAds) return;
 
     // 이미 pending 광고가 있으면 시간 트리거를 다시 돌 필요가 없다 — 조건은
     // 이미 충족되어 대기 중이고, 남은 건 화면 전환뿐이다. 이 가드가 없으면

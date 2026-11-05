@@ -1,3 +1,4 @@
+import 'package:jidoapp/widgets/city_tour_navigation.dart';
 // lib/screens/badge_detail_screen.dart
 
 import 'dart:io';
@@ -40,6 +41,7 @@ import 'package:jidoapp/widgets/premium_badge_shimmer.dart';
 import 'package:jidoapp/widgets/subscription_sheet.dart';
 import 'package:jidoapp/services/subscription_service.dart';
 import 'package:jidoapp/widgets/firebase_badge_image.dart';
+import 'package:jidoapp/widgets/my_match_badge.dart';
 
 class BadgeDetailScreen extends StatelessWidget {
   final Achievement achievement;
@@ -364,7 +366,7 @@ class BadgeDetailScreen extends StatelessWidget {
                           children: [
                             Expanded(
                               child: Text(
-                                achievement.name,
+                                tr(achievement.name),
                                 style: const TextStyle(
                                   fontSize: 22,
                                   fontWeight: FontWeight.bold,
@@ -1118,6 +1120,7 @@ class BadgeDetailScreen extends StatelessWidget {
                         TextButton(
                             onPressed: () => Navigator.pop(sheetContext),
                             child: Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
+                        MyMatchBadge.landmark(landmark: freshLandmark, onDark: headerTextColor == Colors.white),
                         ElevatedButton(
                             onPressed: () => Navigator.pop(sheetContext),
                             child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)),
@@ -1134,6 +1137,7 @@ class BadgeDetailScreen extends StatelessWidget {
                         if (isVisited || visitedSubCount > 0) Icon(Icons.check_circle, color: headerTextColor, size: 24),
                       ],
                     ),
+                    
                     const SizedBox(height: 6),
                     Row(
                       children: [
@@ -1236,6 +1240,7 @@ class BadgeDetailScreen extends StatelessWidget {
               heightFactor: 0.9,
               child: Column(
                 children: [
+                  CityTourButton(city: cityName, countryCode: countryCode),
                   Container(
                     decoration: BoxDecoration(
                       color: themeColor,

@@ -1070,7 +1070,7 @@ class _BadgesScreenState extends State<BadgesScreen> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
-                          achievement.name,
+                          tr(achievement.name),
                           style: const TextStyle(
                             fontSize: 22,
                             fontWeight: FontWeight.bold,

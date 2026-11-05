@@ -16,6 +16,7 @@ import 'package:shared_preferences/shared_preferences.dart'; // 저장 기능을
 import 'package:country_flags/country_flags.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:collection/collection.dart';
+import 'package:jidoapp/widgets/my_match_badge.dart';
 
 class CountryLandmarkStats {
   final Country country;
@@ -901,9 +902,9 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
         }
         else if (_isItemCategory(freshLandmark, 'Fast Food')) {
           String text = "";
-          if (freshLandmark.type != null) text += freshLandmark.type!;
+          if (freshLandmark.type != null) text += tr(freshLandmark.type!);
           if (freshLandmark.numberOfLocations != null) {
-            String locText = "${NumberFormat('#,###').format(freshLandmark.numberOfLocations)} locations";
+            String locText = tr("${NumberFormat('#,###').format(freshLandmark.numberOfLocations)} locations");
             if (text.isNotEmpty) {
               text += " • $locText";
             } else {
@@ -1017,6 +1018,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                                   onPressed: () => Navigator.pop(sheetContext),
                                   child:  Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600)),
                                 ),
+                                MyMatchBadge.landmark(landmark: freshLandmark, onDark: headerTextColor == Colors.white),
                                 ElevatedButton(
                                   onPressed: () => Navigator.pop(sheetContext),
                                   style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
@@ -1056,6 +1058,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
 
                             if (customHeaderWidget != null) customHeaderWidget,
 
+                            
                             const SizedBox(height: 6),
                             Row(
                               children: [

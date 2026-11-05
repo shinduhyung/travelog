@@ -13,6 +13,7 @@ import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/widgets/landmark_info_card.dart';
 import 'package:jidoapp/widgets/landmark_visit_editor_card.dart';
+import 'package:jidoapp/widgets/my_match_badge.dart';
 
 class WorldWondersScreen extends StatefulWidget {
   const WorldWondersScreen({super.key});
@@ -554,6 +555,7 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                               ),
                             ),
                           ),
+                          MyMatchBadge.landmark(landmark: freshLandmark, onDark: headerTextColor == Colors.white),
                           ElevatedButton(
                             onPressed: () => Navigator.pop(sheetContext),
                             style: ElevatedButton.styleFrom(
@@ -604,6 +606,7 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                             ),
                         ],
                       ),
+                      
                       const SizedBox(height: 6),
                       Row(
                         children: [

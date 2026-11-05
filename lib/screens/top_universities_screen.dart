@@ -12,6 +12,7 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:jidoapp/models/visit_date_model.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
+import 'package:jidoapp/widgets/my_match_badge.dart';
 
 class TopUniversitiesScreen extends StatelessWidget {
   const TopUniversitiesScreen({super.key});
@@ -500,6 +501,7 @@ class TopUniversitiesScreen extends StatelessWidget {
                                 style: TextStyle(
                                     color: headerTextColor,
                                     fontWeight: FontWeight.w600))),
+                        MyMatchBadge.landmark(landmark: freshLandmark, onDark: headerTextColor == Colors.white),
                         ElevatedButton(
                             onPressed: () => Navigator.pop(sheetContext),
                             style: ElevatedButton.styleFrom(
@@ -527,6 +529,7 @@ class TopUniversitiesScreen extends StatelessWidget {
                               color: headerTextColor, size: 24),
                       ],
                     ),
+                    
                     const SizedBox(height: 6),
                     Row(
                       children: [

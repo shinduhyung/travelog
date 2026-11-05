@@ -33,11 +33,10 @@ class RarityResult {
 /// 사용자 원점수 분포(고정)에서의 순위를 정규분포 점수 T = 50 + 15·Φ⁻¹(p)로 바꾸고 0~100으로 제한한다.
 /// 기준 데이터(assets/country_rarity.json)는 고정이라 신규 사용자도 같은 기준으로 비교된다.
 class CountryRarity {
-  CountryRarity._(this._r, this._scores, this._n);
+  CountryRarity._(this._r, this._scores);
 
   final Map<String, double> _r;
   final List<double> _scores;
-  final int _n;
 
   static Future<CountryRarity?>? _instance;
 
@@ -49,7 +48,6 @@ class CountryRarity {
       return CountryRarity._(
         {for (final e in (d['r'] as Map).entries) e.key.toString(): (e.value as num).toDouble()},
         [for (final v in d['scores'] as List) (v as num).toDouble()],
-        (d['n'] as num).toInt(),
       );
     } catch (_) {
       _instance = null;
@@ -88,8 +86,6 @@ class CountryRarity {
       rarestRate: rate > 100 ? 100 : rate,
     );
   }
-
-  int get sampleSize => _n;
 }
 
 /// 표준정규분포 역누적분포함수 (Acklam 근사)

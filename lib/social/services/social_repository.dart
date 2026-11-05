@@ -78,12 +78,17 @@ class SocialRepository {
         if (v is Map) return 'Map(${v.length})';
         return v.runtimeType.toString();
       }
-      debugPrint('[sync] userDoc exists=${userDoc.exists} fields=${raw.length} '
-          'countries=${shape('country_visits_v2')} cities=${shape('city_visit_details_v3')} '
-          'landmarks=${shape('visited_landmarks')} unesco=${shape('unesco_visited_sites')} '
-          'airlines=${shape('saved_airlines_data')} airports=${shape('airport_visit_history')}');
-      debugPrint('[sync] result countries=${summary.countryCount} cities=${summary.cityCount} '
-          'landmarks=${summary.landmarkCount} unesco=${summary.unescoCount} flights=${summary.flights.total}');
+
+      debugPrint(
+        '[sync] userDoc exists=${userDoc.exists} fields=${raw.length} '
+        'countries=${shape('country_visits_v2')} cities=${shape('city_visit_details_v3')} '
+        'landmarks=${shape('visited_landmarks')} unesco=${shape('unesco_visited_sites')} '
+        'airlines=${shape('saved_airlines_data')} airports=${shape('airport_visit_history')}',
+      );
+      debugPrint(
+        '[sync] result countries=${summary.countryCount} cities=${summary.cityCount} '
+        'landmarks=${summary.landmarkCount} unesco=${summary.unescoCount} flights=${summary.flights.total}',
+      );
     }
 
     await _profileRef(uid).set({
@@ -93,6 +98,11 @@ class SocialRepository {
       if (user.photoURL != null) 'photoUrl': user.photoURL,
       'updatedAt': FieldValue.serverTimestamp(),
     }, SetOptions(merge: true));
+    try {
+      await _call('socialRefreshFriendIdentities');
+    } catch (e) {
+      debugPrint('Friend identity refresh pending: ${e.runtimeType}');
+    }
   }
 
   String _defaultName(User user) {
@@ -103,12 +113,15 @@ class SocialRepository {
     return 'Traveler';
   }
 
-  Future<void> updateDisplayName(String uid, String name) =>
-      _profileRef(uid).set({'displayName': name.trim()}, SetOptions(merge: true));
+  Future<void> updateDisplayName(String uid, String name) => _profileRef(
+    uid,
+  ).set({'displayName': name.trim()}, SetOptions(merge: true));
 
   /// 공개 범위를 바꾸고 바로 다시 동기화해서 꺼진 항목을 지운다.
   Future<void> updatePrivacy(User user, PrivacySettings privacy) async {
-    await _profileRef(user.uid).set({'privacy': privacy.toMap()}, SetOptions(merge: true));
+    await _profileRef(
+      user.uid,
+    ).set({'privacy': privacy.toMap()}, SetOptions(merge: true));
     await syncMyProfile(user);
   }
 
@@ -125,10 +138,12 @@ class SocialRepository {
 
     controller.onListen = () {
       for (final u in uids) {
-        subs.add(watchProfile(u).listen((p) {
-          latest[u] = p;
-          emit();
-        }));
+        subs.add(
+          watchProfile(u).listen((p) {
+            latest[u] = p;
+            emit();
+          }),
+        );
       }
     };
     controller.onCancel = () async {
@@ -142,14 +157,20 @@ class SocialRepository {
   /// 친구가 아니게 되면 permission-denied가 나므로 null로 바꿔서 흘려보낸다.
   Stream<SocialProfile?> watchProfile(String uid) => _profileRef(uid)
       .snapshots()
-      .map<SocialProfile?>((doc) => doc.exists ? SocialProfile.fromDoc(doc) : null)
-      .transform(StreamTransformer.fromHandlers(handleError: (error, stack, sink) {
-        if (error is FirebaseException) {
-          sink.add(null);
-        } else {
-          sink.addError(error, stack);
-        }
-      }));
+      .map<SocialProfile?>(
+        (doc) => doc.exists ? SocialProfile.fromDoc(doc) : null,
+      )
+      .transform(
+        StreamTransformer.fromHandlers(
+          handleError: (error, stack, sink) {
+            if (error is FirebaseException) {
+              sink.add(null);
+            } else {
+              sink.addError(error, stack);
+            }
+          },
+        ),
+      );
 
   // ── 친구 ────────────────────────────────────────────────────────────
 
@@ -160,15 +181,36 @@ class SocialRepository {
       .snapshots()
       .map((s) => s.docs.map((d) => d.id).toList());
 
-  Future<Map<String, dynamic>> _call(String name, [Map<String, dynamic>? data]) async {
-    final result = await _functions.httpsCallable(name).call<Map<String, dynamic>>(data);
+  Future<Map<String, dynamic>> _call(
+    String name, [
+    Map<String, dynamic>? data,
+  ]) async {
+    final result = await _functions
+        .httpsCallable(name)
+        .call<Map<String, dynamic>>(data);
     return Map<String, dynamic>.from(result.data);
   }
 
-  /// 결제 기록으로 유료 등급을 다시 계산 (서버가 profiles/{uid}.plan에 씀)
-  Future<String> refreshPlan() async => (await _call('socialRefreshPlan'))['plan'] as String? ?? 'none';
+  Stream<List<Map<String, dynamic>>> watchFriendRequests(String uid) => _db
+      .collection('social_friend_requests')
+      .doc(uid)
+      .collection('incoming')
+      .snapshots()
+      .map(
+        (s) => [
+          for (final d in s.docs) {...d.data(), 'uid': d.id},
+        ],
+      );
 
-  Future<String> createInvite() async => (await _call('socialCreateInvite'))['code'] as String;
+  Future<void> respondFriendRequest(String uid, bool accept) =>
+      _call('socialRespondFriendRequest', {'uid': uid, 'accept': accept});
+
+  /// 결제 기록으로 유료 등급을 다시 계산 (서버가 profiles/{uid}.plan에 씀)
+  Future<String> refreshPlan() async =>
+      (await _call('socialRefreshPlan'))['plan'] as String? ?? 'none';
+
+  Future<String> createInvite() async =>
+      (await _call('socialCreateInvite'))['code'] as String;
 
   Future<InvitePreview> previewInvite(String code) async {
     final d = await _call('socialPreviewInvite', {'code': code});
@@ -180,7 +222,8 @@ class SocialRepository {
     );
   }
 
-  Future<void> acceptInvite(String code) => _call('socialAcceptInvite', {'code': code});
+  Future<void> acceptInvite(String code) =>
+      _call('socialAcceptInvite', {'code': code});
 
   Future<void> removeFriend(String friendUid) =>
       _call('socialRemoveFriend', {'friendUid': friendUid});
@@ -188,20 +231,43 @@ class SocialRepository {
   // ── 1:1 대결 ─────────────────────────────────────────────────────────
 
   /// [mode]: flag | capital | population | area | landmark | city | mixed
-  Future<String> createDuel(String friendUid, {String mode = 'mixed', String difficulty = 'medium', String scoring = 'speed'}) async =>
-      (await _call('socialCreateDuel', {'friendUid': friendUid, 'mode': mode, 'difficulty': difficulty, 'scoring': scoring}))['matchId']
+  Future<String> createDuel(
+    String friendUid, {
+    String mode = 'mixed',
+    String difficulty = 'medium',
+    String scoring = 'speed',
+  }) async =>
+      (await _call('socialCreateDuel', {
+            'friendUid': friendUid,
+            'mode': mode,
+            'difficulty': difficulty,
+            'scoring': scoring,
+          }))['matchId']
           as String;
 
-  Future<void> joinDuel(String matchId) => _call('socialJoinDuel', {'matchId': matchId});
+  Future<void> joinDuel(String matchId) =>
+      _call('socialJoinDuel', {'matchId': matchId});
 
   /// 반환: {ok, pts, late, now}
-  Future<Map<String, dynamic>> answerDuel(String matchId, int round, int choice, int elapsedMs) =>
-      _call('socialAnswerDuel', {'matchId': matchId, 'round': round, 'choice': choice, 'elapsedMs': elapsedMs});
+  Future<Map<String, dynamic>> answerDuel(
+    String matchId,
+    int round,
+    int choice,
+    int elapsedMs,
+  ) => _call('socialAnswerDuel', {
+    'matchId': matchId,
+    'round': round,
+    'choice': choice,
+    'elapsedMs': elapsedMs,
+  });
 
   /// 시간이 지난 라운드를 닫는다. 서버 시각(now)을 돌려줘서 시계 맞추기에도 쓴다.
-  Future<int> tickDuel(String matchId) async => ((await _call('socialTickDuel', {'matchId': matchId}))['now'] as num).toInt();
+  Future<int> tickDuel(String matchId) async =>
+      ((await _call('socialTickDuel', {'matchId': matchId}))['now'] as num)
+          .toInt();
 
-  Future<void> leaveDuel(String matchId) => _call('socialLeaveDuel', {'matchId': matchId});
+  Future<void> leaveDuel(String matchId) =>
+      _call('socialLeaveDuel', {'matchId': matchId});
 
   /// 정렬은 클라이언트에서 한다 (array-contains + orderBy는 복합 색인이 필요해서).
   Stream<List<Duel>> watchMyDuels(String uid) => _db
@@ -211,7 +277,10 @@ class SocialRepository {
       .snapshots()
       .map((s) {
         final duels = s.docs.map(Duel.fromDoc).toList()
-          ..sort((a, b) => (b.createdMs ?? 1 << 52).compareTo(a.createdMs ?? 1 << 52));
+          ..sort(
+            (a, b) =>
+                (b.createdMs ?? 1 << 52).compareTo(a.createdMs ?? 1 << 52),
+          );
         return duels;
       });
 

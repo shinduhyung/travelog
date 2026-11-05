@@ -1,3 +1,4 @@
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'dart:math' as math;
 
 import 'package:fl_chart/fl_chart.dart';
@@ -81,7 +82,7 @@ class VsBar extends StatelessWidget {
             child: Column(
               children: [
                 if (emoji != null) Text(emoji!, style: const TextStyle(fontSize: 16)),
-                Text(label,
+                Text(tr(label),
                     textAlign: TextAlign.center,
                     style: theme.textTheme.labelSmall?.copyWith(color: AppColors.label, fontWeight: FontWeight.w600),
                     maxLines: 2,
@@ -148,7 +149,7 @@ class _RadarPainter extends CustomPainter {
     for (var i = 0; i < n; i++) {
       canvas.drawLine(center, at(i, 1), gridPaint);
       final tp = TextPainter(
-        text: TextSpan(text: axes[i].$1, style: labelStyle.copyWith(fontWeight: FontWeight.w600)),
+        text: TextSpan(text: tr(axes[i].$1), style: labelStyle.copyWith(fontWeight: FontWeight.w600)),
         textDirection: TextDirection.ltr,
       )..layout();
       final p = at(i, 1.18);
@@ -264,7 +265,7 @@ class Gauge extends StatelessWidget {
                       style: theme.textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.w900)),
                 ),
                 if (label != null)
-                  Text(label!,
+                  Text(tr(label!),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: theme.textTheme.labelMedium?.copyWith(color: AppColors.label)),
@@ -414,7 +415,7 @@ class TimelineChart extends StatelessWidget {
     if (years.isEmpty) {
       return SizedBox(
         height: 80,
-        child: Center(child: Text('No dated trips yet', style: theme.textTheme.bodySmall?.copyWith(color: AppColors.label))),
+        child: Center(child: Text(tr('No dated trips yet'), style: theme.textTheme.bodySmall?.copyWith(color: AppColors.label))),
       );
     }
     final first = years.first;
@@ -477,7 +478,7 @@ class TimelineChart extends StatelessWidget {
             touchTooltipData: LineTouchTooltipData(
               getTooltipItems: (spots) => [
                 for (final s in spots)
-                  LineTooltipItem('${s.x.toInt()} · ${s.y.toInt()} ${s.y.toInt() == 1 ? 'country' : 'countries'}',
+                  LineTooltipItem('${s.x.toInt()} · ${s.y.toInt()} ${s.y.toInt() == 1 ? tr('country') : tr('countries')}',
                       TextStyle(color: s.bar.color, fontWeight: FontWeight.w700, fontSize: 12)),
               ],
             ),
@@ -529,7 +530,7 @@ class YearBars extends StatelessWidget {
           barTouchData: BarTouchData(
             touchTooltipData: BarTouchTooltipData(
               getTooltipItem: (group, gi, rod, ri) => BarTooltipItem(
-                '${shown[group.x]} · ${rod.toY.toInt()} ${rod.toY.toInt() == 1 ? 'country' : 'countries'}',
+                '${shown[group.x]} · ${rod.toY.toInt()} ${rod.toY.toInt() == 1 ? tr('country') : tr('countries')}',
                 TextStyle(color: rod.color, fontWeight: FontWeight.w700, fontSize: 12),
               ),
             ),
@@ -565,7 +566,7 @@ class Donut extends StatelessWidget {
     final entries = data.entries.toList()..sort((a, b) => b.value.compareTo(a.value));
     final top = entries.take(7).toList();
     final rest = entries.skip(7).fold(0, (s, e) => s + e.value);
-    final slices = [...top, if (rest > 0) MapEntry('Other', rest)];
+    final slices = [...top, if (rest > 0) MapEntry(tr('Other'), rest)];
     if (slices.isEmpty) return SizedBox(width: size, height: size);
     return Row(
       children: [
@@ -704,7 +705,7 @@ class DnaAxisRow extends StatelessWidget {
                     ),
                   ),
                   if (theirs != null) marker(theirs!, AppColors.friend, 'F'),
-                  if (mine != null) marker(mine!, AppColors.me, 'You'),
+                  if (mine != null) marker(mine!, AppColors.me, tr('You')),
                 ],
               ),
             );

@@ -1,3 +1,4 @@
+import 'package:jidoapp/widgets/city_tour_navigation.dart';
 // lib/widgets/city_travel_modal.dart
 //
 // A separate modal from city_detail_modal.dart (which focuses on landmarks/visit history).
@@ -27,6 +28,8 @@
 //    Cities without curated entries fall back to the generic GetYourGuide/Klook search cards
 
 import 'dart:convert';
+import 'package:jidoapp/widgets/city_report_screen.dart';
+import 'package:jidoapp/utils/storage_name.dart';
 import 'package:flutter/material.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart' show rootBundle, AssetManifest;
@@ -354,7 +357,7 @@ class _CityTravelSheet extends StatelessWidget {
   String _toDashSlug(String s) => _toSnake(s).replaceAll('_', '-');
 
   String get _heroUrl {
-    final filename = city.name == 'San José' ? 'san_jose_cr' : _toSnake(city.name);
+    final filename = city.name == 'San José' ? 'san_jose_cr' : foldedSnake(city.name);
     return 'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/ranked_cities%2F$filename.jpg.jpg?alt=media';
   }
 
@@ -430,6 +433,7 @@ class _CityTravelSheet extends StatelessWidget {
         child: CustomScrollView(
           controller: scrollController,
           slivers: [
+            SliverToBoxAdapter(child: CityTourButton(city: city.name, countryCode: city.countryIsoA2, latitude: city.latitude, longitude: city.longitude)),
             SliverToBoxAdapter(child: _buildHero(context)),
             SliverToBoxAdapter(
               child: Padding(
@@ -1257,7 +1261,7 @@ class _CityTravelSheet extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.only(bottom: 28),
           child: GestureDetector(
-            onTap: () => _openUrl(url),
+            onTap: () => openCityReport(context, city.name),
             child: Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(

@@ -1,3 +1,4 @@
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 import '../data/geo_data.dart';
@@ -106,8 +107,8 @@ String? formatVisitDate(String? raw) {
   final m = parts.length > 1 ? int.tryParse(parts[1]) : null;
   final d = parts.length > 2 ? int.tryParse(parts[2]) : null;
   if (m == null || m < 1 || m > 12) return y;
-  if (d == null) return '${_months[m - 1]} $y';
-  return '${_months[m - 1]} $d, $y';
+  if (d == null) return '${tr(_months[m - 1])} $y';
+  return '${tr(_months[m - 1])} $d, $y';
 }
 
 String? _firstOf(PlaceInfo? i) => i?.first ?? (i == null || i.years.isEmpty ? null : '${i.years.first}');
@@ -118,14 +119,14 @@ String? _lastOf(PlaceInfo? i) => i?.last ?? (i == null || i.years.length < 2 ? n
 String? _dateLine(PlaceInfo? i) {
   final f = formatVisitDate(_firstOf(i));
   final l = formatVisitDate(_lastOf(i));
-  if (f == null) return l == null ? null : 'Last $l';
+  if (f == null) return l == null ? null : tr('Last $l');
   if (l == null || l == f) return f;
-  return '$f · last $l';
+  return tr('$f · last $l');
 }
 
 String? _sortDate(PlaceInfo? i) => _lastOf(i) ?? _firstOf(i);
 
-String _visitsText(int n) => n == 1 ? '1 visit' : '$n visits';
+String _visitsText(int n) => n == 1 ? tr('1 visit') : tr('$n visits');
 
 String _km(double km) {
   final s = km.round().toString();
@@ -172,15 +173,15 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
     final all = (profile == null || hidden)
         ? <_Item>[]
         : _buildItems(profile, me, myProfile: store.me, friendProfile: self ? null : profile);
-    final owner = self ? 'Your ${cat.noun}' : "${profile?.displayName ?? 'Friend'}'s ${cat.noun}";
+    final owner = self ? tr('Your ${tr(cat.noun)}') : tr("${profile?.displayName ?? tr('Friend')}'s ${tr(cat.noun)}");
 
     Widget body;
     if (profile == null) {
-      body = const Center(child: EmptyHint('Profile not loaded yet', emoji: '⏳'));
+      body = Center(child: EmptyHint(tr('Profile not loaded yet'), emoji: '⏳'));
     } else if (hidden) {
-      body = Center(child: EmptyHint('Hidden by ${profile.displayName}', emoji: '🔒'));
+      body = Center(child: EmptyHint(tr('Hidden by ${profile.displayName}'), emoji: '🔒'));
     } else if (all.isEmpty) {
-      body = Center(child: EmptyHint('No ${cat.noun} yet', emoji: cat.emoji));
+      body = Center(child: EmptyHint(tr('No ${tr(cat.noun)} yet'), emoji: cat.emoji));
     } else {
       final items = _filterSort(all);
       final sharedCount = all.where((i) => i.shared).length;
@@ -196,7 +197,7 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
                     onChanged: (v) => setState(() => _query = v.trim().toLowerCase()),
                     textInputAction: TextInputAction.search,
                     decoration: InputDecoration(
-                      hintText: 'Search ${cat.noun}',
+                      hintText: tr('Search ${tr(cat.noun)}'),
                       prefixIcon: const Icon(Icons.search_rounded),
                       suffixIcon: _query.isEmpty
                           ? null
@@ -219,10 +220,10 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
                   constraints: const BoxConstraints(maxWidth: 130),
                   child: PopupMenuButton<_Sort>(
                     initialValue: _sort,
-                    tooltip: 'Sort',
+                    tooltip: tr('Sort'),
                     onSelected: (s) => setState(() => _sort = s),
                     itemBuilder: (_) => [
-                      for (final s in _Sort.values) PopupMenuItem(value: s, child: Text(_sortLabels[s]!)),
+                      for (final s in _Sort.values) PopupMenuItem(value: s, child: Text(tr(_sortLabels[s]!))),
                     ],
                     child: Container(
                       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
@@ -233,7 +234,7 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
                           const Icon(Icons.sort_rounded, size: 18, color: AppColors.darkMint),
                           const SizedBox(width: 4),
                           Flexible(
-                            child: Text(_sortLabels[_sort]!,
+                            child: Text(tr(_sortLabels[_sort]!),
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
                                 style: theme.textTheme.labelMedium?.copyWith(fontWeight: FontWeight.w700)),
@@ -256,8 +257,8 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
                   Expanded(
                     child: Text(
                       cat == ListCategory.flights
-                          ? "You've flown $sharedCount of these routes"
-                          : "You've been to $sharedCount of these",
+                          ? tr("You've flown $sharedCount of these routes")
+                          : tr("You've been to $sharedCount of these"),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: theme.textTheme.labelMedium?.copyWith(color: AppColors.darkMint, fontWeight: FontWeight.w700),
@@ -270,7 +271,7 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
             child: items.isEmpty
                 ? ListView(
                     padding: const EdgeInsets.fromLTRB(16, 8, 16, 120),
-                    children: [EmptyHint('Nothing matches "$_query"', emoji: '🔍')],
+                    children: [EmptyHint(tr('Nothing matches "$_query"'), emoji: '🔍')],
                   )
                 : ListView.builder(
                     padding: const EdgeInsets.fromLTRB(16, 4, 16, 120),
@@ -292,7 +293,7 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text('${cat.label} · ${all.length}',
+            Text('${tr(cat.label)} · ${all.length}',
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)),
@@ -337,8 +338,8 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
 
     /// 2번째 줄: "🏠 France · Lived"
     String? placeLine(String? place, PlaceInfo? i) {
-      final line = _join([place, if (i?.lived == true && i?.home != true) 'Lived']);
-      if (i?.home == true) return line == null ? '🏠 Home' : '🏠 $line';
+      final line = _join([place, if (i?.lived == true && i?.home != true) tr('Lived')]);
+      if (i?.home == true) return line == null ? '🏠 ${tr('Home')}' : '🏠 $line';
       return line;
     }
 
@@ -388,7 +389,7 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
               final name = displayCityName(key);
               return _Item(
                 title: name,
-                titleExtra: widget.category == ListCategory.cities && meta?.isCapital == true ? '· Capital' : null,
+                titleExtra: widget.category == ListCategory.cities && meta?.isCapital == true ? '· ${tr('Capital')}' : null,
                 extraAccent: true,
                 search: '$name ${country?.longName ?? ''}',
                 leading: flagLead(meta?.iso2),
@@ -443,7 +444,7 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
                 title: name,
                 search: '$name ${country?.longName ?? ''}',
                 leading: flagLead(country?.iso2),
-                place: _join([country?.longName, 'UNESCO', meta?.type]),
+                place: _join([country?.longName, tr('UNESCO'), tr(meta?.type)]),
                 details: detailLine(info),
                 rating: info?.rating ?? 0,
                 date: _sortDate(info),
@@ -510,7 +511,7 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
                   search: '${f.from} ${f.to} ${airline ?? ''} ${f.number ?? ''}',
                   leading: _LeadBox(child: _AirlineChip(code: code)),
                   place: _join([airline, f.number]),
-                  details: _join([formatVisitDate(f.date), if (times > 1) '$times× this route']),
+                  details: _join([formatVisitDate(f.date), if (times > 1) tr('$times× this route')]),
                   date: f.date,
                   visits: times,
                   shared: mine.contains('${f.from}-${f.to}'),
@@ -527,7 +528,7 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
                 titleExtra: d > 0 ? _km(d) : null,
                 search: '${r.from} ${r.to}',
                 leading: const _LeadBox(child: _AirlineChip(code: null)),
-                details: r.times == 1 ? '1 flight' : '${r.times} flights',
+                details: r.times == 1 ? tr('1 flight') : tr('${r.times} flights'),
                 visits: r.times,
                 shared: mine.contains('${r.from}-${r.to}'),
               );
@@ -581,8 +582,8 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
                   spacing: 8,
                   runSpacing: 8,
                   children: [
-                    if (meta != null && meta.rank > 0) Chip(avatar: const Text('🏆'), label: Text('World #${meta.rank}')),
-                    if (meta?.category case final c?) Chip(label: Text(c)),
+                    if (meta != null && meta.rank > 0) Chip(avatar: const Text('🏆'), label: Text(tr('World #${meta.rank}'))),
+                    if (meta?.category case final c?) Chip(label: Text(tr(c))),
                     if (dates != null) Chip(avatar: const Text('📅'), label: Text(dates)),
                     if (visits > 0) Chip(avatar: const Text('🔁'), label: Text(_visitsText(visits))),
                   ],
@@ -705,8 +706,8 @@ class _Row extends StatelessWidget {
             ],
             if (shared) ...[
               const SizedBox(width: 6),
-              const Tooltip(
-                message: 'You too',
+              Tooltip(
+                message: tr('You too'),
                 child: Icon(Icons.check_circle_rounded, size: 18, color: AppColors.mint),
               ),
             ],

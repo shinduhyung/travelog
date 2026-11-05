@@ -1,3 +1,4 @@
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/services/statistics_repository.dart';
 
 import '../data/geo_data.dart';
@@ -8,20 +9,25 @@ import '../models/global_stats.dart';
 class LocalRankingSpec {
   const LocalRankingSpec({
     required this.id,
-    required this.titleTop,
-    required this.titleBottom,
-    required this.subtitle,
+    required String titleTop,
+    required String titleBottom,
+    required String subtitle,
     required this.asset,
     required this.metric,
     required this.format,
     this.continent,
     this.ascending = false,
-  });
+  })  : _titleTop = titleTop,
+        _titleBottom = titleBottom,
+        _subtitle = subtitle;
 
   final String id;
-  final String titleTop;
-  final String titleBottom;
-  final String subtitle;
+  final String _titleTop;
+  final String _titleBottom;
+  final String _subtitle;
+  String get titleTop => tr(_titleTop);
+  String get titleBottom => tr(_titleBottom);
+  String get subtitle => tr(_subtitle);
   final String asset;
   final String metric;
   final String Function(num v) format;

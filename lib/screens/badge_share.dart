@@ -140,7 +140,7 @@ class BadgeShare {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              achievement.name,
+                              tr(achievement.name),
                               style: const TextStyle(
                                 fontSize: 26, // 크기 약간 확대
                                 fontWeight: FontWeight.bold,

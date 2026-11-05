@@ -1,3 +1,4 @@
+import 'package:jidoapp/widgets/city_tour_navigation.dart';
 // lib/screens/cities_screen.dart
 
 import 'dart:async';
@@ -1465,6 +1466,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                 heightFactor: 0.85,
                 child: Column(
                   children: [
+                  CityTourButton(city: city.name, countryCode: city.countryIsoA2, latitude: city.latitude, longitude: city.longitude),
                     ClipRRect(
                       borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
                       child: Stack(
@@ -3317,6 +3319,7 @@ void showExternalCityDetailsModal(BuildContext context, City city) {
               heightFactor: 0.85,
               child: Column(
                 children: [
+                  CityTourButton(city: city.name, countryCode: city.countryIsoA2, latitude: city.latitude, longitude: city.longitude),
                   ClipRRect(
                     borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
                     child: Stack(

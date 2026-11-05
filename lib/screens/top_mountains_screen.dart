@@ -13,6 +13,7 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:jidoapp/models/visit_date_model.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
+import 'package:jidoapp/widgets/my_match_badge.dart';
 
 // top_picks_menu 기준 mountains 테마색
 const Color _kTheme = Color(0xFF52796F);
@@ -300,6 +301,7 @@ class TopMountainsScreen extends StatelessWidget {
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                   TextButton(onPressed: () => Navigator.pop(sheetContext),
                       child:  Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
+                  MyMatchBadge.landmark(landmark: freshLandmark, onDark: headerTextColor == Colors.white),
                   ElevatedButton(onPressed: () => Navigator.pop(sheetContext),
                       style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
                       child:  Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))),
@@ -313,6 +315,7 @@ class TopMountainsScreen extends StatelessWidget {
                     child: Icon(Icons.check_circle, color: headerTextColor, size: 24),
                   ),
                 ]),
+                
                 const SizedBox(height: 10),
                 buildFlags(),
               ]),

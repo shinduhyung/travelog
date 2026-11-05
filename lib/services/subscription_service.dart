@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:io';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
@@ -277,6 +278,27 @@ class SubscriptionService extends ChangeNotifier {
       } catch (e) {
         // 광고 이벤트 실패 때문에 실제 구독 처리가 실패하면 안 됨
         debugPrint('[SubscriptionService] Meta Purchase error: $e');
+      }
+
+      // --------------------------------------------------
+      // Firebase Purchase (Google Ads 앱 전환용)
+      // --------------------------------------------------
+      try {
+        await FirebaseAnalytics.instance.logPurchase(
+          currency: currencyCode,
+          value: price,
+          transactionId: purchase.purchaseID,
+          items: [
+            AnalyticsEventItem(
+              itemId: productId,
+              itemName: productId,
+              price: price,
+              quantity: 1,
+            ),
+          ],
+        );
+      } catch (e) {
+        debugPrint('[SubscriptionService] Firebase Purchase error: $e');
       }
 
       // --------------------------------------------------

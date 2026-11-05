@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 
 import '../../models/social_profile.dart';
 import '../../models/stats.dart';
@@ -42,11 +43,11 @@ class CompareScreen extends StatelessWidget {
     final ok = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('Unfriend $name?', maxLines: 2, overflow: TextOverflow.ellipsis),
-        content: const Text("You won't be able to see each other's travel logs anymore."),
+        title: Text(tr('Unfriend $name?'), maxLines: 2, overflow: TextOverflow.ellipsis),
+        content: Text(tr("You won't be able to see each other's travel logs anymore.")),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(context, false), child: const Text('Cancel')),
-          FilledButton(onPressed: () => Navigator.pop(context, true), child: const Text('Unfriend')),
+          TextButton(onPressed: () => Navigator.pop(context, false), child: Text(tr('Cancel'))),
+          FilledButton(onPressed: () => Navigator.pop(context, true), child: Text(tr('Unfriend'))),
         ],
       ),
     );
@@ -70,7 +71,7 @@ class CompareScreen extends StatelessWidget {
         appBar: AppBar(),
         body: Center(
           child: store.friendLoaded(friendUid) || store.meLoaded
-              ? const EmptyHint('Nothing to compare yet.\nTheir travel log shows up once they open the app.')
+              ? EmptyHint(tr('Nothing to compare yet.\nTheir travel log shows up once they open the app.'))
               : const CircularProgressIndicator(),
         ),
       );
@@ -90,7 +91,7 @@ class CompareScreen extends StatelessWidget {
               backgroundColor: AppColors.darkMint,
               surfaceTintColor: Colors.transparent,
               title: Text(
-                'You vs ${friend.displayName}',
+                tr('You vs ${friend.displayName}'),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w800),
@@ -98,7 +99,7 @@ class CompareScreen extends StatelessWidget {
               actions: [
                 PopupMenuButton<String>(
                   onSelected: (_) => _unfriend(context, friend.displayName),
-                  itemBuilder: (_) => const [PopupMenuItem(value: 'remove', child: Text('Unfriend'))],
+                  itemBuilder: (_) => [PopupMenuItem(value: 'remove', child: Text(tr('Unfriend')))],
                 ),
               ],
               flexibleSpace: FlexibleSpaceBar(
@@ -112,7 +113,7 @@ class CompareScreen extends StatelessWidget {
                 unselectedLabelColor: Colors.white70,
                 indicatorColor: Colors.white,
                 dividerColor: Colors.transparent,
-                tabs: [for (final (label, emoji) in tabs) Tab(text: '$emoji $label')],
+                tabs: [for (final (label, emoji) in tabs) Tab(text: '$emoji ${tr(label)}')],
               ),
             ),
           ],
@@ -133,7 +134,7 @@ class CompareScreen extends StatelessWidget {
           heroTag: 'duel-$friendUid',
           onPressed: () => startDuelFlow(context, friend),
           icon: const Text('⚔️', style: TextStyle(fontSize: 18)),
-          label: const Text('Start a duel'),
+          label: Text(tr('Start a duel')),
         ),
       ),
     );
@@ -178,7 +179,7 @@ class _VsHero extends StatelessWidget {
                   style: theme.textTheme.titleSmall?.copyWith(color: Colors.white, fontWeight: FontWeight.w800),
                 ),
                 Text(
-                  '${p.countryCount} ${p.countryCount == 1 ? 'country' : 'countries'}',
+                  '${p.countryCount} ${p.countryCount == 1 ? tr('country') : tr('countries')}',
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.center,
@@ -211,13 +212,13 @@ class _VsHero extends StatelessWidget {
                         '${cmp.myWins} : ${cmp.theirWins}',
                         style: theme.textTheme.headlineMedium?.copyWith(color: Colors.white, fontWeight: FontWeight.w900),
                       ),
-                      Text('Category score', style: theme.textTheme.labelSmall?.copyWith(color: Colors.white70)),
+                      Text(tr('Category score'), style: theme.textTheme.labelSmall?.copyWith(color: Colors.white70)),
                       const SizedBox(height: 6),
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                         decoration: BoxDecoration(color: Colors.white24, borderRadius: BorderRadius.circular(20)),
                         child: Text(
-                          '💞 Travel match ${cmp.compatibility}%',
+                          tr('💞 Travel match ${cmp.compatibility}%'),
                           style: theme.textTheme.labelLarge?.copyWith(color: Colors.white, fontWeight: FontWeight.w800),
                         ),
                       ),

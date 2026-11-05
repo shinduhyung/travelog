@@ -65,9 +65,9 @@ class _TourismTab extends StatelessWidget{
       final instaPct=instaCities.isNotEmpty?instaVisited/instaCities.length:0.0;
 
       return SingleChildScrollView(physics:const BouncingScrollPhysics(),child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
-        const _SH(label:'RANKINGS'),
+        _SH(label:'RANKINGS'),
         Padding(padding:const EdgeInsets.symmetric(horizontal:16),child:_TourRankCard(provider:provider)),
-        const _SH(label:'COLLECTIONS'),
+        _SH(label:'COLLECTIONS'),
         Padding(padding:const EdgeInsets.symmetric(horizontal:16),child:Container(
           padding:const EdgeInsets.all(16),
           decoration:BoxDecoration(color:_C.ink,borderRadius:BorderRadius.circular(14)),

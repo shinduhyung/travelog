@@ -8,6 +8,7 @@ import '../widgets/charts.dart';
 import 'compare/compare_screen.dart';
 import '../widgets/avatar.dart';
 import '../social_hub.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 
 class _Metric {
   const _Metric(this.emoji, this.label, this.value, {this.format});
@@ -26,11 +27,11 @@ final _metrics = <_Metric>[
   _Metric('🏛️', 'UNESCO', (p, s) => p.unescoCount),
   _Metric('📐', 'Area covered', (p, s) => s.areaPercent * 100, format: (v) => '${v.toStringAsFixed(1)}%'),
   _Metric('✈️', 'Flights', (p, s) => p.flights.total),
-  _Metric('📏', 'Distance flown', (p, s) => s.totalFlightKm, format: (v) => '${compactNumber(v.round())} km'),
+  _Metric('📏', 'Distance flown', (p, s) => s.totalFlightKm, format: (v) => tr('${compactNumber(v.round())} km')),
   _Metric('🛬', 'Airports', (p, s) => p.airportCount),
   _Metric('🎖️', 'Badges', (p, s) => p.badgeCount),
   _Metric('🧠', 'Quiz correct', (p, s) => p.quizNormal.correct + p.quizExpert.correct),
-  _Metric('🔥', 'Quiz streak', (p, s) => p.quizNormal.streak(DateTime.now()), format: (v) => v.toInt() == 1 ? '1 day' : '${v.toInt()} days'),
+  _Metric('🔥', 'Quiz streak', (p, s) => p.quizNormal.streak(DateTime.now()), format: (v) => v.toInt() == 1 ? tr('1 day') : tr('${v.toInt()} days')),
 ];
 
 class LeaderboardScreen extends StatefulWidget {
@@ -54,7 +55,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
     final fmt = m.format ?? compactNumber;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Friend Ranking')),
+      appBar: AppBar(title: Text(tr('Friend Ranking'))),
       body: Column(
         children: [
           SizedBox(
@@ -67,7 +68,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                   Padding(
                     padding: const EdgeInsets.only(right: 6),
                     child: ChoiceChip(
-                      label: Text('${_metrics[i].emoji} ${_metrics[i].label}'),
+                      label: Text('${_metrics[i].emoji} ${tr(_metrics[i].label)}'),
                       selected: _metric == i,
                       onSelected: (_) => setState(() => _metric = i),
                     ),
@@ -110,7 +111,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                         UserAvatar(profile: p, radius: 18),
                       ]),
                     ),
-                    title: Text(isMe ? '${p.displayName} (You)' : p.displayName,
+                    title: Text(isMe ? tr('${p.displayName} (You)') : p.displayName,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: theme.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w700)),
@@ -176,7 +177,7 @@ class _Podium extends StatelessWidget {
             Text(medal, style: const TextStyle(fontSize: 26)),
             UserAvatar(profile: p, radius: i == 0 ? 28 : 22),
             const SizedBox(height: 4),
-            Text(p.uid == myUid ? 'You' : p.displayName,
+            Text(p.uid == myUid ? tr('You') : p.displayName,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis, style: theme.textTheme.labelLarge?.copyWith(fontWeight: FontWeight.w800)),
             Text(fmt(v), maxLines: 1, overflow: TextOverflow.ellipsis, style: theme.textTheme.labelMedium?.copyWith(color: AppColors.label)),

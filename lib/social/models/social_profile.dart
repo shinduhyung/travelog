@@ -10,6 +10,7 @@ class SocialProfile {
     required this.uid,
     required this.displayName,
     this.photoUrl,
+    this.travelerType,
     this.homeCountryIso3,
     this.countries = const [],
     this.countryInfo = const {},
@@ -41,6 +42,7 @@ class SocialProfile {
   final String uid;
   final String displayName;
   final String? photoUrl;
+  final String? travelerType;
   final String? homeCountryIso3;
 
   /// 방문한 나라 이름 (Travelog country_visits_v2 키 = custom.geo.json name, 정렬됨)
@@ -115,6 +117,7 @@ class SocialProfile {
       uid: uid,
       displayName: d['displayName']?.toString() ?? 'Traveler',
       photoUrl: d['photoUrl']?.toString(),
+      travelerType: d['travelerType']?.toString(),
       homeCountryIso3: d['homeCountryIso3']?.toString(),
       countries: strings('countries'),
       countryInfo: places('countryInfo'),
@@ -128,23 +131,26 @@ class SocialProfile {
       unesco: strings('unesco'),
       unescoInfo: places('unescoInfo'),
       subregionCount: (d['subregionCount'] as num?)?.toInt() ?? 0,
-      airports: ((d['airports'] as Map?) ?? const {})
-          .map((k, v) => MapEntry(k.toString(), (v as num?)?.toInt() ?? 1)),
+      airports: ((d['airports'] as Map?) ?? const {}).map(
+        (k, v) => MapEntry(k.toString(), (v as num?)?.toInt() ?? 1),
+      ),
       airportInfo: places('airportInfo'),
       flights: FlightStats.fromMap(d['flights']),
       flightLog: [
         for (final f in (d['flightLog'] as List? ?? const []))
           if (f is Map) FlightEntry.fromMap(f),
       ],
-      dna: ((d['dna'] as Map?) ?? const {})
-          .map((k, v) => MapEntry(k.toString(), (v as num?)?.toDouble() ?? 50)),
+      dna: ((d['dna'] as Map?) ?? const {}).map(
+        (k, v) => MapEntry(k.toString(), (v as num?)?.toDouble() ?? 50),
+      ),
       badgeIds: strings('badgeIds'),
       badgeRank: d['badgeRank']?.toString(),
       plan: d['plan']?.toString() ?? 'none',
       quizNormal: QuizStats.fromMap(d['quizNormal']),
       quizExpert: QuizStats.fromMap(d['quizExpert']),
-      gameBest: ((d['gameBest'] as Map?) ?? const {})
-          .map((k, v) => MapEntry(k.toString(), v is num ? v : 0)),
+      gameBest: ((d['gameBest'] as Map?) ?? const {}).map(
+        (k, v) => MapEntry(k.toString(), v is num ? v : 0),
+      ),
       privacy: PrivacySettings.fromMap(d['privacy']),
       updatedAt: (d['updatedAt'] as Timestamp?)?.toDate(),
     );
@@ -153,12 +159,15 @@ class SocialProfile {
   /// displayName/photoUrl/privacy는 사용자가 이 앱에서 정하므로 요약 동기화 때는 쓰지 않는다.
   /// 공개를 끈 항목은 빈 값으로 덮어써서 예전에 올라간 값도 지운다.
   Map<String, dynamic> toSummaryFields(PrivacySettings p) {
-    Map<String, dynamic> placeMap(Map<String, PlaceInfo> m) =>
-        {for (final e in m.entries) if (!e.value.isDefault) e.key: e.value.toMap()};
+    Map<String, dynamic> placeMap(Map<String, PlaceInfo> m) => {
+      for (final e in m.entries)
+        if (!e.value.isDefault) e.key: e.value.toMap(),
+    };
 
     return {
       'v': 2,
       'homeCountryIso3': homeCountryIso3,
+      'travelerType': p.dna ? travelerType : null,
       'countries': countries,
       'countryInfo': placeMap(countryInfo),
       'countryWish': p.wishlist ? countryWish : const <String>[],
@@ -173,8 +182,12 @@ class SocialProfile {
       'subregionCount': subregionCount,
       'airports': p.flights ? airports : const <String, int>{},
       'flights': p.flights ? flights.toMap() : const FlightStats().toMap(),
-      'airportInfo': p.flights ? placeMap(airportInfo) : const <String, dynamic>{},
-      'flightLog': p.flights ? [for (final f in flightLog) f.toMap()] : const <Map<String, dynamic>>[],
+      'airportInfo': p.flights
+          ? placeMap(airportInfo)
+          : const <String, dynamic>{},
+      'flightLog': p.flights
+          ? [for (final f in flightLog) f.toMap()]
+          : const <Map<String, dynamic>>[],
       'dna': p.dna ? dna : const <String, double>{},
       'badgeIds': badgeIds,
       'badgeRank': badgeRank,
@@ -216,7 +229,14 @@ class PlaceInfo {
 
   int? get firstYear => years.isEmpty ? null : years.first;
 
-  bool get isDefault => rating == 0 && visits <= 1 && !lived && !home && years.isEmpty && first == null && last == null;
+  bool get isDefault =>
+      rating == 0 &&
+      visits <= 1 &&
+      !lived &&
+      !home &&
+      years.isEmpty &&
+      first == null &&
+      last == null;
 
   factory PlaceInfo.fromMap(dynamic raw) {
     if (raw is! Map) return const PlaceInfo();
@@ -225,26 +245,34 @@ class PlaceInfo {
       visits: (raw['c'] as num?)?.toInt() ?? 0,
       lived: raw['l'] == true,
       home: raw['h'] == true,
-      years: (raw['y'] as List?)?.map((e) => (e as num).toInt()).toList() ?? const [],
+      years:
+          (raw['y'] as List?)?.map((e) => (e as num).toInt()).toList() ??
+          const [],
       first: raw['d0']?.toString(),
       last: raw['d1']?.toString(),
     );
   }
 
   Map<String, dynamic> toMap() => {
-        if (rating > 0) 'r': rating,
-        if (visits > 1) 'c': visits,
-        if (lived) 'l': true,
-        if (home) 'h': true,
-        if (years.isNotEmpty) 'y': years,
-        if (first != null) 'd0': first,
-        if (last != null && last != first) 'd1': last,
-      };
+    if (rating > 0) 'r': rating,
+    if (visits > 1) 'c': visits,
+    if (lived) 'l': true,
+    if (home) 'h': true,
+    if (years.isNotEmpty) 'y': years,
+    if (first != null) 'd0': first,
+    if (last != null && last != first) 'd1': last,
+  };
 }
 
 /// 비행 한 번 (Travelog saved_airlines_data의 logs)
 class FlightEntry {
-  const FlightEntry({this.date, required this.from, required this.to, this.airline, this.number});
+  const FlightEntry({
+    this.date,
+    required this.from,
+    required this.to,
+    this.airline,
+    this.number,
+  });
 
   final String? date; // "2024-05-03" 등 아는 만큼
   final String from;
@@ -253,20 +281,20 @@ class FlightEntry {
   final String? number; // 편명
 
   factory FlightEntry.fromMap(Map raw) => FlightEntry(
-        date: raw['d']?.toString(),
-        from: raw['f']?.toString() ?? '',
-        to: raw['t']?.toString() ?? '',
-        airline: raw['a']?.toString(),
-        number: raw['no']?.toString(),
-      );
+    date: raw['d']?.toString(),
+    from: raw['f']?.toString() ?? '',
+    to: raw['t']?.toString() ?? '',
+    airline: raw['a']?.toString(),
+    number: raw['no']?.toString(),
+  );
 
   Map<String, dynamic> toMap() => {
-        if (date != null) 'd': date,
-        'f': from,
-        't': to,
-        if (airline != null) 'a': airline,
-        if (number != null && number!.isNotEmpty) 'no': number,
-      };
+    if (date != null) 'd': date,
+    'f': from,
+    't': to,
+    if (airline != null) 'a': airline,
+    if (number != null && number!.isNotEmpty) 'no': number,
+  };
 }
 
 class FlightRoute {
@@ -294,15 +322,20 @@ class FlightStats {
 
   factory FlightStats.fromMap(dynamic raw) {
     if (raw is! Map) return const FlightStats();
-    Map<String, int> counts(String key) => ((raw[key] as Map?) ?? const {})
-        .map((k, v) => MapEntry(k.toString(), (v as num?)?.toInt() ?? 0));
+    Map<String, int> counts(String key) => ((raw[key] as Map?) ?? const {}).map(
+      (k, v) => MapEntry(k.toString(), (v as num?)?.toInt() ?? 0),
+    );
     return FlightStats(
       total: (raw['n'] as num?)?.toInt() ?? 0,
       airlines: counts('al'),
       routes: [
         for (final r in (raw['rt'] as List? ?? const []))
           if (r is Map && r['f'] != null && r['t'] != null)
-            FlightRoute('${r['f']}', '${r['t']}', (r['n'] as num?)?.toInt() ?? 1),
+            FlightRoute(
+              '${r['f']}',
+              '${r['t']}',
+              (r['n'] as num?)?.toInt() ?? 1,
+            ),
       ],
       aircraft: counts('ac'),
       seatClasses: counts('cls'),
@@ -310,13 +343,15 @@ class FlightStats {
   }
 
   Map<String, dynamic> toMap() => {
-        'n': total,
-        'al': airlines,
-        // Firestore는 배열 안의 배열을 저장하지 못해서 맵으로
-        'rt': [for (final r in routes) {'f': r.from, 't': r.to, 'n': r.times}],
-        'ac': aircraft,
-        'cls': seatClasses,
-      };
+    'n': total,
+    'al': airlines,
+    // Firestore는 배열 안의 배열을 저장하지 못해서 맵으로
+    'rt': [
+      for (final r in routes) {'f': r.from, 't': r.to, 'n': r.times},
+    ],
+    'ac': aircraft,
+    'cls': seatClasses,
+  };
 }
 
 class QuizStats {
@@ -333,7 +368,8 @@ class QuizStats {
   /// 오늘(또는 어제)까지 연속으로 푼 날 수
   int streak(DateTime today) {
     var day = DateTime(today.year, today.month, today.day);
-    if (!days.containsKey(_key(day))) day = day.subtract(const Duration(days: 1));
+    if (!days.containsKey(_key(day)))
+      day = day.subtract(const Duration(days: 1));
     var n = 0;
     while (days.containsKey(_key(day))) {
       n++;
@@ -359,7 +395,11 @@ class QuizStats {
 
   static DateTime? _parse(String s) {
     if (!RegExp(r'^\d{8}$').hasMatch(s)) return null;
-    return DateTime(int.parse(s.substring(0, 4)), int.parse(s.substring(4, 6)), int.parse(s.substring(6, 8)));
+    return DateTime(
+      int.parse(s.substring(0, 4)),
+      int.parse(s.substring(4, 6)),
+      int.parse(s.substring(6, 8)),
+    );
   }
 
   static String keyOf(DateTime d) => _key(d);
@@ -369,16 +409,23 @@ class QuizStats {
     return QuizStats(
       solved: (raw['solved'] as num?)?.toInt() ?? 0,
       correct: (raw['correct'] as num?)?.toInt() ?? 0,
-      days: ((raw['days'] as Map?) ?? const {}).map((k, v) => MapEntry(k.toString(), v == 1 || v == true)),
+      days: ((raw['days'] as Map?) ?? const {}).map(
+        (k, v) => MapEntry(k.toString(), v == 1 || v == true),
+      ),
     );
   }
 
   /// quiz_history 문서들 (문서 id = "yyyyMMdd")
-  factory QuizStats.fromHistory(Iterable<MapEntry<String, Map<String, dynamic>>> docs, {DateTime? now}) {
+  factory QuizStats.fromHistory(
+    Iterable<MapEntry<String, Map<String, dynamic>>> docs, {
+    DateTime? now,
+  }) {
     var solved = 0;
     var correct = 0;
     final days = <String, bool>{};
-    final cutoff = QuizStats.keyOf((now ?? DateTime.now()).subtract(const Duration(days: 366)));
+    final cutoff = QuizStats.keyOf(
+      (now ?? DateTime.now()).subtract(const Duration(days: 366)),
+    );
     for (final d in docs) {
       solved++;
       final ok = d.value['isCorrect'] == true;
@@ -389,15 +436,20 @@ class QuizStats {
   }
 
   Map<String, dynamic> toMap() => {
-        'solved': solved,
-        'correct': correct,
-        'days': days.map((k, v) => MapEntry(k, v ? 1 : 0)),
-      };
+    'solved': solved,
+    'correct': correct,
+    'days': days.map((k, v) => MapEntry(k, v ? 1 : 0)),
+  };
 }
 
 /// 친구에게 무엇을 보여줄지. 나라·랜드마크·UNESCO·퀴즈·게임은 항상 공개.
 class PrivacySettings {
-  const PrivacySettings({this.cities = true, this.flights = true, this.dna = true, this.wishlist = true});
+  const PrivacySettings({
+    this.cities = true,
+    this.flights = true,
+    this.dna = true,
+    this.wishlist = true,
+  });
 
   final bool cities;
   final bool flights;
@@ -414,19 +466,43 @@ class PrivacySettings {
     );
   }
 
-  PrivacySettings copyWith({bool? cities, bool? flights, bool? dna, bool? wishlist}) => PrivacySettings(
-        cities: cities ?? this.cities,
-        flights: flights ?? this.flights,
-        dna: dna ?? this.dna,
-        wishlist: wishlist ?? this.wishlist,
-      );
+  PrivacySettings copyWith({
+    bool? cities,
+    bool? flights,
+    bool? dna,
+    bool? wishlist,
+  }) => PrivacySettings(
+    cities: cities ?? this.cities,
+    flights: flights ?? this.flights,
+    dna: dna ?? this.dna,
+    wishlist: wishlist ?? this.wishlist,
+  );
 
-  Map<String, dynamic> toMap() => {'cities': cities, 'flights': flights, 'dna': dna, 'wishlist': wishlist};
+  Map<String, dynamic> toMap() => {
+    'cities': cities,
+    'flights': flights,
+    'dna': dna,
+    'wishlist': wishlist,
+  };
 }
 
 /// Travelog 원본 데이터 → 친구 공개용 요약.
 /// 필드 의미는 travelogdata/lib/services/travel_data_parser.dart, jidoapp 모델과 같다.
 class ProfileSummaryBuilder {
+  static String? _travelerType(dynamic raw) {
+    try {
+      final data = raw is String ? jsonDecode(raw) : raw;
+      final scores = (data?['summary']?['persona_scores'] as List?)
+          ?.where((s) => s is Map && s['label'] is String && s['score'] is num)
+          .toList();
+      if (scores == null || scores.isEmpty) return null;
+      scores.sort((a, b) => (b['score'] as num).compareTo(a['score'] as num));
+      return scores.first['label'] as String;
+    } catch (_) {
+      return null;
+    }
+  }
+
   static const gameScorePrefixes = [
     'which_is_farther_scores_',
     'border_chain_scores_',
@@ -449,13 +525,24 @@ class ProfileSummaryBuilder {
   }) {
     final u = user ?? const {};
     final badgeIds = badges?['badgeIds'];
-    final countries = _places(u['country_visits_v2'], visited: (v) => v['isVisited'] == true);
-    final cities = _places(u['city_visit_details_v3'], visited: (v) => v['isWishlisted'] != true);
+    final countries = _places(
+      u['country_visits_v2'],
+      visited: (v) => v['isVisited'] == true,
+    );
+    final cities = _places(
+      u['city_visit_details_v3'],
+      visited: (v) => v['isWishlisted'] != true,
+    );
 
     return SocialProfile(
       uid: uid,
       displayName: displayName,
-      homeCountryIso3: (u['selectedPassportIso'] ?? u['homeCountryIso3'])?.toString(),
+      travelerType: _travelerType(u['ai_analysis_result']),
+      homeCountryIso3:
+          (u['homeCountryIsoA3'] ??
+                  u['selectedPassportIso'] ??
+                  u['homeCountryIso3'])
+              ?.toString(),
       countries: countries.visited.keys.toList()..sort(),
       countryInfo: countries.visited,
       countryWish: countries.wish..sort(),
@@ -464,7 +551,10 @@ class ProfileSummaryBuilder {
       cityWish: cities.wish..sort(),
       landmarks: _strings(u['visited_landmarks'])..sort(),
       landmarkWish: _strings(u['wishlisted_landmarks'])..sort(),
-      landmarkInfo: _history(u['landmark_visit_history'], u['landmark_ratings']),
+      landmarkInfo: _history(
+        u['landmark_visit_history'],
+        u['landmark_ratings'],
+      ),
       unesco: _strings(u['unesco_visited_sites'])..sort(),
       unescoInfo: _history(u['unesco_history'], u['unesco_ratings']),
       subregionCount: _subregionCount(u['visited_subregions']),
@@ -472,8 +562,12 @@ class ProfileSummaryBuilder {
       airportInfo: _history(u['airport_visit_history'], u['airport_ratings']),
       flights: _flights(u['saved_airlines_data']),
       flightLog: _flightLog(u['saved_airlines_data']),
-      dna: u['dna_is_calculated'] == false ? const {} : _dna(u['dna_final_scores']),
-      badgeIds: badgeIds is List ? badgeIds.map((e) => e.toString()).toList() : const [],
+      dna: u['dna_is_calculated'] == false
+          ? const {}
+          : _dna(u['dna_final_scores']),
+      badgeIds: badgeIds is List
+          ? badgeIds.map((e) => e.toString()).toList()
+          : const [],
       badgeRank: badges?['currentRank']?.toString(),
       quizNormal: QuizStats.fromHistory(quizNormal, now: now),
       quizExpert: QuizStats.fromHistory(quizExpert, now: now),
@@ -519,8 +613,7 @@ class ProfileSummaryBuilder {
           for (final r in ranges)
             if (r is Map) ?_year(r['arrival'] ?? r['arrivalDate']),
         ?_year(v['arrivalDate']),
-      }.toList()
-        ..sort();
+      }.toList()..sort();
       final dates = <String>[
         if (ranges is List)
           for (final r in ranges)
@@ -529,7 +622,9 @@ class ProfileSummaryBuilder {
       ]..sort();
       out[key.toString()] = PlaceInfo(
         rating: (v['rating'] as num?)?.toDouble() ?? 0,
-        visits: (v['visitCount'] as num?)?.toInt() ?? (ranges is List ? ranges.length : 1),
+        visits:
+            (v['visitCount'] as num?)?.toInt() ??
+            (ranges is List ? ranges.length : 1),
         lived: v['hasLived'] == true,
         home: v['isHome'] == true,
         years: years,
@@ -549,7 +644,9 @@ class ProfileSummaryBuilder {
       m = (raw['month'] as num?)?.toInt();
       d = (raw['day'] as num?)?.toInt();
     } else if (raw is String) {
-      final match = RegExp(r'^(\d{4})(?:[-./](\d{1,2}))?(?:[-./](\d{1,2}))?').firstMatch(raw.trim());
+      final match = RegExp(
+        r'^(\d{4})(?:[-./](\d{1,2}))?(?:[-./](\d{1,2}))?',
+      ).firstMatch(raw.trim());
       if (match == null) return null;
       y = int.parse(match.group(1)!);
       m = match.group(2) == null ? null : int.parse(match.group(2)!);
@@ -571,7 +668,9 @@ class ProfileSummaryBuilder {
       map.forEach((key, visits) {
         if (visits is! List) return;
         final dates = visits.map(dateOf).whereType<String>().toList()..sort();
-        final years = dates.map((d) => int.parse(d.substring(0, 4))).toSet().toList()..sort();
+        final years =
+            dates.map((d) => int.parse(d.substring(0, 4))).toSet().toList()
+              ..sort();
         out[key.toString()] = PlaceInfo(
           visits: visits.length,
           years: years,
@@ -604,19 +703,23 @@ class ProfileSummaryBuilder {
     final out = <FlightEntry>[];
     for (final a in list) {
       if (a is! Map) continue;
-      final code = (a['code']?.toString().isNotEmpty == true ? a['code'] : a['code3'])?.toString();
+      final code =
+          (a['code']?.toString().isNotEmpty == true ? a['code'] : a['code3'])
+              ?.toString();
       for (final log in (a['logs'] as List? ?? const [])) {
         if (log is! Map || log['isCanceled'] == true) continue;
         final dep = log['departureIata']?.toString();
         final arr = log['arrivalIata']?.toString();
         if (dep == null || arr == null || dep.isEmpty || arr.isEmpty) continue;
-        out.add(FlightEntry(
-          date: dateOf(log['date']),
-          from: dep,
-          to: arr,
-          airline: code,
-          number: log['flightNumber']?.toString(),
-        ));
+        out.add(
+          FlightEntry(
+            date: dateOf(log['date']),
+            from: dep,
+            to: arr,
+            airline: code,
+            number: log['flightNumber']?.toString(),
+          ),
+        );
       }
     }
     out.sort((x, y) => (y.date ?? '').compareTo(x.date ?? ''));
@@ -640,7 +743,8 @@ class ProfileSummaryBuilder {
     if (map is! Map) return const {};
     return {
       for (final e in map.entries)
-        if (e.value is List && (e.value as List).isNotEmpty) e.key.toString(): (e.value as List).length,
+        if (e.value is List && (e.value as List).isNotEmpty)
+          e.key.toString(): (e.value as List).length,
     };
   }
 
@@ -655,24 +759,30 @@ class ProfileSummaryBuilder {
     final classes = <String, int>{};
     for (final a in list) {
       if (a is! Map) continue;
-      final code = (a['code']?.toString().isNotEmpty == true ? a['code'] : a['code3'])?.toString();
+      final code =
+          (a['code']?.toString().isNotEmpty == true ? a['code'] : a['code3'])
+              ?.toString();
       for (final log in (a['logs'] as List? ?? const [])) {
         if (log is! Map || log['isCanceled'] == true) continue;
         final times = ((log['times'] as num?)?.toInt() ?? 1).clamp(1, 1000);
         total += times;
-        if (code != null && code.isNotEmpty) airlines[code] = (airlines[code] ?? 0) + times;
+        if (code != null && code.isNotEmpty)
+          airlines[code] = (airlines[code] ?? 0) + times;
         final dep = log['departureIata']?.toString();
         final arr = log['arrivalIata']?.toString();
         if (dep != null && arr != null && dep.length == 3 && arr.length == 3) {
           routes['$dep-$arr'] = (routes['$dep-$arr'] ?? 0) + times;
         }
         final ac = log['aircraft']?.toString();
-        if (ac != null && ac.isNotEmpty) aircraft[ac] = (aircraft[ac] ?? 0) + times;
+        if (ac != null && ac.isNotEmpty)
+          aircraft[ac] = (aircraft[ac] ?? 0) + times;
         final cls = log['seatClass']?.toString();
-        if (cls != null && cls.isNotEmpty) classes[cls] = (classes[cls] ?? 0) + times;
+        if (cls != null && cls.isNotEmpty)
+          classes[cls] = (classes[cls] ?? 0) + times;
       }
     }
-    final sortedRoutes = routes.entries.toList()..sort((a, b) => b.value.compareTo(a.value));
+    final sortedRoutes = routes.entries.toList()
+      ..sort((a, b) => b.value.compareTo(a.value));
     return FlightStats(
       total: total,
       airlines: airlines,

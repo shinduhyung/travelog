@@ -121,7 +121,7 @@ class _BadgeCollectedScreenState extends State<BadgeCollectedScreen> {
                   const SizedBox(height: 15),
                   // 이름 및 설명
                   Text(
-                    widget.achievement.name,
+                    tr(widget.achievement.name),
                     style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w600),
                     textAlign: TextAlign.center,
                   ),

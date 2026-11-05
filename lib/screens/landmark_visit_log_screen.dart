@@ -1,6 +1,7 @@
 // lib/screens/landmark_visit_log_screen.dart
 
 import 'package:flutter/foundation.dart';
+import 'package:jidoapp/utils/storage_name.dart';
 import 'package:flutter/material.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
@@ -16,6 +17,7 @@ import 'package:jidoapp/models/visit_date_model.dart';
 import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/widgets/landmark_info_card.dart';
+import 'package:jidoapp/widgets/my_match_badge.dart';
 
 enum LogGroupOption { year, country }
 
@@ -76,12 +78,7 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
   // ── Landmark Hero Image (Firebase Storage: new_countrydex/) ─────────────
   // 이름 슬러그(파일명의 나머지 부분)만 뽑아내는 헬퍼.
   String _getLandmarkNameSlug(Landmark landmark) {
-    return landmark.name
-        .toLowerCase()
-        .replaceAll(RegExp(r"[''`]"), '')
-        .replaceAll(RegExp(r'[^a-z0-9\s]'), '')
-        .trim()
-        .replaceAll(RegExp(r'\s+'), '_');
+    return foldedSnake(landmark.name);
   }
 
   // 시도할 후보 URL 리스트를 반환.
@@ -101,6 +98,12 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
       fileNames.add('${iso}_$snake');
     }
     fileNames.add('m_$snake');
+    // 예전 방식(악센트 글자를 지움)으로 올라간 파일도 찾는다
+    final legacy = legacySnake(landmark.name);
+    if (legacy != snake) {
+      if (landmark.countriesIsoA3.isNotEmpty) fileNames.add('${landmark.countriesIsoA3.first.toLowerCase()}_$legacy');
+      fileNames.add('m_$legacy');
+    }
 
     return fileNames.map((name) => '$base$name$suffix').toList();
   }
@@ -213,6 +216,7 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
                                   child:  Text(tr('Cancel'),
                                       style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600, fontSize: 13)),
                                 ),
+                                MyMatchBadge.landmark(landmark: freshLandmark, onDark: true),
                                 ElevatedButton(
                                   onPressed: () => Navigator.pop(sheetContext),
                                   style: ElevatedButton.styleFrom(
@@ -236,6 +240,7 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
                                   height: 1.15,
                                   shadows: [Shadow(color: Colors.black26, blurRadius: 6, offset: Offset(0, 1))],
                                 )),
+                            
                             const SizedBox(height: 10),
                             Row(
                               children: [

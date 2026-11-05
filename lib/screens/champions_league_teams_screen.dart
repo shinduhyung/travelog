@@ -13,6 +13,7 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:jidoapp/models/visit_date_model.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
+import 'package:jidoapp/widgets/my_match_badge.dart';
 
 class ChampionsLeagueTeamsScreen extends StatelessWidget {
   const ChampionsLeagueTeamsScreen({super.key});
@@ -180,6 +181,7 @@ class ChampionsLeagueTeamsScreen extends StatelessWidget {
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                     TextButton(onPressed: () => Navigator.pop(sheetContext),
                         child: Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
+                    MyMatchBadge.landmark(landmark: freshLandmark, onDark: headerTextColor == Colors.white),
                     ElevatedButton(onPressed: () => Navigator.pop(sheetContext),
                         style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
                         child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))),
@@ -190,6 +192,7 @@ class ChampionsLeagueTeamsScreen extends StatelessWidget {
                         style: Theme.of(sheetContext).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold, fontSize: 26, color: headerTextColor))),
                     if (isVisited) Icon(Icons.check_circle, color: headerTextColor, size: 24),
                   ]),
+                  
                   const SizedBox(height: 6),
                   Row(children: [
                     Icon(Icons.location_on, size: 14, color: headerTextColor.withOpacity(0.8)),

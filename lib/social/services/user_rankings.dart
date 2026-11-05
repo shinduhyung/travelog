@@ -1,3 +1,5 @@
+import 'package:jidoapp/l10n/app_localizations.dart';
+
 import '../data/geo_data.dart';
 import '../models/global_stats.dart';
 
@@ -24,9 +26,9 @@ class UserRankings {
     final cities = [for (final r in stats.cities) if (geo.cities.containsKey(r.name)) r];
     if (cities.length >= 10) {
       out.add(('user_cities', RankingData(
-        titleTop: 'Most Visited',
-        titleBottom: 'Cities',
-        subtitle: 'Share of Travelog users who have visited each city',
+        titleTop: tr('Most Visited'),
+        titleBottom: tr('Cities'),
+        subtitle: tr('Share of Travelog users who have visited each city'),
         rows: cities.take(10).map(cityRow).toList(),
       )));
     }
@@ -44,9 +46,9 @@ class UserRankings {
     final landmarks = [for (final r in stats.landmarks) ?landmarkRow(r)];
     if (landmarks.length >= 10) {
       out.add(('user_landmarks', RankingData(
-        titleTop: 'Most Visited',
-        titleBottom: 'Landmarks',
-        subtitle: 'Share of Travelog users who have visited each landmark',
+        titleTop: tr('Most Visited'),
+        titleBottom: tr('Landmarks'),
+        subtitle: tr('Share of Travelog users who have visited each landmark'),
         rows: landmarks.take(10).map((e) => e.row).toList(),
       )));
     }
@@ -54,9 +56,9 @@ class UserRankings {
       final rows = [for (final l in landmarks) if (l.country?.continent == continent) l.row];
       if (rows.length < 10) continue;
       out.add(('user_landmarks_${continent.toLowerCase().replaceAll(' ', '_')}', RankingData(
-        titleTop: 'Landmarks',
+        titleTop: tr('Landmarks'),
         titleBottom: continent,
-        subtitle: 'Share of Travelog users who have visited each landmark',
+        subtitle: tr('Share of Travelog users who have visited each landmark'),
         rows: rows.take(10).toList(),
       )));
     }

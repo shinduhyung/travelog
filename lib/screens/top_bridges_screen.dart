@@ -14,6 +14,7 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:jidoapp/models/visit_date_model.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
+import 'package:jidoapp/widgets/my_match_badge.dart';
 
 class TopBridgesScreen extends StatelessWidget {
   const TopBridgesScreen({super.key});
@@ -244,6 +245,7 @@ class TopBridgesScreen extends StatelessWidget {
                         TextButton(
                             onPressed: () => Navigator.pop(sheetContext),
                             child: Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
+                        MyMatchBadge.landmark(landmark: freshLandmark, onDark: headerTextColor == Colors.white),
                         ElevatedButton(
                             onPressed: () => Navigator.pop(sheetContext),
                             child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)),
@@ -260,6 +262,7 @@ class TopBridgesScreen extends StatelessWidget {
                         if (isVisited) Icon(Icons.check_circle, color: headerTextColor, size: 24),
                       ],
                     ),
+                    
                     const SizedBox(height: 6),
                     Row(
                       children: [

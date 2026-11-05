@@ -12,7 +12,7 @@ import 'package:jidoapp/screens/calendar_screen.dart';
 import 'package:jidoapp/screens/favorites_screen.dart';
 import 'package:jidoapp/screens/login_prompt_screen.dart';
 import 'package:jidoapp/screens/passport_screen.dart';
-import 'package:jidoapp/screens/recommendations_screen.dart';
+import 'package:jidoapp/screens/discover_screen.dart';
 import 'package:jidoapp/screens/settings_screen.dart';
 import 'package:jidoapp/screens/trip_log_list_screen.dart';
 import 'package:jidoapp/screens/visa_screen.dart';
@@ -38,7 +38,7 @@ class MyHubItem {
 
 final List<MyHubItem> myHubItems = [
   MyHubItem('Trip Log', Icons.auto_stories_rounded, const Color(0xFFF97316), (_) => const TripLogListScreen()),
-  MyHubItem('Discover', Icons.search_rounded, const Color(0xFF2563EB), (_) => const RecommendationsScreen()),
+  MyHubItem('Discover', Icons.search_rounded, const Color(0xFF2563EB), (_) => const DiscoverScreen()),
   MyHubItem('Favorites', Icons.favorite_rounded, const Color(0xFFEC4899), (_) => const FavoritesScreen()),
   MyHubItem('Calendar', Icons.calendar_month_rounded, const Color(0xFFEF4444), (_) => const CalendarScreen()),
   MyHubItem('Passport', Icons.book_rounded, const Color(0xFF8B5CF6), (_) => const PassportScreen()),
@@ -290,7 +290,7 @@ class _ContactSheet extends StatelessWidget {
                     Navigator.pop(context);
                   } else {
                     // 메일 앱이 없으면 주소라도 복사해 둔다
-                    await _copy(context, message: 'No email app found. Address copied.');
+                    await _copy(context, message: tr('No email app found. Address copied.'));
                   }
                 },
                 style: FilledButton.styleFrom(

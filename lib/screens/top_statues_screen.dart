@@ -14,6 +14,7 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:jidoapp/models/visit_date_model.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
+import 'package:jidoapp/widgets/my_match_badge.dart';
 
 // top_picks_menu: color: const Color(0xFFB5838D)
 const Color _kTheme = Color(0xFF8E7BA3);
@@ -209,6 +210,7 @@ class TopStatuesScreen extends StatelessWidget {
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                   TextButton(onPressed: () => Navigator.pop(sheetContext),
                       child: Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
+                  MyMatchBadge.landmark(landmark: freshLandmark, onDark: headerTextColor == Colors.white),
                   ElevatedButton(onPressed: () => Navigator.pop(sheetContext),
                       style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
                       child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))),
@@ -218,6 +220,7 @@ class TopStatuesScreen extends StatelessWidget {
                   Expanded(child: Text(freshLandmark.name, style: Theme.of(sheetContext).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold, fontSize: 26, color: headerTextColor))),
                   if (isVisited || visitedSubCount > 0) Icon(Icons.check_circle, color: headerTextColor, size: 24),
                 ]),
+                
                 const SizedBox(height: 6),
                 Row(children: [
                   Icon(Icons.location_on, size: 14, color: headerTextColor.withOpacity(0.8)),

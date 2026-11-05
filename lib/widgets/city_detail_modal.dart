@@ -1,6 +1,8 @@
+import 'package:jidoapp/widgets/city_tour_navigation.dart';
 // lib/widgets/city_detail_modal.dart
 
 import 'dart:convert';
+import 'package:jidoapp/utils/storage_name.dart';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
@@ -22,6 +24,7 @@ import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/providers/country_info_provider.dart';
 import 'package:jidoapp/providers/city_info_provider.dart';
+import 'package:jidoapp/widgets/my_match_badge.dart';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Attribute category sets
@@ -125,7 +128,7 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
     if (city.name == 'San José') {
       filename = 'san_jose_cr';
     } else {
-      filename = _toSnake(city.name);
+      filename = foldedSnake(city.name);
     }
     return 'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/ranked_cities%2F$filename.jpg.jpg?alt=media';
   }
@@ -164,6 +167,7 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
 
   Widget _pill({required IconData? icon, required String label, required Color bg, required Color fg}) =>
       Container(
+        constraints: const BoxConstraints(minHeight: placeDetailBadgeMinHeight),
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
         decoration: BoxDecoration(color: bg, borderRadius: BorderRadius.circular(20)),
         child: Row(mainAxisSize: MainAxisSize.min, children: [
@@ -494,6 +498,7 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
       child: SingleChildScrollView(
         controller: scrollController,
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          CityTourButton(city: city.name, countryCode: city.countryIsoA2, latitude: city.latitude, longitude: city.longitude),
 
           Center(child: Container(width: 36, height: 4,
               margin: const EdgeInsets.only(top: 10),
@@ -532,6 +537,7 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
               Wrap(spacing: 6, runSpacing: 6, children: [
                 if (safetyLevel > 0) _safetyBadge(safetyLevel),
                 if (cityInfo != null && cityInfo.costLevel > 0) _costBadge(cityInfo.costLevel),
+                MyMatchBadge.city(city: city),
               ]),
 
               const SizedBox(height: 14),

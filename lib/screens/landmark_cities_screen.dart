@@ -16,6 +16,7 @@ import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/providers/city_provider.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/widgets/landmark_info_card.dart';
+import 'package:jidoapp/widgets/my_match_badge.dart';
 import 'package:jidoapp/screens/cities_screen.dart'; // showExternalCityDetailsModal
 
 const Color _kTheme = Color(0xFF4A5568);
@@ -441,6 +442,7 @@ class LandmarkCitiesScreen extends StatelessWidget {
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                   TextButton(onPressed: () => Navigator.pop(sheetContext),
                       child: Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
+                  MyMatchBadge.landmark(landmark: freshLandmark, onDark: headerTextColor == Colors.white),
                   ElevatedButton(onPressed: () => Navigator.pop(sheetContext),
                       style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
                       child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))),
@@ -451,6 +453,7 @@ class LandmarkCitiesScreen extends StatelessWidget {
                       style: Theme.of(sheetContext).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold, fontSize: 26, color: headerTextColor))),
                   if (isVisited || visitedSubCount > 0) Icon(Icons.check_circle, color: headerTextColor, size: 24),
                 ]),
+                
                 const SizedBox(height: 6),
                 Row(children: [
                   Icon(Icons.location_on, size: 14, color: headerTextColor.withOpacity(0.8)),

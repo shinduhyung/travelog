@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 
 import '../../data/geo_data.dart';
 import '../../models/stats.dart';
@@ -14,11 +15,11 @@ class OverviewTab extends StatelessWidget {
 
   String get _verdict {
     final s = cmp.compatibility;
-    if (s >= 80) return 'Soulmate travelers 🫶';
-    if (s >= 60) return 'Great travel buddies ✈️';
-    if (s >= 40) return 'Lots to learn from each other 📚';
-    if (s >= 20) return 'Totally different styles 🔀';
-    return 'Barely any overlap yet 🌱';
+    if (s >= 80) return tr('Soulmate travelers 🫶');
+    if (s >= 60) return tr('Great travel buddies ✈️');
+    if (s >= 40) return tr('Lots to learn from each other 📚');
+    if (s >= 20) return tr('Totally different styles 🔀');
+    return tr('Barely any overlap yet 🌱');
   }
 
   @override
@@ -29,8 +30,8 @@ class OverviewTab extends StatelessWidget {
       SectionCard(
         emoji: '💞',
         tint: AppColors.both,
-        title: 'Travel match',
-        subtitle: 'Shared places & travel style',
+        title: tr('Travel match'),
+        subtitle: tr('Shared places & travel style'),
         child: Column(
           children: [
             Gauge(value: cmp.compatibility, size: 210),
@@ -51,43 +52,43 @@ class OverviewTab extends StatelessWidget {
                   ('Landmarks', '${cmp.landmarks.both.length}'),
                   if (cmp.dnaSimilarity != null) ('DNA', '${(cmp.dnaSimilarity! * 100).round()}%'),
                 ]) ...[
-                  Expanded(child: _pill(context, label, value, AppColors.both)),
+                  Expanded(child: _pill(context, tr(label), value, AppColors.both)),
                   const SizedBox(width: 6),
                 ],
               ]..removeLast(),
             ),
             const SizedBox(height: 4),
-            Text('in common', style: theme.textTheme.labelSmall?.copyWith(color: AppColors.label)),
+            Text(tr('in common'), style: theme.textTheme.labelSmall?.copyWith(color: AppColors.label)),
           ],
         ),
       ),
       SectionCard(
         emoji: '🕸️',
         tint: AppColors.indigo,
-        title: 'Travel radar',
-        subtitle: 'Leader = 100%',
+        title: tr('Travel radar'),
+        subtitle: tr('Leader = 100%'),
         trailing: VsLegend(friendName: shortName(name), showBoth: false),
         child: RadarVs(axes: cmp.radar, size: 260),
       ),
       SectionCard(
         emoji: '🏁',
         tint: AppColors.gold,
-        title: 'Category score ${cmp.myWins} : ${cmp.theirWins}',
+        title: tr('Category score ${cmp.myWins} : ${cmp.theirWins}'),
         subtitle: cmp.myWins == cmp.theirWins
-            ? 'Neck and neck!'
+            ? tr('Neck and neck!')
             : cmp.myWins > cmp.theirWins
-                ? "You're in the lead"
-                : '$name is in the lead',
+                ? tr("You're in the lead")
+                : tr('$name is in the lead'),
         child: Column(
           children: [
-            for (final c in cmp.categories) VsBar(label: c.label, emoji: c.emoji, mine: c.mine, theirs: c.theirs),
+            for (final c in cmp.categories) VsBar(label: tr(c.label), emoji: c.emoji, mine: c.mine, theirs: c.theirs),
           ],
         ),
       ),
       SectionCard(
         emoji: '💡',
         tint: AppColors.mint,
-        title: 'Did you know?',
+        title: tr('Did you know?'),
         child: Column(children: _facts(context)),
       ),
     ]);
@@ -118,7 +119,7 @@ class OverviewTab extends StatelessWidget {
     final name = cmp.friend.displayName;
     final geo = GeoData.I;
     String cn(String n) => geo.countryByName(n)?.longName ?? n;
-    String countries(int n) => n == 1 ? '1 country' : '$n countries';
+    String countries(int n) => n == 1 ? tr('1 country') : tr('$n countries');
     final facts = <Widget>[];
 
     if (cmp.countries.both.isNotEmpty) {
@@ -131,11 +132,11 @@ class OverviewTab extends StatelessWidget {
       facts.add(FactTile(
         emoji: '🤝',
         color: AppColors.both,
-        text: "You've both been to ${countries(cmp.countries.both.length)}"
-            '${top == null ? '' : ' · Most overlap: ${continentLabel(top.key)} (${top.value})'}',
+        text: tr("You've both been to ${countries(cmp.countries.both.length)}") +
+            (top == null ? '' : ' · ${tr('Most overlap: ${continentLabel(top.key)} (${top.value})')}'),
       ));
     } else {
-      facts.add(const FactTile(emoji: '🌱', text: 'No countries in common yet. Time to plan your first shared trip!'));
+      facts.add(FactTile(emoji: '🌱', text: tr('No countries in common yet. Time to plan your first shared trip!')));
     }
 
     final sameYear = cmp.sameYearTrips;
@@ -144,8 +145,8 @@ class OverviewTab extends StatelessWidget {
       facts.add(FactTile(
         emoji: '📅',
         color: AppColors.both,
-        text: 'You were both in ${cn(c)} in $y!'
-            '${sameYear.length > 1 ? ' (${sameYear.length} same-country, same-year trips)' : ''}',
+        text: tr('You were both in ${cn(c)} in $y!') +
+            (sameYear.length > 1 ? ' ${tr('(${sameYear.length} same-country, same-year trips)')}' : ''),
       ));
     }
 
@@ -154,7 +155,7 @@ class OverviewTab extends StatelessWidget {
       final (c, a, b) = gaps.first;
       facts.add(FactTile(
         emoji: a > b ? '😍' : '🤔',
-        text: 'Biggest rating gap: ${cn(c)} — You ★${a.toStringAsFixed(1)}, $name ★${b.toStringAsFixed(1)}',
+        text: tr('Biggest rating gap: ${cn(c)} — You ★${a.toStringAsFixed(1)}, $name ★${b.toStringAsFixed(1)}'),
       ));
     }
 
@@ -162,8 +163,8 @@ class OverviewTab extends StatelessWidget {
       facts.add(FactTile(
         emoji: '💭',
         color: AppColors.gold,
-        text: 'On both your wishlists: ${cmp.wishOverlap.take(4).map(cn).join(', ')}'
-            '${cmp.wishOverlap.length > 4 ? ' +${cmp.wishOverlap.length - 4} more' : ''}. Go together?',
+        text: '${tr('On both your wishlists:')} ${cmp.wishOverlap.take(4).map(cn).join(', ')}'
+            '${cmp.wishOverlap.length > 4 ? ' ${tr('+${cmp.wishOverlap.length - 4} more')}' : ''}. ${tr('Go together?')}',
       ));
     }
 
@@ -172,32 +173,32 @@ class OverviewTab extends StatelessWidget {
       facts.add(FactTile(
         emoji: '🧭',
         color: AppColors.friend,
-        text: "$name has been, you haven't yet: ${rec.take(3).map(cn).join(', ')}",
+        text: '${tr("$name has been, you haven't yet:")} ${rec.take(3).map(cn).join(', ')}',
       ));
     }
 
     final km1 = cmp.mine.totalFlightKm, km2 = cmp.theirs.totalFlightKm;
     if (km1 > 0 || km2 > 0) {
-      final more = km1 >= km2 ? 'You' : name;
+      final more = km1 >= km2 ? tr('You') : name;
       facts.add(FactTile(
         emoji: '✈️',
-        text: '$more flew farther — ${compactNumber(km1.round())} km vs ${compactNumber(km2.round())} km '
-            '(${(km1 > km2 ? cmp.mine.earthLaps : cmp.theirs.earthLaps).toStringAsFixed(1)} laps around Earth)',
+        text: '${tr('$more flew farther')} — ${compactNumber(km1.round())} km vs ${compactNumber(km2.round())} km '
+            '(${tr('${(km1 > km2 ? cmp.mine.earthLaps : cmp.theirs.earthLaps).toStringAsFixed(1)} laps around Earth')})',
       ));
     }
 
     final a1 = cmp.mine.areaPercent, a2 = cmp.theirs.areaPercent;
     facts.add(FactTile(
       emoji: '🌐',
-      text: "Share of Earth's land visited: You ${(a1 * 100).toStringAsFixed(1)}%, $name ${(a2 * 100).toStringAsFixed(1)}%",
+      text: tr("Share of Earth's land visited: You ${(a1 * 100).toStringAsFixed(1)}%, $name ${(a2 * 100).toStringAsFixed(1)}%"),
     ));
 
     final b1 = cmp.mine.biggestCity, b2 = cmp.theirs.biggestCity;
     if (b1 != null && b2 != null) {
       facts.add(FactTile(
         emoji: '🏙️',
-        text: 'Biggest city: You — ${b1.displayName} (pop. ${compactNumber(b1.population)}), '
-            '$name — ${b2.displayName} (pop. ${compactNumber(b2.population)})',
+        text: tr('Biggest city: You — ${b1.displayName} (pop. ${compactNumber(b1.population)}), '
+            '$name — ${b2.displayName} (pop. ${compactNumber(b2.population)})'),
       ));
     }
 
@@ -205,7 +206,7 @@ class OverviewTab extends StatelessWidget {
       facts.add(FactTile(
         emoji: '🧬',
         color: AppColors.both,
-        text: 'Your travel styles are ${(cmp.dnaSimilarity! * 100).round()}% alike. See the Travel DNA tab for more!',
+        text: tr('Your travel styles are ${(cmp.dnaSimilarity! * 100).round()}% alike. See the Travel DNA tab for more!'),
       ));
     }
     return facts;

@@ -1,3 +1,4 @@
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -73,17 +74,17 @@ class _CardBody extends StatelessWidget {
           children: [
             const _Brand(),
             const SizedBox(height: 2),
-            Text(data.titleTop,
+            Text(tr(data.titleTop),
                 maxLines: 1,
                 style: const TextStyle(fontSize: 38, height: 1.05, fontWeight: FontWeight.w900, color: Colors.black, letterSpacing: -1.5)),
             ShaderMask(
               shaderCallback: (r) => const LinearGradient(colors: [Color(0xFF3B82F6), Color(0xFF8B5CF6), Color(0xFFEC4899)]).createShader(r),
-              child: Text(data.titleBottom,
+              child: Text(tr(data.titleBottom),
                   maxLines: 1,
                   style: const TextStyle(fontSize: 38, height: 1.05, fontWeight: FontWeight.w900, color: Colors.white, letterSpacing: -1.5)),
             ),
             const SizedBox(height: 2),
-            Text(data.subtitle,
+            Text(tr(data.subtitle),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w500, color: Color(0xFF2547C8))),
@@ -97,8 +98,8 @@ class _CardBody extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 4),
-            const Text('follow @travelog_travel_map for more travel stats',
-                style: TextStyle(fontSize: 9.5, color: Color(0xFF6B7280), fontWeight: FontWeight.w500)),
+            Text(tr('follow @travelog_travel_map for more travel stats'),
+                style: const TextStyle(fontSize: 9.5, color: Color(0xFF6B7280), fontWeight: FontWeight.w500)),
           ],
         ),
       ),

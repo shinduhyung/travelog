@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 
 import '../data/geo_data.dart';
 import '../models/social_profile.dart';
@@ -17,8 +18,8 @@ BadgeMeta badgeMetaFor(String id) =>
     GeoData.I.badges[id] ??
     BadgeMeta(
       id: id,
-      name: id.replaceAll(RegExp(r'[_-]+'), ' ').trim().isEmpty ? 'Badge' : id.replaceAll(RegExp(r'[_-]+'), ' ').trim(),
-      description: 'A Travelog badge that is not in this app\'s catalog yet.',
+      name: id.replaceAll(RegExp(r'[_-]+'), ' ').trim().isEmpty ? tr('Badge') : id.replaceAll(RegExp(r'[_-]+'), ' ').trim(),
+      description: tr('A Travelog badge that is not in this app\'s catalog yet.'),
     );
 
 /// Unlocked badges, highest points first, then most recent (later in the list) first.
@@ -93,8 +94,8 @@ class _BadgesScreenState extends State<BadgesScreen> {
 
     if (p == null) {
       return Scaffold(
-        appBar: AppBar(title: const Text('Badges')),
-        body: const Center(child: EmptyHint('This profile is not available yet.')),
+        appBar: AppBar(title: Text(tr('Badges'))),
+        body: Center(child: EmptyHint(tr('This profile is not available yet.'))),
       );
     }
 
@@ -115,12 +116,12 @@ class _BadgesScreenState extends State<BadgesScreen> {
     String chipLabel(String? cat) {
       final inCat = cat == null ? all : all.where((b) => b.category == cat);
       final have = inCat.where((b) => unlocked.contains(b.id)).length;
-      return '${cat == null ? 'All' : '${_categoryEmoji[cat]} $cat'} $have/${inCat.length}';
+      return '${cat == null ? tr('All') : '${_categoryEmoji[cat]} ${tr(cat)}'} $have/${inCat.length}';
     }
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(isSelf ? 'My badges' : '${p.displayName}\'s badges', maxLines: 1, overflow: TextOverflow.ellipsis),
+        title: Text(isSelf ? tr('My badges') : tr('${p.displayName}\'s badges'), maxLines: 1, overflow: TextOverflow.ellipsis),
       ),
       body: CustomScrollView(
         slivers: [
@@ -143,12 +144,12 @@ class _BadgesScreenState extends State<BadgesScreen> {
                           const SizedBox(width: 12),
                           Expanded(
                             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                              Text('${unlocked.length} / $total unlocked',
+                              Text(tr('${unlocked.length} / $total unlocked'),
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900)),
                               Text(
-                                [if (rank != null) rankLabel[rank] ?? rank, '${badgePoints(p)} points'].join(' · '),
+                                [if (rank != null) tr(rankLabel[rank] ?? rank), tr('${badgePoints(p)} points')].join(' · '),
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
                                 style: theme.textTheme.labelLarge?.copyWith(color: AppColors.darkMint, fontWeight: FontWeight.w800),
@@ -172,7 +173,7 @@ class _BadgesScreenState extends State<BadgesScreen> {
                             const _MineCheck(),
                             const SizedBox(width: 6),
                             Expanded(
-                              child: Text('= you have it too',
+                              child: Text(tr('= you have it too'),
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: theme.textTheme.labelMedium?.copyWith(color: AppColors.label)),
@@ -196,7 +197,7 @@ class _BadgesScreenState extends State<BadgesScreen> {
             ),
           ),
           if (shown.isEmpty)
-            const SliverToBoxAdapter(child: EmptyHint('No badges here')),
+            SliverToBoxAdapter(child: EmptyHint(tr('No badges here'))),
           SliverPadding(
             padding: const EdgeInsets.fromLTRB(12, 0, 12, 120),
             sliver: SliverGrid.builder(
@@ -299,11 +300,11 @@ Future<void> showBadgeSheet(BuildContext context, BadgeMeta b, {required bool un
     isScrollControlled: true,
     builder: (context) {
       final theme = Theme.of(context);
-      final status = unlocked ? '✅ Unlocked${ownerName != null ? ' by $ownerName' : ''}' : '🔒 Locked';
+      final status = unlocked ? (ownerName != null ? tr('✅ Unlocked by $ownerName') : tr('✅ Unlocked')) : tr('🔒 Locked');
       return ConstrainedBox(
         constraints: BoxConstraints(maxHeight: MediaQuery.of(context).size.height * 0.8),
         child: SingleChildScrollView(
-          padding: const EdgeInsets.fromLTRB(24, 0, 24, 32),
+          padding: EdgeInsets.fromLTRB(24, 0, 24, 32 + MediaQuery.of(context).viewPadding.bottom),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -317,8 +318,8 @@ Future<void> showBadgeSheet(BuildContext context, BadgeMeta b, {required bool un
               const SizedBox(height: 10),
               Wrap(alignment: WrapAlignment.center, spacing: 8, runSpacing: 8, children: [
                 if (b.level != null) Chip(avatar: const Text('🏅'), label: Text(b.level!)),
-                if (b.category != null) Chip(avatar: Text(_categoryEmoji[b.category] ?? '🎖️'), label: Text(b.category!)),
-                Chip(avatar: const Text('⭐'), label: Text('${b.points} pts')),
+                if (b.category != null) Chip(avatar: Text(_categoryEmoji[b.category] ?? '🎖️'), label: Text(tr(b.category!))),
+                Chip(avatar: const Text('⭐'), label: Text(tr('${b.points} pts'))),
               ]),
               const SizedBox(height: 12),
               if (b.description.isNotEmpty)
@@ -331,7 +332,7 @@ Future<void> showBadgeSheet(BuildContext context, BadgeMeta b, {required bool un
               if (ownerName != null && mineToo)
                 Padding(
                   padding: const EdgeInsets.only(top: 4),
-                  child: Text('You have it too',
+                  child: Text(tr('You have it too'),
                       textAlign: TextAlign.center,
                       style: theme.textTheme.labelMedium?.copyWith(color: AppColors.mint, fontWeight: FontWeight.w700)),
                 ),
@@ -360,9 +361,9 @@ class BadgesSection extends StatelessWidget {
 
     return SectionCard(
       emoji: '🎖️',
-      title: 'Badges',
+      title: tr('Badges'),
       tint: AppColors.gold,
-      subtitle: '${p.badgeIds.toSet().length} of ${badgeTotal(p)} unlocked',
+      subtitle: tr('${p.badgeIds.toSet().length} of ${badgeTotal(p)} unlocked'),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -374,7 +375,7 @@ class BadgesSection extends StatelessWidget {
               ],
               Expanded(
                 child: Text(
-                  '${rankLabel[rank] ?? rank} · ${badgePoints(p)} points',
+                  '${tr(rankLabel[rank] ?? rank)} · ${tr('${badgePoints(p)} points')}',
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: theme.textTheme.labelLarge?.copyWith(fontWeight: FontWeight.w800, color: AppColors.darkMint),
@@ -383,7 +384,7 @@ class BadgesSection extends StatelessWidget {
             ]),
           const SizedBox(height: 12),
           if (top.isEmpty)
-            const EmptyHint('No badges yet', emoji: '🎖️')
+            EmptyHint(tr('No badges yet'), emoji: '🎖️')
           else
             LayoutBuilder(builder: (context, c) {
               const size = 44.0, gap = 8.0;
@@ -406,7 +407,7 @@ class BadgesSection extends StatelessWidget {
             child: TextButton.icon(
               onPressed: open,
               icon: const Icon(Icons.grid_view_rounded, size: 18),
-              label: const Text('See all'),
+              label: Text(tr('See all')),
             ),
           ),
         ],

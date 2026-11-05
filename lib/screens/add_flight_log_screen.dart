@@ -1,3 +1,5 @@
+import 'package:jidoapp/widgets/flight_log_actions.dart';
+import 'package:jidoapp/widgets/flight_log_delete.dart';
 // lib/screens/add_flight_log_screen.dart
 
 import 'dart:async';
@@ -743,23 +745,12 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
     bool showUpgradeSection = ['Premium Economy', 'Business', 'First'].contains(_selectedSeatClass);
 
     return Scaffold(
-      appBar: AppBar(
-        title:  Text(tr('')),
-        actions: [
-          if (widget.isEditing)
-            IconButton(
-              icon: const Icon(Icons.note_alt_outlined),
-              tooltip: tr('Memo & Photos'),
-              onPressed: _showMemoDialog,
-            )
-        ],
-      ),
       body: Stack(
         children: [
           Form(
             key: _formKey,
             child: SingleChildScrollView(
-              padding: const EdgeInsets.fromLTRB(16, 16, 16, 100),
+              padding: EdgeInsets.fromLTRB(16, MediaQuery.of(context).padding.top + 16, 16, 100),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
@@ -876,7 +867,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
           if (_isLoading) Container(color: Colors.black.withOpacity(0.5), child: const Center(child: CircularProgressIndicator())),
         ],
       ),
-      bottomSheet: _buildBottomButtons(),
+      bottomNavigationBar: SafeArea(top: false, child: _buildBottomButtons()),
     );
   }
 
@@ -1280,25 +1271,15 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
     );
   }
 
-  Widget _buildBottomButtons() {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
-      decoration: BoxDecoration(color: Theme.of(context).scaffoldBackgroundColor, boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.08), spreadRadius: 0, blurRadius: 6)]),
-      child: Row(children: [
-        Expanded(child: OutlinedButton(onPressed: () => Navigator.pop(context), child:  Text(tr('Cancel')), style: OutlinedButton.styleFrom(
-          padding: const EdgeInsets.symmetric(vertical: 14),
-          side: BorderSide(color: Colors.deepPurple.shade300),
-        ))),
-        const SizedBox(width: 12),
-        Expanded(child: ElevatedButton(onPressed: _saveFlightLog, child: Text(tr(widget.isEditing ? 'Save Changes' : 'Save Log')), style: ElevatedButton.styleFrom(
-          padding: const EdgeInsets.symmetric(vertical: 14),
-          backgroundColor: Colors.deepPurple.shade600,
-          foregroundColor: Colors.white,
-          elevation: 3,
-        ))),
-      ]),
-    );
-  }
+  Widget _buildBottomButtons() => FlightLogActions(
+    busy: _isLoading,
+    onCancel: () => Navigator.pop(context),
+    onSave: _saveFlightLog,
+    onDelete: widget.isEditing && widget.initialLog != null ? () async {
+      final removed = await deleteFlightLog(context, widget.initialLog!);
+      if (removed && mounted) Navigator.pop(context);
+    } : null,
+  );
 
   InputDecoration _buildInputDecoration({String? labelText, String? hintText, IconData? icon, bool enabled = true}) {
     return InputDecoration(

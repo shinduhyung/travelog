@@ -16,6 +16,7 @@ import 'package:jidoapp/models/visit_date_model.dart';
 import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/widgets/landmark_info_card.dart';
+import 'package:jidoapp/widgets/my_match_badge.dart';
 
 // Instagram 핑크-퍼플 그라디언트 테마
 const Color _kThemePink   = Color(0xFFE1306C);
@@ -366,6 +367,7 @@ class _InstagramRankingScreenState extends State<InstagramRankingScreen> {
                           icon: const Icon(Icons.close, color: Colors.white, size: 18),
                           label:  Text(tr('Close'), style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
                         ),
+                        MyMatchBadge.landmark(landmark: freshLandmark, onDark: headerTextColor == Colors.white),
                         if (isVisited)
                           Container(
                             padding: const EdgeInsets.all(6),
@@ -383,6 +385,7 @@ class _InstagramRankingScreenState extends State<InstagramRankingScreen> {
                       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                         Text(freshLandmark.name,
                             style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 24, color: headerTextColor, letterSpacing: -0.5, height: 1.2)),
+                        
                         const SizedBox(height: 8),
                         if (displayIsos.isNotEmpty)
                           Row(children: displayIsos.map((a2) => Container(

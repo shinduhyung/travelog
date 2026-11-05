@@ -24,6 +24,7 @@ import 'package:jidoapp/models/visit_date_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/widgets/landmark_info_card.dart';
+import 'package:jidoapp/widgets/my_match_badge.dart';
 
 // --- Enums and Models ---
 enum MapFilter { all, visited }
@@ -692,7 +693,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                   Row(
                     children: [
                       Text(
-                        tr("Visits: $visitCount ${isWishlisted ? ' | Wishlisted' : ''}"),
+                        "${tr('Visits: $visitCount')}${isWishlisted ? ' | ${tr('Wishlisted')}' : ''}",
                         style: TextStyle(fontSize: 10, color: Colors.grey[700]),
                       ),
                       const SizedBox(width: 6),
@@ -769,6 +770,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                           onPressed: () => Navigator.pop(sheetContext),
                           child: Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.bold)),
                         ),
+                        MyMatchBadge.landmark(landmark: freshLandmark, onDark: headerTextColor == Colors.white),
                         ElevatedButton(
                           onPressed: () => Navigator.pop(sheetContext),
                           child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.bold, color: themeColor)),
@@ -787,6 +789,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                         if (isVisited) Icon(Icons.check_circle, color: headerTextColor, size: 20),
                       ],
                     ),
+                    
                     Text(
                       tr(countryNames),
                       style: Theme.of(sheetContext).textTheme.titleSmall?.copyWith(color: headerTextColor.withOpacity(0.8)),

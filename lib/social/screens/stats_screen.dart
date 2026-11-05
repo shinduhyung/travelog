@@ -6,12 +6,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
+import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
+import 'package:jidoapp/providers/badge_provider.dart';
 import 'package:jidoapp/services/subscription_service.dart';
 import 'package:jidoapp/widgets/stat_lock_guard.dart';
+import 'package:jidoapp/widgets/subscription_sheet.dart';
 
 import '../models/global_stats.dart';
+import '../models/stats.dart' show rankAsset;
 import '../models/social_profile.dart';
+import '../services/badge_stats.dart';
 import '../services/country_rarity.dart';
 import '../services/global_stats_service.dart';
 import '../services/my_stat_values.dart';
@@ -35,8 +41,8 @@ class StatsScreen extends StatelessWidget {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Stats'),
-          bottom: const TabBar(tabs: [Tab(text: 'My Stats'), Tab(text: 'Friends'), Tab(text: 'Rankings')]),
+          title: Text(tr('Stats')),
+          bottom: TabBar(tabs: [Tab(text: tr('My Stats')), Tab(text: tr('Friends')), Tab(text: tr('Rankings'))]),
         ),
         body: const TabBarView(children: [_MyStatsTab(), _FriendsTab(), _RankingsTab()]),
       ),
@@ -47,10 +53,13 @@ class StatsScreen extends StatelessWidget {
 // ── My Stats ────────────────────────────────────────────────────────────
 
 class _RarityPack {
-  const _RarityPack({this.me, this.friends = const []});
+  const _RarityPack({this.me, this.friends = const [], this.meBadge, this.friendBadges = const [], this.rankShares = const []});
 
   final RarityResult? me;
   final List<RarityResult?> friends;
+  final BadgeResult? meBadge;
+  final List<BadgeResult?> friendBadges;
+  final List<(String, double)> rankShares;
 }
 
 class _MyStatsTab extends StatefulWidget {
@@ -104,9 +113,21 @@ class _MyStatsTabState extends State<_MyStatsTab> with AutomaticKeepAliveClientM
     final sig = '${me.uid}@${me.updatedAt?.millisecondsSinceEpoch}|${friends.map((f) => '${f.uid}@${f.updatedAt?.millisecondsSinceEpoch}').join(',')}';
     if (_rarity == null || _raritySig != sig) {
       _raritySig = sig;
-      _rarity = CountryRarity.load().then((r) {
-        if (r == null) return const _RarityPack();
-        return _RarityPack(me: r.score(me.countries), friends: [for (final f in friends) r.score(f.countries)]);
+      // 배지 점수는 앱의 배지 목록(id -> 점수)으로 해제한 배지를 합산한다
+      final points = {for (final a in context.read<BadgeProvider>().achievements) a.id: a.points};
+      final premium = SubscriptionService.instance.isPremium;
+      _rarity = Future.wait<Object?>([CountryRarity.load(), BadgeStats.load()]).then((r) {
+        final rarity = r[0] as CountryRarity?;
+        final badges = r[1] as BadgeStats?;
+        int pointsOf(SocialProfile p) => p.badgeIds.fold(0, (sum, id) => sum + (points[id] ?? 0));
+        return _RarityPack(
+          me: rarity?.score(me.countries),
+          friends: [for (final f in friends) rarity?.score(f.countries)],
+          // 내 통계는 내 구독 여부에 맞는 분포, 친구는 프리미엄 포함 분포와 비교
+          meBadge: badges?.score(pointsOf(me), premium: widget.profile == null ? premium : true),
+          friendBadges: [for (final f in friends) badges?.score(pointsOf(f), premium: true)],
+          rankShares: badges?.rankShares(premium: widget.profile == null ? premium : true) ?? const [],
+        );
       });
     }
     return _rarity!;
@@ -118,7 +139,7 @@ class _MyStatsTabState extends State<_MyStatsTab> with AutomaticKeepAliveClientM
     final store = SocialScope.of(context);
     final me = widget.profile ?? store.me;
     if (me == null) {
-      return Center(child: store.meLoaded ? const EmptyHint('No travel record yet. Sync your trips first.') : const CircularProgressIndicator());
+      return Center(child: store.meLoaded ? EmptyHint(tr('No travel record yet. Sync your trips first.')) : const CircularProgressIndicator());
     }
     final others = widget.profile == null ? store.friends : const <SocialProfile>[];
     final mineFuture = _valuesFor(me);
@@ -144,33 +165,38 @@ class _MyStatsTabState extends State<_MyStatsTab> with AutomaticKeepAliveClientM
         final global = snap.data?[1] as GlobalStats?;
         final friends = (snap.data?[2] as List<MyStatValues>?) ?? const <MyStatValues>[];
         final rarity = (snap.data?[3] as _RarityPack?) ?? const _RarityPack();
-        if (mine == null) return const Center(child: EmptyHint('Could not read your stats.'));
+        if (mine == null) return Center(child: EmptyHint(tr('Could not read your stats.')));
         final compare = global != null && global.hasDistributions;
-        final ctx = _StatsContext(mine: mine, global: global, friends: friends, rarity: rarity);
+        return ListenableBuilder(
+          listenable: SubscriptionService.instance,
+          builder: (context, _) {
+        final ctx = _StatsContext(mine: mine, global: global, friends: friends, rarity: rarity, locked: !SubscriptionService.instance.isPremium);
         return ListView(
           padding: const EdgeInsets.fromLTRB(16, 12, 16, 32),
           children: [
             if (!compare)
               Padding(
                 padding: const EdgeInsets.only(bottom: 12),
-                child: _Notice(global == null ? 'Could not load community stats.' : 'No community stats available yet.'),
+                child: _Notice(global == null ? tr('Could not load community stats.') : tr('No community stats available yet.')),
               ),
             _CountriesHero(ctx: ctx),
             const SizedBox(height: 12),
             _TileRow(children: [
-              _StatTile(ctx: ctx, metric: StatMetric.gawcCities, title: 'Cities', note: 'of 189'),
-              _StatTile(ctx: ctx, metric: StatMetric.top250Landmarks, title: 'Landmarks', note: 'of 250'),
+              _StatTile(ctx: ctx, metric: StatMetric.gawcCities, title: tr('Cities'), note: tr('of 189')),
+              _StatTile(ctx: ctx, metric: StatMetric.top250Landmarks, title: tr('Landmarks'), note: tr('of 250')),
             ]),
             const SizedBox(height: 12),
             _TileRow(children: [
-              _StatTile(ctx: ctx, metric: StatMetric.unesco, title: 'UNESCO'),
-              _RarityTile(ctx: ctx),
+              _StatTile(ctx: ctx, metric: StatMetric.unesco, title: tr('UNESCO')),
+              _BadgeTile(ctx: ctx),
             ]),
-            const _SectionLabel('By continent'),
-            _GroupCard(ctx: ctx, metrics: StatMetric.byContinent.values.toList(), titles: [for (final k in StatMetric.byContinent.keys) k.replaceAll('North America', 'N. America').replaceAll('South America', 'S. America')]),
-            const _SectionLabel('Aviation'),
-            _GroupCard(ctx: ctx, metrics: const [StatMetric.airports, StatMetric.airlines, StatMetric.flights], titles: const ['Airports', 'Airlines', 'Flights']),
+            _SectionLabel(tr('By continent')),
+            _GroupCard(ctx: ctx, metrics: StatMetric.byContinent.values.toList(), titles: [for (final k in StatMetric.byContinent.keys) tr(k.replaceAll('North America', 'N. America').replaceAll('South America', 'S. America'))]),
+            _SectionLabel(tr('Aviation')),
+            _GroupCard(ctx: ctx, metrics: const [StatMetric.airports, StatMetric.airlines, StatMetric.flights], titles: [tr('Airports'), tr('Airlines'), tr('Flights')]),
           ],
+        );
+          },
         );
       },
     );
@@ -179,8 +205,10 @@ class _MyStatsTabState extends State<_MyStatsTab> with AutomaticKeepAliveClientM
 
 /// 한 화면이 공유하는 값: 내 기록, 전체 유저 분포, 친구들 기록, 희귀도.
 class _StatsContext {
-  const _StatsContext({required this.mine, required this.global, required this.friends, required this.rarity});
+  const _StatsContext({required this.mine, required this.global, required this.friends, required this.rarity, this.locked = false});
 
+  /// 비구독자는 국가 외의 통계 수치를 ?로 가린다
+  final bool locked;
   final MyStatValues mine;
   final GlobalStats? global;
   final List<MyStatValues> friends;
@@ -198,6 +226,13 @@ class _StatsContext {
     if (friends.isEmpty) return null;
     final v = mine.valueOf(m);
     return (rank: 1 + friends.where((f) => f.valueOf(m) > v).length, of: friends.length + 1);
+  }
+
+  ({int rank, int of})? badgeFriendRank() {
+    final me = rarity.meBadge;
+    if (me == null || me.points <= 0 || rarity.friendBadges.isEmpty) return null;
+    final others = rarity.friendBadges.whereType<BadgeResult>();
+    return (rank: 1 + others.where((f) => f.points > me.points).length, of: rarity.friendBadges.length + 1);
   }
 
   ({int rank, int of})? rarityFriendRank() {
@@ -224,7 +259,7 @@ class _Notice extends StatelessWidget {
       child: Row(children: [
         const Icon(Icons.info_outline_rounded, size: 18, color: AppColors.darkMint),
         const SizedBox(width: 8),
-        Expanded(child: Text(text, style: Theme.of(context).textTheme.bodySmall)),
+        Expanded(child: Text(tr(text), style: Theme.of(context).textTheme.bodySmall)),
       ]),
     );
   }
@@ -265,6 +300,7 @@ class _CountriesHero extends StatelessWidget {
     final dist = ctx.dist(m);
     final top = ctx.top(m);
     final fr = ctx.friendRank(m);
+    final rarity = ctx.rarity.me;
     final ahead = top == null ? null : (100 - top).clamp(0.0, 100.0).toDouble();
     return Container(
       padding: const EdgeInsets.fromLTRB(20, 18, 20, 18),
@@ -279,8 +315,8 @@ class _CountriesHero extends StatelessWidget {
         children: [
           Row(
             children: [
-              const Expanded(
-                child: Text('COUNTRIES', maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12, fontWeight: FontWeight.w800, letterSpacing: 1.6, color: Color(0xFF6B7280))),
+              Expanded(
+                child: Text(tr('COUNTRIES'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12, fontWeight: FontWeight.w800, letterSpacing: 1.6, color: Color(0xFF6B7280))),
               ),
               if (fr != null)
                 Container(
@@ -289,32 +325,39 @@ class _CountriesHero extends StatelessWidget {
                   child: Row(mainAxisSize: MainAxisSize.min, children: [
                     Icon(Icons.group_rounded, size: 14, color: fr.rank == 1 ? AppColors.gold : AppColors.friend),
                     const SizedBox(width: 4),
-                    Text(fr.rank == 1 ? 'Friends #1' : 'Friends #${fr.rank}/${fr.of}', style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w800, color: AppColors.ink)),
+                    Text(fr.rank == 1 ? tr('Friends #1') : tr('Friends #${fr.rank}/${fr.of}'), style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w800, color: AppColors.ink)),
                   ]),
                 ),
             ],
           ),
           const SizedBox(height: 10),
-          if (top != null)
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.baseline,
-              textBaseline: TextBaseline.alphabetic,
-              children: [
-                const Text('Top', style: TextStyle(fontSize: 24, fontWeight: FontWeight.w800, color: AppColors.ink)),
-                const SizedBox(width: 8),
-                Flexible(
-                  child: FittedBox(
-                    fit: BoxFit.scaleDown,
-                    alignment: Alignment.centerLeft,
-                    child: Text('${_pct(top)}%', style: const TextStyle(fontSize: 68, height: 1.0, fontWeight: FontWeight.w900, color: AppColors.darkMint, letterSpacing: -2)),
-                  ),
-                ),
-              ],
-            )
-          else
-            Text('$value', style: const TextStyle(fontSize: 68, height: 1.0, fontWeight: FontWeight.w900, color: AppColors.darkMint, letterSpacing: -2)),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Expanded(
+                child: top != null
+                    ? Row(
+                        crossAxisAlignment: CrossAxisAlignment.baseline,
+                        textBaseline: TextBaseline.alphabetic,
+                        children: [
+                          Text(tr('Top'), style: TextStyle(fontSize: 24, fontWeight: FontWeight.w800, color: AppColors.ink)),
+                          const SizedBox(width: 8),
+                          Flexible(
+                            child: FittedBox(
+                              fit: BoxFit.scaleDown,
+                              alignment: Alignment.centerLeft,
+                              child: Text('${_pct(top)}%', style: const TextStyle(fontSize: 68, height: 1.0, fontWeight: FontWeight.w900, color: AppColors.darkMint, letterSpacing: -2)),
+                            ),
+                          ),
+                        ],
+                      )
+                    : Text('$value', style: const TextStyle(fontSize: 68, height: 1.0, fontWeight: FontWeight.w900, color: AppColors.darkMint, letterSpacing: -2)),
+              ),
+              if (rarity != null) ...[const SizedBox(width: 8), _RarityPill(result: rarity)],
+            ],
+          ),
           const SizedBox(height: 6),
-          Text(ahead == null ? 'countries visited' : 'Ahead of ${_pct(ahead)}% of travelers',
+          Text(ahead == null ? tr('countries visited') : tr('Ahead of ${_pct(ahead)}% of travelers'),
               maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Color(0xFF6B7280))),
           if (ahead != null) ...[
             const SizedBox(height: 12),
@@ -369,7 +412,7 @@ class _HeroFigure extends StatelessWidget {
             child: Text(value, style: const TextStyle(fontSize: 18, height: 1.1, fontWeight: FontWeight.w800, color: AppColors.ink)),
           ),
           const SizedBox(height: 2),
-          Text(label, style: const TextStyle(fontSize: 10, fontWeight: FontWeight.w700, letterSpacing: 1, color: AppColors.label)),
+          Text(tr(label), style: const TextStyle(fontSize: 10, fontWeight: FontWeight.w700, letterSpacing: 1, color: AppColors.label)),
         ],
       ),
     );
@@ -392,7 +435,7 @@ class _SectionLabel extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(4, 22, 4, 10),
       child: Row(
         children: [
-          Text(title, style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)),
+          Text(tr(title), style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)),
           const Spacer(),
           const _Legend(),
         ],
@@ -410,7 +453,7 @@ class _Legend extends StatelessWidget {
     Widget item(Color c, String t) => Row(mainAxisSize: MainAxisSize.min, children: [
           Container(width: 8, height: 8, decoration: BoxDecoration(color: c, borderRadius: BorderRadius.circular(2))),
           const SizedBox(width: 4),
-          Text(t, style: const TextStyle(fontSize: 10, color: AppColors.label, fontWeight: FontWeight.w600)),
+          Text(tr(t), style: const TextStyle(fontSize: 10, color: AppColors.label, fontWeight: FontWeight.w600)),
         ]);
     return Row(mainAxisSize: MainAxisSize.min, children: [
       item(AppColors.mint, 'You'),
@@ -461,22 +504,36 @@ class _Footer extends StatelessWidget {
       child: Row(mainAxisSize: MainAxisSize.min, children: [
         Icon(Icons.group_rounded, size: 14, color: friend!.rank == 1 ? AppColors.gold : AppColors.friend),
         const SizedBox(width: 3),
-        Text(friend!.rank == 1 ? 'Friends #1' : 'Friends #${friend!.rank}/${friend!.of}',
+        Text(friend!.rank == 1 ? tr('Friends #1') : tr('Friends #${friend!.rank}/${friend!.of}'),
             maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w800, color: AppColors.ink)),
       ]),
     );
   }
 }
 
+void _promptSubscribe(BuildContext context) => SubscriptionSheet.show(context, triggerContext: 'stats_locked');
+
 /// "Top 2.9%" 큰 글씨 (값이 없으면 개수를 보여준다)
 class _BigPercent extends StatelessWidget {
-  const _BigPercent({required this.top, required this.fallback});
+  const _BigPercent({required this.top, required this.fallback, this.locked = false});
 
   final double? top;
   final String fallback;
+  final bool locked;
 
   @override
   Widget build(BuildContext context) {
+    if (locked) {
+      return Row(
+        crossAxisAlignment: CrossAxisAlignment.baseline,
+        textBaseline: TextBaseline.alphabetic,
+        children: [
+          Text(tr('Top'), style: TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: AppColors.label)),
+          const SizedBox(width: 4),
+          const Text('?%', style: TextStyle(fontSize: 32, height: 1.0, fontWeight: FontWeight.w900, color: AppColors.label)),
+        ],
+      );
+    }
     if (top == null) {
       return Text(fallback, style: const TextStyle(fontSize: 32, height: 1.0, fontWeight: FontWeight.w900, color: AppColors.label));
     }
@@ -484,7 +541,7 @@ class _BigPercent extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.baseline,
       textBaseline: TextBaseline.alphabetic,
       children: [
-        const Text('Top', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: AppColors.label)),
+        Text(tr('Top'), style: TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: AppColors.label)),
         const SizedBox(width: 4),
         Flexible(
           child: FittedBox(
@@ -509,8 +566,11 @@ class _StatTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final value = ctx.mine.valueOf(metric);
-    final dist = ctx.dist(metric);
-    return Container(
+    final dist = ctx.locked ? null : ctx.dist(metric);
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      onTap: ctx.locked ? () => _promptSubscribe(context) : null,
+      child: Container(
       padding: const EdgeInsets.fromLTRB(14, 14, 14, 14),
       decoration: _cardDecoration(),
       child: Column(
@@ -520,13 +580,20 @@ class _StatTile extends StatelessWidget {
             children: [
               _IconDot(metric.emoji),
               const SizedBox(width: 8),
-              Expanded(child: Text(title, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w800))),
+              Expanded(child: Text(tr(title), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w800))),
             ],
           ),
           const SizedBox(height: 12),
-          _BigPercent(top: ctx.top(metric), fallback: '$value'),
+          _BigPercent(top: ctx.top(metric), fallback: '$value', locked: ctx.locked),
           const SizedBox(height: 3),
-          Text(note == null ? '$value' : '$value $note', maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 12, color: AppColors.label, fontWeight: FontWeight.w600)),
+          if (ctx.locked)
+            Row(children: [
+              const Icon(Icons.lock_rounded, size: 13, color: AppColors.darkMint),
+              const SizedBox(width: 4),
+              Expanded(child: Text(tr('Premium'), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 12, color: AppColors.darkMint, fontWeight: FontWeight.w700))),
+            ])
+          else
+            Text(note == null ? '$value' : '$value ${tr(note!)}', maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 12, color: AppColors.label, fontWeight: FontWeight.w600)),
           if (dist != null) ...[
             const SizedBox(height: 12),
             _PositionBar(value: value, dist: dist),
@@ -534,9 +601,10 @@ class _StatTile extends StatelessWidget {
             _AvgMedian(dist: dist),
           ],
           const Spacer(),
-          _Footer(friend: value > 0 ? ctx.friendRank(metric) : null),
+          if (!ctx.locked) _Footer(friend: value > 0 ? ctx.friendRank(metric) : null),
         ],
       ),
+    ),
     );
   }
 }
@@ -552,7 +620,7 @@ class _AvgMedian extends StatelessWidget {
     Widget part(Color c, String label, String v) => Row(mainAxisSize: MainAxisSize.min, children: [
           Container(width: 6, height: 6, decoration: BoxDecoration(color: c, shape: BoxShape.circle)),
           const SizedBox(width: 4),
-          Text('$label ', style: const TextStyle(fontSize: 11, color: AppColors.label, fontWeight: FontWeight.w600)),
+          Text('${tr(label)} ', style: const TextStyle(fontSize: 11, color: AppColors.label, fontWeight: FontWeight.w600)),
           Text(v, style: const TextStyle(fontSize: 12, color: AppColors.ink, fontWeight: FontWeight.w800)),
         ]);
     return FittedBox(
@@ -567,39 +635,120 @@ class _AvgMedian extends StatelessWidget {
   }
 }
 
-/// 국가 방문 희귀도 점수 카드
-class _RarityTile extends StatelessWidget {
-  const _RarityTile({required this.ctx});
+/// 맨 위 국가 카드 안에 작게 들어가는 희귀도 (누르면 설명)
+class _RarityPill extends StatelessWidget {
+  const _RarityPill({required this.result});
 
-  final _StatsContext ctx;
+  final RarityResult result;
 
-  void _showInfo(BuildContext context) {
-    showModalBottomSheet<void>(
-      context: context,
-      backgroundColor: Colors.white,
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(24))),
-      builder: (_) => const Padding(
-        padding: EdgeInsets.fromLTRB(24, 24, 24, 36),
-        child: Column(
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      onTap: () => _showRarityInfo(context),
+      child: Container(
+        padding: const EdgeInsets.fromLTRB(10, 6, 10, 6),
+        decoration: BoxDecoration(color: Colors.white.withValues(alpha: 0.75), borderRadius: BorderRadius.circular(14)),
+        child: Row(
           mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Rarity score', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
-            SizedBox(height: 14),
-            _InfoLine('Rare country', 'Fewer travelers = higher value'),
-            _InfoLine('Your score', 'Avg rarity of visited countries'),
-            _InfoLine('Scale', '0–100, typical traveler = 50'),
-            _InfoLine('80+', 'Top 2% of 2,533 travelers'),
+            const Text('💎', style: TextStyle(fontSize: 15)),
+            const SizedBox(width: 6),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(tr('RARITY'), style: TextStyle(fontSize: 9, fontWeight: FontWeight.w800, letterSpacing: 1, color: AppColors.label)),
+                Text(tr('Top ${_pct(result.topPercent)}%'), style: const TextStyle(fontSize: 13, height: 1.1, fontWeight: FontWeight.w900, color: AppColors.darkMint)),
+              ],
+            ),
           ],
         ),
       ),
     );
   }
+}
+
+void _showRarityInfo(BuildContext context) {
+  showModalBottomSheet<void>(
+    context: context,
+    backgroundColor: Colors.white,
+    shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(24))),
+    builder: (sheetContext) => Padding(
+      padding: EdgeInsets.fromLTRB(24, 24, 24, 36 + MediaQuery.of(sheetContext).viewPadding.bottom),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(tr('Rarity score'), style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
+          const SizedBox(height: 14),
+          const _InfoLine('Rare country', 'Fewer travelers = higher value'),
+          const _InfoLine('Your score', 'Avg rarity of visited countries'),
+          const _InfoLine('Scale', '0–100, typical traveler = 50'),
+          const _InfoLine('80+', 'Top 2% of travelers'),
+        ],
+      ),
+    ),
+  );
+}
+
+/// 레벨별 비율: 전체 활동 유저 중 각 레벨(Globetrotter 등)에 속한 % (인원 수는 노출하지 않는다).
+void _showRankShares(BuildContext context, List<(String, double)> shares, String? myRank) {
+  showModalBottomSheet<void>(
+    context: context,
+    backgroundColor: Colors.white,
+    shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(24))),
+    builder: (sheetContext) => Padding(
+      padding: EdgeInsets.fromLTRB(24, 24, 24, 36 + MediaQuery.of(sheetContext).viewPadding.bottom),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(tr('Level distribution'), style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
+          const SizedBox(height: 4),
+          Text(tr('% of users at each level'), style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: AppColors.label)),
+          const SizedBox(height: 14),
+          if (shares.isEmpty) _Notice(tr('No community stats available yet.')),
+          for (final (name, pct) in shares)
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 6),
+              child: Row(
+                children: [
+                  _RankImage(name, size: 30),
+                  const SizedBox(width: 8),
+                  SizedBox(
+                    width: 94,
+                    child: Text(tr(name), style: TextStyle(fontSize: 14, fontWeight: name == myRank ? FontWeight.w900 : FontWeight.w700, color: name == myRank ? AppColors.darkMint : null)),
+                  ),
+                  Expanded(
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(4),
+                      child: LinearProgressIndicator(value: (pct / 100).clamp(0.0, 1.0), minHeight: 8, backgroundColor: Colors.grey.shade200, color: AppColors.darkMint),
+                    ),
+                  ),
+                  SizedBox(width: 56, child: Text(_pctText(pct), textAlign: TextAlign.right, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w900, color: AppColors.darkMint))),
+                ],
+              ),
+            ),
+        ],
+      ),
+    ),
+  );
+}
+
+/// 배지 통계 카드: 배지 점수로 본 전체 유저 중 상위 %
+class _BadgeTile extends StatelessWidget {
+  const _BadgeTile({required this.ctx});
+
+  final _StatsContext ctx;
 
   @override
   Widget build(BuildContext context) {
-    final r = ctx.rarity.me;
-    return Container(
+    final b = ctx.rarity.meBadge;
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      onTap: ctx.locked ? () => _promptSubscribe(context) : null,
+      child: Container(
       padding: const EdgeInsets.fromLTRB(14, 14, 14, 14),
       decoration: _cardDecoration(),
       child: Column(
@@ -607,34 +756,55 @@ class _RarityTile extends StatelessWidget {
         children: [
           Row(
             children: [
-              const _IconDot('💎'),
+              const _IconDot('🏅'),
               const SizedBox(width: 8),
-              const Expanded(child: Text('Rarity', maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w800))),
+              Expanded(child: Text(tr('Badges'), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w800))),
               GestureDetector(
-                onTap: () => _showInfo(context),
+                onTap: () => ctx.locked ? _promptSubscribe(context) : _showRankShares(context, ctx.rarity.rankShares, ctx.rarity.meBadge?.rank),
                 behavior: HitTestBehavior.opaque,
-                child: const Padding(padding: EdgeInsets.all(4), child: Icon(Icons.info_outline_rounded, size: 18, color: AppColors.label)),
+                child: const Padding(padding: EdgeInsets.all(4), child: Icon(Icons.format_list_numbered_rounded, size: 20, color: AppColors.darkMint)),
               ),
             ],
           ),
           const SizedBox(height: 12),
-          _BigPercent(top: r?.topPercent, fallback: '—'),
+          _BigPercent(top: b?.topPercent, fallback: '${b?.points ?? 0}', locked: ctx.locked),
           const SizedBox(height: 3),
-          Text(r == null ? '' : 'Score ${r.score.round()} · ${r.label}',
-              maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 12, color: AppColors.label, fontWeight: FontWeight.w600)),
-          if (r != null) ...[
-            const SizedBox(height: 12),
-            _ScoreBar(score: r.score),
-            const SizedBox(height: 8),
-            if (r.rarestCountry != null)
-              Text('Rarest: ${r.rarestCountry}',
-                  maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 11, color: AppColors.label, fontWeight: FontWeight.w600)),
-          ],
+          if (ctx.locked)
+            Row(children: [
+              const Icon(Icons.lock_rounded, size: 13, color: AppColors.darkMint),
+              const SizedBox(width: 4),
+              Expanded(child: Text(tr('Premium'), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 12, color: AppColors.darkMint, fontWeight: FontWeight.w700))),
+            ])
+          else
+          Row(
+            children: [
+              if (b != null) ...[_RankImage(b.rank, size: 28), const SizedBox(width: 6)],
+              Expanded(
+                child: Text(b == null ? '' : '${b.points} ${tr('pts')} · ${tr(b.rank)}',
+                    maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 12, color: AppColors.label, fontWeight: FontWeight.w600)),
+              ),
+            ],
+          ),
           const Spacer(),
-          _Footer(friend: ctx.rarityFriendRank()),
+          if (!ctx.locked) _Footer(friend: ctx.badgeFriendRank()),
         ],
       ),
+    ),
     );
+  }
+}
+
+/// 레벨(랭크) 이미지. 에셋이 없으면 자리만 비운다.
+class _RankImage extends StatelessWidget {
+  const _RankImage(this.rank, {required this.size});
+
+  final String rank;
+  final double size;
+
+  @override
+  Widget build(BuildContext context) {
+    final asset = rankAsset(rank);
+    return SizedBox(width: size, height: size, child: asset == null ? null : Image.asset(asset, fit: BoxFit.contain));
   }
 }
 
@@ -649,43 +819,11 @@ class _InfoLine extends StatelessWidget {
         padding: const EdgeInsets.only(bottom: 10),
         child: Row(
           children: [
-            SizedBox(width: 110, child: Text(k, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w800, color: AppColors.darkMint))),
-            Expanded(child: Text(v, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 13))),
+            SizedBox(width: 110, child: Text(tr(k), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w800, color: AppColors.darkMint))),
+            Expanded(child: Text(tr(v), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 13))),
           ],
         ),
       );
-}
-
-/// 0~100 점수 막대 (50이 평균)
-class _ScoreBar extends StatelessWidget {
-  const _ScoreBar({required this.score});
-
-  final double score;
-
-  @override
-  Widget build(BuildContext context) {
-    final f = (score / 100).clamp(0.0, 1.0);
-    return SizedBox(
-      height: 14,
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          ClipRRect(borderRadius: BorderRadius.circular(3), child: Container(height: 6, color: AppColors.line)),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: FractionallySizedBox(
-              widthFactor: f,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(3),
-                child: Container(height: 6, decoration: const BoxDecoration(gradient: LinearGradient(colors: [Color(0xFF8B5CF6), AppColors.mint]))),
-              ),
-            ),
-          ),
-          Align(alignment: Alignment.center, child: Container(width: 2, height: 12, color: AppColors.indigo)),
-        ],
-      ),
-    );
-  }
 }
 
 /// 항목 여러 개를 한 카드에 줄로 보여준다 (이모지 · 이름 · 분포 막대 · 값).
@@ -723,9 +861,12 @@ class _MetricRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final value = ctx.mine.valueOf(metric);
-    final dist = ctx.dist(metric);
+    final dist = ctx.locked ? null : ctx.dist(metric);
     final top = ctx.top(metric);
-    return Padding(
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      onTap: ctx.locked ? () => _promptSubscribe(context) : null,
+      child: Padding(
       padding: const EdgeInsets.symmetric(vertical: 12),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -734,11 +875,11 @@ class _MetricRow extends StatelessWidget {
             children: [
               Text(metric.emoji, style: const TextStyle(fontSize: 18)),
               const SizedBox(width: 10),
-              Expanded(child: Text(title, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700))),
-              Text('$value', style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: AppColors.label)),
+              Expanded(child: Text(tr(title), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700))),
+              if (ctx.locked) const Padding(padding: EdgeInsets.only(right: 6), child: Icon(Icons.lock_rounded, size: 14, color: AppColors.darkMint)) else Text('$value', style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: AppColors.label)),
               const SizedBox(width: 12),
-              Text(top == null ? '—' : 'Top ${_pct(top)}%',
-                  style: TextStyle(fontSize: 18, height: 1.0, fontWeight: FontWeight.w900, color: top == null ? AppColors.label : AppColors.darkMint)),
+              Text(ctx.locked ? tr('Top ?%') : (top == null ? '—' : tr('Top ${_pct(top)}%')),
+                  style: TextStyle(fontSize: 18, height: 1.0, fontWeight: FontWeight.w900, color: ctx.locked || top == null ? AppColors.label : AppColors.darkMint)),
             ],
           ),
           if (dist != null) ...[
@@ -753,6 +894,7 @@ class _MetricRow extends StatelessWidget {
           ],
         ],
       ),
+    ),
     );
   }
 }
@@ -821,10 +963,10 @@ class _FriendsTabState extends State<_FriendsTab> with AutomaticKeepAliveClientM
     final store = SocialScope.of(context);
     final me = store.me;
     if (me == null) {
-      return Center(child: store.meLoaded ? const EmptyHint('No travel record yet. Sync your trips first.') : const CircularProgressIndicator());
+      return Center(child: store.meLoaded ? EmptyHint(tr('No travel record yet. Sync your trips first.')) : const CircularProgressIndicator());
     }
     if (store.friends.isEmpty) {
-      return const Center(child: EmptyHint('Add friends to compare stats.'));
+      return Center(child: EmptyHint(tr('Add friends to compare stats.')));
     }
     return FutureBuilder<GlobalStats?>(
       future: _global,
@@ -838,9 +980,9 @@ class _FriendsTabState extends State<_FriendsTab> with AutomaticKeepAliveClientM
         return ListView(
           padding: const EdgeInsets.fromLTRB(16, 12, 16, 32),
           children: [
-            const Padding(
-              padding: EdgeInsets.fromLTRB(4, 4, 4, 12),
-              child: Text('Countries · world rank', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: AppColors.label)),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(4, 4, 4, 12),
+              child: Text(tr('Countries · world rank'), style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: AppColors.label)),
             ),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
@@ -894,7 +1036,7 @@ class _FriendRankRow extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(profile.displayName, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w800)),
-                if (isMe) const Text('YOU', style: TextStyle(fontSize: 10, fontWeight: FontWeight.w900, letterSpacing: 0.8, color: AppColors.darkMint)),
+                if (isMe) Text(tr('YOU'), style: TextStyle(fontSize: 10, fontWeight: FontWeight.w900, letterSpacing: 0.8, color: AppColors.darkMint)),
               ],
             ),
           ),
@@ -904,7 +1046,7 @@ class _FriendRankRow extends StatelessWidget {
             child: FittedBox(
               fit: BoxFit.scaleDown,
               alignment: Alignment.centerRight,
-              child: Text(top == null ? '—' : 'Top ${_pct(top!)}%', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w900, color: AppColors.darkMint)),
+              child: Text(top == null ? '—' : tr('Top ${_pct(top!)}%'), style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w900, color: AppColors.darkMint)),
             ),
           ),
           const SizedBox(width: 10),
@@ -920,11 +1062,11 @@ class _FriendRankRow extends StatelessWidget {
                       height: 30,
                       alignment: Alignment.center,
                       decoration: BoxDecoration(color: AppColors.mint.withValues(alpha: 0.1), borderRadius: BorderRadius.circular(15)),
-                      child: const Row(
+                      child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Text('Stats', style: TextStyle(fontSize: 12, fontWeight: FontWeight.w800, color: AppColors.darkMint)),
-                          Icon(Icons.chevron_right_rounded, size: 16, color: AppColors.darkMint),
+                          Text(tr('Stats'), style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w800, color: AppColors.darkMint)),
+                          const Icon(Icons.chevron_right_rounded, size: 16, color: AppColors.darkMint),
                         ],
                       ),
                     ),
@@ -1041,10 +1183,15 @@ class _SiteCollectionsState extends State<_SiteCollections> {
   String _category = 'countries';
   int _shown = 12;
 
+  /// 순위표 대륙 필터 (null = 전체). 분류를 바꿔도 유지된다.
+  String? _continent;
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    return FutureBuilder<List<_SiteItem>>(
+    return ListenableBuilder(
+      listenable: SubscriptionService.instance,
+      builder: (context, _) => FutureBuilder<List<_SiteItem>>(
       future: _items,
       builder: (context, snap) {
         final all = snap.data;
@@ -1067,7 +1214,7 @@ class _SiteCollectionsState extends State<_SiteCollections> {
                 crossAxisAlignment: CrossAxisAlignment.baseline,
                 textBaseline: TextBaseline.alphabetic,
                 children: [
-                  Text('Travelog collections', style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)),
+                  Text(tr('Travelog collections'), style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)),
                   const SizedBox(width: 8),
                   Text('${all.length}', style: theme.textTheme.bodySmall?.copyWith(color: AppColors.label)),
                 ],
@@ -1095,15 +1242,21 @@ class _SiteCollectionsState extends State<_SiteCollections> {
                         borderRadius: BorderRadius.circular(999),
                         boxShadow: on ? null : AppColors.cardShadow,
                       ),
-                      child: Text(label, style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13, color: on ? Colors.white : AppColors.ink)),
+                      child: Row(mainAxisSize: MainAxisSize.min, children: [
+                        if (id != 'countries' && !SubscriptionService.instance.isPremium) Padding(padding: const EdgeInsets.only(right: 4), child: Icon(Icons.lock_rounded, size: 12, color: on ? Colors.white : AppColors.darkMint)),
+                        Text(tr(label), style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13, color: on ? Colors.white : AppColors.ink)),
+                      ]),
                     ),
                   );
                 },
               ),
             ),
             const SizedBox(height: 12),
+            if (_category != 'countries' && !SubscriptionService.instance.isPremium)
+              _RankingLockedCard(label: tr(_siteCategories.firstWhere((c) => c.$1 == _category).$2))
+            else ...[
             if (_boardKinds.contains(_category)) ...[
-              _UserBoard(key: ValueKey(_category), kind: _category),
+              _UserBoard(key: ValueKey(_category), kind: _category, continent: _continent, onContinent: (c) => setState(() => _continent = c)),
               const SizedBox(height: 16),
             ],
             SizedBox(
@@ -1119,12 +1272,49 @@ class _SiteCollectionsState extends State<_SiteCollections> {
             for (final item in rest.take(_shown)) _SiteLockedRow(item: item),
             if (rest.length > _shown)
               Center(
-                child: TextButton(onPressed: () => setState(() => _shown += 20), child: Text('Show more (${rest.length - _shown})')),
+                child: TextButton(onPressed: () => setState(() => _shown += 20), child: Text(tr('Show more (${rest.length - _shown})'))),
               ),
+            ],
             const SizedBox(height: 14),
           ],
         );
       },
+    ),
+    );
+  }
+}
+
+/// 비구독자에게 국가 외 랭킹 분류를 가리고 구독을 안내한다
+class _RankingLockedCard extends StatelessWidget {
+  const _RankingLockedCard({required this.label});
+
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      margin: const EdgeInsets.only(bottom: 14),
+      padding: const EdgeInsets.fromLTRB(20, 28, 20, 24),
+      decoration: _cardDecoration(),
+      child: Column(
+        children: [
+          const Icon(Icons.lock_rounded, size: 34, color: AppColors.darkMint),
+          const SizedBox(height: 10),
+          Text(tr('$label rankings are Premium'), textAlign: TextAlign.center, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: AppColors.ink)),
+          const SizedBox(height: 6),
+          Text(tr('Subscribe to Travelog Premium to see every ranking.'), textAlign: TextAlign.center, style: const TextStyle(fontSize: 13, color: AppColors.label)),
+          const SizedBox(height: 16),
+          SizedBox(
+            width: double.infinity,
+            child: FilledButton(
+              style: FilledButton.styleFrom(backgroundColor: AppColors.mint, padding: const EdgeInsets.symmetric(vertical: 14)),
+              onPressed: () => _promptSubscribe(context),
+              child: Text(tr('Unlock with Premium')),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
@@ -1132,11 +1322,15 @@ class _SiteCollectionsState extends State<_SiteCollections> {
 const _boardKinds = ['countries', 'cities', 'landmarks'];
 
 class _BoardRow {
-  const _BoardRow({required this.label, this.sub, this.iso2, required this.value, this.barColor = AppColors.label});
+  const _BoardRow({required this.label, this.sub, this.continent, this.iso2, this.iso2b, required this.value, this.barColor = AppColors.label});
 
   final String label;
   final String? sub;
+  final String? continent;
   final String? iso2;
+
+  /// 두 나라에 걸친 곳이면 두 번째 나라 (국기를 대각선 반쪽씩 보여준다)
+  final String? iso2b;
   final double value;
   final Color barColor;
 }
@@ -1170,11 +1364,11 @@ class _UserBoards {
       final c = geo.countryByName(name);
       if (c == null) continue;
       seen.add(c.iso3);
-      countries.add(_BoardRow(label: c.name, sub: c.continent, iso2: c.iso2, value: v, barColor: countryColor(c.iso2)));
+      countries.add(_BoardRow(label: c.name, sub: c.continent, continent: c.continent, iso2: c.iso2, value: v, barColor: countryColor(c.iso2)));
     }
     final rest = [for (final c in geo.countries.values) if (!seen.contains(c.iso3)) c]..sort((a, b) => a.name.compareTo(b.name));
     for (final c in rest) {
-      countries.add(_BoardRow(label: c.name, sub: c.continent, iso2: c.iso2, value: 0, barColor: countryColor(c.iso2)));
+      countries.add(_BoardRow(label: c.name, sub: c.continent, continent: c.continent, iso2: c.iso2, value: 0, barColor: countryColor(c.iso2)));
     }
 
     final cities = <_BoardRow>[];
@@ -1182,29 +1376,52 @@ class _UserBoards {
       final meta = geo.cities[name];
       if (meta == null) continue;
       final c = geo.countryByIso2(meta.iso2);
-      cities.add(_BoardRow(label: displayCityName(name), sub: c?.name, iso2: c?.iso2, value: v, barColor: countryColor(c?.iso2)));
-      if (cities.length == 200) break;
+      cities.add(_BoardRow(label: displayCityName(name), sub: c?.name, continent: _boardContinentOf(name, c?.continent), iso2: c?.iso2, value: v, barColor: countryColor(c?.iso2)));
     }
 
     final landmarks = <_BoardRow>[];
-    for (final (name, v) in list('landmarks')) {
-      final meta = geo.landmarks[name];
-      if (meta == null) continue;
-      final c = geo.countryByIso3(meta.iso3);
-      landmarks.add(_BoardRow(label: name, sub: c?.name, iso2: c?.iso2, value: v, barColor: countryColor(c?.iso2)));
-      if (landmarks.length == 500) break;
+    for (final e in raw['landmarks'] as List) {
+      final name = e[0] as String;
+      final v = (e[1] as num).toDouble();
+      // 세 번째 값: 국가 코드 (두 나라에 걸친 곳은 두 개)
+      final countries = [
+        for (final iso in (e.length > 2 ? e[2] as List : const [])) ?geo.countryByIso3('$iso'),
+      ];
+      final first = countries.isNotEmpty ? countries.first : geo.countryByIso3(geo.landmarks[name]?.iso3);
+      if (first == null) continue;
+      final two = countries.length > 1;
+      landmarks.add(_BoardRow(
+        label: name,
+        sub: two ? countries.map((c) => c.name).join(' · ') : first.name,
+        continent: _boardContinentOf(geo.landmarks[name]?.city, first.continent),
+        iso2: first.iso2,
+        iso2b: two ? countries[1].iso2 : null,
+        value: v,
+        barColor: countryColor(first.iso2),
+      ));
     }
     return {'countries': countries, 'cities': cities, 'landmarks': landmarks};
   }
 }
 
+/// 순위표 드롭다운의 대륙 (null = 전체)
+const _boardContinents = <String?>[null, 'Asia', 'Europe', 'Africa', 'North America', 'South America', 'Oceania'];
+
+/// 대륙 필터 없이 볼 때의 최대 줄 수 (대륙별로 거른 목록은 원본 전체에서 고른다)
+const _boardLimits = {'cities': 200, 'landmarks': 500};
+
+/// 순위표 대륙 필터에서만 이스탄불(과 그 안의 랜드마크)을 유럽으로 본다
+String? _boardContinentOf(String? city, String? continent) => city == 'Istanbul' ? 'Europe' : continent;
+
 String _pctText(double v) => '${v.toStringAsFixed(v < 10 ? 1 : 0)}%';
 
 /// 순위표: 처음에는 10줄만 보이고, 펼치면 전부 보인다. 도시와 랜드마크의 전체 목록은 구독자만 (아니면 보상형 광고/구독 화면).
 class _UserBoard extends StatefulWidget {
-  const _UserBoard({super.key, required this.kind});
+  const _UserBoard({super.key, required this.kind, this.continent, required this.onContinent});
 
   final String kind;
+  final String? continent;
+  final ValueChanged<String?> onContinent;
 
   @override
   State<_UserBoard> createState() => _UserBoardState();
@@ -1214,9 +1431,9 @@ class _UserBoardState extends State<_UserBoard> {
   bool _open = false;
 
   String get _title => switch (widget.kind) {
-        'countries' => 'Most visited countries',
-        'cities' => 'Most visited cities',
-        _ => 'Most visited landmarks',
+        'countries' => tr('Most visited countries'),
+        'cities' => tr('Most visited cities'),
+        _ => tr('Most visited landmarks'),
       };
 
   bool get _premiumOnly => widget.kind != 'countries';
@@ -1230,7 +1447,7 @@ class _UserBoardState extends State<_UserBoard> {
             statKey: 'board.${widget.kind}',
             locked: true,
             child: ListView(
-              padding: const EdgeInsets.fromLTRB(16, 12, 16, 32),
+              padding: EdgeInsets.fromLTRB(16, 12, 16, 32 + MediaQuery.of(context).viewPadding.bottom),
               children: [_BoardCard(title: _title, rows: rows, shown: rows.length)],
             ),
           ),
@@ -1246,19 +1463,22 @@ class _UserBoardState extends State<_UserBoard> {
     return FutureBuilder<Map<String, List<_BoardRow>>>(
       future: _UserBoards.load(),
       builder: (context, snap) {
-        final rows = snap.data?[widget.kind];
-        if (rows == null || rows.isEmpty) {
+        final all = snap.data?[widget.kind];
+        if (all == null || all.isEmpty) {
           return SizedBox(height: 120, child: Center(child: snap.connectionState == ConnectionState.done ? const SizedBox.shrink() : const CircularProgressIndicator(strokeWidth: 2)));
         }
         return ListenableBuilder(
           listenable: SubscriptionService.instance,
           builder: (context, _) {
             final locked = _premiumOnly && !SubscriptionService.instance.isPremium;
+            final continent = widget.continent;
+            final rows = continent == null ? all.take(_boardLimits[widget.kind] ?? all.length).toList() : [for (final r in all) if (r.continent == continent) r];
             return _BoardCard(
               title: _title,
               rows: rows,
               shown: _open ? rows.length : 10,
-              footer: GestureDetector(
+              action: _ContinentDropdown(value: continent, onChanged: widget.onContinent),
+              footer: rows.length <= 10 ? null : GestureDetector(
                 behavior: HitTestBehavior.opaque,
                 onTap: () => _showAll(rows),
                 child: Padding(
@@ -1267,7 +1487,7 @@ class _UserBoardState extends State<_UserBoard> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       if (locked && !_open) const Padding(padding: EdgeInsets.only(right: 6), child: Icon(Icons.lock_rounded, size: 14, color: AppColors.darkMint)),
-                      Text(_open ? 'Show less' : 'Show all ${rows.length}', style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: AppColors.darkMint)),
+                      Text(_open ? tr('Show less') : tr('Show all ${rows.length}'), style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: AppColors.darkMint)),
                       Icon(_open ? Icons.keyboard_arrow_up_rounded : Icons.keyboard_arrow_down_rounded, size: 20, color: AppColors.darkMint),
                     ],
                   ),
@@ -1282,11 +1502,12 @@ class _UserBoardState extends State<_UserBoard> {
 }
 
 class _BoardCard extends StatelessWidget {
-  const _BoardCard({required this.title, required this.rows, required this.shown, this.footer});
+  const _BoardCard({required this.title, required this.rows, required this.shown, this.action, this.footer});
 
   final String title;
   final List<_BoardRow> rows;
   final int shown;
+  final Widget? action;
   final Widget? footer;
 
   @override
@@ -1300,17 +1521,123 @@ class _BoardCard extends StatelessWidget {
         children: [
           Row(
             children: [
-              Expanded(child: Text(title, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w900))),
-              const Text('% of users', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: AppColors.label)),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(title, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w900)),
+                    if (action != null) Text(tr('% of users'), style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: AppColors.label)),
+                  ],
+                ),
+              ),
+              action ?? Text(tr('% of users'), style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: AppColors.label)),
             ],
           ),
           const SizedBox(height: 6),
+          if (rows.isEmpty) Padding(padding: const EdgeInsets.symmetric(vertical: 20), child: Center(child: Text(tr('No data yet'), style: const TextStyle(fontSize: 13, color: AppColors.label)))),
           for (var i = 0; i < shown && i < rows.length; i++) _BoardLine(rank: i + 1, row: rows[i], maxValue: maxV),
           if (footer != null) footer! else const SizedBox(height: 10),
         ],
       ),
     );
   }
+}
+
+/// 순위표 머리의 대륙 선택 드롭다운
+class _ContinentDropdown extends StatelessWidget {
+  const _ContinentDropdown({required this.value, required this.onChanged});
+
+  final String? value;
+  final ValueChanged<String?> onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 32,
+      padding: const EdgeInsets.only(left: 12, right: 4),
+      decoration: BoxDecoration(color: AppColors.mint.withValues(alpha: 0.12), borderRadius: BorderRadius.circular(999)),
+      child: DropdownButtonHideUnderline(
+        child: DropdownButton<String?>(
+          value: value,
+          isDense: true,
+          borderRadius: BorderRadius.circular(12),
+          icon: const Icon(Icons.keyboard_arrow_down_rounded, size: 18, color: AppColors.darkMint),
+          style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: AppColors.darkMint),
+          items: [
+            for (final c in _boardContinents)
+              DropdownMenuItem<String?>(value: c, child: Text(c == null ? tr('All continents') : tr(continentLabel(c)))),
+          ],
+          onChanged: onChanged,
+        ),
+      ),
+    );
+  }
+}
+
+/// 두 나라에 걸친 곳의 국기: 대각선으로 반쪽씩 (왼쪽 위 / 오른쪽 아래)
+class _SplitFlag extends StatelessWidget {
+  const _SplitFlag(this.a, this.b, {this.width = 26});
+
+  final String? a;
+  final String? b;
+  final double width;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: width,
+      height: width * 0.7,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(4),
+        child: Stack(
+          children: [
+            Positioned.fill(child: ClipPath(clipper: const _DiagonalClipper(upper: true), child: Flag(a, width: width, radius: 0))),
+            Positioned.fill(child: ClipPath(clipper: const _DiagonalClipper(upper: false), child: Flag(b, width: width, radius: 0))),
+            const Positioned.fill(child: CustomPaint(painter: _DiagonalLine())),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _DiagonalClipper extends CustomClipper<Path> {
+  const _DiagonalClipper({required this.upper});
+
+  final bool upper;
+
+  @override
+  Path getClip(Size size) {
+    final path = Path();
+    if (upper) {
+      path
+        ..moveTo(0, 0)
+        ..lineTo(size.width, 0)
+        ..lineTo(0, size.height);
+    } else {
+      path
+        ..moveTo(size.width, 0)
+        ..lineTo(size.width, size.height)
+        ..lineTo(0, size.height);
+    }
+    return path..close();
+  }
+
+  @override
+  bool shouldReclip(covariant CustomClipper<Path> oldClipper) => false;
+}
+
+/// 두 국기 사이의 가는 흰 선
+class _DiagonalLine extends CustomPainter {
+  const _DiagonalLine();
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    canvas.drawLine(Offset(size.width, 0), Offset(0, size.height), Paint()..color = Colors.white..strokeWidth = 1.2);
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
 
 class _BoardLine extends StatelessWidget {
@@ -1333,7 +1660,7 @@ class _BoardLine extends StatelessWidget {
       child: Row(
         children: [
           SizedBox(width: 30, child: Text('$rank', style: TextStyle(fontSize: rank <= 3 ? 16 : 14, fontWeight: FontWeight.w900, color: medal))),
-          Flag(row.iso2, width: 26),
+          row.iso2b != null ? _SplitFlag(row.iso2, row.iso2b, width: 26) : Flag(row.iso2, width: 26),
           const SizedBox(width: 10),
           Expanded(
             child: Column(
@@ -1380,7 +1707,7 @@ class _SitePoster extends StatelessWidget {
             imageUrl: item.thumbUrl,
             fit: BoxFit.cover,
             placeholder: (_, _) => const Center(child: CircularProgressIndicator(strokeWidth: 2)),
-            errorWidget: (_, _, _) => Center(child: Padding(padding: const EdgeInsets.all(12), child: Text(item.title, textAlign: TextAlign.center))),
+            errorWidget: (_, _, _) => Center(child: Padding(padding: const EdgeInsets.all(12), child: Text(tr(item.title), textAlign: TextAlign.center))),
           ),
         ),
       ),
@@ -1415,8 +1742,8 @@ class _ColoredTitle extends StatelessWidget {
       text: TextSpan(
         style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 14, color: AppColors.ink),
         children: [
-          if (prefix.isNotEmpty) TextSpan(text: '$prefix · '),
-          TextSpan(text: rest, style: TextStyle(color: color)),
+          if (prefix.isNotEmpty) TextSpan(text: '${tr(prefix)} · '),
+          TextSpan(text: tr(rest), style: TextStyle(color: color)),
         ],
       ),
     );
@@ -1485,7 +1812,7 @@ class _SiteImagePage extends StatelessWidget {
                     imageUrl: item.imageUrl,
                     fit: BoxFit.contain,
                     placeholder: (_, _) => const CircularProgressIndicator(),
-                    errorWidget: (_, _, _) => const EmptyHint('Could not load the image.'),
+                    errorWidget: (_, _, _) => EmptyHint(tr('Could not load the image.')),
                   ),
                 ),
               ),
@@ -1495,7 +1822,7 @@ class _SiteImagePage extends StatelessWidget {
               right: 12,
               child: Builder(
                 builder: (btnContext) => IconButton.filledTonal(
-                  tooltip: 'Share',
+                  tooltip: tr('Share'),
                   icon: const Icon(Icons.ios_share_rounded, size: 20),
                   onPressed: () => _shareSiteImage(btnContext, item),
                 ),

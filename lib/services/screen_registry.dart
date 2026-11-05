@@ -1,3 +1,8 @@
+import '../screens/country_twin_screen.dart' as country_twin;
+import '../screens/tourist_local_screen.dart' as tourist_local;
+import '../screens/discover_screen.dart' as discover_hub;
+import '../screens/discover_match_screen.dart' as discover_match;
+import '../screens/discover_quiz_screen.dart' as discover_quiz;
 import 'package:flutter/material.dart';
 import '../screens/login_prompt_screen.dart' as s0;
 import '../screens/onboarding_tutorial_screen.dart' as s1;
@@ -123,6 +128,11 @@ import '../screens/purchase_stats_screen.dart' as s119;
 /// Typed mapping of the widget Flutter has ALREADY built. No builder replay,
 /// element-tree polling, string class names, route replacement, or title matching.
 const Map<Type, String> screenWidgetNames = {
+  country_twin.CountryTwinScreen: 'country_twin',
+  tourist_local.TouristLocalScreen: 'tourist_local',
+  discover_hub.DiscoverScreen: 'discover',
+  discover_match.DiscoverMatchScreen: 'discover_match',
+  discover_quiz.DiscoverQuizScreen: 'discover_quiz',
   s0.LoginPromptScreen: 'login_prompt',
   s1.OnboardingTutorialScreen: 'onboarding_tutorial',
   s2.WelcomeScreen: 'welcome',

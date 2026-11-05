@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 
 import '../../data/geo_data.dart';
 import '../../models/stats.dart';
@@ -47,79 +48,79 @@ class LandmarksTab extends StatelessWidget {
     return TabList(children: [
       SectionCard(
         emoji: '🏆',
-        title: 'Landmark score',
+        title: tr('Landmark score'),
         tint: AppColors.gold,
         trailing: VsLegend(friendName: name, showBoth: false),
         child: Column(children: [
-          VsBar(label: 'Landmarks', emoji: '🗼', mine: cmp.me.landmarkCount, theirs: cmp.friend.landmarkCount),
-          VsBar(label: 'Top 250', emoji: '🌟', mine: topMine, theirs: topTheirs),
+          VsBar(label: tr('Landmarks'), emoji: '🗼', mine: cmp.me.landmarkCount, theirs: cmp.friend.landmarkCount),
+          VsBar(label: tr('Top 250'), emoji: '🌟', mine: topMine, theirs: topTheirs),
           VsBar(label: 'UNESCO', emoji: '🏛️', mine: cmp.me.unescoCount, theirs: cmp.friend.unescoCount),
-          VsBar(label: 'Wishlist', emoji: '💭', mine: cmp.me.landmarkWish.length, theirs: cmp.friend.landmarkWish.length),
+          VsBar(label: tr('Wishlist'), emoji: '💭', mine: cmp.me.landmarkWish.length, theirs: cmp.friend.landmarkWish.length),
         ]),
       ),
       if (l.both.isNotEmpty)
         SectionCard(
           emoji: '📸',
-          title: 'Landmarks you both visited',
+          title: tr('Landmarks you both visited'),
           tint: AppColors.both,
-          subtitle: '${l.both.length} places',
+          subtitle: tr('${l.both.length} places'),
           child: HorizontalCards(
             height: 200,
-            children: [for (final n in byRank(l.both).take(20)) LandmarkCard(name: n, badge: 'Both', badgeColor: AppColors.both)],
+            children: [for (final n in byRank(l.both).take(20)) LandmarkCard(name: n, badge: tr('Both'), badgeColor: AppColors.both)],
           ),
         ),
       TopLandmarksPreview(uids: [cmp.me.uid, cmp.friend.uid]),
       if (dots.isNotEmpty)
         SectionCard(
           emoji: '🗺️',
-          title: 'Landmark map',
+          title: tr('Landmark map'),
           tint: AppColors.mint,
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             WorldMap(dots: dots),
             const SizedBox(height: 10),
             MapLegend(items: [
-              (AppColors.both, 'Both ${l.both.length}'),
-              (AppColors.me, 'Only you ${l.onlyMine.length}'),
-              (AppColors.friend, '$name only ${l.onlyTheirs.length}'),
+              (AppColors.both, tr('Both ${l.both.length}')),
+              (AppColors.me, tr('Only you ${l.onlyMine.length}')),
+              (AppColors.friend, tr('$name only ${l.onlyTheirs.length}')),
             ]),
           ]),
         ),
       if (cmp.mine.landmarkCategories.isNotEmpty || cmp.theirs.landmarkCategories.isNotEmpty)
         SectionCard(
           emoji: '🧩',
-          title: 'What you each love',
+          title: tr('What you each love'),
           tint: AppColors.indigo,
-          subtitle: 'Landmark types',
+          subtitle: tr('Landmark types'),
           child: Column(children: [
-            _label(context, 'You', AppColors.me),
+            _label(context, tr('You'), AppColors.me),
             const SizedBox(height: 6),
             cmp.mine.landmarkCategories.isEmpty
-                ? const EmptyHint('No records')
+                ? EmptyHint(tr('No records'))
                 : Donut(data: cmp.mine.landmarkCategories, center: Text('${cmp.me.landmarkCount}', style: theme.textTheme.titleMedium)),
             const Divider(height: 24),
             _label(context, name, AppColors.friend),
             const SizedBox(height: 6),
             cmp.theirs.landmarkCategories.isEmpty
-                ? const EmptyHint('No records')
+                ? EmptyHint(tr('No records'))
                 : Donut(data: cmp.theirs.landmarkCategories, center: Text('${cmp.friend.landmarkCount}', style: theme.textTheme.titleMedium)),
           ]),
         ),
       SectionCard(
         emoji: '🏛️',
-        title: 'UNESCO World Heritage',
+        title: tr('UNESCO World Heritage'),
         tint: AppColors.indigo,
-        subtitle: 'Both ${cmp.unesco.both.length} · You ${cmp.unesco.onlyMine.length} · ${shortName(name)} ${cmp.unesco.onlyTheirs.length}',
+        subtitle: tr('Both ${cmp.unesco.both.length} · You ${cmp.unesco.onlyMine.length} · ${shortName(name)} ${cmp.unesco.onlyTheirs.length}'),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(children: [
-              Expanded(child: _unescoTypes(context, cmp.mine.unescoTypes, AppColors.me, 'You')),
+              Expanded(child: _unescoTypes(context, cmp.mine.unescoTypes, AppColors.me, tr('You'))),
               const SizedBox(width: 10),
               Expanded(child: _unescoTypes(context, cmp.theirs.unescoTypes, AppColors.friend, name)),
             ]),
             if (cmp.unesco.both.isNotEmpty) ...[
               const SizedBox(height: 12),
-              Text('Sites you both visited', style: theme.textTheme.labelLarge?.copyWith(fontWeight: FontWeight.w800)),
+              Text(tr('Sites you both visited'), style: theme.textTheme.labelLarge?.copyWith(fontWeight: FontWeight.w800)),
               const SizedBox(height: 6),
               for (final n in cmp.unesco.both.take(12)) _unescoRow(context, n),
             ],
@@ -129,7 +130,7 @@ class LandmarksTab extends StatelessWidget {
       if (l.onlyTheirs.isNotEmpty)
         SectionCard(
           emoji: '🧭',
-          title: 'Places $name has been',
+          title: tr('Places $name has been'),
           tint: AppColors.friend,
           child: HorizontalCards(
             height: 200,
@@ -137,7 +138,7 @@ class LandmarksTab extends StatelessWidget {
               for (final n in byRank(l.onlyTheirs).take(15))
                 LandmarkCard(
                   name: n,
-                  badge: cmp.me.landmarkWish.contains(n) ? '💭 Wishlist' : null,
+                  badge: cmp.me.landmarkWish.contains(n) ? tr('💭 Wishlist') : null,
                   badgeColor: AppColors.gold,
                 ),
             ],
@@ -176,7 +177,7 @@ class LandmarksTab extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 2),
               child: Row(children: [
                 Expanded(
-                  child: Text('${e.value.$1} ${e.value.$2}',
+                  child: Text('${e.value.$1} ${tr(e.value.$2)}',
                       maxLines: 1, overflow: TextOverflow.ellipsis, style: theme.textTheme.labelMedium),
                 ),
                 const SizedBox(width: 4),

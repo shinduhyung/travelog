@@ -1,3 +1,4 @@
+import 'package:jidoapp/widgets/city_tour_navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
@@ -30,6 +31,7 @@ import 'package:jidoapp/widgets/landmark_info_card.dart';
 import 'package:jidoapp/screens/country_detail_screen.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
+import 'package:jidoapp/widgets/my_match_badge.dart';
 
 class FavoritesScreen extends StatelessWidget {
   const FavoritesScreen({super.key});
@@ -364,6 +366,7 @@ class FavoritesScreen extends StatelessWidget {
               heightFactor: 0.9,
               child: Column(
                 children: [
+                  CityTourButton(city: cityName, countryCode: countryCode),
                   ClipRRect(
                     borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
                     child: Stack(
@@ -582,6 +585,7 @@ class FavoritesScreen extends StatelessWidget {
                                               onPressed: () => Navigator.pop(sheetContext),
                                               child:  Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))
                                           ),
+                                          MyMatchBadge.landmark(landmark: freshLandmark, onDark: headerTextColor == Colors.white),
                                           ElevatedButton(
                                               onPressed: () => Navigator.pop(sheetContext),
                                               style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
@@ -602,6 +606,7 @@ class FavoritesScreen extends StatelessWidget {
                                             const Icon(Icons.check_circle, color: headerTextColor, size: 24)
                                         ]
                                     ),
+                                    
                                     const SizedBox(height: 6),
                                     Row(
                                         children: [

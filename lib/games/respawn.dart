@@ -785,7 +785,7 @@ class _RespawnModeScreenState extends State<RespawnModeScreen> {
                                   style: TextStyle(
                                       fontSize: 10.5, fontWeight: FontWeight.w800, letterSpacing: 0.8, color: _kMuted)),
                               const SizedBox(height: 2),
-                              Text(home?.name ?? 'Not set — tap to choose',
+                              Text(home?.name ?? tr('Not set — tap to choose'),
                                   style: TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.w800,

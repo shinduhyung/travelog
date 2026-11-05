@@ -1,4 +1,6 @@
 import 'dart:convert';
+import 'package:jidoapp/widgets/city_report_screen.dart';
+import 'package:jidoapp/utils/storage_name.dart';
 
 import 'package:jidoapp/widgets/new_tag.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -27,28 +29,34 @@ String _flag(String iso2) {
   return String.fromCharCodes([a, b]);
 }
 
-String _snake(String name) => name
-    .toLowerCase()
-    .replaceAll(RegExp(r"[''`]"), '')
-    .replaceAll(RegExp(r'[^a-z0-9\s]'), '')
-    .trim()
-    .replaceAll(RegExp(r'\s+'), '_');
+String _snake(String name) => foldedSnake(name);
 
 /// 도시 상세 화면(city_detail_modal)의 대표 사진과 같은 사진을 쓴다.
-String _photoUrl(String name) {
+/// thumb: 검색 목록용 160px 사본(thumb_ranked_cities/, 같은 파일명)
+String _photoUrl(String name, {bool thumb = false}) {
   final file = name == 'San José' ? 'san_jose_cr' : _snake(name);
-  return 'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/ranked_cities%2F$file.jpg.jpg?alt=media';
+  return 'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/${thumb ? 'thumb_' : ''}ranked_cities%2F$file.jpg.jpg?alt=media';
 }
 
 /// 국가/도시 화면과 같은 랜드마크 사진: new_countrydex/{iso3}_{이름}.webp, 없으면 m_{이름}.webp
-List<String> _landmarkUrls(Landmark l) {
+/// thumb: 160px 사본(thumb_new_countrydex/)을 먼저 시도하고, 없으면 원본
+List<String> _landmarkUrls(Landmark l, {bool thumb = false}) {
   final snake = _snake(l.name);
   if (snake.isEmpty) return const [];
+  if (thumb) {
+    final full = _landmarkUrls(l);
+    return [...full.map((u) => u.replaceFirst('/o/new_countrydex', '/o/thumb_new_countrydex')), ...full];
+  }
   const base = 'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/new_countrydex%2F';
   final suffix = l.attributes.any((a) => a == 'Painting' || a == 'Artwork') ? '.webp?alt=media&v=painting-square-20261023' : '.webp?alt=media';
+  final legacy = legacySnake(l.name);
+  final iso = l.countriesIsoA3.isEmpty ? null : l.countriesIsoA3.first.toLowerCase();
   return [
-    if (l.countriesIsoA3.isNotEmpty) '$base${l.countriesIsoA3.first.toLowerCase()}_$snake$suffix',
+    if (iso != null) '$base${iso}_$snake$suffix',
     '$base' 'm_$snake$suffix',
+    // 예전 방식(악센트 글자를 지움)으로 올라간 파일
+    if (legacy != snake && iso != null) '$base${iso}_$legacy$suffix',
+    if (legacy != snake) '$base' 'm_$legacy$suffix',
   ];
 }
 
@@ -148,7 +156,12 @@ class NextAdventureCard extends StatelessWidget {
     );
     if (pick == null || !context.mounted) return;
     if (pick.city != null) {
-      showCityTravelModal(context, pick.city!);
+      // 새로 만든 도시 리포트가 있으면 앱 안 화면으로, 없으면 기존 도시 화면
+      if (await CityReports.has(pick.city!.name)) {
+        if (context.mounted) openCityReport(context, pick.city!.name);
+      } else if (context.mounted) {
+        showCityTravelModal(context, pick.city!);
+      }
     } else if (pick.country != null) {
       Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => CountryDetailScreen(country: pick.country!)));
     } else if (pick.landmark != null) {
@@ -176,11 +189,11 @@ class NextAdventureCard extends StatelessWidget {
                 children: [
                   RichText(
                     maxLines: 1,
-                    text: const TextSpan(
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800, letterSpacing: -0.2),
+                    text: TextSpan(
+                      style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w800, letterSpacing: -0.2),
                       children: [
-                        TextSpan(text: 'Next ', style: TextStyle(color: Color(0xFF111827))),
-                        TextSpan(text: 'Adventure', style: TextStyle(color: Color(0xFF0AA4C8))),
+                        TextSpan(text: tr('Next '), style: const TextStyle(color: Color(0xFF111827))),
+                        TextSpan(text: tr('Adventure'), style: const TextStyle(color: Color(0xFF0AA4C8))),
                       ],
                     ),
                   ),
@@ -242,7 +255,7 @@ class NextAdventureCard extends StatelessWidget {
         children: [
           Text(emoji, style: const TextStyle(fontSize: 15)),
           const SizedBox(width: 6),
-          Text(text, maxLines: 1, style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: Color(0xFF4B5563))),
+          Text(tr(text), maxLines: 1, style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: Color(0xFF4B5563))),
         ],
       );
 }
@@ -276,7 +289,7 @@ void _showLandmarkSheet(BuildContext context, Landmark lm) {
         decoration: const BoxDecoration(color: Colors.white, borderRadius: BorderRadius.vertical(top: Radius.circular(28))),
         child: ListView(
           controller: controller,
-          padding: const EdgeInsets.fromLTRB(20, 12, 20, 32),
+          padding: EdgeInsets.fromLTRB(20, 12, 20, 32 + MediaQuery.of(context).viewPadding.bottom),
           children: [
             Center(child: Container(width: 40, height: 4, decoration: BoxDecoration(color: Colors.grey.shade300, borderRadius: BorderRadius.circular(2)))),
             const SizedBox(height: 14),
@@ -304,9 +317,13 @@ void _showLandmarkSheet(BuildContext context, Landmark lm) {
                 width: double.infinity,
                 child: FilledButton.icon(
                   style: FilledButton.styleFrom(backgroundColor: _cyan, padding: const EdgeInsets.symmetric(vertical: 14)),
-                  onPressed: () {
+                  onPressed: () async {
                     Navigator.pop(sheetContext);
-                    showCityTravelModal(context, city!);
+                    if (await CityReports.has(city!.name)) {
+                      if (context.mounted) openCityReport(context, city.name);
+                    } else if (context.mounted) {
+                      showCityTravelModal(context, city);
+                    }
                   },
                   icon: const Icon(Icons.travel_explore_rounded),
                   label: Text('${city.name} ${tr('Plans')}'),
@@ -586,7 +603,7 @@ class _SearchSheetState extends State<_SearchSheet> {
               child: sections.isEmpty
                   ? Center(child: Text(tr('No matching city'), style: TextStyle(color: Colors.grey.shade600, fontSize: 14)))
                   : ListView(
-                      padding: const EdgeInsets.fromLTRB(8, 4, 8, 24),
+                      padding: EdgeInsets.fromLTRB(8, 4, 8, 24 + MediaQuery.of(context).viewPadding.bottom),
                       keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
                       children: sections,
                     ),
@@ -604,7 +621,7 @@ class _SearchSheetState extends State<_SearchSheet> {
         padding: const EdgeInsets.fromLTRB(10, 14, 10, 4),
         child: Row(
           children: [
-            Text(title, style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w900, color: Color(0xFF6B7280), letterSpacing: 0.3)),
+            Text(tr(title), style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w900, color: Color(0xFF6B7280), letterSpacing: 0.3)),
             const SizedBox(width: 6),
             Text('${rows.length}', style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: Colors.grey.shade400)),
           ],
@@ -614,7 +631,7 @@ class _SearchSheetState extends State<_SearchSheet> {
     ];
   }
 
-  Widget _thumb({String? url, required Widget fallback}) {
+  Widget _thumb({List<String>? urls, required Widget fallback}) {
     final box = Container(
       width: 52,
       height: 52,
@@ -622,17 +639,10 @@ class _SearchSheetState extends State<_SearchSheet> {
       decoration: BoxDecoration(color: const Color(0xFFF1F5F9), borderRadius: BorderRadius.circular(14)),
       child: fallback,
     );
-    if (url == null) return box;
+    if (urls == null) return box;
     return ClipRRect(
       borderRadius: BorderRadius.circular(14),
-      child: CachedNetworkImage(
-        imageUrl: url,
-        width: 52,
-        height: 52,
-        fit: BoxFit.cover,
-        placeholder: (_, __) => Container(width: 52, height: 52, color: const Color(0xFFF1F5F9)),
-        errorWidget: (_, __, ___) => box,
-      ),
+      child: _fallbackImage(urls, 0, width: 52, height: 52, fallback: box),
     );
   }
 
@@ -666,10 +676,10 @@ class _SearchSheetState extends State<_SearchSheet> {
 
   Widget _cityRow(City c, {bool guide = false, String? note}) {
     final flag = _flag(c.countryIsoA2);
-    final extra = note == null ? '' : (note == 'nearby' ? ' · nearby' : ' · $note');
+    final extra = note == null ? '' : (note == 'nearby' ? ' · ${tr('nearby')}' : ' · $note');
     return _row(
       thumb: _thumb(
-        url: _withPhoto.contains(c.name) ? _photoUrl(c.name) : null,
+        urls: _withPhoto.contains(c.name) ? [_photoUrl(c.name, thumb: true), _photoUrl(c.name)] : null,
         fallback: Text(flag, style: const TextStyle(fontSize: 24)),
       ),
       title: c.name,
@@ -689,7 +699,7 @@ class _SearchSheetState extends State<_SearchSheet> {
       thumb: ClipRRect(
         borderRadius: BorderRadius.circular(14),
         child: _fallbackImage(
-          _landmarkUrls(l),
+          _landmarkUrls(l, thumb: true),
           0,
           width: 52,
           height: 52,

@@ -11,7 +11,7 @@ import 'package:jidoapp/screens/passport_screen.dart';
 import 'package:jidoapp/screens/settings_screen.dart';
 import 'package:jidoapp/screens/visa_screen.dart';
 import 'package:jidoapp/screens/trip_log_list_screen.dart';
-import 'package:jidoapp/screens/recommendations_screen.dart';
+import 'package:jidoapp/screens/discover_screen.dart';
 import 'package:jidoapp/screens/favorites_screen.dart';
 import 'package:jidoapp/screens/traveler_type_selector_screen.dart';
 import 'package:provider/provider.dart';
@@ -280,11 +280,11 @@ class _MyJourneyScreenState extends State<MyJourneyScreen> {
             Expanded(
                 child: _buildFeatureCard(
                     context,
-                    'AI Match',
+                    'Discover',
                     '',
                     Icons.lightbulb_rounded,
                     recommendBlue,
-                        () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const RecommendationsScreen()))))),
+                        () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const DiscoverScreen()))))),
             const SizedBox(width: 12),
             Expanded(
                 child: _buildFeatureCard(

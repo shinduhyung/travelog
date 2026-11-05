@@ -102,7 +102,7 @@ class BadgePremiumPendingScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 15),
                   Text(
-                    achievement.name,
+                    tr(achievement.name),
                     style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w600),
                     textAlign: TextAlign.center,
                   ),

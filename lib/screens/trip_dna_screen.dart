@@ -1,3 +1,5 @@
+import 'package:jidoapp/services/survey_ad_session.dart';
+import 'package:jidoapp/services/rewarded_unlock_service.dart';
 import 'package:flutter/material.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
@@ -18,7 +20,9 @@ class CustomSliderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Localizations.maybeLocaleOf(context);
-    final double valueToDisplay = selectedValue?.toDouble() ?? 0.0;
+    final double valueToDisplay = selectedValue == null
+        ? 0.0
+        : (selectedValue! - 1).clamp(0, 6).toDouble();
     final bool isAnswered = selectedValue != null;
 
     final Color activeColor = Theme.of(context).primaryColor;
@@ -28,7 +32,7 @@ class CustomSliderWidget extends StatelessWidget {
       children: [
         SliderTheme(
           data: SliderTheme.of(context).copyWith(
-            activeTrackColor: activeColor,
+            activeTrackColor: valueToDisplay == 0 ? inactiveColor : activeColor,
             inactiveTrackColor: inactiveColor,
             thumbColor: activeColor,
             overlayColor: activeColor.withOpacity(0.2),
@@ -41,37 +45,47 @@ class CustomSliderWidget extends StatelessWidget {
           child: Slider(
             value: valueToDisplay,
             min: 0,
-            max: 7,
-            divisions: 7,
+            max: 6,
+            divisions: 6,
+            onChangeEnd: (value) {
+              final score = value.round() + 1;
+              if (selectedValue != score) onChanged(score);
+            },
             onChanged: (double newValue) {
-              if (newValue.round() >= 1) {
-                onChanged(newValue.round());
-              }
+              onChanged(newValue.round() + 1);
             },
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0)
-              .copyWith(left: 16.0 + 24.0 / 2, right: 16.0),
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: List.generate(7, (index) {
               final score = index + 1;
               final isSelected = selectedValue == score;
-              return Container(
-                width: 24,
-                height: 24,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: isSelected && isAnswered ? activeColor.withOpacity(0.15) : Colors.transparent,
-                ),
-                alignment: Alignment.center,
-                child: Text(
-                  tr('$score'),
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: isSelected && isAnswered ? FontWeight.bold : FontWeight.normal,
-                    color: isSelected && isAnswered ? activeColor : Colors.grey,
+              return InkResponse(
+                onTap: () => onChanged(score),
+                child: Container(
+                  width: 24,
+                  height: 24,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: isSelected && isAnswered
+                        ? activeColor.withOpacity(0.15)
+                        : Colors.transparent,
+                  ),
+                  alignment: Alignment.center,
+                  child: Text(
+                    tr('$score'),
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: isSelected && isAnswered
+                          ? FontWeight.bold
+                          : FontWeight.normal,
+                      color: isSelected && isAnswered
+                          ? activeColor
+                          : Colors.grey,
+                    ),
                   ),
                 ),
               );
@@ -83,9 +97,9 @@ class CustomSliderWidget extends StatelessWidget {
   }
 }
 
-
 class TripDnaScreen extends StatefulWidget {
-  const TripDnaScreen({super.key});
+  final SurveyAdSession? adSession;
+  const TripDnaScreen({super.key, this.adSession});
 
   @override
   State<TripDnaScreen> createState() => _TripDnaScreenState();
@@ -93,12 +107,87 @@ class TripDnaScreen extends StatefulWidget {
 
 class _TripDnaScreenState extends State<TripDnaScreen> {
   final ScrollController _scrollController = ScrollController();
+  PersonalityProvider? _personality;
+  late final SurveyAdSession _ads;
+  bool _showingReward = false;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final provider = context.read<PersonalityProvider>();
+    if (!identical(_personality, provider)) {
+      _personality?.removeListener(_syncAdPause);
+      _personality = provider;
+      provider.addListener(_syncAdPause);
+    }
+    _syncAdPause();
+  }
+
+  void _syncAdPause() {
+    if (_personality?.isCalculated == false) {
+      _ads.enter();
+    } else {
+      _ads.leave();
+    }
+  }
+
+  @override
+  void dispose() {
+    _personality?.removeListener(_syncAdPause);
+    _ads.leave();
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  Future<void> _viewResults(PersonalityProvider provider) async {
+    if (_showingReward) return;
+    if (!_ads.needsAd) {
+      provider.calculateScores();
+      return;
+    }
+    setState(() => _showingReward = true);
+    try {
+      final result = await _ads.unlock('personality_results');
+      if (!mounted) return;
+      if (result == RewardedUnlockResult.unlocked) {
+        provider.calculateScores();
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              tr(
+                result == RewardedUnlockResult.unavailable
+                    ? 'The video is not ready yet. Your answers are saved. Please try again.'
+                    : 'Finish watching the video to view your results. Your answers are saved.',
+              ),
+            ),
+          ),
+        );
+      }
+    } catch (_) {
+      if (mounted)
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              tr(
+                'Unable to play the video. Your answers are saved. Please try again.',
+              ),
+            ),
+          ),
+        );
+    } finally {
+      if (mounted) setState(() => _showingReward = false);
+    }
+  }
 
   @override
   void initState() {
     super.initState();
+    _ads = widget.adSession ?? SurveyAdSession.live();
     WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
       context.read<PersonalityProvider>().loadQuestions();
+      RewardedUnlockService.instance.preload();
     });
   }
 
@@ -111,7 +200,8 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
     Localizations.maybeLocaleOf(context);
     final provider = context.watch<PersonalityProvider>();
     final questions = provider.questions;
-    final allAnswered = questions.isNotEmpty && provider.responses.length == questions.length;
+    final allAnswered =
+        questions.isNotEmpty && provider.responses.length == questions.length;
 
     return Scaffold(
       backgroundColor: const Color(0xFFFAFAFA), // 더 부드러운 밝은 배경
@@ -126,13 +216,17 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
 
       bottomNavigationBar: provider.isCalculated || questions.isEmpty
           ? null
-          : _buildBottomButton(context, provider, allAnswered),
+          : SafeArea(
+              top: false,
+              child: _buildBottomButton(context, provider, allAnswered),
+            ),
     );
   }
 
   Widget _buildQuizScreen(
-      List<PersonalityQuestion> questions,
-      PersonalityProvider provider) {
+    List<PersonalityQuestion> questions,
+    PersonalityProvider provider,
+  ) {
     return SingleChildScrollView(
       controller: _scrollController,
       padding: const EdgeInsets.fromLTRB(20.0, 40.0, 20.0, 16.0),
@@ -150,7 +244,10 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                   children: [
                     // 작은 accent 라벨
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 12,
+                        vertical: 6,
+                      ),
                       decoration: BoxDecoration(
                         color: Theme.of(context).primaryColor.withOpacity(0.1),
                         borderRadius: BorderRadius.circular(20),
@@ -201,12 +298,18 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                   ],
                 ),
               ),
-              if(provider.isCalculated)
+              if (provider.isCalculated)
                 IconButton(
-                  icon: Icon(Icons.refresh_rounded, color: Theme.of(context).primaryColor),
-                  onPressed: provider.resetQuiz,
+                  icon: Icon(
+                    Icons.refresh_rounded,
+                    color: Theme.of(context).primaryColor,
+                  ),
+                  onPressed: () {
+                    _ads.enter();
+                    provider.resetQuiz();
+                  },
                   tooltip: tr('Reset Quiz'),
-                )
+                ),
             ],
           ),
           const SizedBox(height: 32),
@@ -252,25 +355,27 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                             height: 32,
                             decoration: BoxDecoration(
                               color: isAnswered
-                                  ? Theme.of(context).primaryColor.withOpacity(0.15)
+                                  ? Theme.of(
+                                      context,
+                                    ).primaryColor.withOpacity(0.15)
                                   : Colors.grey[100],
                               shape: BoxShape.circle,
                             ),
                             child: Center(
                               child: isAnswered
                                   ? Icon(
-                                Icons.check_rounded,
-                                size: 18,
-                                color: Theme.of(context).primaryColor,
-                              )
+                                      Icons.check_rounded,
+                                      size: 18,
+                                      color: Theme.of(context).primaryColor,
+                                    )
                                   : Text(
-                                tr("${index + 1}"),
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w700,
-                                  color: Colors.grey[600],
-                                ),
-                              ),
+                                      tr("${index + 1}"),
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w700,
+                                        color: Colors.grey[600],
+                                      ),
+                                    ),
                             ),
                           ),
                           const SizedBox(width: 12),
@@ -330,7 +435,8 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                       // 슬라이더
                       CustomSliderWidget(
                         selectedValue: provider.responses[question.id],
-                        onChanged: (score) => _onAnswered(question.id, score, provider),
+                        onChanged: (score) =>
+                            _onAnswered(question.id, score, provider),
                       ),
                     ],
                   ),
@@ -344,31 +450,28 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
   }
 
   Widget _buildBottomButton(
-      BuildContext context,
-      PersonalityProvider provider,
-      bool allAnswered) {
-
+    BuildContext context,
+    PersonalityProvider provider,
+    bool allAnswered,
+  ) {
     return Container(
-      padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 32.0),
+      padding: const EdgeInsets.fromLTRB(20.0, 12.0, 20.0, 16.0),
       decoration: BoxDecoration(
         color: const Color(0xFFFAFAFA),
-        border: Border(
-          top: BorderSide(
-            color: Colors.grey[200]!,
-            width: 1,
-          ),
-        ),
+        border: Border(top: BorderSide(color: Colors.grey[200]!, width: 1)),
       ),
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
-          boxShadow: allAnswered ? [
-            BoxShadow(
-              color: Theme.of(context).primaryColor.withOpacity(0.3),
-              blurRadius: 20,
-              offset: const Offset(0, 8),
-            ),
-          ] : null,
+          boxShadow: allAnswered
+              ? [
+                  BoxShadow(
+                    color: Theme.of(context).primaryColor.withOpacity(0.3),
+                    blurRadius: 20,
+                    offset: const Offset(0, 8),
+                  ),
+                ]
+              : null,
         ),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
@@ -381,9 +484,17 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
             ),
             elevation: 0,
           ),
-          onPressed: allAnswered ? () => provider.calculateScores() : null,
+          onPressed: allAnswered && !_showingReward
+              ? () => _viewResults(provider)
+              : null,
           child: Text(
-            tr("View Results"),
+            tr(
+              _showingReward
+                  ? 'Opening video...'
+                  : !_ads.needsAd
+                  ? 'View Results'
+                  : 'Watch one ad to view results',
+            ),
             style: TextStyle(
               fontSize: 17,
               fontWeight: FontWeight.w700,
@@ -412,7 +523,10 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 12,
+                        vertical: 6,
+                      ),
                       decoration: BoxDecoration(
                         color: Theme.of(context).primaryColor.withOpacity(0.1),
                         borderRadius: BorderRadius.circular(20),
@@ -428,7 +542,7 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                       ),
                     ),
                     const SizedBox(height: 12),
-                     Text(
+                    Text(
                       tr("Travel DNA"),
                       style: TextStyle(
                         fontSize: 32,
@@ -466,14 +580,17 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(
-                    color: Colors.grey[200]!,
-                    width: 1.5,
-                  ),
+                  border: Border.all(color: Colors.grey[200]!, width: 1.5),
                 ),
                 child: IconButton(
-                  icon: Icon(Icons.refresh_rounded, color: Theme.of(context).primaryColor),
-                  onPressed: provider.resetQuiz,
+                  icon: Icon(
+                    Icons.refresh_rounded,
+                    color: Theme.of(context).primaryColor,
+                  ),
+                  onPressed: () {
+                    _ads.enter();
+                    provider.resetQuiz();
+                  },
                   tooltip: tr('Retake Quiz'),
                 ),
               ),
@@ -495,10 +612,7 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
-                  border: Border.all(
-                    color: Colors.grey[200]!,
-                    width: 1.5,
-                  ),
+                  border: Border.all(color: Colors.grey[200]!, width: 1.5),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.black.withOpacity(0.03),
@@ -517,10 +631,15 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                         children: [
                           Flexible(
                             child: Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 12,
+                                vertical: 8,
+                              ),
                               decoration: BoxDecoration(
                                 color: isLeftDominant
-                                    ? Theme.of(context).primaryColor.withOpacity(0.1)
+                                    ? Theme.of(
+                                        context,
+                                      ).primaryColor.withOpacity(0.1)
                                     : Colors.transparent,
                                 borderRadius: BorderRadius.circular(12),
                               ),
@@ -529,7 +648,9 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                                 textAlign: TextAlign.left,
                                 style: TextStyle(
                                   fontSize: 15,
-                                  fontWeight: isLeftDominant ? FontWeight.w700 : FontWeight.w500,
+                                  fontWeight: isLeftDominant
+                                      ? FontWeight.w700
+                                      : FontWeight.w500,
                                   color: isLeftDominant
                                       ? Theme.of(context).primaryColor
                                       : Colors.grey[600],
@@ -540,10 +661,15 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                           const SizedBox(width: 8),
                           Flexible(
                             child: Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 12,
+                                vertical: 8,
+                              ),
                               decoration: BoxDecoration(
                                 color: isRightDominant
-                                    ? Theme.of(context).primaryColor.withOpacity(0.1)
+                                    ? Theme.of(
+                                        context,
+                                      ).primaryColor.withOpacity(0.1)
                                     : Colors.transparent,
                                 borderRadius: BorderRadius.circular(12),
                               ),
@@ -552,7 +678,9 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                                 textAlign: TextAlign.right,
                                 style: TextStyle(
                                   fontSize: 15,
-                                  fontWeight: isRightDominant ? FontWeight.w700 : FontWeight.w500,
+                                  fontWeight: isRightDominant
+                                      ? FontWeight.w700
+                                      : FontWeight.w500,
                                   color: isRightDominant
                                       ? Theme.of(context).primaryColor
                                       : Colors.grey[600],
@@ -600,7 +728,9 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                                     decoration: BoxDecoration(
                                       gradient: LinearGradient(
                                         colors: [
-                                          Theme.of(context).primaryColor.withOpacity(0.7),
+                                          Theme.of(
+                                            context,
+                                          ).primaryColor.withOpacity(0.7),
                                           Theme.of(context).primaryColor,
                                         ],
                                       ),
@@ -617,12 +747,17 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                                   0,
                                 ),
                                 child: Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 8,
+                                    vertical: 2,
+                                  ),
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(8),
                                     border: Border.all(
-                                      color: Theme.of(context).primaryColor.withOpacity(0.3),
+                                      color: Theme.of(
+                                        context,
+                                      ).primaryColor.withOpacity(0.3),
                                       width: 1.5,
                                     ),
                                   ),

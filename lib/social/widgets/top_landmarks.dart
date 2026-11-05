@@ -1,3 +1,4 @@
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 import '../data/geo_data.dart';
@@ -63,7 +64,7 @@ class TopScoreLine extends StatelessWidget {
             ],
             Expanded(
               child: Text(
-                person.label,
+                person.label == 'You' ? tr('You') : person.label,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: theme.textTheme.labelLarge?.copyWith(fontWeight: FontWeight.w800),
@@ -106,7 +107,7 @@ class VisitDot extends StatelessWidget {
   Widget build(BuildContext context) {
     final initial = person.label.isEmpty ? '?' : person.label.characters.first.toUpperCase();
     return Tooltip(
-      message: '${person.label}: ${lit ? 'visited' : 'not yet'}',
+      message: '${person.label == 'You' ? tr('You') : person.label}: ${lit ? tr('visited') : tr('not yet')}',
       child: Container(
         width: size,
         height: size,
@@ -157,16 +158,16 @@ class TopLandmarksPreview extends StatelessWidget {
 
     return SectionCard(
       emoji: '🌟',
-      title: 'Top 250 landmarks',
+      title: tr('Top 250 landmarks'),
       tint: AppColors.gold,
-      subtitle: people.length > 1 ? 'Lit up = visited' : 'Travelog world ranking',
+      subtitle: people.length > 1 ? tr('Lit up = visited') : tr('Travelog world ranking'),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           for (final p in people) TopScoreLine(person: p, total: top.length),
           const SizedBox(height: 10),
           if (visited.isEmpty)
-            const EmptyHint('None of the Top 250 yet', emoji: '🗺️')
+            EmptyHint(tr('None of the Top 250 yet'), emoji: '🗺️')
           else
             SizedBox(
               height: 110,
@@ -186,7 +187,7 @@ class TopLandmarksPreview extends StatelessWidget {
                 socialRoute<void>((_) => TopLandmarksScreen(uids: uids)),
               ),
               icon: const Icon(Icons.format_list_numbered, size: 18),
-              label: Text('See all ${top.length}', style: theme.textTheme.labelLarge?.copyWith(fontWeight: FontWeight.w800, color: AppColors.darkMint)),
+              label: Text(tr('See all ${top.length}'), style: theme.textTheme.labelLarge?.copyWith(fontWeight: FontWeight.w800, color: AppColors.darkMint)),
             ),
           ),
         ],
@@ -296,12 +297,12 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
 
     String short(String s) => s.length <= 8 ? s : '${s.substring(0, 7)}…';
     final filters = <(_TopFilter, String)>[
-      (_TopFilter.all, 'All'),
-      if (people.length == 1) (_TopFilter.first, 'Visited'),
-      if (people.length > 1) (_TopFilter.first, people[0].label == 'You' ? 'You' : short(people[0].label)),
+      (_TopFilter.all, tr('All')),
+      if (people.length == 1) (_TopFilter.first, tr('Visited')),
+      if (people.length > 1) (_TopFilter.first, people[0].label == 'You' ? tr('You') : short(people[0].label)),
       if (people.length > 1) (_TopFilter.second, short(people[1].label)),
-      if (people.length > 1) (_TopFilter.both, 'Both'),
-      if (people.isNotEmpty) (_TopFilter.neither, people.length > 1 ? 'Neither' : 'Not yet'),
+      if (people.length > 1) (_TopFilter.both, tr('Both')),
+      if (people.isNotEmpty) (_TopFilter.neither, people.length > 1 ? tr('Neither') : tr('Not yet')),
     ];
     final filter = filters.any((f) => f.$1 == _filter) ? _filter : _TopFilter.all;
     final rows = [for (final m in top) if (keep(filter, m)) m];
@@ -317,7 +318,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 for (final p in people) TopScoreLine(person: p, total: top.length, avatar: true),
-                if (people.isEmpty) const EmptyHint('Profile not available'),
+                if (people.isEmpty) EmptyHint(tr('Profile not available')),
               ],
             ),
           ),
@@ -337,7 +338,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
     );
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Top 250 landmarks', maxLines: 1, overflow: TextOverflow.ellipsis)),
+      appBar: AppBar(title: Text(tr('Top 250 landmarks'), maxLines: 1, overflow: TextOverflow.ellipsis)),
       body: ListView.builder(
         padding: const EdgeInsets.fromLTRB(16, 4, 16, 120),
         itemCount: rows.length + 1 + (rows.isEmpty ? 1 : 0),

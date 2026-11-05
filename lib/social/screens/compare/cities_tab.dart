@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 
 import '../../data/geo_data.dart';
 import '../../models/stats.dart';
@@ -37,7 +38,7 @@ class _CitiesTabState extends State<CitiesTab> with AutomaticKeepAliveClientMixi
     final c = cmp.cities;
 
     if (!cmp.friend.privacy.cities && cmp.friend.cities.isEmpty) {
-      return const TabList(children: [EmptyHint('Your friend keeps their cities private', emoji: '🔒')]);
+      return TabList(children: [EmptyHint(tr('Your friend keeps their cities private'), emoji: '🔒')]);
     }
 
     // 지도 점: 너무 많으면 큰 도시 위주로
@@ -69,17 +70,17 @@ class _CitiesTabState extends State<CitiesTab> with AutomaticKeepAliveClientMixi
       SectionCard(
         emoji: '📍',
         tint: AppColors.mint,
-        title: 'City map',
-        subtitle: 'Pinch to zoom in',
+        title: tr('City map'),
+        subtitle: tr('Pinch to zoom in'),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             WorldMap(dots: allDots),
             const SizedBox(height: 10),
             MapLegend(items: [
-              (AppColors.both, 'Both ${c.both.length}'),
-              (AppColors.me, 'Only you ${c.onlyMine.length}'),
-              (AppColors.friend, '$short only ${c.onlyTheirs.length}'),
+              (AppColors.both, tr('Both ${c.both.length}')),
+              (AppColors.me, tr('Only you ${c.onlyMine.length}')),
+              (AppColors.friend, tr('$short only ${c.onlyTheirs.length}')),
             ]),
             const SizedBox(height: 10),
             OverlapBar(onlyMine: c.onlyMine.length, both: c.both.length, onlyTheirs: c.onlyTheirs.length),
@@ -89,16 +90,16 @@ class _CitiesTabState extends State<CitiesTab> with AutomaticKeepAliveClientMixi
       SectionCard(
         emoji: '🏙️',
         tint: AppColors.indigo,
-        title: 'City score',
+        title: tr('City score'),
         trailing: VsLegend(friendName: short, showBoth: false),
         child: Column(children: [
-          VsBar(label: 'Cities', emoji: '🏙️', mine: cmp.me.cityCount, theirs: cmp.friend.cityCount),
-          VsBar(label: 'Capitals', emoji: '🏛️', mine: cmp.mine.capitalCount, theirs: cmp.theirs.capitalCount),
-          VsBar(label: 'Lived', emoji: '🏠',
+          VsBar(label: tr('Cities'), emoji: '🏙️', mine: cmp.me.cityCount, theirs: cmp.friend.cityCount),
+          VsBar(label: tr('Capitals'), emoji: '🏛️', mine: cmp.mine.capitalCount, theirs: cmp.theirs.capitalCount),
+          VsBar(label: tr('Lived'), emoji: '🏠',
               mine: cmp.me.cityInfo.values.where((i) => i.lived).length,
               theirs: cmp.friend.cityInfo.values.where((i) => i.lived).length),
-          VsBar(label: 'Wishlist', emoji: '💭', mine: cmp.me.cityWish.length, theirs: cmp.friend.cityWish.length),
-          VsBar(label: 'Per country', emoji: '📊',
+          VsBar(label: tr('Wishlist'), emoji: '💭', mine: cmp.me.cityWish.length, theirs: cmp.friend.cityWish.length),
+          VsBar(label: tr('Per country'), emoji: '📊',
               mine: cmp.me.countryCount == 0 ? 0 : cmp.me.cityCount / cmp.me.countryCount,
               theirs: cmp.friend.countryCount == 0 ? 0 : cmp.friend.cityCount / cmp.friend.countryCount,
               format: (v) => v.toStringAsFixed(1)),
@@ -107,9 +108,9 @@ class _CitiesTabState extends State<CitiesTab> with AutomaticKeepAliveClientMixi
       SectionCard(
         emoji: '🏡',
         tint: AppColors.gold,
-        title: 'Home & biggest city',
+        title: tr('Home & biggest city'),
         child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Expanded(child: _homeCard(context, cmp.me.homeCity, cmp.mine.biggestCity, AppColors.me, 'You')),
+          Expanded(child: _homeCard(context, cmp.me.homeCity, cmp.mine.biggestCity, AppColors.me, tr('You'))),
           const SizedBox(width: 10),
           Expanded(child: _homeCard(context, cmp.friend.homeCity, cmp.theirs.biggestCity, AppColors.friend, name)),
         ]),
@@ -118,7 +119,7 @@ class _CitiesTabState extends State<CitiesTab> with AutomaticKeepAliveClientMixi
         SectionCard(
           emoji: '🗂️',
           tint: AppColors.friend,
-          title: 'Most cities by country',
+          title: tr('Most cities by country'),
           child: Column(children: [
             for (final iso3 in topCountries.take(8))
               Builder(builder: (context) {
@@ -136,8 +137,8 @@ class _CitiesTabState extends State<CitiesTab> with AutomaticKeepAliveClientMixi
       SectionCard(
         emoji: '🧾',
         tint: AppColors.both,
-        title: 'City list',
-        subtitle: 'By population · ${listed.length} ${listed.length == 1 ? 'city' : 'cities'}',
+        title: tr('City list'),
+        subtitle: '${tr('By population')} · ${listed.length} ${listed.length == 1 ? tr('city') : tr('cities')}',
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -145,9 +146,9 @@ class _CitiesTabState extends State<CitiesTab> with AutomaticKeepAliveClientMixi
               width: double.infinity,
               child: SegmentedButton<int>(
                 segments: [
-                  ButtonSegment(value: 0, label: segLabel('Both ${c.both.length}')),
-                  ButtonSegment(value: 1, label: segLabel('You ${c.onlyMine.length}')),
-                  ButtonSegment(value: 2, label: segLabel('Friend ${c.onlyTheirs.length}')),
+                  ButtonSegment(value: 0, label: segLabel(tr('Both ${c.both.length}'))),
+                  ButtonSegment(value: 1, label: segLabel(tr('You ${c.onlyMine.length}'))),
+                  ButtonSegment(value: 2, label: segLabel(tr('Friend ${c.onlyTheirs.length}'))),
                 ],
                 selected: {_list},
                 showSelectedIcon: false,
@@ -156,7 +157,7 @@ class _CitiesTabState extends State<CitiesTab> with AutomaticKeepAliveClientMixi
             ),
             const SizedBox(height: 10),
             if (listed.isEmpty)
-              const EmptyHint('No matching cities')
+              EmptyHint(tr('No matching cities'))
             else
               for (final m in listed.take(40))
                 Padding(
@@ -179,7 +180,7 @@ class _CitiesTabState extends State<CitiesTab> with AutomaticKeepAliveClientMixi
             if (listed.length > 40)
               Padding(
                 padding: const EdgeInsets.only(top: 6),
-                child: Text('+${listed.length - 40} more',
+                child: Text(tr('+${listed.length - 40} more'),
                     style: theme.textTheme.labelSmall?.copyWith(color: AppColors.label)),
               ),
           ],
@@ -219,16 +220,16 @@ class _CitiesTabState extends State<CitiesTab> with AutomaticKeepAliveClientMixi
               overflow: TextOverflow.ellipsis,
               style: theme.textTheme.labelLarge?.copyWith(color: color, fontWeight: FontWeight.w800)),
           const SizedBox(height: 8),
-          Text('🏡 Home', style: labelStyle, maxLines: 1, overflow: TextOverflow.ellipsis),
+          Text(tr('🏡 Home'), style: labelStyle, maxLines: 1, overflow: TextOverflow.ellipsis),
           Row(children: [
             if (homeMeta != null) ...[Flag(homeMeta.iso2, width: 18, radius: 2), const SizedBox(width: 4)],
             Expanded(
-              child: Text(home == null ? 'Not set' : displayCityName(home),
+              child: Text(home == null ? tr('Not set') : displayCityName(home),
                   style: theme.textTheme.titleSmall, maxLines: 1, overflow: TextOverflow.ellipsis),
             ),
           ]),
           const SizedBox(height: 8),
-          Text('🌆 Biggest city', style: labelStyle, maxLines: 1, overflow: TextOverflow.ellipsis),
+          Text(tr('🌆 Biggest city'), style: labelStyle, maxLines: 1, overflow: TextOverflow.ellipsis),
           Row(children: [
             if (biggest != null) ...[Flag(biggest.iso2, width: 18, radius: 2), const SizedBox(width: 4)],
             Expanded(
@@ -237,7 +238,7 @@ class _CitiesTabState extends State<CitiesTab> with AutomaticKeepAliveClientMixi
             ),
           ]),
           if (biggest != null)
-            Text('Pop. ${compactNumber(biggest.population)}',
+            Text(tr('Pop. ${compactNumber(biggest.population)}'),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: theme.textTheme.labelSmall?.copyWith(color: AppColors.label)),

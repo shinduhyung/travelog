@@ -119,13 +119,25 @@ class RewardedUnlockService extends ChangeNotifier {
       },
     );
 
-    await ad.show(
-      onUserEarnedReward: (_, __) {
-        earned = true;
-        _unlocked.add(statKey);
-        notifyListeners();
-      },
-    );
+    try {
+      await ad.show(
+        onUserEarnedReward: (_, __) {
+          earned = true;
+          _unlocked.add(statKey);
+          notifyListeners();
+        },
+      );
+    } catch (_) {
+      ad.dispose();
+      AdService.instance.clearUiOverlayActive();
+      preload();
+      if (!completer.isCompleted)
+        completer.complete(
+          earned
+              ? RewardedUnlockResult.unlocked
+              : RewardedUnlockResult.unavailable,
+        );
+    }
     return completer.future;
   }
 

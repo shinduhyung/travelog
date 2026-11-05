@@ -683,9 +683,9 @@ String _formatValue(double value, _Metric metric) {
       if (value >= 1e3) return '${(value / 1e3).round()}K';
       return value.round().toString();
     case _Metric.tourismArrivals:
-      if (value >= 1e6) return '${(value / 1e6).toStringAsFixed(1)}M visitors';
-      if (value >= 1e3) return '${(value / 1e3).round()}K visitors';
-      return '${value.round()} visitors';
+      if (value >= 1e6) return tr('${(value / 1e6).toStringAsFixed(1)}M visitors');
+      if (value >= 1e3) return tr('${(value / 1e3).round()}K visitors');
+      return tr('${value.round()} visitors');
     case _Metric.gdpPerCapita:
       final v = value.round();
       return '\$${v.toString().replaceAllMapped(RegExp(r'\B(?=(\d{3})+(?!\d))'), (m) => ',')}';

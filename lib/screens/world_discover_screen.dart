@@ -1,5 +1,6 @@
 // lib/screens/world_discover_screen.dart
 import 'package:flutter/material.dart';
+import 'package:jidoapp/utils/storage_name.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:collection/collection.dart';
@@ -37,10 +38,7 @@ class _WorldDiscoverScreenState extends State<WorldDiscoverScreen> {
 
   // Same image source rule as city_detail_modal.dart's _heroUrl
   String _toSnake(String s) {
-    String r = s.toLowerCase();
-    r = r.replaceAll(RegExp(r"[''`]"), '');
-    r = r.replaceAll(RegExp(r'[^a-z0-9\s]'), '');
-    return r.trim().replaceAll(RegExp(r'\s+'), '_');
+    return foldedSnake(s);
   }
 
   String _getCityImageUrl(String cityName) {

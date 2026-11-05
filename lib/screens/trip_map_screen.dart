@@ -1361,7 +1361,7 @@ class _TripMapScreenState extends State<TripMapScreen>
           // 마커 로딩 중이면 로딩 인디케이터 표시
           return Scaffold(
             appBar: AppBar(
-              title:  Text(tr('여행 지도 로딩 중...')),
+              title:  Text(tr('Loading trip map...')),
               backgroundColor: Colors.blueGrey,
               foregroundColor: Colors.white,
             ),
@@ -1374,7 +1374,7 @@ class _TripMapScreenState extends State<TripMapScreen>
           developer.log("Error loading location markers: ${locationMarkersSnapshot.error}", name: 'TripMapScreen.build');
           return Scaffold(
             appBar: AppBar(
-              title:  Text(tr('여행 지도')),
+              title:  Text(tr('Trip Map')),
               backgroundColor: Colors.blueGrey,
               foregroundColor: Colors.white,
             ),
@@ -1875,12 +1875,12 @@ class _TripMapScreenState extends State<TripMapScreen>
           // 데이터가 없지만 오류도 아닌 경우 (빈 리스트일 때 등)
           return Scaffold(
             appBar: AppBar(
-              title:  Text(tr('여행 지도')),
+              title:  Text(tr('Trip Map')),
               backgroundColor: Colors.blueGrey,
               foregroundColor: Colors.white,
             ),
             body:  Center(
-              child: Text(tr('표시할 도시 정보가 없습니다.')),
+              child: Text(tr('No city information to display.')),
             ),
           );
         }
@@ -2581,7 +2581,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                           child: TextFormField(
                             controller: hoursController,
                             decoration:  InputDecoration(
-                              labelText: tr('Hours (시간)'),
+                              labelText: tr('Hours'),
                               hintText: tr('0'),
                             ),
                             keyboardType: TextInputType.number,
@@ -2905,7 +2905,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                           child: TextFormField(
                             controller: hoursController,
                             decoration:  InputDecoration(
-                              labelText: tr('Hours (시간)'),
+                              labelText: tr('Hours'),
                               hintText: tr('0'),
                             ),
                             keyboardType: TextInputType.number,
@@ -3604,7 +3604,7 @@ class _TripMapScreenState extends State<TripMapScreen>
 
   String _formatDuration(String? duration) {
     if (duration == null || duration.isEmpty || duration.toLowerCase() == 'unknown') {
-      return '알 수 없음';
+      return 'Unknown';
     }
 
     if (duration.contains('h') || duration.contains('m')) {

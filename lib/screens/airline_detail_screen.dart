@@ -711,7 +711,7 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
             ],
           ),
         ),
-        subtitle: Text('${log.date} ・ ${trSeatClass(log.seatClass)}'),
+        subtitle: Text(tr('${log.date} ・ ${trSeatClass(log.seatClass)}')),
         onTap: () {
           Navigator.pop(context);
           Navigator.push(
@@ -768,18 +768,18 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
                     hint:  Text(tr('Category')),
                     items: categories.map((c) => DropdownMenuItem(value: c, child: Text(tr(c)))).toList(),
                     onChanged: (val) => selectedCategory = val,
-                    validator: (val) => val == null ? 'Please select a category' : null,
+                    validator: (val) => val == null ? tr('Please select a category') : null,
                   ),
                   TextFormField(
                     controller: descriptionController,
                     decoration:  InputDecoration(labelText: tr('Description'), icon: Icon(Icons.description)),
-                    validator: (val) => val == null || val.isEmpty ? 'Required' : null,
+                    validator: (val) => val == null || val.isEmpty ? tr('Required') : null,
                   ),
                   TextFormField(
                     controller: milesController,
                     decoration:  InputDecoration(labelText: tr('Miles Used'), icon: Icon(Icons.star)),
                     keyboardType: TextInputType.number,
-                    validator: (val) => val == null || val.isEmpty ? 'Required' : null,
+                    validator: (val) => val == null || val.isEmpty ? tr('Required') : null,
                   ),
                   TextFormField(
                     controller: vatController,

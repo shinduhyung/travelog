@@ -20,6 +20,7 @@ import 'package:jidoapp/providers/country_provider.dart';
 
 // Widgets
 import 'package:jidoapp/widgets/landmark_info_card.dart';
+import 'package:jidoapp/widgets/my_match_badge.dart';
 
 // 파이어베이스 설정 무시하고 강제로 30일 기기 보관하는 커스텀 캐시 매니저 설정
 final CacheManager _landmarksCacheManager = CacheManager(
@@ -905,6 +906,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                                     ),
                                   ),
+                                  MyMatchBadge.landmark(landmark: freshLandmark, onDark: true),
                                   Container(
                                     padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                                     decoration: BoxDecoration(
@@ -956,6 +958,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                     ),
                                 ],
                               ),
+                              
                               const SizedBox(height: 10),
                               Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
