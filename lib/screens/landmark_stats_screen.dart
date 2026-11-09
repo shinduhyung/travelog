@@ -16,6 +16,7 @@ import 'package:shared_preferences/shared_preferences.dart'; // 저장 기능을
 import 'package:country_flags/country_flags.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:collection/collection.dart';
+import 'package:jidoapp/widgets/my_match_badge.dart';
 
 class CountryLandmarkStats {
   final Country country;
@@ -374,13 +375,17 @@ class _LandmarkStatsScreenState extends State<LandmarkStatsScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      tr('DISCOVERY STATUS'),
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.grey[400],
-                        letterSpacing: 1.5,
+                    Flexible(
+                      child: Text(
+                        tr('DISCOVERY STATUS'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.grey[400],
+                          letterSpacing: 1.5,
+                        ),
                       ),
                     ),
                     Container(
@@ -570,12 +575,14 @@ class _LandmarkRankingCardState extends State<_LandmarkRankingCard> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                     Row(
-                      children: [
-                        Icon(Icons.leaderboard_rounded, color: primaryBlue),
-                        SizedBox(width: 12),
-                        Text(tr('Country Rankings'), style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: Color(0xFF1F2937))),
-                      ],
+                     Flexible(
+                      child: Row(
+                        children: [
+                          Icon(Icons.leaderboard_rounded, color: primaryBlue),
+                          SizedBox(width: 12),
+                          Flexible(child: Text(tr('Country Rankings'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: Color(0xFF1F2937)))),
+                        ],
+                      ),
                     ),
                     IconButton(
                       onPressed: widget.onSettingsPressed,
@@ -593,15 +600,15 @@ class _LandmarkRankingCardState extends State<_LandmarkRankingCard> {
                     contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
                   ),
-                  items: _sortMetrics.map((v) => DropdownMenuItem(value: v, child: Text(tr(v), style: const TextStyle(fontSize: 14)))).toList(),
+                  items: _sortMetrics.map((v) => DropdownMenuItem(value: v, child: Text(tr(v), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 14)))).toList(),
                   onChanged: (v) { if (v != null) { setState(() { _sortMetric = v; _prepareList(); }); } },
                 ),
                 const SizedBox(height: 12),
                 Row(
                   children: [
-                    Expanded(child: SegmentedButton<int>(showSelectedIcon: false, segments:  [ButtonSegment(value: 0, label: Text(tr('All'))), ButtonSegment(value: 1, label: Text(tr('Visited')))], selected: {_displaySegment}, onSelectionChanged: (s) { _displaySegment = s.first; _prepareList(); })),
+                    Expanded(child: SegmentedButton<int>(showSelectedIcon: false, segments:  [ButtonSegment(value: 0, label: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('All'), maxLines: 1))), ButtonSegment(value: 1, label: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Visited'), maxLines: 1)))], selected: {_displaySegment}, onSelectionChanged: (s) { _displaySegment = s.first; _prepareList(); })),
                     const SizedBox(width: 8),
-                    Expanded(child: SegmentedButton<int>(showSelectedIcon: false, segments:  [ButtonSegment(value: 0, label: Text(tr('High'))), ButtonSegment(value: 1, label: Text(tr('Low')))], selected: {_sortOrderSegment}, onSelectionChanged: (s) { _sortOrderSegment = s.first; _prepareList(); })),
+                    Expanded(child: SegmentedButton<int>(showSelectedIcon: false, segments:  [ButtonSegment(value: 0, label: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('High'), maxLines: 1))), ButtonSegment(value: 1, label: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Low'), maxLines: 1)))], selected: {_sortOrderSegment}, onSelectionChanged: (s) { _sortOrderSegment = s.first; _prepareList(); })),
                   ],
                 ),
               ],
@@ -643,7 +650,7 @@ class _LandmarkRankingCardState extends State<_LandmarkRankingCard> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(tr(stat.country.name), style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Color(0xFF374151))),
+                                Flexible(child: Text(tr(stat.country.name), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Color(0xFF374151)))),
                                 Row(
                                   children: [
                                     Text(
@@ -835,7 +842,8 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Container(
+                Flexible(
+                  child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                   decoration: BoxDecoration(
                     border: Border.all(color: headerTextColor.withOpacity(0.6), width: 1.5),
@@ -843,6 +851,8 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                   ),
                   child: Text(
                     tr(text),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -850,17 +860,22 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                     ),
                   ),
                 ),
+                ),
                 if (openedText != null)
-                  Padding(
+                  Flexible(
+                    child: Padding(
                     padding: const EdgeInsets.only(left: 10),
                     child: Text(
                       tr(openedText),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
                         color: headerTextColor.withOpacity(0.9),
                       ),
                     ),
+                  ),
                   ),
               ],
             ),
@@ -901,9 +916,9 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
         }
         else if (_isItemCategory(freshLandmark, 'Fast Food')) {
           String text = "";
-          if (freshLandmark.type != null) text += freshLandmark.type!;
+          if (freshLandmark.type != null) text += tr(freshLandmark.type!);
           if (freshLandmark.numberOfLocations != null) {
-            String locText = "${NumberFormat('#,###').format(freshLandmark.numberOfLocations)} locations";
+            String locText = tr("${NumberFormat('#,###').format(freshLandmark.numberOfLocations)} locations");
             if (text.isNotEmpty) {
               text += " • $locText";
             } else {
@@ -1013,14 +1028,19 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                TextButton(
-                                  onPressed: () => Navigator.pop(sheetContext),
-                                  child:  Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600)),
+                                Flexible(
+                                  child: TextButton(
+                                    onPressed: () => Navigator.pop(sheetContext),
+                                    child:  Text(tr('Cancel'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600)),
+                                  ),
                                 ),
-                                ElevatedButton(
-                                  onPressed: () => Navigator.pop(sheetContext),
-                                  style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
-                                  child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)),
+                                MyMatchBadge.landmark(landmark: freshLandmark, onDark: headerTextColor == Colors.white),
+                                Flexible(
+                                  child: ElevatedButton(
+                                    onPressed: () => Navigator.pop(sheetContext),
+                                    style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
+                                    child: Text(tr('Done'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)),
+                                  ),
                                 ),
                               ],
                             ),
@@ -1056,6 +1076,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
 
                             if (customHeaderWidget != null) customHeaderWidget,
 
+                            
                             const SizedBox(height: 6),
                             Row(
                               children: [
@@ -1122,15 +1143,15 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                           if (_isItemCategory(freshLandmark, 'Painting') || _isItemCategory(freshLandmark, 'Artwork')) ...[
                             if (freshLandmark.artist != null) Text(tr(freshLandmark.artist!), style: Theme.of(sheetContext).textTheme.displaySmall?.copyWith(fontWeight: FontWeight.bold, fontSize: 32)),
                             if (freshLandmark.created != null) Padding(padding: const EdgeInsets.only(top: 4), child: Text(tr(freshLandmark.created!), style: Theme.of(sheetContext).textTheme.headlineSmall?.copyWith(color: Colors.black54, fontStyle: FontStyle.italic))),
-                            if (freshLandmark.museum != null) Padding(padding: const EdgeInsets.only(top: 8), child: Row(children: [Icon(Icons.museum_outlined, color: themeColor, size: 20), const SizedBox(width: 8), Text(tr(freshLandmark.museum!), style: Theme.of(sheetContext).textTheme.titleMedium)])),
+                            if (freshLandmark.museum != null) Padding(padding: const EdgeInsets.only(top: 8), child: Row(children: [Icon(Icons.museum_outlined, color: themeColor, size: 20), const SizedBox(width: 8), Flexible(child: Text(tr(freshLandmark.museum!), style: Theme.of(sheetContext).textTheme.titleMedium))])),
                             const Padding(padding: EdgeInsets.symmetric(vertical: 16), child: Divider(thickness: 1)),
                           ],
 
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('Wishlist:')), IconButton(visualDensity: VisualDensity.compact, icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey), onPressed: () => provider.toggleWishlistStatus(freshLandmark.name))]),
-                              Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('My Rating:')), const SizedBox(width: 8), RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating))]),
+                              Flexible(child: Row(mainAxisSize: MainAxisSize.min, children: [ Flexible(child: Text(tr('Wishlist:'), maxLines: 1, overflow: TextOverflow.ellipsis)), IconButton(visualDensity: VisualDensity.compact, icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey), onPressed: () => provider.toggleWishlistStatus(freshLandmark.name))])),
+                              Flexible(child: Row(mainAxisSize: MainAxisSize.min, children: [ Flexible(child: Text(tr('My Rating:'), maxLines: 1, overflow: TextOverflow.ellipsis)), const SizedBox(width: 8), RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating))])),
                             ],
                           ),
                           const Divider(height: 20),
@@ -1166,7 +1187,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                             const Divider(height: 24),
                           ],
 
-                          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text(tr('History (${freshLandmark.visitDates.length} entries)'), style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit')), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
+                          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Flexible(child: Text(tr('History (${freshLandmark.visitDates.length} entries)'), maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(sheetContext).textTheme.titleSmall)), OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit')), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
                           const SizedBox(height: 8),
                           if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => _LandmarkVisitEditorCard(
                             key: ValueKey('${freshLandmark.name}_${entry.key}'),
@@ -1249,7 +1270,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                   children: [
                     Icon(Icons.star_rounded, color: Colors.amber),
                     SizedBox(width: 12),
-                    Text(tr('Top Landmarks'), style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: Color(0xFF1F2937))),
+                    Flexible(child: Text(tr('Top Landmarks'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: Color(0xFF1F2937)))),
                   ],
                 ),
                 const SizedBox(height: 20),
@@ -1261,7 +1282,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                     labelText: tr('Sort by'),
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
                   ),
-                  items: _sortMetrics.map((v) => DropdownMenuItem(value: v, child: Text(tr(v), style: const TextStyle(fontSize: 14)))).toList(),
+                  items: _sortMetrics.map((v) => DropdownMenuItem(value: v, child: Text(tr(v), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 14)))).toList(),
                   onChanged: (v) { if (v != null) { setState(() { _sortMetric = v; _prepareList(); }); } },
                 ),
               ],
@@ -1322,7 +1343,7 @@ class _AttributeStatsCard extends StatelessWidget {
         children: [
            Padding(
             padding: EdgeInsets.all(24),
-            child: Row(children: [Icon(Icons.pie_chart_rounded, color: Color(0xFF10B981)), SizedBox(width: 12), Text(tr('Attribute Statistics'), style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800))]),
+            child: Row(children: [Icon(Icons.pie_chart_rounded, color: Color(0xFF10B981)), SizedBox(width: 12), Flexible(child: Text(tr('Attribute Statistics'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800)))]),
           ),
           const Divider(height: 1),
           Padding(
@@ -1361,7 +1382,7 @@ class _AttributeStatsCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10.0),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text(tr(label), style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Color(0xFF374151))), Text(tr('$value ($info)'), style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: Color(0xFF111827)))]),
+        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Flexible(child: Text(tr(label), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Color(0xFF374151)))), Text(tr('$value ($info)'), style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: Color(0xFF111827)))]),
         const SizedBox(height: 8),
         LayoutBuilder(builder: (ctx, constraints) => Stack(children: [
           Container(height: 6, decoration: BoxDecoration(color: const Color(0xFFF3F4F6), borderRadius: BorderRadius.circular(3))),
@@ -1409,14 +1430,14 @@ class _LandmarkBrowserCardState extends State<_LandmarkBrowserCard> {
                   children: [
                     Icon(Icons.travel_explore_rounded, color: Color(0xFF6366F1)),
                     SizedBox(width: 12),
-                    Text(tr('Landmark Explorer'), style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: Color(0xFF1F2937))),
+                    Flexible(child: Text(tr('Landmark Explorer'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: Color(0xFF1F2937)))),
                   ],
                 ),
                 const SizedBox(height: 20),
                 DropdownButtonFormField<String>(
                   value: _selectedContinent,
                   isExpanded: true,
-                  hint:  Text(tr('Select Continent')),
+                  hint:  Text(tr('Select Continent'), maxLines: 1, overflow: TextOverflow.ellipsis),
                   borderRadius: BorderRadius.circular(16),
                   decoration: InputDecoration(
                     contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -1429,13 +1450,13 @@ class _LandmarkBrowserCardState extends State<_LandmarkBrowserCard> {
                 DropdownButtonFormField<String>(
                   value: _selectedCountryIsoA3,
                   isExpanded: true,
-                  hint:  Text(tr('Select Country')),
+                  hint:  Text(tr('Select Country'), maxLines: 1, overflow: TextOverflow.ellipsis),
                   borderRadius: BorderRadius.circular(16),
                   decoration: InputDecoration(
                     contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
                   ),
-                  disabledHint: Text(tr(_selectedContinent == null ? 'Select continent first' : 'No countries')),
+                  disabledHint: Text(tr(_selectedContinent == null ? 'Select continent first' : 'No countries'), maxLines: 1, overflow: TextOverflow.ellipsis),
                   items: countries.map((c) => DropdownMenuItem(value: c.isoA3, child: Text(tr(c.name)))).toList(),
                   onChanged: countries.isEmpty ? null : (v) { setState(() { _selectedCountryIsoA3 = v; }); },
                 ),
@@ -1587,8 +1608,9 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
         controller: _expansionTileController,
         initiallyExpanded: _isEditing,
         title: Text(tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
+            maxLines: 1, overflow: TextOverflow.ellipsis,
             style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
-        subtitle: Text(tr('Date: $_year-$_month-$_day'), style: TextStyle(color: Colors.grey[600], fontSize: 13)),
+        subtitle: Text(tr('Date: $_year-$_month-$_day'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(
           icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
           onPressed: () => showDialog(context: context, builder: (ctx) => AlertDialog(
@@ -1607,8 +1629,9 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             if (_isEditing) ...[
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                Text(tr('Visit Date: $_year-$_month-$_day'),
-                    style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                Flexible(child: Text(tr('Visit Date: $_year-$_month-$_day'),
+                    maxLines: 1, overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14))),
                 TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label:  Text(tr('Edit Date')),
                     onPressed: () => _selectDate(context),
                     style: TextButton.styleFrom(visualDensity: VisualDensity.compact)),

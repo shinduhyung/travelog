@@ -128,7 +128,7 @@ class _LanguageMapScreenState extends State<LanguageMapScreen> {
     }
 
     return Scaffold(
-      appBar: AppBar(title: Text(tr(widget.languageFilter ?? 'World Language Map'))),
+      appBar: AppBar(title: Text(tr(widget.languageFilter ?? 'World Language Map'), maxLines: 1, overflow: TextOverflow.ellipsis)),
       body: Stack(
         children: [
           FlutterMap(
@@ -185,9 +185,13 @@ class _LanguageMapScreenState extends State<LanguageMapScreen> {
                   children: [
                     Container(width: 12, height: 12, color: color),
                     const SizedBox(width: 8),
-                    Text(
-                      tr(lang),
-                      style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold),
+                    Flexible(
+                      child: Text(
+                        tr(lang),
+                        style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
                     ),
                   ],
                 ),

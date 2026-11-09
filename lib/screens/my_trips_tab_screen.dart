@@ -148,6 +148,8 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                 children: [
                   Text(
                     tr('Travelog Games'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: Colors.grey.shade500),
                   ),
                   const SizedBox(height: 2),
@@ -605,17 +607,25 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                                             Icon(Icons.check_circle_rounded, size: 13, color: colors[0]),
                                             const SizedBox(width: 4),
                                             if (PremiumTheme.isVivid(kind))
-                                              ShaderMask(
-                                                shaderCallback: (bounds) => LinearGradient(colors: colors).createShader(bounds),
-                                                child:  Text(
-                                                  tr('Lifetime Premium'),
-                                                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: Colors.white),
+                                              Flexible(
+                                                child: ShaderMask(
+                                                  shaderCallback: (bounds) => LinearGradient(colors: colors).createShader(bounds),
+                                                  child:  Text(
+                                                    tr('Lifetime Premium'),
+                                                    maxLines: 1,
+                                                    overflow: TextOverflow.ellipsis,
+                                                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: Colors.white),
+                                                  ),
                                                 ),
                                               )
                                             else
-                                              Text(
-                                                tr('Premium Active'),
-                                                style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: colors[0]),
+                                              Flexible(
+                                                child: Text(
+                                                  tr('Premium Active'),
+                                                  maxLines: 1,
+                                                  overflow: TextOverflow.ellipsis,
+                                                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: colors[0]),
+                                                ),
                                               ),
                                           ],
                                         ),
@@ -648,9 +658,13 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                                             children: [
                                               Icon(Icons.workspace_premium_rounded, size: 14, color: Colors.white),
                                               SizedBox(width: 6),
-                                              Text(
-                                                tr('Go Premium'),
-                                                style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, color: Colors.white),
+                                              Flexible(
+                                                child: Text(
+                                                  tr('Go Premium'),
+                                                  maxLines: 1,
+                                                  overflow: TextOverflow.ellipsis,
+                                                  style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, color: Colors.white),
+                                                ),
                                               ),
                                               SizedBox(width: 4),
                                               Icon(Icons.arrow_forward_rounded, size: 13, color: Colors.white),
@@ -721,6 +735,8 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(tr('Traveler Type'),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w600,
@@ -730,6 +746,8 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                                     tr(_travelerType?.isNotEmpty == true
                                         ? _travelerType!
                                         : 'Analyze DNA'),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
                                         fontSize: 15,
                                         fontWeight: FontWeight.w700,
@@ -780,6 +798,8 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(tr('Rank'),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w600,
@@ -787,6 +807,8 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                                 const SizedBox(height: 2),
                                 Text(
                                   tr(currentLevel),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.w700,
@@ -804,6 +826,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                                   border: Border.all(
                                       color: Colors.grey.shade200)),
                               child: Text(tr('$totalPoints pts'),
+                                  maxLines: 1,
                                   style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.w700,
@@ -914,6 +937,8 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                                       LinearGradient(colors: _quizExpertGradient).createShader(bounds),
                                   child:  Text(
                                     tr('Daily Quiz · Expert'),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.w800,
@@ -924,6 +949,8 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                                 )
                                     : Text(
                                   tr('Daily Quiz'),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
                                     fontSize: 12,
                                     fontWeight: FontWeight.w600,
@@ -937,6 +964,8 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                                       : _quizSolvedToday
                                       ? 'Completed today!'
                                       : "Today's quiz is waiting!"),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.w700,
@@ -962,6 +991,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                               ),
                               child:  Text(
                                 tr('Go!'),
+                                maxLines: 1,
                                 style: TextStyle(
                                   fontSize: 11,
                                   fontWeight: FontWeight.w700,
@@ -1193,12 +1223,16 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    tr(labelTop),
-                    style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.grey.shade500,
+                  Flexible(
+                    child: Text(
+                      tr(labelTop),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.grey.shade500,
+                      ),
                     ),
                   ),
                   Text(

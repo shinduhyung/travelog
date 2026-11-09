@@ -138,8 +138,8 @@ class _LanguageStatsScreenState extends State<LanguageStatsScreen> {
                     Expanded(
                       child: SegmentedButton<LanguageStatView>(
                         segments:  [
-                          ButtonSegment(value: LanguageStatView.languages, label: Text(tr('Languages'))),
-                          ButtonSegment(value: LanguageStatView.families, label: Text(tr('Families'))),
+                          ButtonSegment(value: LanguageStatView.languages, label: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Languages'), maxLines: 1))),
+                          ButtonSegment(value: LanguageStatView.families, label: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Families'), maxLines: 1))),
                         ],
                         selected: {_currentView},
                         onSelectionChanged: (newSelection) {

@@ -15,6 +15,7 @@ import '../widgets/avatar.dart';
 import '../widgets/flag.dart';
 import 'common.dart';
 import '../social_hub.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 
 // Travelog 게임(Which is farther 등)과 같은 색
 const _kInk = Color(0xFF1A1B23);
@@ -167,7 +168,7 @@ class _DuelGameScreenState extends State<DuelGameScreen> {
     try {
       await _repo.answerDuel(d.id, d.round, choice, math.max(0, _now - (d.roundStartMs ?? _now)));
     } catch (e) {
-      if (mounted) showError(context, 'Couldn\'t send your answer: ${describeError(e)}');
+      if (mounted) showError(context, tr('Couldn\'t send your answer: ${describeError(e)}'));
     }
   }
 
@@ -187,14 +188,14 @@ class _DuelGameScreenState extends State<DuelGameScreen> {
     final leave = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Leave this duel?'),
-        content: const Text('Leaving now counts as a loss.'),
+        title: Text(tr('Leave this duel?')),
+        content: Text(tr('Leaving now counts as a loss.')),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(context, false), child: const Text('Keep playing')),
+          TextButton(onPressed: () => Navigator.pop(context, false), child: Text(tr('Keep playing'))),
           TextButton(
             onPressed: () => Navigator.pop(context, true),
             style: TextButton.styleFrom(foregroundColor: _kRed),
-            child: const Text('Leave'),
+            child: Text(tr('Leave')),
           ),
         ],
       ),
@@ -212,7 +213,7 @@ class _DuelGameScreenState extends State<DuelGameScreen> {
 
     Widget body;
     if (_error != null) {
-      body = _Message(icon: Icons.cloud_off_rounded, title: 'Couldn\'t load this duel', text: describeError(_error!), accent: accent);
+      body = _Message(icon: Icons.cloud_off_rounded, title: tr('Couldn\'t load this duel'), text: describeError(_error!), accent: accent);
     } else if (d == null) {
       body = const Center(child: CircularProgressIndicator());
     } else {
@@ -258,11 +259,11 @@ class _DuelGameScreenState extends State<DuelGameScreen> {
     final now = _now;
     final store = SocialScope.of(context);
     final opponent = d.opponentOf(_uid);
-    final opponentName = store.friend(opponent)?.displayName ?? 'Friend';
+    final opponentName = store.friend(opponent)?.displayName ?? tr<String>('Friend');
 
     if (d.isInvite) {
       if (!d.inviteOpen(now)) {
-        return _Message(icon: Icons.timer_off_rounded, title: 'This invite expired', text: 'Invites last 10 minutes.', accent: accent);
+        return _Message(icon: Icons.timer_off_rounded, title: tr('This invite expired'), text: tr('Invites last 10 minutes.'), accent: accent);
       }
       return d.createdBy == _uid
           ? _Lobby(duel: d, accent: accent, opponentName: opponentName, now: now, onCancel: () => Navigator.pop(context))
@@ -281,11 +282,11 @@ class _DuelGameScreenState extends State<DuelGameScreen> {
     }
     if (d.isClosed) {
       final (icon, title) = switch (d.status) {
-        'declined' => (Icons.do_not_disturb_on_rounded, '$opponentName declined'),
-        'cancelled' => (Icons.close_rounded, 'This duel was cancelled'),
-        _ => (Icons.timer_off_rounded, 'This invite expired'),
+        'declined' => (Icons.do_not_disturb_on_rounded, tr('$opponentName declined')),
+        'cancelled' => (Icons.close_rounded, tr('This duel was cancelled')),
+        _ => (Icons.timer_off_rounded, tr('This invite expired')),
       };
-      return _Message(icon: icon, title: title, text: 'Try again when you\'re both online.', accent: accent);
+      return _Message(icon: icon, title: title, text: tr('Try again when you\'re both online.'), accent: accent);
     }
 
     if (d.isFinished) {
@@ -338,7 +339,7 @@ class _DuelGameScreenState extends State<DuelGameScreen> {
       status = _ResultBanner(
         round: r,
         uid: _uid,
-        opponentName: SocialScope.of(context).friend(opponent)?.displayName ?? 'Friend',
+        opponentName: SocialScope.of(context).friend(opponent)?.displayName ?? tr<String>('Friend'),
         scoring: d.scoring,
       );
     } else {
@@ -436,7 +437,7 @@ class _TitleChip extends StatelessWidget {
         const SizedBox(width: 8),
         Flexible(
           child: Text(
-            '${mode.title} · ${duelDifficultyOf(duel.difficulty).label}',
+            '${tr(mode.title)} · ${tr(duelDifficultyOf(duel.difficulty).label)}',
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: _kInk, letterSpacing: -0.2),
@@ -553,7 +554,7 @@ class _Message extends StatelessWidget {
             style: const TextStyle(fontSize: 13.5, color: _kMuted),
           ),
           const SizedBox(height: 22),
-          _GradientButton(label: 'Back', color: accent, onPressed: () => Navigator.maybePop(context)),
+          _GradientButton(label: tr('Back'), color: accent, onPressed: () => Navigator.maybePop(context)),
         ],
       ),
     ),
@@ -609,9 +610,9 @@ class _SettingChips extends StatelessWidget {
       spacing: 6,
       runSpacing: 6,
       children: [
-        chip(mode.icon, mode.title, mode.color),
-        chip(Icons.speed_rounded, '${diff.label} · ${diff.seconds}s', diff.color),
-        if (scoring != null) chip(scoring.$3, scoring.$1, AppColors.indigo),
+        chip(mode.icon, tr(mode.title), mode.color),
+        chip(Icons.speed_rounded, '${tr(diff.label)} · ${diff.seconds}s', diff.color),
+        if (scoring != null) chip(scoring.$3, tr(scoring.$1), AppColors.indigo),
       ],
     );
   }
@@ -669,9 +670,13 @@ class _Lobby extends StatelessWidget {
                       shape: BoxShape.circle,
                       boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.06), blurRadius: 10, offset: const Offset(0, 3))],
                     ),
-                    child: const Text(
-                      'VS',
-                      style: TextStyle(fontSize: 12, fontWeight: FontWeight.w900, color: _kMuted),
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(
+                        tr('VS'),
+                        maxLines: 1,
+                        style: TextStyle(fontSize: 12, fontWeight: FontWeight.w900, color: _kMuted),
+                      ),
                     ),
                   ),
                 ),
@@ -680,7 +685,7 @@ class _Lobby extends StatelessWidget {
             ),
             const SizedBox(height: 18),
             Text(
-              mine ? 'Waiting for $opponentName' : '$opponentName challenged you!',
+              mine ? tr('Waiting for $opponentName') : tr('$opponentName challenged you!'),
               textAlign: TextAlign.center,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
@@ -689,8 +694,8 @@ class _Lobby extends StatelessWidget {
             const SizedBox(height: 6),
             Text(
               mine
-                  ? 'The duel starts as soon as they accept. Keep this screen open.'
-                  : 'You both answer the same ${duel.questions.length} questions at the same time.',
+                  ? tr('The duel starts as soon as they accept. Keep this screen open.')
+                  : tr('You both answer the same ${duel.questions.length} questions at the same time.'),
               textAlign: TextAlign.center,
               style: const TextStyle(fontSize: 13.5, color: _kMuted, fontWeight: FontWeight.w600),
             ),
@@ -699,7 +704,7 @@ class _Lobby extends StatelessWidget {
             if (scoring != null) ...[
               const SizedBox(height: 12),
               Text(
-                scoring.$2,
+                tr(scoring.$2),
                 textAlign: TextAlign.center,
                 style: const TextStyle(fontSize: 12.5, color: _kMuted),
               ),
@@ -709,16 +714,16 @@ class _Lobby extends StatelessWidget {
               const Center(child: SizedBox(width: 28, height: 28, child: CircularProgressIndicator(strokeWidth: 3))),
               const SizedBox(height: 10),
               Text(
-                'Invite expires in ${left.inMinutes}:${(left.inSeconds % 60).toString().padLeft(2, '0')}',
+                tr('Invite expires in ${left.inMinutes}:${(left.inSeconds % 60).toString().padLeft(2, '0')}'),
                 textAlign: TextAlign.center,
                 style: const TextStyle(fontSize: 12.5, color: _kFaint, fontWeight: FontWeight.w700),
               ),
               const SizedBox(height: 18),
-              TextButton(onPressed: onCancel, child: const Text('Cancel invite')),
+              TextButton(onPressed: onCancel, child: Text(tr('Cancel invite'))),
             ] else ...[
-              _GradientButton(label: 'Accept & play', icon: Icons.play_arrow_rounded, color: accent, busy: busy, onPressed: onAccept),
+              _GradientButton(label: tr('Accept & play'), icon: Icons.play_arrow_rounded, color: accent, busy: busy, onPressed: onAccept),
               const SizedBox(height: 8),
-              TextButton(onPressed: busy ? null : onDecline, child: const Text('Decline')),
+              TextButton(onPressed: busy ? null : onDecline, child: Text(tr('Decline'))),
             ],
           ],
         ),
@@ -757,9 +762,13 @@ class _Countdown extends StatelessWidget {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(
-                    'ROUND ${duel.round + 1} OF ${duel.questions.length}',
-                    style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted),
+                  FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      tr('ROUND ${duel.round + 1} OF ${duel.questions.length}'),
+                      maxLines: 1,
+                      style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted),
+                    ),
                   ),
                   const SizedBox(height: 18),
                   TweenAnimationBuilder<double>(
@@ -779,7 +788,7 @@ class _Countdown extends StatelessWidget {
                   ),
                   const SizedBox(height: 18),
                   Text(
-                    first ? 'Get ready...' : 'Next question',
+                    first ? tr('Get ready...') : tr('Next question'),
                     style: const TextStyle(fontSize: 14, color: _kMuted, fontWeight: FontWeight.w600),
                   ),
                   if (first) ...[const SizedBox(height: 16), _SettingChips(duel: duel)],
@@ -873,7 +882,7 @@ class _ScoreBoard extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
       child: Row(
         children: [
-          side(uid, 'You', false),
+          side(uid, tr('You'), false),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
             decoration: BoxDecoration(color: _kSurface, borderRadius: BorderRadius.circular(20)),
@@ -882,7 +891,7 @@ class _ScoreBoard extends StatelessWidget {
               style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, color: _kMuted, letterSpacing: 0.4),
             ),
           ),
-          side(opponent, store.friend(opponent)?.displayName ?? 'Friend', true),
+          side(opponent, store.friend(opponent)?.displayName ?? tr<String>('Friend'), true),
         ],
       ),
     );
@@ -936,8 +945,8 @@ class _TimerBar extends StatelessWidget {
             children: [
               Expanded(
                 child: waiting
-                    ? const Text(
-                        'Answer locked · waiting for the round to end',
+                    ? Text(
+                        tr('Answer locked · waiting for the round to end'),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: _kMuted),
@@ -969,11 +978,11 @@ class _ResultBanner extends StatelessWidget {
     final mine = round.picks[uid];
     final theirs = round.picks.entries.where((e) => e.key != uid).map((e) => e.value).firstOrNull;
     final (bool good, String text) = switch (mine) {
-      DuelPick(ok: true, points: > 0) => (true, scoring == 'first' ? 'You got it first! +1' : 'Correct! +${mine.points}'),
-      DuelPick(ok: true) => (true, 'Correct, but $opponentName was faster'),
-      _ when theirs?.ok == true && scoring == 'first' => (false, '$opponentName got it first'),
-      null => (false, 'Time\'s up'),
-      _ => (false, 'Wrong'),
+      DuelPick(ok: true, points: > 0) => (true, scoring == 'first' ? tr('You got it first! +1') : tr('Correct! +${mine.points}')),
+      DuelPick(ok: true) => (true, tr('Correct, but $opponentName was faster')),
+      _ when theirs?.ok == true && scoring == 'first' => (false, tr('$opponentName got it first')),
+      null => (false, tr('Time\'s up')),
+      _ => (false, tr('Wrong')),
     };
     final color = good ? _kGreen : _kRed;
     return TweenAnimationBuilder<double>(
@@ -1295,8 +1304,8 @@ class _QuestionView extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Text(
-                'CITY',
+              Text(
+                tr('CITY'),
                 style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.2, color: _kMuted),
               ),
               const SizedBox(height: 4),
@@ -1348,6 +1357,8 @@ class _QuestionView extends StatelessWidget {
                         padding: const EdgeInsets.only(top: 3),
                         child: Text(
                           detail,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyle(fontSize: 13.5, fontWeight: FontWeight.w700, color: fg.withValues(alpha: 0.75)),
                         ),
                       ),
@@ -1364,8 +1375,8 @@ class _QuestionView extends StatelessWidget {
 
     return Column(
       children: [
-        const Text(
-          'FROM',
+        Text(
+          tr('FROM'),
           style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.2, color: _kMuted),
         ),
         const SizedBox(height: 4),
@@ -1385,8 +1396,10 @@ class _QuestionView extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 4),
-        const Text(
-          'which is farther?',
+        Text(
+          tr('which is farther?'),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: TextStyle(fontSize: 13, color: _kMuted, fontWeight: FontWeight.w600),
         ),
         const SizedBox(height: 16),
@@ -1404,9 +1417,13 @@ class _QuestionView extends StatelessWidget {
                   shape: BoxShape.circle,
                   boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.06), blurRadius: 10, offset: const Offset(0, 3))],
                 ),
-                child: const Text(
-                  'VS',
-                  style: TextStyle(fontSize: 11, fontWeight: FontWeight.w900, color: _kMuted),
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    tr('VS'),
+                    maxLines: 1,
+                    style: TextStyle(fontSize: 11, fontWeight: FontWeight.w900, color: _kMuted),
+                  ),
                 ),
               ),
               const SizedBox(height: 12),
@@ -1441,19 +1458,19 @@ class _Results extends StatelessWidget {
   Widget build(BuildContext context) {
     final store = SocialScope.of(context);
     final opponent = duel.opponentOf(uid);
-    final opponentName = store.friend(opponent)?.displayName ?? 'Friend';
+    final opponentName = store.friend(opponent)?.displayName ?? tr<String>('Friend');
     final won = duel.winner == uid;
     final draw = duel.winner == null;
     final (IconData icon, String headline) = won
-        ? (Icons.emoji_events_rounded, 'You win!')
+        ? (Icons.emoji_events_rounded, tr('You win!'))
         : draw
-        ? (Icons.handshake_rounded, 'It\'s a draw')
-        : (Icons.flag_rounded, '$opponentName wins');
+        ? (Icons.handshake_rounded, tr('It\'s a draw'))
+        : (Icons.flag_rounded, tr('$opponentName wins'));
     final note = duel.forfeitBy == null
         ? null
         : duel.forfeitBy == uid
-        ? 'You left the duel'
-        : '$opponentName left the duel';
+        ? tr('You left the duel')
+        : tr('$opponentName left the duel');
     // 상대가 이 대결 뒤에 다시 신청했으면 바로 받을 수 있게
     final rematchInvite = store.incomingInvites
         .where((d) => d.createdBy == opponent && (d.createdMs ?? 0) >= (duel.createdMs ?? 0) && d.id != duel.id)
@@ -1494,7 +1511,7 @@ class _Results extends StatelessWidget {
               ),
             ),
             Text(
-              '${_correctCount(who)}/${duel.questions.length} correct',
+              tr('${_correctCount(who)}/${duel.questions.length} correct'),
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: const TextStyle(fontSize: 11.5, fontWeight: FontWeight.w700, color: _kMuted),
@@ -1525,7 +1542,7 @@ class _Results extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 4),
             child: Text(
-              note ?? 'Nobody was playing, so the duel ended early',
+              note ?? tr('Nobody was playing, so the duel ended early'),
               textAlign: TextAlign.center,
               style: const TextStyle(fontSize: 13, color: _kMuted, fontWeight: FontWeight.w600),
             ),
@@ -1535,7 +1552,7 @@ class _Results extends StatelessWidget {
         const SizedBox(height: 16),
         Row(
           children: [
-            scoreCard(uid, 'You', duel.winner == uid),
+            scoreCard(uid, tr('You'), duel.winner == uid),
             const SizedBox(width: 10),
             scoreCard(opponent, opponentName, duel.winner == opponent),
           ],
@@ -1543,16 +1560,16 @@ class _Results extends StatelessWidget {
         const SizedBox(height: 16),
         if (rematchInvite != null)
           _GradientButton(
-            label: '$opponentName wants a rematch!',
+            label: tr('$opponentName wants a rematch!'),
             icon: Icons.play_arrow_rounded,
             color: _kGreen,
             onPressed: () => onAcceptRematch(rematchInvite),
           )
         else if (store.friend(opponent) != null)
-          _GradientButton(label: 'Rematch', icon: Icons.replay_rounded, color: accent, onPressed: onRematch),
+          _GradientButton(label: tr('Rematch'), icon: Icons.replay_rounded, color: accent, onPressed: onRematch),
         const SizedBox(height: 22),
-        const Text(
-          'Round by round',
+        Text(
+          tr('Round by round'),
           style: TextStyle(fontSize: 16, fontWeight: FontWeight.w900, color: _kInk),
         ),
         const SizedBox(height: 10),
@@ -1589,7 +1606,7 @@ class _ReviewRow extends StatelessWidget {
           children: [
             Icon(p == null ? Icons.timer_off_rounded : (p.ok ? Icons.check_circle_rounded : Icons.cancel_rounded), color: color, size: 20),
             Text(
-              p != null && p.points > 0 ? '+${p.points}' : (who == uid ? 'You' : 'Friend'),
+              p != null && p.points > 0 ? '+${p.points}' : (who == uid ? tr('You') : tr('Friend')),
               maxLines: 1,
               style: TextStyle(fontSize: 10.5, fontWeight: FontWeight.w800, color: p != null && p.points > 0 ? _kGreen : _kMuted),
             ),
@@ -1637,7 +1654,7 @@ class _ReviewRow extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  q.type == 'farther' ? 'Farther from ${q.subject}' : (q.subject ?? q.prompt),
+                  q.type == 'farther' ? tr('Farther from ${q.subject}') : (q.subject ?? q.prompt),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(fontSize: 11.5, color: _kMuted, fontWeight: FontWeight.w600),
@@ -1683,7 +1700,7 @@ Future<void> showDuelInviteDialog(BuildContext context, Duel invite) async {
           from == null ? const ProfileAvatar(name: 'Friend', radius: 30) : UserAvatar(profile: from, radius: 30),
           const SizedBox(height: 12),
           Text(
-            '${from?.displayName ?? 'A friend'} challenged you!',
+            tr('${from?.displayName ?? 'A friend'} challenged you!'),
             textAlign: TextAlign.center,
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
@@ -1694,12 +1711,12 @@ Future<void> showDuelInviteDialog(BuildContext context, Duel invite) async {
         ],
       ),
       actions: [
-        TextButton(onPressed: () => Navigator.pop(context, false), child: const Text('Decline')),
-        TextButton(onPressed: () => Navigator.pop(context), child: const Text('Later')),
+        TextButton(onPressed: () => Navigator.pop(context, false), child: Text(tr('Decline'))),
+        TextButton(onPressed: () => Navigator.pop(context), child: Text(tr('Later'))),
         FilledButton(
           onPressed: () => Navigator.pop(context, true),
           style: FilledButton.styleFrom(backgroundColor: accent, foregroundColor: Colors.white),
-          child: const Text('Play'),
+          child: Text(tr('Play')),
         ),
       ],
     ),
@@ -1759,9 +1776,9 @@ class _DuelInviteListenerState extends State<DuelInviteListener> {
 
 /// 다른 화면에서 쓰는 짧은 설명 (예: "Flags · Hard · Speed")
 String duelSummary(Duel d) {
-  if (d.legacy) return duelModeOf(d.mode).title;
-  final scoring = duelScorings[d.scoring]?.$1 ?? '';
-  return '${duelModeOf(d.mode).title} · ${duelDifficultyOf(d.difficulty).label} · $scoring';
+  if (d.legacy) return tr(duelModeOf(d.mode).title);
+  final scoring = tr(duelScorings[d.scoring]?.$1 ?? '');
+  return '${tr(duelModeOf(d.mode).title)} · ${tr(duelDifficultyOf(d.difficulty).label)} · $scoring';
 }
 
 // startDuelFlow(new_duel_sheet.dart)에서 쓰는 공통 진입점

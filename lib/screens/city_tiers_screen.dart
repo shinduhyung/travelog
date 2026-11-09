@@ -184,7 +184,7 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
           Widget buildS(String m, double v, Function(double) onC) => Padding(
             padding: const EdgeInsets.symmetric(vertical: 0),
             child: Row(children: [
-              SizedBox(width: 85, child: Text(tr("${_metricEmojis[m]} $m"), style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold))),
+              SizedBox(width: 85, child: Text("${_metricEmojis[m]} ${tr(m)}", maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold))),
               Expanded(child: SliderTheme(data: SliderTheme.of(context).copyWith(trackHeight: 2, thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 5)), child: Slider(value: v, min: 0, max: 10, divisions: 20, onChanged: (val) => setDS(() => onC(val))))),
               SizedBox(width: 25, child: Text(tr(v.toStringAsFixed(1)), style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold))),
             ]),
@@ -314,7 +314,7 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
                       if (_viewMode == 'tiers') {
                         return RadioListTile<String>(
                           visualDensity: VisualDensity.compact,
-                          title: Text(tr("${_metricEmojis[m]} $m"), style: const TextStyle(fontSize: 13)),
+                          title: Text("${_metricEmojis[m]} ${tr(m)}", style: const TextStyle(fontSize: 13)),
                           value: m,
                           groupValue: state.selectedMetric,
                           onChanged: (val) {
@@ -330,7 +330,7 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
                       } else {
                         return CheckboxListTile(
                           visualDensity: VisualDensity.compact,
-                          title: Text(tr("${_metricEmojis[m]} $m"), style: const TextStyle(fontSize: 13)),
+                          title: Text("${_metricEmojis[m]} ${tr(m)}", style: const TextStyle(fontSize: 13)),
                           value: state.selectedMetrics.contains(m),
                           onChanged: (val) {
                             setDialogState(() {
@@ -431,7 +431,7 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
           rows: sortedNames.map((n) {
             final city = provider.getCityDetail(n)!;
             return DataRow(cells: [
-              DataCell(ConstrainedBox(constraints: const BoxConstraints(maxWidth: 160), child: Row(children: [_buildFlag(city.countryIsoA2, countryProvider), const SizedBox(width: 8), Text(city.name, style: const TextStyle(fontSize: 12), overflow: TextOverflow.ellipsis)]))),
+              DataCell(ConstrainedBox(constraints: const BoxConstraints(maxWidth: 160), child: Row(children: [_buildFlag(city.countryIsoA2, countryProvider), const SizedBox(width: 8), Flexible(child: Text(city.name, maxLines: 1, style: const TextStyle(fontSize: 12), overflow: TextOverflow.ellipsis))]))),
               ...active.map((m) => DataCell(m == 'Rating' ? _buildStarRating(_getMetricValue(provider.visitDetails[n], m)) : Text(tr(_getMetricValue(provider.visitDetails[n], m).toStringAsFixed(1)), style: const TextStyle(fontSize: 12)))),
               DataCell(PopupMenuButton<String>(
                 icon: const Icon(Icons.more_vert, size: 18, color: Colors.grey),
@@ -506,6 +506,7 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
                       width: 110,
                       child: Text(
                         tr(n),
+                        maxLines: 1,
                         style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold),
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -571,8 +572,7 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
           clipBehavior: Clip.hardEdge,
           decoration: BoxDecoration(color: Theme.of(context).scaffoldBackgroundColor),
           child: Padding(padding: const EdgeInsets.symmetric(horizontal: 10), child: Row(children: [
-            Container(decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(20)), padding: const EdgeInsets.all(3), child: Row(children: ['tiers', 'table', 'chart'].map((m) => GestureDetector(onTap: () => setState(() => _viewMode = m), child: AnimatedContainer(duration: const Duration(milliseconds: 200), padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 7), decoration: BoxDecoration(color: _viewMode == m ? Colors.white : Colors.transparent, borderRadius: BorderRadius.circular(18), boxShadow: _viewMode == m ? [BoxShadow(color: Colors.black12, blurRadius: 4)] : []), child: Text(tr(m.toUpperCase()), style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: _viewMode == m ? Colors.blueAccent : Colors.blueGrey))))).toList())),
-            const Spacer(),
+            Expanded(child: Align(alignment: Alignment.centerLeft, child: Container(decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(20)), padding: const EdgeInsets.all(3), child: Row(mainAxisSize: MainAxisSize.min, children: ['tiers', 'table', 'chart'].map((m) => Flexible(child: GestureDetector(onTap: () => setState(() => _viewMode = m), child: AnimatedContainer(duration: const Duration(milliseconds: 200), padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 7), decoration: BoxDecoration(color: _viewMode == m ? Colors.white : Colors.transparent, borderRadius: BorderRadius.circular(18), boxShadow: _viewMode == m ? [BoxShadow(color: Colors.black12, blurRadius: 4)] : []), child: FittedBox(fit: BoxFit.scaleDown, child: Text(tr(m.toUpperCase()), maxLines: 1, style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: _viewMode == m ? Colors.blueAccent : Colors.blueGrey))))))).toList())))),
             Container(height: 32, padding: const EdgeInsets.symmetric(horizontal: 12), decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16), border: Border.all(color: Colors.grey.shade300)), child: DropdownButtonHideUnderline(child: DropdownButton<String>(borderRadius: BorderRadius.circular(16), value: state.filter1, style: const TextStyle(fontSize: 11, color: Colors.black, fontWeight: FontWeight.bold), items:  [DropdownMenuItem(value: 'all', child: Text(tr('All'))), DropdownMenuItem(value: 'mark_visited', child: Text(tr('Visited'))), DropdownMenuItem(value: 'unvisited', child: Text(tr('Unvisited'))), DropdownMenuItem(value: 'custom', child: Text(tr('Custom')))], onChanged: (v) { if (v != null) setState(() { state.filter1 = v; _applyFilters(state, cityProvider); }); }))),
             // 🆕 수정: Checklist 아이콘과 metrics 다이얼로그 호출
             IconButton(icon: const Icon(Icons.checklist, size: 18), onPressed: _showMetricsDialog),

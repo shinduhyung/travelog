@@ -83,8 +83,11 @@ class _BadgeCollectedScreenState extends State<BadgeCollectedScreen> {
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   // 상단 문구 (수정됨: 더 세련된 스타일 적용)
-                  Text(
+                  FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
                     tr("NEW BADGE UNLOCKED!"),
+                    maxLines: 1,
                     style: TextStyle(
                       fontSize: 20, // 크기 키움
                       fontWeight: FontWeight.w900, // 두께를 더 굵게
@@ -98,6 +101,7 @@ class _BadgeCollectedScreenState extends State<BadgeCollectedScreen> {
                         ),
                       ],
                     ),
+                  ),
                   ),
                   const SizedBox(height: 20),
                   // 뱃지 이미지
@@ -121,7 +125,7 @@ class _BadgeCollectedScreenState extends State<BadgeCollectedScreen> {
                   const SizedBox(height: 15),
                   // 이름 및 설명
                   Text(
-                    widget.achievement.name,
+                    tr(widget.achievement.name),
                     style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w600),
                     textAlign: TextAlign.center,
                   ),
@@ -152,6 +156,8 @@ class _BadgeCollectedScreenState extends State<BadgeCollectedScreen> {
                       ),
                       child:  Text(
                         tr("View Details"),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                       ),
                     ),
@@ -176,6 +182,8 @@ class _BadgeCollectedScreenState extends State<BadgeCollectedScreen> {
                           : const Icon(Icons.share_rounded, size: 18),
                       label:  Text(
                         tr("Share My Badge"),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
                       ),
                     ),

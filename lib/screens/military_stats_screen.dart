@@ -384,7 +384,7 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
                   children: [
                     Icon(widget.cardIcon, color: Colors.grey.shade800),
                     const SizedBox(width: 8),
-                    Text(tr(widget.cardTitle), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                    Flexible(child: Text(tr(widget.cardTitle), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold))),
                   ],
                 ),
                 const SizedBox(height: 8),
@@ -398,7 +398,7 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
                       value: group,
                       child: Row(children: [
                         Icon(group.icon, color: group.themeColor), const SizedBox(width: 12),
-                        Text(tr(group.title), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                        Flexible(child: Text(tr(group.title), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
                       ]),
                     )).toList(),
                     onChanged: (newValue) { if (newValue != null) { setState(() { _selectedRanking = newValue; _prepareList(); }); } },
@@ -411,7 +411,7 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
                     Expanded(
                         child: SegmentedButton<int>(
                           showSelectedIcon: false,
-                          segments:  [ButtonSegment<int>(value: 0, label: Text(tr('All'))), ButtonSegment<int>(value: 1, label: Text(tr('Visited')))],
+                          segments:  [ButtonSegment<int>(value: 0, label: Text(tr('All'), maxLines: 1, overflow: TextOverflow.ellipsis)), ButtonSegment<int>(value: 1, label: Text(tr('Visited'), maxLines: 1, overflow: TextOverflow.ellipsis))],
                           selected: {_displaySegment},
                           onSelectionChanged: (s) { _displaySegment = s.first; _onFilterChanged(); },
                           style: SegmentedButton.styleFrom(
@@ -429,7 +429,7 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
                     Expanded(
                         child: SegmentedButton<int>(
                           showSelectedIcon: false,
-                          segments: [ButtonSegment<int>(value: 0, label: Text(tr(_selectedRanking.sortAscendingForHigh ? 'Stronger' : 'High'), style: const TextStyle(fontSize: 12))), ButtonSegment<int>(value: 1, label: Text(tr(_selectedRanking.sortAscendingForHigh ? 'Weaker' : 'Low'), style: const TextStyle(fontSize: 12)))],
+                          segments: [ButtonSegment<int>(value: 0, label: Text(tr(_selectedRanking.sortAscendingForHigh ? 'Stronger' : 'High'), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 12))), ButtonSegment<int>(value: 1, label: Text(tr(_selectedRanking.sortAscendingForHigh ? 'Weaker' : 'Low'), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 12)))],
                           selected: {_sortOrderSegment},
                           onSelectionChanged: (s) { _sortOrderSegment = s.first; _onFilterChanged(); },
                           style: SegmentedButton.styleFrom(
@@ -510,7 +510,7 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
                               const SizedBox(width: 8),
                               Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 18)),
                               const SizedBox(width: 6),
-                              Expanded(child: Text(tr(country.name), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                              Expanded(child: Text(tr(country.name), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
                               Text(tr('$displayValue${_selectedRanking.unit}'), style: theme.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
@@ -644,13 +644,15 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
               child: Column(
                 children: [
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                    Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      Text(tr("Visited Countries"), style: theme.textTheme.bodyLarge),
-                      Text.rich(TextSpan(
-                        text: tr('$visited'), style: theme.textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.w700),
-                        children: [TextSpan(text: tr(' / $total'), style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
-                      )),
-                    ]),
+                    Flexible(
+                      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                        Text(tr("Visited Countries"), maxLines: 1, overflow: TextOverflow.ellipsis, style: theme.textTheme.bodyLarge),
+                        Text.rich(TextSpan(
+                          text: tr('$visited'), style: theme.textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.w700),
+                          children: [TextSpan(text: tr(' / $total'), style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
+                        )),
+                      ]),
+                    ),
                     ElevatedButton.icon(
                       onPressed: () {
                         final groups = _selectedGroup.mapGroupsBuilder(widget.countriesToDisplay);
@@ -833,7 +835,7 @@ class _CombinedHistoricalAllianceAndMiscCardState extends State<_CombinedHistori
                   child: Row(
                     children: [
                       Icon(group.icon, color: group.themeColor), const SizedBox(width: 12),
-                      Text(tr(group.title), style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700)),
+                      Flexible(child: Text(tr(group.title), maxLines: 1, overflow: TextOverflow.ellipsis, style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700))),
                     ],
                   ),
                 )).toList(),
@@ -852,16 +854,18 @@ class _CombinedHistoricalAllianceAndMiscCardState extends State<_CombinedHistori
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Column(
+                        Flexible(
+                          child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(tr("Visited Entities"), style: theme.textTheme.bodyLarge),
+                            Text(tr("Visited Entities"), maxLines: 1, overflow: TextOverflow.ellipsis, style: theme.textTheme.bodyLarge),
                             Text.rich(TextSpan(
                               text: tr('$visitedEntries'),
                               style: theme.textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.w700),
                               children: [TextSpan(text: tr(' / $totalEntries'), style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
                             )),
                           ],
+                          ),
                         ),
                         ElevatedButton.icon(
                           onPressed: () {
@@ -1029,9 +1033,11 @@ class _CombinedHistoricalWarProgressCardState extends State<_CombinedHistoricalW
                 decoration: BoxDecoration(color: sideColor, shape: BoxShape.circle),
               ),
               const SizedBox(width: 8),
-              Text(tr(sideName), style: theme.textTheme.titleSmall?.copyWith(
-                fontWeight: FontWeight.bold, color: sideColor,
-              )),
+              Flexible(
+                child: Text(tr(sideName), maxLines: 1, overflow: TextOverflow.ellipsis, style: theme.textTheme.titleSmall?.copyWith(
+                  fontWeight: FontWeight.bold, color: sideColor,
+                )),
+              ),
             ],
           ),
           const SizedBox(height: 8),
@@ -1124,7 +1130,7 @@ class _CombinedHistoricalWarProgressCardState extends State<_CombinedHistoricalW
                   child: Row(
                     children: [
                       Icon(group.icon, color: group.themeColor), const SizedBox(width: 12),
-                      Text(tr(group.title), style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700)),
+                      Flexible(child: Text(tr(group.title), maxLines: 1, overflow: TextOverflow.ellipsis, style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700))),
                     ],
                   ),
                 )).toList(),
@@ -1326,7 +1332,7 @@ class _CasualtyRankingCardState extends State<_CasualtyRankingCard> {
                   children: [
                     Icon(Icons.warning_amber_rounded, color: rankingThemeColor),
                     const SizedBox(width: 8),
-                    Text(tr("Historical War Casualties"), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                    Flexible(child: Text(tr("Historical War Casualties"), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
                   ],
                 ),
                 const SizedBox(height: 8),
@@ -1340,7 +1346,7 @@ class _CasualtyRankingCardState extends State<_CasualtyRankingCard> {
                       child: Row(children: [
                         Icon(group.icon, color: group.themeColor, size: 20),
                         const SizedBox(width: 12),
-                        Text(tr(group.title), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15)),
+                        Flexible(child: Text(tr(group.title), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15))),
                       ]),
                     )).toList(),
                     onChanged: (newValue) { if (newValue != null) { setState(() { _selectedRanking = newValue; _prepareList(); }); } },
@@ -1384,7 +1390,7 @@ class _CasualtyRankingCardState extends State<_CasualtyRankingCard> {
                               const SizedBox(width: 8),
                               Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 18)),
                               const SizedBox(width: 6),
-                              Expanded(child: Text(tr(country.name), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15))),
+                              Expanded(child: Text(tr(country.name), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15))),
                               Text(tr(numberFormat.format(value)), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),

@@ -135,12 +135,14 @@ class _TopAirlinesRankingCardState extends State<_TopAirlinesRankingCard> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
-                  children: [
-                    Icon(Icons.emoji_events, color: widget.themeColor[800]),
-                    const SizedBox(width: 8),
-                    Text(tr('🏆 Top 100 Airlines'), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
-                  ],
+                Flexible(
+                  child: Row(
+                    children: [
+                      Icon(Icons.emoji_events, color: widget.themeColor[800]),
+                      const SizedBox(width: 8),
+                      Flexible(child: Text(tr('🏆 Top 100 Airlines'), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                    ],
+                  ),
                 ),
                 SizedBox(
                   height: 40,
@@ -167,11 +169,11 @@ class _TopAirlinesRankingCardState extends State<_TopAirlinesRankingCard> {
                     segments:  [
                       ButtonSegment<int>(
                         value: 0,
-                        label: Center(child: Text(tr('All'))),
+                        label: Center(child: Text(tr('All'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                       ),
                       ButtonSegment<int>(
                         value: 1,
-                        label: Center(child: Text(tr('Flown'))),
+                        label: Center(child: Text(tr('Flown'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                       ),
                     ],
                     selected: {_displaySegment},
@@ -460,7 +462,7 @@ class _AirlineRankingCardState extends State<_AirlineRankingCard> {
               children: [
                 Icon(Icons.flight_takeoff, color: widget.themeColor[800]),
                 const SizedBox(width: 8),
-                Text(tr('Most Flown Airlines'), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                Flexible(child: Text(tr('Most Flown Airlines'), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
               ],
             ),
           ),
@@ -486,11 +488,14 @@ class _AirlineRankingCardState extends State<_AirlineRankingCard> {
                             borderSide: BorderSide(color: widget.themeColor[800]!, width: 2),
                           ),
                         ),
+                        isExpanded: true,
                         items: _periods.map((String value) {
                           return DropdownMenuItem<String>(
                             value: value,
                             child: Text(
                               tr(value),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
                               style: TextStyle(color: widget.themeColor[800], fontWeight: FontWeight.bold),
                             ),
                           );
@@ -505,7 +510,6 @@ class _AirlineRankingCardState extends State<_AirlineRankingCard> {
                             });
                           }
                         },
-                        isExpanded: true,
                         style: const TextStyle(fontSize: 14),
                       ),
                     ),
@@ -514,8 +518,8 @@ class _AirlineRankingCardState extends State<_AirlineRankingCard> {
                       child: SegmentedButton<int>(
                         showSelectedIcon: false,
                         segments:  [
-                          ButtonSegment<int>(value: 0, label: Text(tr('High'))),
-                          ButtonSegment<int>(value: 1, label: Text(tr('Low'))),
+                          ButtonSegment<int>(value: 0, label: Text(tr('High'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                          ButtonSegment<int>(value: 1, label: Text(tr('Low'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                         ],
                         selected: {_sortOrderSegment},
                         onSelectionChanged: (Set<int> newSelection) {
@@ -586,6 +590,8 @@ class _AirlineRankingCardState extends State<_AirlineRankingCard> {
                     padding: const EdgeInsets.only(top: 8.0),
                     child: Text(
                       tr('Custom Range: ${DateFormat('yyyy-MM-dd').format(_customStartDate!)} ~ ${DateFormat('yyyy-MM-dd').format(_customEndDate!)}'),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: const TextStyle(fontSize: 14, color: Colors.grey, fontStyle: FontStyle.italic),
                     ),
                   ),
@@ -670,6 +676,8 @@ class _AirlineRankingCardState extends State<_AirlineRankingCard> {
             child: Center(
               child: Text(
                 tr('Average Flights: $_averageFlights'),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.bold,
@@ -847,9 +855,13 @@ class _AirlineTypeStatsCardState extends State<_AirlineTypeStatsCard> {
       padding: const EdgeInsets.all(24.0),
       child: Column(
         children: [
-          Text(
-            tr('Carrier Type Distribution'),
-            style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w900, color: _primaryColor, fontSize: 22),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              tr('Carrier Type Distribution'),
+              maxLines: 1,
+              style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w900, color: _primaryColor, fontSize: 22),
+            ),
           ),
           const SizedBox(height: 16),
           _buildPeriodSelector(),
@@ -870,7 +882,8 @@ class _AirlineTypeStatsCardState extends State<_AirlineTypeStatsCard> {
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
         enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide(color: _primaryColor.withOpacity(0.5))),
       ),
-      items: _periods.map((p) => DropdownMenuItem(value: p, child: Text(tr(p), style: TextStyle(color: _primaryColor, fontWeight: FontWeight.bold)))).toList(),
+      isExpanded: true,
+      items: _periods.map((p) => DropdownMenuItem(value: p, child: Text(tr(p), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: _primaryColor, fontWeight: FontWeight.bold)))).toList(),
       onChanged: (val) {
         if (val == 'Custom') {
           _showCustomDateRangePicker();
@@ -929,7 +942,13 @@ class _AirlineTypeStatsCardState extends State<_AirlineTypeStatsCard> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(tr('$_totalItemsInPeriod'), style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: _primaryColor)),
-                  Text(tr('Flights'), style: TextStyle(fontSize: 14, color: Colors.grey[600])),
+                  SizedBox(
+                    width: 100,
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(tr('Flights'), maxLines: 1, style: TextStyle(fontSize: 14, color: Colors.grey[600])),
+                    ),
+                  ),
                 ],
               ),
             ],
@@ -963,7 +982,7 @@ class _AirlineTypeStatsCardState extends State<_AirlineTypeStatsCard> {
           children: [
             Icon(Icons.trending_up, color: _primaryColor),
             const SizedBox(width: 8),
-             Text(tr("Yearly Trend (10 Years)"), style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+            Flexible(child: Text(tr("Yearly Trend (10 Years)"), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16))),
           ],
         ),
         const SizedBox(height: 24),

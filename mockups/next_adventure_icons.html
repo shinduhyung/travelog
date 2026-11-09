@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Next Adventure Icons Only</title>
+<style>
+  *{box-sizing:border-box;margin:0}
+  body{font-family:-apple-system,"Segoe UI",Roboto,sans-serif;background:#e9ebf2;color:#111827;padding:24px 16px 60px}
+  h1{font-size:20px;margin-bottom:4px}
+  .lead{font-size:13px;color:#6b7280;margin-bottom:22px;max-width:640px}
+  .wrap{display:flex;flex-wrap:wrap;gap:24px}
+  .col{width:360px;display:flex;flex-direction:column;gap:6px}
+  .tag{font-size:12px;font-weight:800;color:#1E1B6B}
+  .note{font-size:12.5px;color:#4b5563;line-height:1.5;min-height:56px}
+  .screen{width:360px;background:#fff;border-radius:28px;border:1px solid #d6d9e5;padding:14px 16px 18px;overflow:hidden}
+  .status{display:flex;justify-content:space-between;font-size:11px;font-weight:700;color:#6b7280;margin:0 4px 12px}
+  .ghost{height:70px;border-radius:22px;background:#f1f2f7;margin-bottom:12px}
+  .ghost.s{height:46px;margin:12px 0 0}
+  .card{background:#F6F7FB;border-radius:22px;padding:14px 12px 14px 16px}
+  .ttl{font-size:16px;font-weight:800;color:#111827;margin-bottom:10px}
+  .ttl em{font-style:normal;color:#00A5C7}
+  .bar{height:46px;background:#fff;border-radius:23px;display:flex;align-items:center;padding:0 4px 0 14px;gap:8px;color:#9ca3af;font-size:15px}
+  .bar span{flex:1}
+  .go{width:38px;height:38px;border-radius:50%;background:#00C2E8;color:#fff;display:grid;place-items:center;font-size:18px}
+  svg{width:20px;height:20px;stroke:#1E1B6B;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+  /* I1 white circles spread */
+  .i1{display:flex;justify-content:space-between;margin-top:12px;padding:0 20px 0 14px}
+  .i1 i{width:42px;height:42px;border-radius:50%;background:#fff;display:grid;place-items:center}
+
+  /* I2 tinted circles */
+  .i2{display:flex;justify-content:space-between;margin-top:12px;padding:0 20px 0 14px}
+  .i2 i{width:42px;height:42px;border-radius:50%;display:grid;place-items:center}
+  .i2 i:nth-child(1){background:#d9f6fd}.i2 i:nth-child(1) svg{stroke:#0e7490}
+  .i2 i:nth-child(2){background:#e0e7ff}.i2 i:nth-child(2) svg{stroke:#4338ca}
+  .i2 i:nth-child(3){background:#fce7f3}.i2 i:nth-child(3) svg{stroke:#be185d}
+  .i2 i:nth-child(4){background:#fef3c7}.i2 i:nth-child(4) svg{stroke:#b45309}
+
+  /* I3 single pill with dividers */
+  .i3{margin:10px 4px 0 0;height:42px;background:#fff;border-radius:21px;display:flex;align-items:center}
+  .i3 i{flex:1;display:grid;place-items:center;height:22px}
+  .i3 i+i{border-left:1px solid #e5e7eb}
+
+  /* I4 compact left aligned */
+  .i4{display:flex;gap:10px;margin-top:11px}
+  .i4 i{width:34px;height:34px;border-radius:11px;background:#fff;display:grid;place-items:center}
+  .i4 svg{width:18px;height:18px}
+</style>
+</head>
+<body>
+<h1>Next Adventure: icons only, no text</h1>
+<p class="lead">Day trips, Plans, Hotels, Souvenirs as icons in this order (bus, calendar, bed, gift). Phone portrait width. The "Now" card is today's version for comparison.</p>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="bus" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="14" rx="3"/><path d="M4 11h16M8 21v-4M16 21v-4"/><circle cx="8" cy="14" r=".6"/><circle cx="16" cy="14" r=".6"/></symbol>
+    <symbol id="cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+    <symbol id="bed" viewBox="0 0 24 24"><path d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="1.6"/></symbol>
+    <symbol id="gift" viewBox="0 0 24 24"><rect x="3.5" y="9" width="17" height="11" rx="2"/><path d="M12 9v11M3.5 13h17M12 9c-1-4-5-4-5-1.5S10 9 12 9zm0 0c1-4 5-4 5-1.5S14 9 12 9z"/></symbol>
+  </defs>
+</svg>
+
+<div class="wrap">
+
+  <div class="col">
+    <div class="tag">Now</div>
+    <div class="note">Text-only gray line.</div>
+    <div class="screen"><div class="status"><span>9:41</span><span>●●●</span></div><div class="ghost"></div>
+      <div class="card">
+        <div class="ttl">Your next adventure</div>
+        <div class="bar">🔍<span>Paris</span><div class="go">→</div></div>
+        <div style="margin-top:10px;font-size:12px;font-weight:600;color:#6b7280">Day trips · Plans · Hotels · Souvenirs</div>
+      </div><div class="ghost s"></div></div>
+  </div>
+
+  <div class="col">
+    <div class="tag">I1 · White circles, spread</div>
+    <div class="note">Four white circles spaced across the card, line icons in navy. Clean and even.</div>
+    <div class="screen"><div class="status"><span>9:41</span><span>●●●</span></div><div class="ghost"></div>
+      <div class="card">
+        <div class="ttl">Next <em>Adventure</em></div>
+        <div class="bar">🔍<span>Search a city</span><div class="go">→</div></div>
+        <div class="i1"><i><svg><use href="#bus"/></svg></i><i><svg><use href="#cal"/></svg></i><i><svg><use href="#bed"/></svg></i><i><svg><use href="#gift"/></svg></i></div>
+      </div><div class="ghost s"></div></div>
+  </div>
+
+  <div class="col">
+    <div class="tag">I2 · Tinted circles</div>
+    <div class="note">Each icon gets its own soft pastel (cyan, indigo, pink, amber). More lively, still quiet.</div>
+    <div class="screen"><div class="status"><span>9:41</span><span>●●●</span></div><div class="ghost"></div>
+      <div class="card">
+        <div class="ttl">Next <em>Adventure</em></div>
+        <div class="bar">🔍<span>Search a city</span><div class="go">→</div></div>
+        <div class="i2"><i><svg><use href="#bus"/></svg></i><i><svg><use href="#cal"/></svg></i><i><svg><use href="#bed"/></svg></i><i><svg><use href="#gift"/></svg></i></div>
+      </div><div class="ghost s"></div></div>
+  </div>
+
+  <div class="col">
+    <div class="tag">I3 · One pill, dividers</div>
+    <div class="note">A single white strip with four icons split by hairlines. Looks like one toolbar; tidy and compact.</div>
+    <div class="screen"><div class="status"><span>9:41</span><span>●●●</span></div><div class="ghost"></div>
+      <div class="card">
+        <div class="ttl">Next <em>Adventure</em></div>
+        <div class="bar">🔍<span>Search a city</span><div class="go">→</div></div>
+        <div class="i3"><i><svg><use href="#bus"/></svg></i><i><svg><use href="#cal"/></svg></i><i><svg><use href="#bed"/></svg></i><i><svg><use href="#gift"/></svg></i></div>
+      </div><div class="ghost s"></div></div>
+  </div>
+
+  <div class="col">
+    <div class="tag">I4 · Small, left-aligned</div>
+    <div class="note">Four small rounded squares tucked to the left. Lowest visual weight, almost a decoration.</div>
+    <div class="screen"><div class="status"><span>9:41</span><span>●●●</span></div><div class="ghost"></div>
+      <div class="card">
+        <div class="ttl">Next <em>Adventure</em></div>
+        <div class="bar">🔍<span>Search a city</span><div class="go">→</div></div>
+        <div class="i4"><i><svg><use href="#bus"/></svg></i><i><svg><use href="#cal"/></svg></i><i><svg><use href="#bed"/></svg></i><i><svg><use href="#gift"/></svg></i></div>
+      </div><div class="ghost s"></div></div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -351,6 +351,8 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
                   value: value,
                   child: Text(
                     tr(value),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle( // 🚨 [수정] 글씨 색깔을 테마색으로 변경
                       fontWeight: FontWeight.w600,
                       color: _primaryColor,
@@ -382,7 +384,7 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
                   children: [
                     Icon(Icons.calendar_today, size: 16, color: Colors.grey[600]),
                     const SizedBox(width: 8),
-                    Text(tr('${DateFormat('yyyy-MM-dd').format(_customStartDate!)} ~ ${DateFormat('yyyy-MM-dd').format(_customEndDate!)}'), style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w500, fontSize: 13)),
+                    Flexible(child: Text(tr('${DateFormat('yyyy-MM-dd').format(_customStartDate!)} ~ ${DateFormat('yyyy-MM-dd').format(_customEndDate!)}'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w500, fontSize: 13))),
                   ],
                 ),
               ),
@@ -553,9 +555,16 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
               style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, color: _primaryColor),
             ),
             const SizedBox(height: 4),
-            Text(
-              tr('Total Flights'),
-              style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.grey[600]),
+            SizedBox(
+              width: 120,
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  tr('Total Flights'),
+                  maxLines: 1,
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.grey[600]),
+                ),
+              ),
             ),
           ],
         ),
@@ -600,14 +609,18 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
             // 🚨 [수정] 원형 그래프 제목
             Padding(
               padding: const EdgeInsets.only(bottom: 40), // 🚨 [수정] 간격을 32에서 40으로 늘림
-              child: Text(
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
                 tr('Aircraft Type'),
+                maxLines: 1,
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
                   fontWeight: FontWeight.w900,
                   fontSize: 24,
                   color: _primaryColor.lighten(0.1),
                   letterSpacing: 0.5,
                 ),
+              ),
               ),
             ),
             SizedBox(
@@ -688,8 +701,8 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
         // 🚨 [수정] 체크 표시 제거
         showSelectedIcon: false,
         segments:  [
-          ButtonSegment<bool>(value: false, label: Text(tr('Flight Logs')), icon: Icon(Icons.list_alt)),
-          ButtonSegment<bool>(value: true, label: Text(tr('Ranking')), icon: Icon(Icons.format_list_numbered)),
+          ButtonSegment<bool>(value: false, label: Text(tr('Flight Logs'), maxLines: 1, overflow: TextOverflow.ellipsis), icon: Icon(Icons.list_alt)),
+          ButtonSegment<bool>(value: true, label: Text(tr('Ranking'), maxLines: 1, overflow: TextOverflow.ellipsis), icon: Icon(Icons.format_list_numbered)),
         ],
         selected: {_showRanking},
         onSelectionChanged: (Set<bool> newSelection) {
@@ -722,8 +735,8 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
         // 🚨 [수정] 체크 표시 제거
         showSelectedIcon: false,
         segments:  [
-          ButtonSegment<RankingType>(value: RankingType.aircraft, label: Text(tr('By Aircraft Type')), icon: Icon(Icons.airplanemode_active)),
-          ButtonSegment<RankingType>(value: RankingType.airline, label: Text(tr('By Airline')), icon: Icon(Icons.business)),
+          ButtonSegment<RankingType>(value: RankingType.aircraft, label: Text(tr('By Aircraft Type'), maxLines: 1, overflow: TextOverflow.ellipsis), icon: Icon(Icons.airplanemode_active)),
+          ButtonSegment<RankingType>(value: RankingType.airline, label: Text(tr('By Airline'), maxLines: 1, overflow: TextOverflow.ellipsis), icon: Icon(Icons.business)),
         ],
         selected: {_selectedRankingType},
         onSelectionChanged: (Set<RankingType> newSelection) {
@@ -782,12 +795,15 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
       child: DropdownButtonFormField<String>(
         value: _selectedAircraftGroup,
         decoration: inputDecoration,
+        isExpanded: true,
         items: _aircraftGroupOrder.map((key) {
           final entry = _aircraftGroupInfo[key]!;
           return DropdownMenuItem<String>(
             value: key,
             child: Text(
               tr(entry['name']),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
               style: TextStyle(color: entry['color'], fontWeight: FontWeight.bold, fontSize: 14),
             ),
           );
@@ -976,11 +992,15 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
                   child: Icon(Icons.trending_up, color: _primaryColor, size: 24),
                 ),
                 const SizedBox(width: 12),
-                Text(
-                  tr("Yearly Trend (10 Years)"),
-                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
+                Flexible(
+                  child: Text(
+                    tr("Yearly Trend (10 Years)"),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
                   ),
                 ),
               ],
@@ -1076,11 +1096,11 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(log.airlineName ?? tr('Unknown'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16, color: Colors.black87)),
+                    Text(log.airlineName ?? tr('Unknown'), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16, color: Colors.black87)),
                     const SizedBox(height: 4),
-                    Text(tr(displayAircraft), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: color)),
+                    Text(tr(displayAircraft), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: color)),
                     const SizedBox(height: 8),
-                    Text(tr('${log.departureIata ?? 'N/A'} → ${log.arrivalIata ?? 'N/A'}'), style: TextStyle(fontSize: 14, color: Colors.grey[600], fontWeight: FontWeight.w500)),
+                    Text(tr('${log.departureIata ?? 'N/A'} → ${log.arrivalIata ?? 'N/A'}'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 14, color: Colors.grey[600], fontWeight: FontWeight.w500)),
                   ],
                 ),
               ),

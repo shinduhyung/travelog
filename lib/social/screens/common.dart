@@ -1,3 +1,4 @@
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 import '../models/social_profile.dart';
@@ -54,5 +55,5 @@ class ProfileAvatar extends StatelessWidget {
 }
 
 void showError(BuildContext context, String message) {
-  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
+  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(tr(message))));
 }

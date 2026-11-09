@@ -431,29 +431,38 @@ class _OverviewContentState extends State<_OverviewContent> {
             ),
             child: Row(
               children: [
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                  decoration: BoxDecoration(
-                    color: themeColor,
-                    borderRadius: BorderRadius.circular(6),
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      _buildFlag(isoA2, size: 18),
-                      const SizedBox(width: 8),
-                      Text(
-                        tr(citiesInCountry.countryName),
-                        style: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w900,
-                          color: Colors.white,
-                        ),
+                Expanded(
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                      decoration: BoxDecoration(
+                        color: themeColor,
+                        borderRadius: BorderRadius.circular(6),
                       ),
-                    ],
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          _buildFlag(isoA2, size: 18),
+                          const SizedBox(width: 8),
+                          Flexible(
+                            child: Text(
+                              tr(citiesInCountry.countryName),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: const TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w900,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
-                const Spacer(),
+                const SizedBox(width: 8),
                 Text(
                   tr('$cityCount ${cityCount == 1 ? 'city' : 'cities'}'),
                   style: const TextStyle(
@@ -513,6 +522,8 @@ class _OverviewContentState extends State<_OverviewContent> {
                     Expanded(
                       child: Text(
                         tr(displayCityName),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
@@ -550,9 +561,13 @@ class _OverviewContentState extends State<_OverviewContent> {
                       const SizedBox(width: 16),
                       Icon(Icons.access_time, size: 12, color: Colors.grey[600]),
                       const SizedBox(width: 4),
-                      Text(
-                        tr('${cityDetail.totalDurationInDays()} days'),
-                        style: TextStyle(fontSize: 11, color: Colors.grey.shade700),
+                      Flexible(
+                        child: Text(
+                          tr('${cityDetail.totalDurationInDays()} days'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(fontSize: 11, color: Colors.grey.shade700),
+                        ),
                       ),
                     ],
                   ),
@@ -582,7 +597,7 @@ class _OverviewContentState extends State<_OverviewContent> {
                   children: [
                     Icon(Icons.insights, color: Theme.of(context).primaryColor),
                     const SizedBox(width: 8),
-                    Text(tr('Data Explorer'), style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                    Flexible(child: Text(tr('Data Explorer'), maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
                   ],
                 ),
                 const SizedBox(height: 16),
@@ -699,6 +714,8 @@ class _OverviewContentState extends State<_OverviewContent> {
                             children: [
                               Text(
                                 tr("Cities Visited"),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
                                 style: Theme.of(context).textTheme.titleSmall?.copyWith(
                                   fontSize: 13,
                                   fontWeight: FontWeight.w600,
@@ -849,6 +866,8 @@ class _OverviewContentState extends State<_OverviewContent> {
                 Expanded(
                   child: Text(
                     tr(name),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.w600,
@@ -934,10 +953,10 @@ class _OverviewContentState extends State<_OverviewContent> {
                     isExpanded: true,
                     style: const TextStyle(fontSize: 13, color: Colors.black),
                     items:  [
-                      DropdownMenuItem(value: 'visitCount', child: Text(tr('Visit Count'))),
-                      DropdownMenuItem(value: 'totalDays', child: Text(tr('Total Days'))),
-                      DropdownMenuItem(value: 'rating', child: Text(tr('Rating'))),
-                      DropdownMenuItem(value: 'population', child: Text(tr('Population'))),
+                      DropdownMenuItem(value: 'visitCount', child: Text(tr('Visit Count'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                      DropdownMenuItem(value: 'totalDays', child: Text(tr('Total Days'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                      DropdownMenuItem(value: 'rating', child: Text(tr('Rating'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                      DropdownMenuItem(value: 'population', child: Text(tr('Population'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                     ],
                     onChanged: (value) {
                       if (value != null) widget.onXAxisChanged(value);
@@ -983,10 +1002,10 @@ class _OverviewContentState extends State<_OverviewContent> {
                     isExpanded: true,
                     style: const TextStyle(fontSize: 13, color: Colors.black),
                     items:  [
-                      DropdownMenuItem(value: 'visitCount', child: Text(tr('Visit Count'))),
-                      DropdownMenuItem(value: 'totalDays', child: Text(tr('Total Days'))),
-                      DropdownMenuItem(value: 'rating', child: Text(tr('Rating'))),
-                      DropdownMenuItem(value: 'population', child: Text(tr('Population'))),
+                      DropdownMenuItem(value: 'visitCount', child: Text(tr('Visit Count'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                      DropdownMenuItem(value: 'totalDays', child: Text(tr('Total Days'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                      DropdownMenuItem(value: 'rating', child: Text(tr('Rating'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                      DropdownMenuItem(value: 'population', child: Text(tr('Population'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                     ],
                     onChanged: (value) {
                       if (value != null) widget.onYAxisChanged(value);
@@ -1215,8 +1234,8 @@ class _OverviewContentState extends State<_OverviewContent> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                       Text(tr('Selected City'), style: TextStyle(fontSize: 10, color: Colors.grey, fontWeight: FontWeight.bold)),
-                      Text(_selectedCity!.name, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                       Text(tr('Selected City'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 10, color: Colors.grey, fontWeight: FontWeight.bold)),
+                      Text(_selectedCity!.name, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                     ],
                   ),
                 ),
@@ -1451,10 +1470,10 @@ class _CityOverviewRankingCardState extends State<_CityOverviewRankingCard> {
                           child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                             Icon(r.icon, size: 15, color: active ? Colors.white : const Color(0xFFAAAAAA)),
                             const SizedBox(width: 6),
-                            Text(tr(r.title), style: TextStyle(
+                            Flexible(child: FittedBox(fit: BoxFit.scaleDown, child: Text(tr(r.title), maxLines: 1, style: TextStyle(
                               fontSize: 12, fontWeight: active ? FontWeight.w700 : FontWeight.w400,
                               color: active ? Colors.white : const Color(0xFFAAAAAA),
-                            )),
+                            )))),
                           ]),
                         ),
                       ),
@@ -1479,7 +1498,7 @@ class _CityOverviewRankingCardState extends State<_CityOverviewRankingCard> {
                           value: _selectedContinent,
                           icon: const Icon(Icons.keyboard_arrow_down_rounded, size: 16, color: Color(0xFF5C5C5C)),
                           style: const TextStyle(fontSize: 12, color: Color(0xFF141414), fontWeight: FontWeight.w600),
-                          items: _continents.map((v) => DropdownMenuItem(value: v, child: Text(tr(v)))).toList(),
+                          items: _continents.map((v) => DropdownMenuItem(value: v, child: Text(tr(v), maxLines: 1, overflow: TextOverflow.ellipsis))).toList(),
                           onChanged: (v) { if (v != null) setState(() { _selectedContinent = v; _updateCountryList(); _prepareList(); }); },
                         ),
                       ),
@@ -1501,7 +1520,7 @@ class _CityOverviewRankingCardState extends State<_CityOverviewRankingCard> {
                           value: _selectedCountry,
                           icon: const Icon(Icons.keyboard_arrow_down_rounded, size: 16, color: Color(0xFF5C5C5C)),
                           style: const TextStyle(fontSize: 12, color: Color(0xFF141414), fontWeight: FontWeight.w600),
-                          items: _countries.map((v) => DropdownMenuItem(value: v, child: Text(tr(v)))).toList(),
+                          items: _countries.map((v) => DropdownMenuItem(value: v, child: Text(tr(v), maxLines: 1, overflow: TextOverflow.ellipsis))).toList(),
                           onChanged: (v) { if (v != null) setState(() { _selectedCountry = v; _prepareList(); }); },
                         ),
                       ),
@@ -1566,7 +1585,7 @@ class _CityOverviewRankingCardState extends State<_CityOverviewRankingCard> {
                               Row(children: [
                                 _buildFlag(city.countryIsoA2),
                                 const SizedBox(width: 6),
-                                Expanded(child: Text(city.name, style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFF141414)), overflow: TextOverflow.ellipsis)),
+                                Expanded(child: Text(city.name, style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFF141414)), maxLines: 1, overflow: TextOverflow.ellipsis)),
                                 Icon(Icons.check_circle_rounded, size: 14, color: themeColor),
                                 const SizedBox(width: 6),
                                 Text(tr('${value.toInt()}${_selectedRanking.unit}'), style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFF141414))),
@@ -1577,7 +1596,7 @@ class _CityOverviewRankingCardState extends State<_CityOverviewRankingCard> {
                                 child: LinearProgressIndicator(value: barFrac, minHeight: 3, backgroundColor: const Color(0xFFE8E8E4), valueColor: AlwaysStoppedAnimation<Color>(barColor)),
                               ),
                               const SizedBox(height: 3),
-                              Text(tr(city.country), style: const TextStyle(fontSize: 10, color: Color(0xFFAAAAAA))),
+                              Text(tr(city.country), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 10, color: Color(0xFFAAAAAA))),
                             ],
                           ),
                         ),
@@ -1717,12 +1736,14 @@ class _CityRatingTierCard extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
-                  children: [
-                    const Icon(Icons.star_rounded, color: Colors.amber),
-                    const SizedBox(width: 8),
-                    Text(tr('Rating Tiers'), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
-                  ],
+                Flexible(
+                  child: Row(
+                    children: [
+                      const Icon(Icons.star_rounded, color: Colors.amber),
+                      const SizedBox(width: 8),
+                      Flexible(child: Text(tr('Rating Tiers'), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                    ],
+                  ),
                 ),
                 IconButton(
                   icon: const Icon(Icons.add_circle_outline),

@@ -18,6 +18,7 @@ import 'package:jidoapp/providers/flight_map_settings_provider.dart';
 
 // 이동할 화면 import
 import 'package:jidoapp/screens/flight_log_list_screen.dart';
+import 'package:jidoapp/screens/add_flight_log_screen.dart';
 
 class MappedRoute {
   final String routeKey;
@@ -358,7 +359,7 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(tr('Route Gradient'), style: GoogleFonts.poppins(fontSize: 14, fontWeight: FontWeight.w500)),
+                          Flexible(child: Text(tr('Route Gradient'), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins(fontSize: 14, fontWeight: FontWeight.w500))),
                           Row(
                             children: [
                               _buildColorPicker(settingsProvider.routeColor1, (c) => settingsProvider.setRouteColor1(c)),
@@ -556,15 +557,29 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
                   child: Container(
                     decoration: BoxDecoration(
                       color: Colors.black.withOpacity(0.6),
-                      shape: BoxShape.circle,
+                      borderRadius: BorderRadius.circular(24),
                       boxShadow: const [
                         BoxShadow(color: Colors.black26, blurRadius: 4, offset: Offset(0, 2))
                       ],
                     ),
-                    child: IconButton(
-                      icon: const Icon(Icons.settings, color: Colors.white),
-                      onPressed: _showSettingsDialog,
-                      tooltip: tr('Map Settings'),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        IconButton(
+                          icon: const Icon(Icons.add, color: Colors.white),
+                          onPressed: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const AddFlightLogScreen()),
+                          ),
+                          tooltip: tr('Add Flight Log'),
+                        ),
+                        IconButton(
+                          icon: const Icon(Icons.settings, color: Colors.white),
+                          onPressed: _showSettingsDialog,
+                          tooltip: tr('Map Settings'),
+                        ),
+                      ],
                     ),
                   ),
                 ),
@@ -597,12 +612,16 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
+                        Flexible(
+                          child: Text(
                           tr('My Routes'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: GoogleFonts.poppins(
                             color: Colors.white,
                             fontSize: 22,
                             fontWeight: FontWeight.bold,
+                          ),
                           ),
                         ),
                         Container(
@@ -795,6 +814,8 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
                                                     children: [
                                                       Text(
                                                         tr('${log.airlineName} ${log.flightNumber}'),
+                                                        maxLines: 1,
+                                                        overflow: TextOverflow.ellipsis,
                                                         style: GoogleFonts.poppins(
                                                           color: Colors.white,
                                                           fontSize: 14,
@@ -803,6 +824,8 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
                                                       ),
                                                       Text(
                                                         tr('${log.date}  •  ${log.times} flight(s)'),
+                                                        maxLines: 1,
+                                                        overflow: TextOverflow.ellipsis,
                                                         style: GoogleFonts.poppins(
                                                           color: Colors.grey[500],
                                                           fontSize: 12,

@@ -9,6 +9,7 @@ import 'common.dart';
 import 'duel_game_screen.dart';
 import 'new_duel_sheet.dart';
 import '../widgets/avatar.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 
 class DuelsScreen extends StatelessWidget {
   const DuelsScreen({super.key});
@@ -27,14 +28,14 @@ class DuelsScreen extends StatelessWidget {
     final nothing = invites.isEmpty && live.isEmpty && waiting.isEmpty && done.isEmpty;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Duels')),
+      appBar: AppBar(title: Text(tr('Duels'), maxLines: 1, overflow: TextOverflow.ellipsis)),
       floatingActionButton: FloatingActionButton.extended(
         heroTag: 'new-duel',
         backgroundColor: AppColors.indigo,
         foregroundColor: Colors.white,
         onPressed: () => pickFriendAndDuel(context),
         icon: const Icon(Icons.add),
-        label: const Text('New duel'),
+        label: Text(tr('New duel'), maxLines: 1, overflow: TextOverflow.ellipsis),
       ),
       body: !store.duelsLoaded
           ? const Center(child: CircularProgressIndicator())
@@ -63,15 +64,15 @@ class DuelsScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              '$wins W · $losses L',
+                              tr('$wins W · $losses L'),
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
                               style: theme.textTheme.titleLarge?.copyWith(color: Colors.white, fontWeight: FontWeight.w900),
                             ),
                             Text(
                               done.isEmpty
-                                  ? 'Live 1:1 quiz battles with friends'
-                                  : '${(wins / done.length * 100).round()}% win rate · ${done.length} ${done.length == 1 ? 'game' : 'games'}',
+                                  ? tr('Live 1:1 quiz battles with friends')
+                                  : tr('${(wins / done.length * 100).round()}% win rate · ${done.length} ${done.length == 1 ? 'game' : 'games'}'),
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
                               style: theme.textTheme.bodySmall?.copyWith(color: Colors.white.withValues(alpha: 0.85)),
@@ -83,24 +84,24 @@ class DuelsScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                if (nothing || duels.isEmpty) const EmptyHint('No duels yet.\nTap New duel to challenge a friend!', emoji: '⚔️'),
+                if (nothing || duels.isEmpty) EmptyHint(tr('No duels yet.\nTap New duel to challenge a friend!'), emoji: '⚔️'),
                 if (invites.isNotEmpty) ...[
-                  _header(context, Icons.mail_rounded, 'Invites', invites.length, const Color(0xFFEF4444)),
+                  _header(context, Icons.mail_rounded, tr('Invites'), invites.length, const Color(0xFFEF4444)),
                   for (final d in invites) DuelTile(duel: d),
                   const SizedBox(height: 12),
                 ],
                 if (live.isNotEmpty) ...[
-                  _header(context, Icons.bolt_rounded, 'Live now', live.length, AppColors.mint),
+                  _header(context, Icons.bolt_rounded, tr('Live now'), live.length, AppColors.mint),
                   for (final d in live) DuelTile(duel: d),
                   const SizedBox(height: 12),
                 ],
                 if (waiting.isNotEmpty) ...[
-                  _header(context, Icons.hourglass_top_rounded, 'Waiting for friend', waiting.length, AppColors.label),
+                  _header(context, Icons.hourglass_top_rounded, tr('Waiting for friend'), waiting.length, AppColors.label),
                   for (final d in waiting) DuelTile(duel: d),
                   const SizedBox(height: 12),
                 ],
                 if (done.isNotEmpty) ...[
-                  _header(context, Icons.history_rounded, 'Finished', done.length, AppColors.indigo),
+                  _header(context, Icons.history_rounded, tr('Finished'), done.length, AppColors.indigo),
                   for (final d in done.take(50)) DuelTile(duel: d),
                 ],
               ],
@@ -140,18 +141,18 @@ class DuelTile extends StatelessWidget {
     final now = DateTime.now().millisecondsSinceEpoch;
     final opponentUid = duel.opponentOf(uid);
     final opponent = store.friend(opponentUid);
-    final name = opponent?.displayName ?? 'Friend';
+    final name = opponent?.displayName ?? tr<String>('Friend');
     final mode = duelModeOf(duel.mode);
     final incoming = duel.inviteOpen(now) && duel.createdBy != uid;
 
     final (String label, Color color) = switch (duel) {
-      _ when incoming => ('Invite', const Color(0xFFEF4444)),
-      _ when duel.inviteOpen(now) => ('Waiting', AppColors.label),
-      _ when duel.isPlaying && !duel.isStale(now) => ('Live', AppColors.darkMint),
-      _ when !duel.isFinished => ('Ended', AppColors.label),
-      _ when duel.winner == uid => ('Win', const Color(0xFF16A34A)),
-      _ when duel.winner == null => ('Draw', AppColors.label),
-      _ => ('Loss', theme.colorScheme.error),
+      _ when incoming => (tr('Invite'), const Color(0xFFEF4444)),
+      _ when duel.inviteOpen(now) => (tr('Waiting'), AppColors.label),
+      _ when duel.isPlaying && !duel.isStale(now) => (tr('Live'), AppColors.darkMint),
+      _ when !duel.isFinished => (tr('Ended'), AppColors.label),
+      _ when duel.winner == uid => (tr('Win'), const Color(0xFF16A34A)),
+      _ when duel.winner == null => (tr('Draw'), AppColors.label),
+      _ => (tr('Loss'), theme.colorScheme.error),
     };
 
     final subtitle = duel.isFinished || duel.isPlaying
@@ -196,7 +197,7 @@ class DuelTile extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'vs $name',
+                        tr('vs {0}').replaceAll('{0}', name),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: theme.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w700),
@@ -222,7 +223,7 @@ class DuelTile extends StatelessWidget {
                       minimumSize: const Size(0, 36),
                       visualDensity: VisualDensity.compact,
                     ),
-                    child: const Text('Play'),
+                    child: Text(tr('Play')),
                   )
                 else
                   Container(
@@ -236,7 +237,7 @@ class DuelTile extends StatelessWidget {
                   ),
                 if (incoming)
                   IconButton(
-                    tooltip: 'Decline',
+                    tooltip: tr('Decline'),
                     visualDensity: VisualDensity.compact,
                     onPressed: () => SocialRepository.instance.leaveDuel(duel.id).catchError((Object e) {
                       if (context.mounted) showError(context, describeError(e));

@@ -1,15 +1,15 @@
 // lib/services/travel_persona_engine.dart
 
 import 'dart:convert';
-import 'dart:math';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:http/http.dart' as http;
 import 'package:jidoapp/providers/airline_provider.dart';
 import 'package:jidoapp/providers/airport_provider.dart';
 import 'package:jidoapp/providers/city_provider.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/providers/trip_log_provider.dart';
+import 'package:jidoapp/services/travel_persona_runtime.dart';
 import 'package:jidoapp/services/persona_scorer.dart';
+import 'package:jidoapp/providers/landmarks_provider.dart';
+import 'package:jidoapp/providers/unesco_provider.dart';
 import 'package:jidoapp/services/traveler_type_store.dart';
 import 'package:jidoapp/services/travel_quantifier.dart';
 
@@ -21,23 +21,6 @@ class TravelPersonaEngine {
   static final TravelPersonaEngine _instance = TravelPersonaEngine._internal();
 
   factory TravelPersonaEngine() => _instance;
-
-  String? _apiKey;
-  static const String _deepSeekModel = 'deepseek-chat';
-  static const String _deepSeekEndpoint = 'https://api.deepseek.com/chat/completions';
-
-  // 주의: 예전 코드에 하드코딩되어 있던 Gemini fallback 키는 완전히 제거했습니다.
-  // 소스코드에 API 키를 하드코딩하는 것은 심각한 보안 위험이므로 .env 값이 없으면
-  // 바로 예외를 던지도록 변경했습니다.
-  void _ensureModel() {
-    if (_apiKey != null) return;
-    final envKey = dotenv.env['DEEPSEEK_API_KEY'];
-    if (envKey == null || envKey.isEmpty) {
-      _apiKey = null;
-      return;
-    }
-    _apiKey = envKey;
-  }
 
   // DNA signs follow PersonalityProvider: +planned, +documenter, +relaxed.
   static const String _archetypePrototypesJson = r'''
@@ -161,16 +144,18 @@ class TravelPersonaEngine {
       CityProvider cityProvider,
       AirlineProvider airlineProvider,
       AirportProvider airportProvider,
-      TripLogProvider tripLogProvider,
-      ) async {
-    _ensureModel();
-
-    if (!personalityProvider.isCalculated && personalityProvider.responses.isNotEmpty) {
-      await personalityProvider.loadQuestions();
-      personalityProvider.calculateScores();
+      TripLogProvider tripLogProvider, {
+        required LandmarksProvider landmarksProvider,
+        required UnescoProvider unescoProvider,
+      }) async {
+    if (countryProvider.isLoading || cityProvider.isLoading || airlineProvider.isLoading ||
+        airportProvider.isLoading || landmarksProvider.isLoading || unescoProvider.isLoading) {
+      throw StateError('Your travel records are still loading. Please try again shortly.');
     }
-    // Older accounts can have calculated=true and eight 50s without any answers.
-    final dnaScores = personalityProvider.responses.isNotEmpty
+
+    // Only consume a completed, unlocked quiz. Analysis must never unlock
+    // the survey result as a side effect or bypass its rewarded-video flow.
+    final dnaScores = personalityProvider.isCalculated && personalityProvider.responses.isNotEmpty
         ? personalityProvider.finalScores : <String, double>{};
 
     Map<String, double> dnaNormalized = {};
@@ -208,204 +193,57 @@ class TravelPersonaEngine {
     fullFeatureVector.removeWhere((key, value) =>
         !dnaNormalized.containsKey(key) && !observedTravelAxes.contains(key));
 
-    final rawCityVisitData = _getRawCityVisitList(cityProvider);
-    final rawTripLogs = _getRawTripLogList(tripLogProvider);
-    final prototypes = jsonDecode(_archetypePrototypesJson) as List<dynamic>;
-
-    // 1단계: AI는 도시/랜드마크 13개 축만 추정한다 (점수 계산은 하지 않음).
-    String aiNote = 'Success';
-    try {
-      if (_apiKey == null || (rawCityVisitData.isEmpty && rawTripLogs.isEmpty)) {
-        throw StateError('No API key or city/log evidence');
-      }
-      final axesPayload = {
-        "visited_cities": rawCityVisitData,
-        "trip_logs": rawTripLogs,
-        "user_rating_distribution": _getAllRatingsForAI(countryProvider, cityProvider),
-      };
-      final axesJson = await _callDeepSeek(_axesSystemPrompt, jsonEncode(axesPayload));
-      final axes = (jsonDecode(axesJson) as Map<String, dynamic>)['axes'] as Map<String, dynamic>? ?? {};
-      for (final key in _aiAxisKeys) {
-        final v = axes[key];
-        if (v is num && v.isFinite) {
-          fullFeatureVector[key] = v.toDouble().clamp(-1.0, 1.0).toDouble();
-        }
-      }
-    } catch (e) {
-      // AI 실패해도 설문 + 여행 통계 축만으로 계산은 계속한다.
-      aiNote = 'Partial: AI axes unavailable ($e)';
-    }
-
-    // 2단계: 점수는 코드로 결정적으로 계산.
-    final result = PersonaScorer.score(prototypes, fullFeatureVector);
-    final personaScores = [
-      for (final s in result.scores) {"id": s.id, "label": s.label, "score": s.score},
+    final runtime = await TravelPersonaRuntime.load();
+    final landmarkRatings = {for (final place in landmarksProvider.allLandmarks) place.name: place};
+    final heritageRatings = {for (final place in unescoProvider.allSites) place.name: place};
+    final cities = [
+      for (final entry in cityProvider.visitDetails.entries)
+        PersonaCityEvidence(entry.key, visits: entry.value.visitDateRanges.length,
+          rating: entry.value.rating, hasLived: entry.value.hasLived,
+          isHome: entry.key == cityProvider.homeCityName),
     ];
-
-    // 3단계: AI는 설명문만 작성 (실패해도 점수 결과는 유지).
-    var explanation = '';
-    try {
-      if (_apiKey == null || !result.hasSignal) {
-        throw StateError('No API key or discriminating evidence');
-      }
-      final top = result.scores.take(3).map((s) => {"label": s.label, "score": s.score}).toList();
-      final explainPayload = {
-        "top_types": top,
-        "is_close": result.isClose,
-        "full_feature_vector": fullFeatureVector,
-        "visited_cities": rawCityVisitData,
-        "trip_logs": rawTripLogs,
-        "meta_data": {
-          "total_countries": countryProvider.visitedCountries.length,
-          "total_cities": cityProvider.visitedCities.length,
-          "total_flights": airlineProvider.allFlightLogs.length,
-        },
-      };
-      final explainJson = await _callDeepSeek(_explainSystemPrompt, jsonEncode(explainPayload));
-      explanation = ((jsonDecode(explainJson) as Map<String, dynamic>)['ai_explanation'] as String?) ?? '';
-    } catch (e) {
-      explanation = result.hasSignal
-          ? 'These relative scores are based on your recorded travel preferences. Add more travel records to refine your result.'
-          : 'Add quiz answers or travel records to discover your traveler type.';
-    }
-
+    final landmarks = [
+      for (final name in landmarksProvider.visitedLandmarks)
+        PersonaLandmarkEvidence(name, rating: landmarkRatings[name]?.rating ?? 0,
+          attributes: landmarkRatings[name]?.attributes ?? const []),
+      for (final name in unescoProvider.visitedSites)
+        PersonaLandmarkEvidence(name, source: 'unesco', rating: heritageRatings[name]?.rating ?? 0,
+          heritageType: heritageRatings[name]?.type),
+    ];
+    final prototypes = jsonDecode(_archetypePrototypesJson) as List<dynamic>;
+    final scored = runtime.score(prototypes,
+        fullFeatureVector, cities, landmarks);
+    final result = scored.result;
+    final cityCount = scored.places.evidence['cities_used'] ?? 0;
+    final landmarkCount = scored.places.evidence['landmark_matched'] ?? 0;
+    final explanation = result.hasSignal
+        ? 'Your quiz preferences and recorded travel are compared across all ten traveler types. '
+          '$cityCount recorded cities and $landmarkCount recorded attractions were matched to place profiles. '
+          'Your leading match is ${result.scores.first.label}.'
+        : 'Add quiz answers or travel records to discover your traveler type.';
     return jsonEncode({
-      "engine_version": TravelerTypeStore.currentVersion,
-      "generated_at": DateTime.now().millisecondsSinceEpoch,
-      "full_feature_vector": fullFeatureVector,
-      "summary": {
-        "ai_explanation": explanation,
-        "persona_scores": personaScores,
-        "is_close": result.isClose,
-        "low_data": result.lowData,
-        "has_signal": result.hasSignal,
-        "score_gap": result.gap,
-        "data_coverage": result.coverage,
-        "debug_info": aiNote,
+      'engine_version': TravelerTypeStore.currentVersion,
+      'generated_at': DateTime.now().millisecondsSinceEpoch,
+      'scoring_method': 'cached_jev_places_balanced_v1',
+      'full_feature_vector': scored.features,
+      'summary': {
+        'top_type_matches': result.hasSignal
+            ? PersonaScorer.matchingAxes(
+                prototypes.firstWhere((p) => p['id'] == result.scores.first.id)
+                    as Map<String, dynamic>, dnaNormalized)
+            : <String>[],
+        'ai_explanation': explanation,
+        'persona_scores': [for (final s in result.scores) {'id': s.id, 'label': s.label, 'score': s.score}],
+        'raw_persona_scores': [for (final s in scored.raw.scores) {'id': s.id, 'label': s.label, 'score': s.score}],
+        'distribution_balanced': scored.balanceApplied,
+        'is_close': result.isClose,
+        'low_data': result.lowData,
+        'has_signal': result.hasSignal,
+        'score_gap': result.gap,
+        'data_coverage': result.coverage,
+        'place_evidence': scored.places.evidence,
+        'debug_info': 'Local place profiles and fixed distribution reference',
       },
     });
-  }
-
-  static const List<String> _aiAxisKeys = [
-    'cityWealth', 'cityType', 'cityNightlife',
-    'landmark_culture_nature', 'landmark_ancient_modern', 'landmark_urban_rural',
-    'landmark_adventure_relax', 'landmark_art_science', 'landmark_spiritual_secular',
-    'landmark_crowd', 'landmark_budget_luxury', 'landmark_local_tourist',
-    'landmark_calm_nightlife',
-  ];
-
-  static const String _axesSystemPrompt = r"""
-You estimate 13 travel-trait axes for one traveler from raw data. Each axis is a number in [-1.0, 1.0].
-Weight each visited city / landmark by the user's rating (higher rating = more weight, z-score style).
-If there is not enough data for an axis, OMIT that key (do not output 0.0 as a guess).
-Axes: cityWealth (poor -1 .. rich +1), cityType (nature/small-town -1 .. big metropolis +1),
-cityNightlife (calm -1 .. lively +1), landmark_culture_nature (nature -1 .. culture +1),
-landmark_ancient_modern (modern -1 .. ancient +1), landmark_urban_rural (rural -1 .. urban +1),
-landmark_adventure_relax (relax -1 .. adventure +1), landmark_art_science (science -1 .. art +1),
-landmark_spiritual_secular (secular -1 .. spiritual +1), landmark_crowd (quiet -1 .. crowded +1),
-landmark_budget_luxury (budget -1 .. luxury +1), landmark_local_tourist (local -1 .. touristy +1),
-landmark_calm_nightlife (calm -1 .. nightlife +1).
-Use ONLY the provided data. Output STRICT JSON: {"axes": {"cityWealth": 0.3, ...}}
-""";
-
-  static const String _explainSystemPrompt = r"""
-You write a short, friendly explanation of a traveler's result. The scores are already computed; do NOT recompute them.
-Explain why the top type fits using ONLY the provided raw data (countries, cities, logs). Do not hallucinate.
-If is_close is true, say the traveler is a blend of the top two types.
-Do not mention formulas or statistics terms (distance, z-score, weights).
-Output STRICT JSON: {"ai_explanation": "..."}
-""";
-
-  Future<String> _callDeepSeek(String systemPrompt, String userContent) async {
-    final response = await http.post(
-      Uri.parse(_deepSeekEndpoint),
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer $_apiKey',
-      },
-      body: jsonEncode({
-        'model': _deepSeekModel,
-        'messages': [
-          {'role': 'system', 'content': systemPrompt},
-          {'role': 'user', 'content': userContent},
-        ],
-        'response_format': {'type': 'json_object'},
-        'temperature': 0,
-        'stream': false,
-      }),
-    );
-    if (response.statusCode != 200) {
-      throw Exception('DeepSeek API error: ${response.statusCode} ${response.body}');
-    }
-    final decoded = jsonDecode(utf8.decode(response.bodyBytes));
-    final text = decoded['choices']?[0]?['message']?['content'] as String?;
-    return text?.replaceAll('```json', '').replaceAll('```', '').trim() ?? '{}';
-  }
-
-  List<Map<String, dynamic>> _getRawCityVisitList(CityProvider cityProvider) {
-    final List<Map<String, dynamic>> rawData = [];
-    final homeCity = cityProvider.homeCityName;
-
-    for (var entry in cityProvider.visitDetails.entries) {
-      final detail = entry.value;
-      final cityName = entry.key;
-
-      if (cityName == homeCity || detail.hasLived || !cityProvider.isVisited(cityName)) continue;
-
-      final cityModel = cityProvider.getCityDetail(cityName);
-
-      rawData.add({
-        "name": cityName,
-        "country_iso": cityModel?.countryIsoA2,
-        "rating": detail.rating,
-        "visit_count": detail.visitDateRanges.length,
-        "arrival_date": detail.arrivalDate,
-        "departure_date": detail.departureDate,
-        "duration": detail.formattedStayDuration,
-        "memo_length": detail.memo?.length ?? 0,
-        "photos_count": detail.photos.length,
-        "city_tourist_ratio": cityModel?.cityTouristRatio ?? 0.0,
-      });
-    }
-    return rawData;
-  }
-
-  List<Map<String, dynamic>> _getRawTripLogList(TripLogProvider tripLogProvider) {
-    final List<Map<String, dynamic>> rawData = [];
-
-    for (var entry in tripLogProvider.entries) {
-      final summary = entry.summary;
-
-      if (summary == null) continue;
-
-      rawData.add({
-        "id": entry.id,
-        "title": entry.title,
-        "content_snippet": entry.content.substring(0, min(entry.content.length, 500)),
-        // Fixed: Extract only names (Strings) from landmark objects to avoid "Instance of" issue
-        "extracted_landmarks": summary.landmarks.map((l) => l.name).toList(),
-        "cities_visited_in_log": summary.cities.map((c) => c.toMap()).toList(),
-      });
-    }
-
-    return rawData;
-  }
-
-  Map<String, double> _getAllRatingsForAI(CountryProvider countryProvider, CityProvider cityProvider) {
-    final Map<String, double> allRatings = {};
-
-    countryProvider.visitDetails.forEach((name, detail) {
-      if (detail.rating > 0.0) {
-        allRatings['country:$name'] = detail.rating;
-      }
-    });
-
-    cityProvider.visitDetails.forEach((name, detail) {
-      if (detail.rating > 0.0) {
-        allRatings['city:$name'] = detail.rating;
-      }
-    });
-
-    return allRatings;
   }
 }

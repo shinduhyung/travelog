@@ -63,7 +63,7 @@ class CityTransportationScreen extends StatelessWidget{
   }
 }
 
-class _SH extends StatelessWidget{final String label;const _SH({required this.label});@override Widget build(BuildContext context)=>Padding(padding:const EdgeInsets.fromLTRB(16,24,16,12),child:Row(children:[Text(tr(label),style:const TextStyle(fontSize:11,fontWeight:FontWeight.w700,letterSpacing:2.0,color:_C.inkLight)),const SizedBox(width:12),Expanded(child:Container(height:1,color:_C.divider))]));}
+class _SH extends StatelessWidget{final String label;const _SH({required this.label});@override Widget build(BuildContext context)=>Padding(padding:const EdgeInsets.fromLTRB(16,24,16,12),child:Row(children:[Flexible(child:Text(tr(label),maxLines:1,overflow:TextOverflow.ellipsis,style:const TextStyle(fontSize:11,fontWeight:FontWeight.w700,letterSpacing:2.0,color:_C.inkLight))),const SizedBox(width:12),Expanded(child:Container(height:1,color:_C.divider))]));}
 
 // ── Ranking Card
 class _RCard extends StatefulWidget{final CityProvider provider;const _RCard({required this.provider});@override State<_RCard> createState()=>_RCardState();}
@@ -106,7 +106,7 @@ class _RCardState extends State<_RCard>{
                     child:Row(mainAxisAlignment:MainAxisAlignment.center,children:[
                       Icon(r.icon,size:15,color:active?Colors.white:_C.inkLight),
                       const SizedBox(width:6),
-                      Text(tr(r.title),style:TextStyle(fontSize:12,fontWeight:active?FontWeight.w700:FontWeight.w400,color:active?Colors.white:_C.inkLight)),
+                      Flexible(child:FittedBox(fit:BoxFit.scaleDown,child:Text(tr(r.title),maxLines:1,style:TextStyle(fontSize:12,fontWeight:active?FontWeight.w700:FontWeight.w400,color:active?Colors.white:_C.inkLight)))),
                     ]),
                   ),
                 ),
@@ -155,7 +155,7 @@ class _RCardState extends State<_RCard>{
                     const SizedBox(height:5),
                     ClipRRect(borderRadius:BorderRadius.circular(3),child:LinearProgressIndicator(value:barFrac,minHeight:3,backgroundColor:_C.divider,valueColor:AlwaysStoppedAnimation<Color>(barColor))),
                     const SizedBox(height:3),
-                    Row(children:[Text(tr(_cf(item)),style:const TextStyle(fontSize:11)),const SizedBox(width:4),Text(tr(item.country),style:const TextStyle(fontSize:10,color:_C.inkLight))]),
+                    Row(children:[Text(tr(_cf(item)),style:const TextStyle(fontSize:11)),const SizedBox(width:4),Flexible(child:Text(tr(item.country),maxLines:1,overflow:TextOverflow.ellipsis,style:const TextStyle(fontSize:10,color:_C.inkLight)))]),
                   ])),
                 ]),
               ),
@@ -179,9 +179,9 @@ class _SumBar extends StatelessWidget{
     final total=groups.length;final pct=total>0?completed/total:0.0;
     return Container(padding:const EdgeInsets.all(16),decoration:BoxDecoration(color:_C.ink,borderRadius:BorderRadius.circular(14)),child:Row(children:[
       Expanded(child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
-        Text(tr('$completed of $total collections'),style:const TextStyle(fontSize:22,fontWeight:FontWeight.w800,color:Colors.white,letterSpacing:-0.5)),
+        FittedBox(fit:BoxFit.scaleDown,alignment:Alignment.centerLeft,child:Text(tr('$completed of $total collections'),maxLines:1,style:const TextStyle(fontSize:22,fontWeight:FontWeight.w800,color:Colors.white,letterSpacing:-0.5))),
         const SizedBox(height:4),
-        Text(tr(completed==0?'No collections fully completed yet':completed==total?'All collections completed! 🎉':'${total-completed} remaining to complete'),style:const TextStyle(fontSize:12,color:Color(0xFF888888))),
+        Text(tr(completed==0?'No collections fully completed yet':completed==total?'All collections completed! 🎉':'${total-completed} remaining to complete'),maxLines:1,overflow:TextOverflow.ellipsis,style:const TextStyle(fontSize:12,color:Color(0xFF888888))),
         const SizedBox(height:14),
         _SegBar(groups:groups,visited:visited),
       ])),
@@ -209,7 +209,7 @@ class _SegBar extends StatelessWidget{
 
 class _AP extends StatelessWidget{final double value;const _AP({required this.value});@override Widget build(BuildContext context)=>SizedBox(width:68,height:68,child:Stack(alignment:Alignment.center,children:[CustomPaint(size:const Size(68,68),painter:_APainter(value:value)),Column(mainAxisSize:MainAxisSize.min,children:[Text(tr('${(value*100).round()}'),style:const TextStyle(fontSize:20,fontWeight:FontWeight.w800,color:Colors.white,height:1)), Text(tr('%'),style:TextStyle(fontSize:10,color:Color(0xFF888888)))])]));}
 class _APainter extends CustomPainter{final double value;const _APainter({required this.value});@override void paint(Canvas canvas,Size size){final c=Offset(size.width/2,size.height/2);final r=size.width/2-4;canvas.drawCircle(c,r,Paint()..color=const Color(0xFF2E2E2E)..style=PaintingStyle.stroke..strokeWidth=4.0);if(value>0)canvas.drawArc(Rect.fromCircle(center:c,radius:r),-math.pi/2,2*math.pi*value,false,Paint()..color=Colors.white..style=PaintingStyle.stroke..strokeWidth=4.0..strokeCap=StrokeCap.round);}@override bool shouldRepaint(_APainter old)=>old.value!=value;}
-class _Ch extends StatelessWidget{final String label,value;final Color color;const _Ch({required this.label,required this.value,required this.color});@override Widget build(BuildContext context)=>Row(mainAxisSize:MainAxisSize.min,crossAxisAlignment:CrossAxisAlignment.baseline,textBaseline:TextBaseline.alphabetic,children:[Text(tr(value),style:TextStyle(fontSize:16,fontWeight:FontWeight.w800,color:color)),const SizedBox(width:3),Text(tr(label),style:const TextStyle(fontSize:10,fontWeight:FontWeight.w500,color:_C.inkLight,letterSpacing:0.3))]);}
+class _Ch extends StatelessWidget{final String label,value;final Color color;const _Ch({required this.label,required this.value,required this.color});@override Widget build(BuildContext context)=>Row(mainAxisSize:MainAxisSize.min,crossAxisAlignment:CrossAxisAlignment.baseline,textBaseline:TextBaseline.alphabetic,children:[Text(tr(value),style:TextStyle(fontSize:16,fontWeight:FontWeight.w800,color:color)),const SizedBox(width:3),Flexible(child:Text(tr(label),maxLines:1,overflow:TextOverflow.ellipsis,style:const TextStyle(fontSize:10,fontWeight:FontWeight.w500,color:_C.inkLight,letterSpacing:0.3)))]);}
 
 class _ColCard extends StatefulWidget{final _TG data;final Set<String> visitedNames;final CityProvider provider;const _ColCard({required this.data,required this.visitedNames,required this.provider});@override State<_ColCard> createState()=>_ColCardState();}
 class _ColCardState extends State<_ColCard> with SingleTickerProviderStateMixin{
@@ -233,9 +233,9 @@ class _ColCardState extends State<_ColCard> with SingleTickerProviderStateMixin{
           Container(width:42,height:42,decoration:BoxDecoration(color:g.color.withOpacity(0.10),borderRadius:BorderRadius.circular(10)),child:Icon(g.icon,size:20,color:g.color)),
           const SizedBox(width:14),
           Expanded(child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
-            Text(tr(g.label),style:TextStyle(fontSize:10,fontWeight:FontWeight.w700,letterSpacing:1.5,color:g.color)),
+            Text(tr(g.label),maxLines:1,overflow:TextOverflow.ellipsis,style:TextStyle(fontSize:10,fontWeight:FontWeight.w700,letterSpacing:1.5,color:g.color)),
             const SizedBox(height:2),
-            Text(tr(g.title),style:const TextStyle(fontSize:15,fontWeight:FontWeight.w700,color:_C.ink,letterSpacing:-0.2)),
+            Text(tr(g.title),maxLines:1,overflow:TextOverflow.ellipsis,style:const TextStyle(fontSize:15,fontWeight:FontWeight.w700,color:_C.ink,letterSpacing:-0.2)),
           ])),
           GestureDetector(
             onTap:()=>Navigator.push(context,MaterialPageRoute(builder:(_)=>CityStatsMapScreen(cities:mapC,title:g.title,markerColor:g.color))),
@@ -248,7 +248,7 @@ class _ColCardState extends State<_ColCard> with SingleTickerProviderStateMixin{
         Padding(padding:const EdgeInsets.fromLTRB(16,0,16,14),child:Column(children:[
           ClipRRect(borderRadius:BorderRadius.circular(4),child:LinearProgressIndicator(value:pct,minHeight:5,backgroundColor:_C.divider,valueColor:AlwaysStoppedAnimation<Color>(g.color))),
           const SizedBox(height:8),
-          Row(children:[_Ch(label:'Visited',value:'$vis',color:g.color),const SizedBox(width:8),_Ch(label:'Remaining',value:'${total-vis}',color:_C.inkLight),const Spacer(),Text(tr('${(pct*100).round()}%'),style:TextStyle(fontSize:20,fontWeight:FontWeight.w800,color:pct>0?g.color:_C.inkLight,letterSpacing:-0.5))]),
+          Row(children:[Expanded(child:Row(children:[Flexible(child:_Ch(label:'Visited',value:'$vis',color:g.color)),const SizedBox(width:8),Flexible(child:_Ch(label:'Remaining',value:'${total-vis}',color:_C.inkLight))])),Text(tr('${(pct*100).round()}%'),style:TextStyle(fontSize:20,fontWeight:FontWeight.w800,color:pct>0?g.color:_C.inkLight,letterSpacing:-0.5))]),
         ])),
         AnimatedSize(duration:const Duration(milliseconds:280),curve:Curves.easeInOut,child:_exp
             ?FadeTransition(opacity:_fA,child:Container(width:double.infinity,padding:const EdgeInsets.fromLTRB(16,4,16,16),decoration:const BoxDecoration(border:Border(top:BorderSide(color:_C.divider))),

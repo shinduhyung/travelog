@@ -422,6 +422,8 @@ class _TravelogGamesScreenState extends State<TravelogGamesScreen> {
                               ),
                               child:  Text(
                                 tr('PLAY & EXPLORE'),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
                                   color: Color(0xFFE2FFF8),
                                   fontSize: 8.5,
@@ -432,6 +434,8 @@ class _TravelogGamesScreenState extends State<TravelogGamesScreen> {
                             ),
                             const SizedBox(height: 6),
                             RichText(
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
                               text:  TextSpan(
                                 style: TextStyle(
                                   fontSize: 23,
@@ -448,6 +452,8 @@ class _TravelogGamesScreenState extends State<TravelogGamesScreen> {
                             const SizedBox(height: 4),
                             Text(
                               tr('Test your travel smarts'),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
                               style: TextStyle(
                                 fontSize: 13,
                                 fontWeight: FontWeight.w600,
@@ -490,7 +496,7 @@ class _GameListCard extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: 82,
+        constraints: const BoxConstraints(minHeight: 82),
         padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
         decoration: BoxDecoration(
           color: Colors.white,

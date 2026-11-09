@@ -20,6 +20,7 @@ import 'package:jidoapp/providers/country_provider.dart';
 
 // Widgets
 import 'package:jidoapp/widgets/landmark_info_card.dart';
+import 'package:jidoapp/widgets/my_match_badge.dart';
 
 // 파이어베이스 설정 무시하고 강제로 30일 기기 보관하는 커스텀 캐시 매니저 설정
 final CacheManager _landmarksCacheManager = CacheManager(
@@ -344,6 +345,8 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                               padding: const EdgeInsets.only(left: 16),
                               child: Text(
                                 tr('Discover the most iconic destinations'),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
                                   fontSize: 13,
                                   fontWeight: FontWeight.w500,
@@ -397,7 +400,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(tr('Visited'), style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: Colors.grey.shade500)),
+                          Flexible(child: Text(tr('Visited'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: Colors.grey.shade500))),
                           Text(tr('$visitedCount / $totalCount'), style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: Colors.grey.shade700)),
                         ],
                       ),
@@ -616,6 +619,8 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                         children: [
                                           Text(
                                             _getDisplayLandmarkName(item.name),
+                                            maxLines: 2,
+                                            overflow: TextOverflow.ellipsis,
                                             style: const TextStyle(
                                               fontSize: 17,
                                               fontWeight: FontWeight.w800,
@@ -627,6 +632,8 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                           const SizedBox(height: 4),
                                           Text(
                                             tr(_getDisplayCityName(item)),
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
                                             style: TextStyle(
                                               fontSize: 13,
                                               fontWeight: FontWeight.w500,
@@ -729,6 +736,8 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                 children: [
                   Text(
                     _getDisplayLandmarkName(item.name),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w700,
@@ -747,6 +756,8 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                       ),
                       child: Text(
                         tr("Multinational"),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           fontSize: 11,
                           fontWeight: FontWeight.w600,
@@ -757,6 +768,8 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                   else
                     Text(
                       tr(_getDisplayCityName(item)),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w500,
@@ -897,14 +910,17 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  TextButton.icon(
-                                    onPressed: () => Navigator.pop(sheetContext),
-                                    icon: const Icon(Icons.close, color: headerTextColor, size: 20),
-                                    label:  Text(tr('Close'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600)),
-                                    style: TextButton.styleFrom(
-                                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                                  Flexible(
+                                    child: TextButton.icon(
+                                      onPressed: () => Navigator.pop(sheetContext),
+                                      icon: const Icon(Icons.close, color: headerTextColor, size: 20),
+                                      label:  Text(tr('Close'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600)),
+                                      style: TextButton.styleFrom(
+                                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                                      ),
                                     ),
                                   ),
+                                  MyMatchBadge.landmark(landmark: freshLandmark, onDark: true),
                                   Container(
                                     padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                                     decoration: BoxDecoration(
@@ -936,6 +952,8 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                   Expanded(
                                     child: Text(
                                       freshLandmark.name,
+                                      maxLines: 2,
+                                      overflow: TextOverflow.ellipsis,
                                       style: const TextStyle(
                                         fontWeight: FontWeight.w900,
                                         fontSize: 24,
@@ -956,6 +974,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                     ),
                                 ],
                               ),
+                              
                               const SizedBox(height: 10),
                               Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -974,6 +993,8 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                           const SizedBox(height: 6),
                                           Text(
                                             tr(displayCity),
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
                                             style: TextStyle(
                                               fontSize: 14,
                                               color: headerTextColor.withOpacity(0.9),
@@ -992,12 +1013,16 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                   children: [
                                     Icon(Icons.layers, size: 16, color: headerTextColor.withOpacity(0.9)),
                                     const SizedBox(width: 6),
-                                    Text(
-                                      tr('$visitedSubCount / $totalSubCount locations visited'),
-                                      style: TextStyle(
-                                        fontSize: 13,
-                                        color: headerTextColor.withOpacity(0.85),
-                                        fontWeight: FontWeight.w500,
+                                    Flexible(
+                                      child: Text(
+                                        tr('$visitedSubCount / $totalSubCount locations visited'),
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                          fontSize: 13,
+                                          color: headerTextColor.withOpacity(0.85),
+                                          fontWeight: FontWeight.w500,
+                                        ),
                                       ),
                                     ),
                                   ],
@@ -1031,15 +1056,18 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                   children: [
                                     Icon(Icons.favorite_border, size: 20, color: Colors.grey[700]),
                                     const SizedBox(width: 8),
-                                    Text(
-                                      tr('Wishlist'),
-                                      style: TextStyle(
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w600,
-                                        color: Colors.grey[800],
+                                    Expanded(
+                                      child: Text(
+                                        tr('Wishlist'),
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w600,
+                                          color: Colors.grey[800],
+                                        ),
                                       ),
                                     ),
-                                    const Spacer(),
                                     IconButton(
                                       visualDensity: VisualDensity.compact,
                                       icon: Icon(
@@ -1056,15 +1084,18 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                   children: [
                                     Icon(Icons.star_border, size: 20, color: Colors.grey[700]),
                                     const SizedBox(width: 8),
-                                    Text(
-                                      tr('My Rating'),
-                                      style: TextStyle(
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w600,
-                                        color: Colors.grey[800],
+                                    Expanded(
+                                      child: Text(
+                                        tr('My Rating'),
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w600,
+                                          color: Colors.grey[800],
+                                        ),
                                       ),
                                     ),
-                                    const Spacer(),
                                     RatingBar.builder(
                                       initialRating: freshLandmark.rating ?? 0.0,
                                       minRating: 0,
@@ -1096,12 +1127,16 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                   child: Icon(Icons.layers, size: 18, color: themeColor),
                                 ),
                                 const SizedBox(width: 12),
-                                Text(
-                                  tr("Components / Locations"),
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w700,
-                                    color: Colors.grey[900],
+                                Flexible(
+                                  child: Text(
+                                    tr("Components / Locations"),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w700,
+                                      color: Colors.grey[900],
+                                    ),
                                   ),
                                 ),
                               ],
@@ -1144,34 +1179,43 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                 child: Icon(Icons.history, size: 18, color: themeColor),
                               ),
                               const SizedBox(width: 12),
-                              Text(
-                                tr('Visit History'),
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w700,
-                                  color: Colors.grey[900],
+                              Expanded(
+                                child: Row(
+                                  children: [
+                                    Flexible(
+                                      child: Text(
+                                        tr('Visit History'),
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.grey[900],
+                                        ),
+                                      ),
+                                    ),
+                                    const SizedBox(width: 8),
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                                      decoration: BoxDecoration(
+                                        color: Colors.grey[200],
+                                        borderRadius: BorderRadius.circular(12),
+                                      ),
+                                      child: Text(
+                                        tr('${freshLandmark.visitDates.length}'),
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.grey[700],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
-                              const SizedBox(width: 8),
-                              Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                                decoration: BoxDecoration(
-                                  color: Colors.grey[200],
-                                  borderRadius: BorderRadius.circular(12),
-                                ),
-                                child: Text(
-                                  tr('${freshLandmark.visitDates.length}'),
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w700,
-                                    color: Colors.grey[700],
-                                  ),
-                                ),
-                              ),
-                              const Spacer(),
                               OutlinedButton.icon(
                                 icon: const Icon(Icons.add, size: 18),
-                                label:  Text(tr('Add')),
+                                label:  Text(tr('Add'), maxLines: 1, overflow: TextOverflow.ellipsis),
                                 onPressed: () => provider.addVisitDate(freshLandmark.name),
                                 style: OutlinedButton.styleFrom(
                                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
@@ -1453,9 +1497,11 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
         initiallyExpanded: _isEditing,
         title: Text(
           tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
         ),
-        subtitle: Text(tr('Date: $_year-$_month-$_day'), style: TextStyle(color: Colors.grey[600], fontSize: 13)),
+        subtitle: Text(tr('Date: $_year-$_month-$_day'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(
           icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
           onPressed: () {
@@ -1498,10 +1544,10 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(tr('Visit Date: $_year-$_month-$_day'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                      Flexible(child: Text(tr('Visit Date: $_year-$_month-$_day'), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14))),
                       TextButton.icon(
                         icon: const Icon(Icons.edit_calendar, size: 18),
-                        label:  Text(tr('Edit Date')),
+                        label:  Text(tr('Edit Date'), maxLines: 1, overflow: TextOverflow.ellipsis),
                         onPressed: () => _selectDate(context),
                         style: TextButton.styleFrom(visualDensity: VisualDensity.compact),
                       ),

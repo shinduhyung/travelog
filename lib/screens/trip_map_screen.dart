@@ -269,12 +269,16 @@ class _TripMapScreenState extends State<TripMapScreen>
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             // 속도 조절 라벨
-             Text(
-              tr('Speed:'),
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 14,
-                fontWeight: FontWeight.bold,
+            Flexible(
+              child: Text(
+                tr('Speed:'),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
             // 감속 버튼 (1시간당 1초)
@@ -1361,7 +1365,7 @@ class _TripMapScreenState extends State<TripMapScreen>
           // 마커 로딩 중이면 로딩 인디케이터 표시
           return Scaffold(
             appBar: AppBar(
-              title:  Text(tr('여행 지도 로딩 중...')),
+              title:  Text(tr('Loading trip map...'), maxLines: 1, overflow: TextOverflow.ellipsis),
               backgroundColor: Colors.blueGrey,
               foregroundColor: Colors.white,
             ),
@@ -1374,7 +1378,7 @@ class _TripMapScreenState extends State<TripMapScreen>
           developer.log("Error loading location markers: ${locationMarkersSnapshot.error}", name: 'TripMapScreen.build');
           return Scaffold(
             appBar: AppBar(
-              title:  Text(tr('여행 지도')),
+              title:  Text(tr('Trip Map'), maxLines: 1, overflow: TextOverflow.ellipsis),
               backgroundColor: Colors.blueGrey,
               foregroundColor: Colors.white,
             ),
@@ -1875,12 +1879,12 @@ class _TripMapScreenState extends State<TripMapScreen>
           // 데이터가 없지만 오류도 아닌 경우 (빈 리스트일 때 등)
           return Scaffold(
             appBar: AppBar(
-              title:  Text(tr('여행 지도')),
+              title:  Text(tr('Trip Map'), maxLines: 1, overflow: TextOverflow.ellipsis),
               backgroundColor: Colors.blueGrey,
               foregroundColor: Colors.white,
             ),
             body:  Center(
-              child: Text(tr('표시할 도시 정보가 없습니다.')),
+              child: Text(tr('No city information to display.')),
             ),
           );
         }
@@ -1911,7 +1915,7 @@ class _TripMapScreenState extends State<TripMapScreen>
           mainAxisSize: MainAxisSize.min,
           children: [
             // Cancel 버튼 추가
-            ElevatedButton.icon(
+            Flexible(child: ElevatedButton.icon(
               onPressed: () {
                 setState(() {
                   _selectedMarkerKeys.clear();
@@ -1919,7 +1923,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                 });
               },
               icon: const Icon(Icons.cancel),
-              label:  Text(tr('Cancel')),
+              label:  Text(tr('Cancel'), maxLines: 1, overflow: TextOverflow.ellipsis),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.grey,
                 foregroundColor: Colors.white,
@@ -1928,10 +1932,10 @@ class _TripMapScreenState extends State<TripMapScreen>
                 ),
                 padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
               ),
-            ),
+            )),
             const SizedBox(width: 10),
             // 삭제 버튼 (텍스트 수정)
-            ElevatedButton.icon(
+            Flexible(child: ElevatedButton.icon(
               onPressed: () {
                 if (_selectedMarkerKeys.isNotEmpty) {
                   _deleteSelectedMarkers();
@@ -1943,7 +1947,9 @@ class _TripMapScreenState extends State<TripMapScreen>
               label: Text(
                   tr(_selectedMarkerKeys.isNotEmpty
                       ? 'Delete (${_selectedMarkerKeys.length})'
-                      : 'Delete (${_selectedLegKeys.length})')
+                      : 'Delete (${_selectedLegKeys.length})'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
               ),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.redAccent,
@@ -1953,11 +1959,11 @@ class _TripMapScreenState extends State<TripMapScreen>
                 ),
                 padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
               ),
-            ),
+            )),
             const SizedBox(width: 10),
             // 수정 버튼 (단일 선택 시 활성화)
             if (_selectedMarkerKeys.length == 1 || _selectedLegKeys.length == 1)
-              ElevatedButton.icon(
+              Flexible(child: ElevatedButton.icon(
                 onPressed: () {
                   if (_selectedMarkerKeys.length == 1) {
                     final Marker? selectedMarker = _currentLocationMarkers.firstWhereOrNull(
@@ -1974,7 +1980,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                   }
                 },
                 icon: const Icon(Icons.edit),
-                label:  Text(tr('Edit')),
+                label:  Text(tr('Edit'), maxLines: 1, overflow: TextOverflow.ellipsis),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blueAccent,
                   foregroundColor: Colors.white,
@@ -1983,14 +1989,14 @@ class _TripMapScreenState extends State<TripMapScreen>
                   ),
                   padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                 ),
-              ),
+              )),
           ],
         )
             : Row(
           mainAxisSize: MainAxisSize.min,
           children: [
             // 새 마커 추가 버튼
-            ElevatedButton.icon(
+            Flexible(child: ElevatedButton.icon(
               onPressed: () {
                 // 'Add New Location' 버튼을 누르면 먼저 지도에서 위치 선택을 유도
                 _newMarkerLatLng = null; // 새 추가 시작 시 기존 임시 위치 초기화
@@ -2000,7 +2006,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                 // 지도를 탭하여 위치를 선택하면 자동으로 _showAddMarkerInfoDialog가 열릴 것임
               },
               icon: const Icon(Icons.add_location_alt),
-              label:  Text(tr('Add New Location')),
+              label:  Text(tr('Add New Location'), maxLines: 1, overflow: TextOverflow.ellipsis),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.green,
                 foregroundColor: Colors.white,
@@ -2009,15 +2015,15 @@ class _TripMapScreenState extends State<TripMapScreen>
                 ),
                 padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
               ),
-            ),
+            )),
             const SizedBox(width: 10),
             // 새 경로 추가 버튼
-            ElevatedButton.icon(
+            Flexible(child: ElevatedButton.icon(
               onPressed: () {
                 _startAddLegProcess();
               },
               icon: const Icon(Icons.alt_route),
-              label:  Text(tr('Add New Route')),
+              label:  Text(tr('Add New Route'), maxLines: 1, overflow: TextOverflow.ellipsis),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.teal,
                 foregroundColor: Colors.white,
@@ -2026,7 +2032,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                 ),
                 padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
               ),
-            ),
+            )),
           ],
         ),
       ),
@@ -2111,6 +2117,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                       ),
                     const SizedBox(height: 10),
                     DropdownButtonFormField<String>(
+                      isExpanded: true,
                       value: initialColorName, // 초기 선택 값
                       decoration:  InputDecoration(labelText: tr('Marker Color')),
                       items: availableColors.keys.map((String colorName) {
@@ -2127,7 +2134,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                                 ),
                               ),
                               const SizedBox(width: 10),
-                              Text(tr(colorName)),
+                              Flexible(child: Text(tr(colorName), maxLines: 1, overflow: TextOverflow.ellipsis)),
                             ],
                           ),
                         );
@@ -2268,28 +2275,29 @@ class _TripMapScreenState extends State<TripMapScreen>
                     Text(tr(locationText)), // 지도에서 선택된 위치 표시
                     const SizedBox(height: 10),
                     DropdownButtonFormField<String>(
+                      isExpanded: true,
                       value: selectedMarkerType,
-                      hint:  Text(tr('Select Marker Type')),
+                      hint:  Text(tr('Select Marker Type'), maxLines: 1, overflow: TextOverflow.ellipsis),
                       items:  <DropdownMenuItem<String>>[
                         DropdownMenuItem<String>(
                           value: 'city',
-                          child: Text(tr('City (Normal)')),
+                          child: Text(tr('City (Normal)'), maxLines: 1, overflow: TextOverflow.ellipsis),
                         ),
                         DropdownMenuItem<String>(
                           value: 'D',
-                          child: Text(tr('Departure (D)')),
+                          child: Text(tr('Departure (D)'), maxLines: 1, overflow: TextOverflow.ellipsis),
                         ),
                         DropdownMenuItem<String>(
                           value: 'A',
-                          child: Text(tr('Arrival (A)')),
+                          child: Text(tr('Arrival (A)'), maxLines: 1, overflow: TextOverflow.ellipsis),
                         ),
                         DropdownMenuItem<String>(
                           value: 'H',
-                          child: Text(tr('Home/Round Trip (H)')),
+                          child: Text(tr('Home/Round Trip (H)'), maxLines: 1, overflow: TextOverflow.ellipsis),
                         ),
                         DropdownMenuItem<String>(
                           value: 'T',
-                          child: Text(tr('Transit (T)')),
+                          child: Text(tr('Transit (T)'), maxLines: 1, overflow: TextOverflow.ellipsis),
                         ),
                       ],
                       onChanged: (String? newValue) {
@@ -2315,6 +2323,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                       ),
                     const SizedBox(height: 10),
                     DropdownButtonFormField<String>(
+                      isExpanded: true,
                       value: initialColorName, // 초기 선택 값
                       decoration:  InputDecoration(labelText: tr('Marker Color')),
                       items: availableColors.keys.map((String colorName) {
@@ -2331,7 +2340,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                                 ),
                               ),
                               const SizedBox(width: 10),
-                              Text(tr(colorName)),
+                              Flexible(child: Text(tr(colorName), maxLines: 1, overflow: TextOverflow.ellipsis)),
                             ],
                           ),
                         );
@@ -2560,12 +2569,16 @@ class _TripMapScreenState extends State<TripMapScreen>
                           children: [
                             const Icon(Icons.calendar_today),
                             const SizedBox(width: 10),
-                            Text(
+                            Flexible(
+                              child: Text(
                               tr(selectedDate != null
                                   ? '${selectedDate!.year}-${selectedDate!.month.toString().padLeft(2, '0')}-${selectedDate!.day.toString().padLeft(2, '0')}'
                                   : 'Select Date (날짜 선택)'),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
                               style: TextStyle(
                                 color: selectedDate != null ? Colors.black : Colors.grey,
+                              ),
                               ),
                             ),
                           ],
@@ -2581,7 +2594,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                           child: TextFormField(
                             controller: hoursController,
                             decoration:  InputDecoration(
-                              labelText: tr('Hours (시간)'),
+                              labelText: tr('Hours'),
                               hintText: tr('0'),
                             ),
                             keyboardType: TextInputType.number,
@@ -2607,14 +2620,15 @@ class _TripMapScreenState extends State<TripMapScreen>
 
                     const SizedBox(height: 10),
                     DropdownButtonFormField<String>(
+                      isExpanded: true,
                       value: selectedTransportType,
-                      hint:  Text(tr('Select Transport Type')),
+                      hint:  Text(tr('Select Transport Type'), maxLines: 1, overflow: TextOverflow.ellipsis),
                       items:  <DropdownMenuItem<String>>[
-                        DropdownMenuItem<String>(value: 'flight', child: Text(tr('Flight'))),
-                        DropdownMenuItem<String>(value: 'train', child: Text(tr('Train'))),
-                        DropdownMenuItem<String>(value: 'bus', child: Text(tr('Bus'))),
-                        DropdownMenuItem<String>(value: 'ferry', child: Text(tr('Ferry'))),
-                        DropdownMenuItem<String>(value: 'car', child: Text(tr('Car'))),
+                        DropdownMenuItem<String>(value: 'flight', child: Text(tr('Flight'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                        DropdownMenuItem<String>(value: 'train', child: Text(tr('Train'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                        DropdownMenuItem<String>(value: 'bus', child: Text(tr('Bus'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                        DropdownMenuItem<String>(value: 'ferry', child: Text(tr('Ferry'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                        DropdownMenuItem<String>(value: 'car', child: Text(tr('Car'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                       ],
                       onChanged: (String? newValue) {
                         setStateInDialog(() {
@@ -2630,6 +2644,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                     ),
                     const SizedBox(height: 10),
                     DropdownButtonFormField<String>(
+                      isExpanded: true,
                       value: initialColorName,
                       decoration:  InputDecoration(labelText: tr('Route Color')),
                       items: availableColors.keys.map((String colorName) {
@@ -2646,7 +2661,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                                 ),
                               ),
                               const SizedBox(width: 10),
-                              Text(tr(colorName)),
+                              Flexible(child: Text(tr(colorName), maxLines: 1, overflow: TextOverflow.ellipsis)),
                             ],
                           ),
                         );
@@ -2662,12 +2677,13 @@ class _TripMapScreenState extends State<TripMapScreen>
                     ),
                     const SizedBox(height: 10),
                     DropdownButtonFormField<String>(
+                      isExpanded: true,
                       value: initialLineStyleName,
                       decoration:  InputDecoration(labelText: tr('Line Style')),
                       items: availableLineStyles.keys.map((String styleName) {
                         return DropdownMenuItem<String>(
                           value: styleName,
-                          child: Text(tr(styleName)),
+                          child: Text(tr(styleName), maxLines: 1, overflow: TextOverflow.ellipsis),
                         );
                       }).toList(),
                       onChanged: (String? newValue) {
@@ -2885,12 +2901,16 @@ class _TripMapScreenState extends State<TripMapScreen>
                           children: [
                             const Icon(Icons.calendar_today),
                             const SizedBox(width: 10),
-                            Text(
+                            Flexible(
+                              child: Text(
                               tr(selectedDate != null
                                   ? '${selectedDate!.year}-${selectedDate!.month.toString().padLeft(2, '0')}-${selectedDate!.day.toString().padLeft(2, '0')}'
                                   : 'Select Date (날짜 선택)'),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
                               style: TextStyle(
                                 color: selectedDate != null ? Colors.black : Colors.grey,
+                              ),
                               ),
                             ),
                           ],
@@ -2905,7 +2925,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                           child: TextFormField(
                             controller: hoursController,
                             decoration:  InputDecoration(
-                              labelText: tr('Hours (시간)'),
+                              labelText: tr('Hours'),
                               hintText: tr('0'),
                             ),
                             keyboardType: TextInputType.number,
@@ -2930,14 +2950,15 @@ class _TripMapScreenState extends State<TripMapScreen>
                     ),
                     const SizedBox(height: 10),
                     DropdownButtonFormField<String>(
+                      isExpanded: true,
                       value: selectedTransportType,
                       decoration:  InputDecoration(labelText: tr('Transport Type')),
                       items:  <DropdownMenuItem<String>>[
-                        DropdownMenuItem<String>(value: 'flight', child: Text(tr('Flight'))),
-                        DropdownMenuItem<String>(value: 'train', child: Text(tr('Train'))),
-                        DropdownMenuItem<String>(value: 'bus', child: Text(tr('Bus'))),
-                        DropdownMenuItem<String>(value: 'ferry', child: Text(tr('Ferry'))),
-                        DropdownMenuItem<String>(value: 'car', child: Text(tr('Car'))),
+                        DropdownMenuItem<String>(value: 'flight', child: Text(tr('Flight'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                        DropdownMenuItem<String>(value: 'train', child: Text(tr('Train'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                        DropdownMenuItem<String>(value: 'bus', child: Text(tr('Bus'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                        DropdownMenuItem<String>(value: 'ferry', child: Text(tr('Ferry'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                        DropdownMenuItem<String>(value: 'car', child: Text(tr('Car'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                       ],
                       onChanged: (String? newValue) {
                         setStateInDialog(() {
@@ -2947,6 +2968,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                     ),
                     const SizedBox(height: 10),
                     DropdownButtonFormField<String>(
+                      isExpanded: true,
                       value: initialColorName,
                       decoration:  InputDecoration(labelText: tr('Route Color')),
                       items: availableColors.keys.map((String colorName) {
@@ -2963,7 +2985,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                                 ),
                               ),
                               const SizedBox(width: 10),
-                              Text(tr(colorName)),
+                              Flexible(child: Text(tr(colorName), maxLines: 1, overflow: TextOverflow.ellipsis)),
                             ],
                           ),
                         );
@@ -2979,12 +3001,13 @@ class _TripMapScreenState extends State<TripMapScreen>
                     ),
                     const SizedBox(height: 10),
                     DropdownButtonFormField<String>(
+                      isExpanded: true,
                       value: initialLineStyleName,
                       decoration:  InputDecoration(labelText: tr('Line Style')),
                       items: availableLineStyles.keys.map((String styleName) {
                         return DropdownMenuItem<String>(
                           value: styleName,
-                          child: Text(tr(styleName)),
+                          child: Text(tr(styleName), maxLines: 1, overflow: TextOverflow.ellipsis),
                         );
                       }).toList(),
                       onChanged: (String? newValue) {
@@ -3604,7 +3627,7 @@ class _TripMapScreenState extends State<TripMapScreen>
 
   String _formatDuration(String? duration) {
     if (duration == null || duration.isEmpty || duration.toLowerCase() == 'unknown') {
-      return '알 수 없음';
+      return 'Unknown';
     }
 
     if (duration.contains('h') || duration.contains('m')) {
@@ -4014,6 +4037,8 @@ class _TripMapScreenState extends State<TripMapScreen>
           children: [
              Text(
               tr('Transport Styles'),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 14,
@@ -4133,9 +4158,13 @@ class _TripMapScreenState extends State<TripMapScreen>
                 children: [
                   const Icon(Icons.location_city, color: Colors.white),
                   const SizedBox(width: 10),
-                   Text(
-                    tr('Locations'),
-                    style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+                  Flexible(
+                    child: Text(
+                      tr('Locations'),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
                   ),
                   const Spacer(),
                   IconButton(
@@ -4186,11 +4215,15 @@ class _TripMapScreenState extends State<TripMapScreen>
                                   children: [
                                     Text(
                                       tr(item['name']),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
                                       style: const TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold),
                                     ),
                                     if (item['duration'] != null)
                                       Text(
                                         tr('${item['stayInfo']} ${item['duration'] != null ? "(${item['duration']})" : ""}'),
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
                                         style: const TextStyle(color: Colors.white70, fontSize: 12),
                                       ),
                                   ],
@@ -4566,12 +4599,16 @@ class _TripMapScreenState extends State<TripMapScreen>
                 children: [
                   const Icon(Icons.directions, color: Colors.white, size: 20),
                   const SizedBox(width: 8),
-                   Text(
-                    tr('Transportation'),
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
+                  Flexible(
+                    child: Text(
+                      tr('Transportation'),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
                     ),
                   ),
                   const Spacer(),
@@ -4687,12 +4724,16 @@ class _TripMapScreenState extends State<TripMapScreen>
                   ),
                 ),
                 const SizedBox(width: 4),
-                Text(
-                  tr(item['title']),
-                  style: TextStyle(
-                    color: isAnimating ? Colors.yellow : Colors.white,
-                    fontWeight: isAnimating ? FontWeight.w900 : FontWeight.bold,
-                    fontSize: 12,
+                Flexible(
+                  child: Text(
+                    tr(item['title']),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      color: isAnimating ? Colors.yellow : Colors.white,
+                      fontWeight: isAnimating ? FontWeight.w900 : FontWeight.bold,
+                      fontSize: 12,
+                    ),
                   ),
                 ),
               ],
@@ -4701,6 +4742,8 @@ class _TripMapScreenState extends State<TripMapScreen>
             // 메인 식별자 (항공편 번호, 기차/버스 회사, 페리 이름)
             Text(
               tr(item['identifier'] ?? item['company'] ?? item['transportType']),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
               style: TextStyle(
                 color: isAnimating
                     ? Colors.white
@@ -4714,6 +4757,8 @@ class _TripMapScreenState extends State<TripMapScreen>
             if (item['duration'] != null && item['duration'] != 'Unknown')
               Text(
                 tr(_formatDuration(item['duration'])),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   color: isAnimating
                       ? Colors.white.withOpacity(0.9)
@@ -4805,6 +4850,8 @@ class _TripMapScreenState extends State<TripMapScreen>
                         const SizedBox(height: 8),
                         Text(
                           tr(title),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: const TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w700,
@@ -4822,6 +4869,8 @@ class _TripMapScreenState extends State<TripMapScreen>
                         if (company != null || identifier != null)
                           Text(
                             tr('${company ?? ""}${identifier != null ? " $identifier" : ""}'),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                             style: const TextStyle(
                               fontSize: 11,
                               color: Colors.white70,
@@ -4831,6 +4880,8 @@ class _TripMapScreenState extends State<TripMapScreen>
                         if (duration != null && duration != 'Unknown')
                           Text(
                             tr(duration),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                             style: const TextStyle(
                               fontSize: 10,
                               color: Colors.white60,
@@ -4920,6 +4971,8 @@ class _TripMapScreenState extends State<TripMapScreen>
           Expanded(
             child: Text(
               tr(transportType.toUpperCase()),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
               style: const TextStyle(color: Colors.white, fontSize: 12),
             ),
           ),

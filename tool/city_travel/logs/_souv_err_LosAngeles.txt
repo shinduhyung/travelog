@@ -1,0 +1,18 @@
+C:\Users\ahnlee123\Desktop\jidoapp\tool\city_travel\souvenir_section.py:39: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+  f'<article>{img}<div class="body"><h3>{e(it["name"])}</h3>'
+Traceback (most recent call last):
+  File "C:\Users\ahnlee123\Desktop\jidoapp\tool\city_travel\build_page.py", line 585, in <module>
+    main(sys.argv[1] if len(sys.argv) > 1 else "Abu Dhabi")
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ahnlee123\Desktop\jidoapp\tool\city_travel\build_page.py", line 374, in main
+    souvenirs_html = souvenir_section.render(slug(city), fetch_image)
+  File "C:\Users\ahnlee123\Desktop\jidoapp\tool\city_travel\souvenir_section.py", line 39, in render
+    f'<article>{img}<div class="body"><h3>{e(it["name"])}</h3>'
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    f'<div class="price">{price}<small>{e(it["unit"])} · {e(it["basis"]).lower()}</small></div>'
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    f'<p>{e(it["about"])}</p><div class="where">Where: {e(it["where"])}</div>' +
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+    (f'<div class="tip">{e(it["tip"])}</div>' if it["tip"] else '') + f'</div></article>')
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: 'str' object is not callable

@@ -140,10 +140,10 @@ class _CountryRegionDropdownState extends State<CountryRegionDropdown> {
                       controlAffinity: ListTileControlAffinity.leading,
                       dense: true,
                       contentPadding: EdgeInsets.zero,
-                      title: Text(region.name),
+                      title: Text(region.name, maxLines: 1, overflow: TextOverflow.ellipsis),
                       subtitle: region.typeLabel.isEmpty
                           ? null
-                          : Text(tr(region.typeLabel)),
+                          : Text(tr(region.typeLabel), maxLines: 1, overflow: TextOverflow.ellipsis),
                     ),
                   );
                 },

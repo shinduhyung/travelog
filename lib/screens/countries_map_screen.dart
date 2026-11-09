@@ -748,15 +748,20 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
             bottom: MediaQuery.of(context).padding.bottom + 24,
             left: 16,
             // TODO(old-map): 되살릴 때 `_oldMapTheme ? const SizedBox.shrink() :`를 child 맨 앞에 추가(고지도에서는 범례 숨김)
-            child: _isHighlightMode
-                ? _buildHighlightLegend(_currentHighlightGroups)
-                : (_showLegend ? _buildLegendWidget() : const SizedBox.shrink()),
+            child: ConstrainedBox(
+              constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width - 32),
+              child: _isHighlightMode
+                  ? _buildHighlightLegend(_currentHighlightGroups)
+                  : (_showLegend ? _buildLegendWidget() : const SizedBox.shrink()),
+            ),
           ),
 
           Positioned(
             top: MediaQuery.of(context).padding.top + 10,
             right: 16,
             child: SafeArea(
+              child: ConstrainedBox(
+              constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width - 32),
               child: _buildBlurContainer(
                 borderRadius: 30,
                 child: Padding(
@@ -766,11 +771,13 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                     children: [
                       // TODO(old-map): 되살릴 때 조건 맨 앞에 `!_oldMapTheme &&` 추가(고지도에서는 Show All 스위치 숨김)
                       if (!_isHighlightMode && (_colorMode == CountriesColorMode.byContinent || _colorMode == CountriesColorMode.bySubregion))
-                        Padding(
+                        Flexible(
+                          child: Padding(
                           padding: const EdgeInsets.only(left: 4, right: 12.0),
                           child: Row(
+                            mainAxisSize: MainAxisSize.min,
                             children: [
-                              Text(tr('Show All'), style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.w500)),
+                              Flexible(child: Text(tr('Show All'), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.w500))),
                               const SizedBox(width: 12),
                               SizedBox(
                                 height: 24,
@@ -789,6 +796,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                               ),
                             ],
                           ),
+                        ),
                         ),
 
                       Container(width: 1, height: 20, color: Colors.grey.withOpacity(0.3), margin: const EdgeInsets.symmetric(horizontal: 4)),
@@ -825,6 +833,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                     ],
                   ),
                 ),
+              ),
               ),
             ),
           ),
@@ -973,7 +982,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                   decoration: BoxDecoration(color: group.color, shape: BoxShape.circle),
                 ),
                 const SizedBox(width: 8),
-                Text(tr(group.name), style: GoogleFonts.poppins(fontSize: 12, fontWeight: FontWeight.w500)),
+                Flexible(child: Text(tr(group.name), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins(fontSize: 12, fontWeight: FontWeight.w500))),
               ],
             ),
           )).toList(),
@@ -1121,7 +1130,10 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
             ),
           ),
           const SizedBox(width: 8),
-          RichText(
+          Flexible(
+            child: RichText(
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
             text: TextSpan(
               text: tr(name),
               style: GoogleFonts.poppins(color: Colors.black87, fontSize: 12, fontWeight: FontWeight.w500),
@@ -1129,6 +1141,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                 TextSpan(text: tr(suffix), style: GoogleFonts.poppins(color: Colors.grey.shade600, fontSize: 11))
               ] : [],
             ),
+          ),
           ),
         ],
       ),
@@ -1271,7 +1284,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(tr('Show Home'), style: GoogleFonts.poppins()),
+                            Flexible(child: Text(tr('Show Home'), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins())),
                             Switch(
                                 value: tempShowHome,
                                 onChanged: (v) => setStateDialog(() => tempShowHome = v),
@@ -1284,14 +1297,14 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                             padding: const EdgeInsets.only(bottom: 8.0, left: 16),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [Text(tr('Home Color'), style: GoogleFonts.poppins(fontSize: 13)), buildColorPicker(tempHomeColor, (c) => setStateDialog(() => tempHomeColor = c))],
+                              children: [Flexible(child: Text(tr('Home Color'), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins(fontSize: 13))), buildColorPicker(tempHomeColor, (c) => setStateDialog(() => tempHomeColor = c))],
                             ),
                           ),
 
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(tr('Show Lived'), style: GoogleFonts.poppins()),
+                            Flexible(child: Text(tr('Show Lived'), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins())),
                             Switch(
                                 value: tempShowNonHomeLived,
                                 onChanged: (v) => setStateDialog(() => tempShowNonHomeLived = v),
@@ -1304,14 +1317,14 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                             padding: const EdgeInsets.only(bottom: 8.0, left: 16),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [Text(tr('Lived Color'), style: GoogleFonts.poppins(fontSize: 13)), buildColorPicker(tempNonHomeLivedColor, (c) => setStateDialog(() => tempNonHomeLivedColor = c))],
+                              children: [Flexible(child: Text(tr('Lived Color'), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins(fontSize: 13))), buildColorPicker(tempNonHomeLivedColor, (c) => setStateDialog(() => tempNonHomeLivedColor = c))],
                             ),
                           ),
 
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(tr('Show Wishlist'), style: GoogleFonts.poppins()),
+                            Flexible(child: Text(tr('Show Wishlist'), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins())),
                             Switch(
                                 value: tempShowWishlist,
                                 onChanged: (v) => setStateDialog(() => tempShowWishlist = v),
@@ -1324,7 +1337,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                             padding: const EdgeInsets.only(bottom: 8.0, left: 16),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [Text(tr('Wishlist Color'), style: GoogleFonts.poppins(fontSize: 13)), buildColorPicker(tempWishlistColor, (c) => setStateDialog(() => tempWishlistColor = c))],
+                              children: [Flexible(child: Text(tr('Wishlist Color'), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins(fontSize: 13))), buildColorPicker(tempWishlistColor, (c) => setStateDialog(() => tempWishlistColor = c))],
                             ),
                           ),
 
@@ -1359,7 +1372,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(tr('Visited Color'), style: GoogleFonts.poppins()),
+                              Flexible(child: Text(tr('Visited Color'), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins())),
                               buildColorPicker(tempSameColor, (c) => setStateDialog(() => tempSameColor = c))
                             ],
                           ),
@@ -1390,9 +1403,13 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                                     ),
                                   ),
                                   const SizedBox(width: 8),
-                                  Text(
-                                      tr(index == tempByVisitRanges.length - 1 ? 'Visits +' : 'Visits'),
-                                      style: GoogleFonts.poppins(fontSize: 13)
+                                  Flexible(
+                                    child: Text(
+                                        tr(index == tempByVisitRanges.length - 1 ? 'Visits +' : 'Visits'),
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: GoogleFonts.poppins(fontSize: 13)
+                                    ),
                                   ),
                                   const Spacer(),
                                   buildColorPicker(range.color, (newColor) {
@@ -1432,9 +1449,13 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                                     ),
                                   ),
                                   const SizedBox(width: 8),
-                                  Text(
-                                      tr(index == tempByDurationRanges.length - 1 ? 'Days +' : 'Days'),
-                                      style: GoogleFonts.poppins(fontSize: 13)
+                                  Flexible(
+                                    child: Text(
+                                        tr(index == tempByDurationRanges.length - 1 ? 'Days +' : 'Days'),
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: GoogleFonts.poppins(fontSize: 13)
+                                    ),
                                   ),
                                   const Spacer(),
                                   buildColorPicker(range.color, (newColor) {
@@ -1449,7 +1470,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(tr('Unknown Duration'), style: GoogleFonts.poppins(fontSize: 13)),
+                              Flexible(child: Text(tr('Unknown Duration'), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins(fontSize: 13))),
                               buildColorPicker(tempUnknownDurationColor, (c) => setStateDialog(() => tempUnknownDurationColor = c))
                             ],
                           )
@@ -1475,7 +1496,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text(tr(label), style: GoogleFonts.poppins(fontSize: 13)),
+                                  Flexible(child: Text(tr(label), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins(fontSize: 13))),
                                   buildColorPicker(category.color, (newColor) {
                                     setStateDialog(() {
                                       category.color = newColor;
@@ -1488,7 +1509,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(tr('No Rating'), style: GoogleFonts.poppins(fontSize: 13)),
+                              Flexible(child: Text(tr('No Rating'), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins(fontSize: 13))),
                               buildColorPicker(tempUnknownRatingColor, (c) => setStateDialog(() => tempUnknownRatingColor = c))
                             ],
                           )
@@ -1506,7 +1527,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text(tr(entry.key), style: GoogleFonts.poppins(fontSize: 13)),
+                                    Flexible(child: Text(tr(entry.key), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins(fontSize: 13))),
                                     buildColorPicker(entry.value, (newColor) {
                                       setStateDialog(() {
                                         tempByContinentColors[entry.key] = newColor;

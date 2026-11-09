@@ -1,3 +1,4 @@
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
@@ -71,8 +72,8 @@ class _ProfileMapsState extends State<ProfileMaps> {
                   ? AppColors.mint
                   : null;
           legend = MapLegend(items: [
-            (AppColors.mint, 'Visited ${p.countryCount}'),
-            (AppColors.darkMint, 'Lived ${lived.length}'),
+            (AppColors.mint, tr('Visited ${p.countryCount}')),
+            (AppColors.darkMint, tr('Lived ${lived.length}')),
           ]);
         }
       case ProfileMapMode.cities:
@@ -87,7 +88,7 @@ class _ProfileMapsState extends State<ProfileMaps> {
           legend = _GradientLegend(max: max, unit: 'cities');
         } else {
           colorFor = (_) => null;
-          legend = MapLegend(items: [(AppColors.mint, 'Cities ${p.cityCount}')]);
+          legend = MapLegend(items: [(AppColors.mint, tr('Cities ${p.cityCount}'))]);
         }
       case ProfileMapMode.landmarks:
         final by = <String, int>{};
@@ -110,7 +111,7 @@ class _ProfileMapsState extends State<ProfileMaps> {
           );
         } else {
           colorFor = (_) => null;
-          legend = MapLegend(items: [(_landmarkColor, 'Landmarks ${p.landmarkCount}')]);
+          legend = MapLegend(items: [(_landmarkColor, tr('Landmarks ${p.landmarkCount}'))]);
         }
     }
 
@@ -147,7 +148,7 @@ class _ProfileMapsState extends State<ProfileMaps> {
             Expanded(child: legend),
             const SizedBox(width: 8),
             Tooltip(
-              message: 'Shade by count',
+              message: tr('Shade by count'),
               child: InkWell(
                 borderRadius: BorderRadius.circular(12),
                 onTap: () => setState(() => _shade = !_shade),
@@ -155,7 +156,7 @@ class _ProfileMapsState extends State<ProfileMaps> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
-                      'By count',
+                      tr('By count'),
                       maxLines: 1,
                       softWrap: false,
                       style: theme.textTheme.labelMedium?.copyWith(color: AppColors.label, fontWeight: FontWeight.w600),
@@ -191,7 +192,7 @@ class _SegLabel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) =>
-      FittedBox(fit: BoxFit.scaleDown, child: Text(text, maxLines: 1, softWrap: false));
+      FittedBox(fit: BoxFit.scaleDown, child: Text(tr(text), maxLines: 1, softWrap: false));
 }
 
 /// "1 ▬▬▬ N+" 그라데이션 범례
@@ -235,7 +236,7 @@ class _GradientLegend extends StatelessWidget {
             Text(max > 1 ? '$max+' : '$max', style: style),
           ],
         ),
-        Text(unit, maxLines: 1, overflow: TextOverflow.ellipsis, style: style),
+        Text(tr(unit), maxLines: 1, overflow: TextOverflow.ellipsis, style: style),
       ],
     );
   }

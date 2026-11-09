@@ -66,6 +66,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A18B1018C0DE000000003CCB /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = "vi.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		A18B1018C0DE000000003B4B /* sr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sr; path = "sr.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		A18B1018C0DE000000003AC5 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = "ro.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		A18B1018C0DE0007BD96DF85 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		A18B1018C0DE0000000039BC /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = "pl.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		A18B1018C0DE0000000038B6 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "nl.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		A18B1018C0DE00000000383A /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ms; path = "ms.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		A18B1018C0DE0000000035AD /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = "hu.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		A18B1018C0DE00000000341B /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = "el.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		A18B1018C0DE00000000331C /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = "cs.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		A18B1018C0DE00000000328D /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = "bg.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		A18B1018C0DE000000003215 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = "ar.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
 		1B285269AA3A49BECA6CD406 /* TravelogWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TravelogWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -333,6 +345,18 @@
 				"zh-Hant",
 				id,
 				th,
+				ar,
+				bg,
+				cs,
+				el,
+				hu,
+				ms,
+				nl,
+				pl,
+				"pt-PT",
+				ro,
+				sr,
+				vi,
 				Base,
 			);
 			mainGroup = 97C146E51CF9000F007C117D;
@@ -529,6 +553,18 @@
 		A18B10180000000000000002 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
+				A18B1018C0DE000000003CCB /* vi */,
+				A18B1018C0DE000000003B4B /* sr */,
+				A18B1018C0DE000000003AC5 /* ro */,
+				A18B1018C0DE0007BD96DF85 /* pt-PT */,
+				A18B1018C0DE0000000039BC /* pl */,
+				A18B1018C0DE0000000038B6 /* nl */,
+				A18B1018C0DE00000000383A /* ms */,
+				A18B1018C0DE0000000035AD /* hu */,
+				A18B1018C0DE00000000341B /* el */,
+				A18B1018C0DE00000000331C /* cs */,
+				A18B1018C0DE00000000328D /* bg */,
+				A18B1018C0DE000000003215 /* ar */,
 				A18B1018C0DE000000003BC4 /* th */,
 				A18B1018C0DE00000000361F /* id */,
 				A18B1018C0DE346F6A856B1E /* zh-Hant */,

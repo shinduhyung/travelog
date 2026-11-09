@@ -77,7 +77,7 @@ class _ClimateMapScreenState extends State<ClimateMapScreen> {
     return Scaffold(
       backgroundColor: backgroundColor,
       appBar: AppBar(
-        title:  Text(tr('World Climate Map')),
+        title:  Text(tr('World Climate Map'), maxLines: 1, overflow: TextOverflow.ellipsis),
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),

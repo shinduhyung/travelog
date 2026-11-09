@@ -63,6 +63,10 @@ service cloud.firestore {
       allow read, write: if isSelf(uid);
     }
 
+    match /social_friend_requests/{uid}/incoming/{sender} {
+      allow read: if isSelf(uid);
+    }
+
     // ── 소셜: 친구에게 공개하는 요약 ───────────────────────────────────────
     match /profiles/{uid} {
       allow read: if isSelf(uid) || isFriendOf(uid);

@@ -13,6 +13,7 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:jidoapp/models/visit_date_model.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
+import 'package:jidoapp/widgets/my_match_badge.dart';
 
 class FilmFestivalsScreen extends StatelessWidget {
   const FilmFestivalsScreen({super.key});
@@ -68,15 +69,16 @@ class FilmFestivalsScreen extends StatelessWidget {
                       const SizedBox(width: 14),
                       Expanded(
                         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                          Text(tr('Film Festivals'),
+                          Text(tr('Film Festivals'), maxLines: 1, overflow: TextOverflow.ellipsis,
                               style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600,
                                   color: Color(0xFF764BA2), letterSpacing: 0.6)),
                           const SizedBox(height: 3),
-                           Text(tr('Global Film Festivals'),
+                           FittedBox(fit: BoxFit.scaleDown, alignment: Alignment.centerLeft,
+                             child: Text(tr('Global Film Festivals'), maxLines: 1,
                               style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900,
-                                  color: Color(0xFF111827), letterSpacing: -0.5, height: 1.1)),
+                                  color: Color(0xFF111827), letterSpacing: -0.5, height: 1.1))),
                           const SizedBox(height: 4),
-                          Text(tr('The "Big Five" film festivals'), style: TextStyle(fontSize: 12, color: Colors.grey[500])),
+                          Text(tr('The "Big Five" film festivals'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12, color: Colors.grey[500])),
                         ]),
                       ),
                       const SizedBox(width: 12),
@@ -155,7 +157,7 @@ class FilmFestivalsScreen extends StatelessWidget {
                         const SizedBox(width: 16),
                         Expanded(child: Text(tr(name),
                             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Color(0xFF111827)),
-                            overflow: TextOverflow.ellipsis)),
+                            maxLines: 1, overflow: TextOverflow.ellipsis)),
                         if (isVisited)
                           Container(
                               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
@@ -210,11 +212,12 @@ class FilmFestivalsScreen extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 16, left: 16, right: 8, bottom: 12),
                 child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                    TextButton(onPressed: () => Navigator.pop(sheetContext),
-                        child: Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
-                    ElevatedButton(onPressed: () => Navigator.pop(sheetContext),
+                    Flexible(child: TextButton(onPressed: () => Navigator.pop(sheetContext),
+                        child: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Cancel'), maxLines: 1, style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))))),
+                    MyMatchBadge.landmark(landmark: freshLandmark, onDark: headerTextColor == Colors.white),
+                    Flexible(child: ElevatedButton(onPressed: () => Navigator.pop(sheetContext),
                         style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
-                        child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))),
+                        child: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Done'), maxLines: 1, style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))))),
                   ]),
                   const SizedBox(height: 12),
                   Row(children: [
@@ -222,11 +225,12 @@ class FilmFestivalsScreen extends StatelessWidget {
                         style: Theme.of(sheetContext).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold, fontSize: 26, color: headerTextColor))),
                     if (isVisited) Icon(Icons.check_circle, color: headerTextColor, size: 24),
                   ]),
+                  
                   const SizedBox(height: 6),
                   Row(children: [
                     Icon(Icons.location_on, size: 14, color: headerTextColor.withOpacity(0.8)),
                     const SizedBox(width: 4),
-                    Expanded(child: Text(tr(locationDisplay),
+                    Expanded(child: Text(tr(locationDisplay), maxLines: 1, overflow: TextOverflow.ellipsis,
                         style: Theme.of(sheetContext).textTheme.titleSmall?.copyWith(color: headerTextColor.withOpacity(0.8), fontWeight: FontWeight.normal))),
                   ]),
                 ])),
@@ -234,10 +238,10 @@ class FilmFestivalsScreen extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('Wishlist:')),
+                  Flexible(child: Row(mainAxisSize: MainAxisSize.min, children: [ Flexible(child: Text(tr('Wishlist:'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                     IconButton(visualDensity: VisualDensity.compact,
                         icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey),
-                        onPressed: () => provider.toggleWishlistStatus(freshLandmark.name))]),
+                        onPressed: () => provider.toggleWishlistStatus(freshLandmark.name))])),
                   Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('My Rating:')), const SizedBox(width: 8),
                     RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0,
                         direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0,
@@ -246,7 +250,7 @@ class FilmFestivalsScreen extends StatelessWidget {
                 ]),
                 const Divider(height: 20),
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text(tr('History (${freshLandmark.visitDates.length} entries)'), style: Theme.of(sheetContext).textTheme.titleSmall),
+                  Flexible(child: Text(tr('History (${freshLandmark.visitDates.length} entries)'), maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(sheetContext).textTheme.titleSmall)),
                   OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit')),
                       onPressed: () => provider.addVisitDate(freshLandmark.name)),
                 ]),
@@ -377,7 +381,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
       child: ExpansionTile(
         controller: _expansionTileController,
         initiallyExpanded: _isEditing,
-        title: Text(tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
+        title: Text(tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'), maxLines: 1, overflow: TextOverflow.ellipsis,
             style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
         subtitle: Text(tr('Date: $_year-$_month-$_day'), style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
@@ -397,7 +401,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             if (_isEditing) ...[
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                Text(tr('Visit Date: $_year-$_month-$_day'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                Flexible(child: Text(tr('Visit Date: $_year-$_month-$_day'), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14))),
                 TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label:  Text(tr('Edit Date')),
                     onPressed: () => _selectDate(context), style: TextButton.styleFrom(visualDensity: VisualDensity.compact)),
               ]),

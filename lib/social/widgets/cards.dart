@@ -1,3 +1,4 @@
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
@@ -45,12 +46,12 @@ class SectionCard extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(title,
+                    Text(tr(title),
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)),
                     if (subtitle != null)
-                      Text(subtitle!,
+                      Text(tr(subtitle!),
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           style: theme.textTheme.bodySmall?.copyWith(color: AppColors.label)),
@@ -239,7 +240,7 @@ class PassportCard extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('TRAVELOG PASSPORT',
+                              Text(tr('TRAVELOG PASSPORT'),
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: theme.textTheme.labelSmall?.copyWith(
@@ -252,7 +253,7 @@ class PassportCard extends StatelessWidget {
                                 children: [
                                   if (home != null) ...[Flag(home.iso2, width: 18, radius: 2), const SizedBox(width: 6)],
                                   Flexible(
-                                    child: Text(home?.longName ?? 'No home country',
+                                    child: Text(home?.longName ?? tr('No home country'),
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
                                         style: theme.textTheme.labelMedium?.copyWith(color: white.withValues(alpha: 0.9))),
@@ -266,9 +267,15 @@ class PassportCard extends StatelessWidget {
                           Column(
                             children: [
                               Image.asset(rankImage, width: 46, height: 46),
-                              Text(rankLabel[rank] ?? rank!,
-                                  maxLines: 1,
-                                  style: theme.textTheme.labelSmall?.copyWith(color: white, fontWeight: FontWeight.w700)),
+                              ConstrainedBox(
+                                constraints: const BoxConstraints(maxWidth: 96),
+                                child: FittedBox(
+                                  fit: BoxFit.scaleDown,
+                                  child: Text(tr(rankLabel[rank] ?? rank!),
+                                      maxLines: 1,
+                                      style: theme.textTheme.labelSmall?.copyWith(color: white, fontWeight: FontWeight.w700)),
+                                ),
+                              ),
                             ],
                           ),
                       ],
@@ -276,10 +283,10 @@ class PassportCard extends StatelessWidget {
                     const SizedBox(height: 18),
                     Row(
                       children: [
-                        big('${profile.countryCount}', 'Countries'),
-                        big('${stats.continentCount}', 'Continents'),
-                        big(compactNumber(profile.cityCount), 'Cities'),
-                        big(compactNumber(profile.landmarkCount), 'Landmarks'),
+                        big('${profile.countryCount}', tr('Countries')),
+                        big('${stats.continentCount}', tr('Continents')),
+                        big(compactNumber(profile.cityCount), tr('Cities')),
+                        big(compactNumber(profile.landmarkCount), tr('Landmarks')),
                       ],
                     ),
                     if (!compact) ...[
@@ -295,9 +302,9 @@ class PassportCard extends StatelessWidget {
                       ),
                       const SizedBox(height: 6),
                       Text(
-                        '${(stats.worldPercent * 100).toStringAsFixed(1)}% of the world · '
+                        tr('${(stats.worldPercent * 100).toStringAsFixed(1)}% of the world · '
                         '${(stats.areaPercent * 100).toStringAsFixed(0)}% of land · '
-                        '${(stats.populationPercent * 100).toStringAsFixed(0)}% of people',
+                        '${(stats.populationPercent * 100).toStringAsFixed(0)}% of people'),
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: theme.textTheme.labelMedium?.copyWith(color: white.withValues(alpha: 0.95)),
@@ -427,9 +434,13 @@ class LandmarkCard extends StatelessWidget {
                   left: 8,
                   top: 8,
                   child: Container(
+                    constraints: BoxConstraints(maxWidth: width - 60),
                     padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                     decoration: BoxDecoration(color: badgeColor ?? AppColors.both, borderRadius: BorderRadius.circular(8)),
-                    child: Text(badge!, style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.w700)),
+                    child: Text(badge!,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.w700)),
                   ),
                 ),
               if (meta != null && meta.rank > 0)
@@ -506,9 +517,9 @@ class VsLegend extends StatelessWidget {
           ],
         );
     return Wrap(spacing: 14, runSpacing: 4, children: [
-      dot(AppColors.me, 'You'),
+      dot(AppColors.me, tr('You')),
       dot(AppColors.friend, friendName),
-      if (showBoth) dot(AppColors.both, 'Both'),
+      if (showBoth) dot(AppColors.both, tr('Both')),
     ]);
   }
 }
@@ -527,7 +538,7 @@ class EmptyHint extends StatelessWidget {
         children: [
           Text(emoji, style: const TextStyle(fontSize: 30)),
           const SizedBox(height: 6),
-          Text(text, textAlign: TextAlign.center, style: Theme.of(context).textTheme.bodySmall?.copyWith(color: AppColors.label)),
+          Text(tr(text), textAlign: TextAlign.center, style: Theme.of(context).textTheme.bodySmall?.copyWith(color: AppColors.label)),
         ],
       ),
     );
@@ -616,10 +627,14 @@ Future<void> showCountrySheet(
                     overflow: TextOverflow.ellipsis,
                     style: theme.textTheme.labelLarge?.copyWith(color: color, fontWeight: FontWeight.w800)),
                 const SizedBox(height: 4),
-                Text(visited ? (info?.lived == true ? '🏠 Lived here' : '✅ Visited') : (wish ? '💭 On wishlist' : 'Not yet')),
-                if (visited && (info?.visits ?? 0) > 1) Text('${info!.visits} visits', style: theme.textTheme.labelSmall),
-                if (visited && info?.firstYear != null) Text('First in ${info!.firstYear}', style: theme.textTheme.labelSmall),
-                if (cities > 0) Text(cities == 1 ? '1 city' : '$cities cities', style: theme.textTheme.labelSmall),
+                Text(visited ? (info?.lived == true ? tr('🏠 Lived here') : tr('✅ Visited')) : (wish ? tr('💭 On wishlist') : tr('Not yet')),
+                    maxLines: 1, overflow: TextOverflow.ellipsis),
+                if (visited && (info?.visits ?? 0) > 1)
+                  Text(tr('${info!.visits} visits'), maxLines: 1, overflow: TextOverflow.ellipsis, style: theme.textTheme.labelSmall),
+                if (visited && info?.firstYear != null)
+                  Text(tr('First in ${info!.firstYear}'), maxLines: 1, overflow: TextOverflow.ellipsis, style: theme.textTheme.labelSmall),
+                if (cities > 0)
+                  Text(cities == 1 ? tr('1 city') : tr('$cities cities'), maxLines: 1, overflow: TextOverflow.ellipsis, style: theme.textTheme.labelSmall),
                 if ((info?.rating ?? 0) > 0) Stars(info!.rating),
               ],
             ),
@@ -628,7 +643,7 @@ Future<void> showCountrySheet(
       }
 
       return Padding(
-        padding: const EdgeInsets.fromLTRB(20, 0, 20, 28),
+        padding: EdgeInsets.fromLTRB(20, 0, 20, 28 + MediaQuery.of(context).viewPadding.bottom),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -645,7 +660,7 @@ Future<void> showCountrySheet(
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w900)),
-                      Text('${continentEmoji[c.continent] ?? ''} ${continentLabel(c.continent)} · ${c.subregion ?? ''}',
+                      Text('${continentEmoji[c.continent] ?? ''} ${tr(continentLabel(c.continent))} · ${c.subregion ?? ''}',
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           style: theme.textTheme.bodySmall?.copyWith(color: AppColors.label)),

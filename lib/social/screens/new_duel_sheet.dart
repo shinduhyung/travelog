@@ -8,6 +8,7 @@ import '../theme.dart';
 import 'common.dart';
 import 'duel_game_screen.dart';
 import '../widgets/avatar.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 
 typedef DuelSetup = ({String mode, String difficulty, String scoring});
 
@@ -53,7 +54,7 @@ Future<void> pickFriendAndDuel(BuildContext context) async {
   final store = SocialScope.read(context);
   final friends = store.friends;
   if (friends.isEmpty) {
-    showError(context, 'Add a friend first');
+    showError(context, tr('Add a friend first'));
     return;
   }
   final picked = await showModalBottomSheet<SocialProfile>(
@@ -69,7 +70,7 @@ Future<void> pickFriendAndDuel(BuildContext context) async {
             Padding(
               padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
               child: Text(
-                'Who do you want to duel?',
+                tr('Who do you want to duel?'),
                 style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800),
               ),
             ),
@@ -78,7 +79,7 @@ Future<void> pickFriendAndDuel(BuildContext context) async {
                 leading: UserAvatar(profile: f),
                 title: Text(f.displayName, maxLines: 1, overflow: TextOverflow.ellipsis),
                 subtitle: Text(
-                  '${f.countryCount} ${f.countryCount == 1 ? 'country' : 'countries'}',
+                  tr('${f.countryCount} ${f.countryCount == 1 ? 'country' : 'countries'}'),
                   style: const TextStyle(color: AppColors.label),
                 ),
                 onTap: () => Navigator.pop(context, f),
@@ -127,7 +128,7 @@ class _SetupSheetState extends State<_SetupSheet> {
                         const SizedBox(width: 10),
                         Expanded(
                           child: Text(
-                            'Duel ${widget.friend.displayName}',
+                            tr('Duel ${widget.friend.displayName}'),
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900, color: AppColors.ink),
@@ -136,12 +137,12 @@ class _SetupSheetState extends State<_SetupSheet> {
                       ],
                     ),
                     const SizedBox(height: 4),
-                    const Text(
-                      'Live 1:1 · 10 rounds · you both play at the same time',
+                    Text(
+                      tr('Live 1:1 · 10 rounds · you both play at the same time'),
                       style: TextStyle(fontSize: 12.5, color: AppColors.label, fontWeight: FontWeight.w600),
                     ),
                     const SizedBox(height: 16),
-                    const _Label('Game'),
+                    _Label(tr('Game')),
                     GridView.count(
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
@@ -155,7 +156,7 @@ class _SetupSheetState extends State<_SetupSheet> {
                       ],
                     ),
                     const SizedBox(height: 16),
-                    const _Label('Difficulty'),
+                    _Label(tr('Difficulty')),
                     Row(
                       children: [
                         for (final e in duelDifficulties.entries) ...[
@@ -171,7 +172,7 @@ class _SetupSheetState extends State<_SetupSheet> {
                       ],
                     ),
                     const SizedBox(height: 16),
-                    const _Label('Scoring'),
+                    _Label(tr('Scoring')),
                     for (final e in duelScorings.entries)
                       Padding(
                         padding: const EdgeInsets.only(bottom: 8),
@@ -201,7 +202,7 @@ class _SetupSheetState extends State<_SetupSheet> {
                     textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w800),
                   ),
                   icon: const Icon(Icons.send_rounded, size: 20),
-                  label: const Text('Send challenge'),
+                  label: Text(tr('Send challenge')),
                 ),
               ),
             ),
@@ -260,13 +261,13 @@ class _ModeTile extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      mode.title,
+                      tr(mode.title),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: AppColors.ink),
                     ),
                     Text(
-                      mode.subtitle,
+                      tr(mode.subtitle),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(fontSize: 10.5, fontWeight: FontWeight.w600, color: AppColors.label),
@@ -316,7 +317,7 @@ class _DifficultyPill extends StatelessWidget {
                     child: FittedBox(
                       fit: BoxFit.scaleDown,
                       child: Text(
-                        difficulty.label,
+                        tr(difficulty.label),
                         maxLines: 1,
                         style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: AppColors.ink),
                       ),
@@ -364,13 +365,13 @@ class _ScoringTile extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      title,
+                      tr(title),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w800, color: AppColors.ink),
                     ),
                     Text(
-                      text,
+                      tr(text),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(fontSize: 11.5, color: AppColors.label, fontWeight: FontWeight.w600),

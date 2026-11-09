@@ -24,6 +24,7 @@ import 'package:jidoapp/models/visit_date_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/widgets/landmark_info_card.dart';
+import 'package:jidoapp/widgets/my_match_badge.dart';
 
 // --- Enums and Models ---
 enum MapFilter { all, visited }
@@ -635,8 +636,8 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
               final isWishlisted = provider.wishlistedLandmarks.contains(item.name);
 
               return ListTile(
-                title: Text(item.name),
-                subtitle: Text(tr(item.countriesIsoA3.join(', '))),
+                title: Text(item.name, maxLines: 1, overflow: TextOverflow.ellipsis),
+                subtitle: Text(tr(item.countriesIsoA3.join(', ')), maxLines: 1, overflow: TextOverflow.ellipsis),
                 onTap: () => provider.toggleVisitedStatus(item.name),
                 trailing: Row(
                   mainAxisSize: MainAxisSize.min,
@@ -691,9 +692,13 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                   const SizedBox(height: 8), // [Modified] 이름과 방문 정보 사이 간격 확대
                   Row(
                     children: [
-                      Text(
-                        tr("Visits: $visitCount ${isWishlisted ? ' | Wishlisted' : ''}"),
-                        style: TextStyle(fontSize: 10, color: Colors.grey[700]),
+                      Flexible(
+                        child: Text(
+                          "${tr('Visits: $visitCount')}${isWishlisted ? ' | ${tr('Wishlisted')}' : ''}",
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(fontSize: 10, color: Colors.grey[700]),
+                        ),
                       ),
                       const SizedBox(width: 6),
                       // [Added] 상세 정보 모달 연결 아이콘
@@ -767,11 +772,12 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                       children: [
                         TextButton(
                           onPressed: () => Navigator.pop(sheetContext),
-                          child: Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.bold)),
+                          child: Text(tr('Cancel'), maxLines: 1, style: TextStyle(color: headerTextColor, fontWeight: FontWeight.bold)),
                         ),
+                        MyMatchBadge.landmark(landmark: freshLandmark, onDark: headerTextColor == Colors.white),
                         ElevatedButton(
                           onPressed: () => Navigator.pop(sheetContext),
-                          child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.bold, color: themeColor)),
+                          child: Text(tr('Done'), maxLines: 1, style: TextStyle(fontWeight: FontWeight.bold, color: themeColor)),
                           style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
                         ),
                       ],
@@ -779,16 +785,23 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                     const SizedBox(height: 8),
                     Row(
                       children: [
-                        Text(
-                          freshLandmark.name,
-                          style: Theme.of(sheetContext).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold, color: headerTextColor),
+                        Flexible(
+                          child: Text(
+                            freshLandmark.name,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: Theme.of(sheetContext).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold, color: headerTextColor),
+                          ),
                         ),
                         const SizedBox(width: 8),
                         if (isVisited) Icon(Icons.check_circle, color: headerTextColor, size: 20),
                       ],
                     ),
+                    
                     Text(
                       tr(countryNames),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: Theme.of(sheetContext).textTheme.titleSmall?.copyWith(color: headerTextColor.withOpacity(0.8)),
                     ),
                   ],
@@ -818,10 +831,10 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
+              Flexible(child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                   Text(tr('Wishlist:')),
+                  Flexible(child: Text(tr('Wishlist:'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                   IconButton(
                     visualDensity: VisualDensity.compact,
                     padding: const EdgeInsets.symmetric(horizontal: 4),
@@ -834,11 +847,11 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                     },
                   ),
                 ],
-              ),
-              Row(
+              )),
+              Flexible(child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                   Text(tr('My Rating:')),
+                  Flexible(child: Text(tr('My Rating:'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                   const SizedBox(width: 8),
                   RatingBar.builder(
                     initialRating: landmark.rating ?? 0.0,
@@ -853,14 +866,14 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                     },
                   ),
                 ],
-              ),
+              )),
             ],
           ),
           const Divider(height: 20),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(tr('History (${landmark.visitDates.length} visits)'), style: Theme.of(sheetContext).textTheme.titleSmall),
+              Flexible(child: Text(tr('History (${landmark.visitDates.length} visits)'), maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(sheetContext).textTheme.titleSmall)),
               OutlinedButton.icon(
                 icon: const Icon(Icons.add),
                 label:  Text(tr('Add Visit')),
@@ -1014,7 +1027,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(tr('Show Unvisited'), style: GoogleFonts.poppins()),
+                          Flexible(child: Text(tr('Show Unvisited'), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins())),
                           Switch(
                               value: tempShowUnvisited,
                               onChanged: (v) => setStateDialog(() => tempShowUnvisited = v),
@@ -1025,7 +1038,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(tr('Show Wishlist'), style: GoogleFonts.poppins()),
+                          Flexible(child: Text(tr('Show Wishlist'), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins())),
                           Switch(
                               value: tempShowWishlist,
                               onChanged: (v) => setStateDialog(() => tempShowWishlist = v),
@@ -1039,7 +1052,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(tr('Wishlist Color'), style: GoogleFonts.poppins(fontSize: 13)),
+                              Flexible(child: Text(tr('Wishlist Color'), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins(fontSize: 13))),
                               buildColorPicker(tempWishlistColor, (c) => setStateDialog(() => tempWishlistColor = c))
                             ],
                           ),
@@ -1095,7 +1108,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                                   ),
                                 ),
                                 const SizedBox(width: 10),
-                                 Expanded(flex: 2, child: Text(tr("Visits"))),
+                                 Expanded(flex: 2, child: Text(tr("Visits"), maxLines: 1, overflow: TextOverflow.ellipsis)),
                                 buildColorPicker(range.color, (newColor) => setStateDialog(() => range.color = newColor)),
                               ],
                             ),
@@ -1382,8 +1395,8 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
       elevation: 1,
       child: ExpansionTile(
         controller: _expansionTileController,
-        title: Text(tr(widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record')),
-        subtitle: Text(tr(_formatDate())),
+        title: Text(tr(widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record'), maxLines: 1, overflow: TextOverflow.ellipsis),
+        subtitle: Text(tr(_formatDate()), maxLines: 1, overflow: TextOverflow.ellipsis),
         trailing: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -1501,6 +1514,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
 
   Widget _buildDropdown<T>(String hint, T? value, List<T?> items, ValueChanged<T?> onChanged, {bool enabled = true}) {
     return DropdownButtonFormField<T>(
+      isExpanded: true,
       value: value,
       isDense: true,
       decoration: InputDecoration(
@@ -1513,7 +1527,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
       ),
       items: items.map((item) => DropdownMenuItem<T>(
         value: item,
-        child: Text(tr(item?.toString() ?? '?'), style: TextStyle(fontSize: 14, color: (item == null) ? Colors.grey.shade600 : null)),
+        child: Text(tr(item?.toString() ?? '?'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 14, color: (item == null) ? Colors.grey.shade600 : null)),
       )).toList(),
       onChanged: enabled ? onChanged : null,
     );

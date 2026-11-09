@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
+import 'package:jidoapp/l10n/app_localizations.dart';
+
 import '../data/geo_data.dart';
 
 /// matches/{matchId} — Cloud Functions(socialCreateDuel 등)만 쓴다.
@@ -205,7 +207,7 @@ class DuelQuestion {
     if (rawChoices.isNotEmpty && rawChoices.first is String) {
       return DuelQuestion(
         type: 'flag',
-        prompt: 'Which country is this flag?',
+        prompt: tr('Which country is this flag?'),
         flag: raw['flag']?.toString(),
         choices: [for (final c in rawChoices) DuelChoice(label: GeoData.I.countryByIso2(c.toString())?.name ?? c.toString())],
       );
@@ -234,10 +236,12 @@ class DuelChoice {
 }
 
 class DuelMode {
-  const DuelMode(this.title, this.subtitle, this.icon, this.color);
+  const DuelMode(this._title, this._subtitle, this.icon, this.color);
 
-  final String title;
-  final String subtitle;
+  final String _title;
+  final String _subtitle;
+  String get title => tr(_title);
+  String get subtitle => tr(_subtitle);
   final IconData icon;
   final Color color;
 }
@@ -257,9 +261,10 @@ DuelMode duelModeOf(String key) => duelModes[key] ?? duelModes['mixed']!;
 
 /// Travelog 게임과 같은 난이도 이름/색
 class DuelDifficulty {
-  const DuelDifficulty(this.label, this.color, this.seconds);
+  const DuelDifficulty(this._label, this.color, this.seconds);
 
-  final String label;
+  final String _label;
+  String get label => tr(_label);
   final Color color;
   final int seconds;
 }
@@ -273,7 +278,7 @@ const duelDifficulties = <String, DuelDifficulty>{
 
 DuelDifficulty duelDifficultyOf(String key) => duelDifficulties[key] ?? duelDifficulties['medium']!;
 
-const duelScorings = <String, (String, String, IconData)>{
-  'speed': ('Speed points', 'Correct answers score up to 1000. Faster = more.', Icons.bolt_rounded),
-  'first': ('First to answer', 'First correct answer takes the round: 1 point.', Icons.sports_score_rounded),
+Map<String, (String, String, IconData)> get duelScorings => {
+  'speed': (tr('Speed points'), tr('Correct answers score up to 1000. Faster = more.'), Icons.bolt_rounded),
+  'first': (tr('First to answer'), tr('First correct answer takes the round: 1 point.'), Icons.sports_score_rounded),
 };

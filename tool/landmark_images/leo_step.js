@@ -1,6 +1,6 @@
 // One Leonardo generation, run in the Leonardo tab: set window.LEO_PROMPT first, then run this file.
 // Guards (all must hold, else nothing is clicked): model gpt-image-2, quality LOW, 1:1, SMALL (1024x1024),
-// quantity 1, 6 reference images, Generate button reads exactly "Generate 8". After the click it waits for the
+// quantity 1, 6 reference images (window.LEO_REFS overrides, 0 for the artwork set), Generate button reads exactly "Generate 8". After the click it waits for the
 // credit balance to drop and a new image to appear; a drop other than 8 returns "STOP: ..." so the caller halts.
 // Returns {ok, url, before, after} or a string starting with "STOP:" / "WAIT:".
 await (async () => {  // top-level await: the javascript tool returns the result, not a pending promise
@@ -15,9 +15,11 @@ await (async () => {  // top-level await: the javascript tool returns the result
   if (q.get('aspectRatio') !== '1:1') bad.push('ratio ' + q.get('aspectRatio'));
   if (q.get('size') !== 'SMALL') bad.push('size ' + q.get('size'));
   if (q.get('quantity') !== '1') bad.push('quantity ' + q.get('quantity'));
-  if (document.querySelectorAll('img[alt^="Image Reference "][alt$=" thumbnail"]').length !== 6) bad.push('refs');
+  if (document.querySelectorAll('img[alt^="Image Reference "][alt$=" thumbnail"]').length !== (window.LEO_REFS ?? 6)) bad.push('refs');
   if (bad.length) return 'STOP: settings ' + bad.join(', ');
-  const credits = () => +((document.body.innerText.match(/AI Creation[\s\S]{0,40}?([\d,]{3,7})/) || [])[1] || '0').replace(/,/g, '');
+  // The balance sits after "AI Creation" on some layouts and right before "Get Started" on others.
+  const credits = () => +((document.body.innerText.match(/AI Creation[\s\S]{0,40}?([\d,]{3,7})/) ||
+    document.body.innerText.match(/([\d,]{3,7})\s*Get Started/) || [])[1] || '0').replace(/,/g, '');
   const imgs = () => [...document.querySelectorAll('img')].map(i => i.src.split('?')[0])
     .filter(s => /cdn\.leonardo\.ai\/users\/.*\/generations\//.test(s));
   const ta = document.querySelector('textarea');

@@ -228,10 +228,10 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                           child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                             Icon(r.icon, size: 15, color: active ? Colors.white : const Color(0xFFAAAAAA)),
                             const SizedBox(width: 6),
-                            Text(tr(r.title), style: TextStyle(
+                            Flexible(child: FittedBox(fit: BoxFit.scaleDown, child: Text(tr(r.title), maxLines: 1, style: TextStyle(
                               fontSize: 11, fontWeight: active ? FontWeight.w700 : FontWeight.w400,
                               color: active ? Colors.white : const Color(0xFFAAAAAA),
-                            )),
+                            )))),
                           ]),
                         ),
                       ),
@@ -256,10 +256,10 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                               borderRadius: BorderRadius.circular(7),
                               border: Border.all(color: active ? const Color(0xFF141414) : const Color(0xFFE8E8E4)),
                             ),
-                            child: Text(tr(e[0] as String), textAlign: TextAlign.center, style: TextStyle(
+                            child: FittedBox(fit: BoxFit.scaleDown, child: Text(tr(e[0] as String), maxLines: 1, textAlign: TextAlign.center, style: TextStyle(
                               fontSize: 11, fontWeight: active ? FontWeight.w700 : FontWeight.w400,
                               color: active ? Colors.white : const Color(0xFFAAAAAA),
-                            )),
+                            ))),
                           ),
                         ),
                       );
@@ -284,10 +284,10 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                               borderRadius: BorderRadius.circular(7),
                               border: Border.all(color: active ? const Color(0xFF141414) : const Color(0xFFE8E8E4)),
                             ),
-                            child: Text(tr(e[0] as String), textAlign: TextAlign.center, style: TextStyle(
+                            child: FittedBox(fit: BoxFit.scaleDown, child: Text(tr(e[0] as String), maxLines: 1, textAlign: TextAlign.center, style: TextStyle(
                               fontSize: 11, fontWeight: active ? FontWeight.w700 : FontWeight.w400,
                               color: active ? Colors.white : const Color(0xFFAAAAAA),
-                            )),
+                            ))),
                           ),
                         ),
                       );
@@ -310,7 +310,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                         value: _selectedContinent,
                         icon: const Icon(Icons.keyboard_arrow_down_rounded, size: 16, color: Color(0xFF5C5C5C)),
                         style: const TextStyle(fontSize: 12, color: Color(0xFF141414), fontWeight: FontWeight.w600),
-                        items: _continents.map((v) => DropdownMenuItem(value: v, child: Text(tr(v)))).toList(),
+                        items: _continents.map((v) => DropdownMenuItem(value: v, child: Text(tr(v), maxLines: 1, overflow: TextOverflow.ellipsis))).toList(),
                         onChanged: (v) { if (v != null) setState(() { _selectedContinent = v; _prepareList(); }); },
                       ),
                     ),
@@ -379,7 +379,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                           Expanded(child: Text(name, style: TextStyle(
                             fontSize: 13, fontWeight: isVisited ? FontWeight.w700 : FontWeight.w500,
                             color: const Color(0xFF141414),
-                          ), overflow: TextOverflow.ellipsis)),
+                          ), maxLines: 1, overflow: TextOverflow.ellipsis)),
                           if (isVisited) ...[const SizedBox(width: 4), Icon(Icons.check_circle_rounded, size: 14, color: _selectedRanking.themeColor)],
                           const SizedBox(width: 6),
                           Text(tr('${_selectedRanking.unit}${compactFormatter.format(value)}'),
@@ -394,6 +394,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                         )),
                         const SizedBox(height: 3),
                         Text(tr(item is City ? (item as City).country : ((item as Map<String,dynamic>)['country'] ?? '')),
+                            maxLines: 1, overflow: TextOverflow.ellipsis,
                             style: const TextStyle(fontSize: 10, color: Color(0xFFAAAAAA))),
                       ])),
                     ]),

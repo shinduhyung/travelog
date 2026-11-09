@@ -884,8 +884,14 @@ class _GradientButtonState extends State<_GradientButton> {
                 Icon(widget.icon, color: fg, size: 20),
                 const SizedBox(width: 8),
               ],
-              Text(tr(widget.label),
-                  style: TextStyle(color: fg, fontSize: 15.5, fontWeight: FontWeight.w800, letterSpacing: 0.2)),
+              Flexible(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(tr(widget.label),
+                      maxLines: 1,
+                      style: TextStyle(color: fg, fontSize: 15.5, fontWeight: FontWeight.w800, letterSpacing: 0.2)),
+                ),
+              ),
             ],
           ),
         ),
@@ -934,6 +940,8 @@ class RevealModeScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         title:  Text(tr('Reveal'),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900, color: _kInk)),
         iconTheme: const IconThemeData(color: _kInk),
       ),
@@ -1008,9 +1016,13 @@ class _ModeCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(tr(mode.title),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: const TextStyle(fontSize: 16.5, fontWeight: FontWeight.w800, color: _kInk)),
                   const SizedBox(height: 4),
                   Text(tr(mode.heroSubtitle),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
                       style: const TextStyle(fontSize: 12.5, color: _kMuted, fontWeight: FontWeight.w500)),
                 ],
               ),
@@ -1071,6 +1083,8 @@ class _RevealLobbyScreenState extends State<_RevealLobbyScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         title: Text(tr('Reveal · ${widget.mode.title}'),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
             style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: _kInk)),
         iconTheme: const IconThemeData(color: _kInk),
       ),
@@ -1149,8 +1163,12 @@ class _RevealLobbyScreenState extends State<_RevealLobbyScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                 Text(tr('LEADERBOARD'),
-                    style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted)),
+                 Flexible(
+                   child: Text(tr('LEADERBOARD'),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted)),
+                 ),
                 Text(tr('${records.length} run${records.length == 1 ? '' : 's'}'),
                     style: const TextStyle(fontSize: 12, color: _kFaint, fontWeight: FontWeight.w600)),
               ],
@@ -1219,6 +1237,8 @@ class _RecordTile extends StatelessWidget {
                 const SizedBox(height: 2),
                 Text(
                   tr('${record.roundsCompleted}/${record.maxRounds} rounds · best streak ${record.bestCombo} · ${_formatDate(record.playedAt)}'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(fontSize: 11.5, color: _kMuted),
                 ),
               ],
@@ -1373,6 +1393,8 @@ class _RevealGameScreenState extends State<_RevealGameScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         title: Text(tr(widget.mode.title),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
             style: TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: _kInk)),
         iconTheme: const IconThemeData(color: _kInk),
         actions: _phase == _RoundPhase.complete
@@ -1399,8 +1421,12 @@ class _RevealGameScreenState extends State<_RevealGameScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(tr('ROUND ${_roundIndex + 1} / $_maxRounds'),
-                  style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 0.6, color: _kMuted)),
+              Flexible(
+                child: Text(tr('ROUND ${_roundIndex + 1} / $_maxRounds'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 0.6, color: _kMuted)),
+              ),
               if (_perfectStreak > 0)
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
@@ -1456,14 +1482,22 @@ class _RevealGameScreenState extends State<_RevealGameScreen> {
                   children: [
                     const Icon(Icons.visibility_rounded, size: 18, color: _kAccent),
                     const SizedBox(width: 8),
-                    Text(
-                      tr(_hintLevel == 3 ? widget.mode.finalHintLabel : 'Reveal another clue'),
-                      style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w800, color: _kAccent),
+                    Flexible(
+                      child: Text(
+                        tr(_hintLevel == 3 ? widget.mode.finalHintLabel : 'Reveal another clue'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w800, color: _kAccent),
+                      ),
                     ),
                     if (nextScore != null) ...[
                       const SizedBox(width: 6),
-                      Text(tr('(worth $nextScore now)'),
-                          style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _kMuted)),
+                      Flexible(
+                        child: Text(tr('(worth $nextScore now)'),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _kMuted)),
+                      ),
                     ],
                   ],
                 ),
@@ -1538,8 +1572,12 @@ class _RevealGameScreenState extends State<_RevealGameScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text('${_current.flagEmoji} ${widget.mode == _kCountryMode ? AppLocale.instance.countryName(_current.name) : _current.name} +${_lastRoundScore ?? 0}',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w900, color: Colors.white)),
                   Text(tr(_hintLevel == 1 ? 'Perfect — solved on the first clue!' : 'Solved with $_hintLevel hints'),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w600, color: Colors.white70)),
                 ],
               ),

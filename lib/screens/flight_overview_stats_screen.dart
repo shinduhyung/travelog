@@ -559,6 +559,8 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                 Expanded(
                   child: Text(
                     tr(period),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
@@ -588,6 +590,8 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                 Expanded(
                   child: Text(
                     tr(period),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
@@ -649,6 +653,8 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                 Expanded(
                   child: Text(
                     tr(period),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
@@ -681,6 +687,8 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                 Expanded(
                   child: Text(
                     tr(period),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
@@ -786,12 +794,16 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                 color: isSelected ? Colors.white : Colors.grey.shade600,
               ),
               const SizedBox(height: 4),
-              Text(
-                tr(label),
-                style: TextStyle(
-                  fontSize: 13,
-                  fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
-                  color: isSelected ? Colors.white : Colors.grey.shade600,
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  tr(label),
+                  maxLines: 1,
+                  style: TextStyle(
+                    fontSize: 13,
+                    fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
+                    color: isSelected ? Colors.white : Colors.grey.shade600,
+                  ),
                 ),
               ),
             ],
@@ -854,6 +866,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
         ),
         child: Text(
           tr(label),
+          maxLines: 1,
           style: TextStyle(
             fontSize: 13,
             fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
@@ -905,11 +918,15 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                   ),
                 ),
                 const SizedBox(width: 12),
-                Text(
-                  tr(title),
-                  style: const TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
+                Flexible(
+                  child: Text(
+                    tr(title),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ],
@@ -1161,6 +1178,8 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
         const SizedBox(height: 4),
         Text(
           tr(label),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: TextStyle(
             fontSize: 11,
             color: Colors.grey.shade600,
@@ -1231,15 +1250,19 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                   ]
                       : null,
                 ),
-                child: Text(
-                  tr(label),
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 13,
-                    fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
-                    color: isSelected
-                        ? Theme.of(context).primaryColor
-                        : Colors.grey.shade600,
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    tr(label),
+                    textAlign: TextAlign.center,
+                    maxLines: 1,
+                    style: TextStyle(
+                      fontSize: 13,
+                      fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
+                      color: isSelected
+                          ? Theme.of(context).primaryColor
+                          : Colors.grey.shade600,
+                    ),
                   ),
                 ),
               ),
@@ -1287,11 +1310,15 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                   ),
                 ),
                 const SizedBox(width: 12),
-                 Text(
-                  tr('Most Frequent Period'),
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
+                Flexible(
+                  child: Text(
+                    tr('Most Frequent Period'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ],
@@ -1427,6 +1454,8 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                 const SizedBox(height: 8),
                 Text(
                   tr(period),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
@@ -1509,15 +1538,19 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                   ]
                       : null,
                 ),
-                child: Text(
-                  tr(label),
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 13,
-                    fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
-                    color: isSelected
-                        ? Theme.of(context).primaryColor
-                        : Colors.grey.shade600,
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    tr(label),
+                    textAlign: TextAlign.center,
+                    maxLines: 1,
+                    style: TextStyle(
+                      fontSize: 13,
+                      fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
+                      color: isSelected
+                          ? Theme.of(context).primaryColor
+                          : Colors.grey.shade600,
+                    ),
                   ),
                 ),
               ),
@@ -1582,24 +1615,30 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                   ),
                 ),
                 const SizedBox(width: 12),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      tr('Yearly Trend (${valueKey})'),
-                      style: const TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
+                Flexible(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        tr('Yearly Trend (${valueKey})'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    Text(
-                      tr('Last 10 Years'),
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: Colors.grey.shade600,
+                      Text(
+                        tr('Last 10 Years'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: 13,
+                          color: Colors.grey.shade600,
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -1768,7 +1807,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                                 }
 
                                 return LineTooltipItem(
-                                  '$year\n$formattedValue $yAxisUnit',
+                                  '$year\n${tr('$formattedValue $yAxisUnit')}',
                                   const TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w600,
@@ -2012,12 +2051,16 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
-                            tr(_selectedStatType.toString().split('.').last.substring(0, 1).toUpperCase() +
-                                _selectedStatType.toString().split('.').last.substring(1)),
-                            style: const TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold,
+                          Flexible(
+                            child: Text(
+                              tr(_selectedStatType.toString().split('.').last.substring(0, 1).toUpperCase() +
+                                  _selectedStatType.toString().split('.').last.substring(1)),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: const TextStyle(
+                                fontSize: 24,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                           _buildSegmentedControl(
@@ -2060,11 +2103,15 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                             ),
                           ),
                           const SizedBox(width: 10),
-                           Text(
-                            tr('Custom Date Range'),
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
+                          Flexible(
+                            child: Text(
+                              tr('Custom Date Range'),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: const TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -2085,6 +2132,8 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                           ),
                           child:  Text(
                             tr('Select Date Range'),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                             style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.w600,
@@ -2111,12 +2160,16 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                                     color: Colors.grey.shade600,
                                   ),
                                   const SizedBox(width: 8),
-                                  Text(
-                                    tr('${DateFormat('MMM d, y').format(_customStartDate!)} - ${DateFormat('MMM d, y').format(_customEndDate!)}'),
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.grey.shade700,
+                                  Flexible(
+                                    child: Text(
+                                      tr('${DateFormat('MMM d, y').format(_customStartDate!)} - ${DateFormat('MMM d, y').format(_customEndDate!)}'),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.grey.shade700,
+                                      ),
                                     ),
                                   ),
                                 ],

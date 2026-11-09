@@ -75,6 +75,8 @@ class ExploreMenuScreen extends StatelessWidget {
                       children: [
                         Text(
                           tr('Ready for an adventure?'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
@@ -84,14 +86,19 @@ class ExploreMenuScreen extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 6),
-                         Text(
-                          tr('Explore'),
-                          style: TextStyle(
-                            fontSize: 46,
-                            fontWeight: FontWeight.w900,
-                            color: Colors.black,
-                            letterSpacing: -1.2,
-                            height: 1.1,
+                        FittedBox(
+                          fit: BoxFit.scaleDown,
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            tr('Explore'),
+                            maxLines: 1,
+                            style: TextStyle(
+                              fontSize: 46,
+                              fontWeight: FontWeight.w900,
+                              color: Colors.black,
+                              letterSpacing: -1.2,
+                              height: 1.1,
+                            ),
                           ),
                         ),
                       ],
@@ -351,12 +358,18 @@ class ExploreMenuScreen extends StatelessWidget {
           children: [
             Icon(icon, size: 18, color: color),
             const SizedBox(width: 8),
-            Text(
-              tr(label),
-              style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w600,
-                color: color,
+            Flexible(
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  tr(label),
+                  maxLines: 1,
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                    color: color,
+                  ),
+                ),
               ),
             ),
           ],
@@ -493,13 +506,18 @@ class ExploreMenuScreen extends StatelessWidget {
                 left: 16,
                 right: 16,
                 bottom: 16,
-                child: Text(
-                  tr(title),
-                  style: const TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.w800,
-                    color: Colors.white,
-                    letterSpacing: -0.5,
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    tr(title),
+                    maxLines: 1,
+                    style: const TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.w800,
+                      color: Colors.white,
+                      letterSpacing: -0.5,
+                    ),
                   ),
                 ),
               ),
@@ -556,12 +574,17 @@ class ExploreMenuScreen extends StatelessWidget {
                   size: 16,
                 ),
               ),
-              Text(
-                tr(title),
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w700,
-                  color: color,
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  tr(title),
+                  maxLines: 1,
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w700,
+                    color: color,
+                  ),
                 ),
               ),
             ],
@@ -632,18 +655,25 @@ class ExploreMenuScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
-                               Text(
-                                tr('Browse Activities'),
-                                style: TextStyle(
-                                  fontSize: 26,
-                                  fontWeight: FontWeight.w800,
-                                  color: Colors.white,
-                                  letterSpacing: -0.5,
+                              FittedBox(
+                                fit: BoxFit.scaleDown,
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  tr('Browse Activities'),
+                                  maxLines: 1,
+                                  style: TextStyle(
+                                    fontSize: 26,
+                                    fontWeight: FontWeight.w800,
+                                    color: Colors.white,
+                                    letterSpacing: -0.5,
+                                  ),
                                 ),
                               ),
                               const SizedBox(height: 4),
                               Text(
                                 tr('Paintings, Foods, Amusement Parks & More'),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
                                   fontSize: 12,
                                   fontWeight: FontWeight.w500,

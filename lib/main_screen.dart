@@ -90,7 +90,8 @@ class _MainScreenState extends State<MainScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: List.generate(_icons.length, (index) {
                   final isSelected = _selectedIndex == index;
-                  return GestureDetector(
+                  return Flexible(
+                    child: GestureDetector(
                     onTap: () => _onItemTapped(index),
                     child: AnimatedContainer(
                       duration: const Duration(milliseconds: 300),
@@ -113,18 +114,23 @@ class _MainScreenState extends State<MainScreen> {
                             color: isSelected ? mintColor : Colors.grey,
                           ),
                           const SizedBox(height: 4),
-                          Text(
-                            tr(_labels[index]),
-                            style: TextStyle(
-                              fontSize: 11,
-                              fontWeight: isSelected
-                                  ? FontWeight.bold
-                                  : FontWeight.normal,
-                              color: isSelected ? mintColor : Colors.grey,
+                          FittedBox(
+                            fit: BoxFit.scaleDown,
+                            child: Text(
+                              tr(_labels[index]),
+                              maxLines: 1,
+                              style: TextStyle(
+                                fontSize: 11,
+                                fontWeight: isSelected
+                                    ? FontWeight.bold
+                                    : FontWeight.normal,
+                                color: isSelected ? mintColor : Colors.grey,
+                              ),
                             ),
                           ),
                         ],
                       ),
+                    ),
                     ),
                   );
                 }),

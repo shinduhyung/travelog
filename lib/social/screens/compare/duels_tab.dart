@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 
 import '../../models/duel.dart';
 import '../../models/stats.dart';
@@ -38,37 +39,37 @@ class DuelsTab extends StatelessWidget {
     return TabList(children: [
       SectionCard(
         emoji: '⚔️',
-        title: 'Head-to-head',
+        title: tr('Head-to-head'),
         tint: AppColors.indigo,
         child: Column(children: [
           Row(children: [
-            Expanded(child: _score(context, '$wins', 'Wins', AppColors.me)),
-            Expanded(child: _score(context, '$draws', 'Draws', AppColors.label)),
-            Expanded(child: _score(context, '$losses', 'Losses', AppColors.friend)),
+            Expanded(child: _score(context, '$wins', tr('Wins'), AppColors.me)),
+            Expanded(child: _score(context, '$draws', tr('Draws'), AppColors.label)),
+            Expanded(child: _score(context, '$losses', tr('Losses'), AppColors.friend)),
           ]),
           if (total > 0) ...[
             const SizedBox(height: 12),
             OverlapBar(onlyMine: wins, both: draws, onlyTheirs: losses, height: 18),
             const SizedBox(height: 6),
-            Text('Win rate ${(wins / total * 100).round()}%', style: theme.textTheme.labelLarge?.copyWith(fontWeight: FontWeight.w800)),
+            Text(tr('Win rate ${(wins / total * 100).round()}%'), style: theme.textTheme.labelLarge?.copyWith(fontWeight: FontWeight.w800)),
           ],
           const SizedBox(height: 14),
           FilledButton.icon(
             onPressed: () => startDuelFlow(context, cmp.friend),
             icon: const Text('🎯'),
-            label: Text('Challenge $name', maxLines: 1, overflow: TextOverflow.ellipsis),
+            label: Text(tr('Challenge $name'), maxLines: 1, overflow: TextOverflow.ellipsis),
           ),
         ]),
       ),
       if (byMode.isNotEmpty)
         SectionCard(
           emoji: '🗂️',
-          title: 'Record by mode',
+          title: tr('Record by mode'),
           tint: AppColors.friend,
           child: Column(children: [
             for (final e in byMode.entries)
               VsBar(
-                label: duelModeOf(e.key).title,
+                label: tr(duelModeOf(e.key).title),
                 mine: e.value.$1,
                 theirs: e.value.$2,
               ),
@@ -76,11 +77,11 @@ class DuelsTab extends StatelessWidget {
         ),
       SectionCard(
         emoji: '📜',
-        title: 'History',
+        title: tr('History'),
         tint: AppColors.gold,
-        subtitle: '${duels.length} ${duels.length == 1 ? 'duel' : 'duels'}',
+        subtitle: '${duels.length} ${duels.length == 1 ? tr('duel') : tr('duels')}',
         child: duels.isEmpty
-            ? const EmptyHint('No duels yet', emoji: '🎲')
+            ? EmptyHint(tr('No duels yet'), emoji: '🎲')
             : Column(children: [for (final d in duels) DuelTile(duel: d)]),
       ),
     ]);

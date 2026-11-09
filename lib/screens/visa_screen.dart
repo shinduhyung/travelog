@@ -80,12 +80,16 @@ class _VisaScreenState extends State<VisaScreen> {
                 children: [
                   Icon(Icons.folder_shared_outlined, color: Colors.grey[700]),
                   const SizedBox(width: 8),
-                  Text(
-                    tr("Saved Visas"),
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.grey[800]
+                  Flexible(
+                    child: Text(
+                      tr("Saved Visas"),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey[800]
+                      ),
                     ),
                   ),
                 ],
@@ -123,11 +127,15 @@ class _VisaScreenState extends State<VisaScreen> {
                     child: const Icon(Icons.add_card_rounded, color: _mintColor),
                   ),
                   const SizedBox(width: 12),
-                  Text(
-                    tr('Add New Visa'),
-                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                      fontWeight: FontWeight.w800,
-                      color: Colors.black87,
+                  Flexible(
+                    child: Text(
+                      tr('Add New Visa'),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        fontWeight: FontWeight.w800,
+                        color: Colors.black87,
+                      ),
                     ),
                   ),
                 ],
@@ -207,6 +215,8 @@ class _VisaScreenState extends State<VisaScreen> {
                 ),
                 child:  Text(
                   tr('Save Visa Info'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
               ),
@@ -401,12 +411,16 @@ class _VisaScreenState extends State<VisaScreen> {
                       children: [
                         const Icon(Icons.class_outlined, size: 16, color: Colors.grey),
                         const SizedBox(width: 8),
-                        Text(
-                          tr(visa.visaType),
-                          style: TextStyle(
-                            fontSize: 15,
-                            color: Colors.grey[800],
-                            fontWeight: FontWeight.w600,
+                        Flexible(
+                          child: Text(
+                            tr(visa.visaType),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.grey[800],
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
                       ],
@@ -418,12 +432,16 @@ class _VisaScreenState extends State<VisaScreen> {
                   children: [
                     Icon(Icons.event_busy, size: 16, color: Colors.red[300]),
                     const SizedBox(width: 8),
-                    Text(
-                      tr('Expires: ${visa.expiryDate}'),
-                      style: TextStyle(
-                        color: Colors.red[400],
-                        fontWeight: FontWeight.w600,
-                        fontSize: 14,
+                    Flexible(
+                      child: Text(
+                        tr('Expires: ${visa.expiryDate}'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          color: Colors.red[400],
+                          fontWeight: FontWeight.w600,
+                          fontSize: 14,
+                        ),
                       ),
                     ),
                   ],

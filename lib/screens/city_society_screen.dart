@@ -60,7 +60,7 @@ class CitySocietyTabScreen extends StatelessWidget{
   });
 }
 
-class _SH extends StatelessWidget{final String label;const _SH({required this.label});@override Widget build(BuildContext context)=>Padding(padding:const EdgeInsets.fromLTRB(16,24,16,12),child:Row(children:[Text(tr(label),style:const TextStyle(fontSize:11,fontWeight:FontWeight.w700,letterSpacing:2.0,color:_C.inkLight)),const SizedBox(width:12),Expanded(child:Container(height:1,color:_C.divider))]));}
+class _SH extends StatelessWidget{final String label;const _SH({required this.label});@override Widget build(BuildContext context)=>Padding(padding:const EdgeInsets.fromLTRB(16,24,16,12),child:Row(children:[Flexible(child:Text(tr(label),maxLines:1,overflow:TextOverflow.ellipsis,style:const TextStyle(fontSize:11,fontWeight:FontWeight.w700,letterSpacing:2.0,color:_C.inkLight))),const SizedBox(width:12),Expanded(child:Container(height:1,color:_C.divider))]));}
 
 class _RankCard extends StatefulWidget{final CityProvider provider;const _RankCard({required this.provider});@override State<_RankCard> createState()=>_RankCardState();}
 class _RankCardState extends State<_RankCard>{
@@ -130,7 +130,7 @@ class _RankCardState extends State<_RankCard>{
                   Expanded(child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
                     Row(children:[Expanded(child:Text(item.name,style:TextStyle(fontSize:13,fontWeight:isV?FontWeight.w700:FontWeight.w500,color:_C.ink),overflow:TextOverflow.ellipsis)),if(isV)...[const SizedBox(width:4),Icon(Icons.check_circle_rounded,size:14,color:_sel.themeColor)],const SizedBox(width:6),Text(tr(val.toStringAsFixed(1)),style:const TextStyle(fontSize:13,fontWeight:FontWeight.w700,color:_C.ink))]),
                     const SizedBox(height:5),ClipRRect(borderRadius:BorderRadius.circular(3),child:LinearProgressIndicator(value:barFrac,minHeight:3,backgroundColor:_C.divider,valueColor:AlwaysStoppedAnimation<Color>(barColor))),
-                    const SizedBox(height:3),Row(children:[Text(tr(_cf(item)),style:const TextStyle(fontSize:11)),const SizedBox(width:4),Text(tr(item.country),style:const TextStyle(fontSize:10,color:_C.inkLight))]),
+                    const SizedBox(height:3),Row(children:[Text(tr(_cf(item)),style:const TextStyle(fontSize:11)),const SizedBox(width:4),Flexible(child:Text(tr(item.country),maxLines:1,overflow:TextOverflow.ellipsis,style:const TextStyle(fontSize:10,color:_C.inkLight)))]),
                   ])),
                 ])),
           );

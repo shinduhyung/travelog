@@ -456,6 +456,8 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
                   value: value,
                   child: Text(
                     tr(value),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
                       color: _primaryColor,
@@ -644,10 +646,14 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         title:  Text(
           tr('Group by Itinerary'),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: TextStyle(fontWeight: FontWeight.w600),
         ),
         subtitle: Text(
           tr('Through-ticket as one purchase'),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: Theme.of(context).textTheme.bodySmall?.copyWith(
             color: Colors.grey[600],
             fontSize: 12,
@@ -699,7 +705,7 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Text(tr(label), style: TextStyle(fontSize: 12, color: Colors.grey.shade600, fontWeight: FontWeight.bold)),
+        Text(tr(label), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12, color: Colors.grey.shade600, fontWeight: FontWeight.bold)),
         const SizedBox(height: 4),
         RichText(
           textAlign: TextAlign.center,
@@ -778,13 +784,17 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
           children: [
             Padding(
               padding: const EdgeInsets.only(bottom: 24),
-              child: Text(
-                tr('Purchase Type'),
-                style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                  fontWeight: FontWeight.w900,
-                  fontSize: 24,
-                  color: _primaryColor.lighten(0.1),
-                  letterSpacing: 0.5,
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  tr('Purchase Type'),
+                  maxLines: 1,
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                    fontWeight: FontWeight.w900,
+                    fontSize: 24,
+                    color: _primaryColor.lighten(0.1),
+                    letterSpacing: 0.5,
+                  ),
                 ),
               ),
             ),
@@ -867,8 +877,8 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
       child: SegmentedButton<bool>(
         showSelectedIcon: false,
         segments:  [
-          ButtonSegment<bool>(value: false, label: Text(tr('Flight Logs')), icon: Icon(Icons.list_alt)),
-          ButtonSegment<bool>(value: true, label: Text(tr('Ranking')), icon: Icon(Icons.emoji_events)),
+          ButtonSegment<bool>(value: false, label: Text(tr('Flight Logs'), maxLines: 1, overflow: TextOverflow.ellipsis), icon: Icon(Icons.list_alt)),
+          ButtonSegment<bool>(value: true, label: Text(tr('Ranking'), maxLines: 1, overflow: TextOverflow.ellipsis), icon: Icon(Icons.emoji_events)),
         ],
         selected: {_showRanking},
         onSelectionChanged: (Set<bool> newSelection) => setState(() => _showRanking = newSelection.first),
@@ -911,6 +921,7 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
         ],
       ),
       child: DropdownButtonFormField<String>(
+        isExpanded: true,
         value: _selectedPurchaseType,
         decoration: inputDecoration,
         items: _purchaseTypeInfo.entries.map((entry) => DropdownMenuItem<String>(
@@ -919,7 +930,7 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
             children: [
               Container(width: 8, height: 8, decoration: BoxDecoration(color: entry.value['color'], shape: BoxShape.circle)),
               const SizedBox(width: 12),
-              Text(tr(entry.value['name']), style: TextStyle(color: entry.value['color'], fontWeight: FontWeight.w600)),
+              Flexible(child: Text(tr(entry.value['name']), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: entry.value['color'], fontWeight: FontWeight.w600))),
             ],
           ),
         )).toList(),
@@ -993,11 +1004,12 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
               children: [
                 Expanded(
                   child: DropdownButtonFormField<String>(
+                    isExpanded: true,
                     value: _mileageRankingMode,
                     decoration:  InputDecoration(labelText: tr('Sort By'), border: OutlineInputBorder()),
                     items:  [
-                      DropdownMenuItem(value: 'Amount', child: Text(tr('Amount'))),
-                      DropdownMenuItem(value: 'Count', child: Text(tr('Count'))),
+                      DropdownMenuItem(value: 'Amount', child: Text(tr('Amount'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                      DropdownMenuItem(value: 'Count', child: Text(tr('Count'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                     ],
                     onChanged: (value) {
                       if (value != null) {
@@ -1012,11 +1024,12 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
                 const SizedBox(width: 8),
                 Expanded(
                   child: DropdownButtonFormField<String>(
+                    isExpanded: true,
                     value: _mileageRankingAttribution,
                     decoration:  InputDecoration(labelText: tr('Group By'), border: OutlineInputBorder()),
                     items:  [
-                      DropdownMenuItem(value: 'Operating', child: Text(tr('Operating Airline'), style: TextStyle(fontSize: 13))),
-                      DropdownMenuItem(value: 'Purchasing', child: Text(tr('Mileage Program'), style: TextStyle(fontSize: 13))),
+                      DropdownMenuItem(value: 'Operating', child: Text(tr('Operating Airline'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 13))),
+                      DropdownMenuItem(value: 'Purchasing', child: Text(tr('Mileage Program'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 13))),
                     ],
                     onChanged: (value) {
                       if (value != null) {
@@ -1172,7 +1185,7 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
                   child: Icon(Icons.trending_up, color: _primaryColor, size: 24),
                 ),
                 const SizedBox(width: 12),
-                Text(tr("Yearly Trend (10 Years)"), style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold, fontSize: 20)),
+                Flexible(child: Text(tr("Yearly Trend (10 Years)"), maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold, fontSize: 20))),
               ],
             ),
             const SizedBox(height: 16),
@@ -1184,8 +1197,8 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
                   // [수정] 체크 표시 제거
                   showSelectedIcon: false,
                   segments:  [
-                    ButtonSegment(value: 'Cash', label: Text(tr('Cash'))),
-                    ButtonSegment(value: 'Mileage', label: Text(tr('Mileage')))
+                    ButtonSegment(value: 'Cash', label: Text(tr('Cash'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                    ButtonSegment(value: 'Mileage', label: Text(tr('Mileage'), maxLines: 1, overflow: TextOverflow.ellipsis))
                   ],
                   selected: {_lineChartType},
                   onSelectionChanged: (newSelection) {
@@ -1203,13 +1216,19 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
                   ),
                 ),
                 // [수정] Include VAT 스위치 배치 및 Mileage 선택 시 비활성화(회색) 처리
-                Row(
+                Flexible(
+                  child: Row(
+                  mainAxisSize: MainAxisSize.min,
                   children: [
-                    Text(
-                      tr('Include VAT'),
-                      style: TextStyle(
-                        // Mileage일 때 회색으로 표시
-                        color: isCash ? Colors.black87 : Colors.grey,
+                    Flexible(
+                      child: Text(
+                        tr('Include VAT'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          // Mileage일 때 회색으로 표시
+                          color: isCash ? Colors.black87 : Colors.grey,
+                        ),
                       ),
                     ),
                     Switch(
@@ -1224,6 +1243,7 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
                       } : null,
                     ),
                   ],
+                ),
                 ),
               ],
             ),
@@ -1326,7 +1346,7 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(log.airlineName ?? tr('Unknown'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16)),
+                    Text(log.airlineName ?? tr('Unknown'), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16)),
                     const SizedBox(height: 4),
                     Text(tr(displayFlightNumber), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: _primaryColor)),
                     const SizedBox(height: 4),

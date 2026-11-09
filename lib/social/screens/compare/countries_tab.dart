@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 
 import '../../data/geo_data.dart';
 import '../../models/stats.dart';
@@ -72,8 +73,8 @@ class _CountriesTabState extends State<CountriesTab> with AutomaticKeepAliveClie
       SectionCard(
         emoji: '🗺️',
         tint: AppColors.mint,
-        title: 'Shared world map',
-        subtitle: 'Tap a country for details',
+        title: tr('Shared world map'),
+        subtitle: tr('Tap a country for details'),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -83,9 +84,9 @@ class _CountriesTabState extends State<CountriesTab> with AutomaticKeepAliveClie
             ),
             const SizedBox(height: 10),
             MapLegend(items: [
-              (AppColors.both, 'Both ${c.both.length}'),
-              (AppColors.me, 'Only you ${c.onlyMine.length}'),
-              (AppColors.friend, '$short only ${c.onlyTheirs.length}'),
+              (AppColors.both, tr('Both ${c.both.length}')),
+              (AppColors.me, tr('Only you ${c.onlyMine.length}')),
+              (AppColors.friend, tr('$short only ${c.onlyTheirs.length}')),
             ]),
             const SizedBox(height: 12),
             OverlapBar(onlyMine: c.onlyMine.length, both: c.both.length, onlyTheirs: c.onlyTheirs.length),
@@ -95,16 +96,16 @@ class _CountriesTabState extends State<CountriesTab> with AutomaticKeepAliveClie
       SectionCard(
         emoji: '🏁',
         tint: AppColors.both,
-        title: 'Flag collection',
-        subtitle: shown.length == 1 ? '1 country' : '${shown.length} countries',
+        title: tr('Flag collection'),
+        subtitle: shown.length == 1 ? tr('1 country') : tr('${shown.length} countries'),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ChipBar(children: [
-              _chip('Both', _Filter.both, AppColors.both),
-              _chip('You', _Filter.mine, AppColors.me),
+              _chip(tr('Both'), _Filter.both, AppColors.both),
+              _chip(tr('You'), _Filter.mine, AppColors.me),
               _chip(short, _Filter.theirs, AppColors.friend),
-              _chip('All', _Filter.all, theme.colorScheme.primary),
+              _chip(tr('All'), _Filter.all, theme.colorScheme.primary),
             ]),
             const SizedBox(height: 8),
             SingleChildScrollView(
@@ -113,7 +114,7 @@ class _CountriesTabState extends State<CountriesTab> with AutomaticKeepAliveClie
                 Padding(
                   padding: const EdgeInsets.only(right: 6),
                   child: ChoiceChip(
-                    label: const Text('All continents'),
+                    label: Text(tr('All continents')),
                     selected: _continent == null,
                     onSelected: (_) => setState(() => _continent = null),
                   ),
@@ -122,7 +123,7 @@ class _CountriesTabState extends State<CountriesTab> with AutomaticKeepAliveClie
                   Padding(
                     padding: const EdgeInsets.only(right: 6),
                     child: ChoiceChip(
-                      label: Text('${continentEmoji[ct]} ${continentLabel(ct)}'),
+                      label: Text('${continentEmoji[ct]} ${tr(continentLabel(ct))}'),
                       selected: _continent == ct,
                       onSelected: (_) => setState(() => _continent = ct),
                     ),
@@ -131,7 +132,7 @@ class _CountriesTabState extends State<CountriesTab> with AutomaticKeepAliveClie
             ),
             const SizedBox(height: 12),
             if (shown.isEmpty)
-              const EmptyHint('No matching countries')
+              EmptyHint(tr('No matching countries'))
             else
               Wrap(
                 spacing: 6,
@@ -153,12 +154,12 @@ class _CountriesTabState extends State<CountriesTab> with AutomaticKeepAliveClie
       SectionCard(
         emoji: '🧭',
         tint: AppColors.indigo,
-        title: 'By continent',
+        title: tr('By continent'),
         trailing: VsLegend(friendName: short, showBoth: false),
         child: Column(children: [
           for (final ct in continents)
             VsBar(
-              label: '${_shortContinent[ct] ?? continentLabel(ct)}\n/${geo.continentTotals[ct] ?? 0}',
+              label: '${tr(_shortContinent[ct] ?? continentLabel(ct))}\n/${geo.continentTotals[ct] ?? 0}',
               emoji: continentEmoji[ct],
               mine: cmp.mine.continents[ct] ?? 0,
               theirs: cmp.theirs.continents[ct] ?? 0,
@@ -168,8 +169,8 @@ class _CountriesTabState extends State<CountriesTab> with AutomaticKeepAliveClie
       SectionCard(
         emoji: '📈',
         tint: AppColors.friend,
-        title: 'Travel timeline',
-        subtitle: 'Countries by first visit',
+        title: tr('Travel timeline'),
+        subtitle: tr('Countries by first visit'),
         trailing: VsLegend(friendName: short, showBoth: false),
         child: Column(
           children: [
@@ -179,7 +180,7 @@ class _CountriesTabState extends State<CountriesTab> with AutomaticKeepAliveClie
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  'Countries visited per year (last 10 years)',
+                  tr('Countries visited per year (last 10 years)'),
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   style: theme.textTheme.labelLarge?.copyWith(fontWeight: FontWeight.w700),
@@ -194,22 +195,22 @@ class _CountriesTabState extends State<CountriesTab> with AutomaticKeepAliveClie
       SectionCard(
         emoji: '📊',
         tint: AppColors.gold,
-        title: 'World coverage',
+        title: tr('World coverage'),
         child: Column(children: [
-          VsBar(label: 'Countries', emoji: '🌍', mine: cmp.mine.worldPercent * 100, theirs: cmp.theirs.worldPercent * 100, format: _pct),
-          VsBar(label: 'Land area', emoji: '📐', mine: cmp.mine.areaPercent * 100, theirs: cmp.theirs.areaPercent * 100, format: _pct),
-          VsBar(label: 'Population', emoji: '👥', mine: cmp.mine.populationPercent * 100, theirs: cmp.theirs.populationPercent * 100, format: _pct),
-          VsBar(label: 'Lived', emoji: '🏠', mine: cmp.me.livedCountries.length, theirs: cmp.friend.livedCountries.length),
-          VsBar(label: 'Wishlist', emoji: '💭', mine: cmp.me.countryWish.length, theirs: cmp.friend.countryWish.length),
-          VsBar(label: 'Regions', emoji: '📍', mine: cmp.me.subregionCount, theirs: cmp.friend.subregionCount),
+          VsBar(label: tr('Countries'), emoji: '🌍', mine: cmp.mine.worldPercent * 100, theirs: cmp.theirs.worldPercent * 100, format: _pct),
+          VsBar(label: tr('Land area'), emoji: '📐', mine: cmp.mine.areaPercent * 100, theirs: cmp.theirs.areaPercent * 100, format: _pct),
+          VsBar(label: tr('Population'), emoji: '👥', mine: cmp.mine.populationPercent * 100, theirs: cmp.theirs.populationPercent * 100, format: _pct),
+          VsBar(label: tr('Lived'), emoji: '🏠', mine: cmp.me.livedCountries.length, theirs: cmp.friend.livedCountries.length),
+          VsBar(label: tr('Wishlist'), emoji: '💭', mine: cmp.me.countryWish.length, theirs: cmp.friend.countryWish.length),
+          VsBar(label: tr('Regions'), emoji: '📍', mine: cmp.me.subregionCount, theirs: cmp.friend.subregionCount),
         ]),
       ),
       if (cmp.ratingGaps.isNotEmpty)
         SectionCard(
           emoji: '⭐',
           tint: AppColors.gold,
-          title: 'Same country, different ratings',
-          subtitle: 'Countries you both rated',
+          title: tr('Same country, different ratings'),
+          subtitle: tr('Countries you both rated'),
           child: Column(children: [
             for (final (n, a, b) in cmp.ratingGaps.take(10))
               Padding(
@@ -237,8 +238,8 @@ class _CountriesTabState extends State<CountriesTab> with AutomaticKeepAliveClie
         SectionCard(
           emoji: '🧳',
           tint: AppColors.friend,
-          title: "$name's picks for you",
-          subtitle: "$name has been, you haven't",
+          title: tr("$name's picks for you"),
+          subtitle: tr("$name has been, you haven't"),
           child: Column(children: [
             for (final n in cmp.recommendForMe.take(8))
               ListTile(
@@ -247,11 +248,11 @@ class _CountriesTabState extends State<CountriesTab> with AutomaticKeepAliveClie
                 title: Text(geo.countryByName(n)?.longName ?? n, maxLines: 1, overflow: TextOverflow.ellipsis),
                 subtitle: Text(
                   [
-                    if (cmp.me.countryWish.contains(n)) '💭 On your wishlist',
-                    if ((cmp.friend.countryInfo[n]?.visits ?? 0) > 1) '${cmp.friend.countryInfo[n]!.visits} visits',
+                    if (cmp.me.countryWish.contains(n)) tr('💭 On your wishlist'),
+                    if ((cmp.friend.countryInfo[n]?.visits ?? 0) > 1) tr('${cmp.friend.countryInfo[n]!.visits} visits'),
                     if (cmp.friend.countryInfo[n]?.firstYear != null) '${cmp.friend.countryInfo[n]!.firstYear}',
                   ].join(' · '),
-                  maxLines: 2,
+                  maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: theme.textTheme.bodySmall?.copyWith(color: AppColors.label),
                 ),
@@ -266,8 +267,8 @@ class _CountriesTabState extends State<CountriesTab> with AutomaticKeepAliveClie
         SectionCard(
           emoji: '💭',
           tint: AppColors.gold,
-          title: 'Shared wishlist',
-          subtitle: 'Plan a trip together?',
+          title: tr('Shared wishlist'),
+          subtitle: tr('Plan a trip together?'),
           child: Wrap(spacing: 6, runSpacing: 6, children: [
             for (final n in cmp.wishOverlap) CountryChip(n, color: AppColors.gold),
           ]),
@@ -321,7 +322,7 @@ class _MostVisited extends StatelessWidget {
                 ),
                 const SizedBox(height: 6),
                 if (rows.isEmpty)
-                  Text('Nothing yet', style: theme.textTheme.labelSmall?.copyWith(color: AppColors.label))
+                  Text(tr('Nothing yet'), maxLines: 1, overflow: TextOverflow.ellipsis, style: theme.textTheme.labelSmall?.copyWith(color: AppColors.label))
                 else
                   ...rows,
               ],
@@ -346,21 +347,21 @@ class _MostVisited extends StatelessWidget {
     return SectionCard(
       emoji: '❤️',
       tint: AppColors.both,
-      title: 'Favorite countries',
+      title: tr('Favorite countries'),
       child: Column(children: [
         if (mineTop.isNotEmpty || theirsTop.isNotEmpty)
           Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            column('Your top rated', [for (final e in mineTop) row(e.key, '★${e.value.rating.toStringAsFixed(1)}')], AppColors.me),
+            column(tr('Your top rated'), [for (final e in mineTop) row(e.key, '★${e.value.rating.toStringAsFixed(1)}')], AppColors.me),
             const SizedBox(width: 10),
-            column("$name's top rated",
+            column(tr("$name's top rated"),
                 [for (final e in theirsTop) row(e.key, '★${e.value.rating.toStringAsFixed(1)}')], AppColors.friend),
           ]),
         if (mine.isNotEmpty || theirs.isNotEmpty) ...[
           const SizedBox(height: 10),
           Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            column('Your most visited', [for (final e in mine) row(e.key, '${e.value.visits}x')], AppColors.me),
+            column(tr('Your most visited'), [for (final e in mine) row(e.key, '${e.value.visits}x')], AppColors.me),
             const SizedBox(width: 10),
-            column("$name's most visited", [for (final e in theirs) row(e.key, '${e.value.visits}x')], AppColors.friend),
+            column(tr("$name's most visited"), [for (final e in theirs) row(e.key, '${e.value.visits}x')], AppColors.friend),
           ]),
         ],
       ]),

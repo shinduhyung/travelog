@@ -1670,12 +1670,12 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 segments:  <ButtonSegment<_AiViewMode>>[
                   ButtonSegment<_AiViewMode>(
                     value: _AiViewMode.summary,
-                    label: Text(tr('Summary')),
+                    label: Text(tr('Summary'), maxLines: 1, overflow: TextOverflow.ellipsis),
                     icon: Icon(Icons.analytics_outlined),
                   ),
                   ButtonSegment<_AiViewMode>(
                     value: _AiViewMode.itinerary,
-                    label: Text(tr('Itinerary')),
+                    label: Text(tr('Itinerary'), maxLines: 1, overflow: TextOverflow.ellipsis),
                     icon: Icon(Icons.route_outlined),
                   ),
                 ],
@@ -1736,7 +1736,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                   padding: const EdgeInsets.only(bottom: 16.0),
                   child: ElevatedButton.icon(
                     icon: const Icon(Icons.map_outlined),
-                    label:  Text(tr('View on Map')),
+                    label: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('View on Map'), maxLines: 1)),
                     onPressed: () {
                       Navigator.push(
                         context,
@@ -1821,8 +1821,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                         )
                             : const Icon(Icons.save_outlined),
                         label: _isSavingModifications
-                            ?  Text(tr('Saving Modifications...'))
-                            :  Text(tr('Save Modifications')),
+                            ? FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Saving Modifications...'), maxLines: 1))
+                            : FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Save Modifications'), maxLines: 1)),
                         onPressed: _isSavingModifications ? null : _saveModifications,
                         style: ElevatedButton.styleFrom(
                           padding: const EdgeInsets.symmetric(vertical: 12),
@@ -1854,8 +1854,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                   )
                       : const Icon(Icons.refresh),
                   label: _isMatching
-                      ?  Text(tr('Matching...'))
-                      :  Text(tr('Re-run Database Matching')),
+                      ? FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Matching...'), maxLines: 1))
+                      : FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Re-run Database Matching'), maxLines: 1)),
                   onPressed: _isMatching
                       ? null
                       : () {
@@ -1888,7 +1888,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     width: 24,
                     child: CircularProgressIndicator(color: Colors.white),
                   )
-                      :  Text(tr('Save Changes to My Data')),
+                      : FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Save Changes to My Data'), maxLines: 1)),
                   onPressed: _isSending ? null : _sendDataToProviders,
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(vertical: 12),
@@ -1967,15 +1967,21 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
+              Flexible(
+                child: Row(
                 children: [
                   Icon(Icons.location_city, color: pinkTheme, size: 24),
                   const SizedBox(width: 8),
-                   Text(
+                  Flexible(
+                    child: Text(
                     tr('Countries & Cities'),
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ],
+              ),
               ),
               IconButton(
                 icon: const Icon(Icons.add_circle_outline),
@@ -2083,12 +2089,16 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     ),
                   ),
                 // 국가명 텍스트
-                Text(
-                  tr(matchedCountry?.name ?? citiesInCountry.countryName),
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: themeColor,
+                Flexible(
+                  child: Text(
+                    tr(matchedCountry?.name ?? citiesInCountry.countryName),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: themeColor,
+                    ),
                   ),
                 ),
               ],
@@ -2159,6 +2169,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     Expanded(
                       child: Text(
                         tr(displayCityName),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
@@ -2186,9 +2198,13 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                           children: [
                             Icon(Icons.flight_land, size: 12, color: Colors.grey[600]),
                             const SizedBox(width: 4),
-                            Text(
-                              tr(arrivalDateText),
-                              style: TextStyle(fontSize: 11, color: Colors.grey[700], fontWeight: FontWeight.w500),
+                            Flexible(
+                              child: Text(
+                                tr(arrivalDateText),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(fontSize: 11, color: Colors.grey[700], fontWeight: FontWeight.w500),
+                              ),
                             ),
                             if (cityDetail.arrivalTime != null && cityDetail.arrivalTime != 'N/A')
                               Text(
@@ -2205,9 +2221,13 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                           children: [
                             Icon(Icons.flight_takeoff, size: 12, color: Colors.grey[600]),
                             const SizedBox(width: 4),
-                            Text(
-                              tr(departureDateText),
-                              style: TextStyle(fontSize: 11, color: Colors.grey[700], fontWeight: FontWeight.w500),
+                            Flexible(
+                              child: Text(
+                                tr(departureDateText),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(fontSize: 11, color: Colors.grey[700], fontWeight: FontWeight.w500),
+                              ),
                             ),
                             if (cityDetail.departureTime != null && cityDetail.departureTime != 'N/A')
                               Text(
@@ -2226,9 +2246,13 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       children: [
                         Icon(Icons.access_time, size: 12, color: Colors.grey[600]),
                         const SizedBox(width: 4),
-                        Text(
-                          tr(displayDuration),
-                          style: TextStyle(fontSize: 11, color: Colors.grey[700]),
+                        Flexible(
+                          child: Text(
+                            tr(displayDuration),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(fontSize: 11, color: Colors.grey[700]),
+                          ),
                         ),
                       ],
                     ),
@@ -3209,15 +3233,21 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
+              Flexible(
+                child: Row(
                 children: [
                   Icon(Icons.flight_takeoff, color: purpleTheme, size: 24),
                   const SizedBox(width: 8),
-                   Text(
+                  Flexible(
+                    child: Text(
                     tr('Flights'),
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ],
+              ),
               ),
               IconButton(
                 icon: const Icon(Icons.add_circle_outline),
@@ -3319,23 +3349,31 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 // 경로 및 시간
                 Row(
                   children: [
-                    Text(
-                      tr(detail.origin),
-                      style: const TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87,
+                    Flexible(
+                      child: Text(
+                        tr(detail.origin),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black87,
+                        ),
                       ),
                     ),
                     const SizedBox(width: 8),
                     Icon(Icons.arrow_forward, size: 16, color: themeColor),
                     const SizedBox(width: 8),
-                    Text(
-                      tr(detail.destination),
-                      style: const TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87,
+                    Flexible(
+                      child: Text(
+                        tr(detail.destination),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black87,
+                        ),
                       ),
                     ),
                   ],
@@ -4092,15 +4130,21 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
+              Flexible(
+                child: Row(
                 children: [
                   Icon(Icons.train, color: greenTheme, size: 24),
                   const SizedBox(width: 8),
-                   Text(
+                  Flexible(
+                    child: Text(
                     tr('Trains'),
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ],
+              ),
               ),
               IconButton(
                 icon: const Icon(Icons.add_circle_outline),
@@ -4152,18 +4196,22 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
               children: [
                 Row(
                   children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                      decoration: BoxDecoration(
-                        color: themeColor,
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Text(
-                        tr(train.trainNumber ?? 'N/A'),
-                        style: const TextStyle(
-                          fontSize: 13,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
+                    Flexible(
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                        decoration: BoxDecoration(
+                          color: themeColor,
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: Text(
+                          tr(train.trainNumber ?? 'N/A'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ),
@@ -4733,15 +4781,21 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
+              Flexible(
+                child: Row(
                 children: [
                   Icon(Icons.directions_bus, color: orangeTheme, size: 24),
                   const SizedBox(width: 8),
-                   Text(
+                  Flexible(
+                    child: Text(
                     tr('Buses'),
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ],
+              ),
               ),
               IconButton(
                 icon: const Icon(Icons.add_circle_outline),
@@ -5371,15 +5425,21 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
+              Flexible(
+                child: Row(
                 children: [
                   Icon(Icons.directions_boat, color: tealTheme, size: 24),
                   const SizedBox(width: 8),
-                   Text(
+                  Flexible(
+                    child: Text(
                     tr('Ferries'),
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ],
+              ),
               ),
               IconButton(
                 icon: const Icon(Icons.add_circle_outline),
@@ -6009,15 +6069,21 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
+              Flexible(
+                child: Row(
                 children: [
                   Icon(Icons.directions_car, color: redTheme, size: 24),
                   const SizedBox(width: 8),
-                   Text(
+                  Flexible(
+                    child: Text(
                     tr('Cars'),
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ],
+              ),
               ),
               IconButton(
                 icon: const Icon(Icons.add_circle_outline),
@@ -6642,15 +6708,21 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
+                Flexible(
+                  child: Row(
                   children: [
                     Icon(Icons.explore, color: Colors.indigo, size: 24),
                     const SizedBox(width: 8),
-                     Text(
+                    Flexible(
+                      child: Text(
                       tr('Explore'),
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ],
+                ),
                 ),
                 IconButton(
                   icon: const Icon(Icons.add_circle_outline),
@@ -6726,15 +6798,21 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
+              Flexible(
+                child: Row(
                 children: [
                   Icon(Icons.explore, color: Colors.indigo, size: 24),
                   const SizedBox(width: 8),
-                   Text(
+                  Flexible(
+                    child: Text(
                     tr('Explore'),
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ],
+              ),
               ),
               IconButton(
                 icon: const Icon(Icons.add_circle_outline),
@@ -6815,12 +6893,16 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
             children: [
               Icon(icon, color: color, size: 18),
               const SizedBox(width: 8),
-              Text(
-                tr(title),
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  color: color,
+              Flexible(
+                child: Text(
+                  tr(title),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: color,
+                  ),
                 ),
               ),
               const SizedBox(width: 8),
@@ -6898,6 +6980,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     children: [
                       Text(
                         tr(cleanedLandmarkName),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
@@ -6907,6 +6991,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       if (dateText.isNotEmpty)
                         Text(
                           tr(dateText),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                               fontSize: 12,
                               color: Colors.blueGrey[700],
@@ -6915,6 +7001,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       else if (cityName != null)
                         Text(
                           cityName,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyle(fontSize: 12, color: Colors.grey[600]),
                         ),
                     ],
@@ -7279,15 +7367,21 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
+              Flexible(
+                child: Row(
                 children: [
                   Icon(Icons.flight_takeoff, color: Theme.of(context).primaryColor, size: 24),
                   const SizedBox(width: 8),
-                   Text(
+                  Flexible(
+                    child: Text(
                     tr('Airports'),
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ],
+              ),
               ),
               IconButton(
                 icon: const Icon(Icons.add_circle_outline),
@@ -7448,12 +7542,16 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                         children: [
                           Icon(Icons.calendar_today, size: 10, color: Colors.grey[600]),
                           const SizedBox(width: 4),
-                          Text(
-                            tr(dateTimeText),
-                            style: TextStyle(
-                              fontSize: 12,
-                              color: isMatched ? Colors.grey[700] : Colors.grey[600],
-                              fontWeight: FontWeight.w500,
+                          Flexible(
+                            child: Text(
+                              tr(dateTimeText),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: isMatched ? Colors.grey[700] : Colors.grey[600],
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
                           ),
                           if (airportLog.isTransit)
@@ -8129,14 +8227,17 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                         child: const Icon(Icons.storage, color: Colors.white, size: 24),
                       ),
                       const SizedBox(width: 12),
-                       Text(
-                        tr('Add to Database'),
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
+                      Expanded(
+                        child: Text(
+                          tr('Add to Database'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
-                      const Spacer(),
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                         decoration: BoxDecoration(
@@ -8145,6 +8246,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                         ),
                         child: Text(
                           tr('$totalCount selected'),
+                          maxLines: 1,
                           style: const TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
@@ -8204,7 +8306,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                               color: const Color(0xFF9C27B0),
                               title: flight.flightNumber,
                               // 날짜와 경로를 subtitle에 표시
-                              subtitle: '${flight.origin} → ${flight.destination} (${flight.flightDate ?? 'Unknown'})',
+                              subtitle: '${flight.origin} → ${flight.destination} (${flight.flightDate ?? tr('Unknown')})',
                               trailing: '🆕', // 숫자 증가 대신 New 배지 사용
                             );
                           }).toList(),
@@ -8234,7 +8336,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                           ...airports.map((airportLog) { // 🆕 AirportLog 순회
                             final isSelected = selectedAirports.contains(airportLog);
                             final dateStr = airportLog.visitDate ?? 'Unknown Date';
-                            final transitStr = airportLog.isTransit ? ' (Transit)' : '';
+                            final transitStr = airportLog.isTransit ? ' (${tr('Transit')})' : '';
 
                             return _buildSelectableItem(
                               isSelected: isSelected,
@@ -8250,7 +8352,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                               icon: Icons.flight,
                               color: const Color(0xFF2196F3),
                               title: airportLog.name,
-                              subtitle: '${airportLog.iataCode} / $dateStr$transitStr', // IATA + 날짜 표시
+                              subtitle: '${airportLog.iataCode} / ${tr(dateStr)}$transitStr', // IATA + 날짜 표시
                               trailing: '🆕 Visit',
                             );
                           }).toList(),
@@ -8448,7 +8550,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                                 icon: Icons.location_city,
                                 color: const Color(0xFF8B4513),
                                 title: unescoSite.name,
-                                subtitle: '$dateStr (${unescoSite.type})', // 날짜 및 타입
+                                subtitle: '$dateStr (${tr(unescoSite.type)})', // 날짜 및 타입
                                 trailing: '🆕',
                               );
                             }).toList(),
@@ -8474,9 +8576,13 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                             padding: const EdgeInsets.symmetric(vertical: 16),
                             side: BorderSide(color: Colors.grey.shade400),
                           ),
-                          child:  Text(
-                            tr('Cancel'),
-                            style: TextStyle(fontSize: 16),
+                          child: FittedBox(
+                            fit: BoxFit.scaleDown,
+                            child: Text(
+                              tr('Cancel'),
+                              maxLines: 1,
+                              style: const TextStyle(fontSize: 16),
+                            ),
                           ),
                         ),
                       ),
@@ -8497,9 +8603,13 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                             });
                           },
                           icon: const Icon(Icons.save, size: 20),
-                          label: Text(
-                            tr('Add $totalCount ${totalCount == 1 ? 'Item' : 'Items'}'),
-                            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                          label: FittedBox(
+                            fit: BoxFit.scaleDown,
+                            child: Text(
+                              tr('Add $totalCount ${totalCount == 1 ? 'Item' : 'Items'}'),
+                              maxLines: 1,
+                              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                            ),
                           ),
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.blue,
@@ -8545,33 +8655,43 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
           children: [
             Icon(icon, color: color, size: 20),
             const SizedBox(width: 8),
-            Text(
-              tr(title),
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-                color: color,
+            Expanded(
+              child: Row(
+                children: [
+                  Flexible(
+                    child: Text(
+                      tr(title),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: color,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                    decoration: BoxDecoration(
+                      color: color,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Text(
+                      tr('$selectedCount/$count'),
+                      style: const TextStyle(
+                        fontSize: 12,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
-            const SizedBox(width: 8),
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-              decoration: BoxDecoration(
-                color: color,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Text(
-                tr('$selectedCount/$count'),
-                style: const TextStyle(
-                  fontSize: 12,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            const Spacer(),
             Text(
               tr(allSelected ? 'Deselect All' : 'Select All'),
+              maxLines: 1,
               style: TextStyle(
                 fontSize: 12,
                 color: color,
@@ -8633,6 +8753,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
         ),
         title: Text(
           tr(title),
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
           style: TextStyle(
             fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
             fontSize: 14,
@@ -8641,6 +8763,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
         subtitle: subtitle != null
             ? Text(
           tr(subtitle),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: TextStyle(
             fontSize: 12,
             color: Colors.grey.shade600,

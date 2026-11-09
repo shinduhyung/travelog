@@ -1,3 +1,5 @@
+import 'package:jidoapp/widgets/automatic_back_guard.dart';
+import 'package:jidoapp/services/social_notification_service.dart';
 import 'dart:async';
 import 'package:jidoapp/services/screen_tracking.dart';
 import 'package:jidoapp/services/screen_registry.dart';
@@ -7,8 +9,11 @@ import 'dart:io' show Platform;
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_quill/flutter_quill.dart' show FlutterQuillLocalizations;
+import 'package:flutter_quill/flutter_quill.dart'
+    show FlutterQuillLocalizations;
 import 'package:jidoapp/l10n/app_localizations.dart';
+import 'package:jidoapp/l10n/l10n_audit.dart';
+import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:jidoapp/screens/daily_quiz_screen.dart';
@@ -55,6 +60,7 @@ import 'package:jidoapp/providers/trip_log_provider.dart';
 import 'package:jidoapp/services/ai_service.dart';
 import 'package:jidoapp/services/home_widget_service.dart';
 import 'package:jidoapp/services/ad_service.dart';
+import 'package:jidoapp/widgets/native_back_scope.dart';
 import 'package:jidoapp/services/subscription_service.dart';
 import 'package:jidoapp/services/game_scores_sync_service.dart';
 
@@ -70,7 +76,7 @@ import 'package:latlong2/latlong.dart';
 import 'package:timezone/data/latest.dart' as tz;
 import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'package:facebook_app_events/facebook_app_events.dart';
-import 'package:jidoapp/social/social_hub.dart' show socialRouteName;
+import 'package:jidoapp/social/social_hub.dart' show socialRouteName, SocialHub;
 
 const MaterialColor mintSwatch = MaterialColor(0xFF3DDAD7, <int, Color>{
   50: Color(0xFFE0F7F7),
@@ -139,44 +145,52 @@ class _FloatingBackButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Localizations.maybeLocaleOf(context);
-    return AnimatedBuilder(
-      animation: _appNavObserver,
-      builder: (context, _) {
-        final canPop = (navigatorKey.currentState?.canPop() ?? false) && !_appNavObserver.onSocialPage;
-        return SafeArea(
-          child: AnimatedOpacity(
-            opacity: canPop ? 1.0 : 0.0,
-            duration: const Duration(milliseconds: 150),
-            child: IgnorePointer(
-              ignoring: !canPop,
-              child: Padding(
-                padding: const EdgeInsets.only(left: 8, top: 4),
-                child: Material(
-                  color: Colors.black.withOpacity(0.28),
-                  shape: const CircleBorder(),
-                  child: InkWell(
-                    customBorder: const CircleBorder(),
-                    onTap: () {
-                      if (navigatorKey.currentState?.canPop() ?? false) {
-                        navigatorKey.currentState!.pop();
-                      }
-                    },
-                    child: const SizedBox(
-                      width: 36,
-                      height: 36,
-                      child: Icon(
-                        Icons.arrow_back_ios_new_rounded,
-                        size: 16,
-                        color: Colors.white,
+    return AutomaticBackGuard(
+      navigatorKey: navigatorKey,
+      changes: _appNavObserver,
+      currentRoute: () => _appNavObserver._topPage,
+      child: AnimatedBuilder(
+        animation: Listenable.merge([_appNavObserver, nativeBackRoutes]),
+        builder: (context, _) {
+          final canPop =
+              (navigatorKey.currentState?.canPop() ?? false) &&
+              !_appNavObserver.onSocialPage &&
+              !nativeBackRoutes.value.contains(_appNavObserver._topPage);
+          return SafeArea(
+            child: AnimatedOpacity(
+              opacity: canPop ? 1.0 : 0.0,
+              duration: const Duration(milliseconds: 150),
+              child: IgnorePointer(
+                ignoring: !canPop,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 8, top: 4),
+                  child: Material(
+                    color: Colors.black.withOpacity(0.28),
+                    shape: const CircleBorder(),
+                    child: InkWell(
+                      customBorder: const CircleBorder(),
+                      onTap: () {
+                        if (navigatorKey.currentState?.canPop() ?? false) {
+                          navigatorKey.currentState!.pop();
+                        }
+                      },
+                      child: const SizedBox(
+                        width: 36,
+                        height: 36,
+                        child: Icon(
+                          Icons.arrow_back_ios_new_rounded,
+                          size: 16,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ),
                 ),
               ),
             ),
-          ),
-        );
-      },
+          );
+        },
+      ),
     );
   }
 }
@@ -188,6 +202,9 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
 }
 
 Future<void> _saveFcmToken() async {
+  SocialNotificationService.start(navigatorKey, (context) {
+    SocialHub.openFriends(context);
+  });
   try {
     final messaging = FirebaseMessaging.instance;
     final token = await messaging.getToken();
@@ -260,6 +277,11 @@ void _navigateToQuiz(
 }
 
 void _handleNotificationTap(RemoteMessage message) {
+  if (message.data['type'] == 'social_friend_request') {
+    final context = navigatorKey.currentContext;
+    if (context != null) SocialHub.openFriends(context);
+    return;
+  }
   final date = message.data['date'] as String?;
   final mode = message.data['mode'] as String?;
   final isExpert = mode == 'expert';
@@ -276,6 +298,16 @@ void main() {
   FlutterError.onError = (FlutterErrorDetails details) {
     debugPrint('🔴🔴🔴 [FlutterError] ${details.exceptionAsString()}');
     debugPrint('🔴 [FlutterError] Stack:\n${details.stack}');
+    // 오버플로우 위치(파일:줄)를 매번 한 줄로 남긴다. presentError는 두 번째부터 요약만 찍는다.
+    if (kDebugMode && details.exceptionAsString().contains('overflowed')) {
+      final where = details
+          .toString()
+          .split('\n')
+          .where((l) => l.contains('lib/'))
+          .map((l) => l.trim())
+          .join(' | ');
+      debugPrint('[OVERFLOW] ${details.exceptionAsString().split('\n').first} @ $where');
+    }
     FlutterError.presentError(details);
   };
 
@@ -286,6 +318,7 @@ void main() {
 
       WidgetsFlutterBinding.ensureInitialized();
       await AppLocale.instance.load();
+      unawaited(L10nAudit.start());
       debugPrint('🟢 [DEBUG] 1) WidgetsFlutterBinding.ensureInitialized 완료');
 
       // 플랫폼 레벨(네이티브 채널 등) uncaught 에러를 잡습니다.
@@ -1129,48 +1162,48 @@ Widget _buildAppShell(Widget home, {GlobalKey<NavigatorState>? navKey}) {
   return AnimatedBuilder(
     animation: AppLocale.instance,
     builder: (context, _) => AnnotatedRegion<SystemUiOverlayStyle>(
-    value: _defaultSystemUiOverlayStyle,
-    child: MaterialApp(
-      locale: AppLocale.instance.locale,
-      supportedLocales: AppLocale.supportedLocales,
-      localizationsDelegates: [
-        ...GlobalMaterialLocalizations.delegates,
-        FlutterQuillLocalizations.delegate,
-      ],
-      navigatorKey: navKey,
-      navigatorObservers: [
-        _appNavObserver,
-        AdNavigatorObserver(),
-        ScreenTrackingObserver(resolve: screenNameForWidget),
-      ],
-      title: 'Travelog',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: mintSwatch,
-        primaryColor: const Color(0xFF3DDAD7),
-        scaffoldBackgroundColor: const Color(0xFFF5F5F5),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF3DDAD7)),
-        useMaterial3: true,
-      ),
-      builder: (context, child) {
-        return Listener(
-          behavior: HitTestBehavior.translucent,
-          onPointerDown: (_) {
-            AdService.instance.recordGlobalTouch();
-          },
-          child: BadgeGlobalListener(
-            child: Stack(
-              children: [
-                child ?? const SizedBox.shrink(),
-                if (navKey != null) _FloatingBackButton(navigatorKey: navKey),
-              ],
+      value: _defaultSystemUiOverlayStyle,
+      child: MaterialApp(
+        locale: AppLocale.instance.locale,
+        supportedLocales: AppLocale.supportedLocales,
+        localizationsDelegates: [
+          ...GlobalMaterialLocalizations.delegates,
+          FlutterQuillLocalizations.delegate,
+        ],
+        navigatorKey: navKey,
+        navigatorObservers: [
+          _appNavObserver,
+          AdNavigatorObserver(),
+          ScreenTrackingObserver(resolve: screenNameForWidget),
+        ],
+        title: 'Travelog',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primarySwatch: mintSwatch,
+          primaryColor: const Color(0xFF3DDAD7),
+          scaffoldBackgroundColor: const Color(0xFFF5F5F5),
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+          colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF3DDAD7)),
+          useMaterial3: true,
+        ),
+        builder: (context, child) {
+          return Listener(
+            behavior: HitTestBehavior.translucent,
+            onPointerDown: (_) {
+              AdService.instance.recordGlobalTouch();
+            },
+            child: BadgeGlobalListener(
+              child: Stack(
+                children: [
+                  child ?? const SizedBox.shrink(),
+                  if (navKey != null) _FloatingBackButton(navigatorKey: navKey),
+                ],
+              ),
             ),
-          ),
-        );
-      },
-      home: home,
-    ),
+          );
+        },
+        home: home,
+      ),
     ),
   );
 }
@@ -1329,8 +1362,10 @@ class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
         final count = badgeProvider.newlyUnlocked.length;
         _isShowingDialog = true;
         debugPrint('🏅 [BADGE DEBUG] summary dialog OPEN: $count badges');
-        final goToBadges =
-            await BadgeSummaryDialog.show(overlayContext, badgeProvider.newlyUnlocked);
+        final goToBadges = await BadgeSummaryDialog.show(
+          overlayContext,
+          badgeProvider.newlyUnlocked,
+        );
         _isShowingDialog = false;
         badgeProvider.clearNewlyUnlocked();
         if (goToBadges == true && mounted) {
@@ -1495,7 +1530,7 @@ class _NewBadgesExpansionDialog extends StatelessWidget {
                         ),
                       ],
                     ),
-                    child:  Text(
+                    child: Text(
                       tr('NEW'),
                       style: TextStyle(
                         fontSize: 12,
@@ -1522,18 +1557,24 @@ class _NewBadgesExpansionDialog extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 6),
-                   Text(
-                    tr('New Badges Just Landed'),
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w800,
-                      color: Colors.white,
-                      letterSpacing: -0.3,
+                  FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      tr('New Badges Just Landed'),
+                      maxLines: 1,
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w800,
+                        color: Colors.white,
+                        letterSpacing: -0.3,
+                      ),
                     ),
                   ),
                   const SizedBox(height: 10),
                   Text(
-                    tr('Countries, cities, landmarks, and flights — a huge batch of new achievements is ready to collect. A few might already be unlocked from your past trips.'),
+                    tr(
+                      'Countries, cities, landmarks, and flights — a huge batch of new achievements is ready to collect. A few might already be unlocked from your past trips.',
+                    ),
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 13.5,
@@ -1555,11 +1596,15 @@ class _NewBadgesExpansionDialog extends StatelessWidget {
                         ),
                         elevation: 0,
                       ),
-                      child:  Text(
-                        tr('View New Badges'),
-                        style: TextStyle(
-                          fontSize: 15.5,
-                          fontWeight: FontWeight.w800,
+                      child: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          tr('View New Badges'),
+                          maxLines: 1,
+                          style: TextStyle(
+                            fontSize: 15.5,
+                            fontWeight: FontWeight.w800,
+                          ),
                         ),
                       ),
                     ),
@@ -1698,7 +1743,7 @@ class _BadgeSharePromoDialogState extends State<_BadgeSharePromoDialog> {
                       const SizedBox(width: 12),
                       Expanded(
                         child: RichText(
-                          text:  TextSpan(
+                          text: TextSpan(
                             style: TextStyle(
                               fontSize: 13,
                               color: Color(0xFF444444),
@@ -1784,12 +1829,16 @@ class _BadgeSharePromoDialogState extends State<_BadgeSharePromoDialog> {
                                   color: Color(0xFFFFB347),
                                 ),
                           const SizedBox(width: 8),
-                           Text(
-                            tr('Share My Badge'),
-                            style: TextStyle(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w700,
-                              color: Color(0xFFFFB347),
+                          Flexible(
+                            child: Text(
+                              tr('Share My Badge'),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w700,
+                                color: Color(0xFFFFB347),
+                              ),
                             ),
                           ),
                         ],
@@ -1808,10 +1857,7 @@ class _BadgeSharePromoDialogState extends State<_BadgeSharePromoDialog> {
                   foregroundColor: Colors.grey,
                   padding: const EdgeInsets.symmetric(vertical: 12),
                 ),
-                child:  Text(
-                  tr('Maybe later'),
-                  style: TextStyle(fontSize: 14),
-                ),
+                child: Text(tr('Maybe later'), style: TextStyle(fontSize: 14)),
               ),
             ),
           ],

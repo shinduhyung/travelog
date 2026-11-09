@@ -290,13 +290,15 @@ class _CombinedGeoBlockCardState extends State<_CombinedGeoBlockCard> {
               child: Column(
                 children: [
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                    Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      Text(tr("Visited Countries"), style: theme.textTheme.bodyLarge),
-                      Text.rich(TextSpan(
-                        text: tr('$visited'), style: theme.textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
-                        children: [TextSpan(text: tr(' / $total'), style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
-                      )),
-                    ]),
+                    Flexible(
+                      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                        Text(tr("Visited Countries"), maxLines: 1, overflow: TextOverflow.ellipsis, style: theme.textTheme.bodyLarge),
+                        Text.rich(TextSpan(
+                          text: tr('$visited'), style: theme.textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
+                          children: [TextSpan(text: tr(' / $total'), style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
+                        )),
+                      ]),
+                    ),
                     ElevatedButton.icon(
                       onPressed: () {
                         final groups = _selectedGroup.mapGroupsBuilder(widget.allCountries);
@@ -539,13 +541,15 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
               child: Column(
                 children: [
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                    Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      Text(tr("Visited Countries"), style: textTheme.bodyLarge),
-                      Text.rich(TextSpan(
-                        text: tr('$visited'), style: textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
-                        children: [TextSpan(text: tr(' / $total'), style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
-                      )),
-                    ]),
+                    Flexible(
+                      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                        Text(tr("Visited Countries"), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.bodyLarge),
+                        Text.rich(TextSpan(
+                          text: tr('$visited'), style: textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
+                          children: [TextSpan(text: tr(' / $total'), style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
+                        )),
+                      ]),
+                    ),
                     ElevatedButton.icon(
                       onPressed: () {
                         final groups = _selectedGroup.mapGroupsBuilder(widget.allCountries);
@@ -739,7 +743,7 @@ class _CombinedGeoMetricCardState extends State<_CombinedGeoMetricCard> {
                     child: Row(children: [
                       Icon(Icons.public, color: Colors.blue),
                       const SizedBox(width: 12),
-                      Text(tr('Latitude'), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                      Flexible(child: Text(tr('Latitude'), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold))),
                     ]),
                   ),
                   DropdownMenuItem(
@@ -747,7 +751,7 @@ class _CombinedGeoMetricCardState extends State<_CombinedGeoMetricCard> {
                     child: Row(children: [
                       Icon(Icons.terrain, color: Colors.brown),
                       const SizedBox(width: 12),
-                      Text(tr('Elevation'), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                      Flexible(child: Text(tr('Elevation'), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold))),
                     ]),
                   ),
                 ],
@@ -771,6 +775,7 @@ class _CombinedGeoMetricCardState extends State<_CombinedGeoMetricCard> {
                 Expanded(
                   child: DropdownButtonFormField<int>(
                     value: isLatitude ? _latitudeSortOrder : _elevationSortOrder,
+                    isExpanded: true,
                     decoration: InputDecoration(
                         labelText: tr('Order'),
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)), // 둥근 모서리
@@ -779,11 +784,11 @@ class _CombinedGeoMetricCardState extends State<_CombinedGeoMetricCard> {
                     items:  [
                       DropdownMenuItem(
                         value: 0,
-                        child: Text(tr('High')),
+                        child: Text(tr('High'), maxLines: 1, overflow: TextOverflow.ellipsis),
                       ),
                       DropdownMenuItem(
                         value: 1,
-                        child: Text(tr('Low')),
+                        child: Text(tr('Low'), maxLines: 1, overflow: TextOverflow.ellipsis),
                       ),
                     ],
                     onChanged: (v) => setState(() {
@@ -797,28 +802,30 @@ class _CombinedGeoMetricCardState extends State<_CombinedGeoMetricCard> {
                   child: isLatitude
                       ? DropdownButtonFormField<int>(
                     value: _latitudeMetric,
+                    isExpanded: true,
                     decoration: InputDecoration(
                         labelText: tr('Metric'),
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)), // 둥근 모서리
                         isDense: true
                     ),
                     items:  [
-                      DropdownMenuItem(value: 0, child: Text(tr('Average'))),
-                      DropdownMenuItem(value: 1, child: Text(tr('Farthest Pt.'))),
-                      DropdownMenuItem(value: 2, child: Text(tr('Capital'))),
+                      DropdownMenuItem(value: 0, child: Text(tr('Average'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                      DropdownMenuItem(value: 1, child: Text(tr('Farthest Pt.'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                      DropdownMenuItem(value: 2, child: Text(tr('Capital'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                     ],
                     onChanged: (v) => setState(() { _latitudeMetric = v!; _prepareList(); }),
                   )
                       : DropdownButtonFormField<int>(
                     value: _elevationMetric,
+                    isExpanded: true,
                     decoration: InputDecoration(
                         labelText: tr('Metric'),
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)), // 둥근 모서리
                         isDense: true
                     ),
                     items:  [
-                      DropdownMenuItem(value: 1, child: Text(tr('Average'))),
-                      DropdownMenuItem(value: 0, child: Text(tr('Highest'))),
+                      DropdownMenuItem(value: 1, child: Text(tr('Average'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                      DropdownMenuItem(value: 0, child: Text(tr('Highest'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                     ],
                     onChanged: (v) => setState(() { _elevationMetric = v!; _prepareList(); }),
                   ),
@@ -964,7 +971,7 @@ class _CombinedGeoMetricCardState extends State<_CombinedGeoMetricCard> {
                       const SizedBox(width: 12),
                       Text(tr(flagEmoji(item.isoA2)), style: const TextStyle(fontSize: 18)), // 국기 추가
                       const SizedBox(width: 8),
-                      Expanded(child: Text(tr(item.name), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 17))),
+                      Expanded(child: Text(tr(item.name), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 17))),
                       const SizedBox(width: 12),
                       Text(tr(displayValue), style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                     ],
@@ -1086,7 +1093,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                   children: [
                     Icon(Icons.search, color: rankingThemeColor),
                     const SizedBox(width: 8),
-                    Text(tr('Geographic Features'), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                    Flexible(child: Text(tr('Geographic Features'), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold))),
                   ],
                 ),
                 const SizedBox(height: 8),
@@ -1100,7 +1107,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                       child: Row(children: [
                         Icon(group.icon, color: group.themeColor),
                         const SizedBox(width: 12),
-                        Text(tr(group.title), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                        Flexible(child: Text(tr(group.title), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
                       ]),
                     )).toList(),
                     onChanged: (newValue) { if (newValue != null) { setState(() { _selectedRanking = newValue; _prepareList(); }); } },
@@ -1146,7 +1153,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                               const SizedBox(width: 12),
                               Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 18)), // 국기 추가
                               const SizedBox(width: 8),
-                              Expanded(child: Text(tr(country.name), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                              Expanded(child: Text(tr(country.name), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
                               Text(tr(formattedValue), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
@@ -1195,7 +1202,11 @@ Widget _buildHorizontalBar({
         children: [
           SizedBox(
             width: 60,
-            child: Text(tr(label), style: const TextStyle(fontWeight: FontWeight.bold)),
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.centerLeft,
+              child: Text(tr(label), maxLines: 1, style: const TextStyle(fontWeight: FontWeight.bold)),
+            ),
           ),
           Expanded(
             child: Container(

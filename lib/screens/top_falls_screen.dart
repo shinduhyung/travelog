@@ -13,6 +13,7 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:jidoapp/models/visit_date_model.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
+import 'package:jidoapp/widgets/my_match_badge.dart';
 
 const Color _kTheme = Color(0xFF6B9AB8);
 
@@ -79,13 +80,14 @@ class TopFallsScreen extends StatelessWidget {
                   Row(children: [
                     const Icon(Icons.water_drop_rounded, size: 14, color: _kTheme),
                     const SizedBox(width: 5),
-                     Text(tr('Highest Falls'), style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _kTheme, letterSpacing: 0.3)),
+                     Flexible(child: Text(tr('Highest Falls'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _kTheme, letterSpacing: 0.3))),
                   ]),
                   const SizedBox(height: 6),
-                   Text(tr('Top 20 Highest'),
-                      style: TextStyle(fontSize: 28, fontWeight: FontWeight.w900, color: Color(0xFF111827), letterSpacing: -1.0, height: 1.1)),
+                   FittedBox(fit: BoxFit.scaleDown, alignment: Alignment.centerLeft, child: Text(tr('Top 20 Highest'),
+                      maxLines: 1,
+                      style: TextStyle(fontSize: 28, fontWeight: FontWeight.w900, color: Color(0xFF111827), letterSpacing: -1.0, height: 1.1))),
                   const SizedBox(height: 4),
-                  Text(tr('The world\'s tallest waterfalls'), style: TextStyle(fontSize: 12, color: Colors.grey[500], fontWeight: FontWeight.w500)),
+                  Text(tr('The world\'s tallest waterfalls'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12, color: Colors.grey[500], fontWeight: FontWeight.w500)),
                 ])),
                 Consumer<LandmarksProvider>(builder: (context, provider, _) {
                   final visited = _top20Falls.where((m) => provider.visitedLandmarks.contains(m['name'])).length;
@@ -100,7 +102,7 @@ class TopFallsScreen extends StatelessWidget {
                       Text(tr('$visited'), style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: _kTheme, height: 1.0)),
                        Text(tr('/ 20'), style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _kTheme, height: 1.2)),
                       const SizedBox(height: 2),
-                       Text(tr('visited'), style: TextStyle(fontSize: 10, fontWeight: FontWeight.w500, color: _kTheme)),
+                       Text(tr('visited'), maxLines: 1, style: TextStyle(fontSize: 10, fontWeight: FontWeight.w500, color: _kTheme)),
                     ]),
                   );
                 }),
@@ -222,11 +224,12 @@ class TopFallsScreen extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 16, left: 16, right: 8, bottom: 16),
                 child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                    TextButton(onPressed: () => Navigator.pop(sheetContext),
-                        child:  Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
-                    ElevatedButton(onPressed: () => Navigator.pop(sheetContext),
+                    Flexible(child: TextButton(onPressed: () => Navigator.pop(sheetContext),
+                        child:  Text(tr('Cancel'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600)))),
+                    MyMatchBadge.landmark(landmark: freshLandmark, onDark: headerTextColor == Colors.white),
+                    Flexible(child: ElevatedButton(onPressed: () => Navigator.pop(sheetContext),
                         style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
-                        child:  Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))),
+                        child:  Text(tr('Done'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)))),
                   ]),
                   const SizedBox(height: 12),
                   Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -235,6 +238,7 @@ class TopFallsScreen extends StatelessWidget {
                     if (isVisited) const Padding(padding: EdgeInsets.only(left: 8, top: 4),
                         child: Icon(Icons.check_circle, color: headerTextColor, size: 24)),
                   ]),
+                  
                   const SizedBox(height: 10),
                   buildFlags(),
                 ])),
@@ -242,12 +246,12 @@ class TopFallsScreen extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Row(mainAxisSize: MainAxisSize.min, children: [
-                     Text(tr('Wishlist:')),
+                  Flexible(child: Row(mainAxisSize: MainAxisSize.min, children: [
+                     Flexible(child: Text(tr('Wishlist:'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                     IconButton(visualDensity: VisualDensity.compact,
                         icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey),
                         onPressed: () => provider.toggleWishlistStatus(freshLandmark.name)),
-                  ]),
+                  ])),
                   Row(mainAxisSize: MainAxisSize.min, children: [
                      Text(tr('My Rating:')),
                     const SizedBox(width: 8),
@@ -259,7 +263,7 @@ class TopFallsScreen extends StatelessWidget {
                 ]),
                 const Divider(height: 20),
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text(tr('History (${freshLandmark.visitDates.length} entries)'), style: Theme.of(sheetContext).textTheme.titleSmall),
+                  Flexible(child: Text(tr('History (${freshLandmark.visitDates.length} entries)'), maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(sheetContext).textTheme.titleSmall)),
                   OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit')),
                       onPressed: () => provider.addVisitDate(freshLandmark.name)),
                 ]),

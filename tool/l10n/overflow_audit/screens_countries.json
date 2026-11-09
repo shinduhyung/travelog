@@ -1,0 +1,4965 @@
+[
+ {
+  "id": "countries_menu_default",
+  "file": "lib/screens/countries_menu_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Countries"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   784,
+   842,
+   867,
+   936,
+   1216
+  ],
+  "notes": "Countries tab home: map card, donut/progress stats, 6-icon row and stat card (CountryDex selected by default)."
+ },
+ {
+  "id": "countries_menu_card_0_countrydex",
+  "file": "lib/screens/countries_menu_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1205,
+   1216
+  ],
+  "notes": "Stat card shows title 'CountryDex' + 'View detailed statistics' (Expanded column; 18sp title may wrap)."
+ },
+ {
+  "id": "countries_menu_card_1_general",
+  "file": "lib/screens/countries_menu_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded-square icon buttons under the map on the Countries tab (chart (insights) icon; key stat-category-1)"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1205,
+   1216
+  ],
+  "notes": "Stat card shows title 'General' + 'View detailed statistics' (Expanded column; 18sp title may wrap)."
+ },
+ {
+  "id": "countries_menu_card_2_culture",
+  "file": "lib/screens/countries_menu_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#3 of the 6 rounded-square icon buttons under the map on the Countries tab (people (groups) icon; key stat-category-2)"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1205,
+   1216
+  ],
+  "notes": "Stat card shows title 'Culture' + 'View detailed statistics' (Expanded column; 18sp title may wrap)."
+ },
+ {
+  "id": "countries_menu_card_3_world",
+  "file": "lib/screens/countries_menu_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#4 of the 6 rounded-square icon buttons under the map on the Countries tab (globe icon; key stat-category-3)"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1205,
+   1216
+  ],
+  "notes": "Stat card shows title 'World' + 'View detailed statistics' (Expanded column; 18sp title may wrap)."
+ },
+ {
+  "id": "countries_menu_card_4_geography",
+  "file": "lib/screens/countries_menu_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#5 of the 6 rounded-square icon buttons under the map on the Countries tab (mountain (terrain) icon; key stat-category-4)"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1205,
+   1216
+  ],
+  "notes": "Stat card shows title 'Geography' + 'View detailed statistics' (Expanded column; 18sp title may wrap)."
+ },
+ {
+  "id": "countries_menu_card_5_specials",
+  "file": "lib/screens/countries_menu_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#6 of the 6 rounded-square icon buttons under the map on the Countries tab (sparkle (auto_awesome) icon; key stat-category-5)"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1205,
+   1216
+  ],
+  "notes": "Stat card shows title 'Specials' + 'View detailed statistics' (Expanded column; 18sp title may wrap)."
+ },
+ {
+  "id": "countries_menu_regions_update_dialog",
+  "file": "lib/widgets/country_regions_update_dialog.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "One-time 'NEW · REGIONS' dialog ('Explore countries, region by region', 'Got it') on first CountryDex chip / map-mode tap for accounts that have not acknowledged it; may not appear."
+ },
+ {
+  "id": "countries_menu_new_badge",
+  "file": "lib/screens/countries_menu_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   127,
+   134
+  ],
+  "notes": "Orange tr('NEW') badge (8sp, fixed tiny Positioned container) on chip/map button while regions notice pending; long translations of NEW overflow/clip."
+ },
+ {
+  "id": "countries_menu_regions_mode",
+  "file": "lib/screens/countries_menu_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap": "Show visited regions"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   1009
+  ],
+  "notes": "Swap button on map card (tooltip 'Show visited regions') toggles region shading; tap 'Show visited countries' to restore."
+ },
+ {
+  "id": "countries_menu_login_prompt_sheet",
+  "file": "lib/screens/login_prompt_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#4 of the 6 rounded-square icon buttons under the map on the Countries tab (globe icon; key stat-category-3)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Only logged-out on Android: World/Geography/Specials arrow opens LoginPromptScreen sheet instead of stats."
+ },
+ {
+  "id": "countries_map",
+  "file": "lib/screens/countries_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "round primary-colour '+' (add_rounded) button at top-right of the world map card on Countries tab"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   763,
+   771,
+   773
+  ],
+  "notes": "Full-screen world map; top-right blur bar ('Show All' + switch in continent/subregion mode, swap/settings/legend/fullscreen icons) and legend."
+ },
+ {
+  "id": "countries_map_legend_hidden",
+  "file": "lib/screens/countries_map_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "round primary-colour '+' (add_rounded) button at top-right of the world map card on Countries tab"
+   },
+   {
+    "tap": "Hide Legend"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   818
+  ],
+  "notes": "Toggle legend off, then 'Show Legend'."
+ },
+ {
+  "id": "countries_map_regions",
+  "file": "lib/screens/countries_map_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "round primary-colour '+' (add_rounded) button at top-right of the world map card on Countries tab"
+   },
+   {
+    "tap": "Show visited regions"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   807
+  ],
+  "notes": "Region shading mode."
+ },
+ {
+  "id": "countries_map_fullscreen",
+  "file": "lib/screens/countries_map_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "round primary-colour '+' (add_rounded) button at top-right of the world map card on Countries tab"
+   },
+   {
+    "tap": "Fullscreen"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   823
+  ],
+  "notes": "Fullscreen; 'Exit Fullscreen' restores."
+ },
+ {
+  "id": "countries_map_color_settings_dialog",
+  "file": "lib/screens/countries_map_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "round primary-colour '+' (add_rounded) button at top-right of the world map card on Countries tab"
+   },
+   {
+    "tap": "Settings"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   1268,
+   1271,
+   1274,
+   1285,
+   1287,
+   1291,
+   1305,
+   1307,
+   1311,
+   1325,
+   1327,
+   1359,
+   1449,
+   1475,
+   1506,
+   1551,
+   1557,
+   1570
+  ],
+  "notes": "'Map Color Settings' dialog: 'Home, Lived & Wishlist' Show Home/Lived/Wishlist switch rows + colour pickers, 'Color Mode', Visit Count/Duration/Rating colour rows, Continent/Subregion tiles, Reset/Cancel/Done (3 actions). Press Cancel."
+ },
+ {
+  "id": "countries_map_color_settings_continent_tile",
+  "file": "lib/screens/countries_map_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "round primary-colour '+' (add_rounded) button at top-right of the world map card on Countries tab"
+   },
+   {
+    "tap": "Settings"
+   },
+   {
+    "tap": "By Continent"
+   },
+   {
+    "scroll_to": "Continent Colors"
+   },
+   {
+    "tap": "Continent Colors"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1500
+  ],
+  "notes": "Expanded 'Continent Colors' tile in Map Color Settings. Continent/Subregion Colors tiles only exist after choosing that colour mode; added the radio tap. Dialog radios sit mid-dialog and the driver's fling can overshoot."
+ },
+ {
+  "id": "countries_map_color_settings_subregion_tile",
+  "file": "lib/screens/countries_map_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "round primary-colour '+' (add_rounded) button at top-right of the world map card on Countries tab"
+   },
+   {
+    "tap": "Settings"
+   },
+   {
+    "tap": "By Subregion"
+   },
+   {
+    "scroll_to": "Subregion Colors"
+   },
+   {
+    "tap": "Subregion Colors"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1524
+  ],
+  "notes": "Expanded 'Subregion Colors' tile. Continent/Subregion Colors tiles only exist after choosing that colour mode; added the radio tap. Dialog radios sit mid-dialog and the driver's fling can overshoot."
+ },
+ {
+  "id": "countries_map_pick_color_dialog",
+  "file": "lib/screens/countries_map_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "round primary-colour '+' (add_rounded) button at top-right of the world map card on Countries tab"
+   },
+   {
+    "tap": "Settings"
+   },
+   {
+    "tap_desc": "colour circle next to 'Home Color'"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   1217,
+   1230
+  ],
+  "notes": "'Pick a color' dialog, 'Select'. Back out."
+ },
+ {
+  "id": "countries_map_country_selection_sheet",
+  "file": "lib/screens/country_selection_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "round primary-colour '+' (add_rounded) button at top-right of the world map card on Countries tab"
+   },
+   {
+    "tap_desc": "dark rounded-square '+' FloatingActionButton bottom-right of the Countries map screen"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   230,
+   524,
+   619
+  ],
+  "notes": "CountrySelectionScreen sheet: 'Select Countries', 'Search Country...', grouped list with checkboxes, 'Details' / 'Show regions' icons, bottom 'Cancel' / 'Apply Changes' buttons. Do NOT tick boxes or Apply Changes. FAB (+) of the full-screen Countries map sits at the very bottom right, probably y>1990 (outside the driver's FAB window of 1450-1990) so it is 'unresolved'; add a calib.json coordinate for this step."
+ },
+ {
+  "id": "country_selection_regions_premium_sheet",
+  "file": "lib/widgets/country_region_access_gate.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "round primary-colour '+' (add_rounded) button at top-right of the world map card on Countries tab"
+   },
+   {
+    "tap_desc": "dark rounded-square '+' FloatingActionButton bottom-right of the Countries map screen"
+   },
+   {
+    "tap": "Show regions"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   56,
+   71,
+   81,
+   106
+  ],
+  "notes": "Non-premium: 'Show regions' opens 'Unlock sub-regions' pitch (Go Premium / Not now). Tap 'Not now'. FAB (+) of the full-screen Countries map sits at the very bottom right, probably y>1990 (outside the driver's FAB window of 1450-1990) so it is 'unresolved'; add a calib.json coordinate for this step."
+ },
+ {
+  "id": "country_selection_regions_expanded",
+  "file": "lib/screens/country_selection_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "round primary-colour '+' (add_rounded) button at top-right of the world map card on Countries tab"
+   },
+   {
+    "tap_desc": "dark rounded-square '+' FloatingActionButton bottom-right of the Countries map screen"
+   },
+   {
+    "tap": "Show regions"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   432,
+   439
+  ],
+  "notes": "Premium only: inline sub-region list under a country row. FAB (+) of the full-screen Countries map sits at the very bottom right, probably y>1990 (outside the driver's FAB window of 1450-1990) so it is 'unresolved'; add a calib.json coordinate for this step."
+ },
+ {
+  "id": "country_selection_details",
+  "file": "lib/screens/country_detail_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "round primary-colour '+' (add_rounded) button at top-right of the world map card on Countries tab"
+   },
+   {
+    "tap_desc": "dark rounded-square '+' FloatingActionButton bottom-right of the Countries map screen"
+   },
+   {
+    "tap": "Details"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "'Details' icon on a country row pushes CountryDetailScreen. FAB (+) of the full-screen Countries map sits at the very bottom right, probably y>1990 (outside the driver's FAB window of 1450-1990) so it is 'unresolved'; add a calib.json coordinate for this step."
+ },
+ {
+  "id": "country_selection_promo_dialog",
+  "file": "lib/screens/country_selection_screen.dart",
+  "kind": "dialog",
+  "path": [],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [
+   682,
+   694,
+   743
+  ],
+  "notes": "_PromoDialog ('Try 30 days for FREE!', 'Maybe later') only after Apply Changes adds countries to reach >=5, once per device. Data change - no path."
+ },
+ {
+  "id": "countrydex",
+  "file": "lib/screens/countrydex_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   155,
+   768,
+   800,
+   827,
+   837,
+   869,
+   891,
+   941,
+   977
+  ],
+  "notes": "CountryDex: title, sort button, 'Search Country...', cards with region-count chip + stars in a Row, Home/Lived/visits/'Wishlisted'/'Unvisited' badges."
+ },
+ {
+  "id": "countrydex_sort_menu",
+  "file": "lib/screens/countrydex_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Show menu"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   368,
+   388
+  ],
+  "notes": "Popup: Alphabetical / By Continent / By Number of Visits / By First Visit Date / By Total Visit Days / Favorites (Wishlist) (emoji-prefixed; Row without Expanded)."
+ },
+ {
+  "id": "countrydex_sort_continent",
+  "file": "lib/screens/countrydex_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Show menu"
+   },
+   {
+    "tap_contains": "By Continent"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   598
+  ],
+  "notes": "Grouped by continent with count headers. Sort choice persisted in prefs (UI pref only)."
+ },
+ {
+  "id": "countrydex_sort_visit_count",
+  "file": "lib/screens/countrydex_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Show menu"
+   },
+   {
+    "tap_contains": "By Number of Visits"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   598
+  ],
+  "notes": "Grouped by visit count. Sort choice persisted in prefs (UI pref only)."
+ },
+ {
+  "id": "countrydex_sort_visit_order",
+  "file": "lib/screens/countrydex_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Show menu"
+   },
+   {
+    "tap_contains": "By First Visit Date"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   257,
+   272,
+   279,
+   598
+  ],
+  "notes": "Shows SegmentedButton 'Newest First'/'Oldest First'. Sort choice persisted in prefs (UI pref only)."
+ },
+ {
+  "id": "countrydex_sort_visit_duration",
+  "file": "lib/screens/countrydex_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Show menu"
+   },
+   {
+    "tap_contains": "By Total Visit Days"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   598
+  ],
+  "notes": "Grouped by duration. Sort choice persisted in prefs (UI pref only)."
+ },
+ {
+  "id": "countrydex_sort_favorites",
+  "file": "lib/screens/countrydex_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Show menu"
+   },
+   {
+    "tap_contains": "Favorites (Wishlist)"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   598
+  ],
+  "notes": "Wishlist first. Sort choice persisted in prefs (UI pref only)."
+ },
+ {
+  "id": "countrydex_sort_alphabet",
+  "file": "lib/screens/countrydex_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Show menu"
+   },
+   {
+    "tap_contains": "Alphabetical"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   598
+  ],
+  "notes": "Restore default sort (run last). Sort choice persisted in prefs (UI pref only)."
+ },
+ {
+  "id": "countrydex_search",
+  "file": "lib/screens/countrydex_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Search Country..."
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   213
+  ],
+  "notes": "Type e.g. 'kor' to filter."
+ },
+ {
+  "id": "countrydex_region_premium_sheet",
+  "file": "lib/widgets/country_region_access_gate.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap_contains": "Premium"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [
+   56,
+   71,
+   81,
+   106
+  ],
+  "notes": "Non-premium: small 'Premium' chip beside a country name opens 'Unlock sub-regions' sheet. Tap 'Not now'. 'Premium' lock chip only shows for locked countries when the account is NOT premium (countrydex_screen.dart _buildRegionCountChip); not found on this account."
+ },
+ {
+  "id": "country_detail",
+  "file": "lib/screens/country_detail_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap_contains": "Afghanistan"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   348,
+   451,
+   480,
+   547,
+   564,
+   1203,
+   1450,
+   1480,
+   1500,
+   1530,
+   1556,
+   1588,
+   1611,
+   2946,
+   2975,
+   3117
+  ],
+  "notes": "Country detail: header (name 28sp, '$n visits · $d days', safety badge), Home/Lived/Favorite toggles, rating, 'Add Visit Record', visit tiles, info card (Regions, Major Cities w/ switches, General Info rows, Country History, Culture Highlights, Transportation, Good to Know), 'Highlights in X' row (Text not in Expanded), 'Explore' categories. Do NOT tap Home/Lived/Favorite, switches or Add Visit Record. Opens the first country by name (Afghanistan, top of the alphabetical CountryDex list) because the card heuristic did not resolve; if the saved sort is not alphabetical this may need calibration."
+ },
+ {
+  "id": "country_detail_france",
+  "file": "lib/screens/country_detail_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Search Country..."
+   },
+   {
+    "type_text": "France"
+   },
+   {
+    "tap_contains": "France"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   1203,
+   1450,
+   1480,
+   1500,
+   1611
+  ],
+  "notes": "Same screen for data-rich France (regions, many landmarks, long 'Highlights in France'). Type 'France', tap card."
+ },
+ {
+  "id": "country_detail_regions_section",
+  "file": "lib/widgets/country_regions_section.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap_contains": "Afghanistan"
+   },
+   {
+    "scroll_to": "Regions"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   218,
+   226,
+   368,
+   379,
+   389
+  ],
+  "notes": "Regions card: overlay buttons, '$visited / $total regions visited', hint Row 'Tap a region on the map to mark it visited' (Text not in Expanded). Do not tap the map. Opens the first country by name (Afghanistan, top of the alphabetical CountryDex list) because the card heuristic did not resolve; if the saved sort is not alphabetical this may need calibration."
+ },
+ {
+  "id": "country_detail_regions_locked",
+  "file": "lib/widgets/country_region_access_gate.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap_contains": "Afghanistan"
+   },
+   {
+    "scroll_to": "Sub-regions"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [
+   56,
+   71,
+   139
+  ],
+  "notes": "Non-premium gate card 'Sub-regions' + message + 'Go Premium'. Opens the first country by name (Afghanistan, top of the alphabetical CountryDex list) because the card heuristic did not resolve; if the saved sort is not alphabetical this may need calibration.",
+  "unsafe_reason": "Sub-regions gate card only shows for non-premium users; the audit account is premium."
+ },
+ {
+  "id": "country_detail_region_list_sheet",
+  "file": "lib/widgets/country_regions_section.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap_contains": "Afghanistan"
+   },
+   {
+    "scroll_to": "Regions"
+   },
+   {
+    "tap": "Region list"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   604,
+   622,
+   637,
+   655,
+   685
+  ],
+  "notes": "'Regions of X' sheet: count badge, 'Search regions', region rows with type label. Do not tick regions. Opens the first country by name (Afghanistan, top of the alphabetical CountryDex list) because the card heuristic did not resolve; if the saved sort is not alphabetical this may need calibration."
+ },
+ {
+  "id": "country_detail_regions_fullscreen",
+  "file": "lib/widgets/country_regions_section.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap_contains": "Afghanistan"
+   },
+   {
+    "scroll_to": "Regions"
+   },
+   {
+    "tap": "Full screen"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   436,
+   454,
+   465
+  ],
+  "notes": "CountryRegionsMapScreen: '<Country> · Regions' + 'Region list'. Opens the first country by name (Afghanistan, top of the alphabetical CountryDex list) because the card heuristic did not resolve; if the saved sort is not alphabetical this may need calibration."
+ },
+ {
+  "id": "country_detail_major_city_modal",
+  "file": "lib/screens/cities_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap_contains": "Afghanistan"
+   },
+   {
+    "scroll_to": "Kabul (4.6M)"
+   },
+   {
+    "tap": "Details"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   3364,
+   3368,
+   3376,
+   3414,
+   3440,
+   3445,
+   3480,
+   3485
+  ],
+  "notes": "External city details sheet: Cancel/Done header, '$country | Lived | Home | Wishlist' line, 'Lived:' row, 'History (n visits, d days)' + 'Add Visit' row. Press Cancel; do not Add Visit or toggle. Opens the first country by name (Afghanistan, top of the alphabetical CountryDex list) because the card heuristic did not resolve; if the saved sort is not alphabetical this may need calibration."
+ },
+ {
+  "id": "country_detail_highlights_landmark_sheet",
+  "file": "lib/screens/country_detail_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap_contains": "Afghanistan"
+   },
+   {
+    "scroll_to": "Highlights in Afghanistan"
+   },
+   {
+    "tap": "Buddhas of Bamiyan"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   348,
+   451,
+   480
+  ],
+  "notes": "Landmark sheet: Cancel/Done, 'Wishlist:' / 'My Rating:' (two min-size Rows in spaceBetween Row - classic overflow), sub-locations, 'History (n entries)', LandmarkInfoCard. Press Cancel. Opens the first country by name (Afghanistan, top of the alphabetical CountryDex list) because the card heuristic did not resolve; if the saved sort is not alphabetical this may need calibration. Anchored 'under' heuristic did not resolve (carousel cards are labelled, headers vary by country); calibrate."
+ },
+ {
+  "id": "country_detail_explore_cultural",
+  "file": "lib/screens/country_detail_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap_contains": "Afghanistan"
+   },
+   {
+    "scroll_to": "Explore"
+   },
+   {
+    "tap_contains": "Cultural Landmarks"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   656,
+   705,
+   860,
+   885,
+   888
+  ],
+  "notes": "Expand 'Cultural Landmarks' category: rows with 2-line title box, subtitle, 'Details' icon, visited Switch. Do not toggle. Opens the first country by name (Afghanistan, top of the alphabetical CountryDex list) because the card heuristic did not resolve; if the saved sort is not alphabetical this may need calibration."
+ },
+ {
+  "id": "country_detail_explore_natural",
+  "file": "lib/screens/country_detail_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap_contains": "Afghanistan"
+   },
+   {
+    "scroll_to": "Explore"
+   },
+   {
+    "tap_contains": "Natural Wonders"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   656,
+   705,
+   860,
+   885,
+   888
+  ],
+  "notes": "Expand 'Natural Wonders' category: rows with 2-line title box, subtitle, 'Details' icon, visited Switch. Do not toggle. Opens the first country by name (Afghanistan, top of the alphabetical CountryDex list) because the card heuristic did not resolve; if the saved sort is not alphabetical this may need calibration."
+ },
+ {
+  "id": "country_detail_explore_activities",
+  "file": "lib/screens/country_detail_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap_contains": "Afghanistan"
+   },
+   {
+    "scroll_to": "Explore"
+   },
+   {
+    "tap_contains": "Activities"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   656,
+   705,
+   860,
+   885,
+   888
+  ],
+  "notes": "Expand 'Activities' category: rows with 2-line title box, subtitle, 'Details' icon, visited Switch. Do not toggle. Opens the first country by name (Afghanistan, top of the alphabetical CountryDex list) because the card heuristic did not resolve; if the saved sort is not alphabetical this may need calibration."
+ },
+ {
+  "id": "country_detail_explore_unesco",
+  "file": "lib/screens/country_detail_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap_contains": "Afghanistan"
+   },
+   {
+    "scroll_to": "Explore"
+   },
+   {
+    "tap_contains": "UNESCO"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   656,
+   705,
+   860,
+   885,
+   888
+  ],
+  "notes": "Expand 'UNESCO' category: rows with 2-line title box, subtitle, 'Details' icon, visited Switch. Do not toggle. Opens the first country by name (Afghanistan, top of the alphabetical CountryDex list) because the card heuristic did not resolve; if the saved sort is not alphabetical this may need calibration."
+ },
+ {
+  "id": "country_detail_unesco_site_sheet",
+  "file": "lib/screens/country_detail_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap_contains": "Afghanistan"
+   },
+   {
+    "scroll_to": "Explore"
+   },
+   {
+    "tap_contains": "UNESCO"
+   },
+   {
+    "tap": "Details"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   519,
+   520,
+   533,
+   534,
+   537,
+   546,
+   547
+  ],
+  "notes": "UNESCO sheet: Cancel/Done, 'Wishlist:'/'My Rating:' Row, 'Components / Locations', 'History (n entries)'. Press Cancel. Opens the first country by name (Afghanistan, top of the alphabetical CountryDex list) because the card heuristic did not resolve; if the saved sort is not alphabetical this may need calibration."
+ },
+ {
+  "id": "country_detail_landmark_list_sheet",
+  "file": "lib/screens/country_detail_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded-square icon buttons under the map on the Countries tab (book icon; key stat-category-0)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap_contains": "Afghanistan"
+   },
+   {
+    "scroll_to": "Explore"
+   },
+   {
+    "tap_contains": "Cultural Landmarks"
+   },
+   {
+    "tap": "Details"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   348,
+   451,
+   480
+  ],
+  "notes": "Landmark sheet from list row 'Details'. Opens the first country by name (Afghanistan, top of the alphabetical CountryDex list) because the card heuristic did not resolve; if the saved sort is not alphabetical this may need calibration."
+ },
+ {
+  "id": "country_detail_removal_confirm_dialog",
+  "file": "lib/screens/country_detail_screen.dart",
+  "kind": "dialog",
+  "path": [],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "low",
+  "risk_lines": [
+   76,
+   78,
+   82,
+   86
+  ],
+  "notes": "'Confirm Removal' (Cancel / 'Yes, Remove') only when switching OFF a visited item that has records - data change."
+ },
+ {
+  "id": "country_detail_visit_editor_tile",
+  "file": "lib/screens/country_detail_screen.dart",
+  "kind": "state",
+  "path": [],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "high",
+  "risk_lines": [],
+  "notes": "_CountryVisitDetailEditorTile (date dropdowns, photos, chips, delete dialog) only exists if the country has visit records; creating one = data change. If test account has visits, expand '#1' tile."
+ },
+ {
+  "id": "stats_general_overview_tab",
+  "file": "lib/screens/overview_stats_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded-square icon buttons under the map on the Countries tab (chart (insights) icon; key stat-category-1)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   880,
+   1003,
+   1300,
+   1697,
+   1698,
+   1699,
+   1700,
+   1857,
+   1946,
+   1947,
+   2249,
+   2298
+  ],
+  "notes": "General container: icon+text TabBar Overview/Population/Area/Economy (4 fixed tabs). Overview: period/continent pills, subregions, 'Data Explorer' dropdowns + 'Log' switches, chips Home/Lived/Transfer/Layover, ranking card 'High'/'Low' SegmentedButton + continent dropdown, 'Rating Tiers'."
+ },
+ {
+  "id": "stats_general_period_sheet",
+  "file": "lib/screens/overview_stats_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded-square icon buttons under the map on the Countries tab (chart (insights) icon; key stat-category-1)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap_contains": "All Time"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1075,
+   1081
+  ],
+  "notes": "Date filter sheet ('Select Period'); avoid 'Custom' (date picker)."
+ },
+ {
+  "id": "stats_general_continent_select",
+  "file": "lib/screens/overview_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded-square icon buttons under the map on the Countries tab (chart (insights) icon; key stat-category-1)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap_desc": "continent selector pill next to the period pill"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [
+   1102
+  ],
+  "notes": "'Select Continent' chooser.",
+  "unsafe_reason": "Unreachable: _buildContinentFilterSheet() in overview_stats_screen.dart is never called (dead code), no button opens it."
+ },
+ {
+  "id": "stats_general_subregion_sheet",
+  "file": "lib/screens/overview_stats_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded-square icon buttons under the map on the Countries tab (chart (insights) icon; key stat-category-1)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap_desc": "first subregion tile on Overview tab"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   878,
+   880,
+   890,
+   940
+  ],
+  "notes": "Subregion sheet: title + 'x / y' badge in spaceBetween Row (no Expanded), country tiles with 'View Country Details'."
+ },
+ {
+  "id": "stats_general_keep_exploring_map",
+  "file": "lib/screens/countries_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded-square icon buttons under the map on the Countries tab (chart (insights) icon; key stat-category-1)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "scroll_to": "Keep exploring!"
+   },
+   {
+    "tap": "Keep exploring!"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   820
+  ],
+  "notes": "Pushes CountriesMapScreen (world or continent)."
+ },
+ {
+  "id": "stats_general_data_explorer_dropdown",
+  "file": "lib/screens/overview_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded-square icon buttons under the map on the Countries tab (chart (insights) icon; key stat-category-1)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "scroll_to": "Data Explorer"
+   },
+   {
+    "tap": "Visit Count"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1183,
+   1190,
+   1209,
+   1237,
+   1263
+  ],
+  "notes": "Dropdown: Visit Count/Total Days/Rating/First Visit Order/Visit Month/Population/Area/GDP/GDP per Capita; next to 'Log' switch in a Row."
+ },
+ {
+  "id": "country_tiers",
+  "file": "lib/screens/country_tiers_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded-square icon buttons under the map on the Countries tab (chart (insights) icon; key stat-category-1)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "scroll_to": "Rating Tiers"
+   },
+   {
+    "tap_desc": "amber add_circle_outline IconButton right of the 'Rating Tiers' header title (nearest icon right of it; opens the tiers screen - the title itself is not tappable)"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   166,
+   350,
+   506,
+   508
+  ],
+  "notes": "CountryTiersScreen: TIERS/TABLE/CHART pill, All/Visited/Unvisited/Custom dropdown, checklist + add icons; tier rows with SizedBox(width:80) metric label."
+ },
+ {
+  "id": "country_tiers_table",
+  "file": "lib/screens/country_tiers_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded-square icon buttons under the map on the Countries tab (chart (insights) icon; key stat-category-1)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "scroll_to": "Rating Tiers"
+   },
+   {
+    "tap_desc": "amber add_circle_outline IconButton right of the 'Rating Tiers' header title (nearest icon right of it; opens the tiers screen - the title itself is not tappable)"
+   },
+   {
+    "tap": "TABLE"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   376,
+   404,
+   413,
+   414,
+   415
+  ],
+  "notes": "DataTable; row popup Remove from view / Edit / Reset Data (never Reset)."
+ },
+ {
+  "id": "country_tiers_chart",
+  "file": "lib/screens/country_tiers_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded-square icon buttons under the map on the Countries tab (chart (insights) icon; key stat-category-1)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "scroll_to": "Rating Tiers"
+   },
+   {
+    "tap_desc": "amber add_circle_outline IconButton right of the 'Rating Tiers' header title (nearest icon right of it; opens the tiers screen - the title itself is not tappable)"
+   },
+   {
+    "tap": "CHART"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   427,
+   429
+  ],
+  "notes": "Radar chart; 'Select 3+ metrics.'"
+ },
+ {
+  "id": "country_tiers_metrics_dialog",
+  "file": "lib/screens/country_tiers_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded-square icon buttons under the map on the Countries tab (chart (insights) icon; key stat-category-1)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "scroll_to": "Rating Tiers"
+   },
+   {
+    "tap_desc": "amber add_circle_outline IconButton right of the 'Rating Tiers' header title (nearest icon right of it; opens the tiers screen - the title itself is not tappable)"
+   },
+   {
+    "tap_desc": "checklist icon button right of the 'CHART' segment in the tiers header bar (nearest icon right of 'CHART')"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   273,
+   284,
+   300,
+   316
+  ],
+  "notes": "'Select Metrics' dialog, emoji+metric checkbox tiles, 'Done'."
+ },
+ {
+  "id": "country_tiers_add_country_dialog",
+  "file": "lib/screens/country_tiers_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded-square icon buttons under the map on the Countries tab (chart (insights) icon; key stat-category-1)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "scroll_to": "Rating Tiers"
+   },
+   {
+    "tap_desc": "amber add_circle_outline IconButton right of the 'Rating Tiers' header title (nearest icon right of it; opens the tiers screen - the title itself is not tappable)"
+   },
+   {
+    "tap_desc": "blue add_circle_outline icon in tiers header bar"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   230,
+   232,
+   251,
+   255,
+   256
+  ],
+  "notes": "'Add Country'/'Select Country' with 'Search...', 'Existing Data'/'Others'. Back out."
+ },
+ {
+  "id": "country_tiers_edit_dialog",
+  "file": "lib/screens/country_tiers_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded-square icon buttons under the map on the Countries tab (chart (insights) icon; key stat-category-1)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "scroll_to": "Rating Tiers"
+   },
+   {
+    "tap_desc": "amber add_circle_outline IconButton right of the 'Rating Tiers' header title (nearest icon right of it; opens the tiers screen - the title itself is not tappable)"
+   },
+   {
+    "tap": "TABLE"
+   },
+   {
+    "tap": "Show menu"
+   },
+   {
+    "tap": "Edit"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   159,
+   166,
+   207,
+   215
+  ],
+  "notes": "Edit dialog: rows with SizedBox(width:85) emoji+metric label (fixed-width text) + slider; Cancel/Save -> Cancel."
+ },
+ {
+  "id": "country_tiers_color_dialog",
+  "file": "lib/screens/country_tiers_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded-square icon buttons under the map on the Countries tab (chart (insights) icon; key stat-category-1)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "scroll_to": "Rating Tiers"
+   },
+   {
+    "tap_desc": "amber add_circle_outline IconButton right of the 'Rating Tiers' header title (nearest icon right of it; opens the tiers screen - the title itself is not tappable)"
+   },
+   {
+    "tap_desc": "small coloured dot next to a country chip"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   329
+  ],
+  "notes": "'Pick Color'."
+ },
+ {
+  "id": "stats_general_population_tab",
+  "file": "lib/screens/population_stats_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded-square icon buttons under the map on the Countries tab (chart (insights) icon; key stat-category-1)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Population"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   169,
+   179,
+   324,
+   461,
+   687,
+   688,
+   701,
+   702,
+   710,
+   711,
+   724,
+   725
+  ],
+  "notes": "'Global Reach'/'Total Population', 'Population by Continent', 'Average Population per Country', ranking card with All/Visited + High/Low SegmentedButtons side by side."
+ },
+ {
+  "id": "stats_general_area_tab",
+  "file": "lib/screens/area_stats_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded-square icon buttons under the map on the Countries tab (chart (insights) icon; key stat-category-1)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Area"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   169,
+   179,
+   324,
+   461,
+   680,
+   691,
+   698,
+   709
+  ],
+  "notes": "'Land Covered'/'Total Area', 'Area by Continent', 'Average Area per Country', All/Visited + High/Low segments in one Row."
+ },
+ {
+  "id": "stats_general_economy_tab",
+  "file": "lib/screens/economy_stats_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded-square icon buttons under the map on the Countries tab (chart (insights) icon; key stat-category-1)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Economy"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   379,
+   491,
+   613,
+   617,
+   619,
+   623,
+   736,
+   739,
+   741,
+   833,
+   835,
+   858,
+   1058,
+   1076,
+   1274,
+   1285
+  ],
+  "notes": "'Development Status Map', 'Global Wealth'/'Total GDP' with 'PPP' switch rows, 'GDP by Continent', 'Average GDP per Capita', ranking card, group card 'Visited Countries'/'Map'."
+ },
+ {
+  "id": "stats_general_population_continent_dropdown",
+  "file": "lib/screens/population_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded-square icon buttons under the map on the Countries tab (chart (insights) icon; key stat-category-1)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Population"
+   },
+   {
+    "tap_desc": "continent dropdown (World) in the ranking card"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   731
+  ],
+  "notes": "World/Asia/Europe/Africa/North America/South America/Oceania menu."
+ },
+ {
+  "id": "stats_general_economy_dev_map",
+  "file": "lib/screens/countries_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded-square icon buttons under the map on the Countries tab (chart (insights) icon; key stat-category-1)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Economy"
+   },
+   {
+    "tap": "Development Status Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "CountriesMapScreen highlight mode (group legend). Target lies below/inside a fixed-height nested ListView card (400-600px); the driver swipe at (540,1750) is swallowed by the inner list so the page never scrolls. Needs calibration."
+ },
+ {
+  "id": "stats_highlight_legend_color_dialog",
+  "file": "lib/screens/countries_map_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded-square icon buttons under the map on the Countries tab (chart (insights) icon; key stat-category-1)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Economy"
+   },
+   {
+    "tap": "Development Status Map"
+   },
+   {
+    "tap": "Settings"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   498,
+   505,
+   519,
+   540,
+   566,
+   576
+  ],
+  "notes": "'Legend Color Settings' dialog for highlight maps (group rows + colour circles; Cancel/Done). Target lies below/inside a fixed-height nested ListView card (400-600px); the driver swipe at (540,1750) is swallowed by the inner list so the page never scrolls. Needs calibration."
+ },
+ {
+  "id": "stats_general_economy_group_map",
+  "file": "lib/screens/countries_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded-square icon buttons under the map on the Countries tab (chart (insights) icon; key stat-category-1)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Economy"
+   },
+   {
+    "scroll_to": "Visited Countries"
+   },
+   {
+    "tap": "Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "Highlight map from economy group card."
+ },
+ {
+  "id": "stats_culture_society_tab",
+  "file": "lib/screens/society_stats_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#3 of the 6 rounded-square icon buttons under the map on the Countries tab (people (groups) icon; key stat-category-2)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   227,
+   228,
+   229,
+   230,
+   413,
+   776,
+   778,
+   800,
+   802,
+   1163,
+   1355,
+   1379,
+   1398
+  ],
+  "notes": "Culture container: icon+text TabBar Society/Religion/Language/History. Society: 'Government Type Map', government types, ranking card (dropdown + All/Visited + High/Low + continent), groups card, 'Age Demographics'."
+ },
+ {
+  "id": "stats_culture_gov_map",
+  "file": "lib/screens/countries_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#3 of the 6 rounded-square icon buttons under the map on the Countries tab (people (groups) icon; key stat-category-2)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Government Type Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Government types highlight map (long legend names)."
+ },
+ {
+  "id": "stats_culture_religion_tab",
+  "file": "lib/screens/religion_stats_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#3 of the 6 rounded-square icon buttons under the map on the Countries tab (people (groups) icon; key stat-category-2)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Religion"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   210,
+   233,
+   236,
+   587,
+   759
+  ],
+  "notes": "'World Religions Map', 'Show Denominations' switch row, 'Religious Populations' dropdown card, 'Catholic Hierarchy'."
+ },
+ {
+  "id": "stats_culture_religion_map",
+  "file": "lib/screens/countries_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#3 of the 6 rounded-square icon buttons under the map on the Countries tab (people (groups) icon; key stat-category-2)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Religion"
+   },
+   {
+    "tap": "World Religions Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Religion highlight map."
+ },
+ {
+  "id": "stats_culture_language_tab",
+  "file": "lib/screens/language_stats_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#3 of the 6 rounded-square icon buttons under the map on the Countries tab (people (groups) icon; key stat-category-2)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Language"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   139,
+   141,
+   142,
+   172,
+   182,
+   575,
+   773
+  ],
+  "notes": "SegmentedButton 'Languages'/'Families' + 'Non-dominant' switch, cards with 'View on Map'."
+ },
+ {
+  "id": "stats_culture_language_families",
+  "file": "lib/screens/language_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#3 of the 6 rounded-square icon buttons under the map on the Countries tab (people (groups) icon; key stat-category-2)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Language"
+   },
+   {
+    "tap": "Families"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   360,
+   382,
+   404,
+   707
+  ],
+  "notes": "Family/branch/subbranch tree with map buttons; 'No countries in this group.'"
+ },
+ {
+  "id": "language_map_screen",
+  "file": "lib/screens/language_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#3 of the 6 rounded-square icon buttons under the map on the Countries tab (people (groups) icon; key stat-category-2)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Language"
+   },
+   {
+    "tap": "View on Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "LanguageMapScreen (filtered)."
+ },
+ {
+  "id": "language_family_map_screen",
+  "file": "lib/screens/language_family_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#3 of the 6 rounded-square icon buttons under the map on the Countries tab (people (groups) icon; key stat-category-2)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Language"
+   },
+   {
+    "tap": "Families"
+   },
+   {
+    "tap_desc": "map icon on first language family card"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   149,
+   151,
+   152,
+   153
+  ],
+  "notes": "LanguageFamilyMapScreen with SegmentedButton Family/Branch/Subbranch."
+ },
+ {
+  "id": "language_family_map_subbranch",
+  "file": "lib/screens/language_family_map_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#3 of the 6 rounded-square icon buttons under the map on the Countries tab (people (groups) icon; key stat-category-2)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Language"
+   },
+   {
+    "tap": "Families"
+   },
+   {
+    "tap_desc": "map icon on first family card"
+   },
+   {
+    "tap": "Subbranch"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   149,
+   153
+  ],
+  "notes": "Subbranch view."
+ },
+ {
+  "id": "stats_culture_history_tab",
+  "file": "lib/screens/history_stats_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#3 of the 6 rounded-square icon buttons under the map on the Countries tab (people (groups) icon; key stat-category-2)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "History"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   310,
+   322,
+   387,
+   558,
+   598,
+   637
+  ],
+  "notes": "Empire buttons 'View <Empire> Map' (spaceBetween Row with nested Row + Text, no Expanded), territory stat tiles, historical union card dropdown + 'Visited'/'Map'."
+ },
+ {
+  "id": "empire_map_alexander",
+  "file": "lib/screens/alexander_empire_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#3 of the 6 rounded-square icon buttons under the map on the Countries tab (people (groups) icon; key stat-category-2)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "History"
+   },
+   {
+    "scroll_to": "View Empire of Alexander Map"
+   },
+   {
+    "tap": "View Empire of Alexander Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   210,
+   258,
+   260,
+   261,
+   262,
+   263,
+   264,
+   265
+  ],
+  "notes": "Empire of Alexander map with legend card ('Legend', 'Visited (Inside Empire)', 'Other Countries', 'Empire Border')."
+ },
+ {
+  "id": "empire_map_roman",
+  "file": "lib/screens/roman_empire_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#3 of the 6 rounded-square icon buttons under the map on the Countries tab (people (groups) icon; key stat-category-2)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "History"
+   },
+   {
+    "scroll_to": "View Roman Empire Map"
+   },
+   {
+    "tap": "View Roman Empire Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   248,
+   250,
+   252
+  ],
+  "notes": "Roman Empire map with legend card ('Legend', 'Visited (Inside Empire)', 'Other Countries', 'Empire Border')."
+ },
+ {
+  "id": "empire_map_mongol",
+  "file": "lib/screens/mongol_empire_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#3 of the 6 rounded-square icon buttons under the map on the Countries tab (people (groups) icon; key stat-category-2)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "History"
+   },
+   {
+    "scroll_to": "View Mongol Empire Map"
+   },
+   {
+    "tap": "View Mongol Empire Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   218,
+   220,
+   222
+  ],
+  "notes": "Mongol Empire map with legend card ('Legend', 'Visited (Inside Empire)', 'Other Countries', 'Empire Border')."
+ },
+ {
+  "id": "empire_map_ottoman",
+  "file": "lib/screens/ottoman_empire_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#3 of the 6 rounded-square icon buttons under the map on the Countries tab (people (groups) icon; key stat-category-2)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "History"
+   },
+   {
+    "scroll_to": "View Ottoman Empire Map"
+   },
+   {
+    "tap": "View Ottoman Empire Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   242,
+   244,
+   246
+  ],
+  "notes": "Ottoman Empire map with legend card ('Legend', 'Visited (Inside Empire)', 'Other Countries', 'Empire Border')."
+ },
+ {
+  "id": "stats_culture_history_union_map",
+  "file": "lib/screens/countries_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#3 of the 6 rounded-square icon buttons under the map on the Countries tab (people (groups) icon; key stat-category-2)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "History"
+   },
+   {
+    "scroll_to": "Map"
+   },
+   {
+    "tap": "Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "Historical union highlight map."
+ },
+ {
+  "id": "stats_world_military_tab",
+  "file": "lib/screens/military_stats_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#4 of the 6 rounded-square icon buttons under the map on the Countries tab (globe icon; key stat-category-3)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   247,
+   248,
+   412,
+   414,
+   430,
+   432,
+   646,
+   648,
+   703,
+   852,
+   858,
+   1329
+  ],
+  "notes": "World container TabBar Military/Geopolitics. Military: ranking card (dropdown, All/Visited + High/Low, continent), groups 'Visited Countries'/'Map', 'Visited Entities', 'Historical War Casualties'. Login needed on Android."
+ },
+ {
+  "id": "stats_world_military_group_map",
+  "file": "lib/screens/countries_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#4 of the 6 rounded-square icon buttons under the map on the Countries tab (globe icon; key stat-category-3)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "scroll_to": "Visited Countries"
+   },
+   {
+    "tap": "Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "Highlight map from military group card."
+ },
+ {
+  "id": "stats_world_geopolitics_tab",
+  "file": "lib/screens/geopolitics_stats_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#4 of the 6 rounded-square icon buttons under the map on the Countries tab (globe icon; key stat-category-3)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Geopolitics"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   262,
+   296,
+   302,
+   339,
+   520,
+   554,
+   560,
+   587,
+   811
+  ],
+  "notes": "Group cards with long-name DropdownButtons, 'Visited' + 'Map', 'Cold War Geopolitics Map'."
+ },
+ {
+  "id": "stats_world_cold_war_map",
+  "file": "lib/screens/countries_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#4 of the 6 rounded-square icon buttons under the map on the Countries tab (globe icon; key stat-category-3)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Geopolitics"
+   },
+   {
+    "scroll_to": "Cold War Geopolitics Map"
+   },
+   {
+    "tap": "Cold War Geopolitics Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Cold-war highlight map legend."
+ },
+ {
+  "id": "stats_world_geopolitics_dropdown",
+  "file": "lib/screens/geopolitics_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#4 of the 6 rounded-square icon buttons under the map on the Countries tab (globe icon; key stat-category-3)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Geopolitics"
+   },
+   {
+    "tap_desc": "first group dropdown on Geopolitics tab"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   262
+  ],
+  "notes": "Organisation group dropdown menu."
+ },
+ {
+  "id": "stats_geography_tab",
+  "file": "lib/screens/geography_stats_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#5 of the 6 rounded-square icon buttons under the map on the Countries tab (mountain (terrain) icon; key stat-category-4)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   154,
+   155,
+   292,
+   294,
+   305,
+   541,
+   739,
+   742,
+   750,
+   775,
+   782,
+   786,
+   801,
+   806,
+   807,
+   808,
+   815,
+   820,
+   821,
+   1089
+  ],
+  "notes": "Geography container TabBar Geography/Climate. Geo blocks with dropdown + 'Visited Countries'/'Map'; latitude/elevation card with Latitude/Elevation, Order High/Low, Metric Average/Farthest Pt./Capital/Highest toggles in fixed rows; 'Geographic Features'."
+ },
+ {
+  "id": "stats_geography_group_map",
+  "file": "lib/screens/countries_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#5 of the 6 rounded-square icon buttons under the map on the Countries tab (mountain (terrain) icon; key stat-category-4)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "scroll_to": "Visited Countries"
+   },
+   {
+    "tap": "Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "Highlight map from geo group card."
+ },
+ {
+  "id": "stats_geography_elevation",
+  "file": "lib/screens/geography_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#5 of the 6 rounded-square icon buttons under the map on the Countries tab (mountain (terrain) icon; key stat-category-4)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "scroll_to": "Elevation"
+   },
+   {
+    "tap": "Elevation"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   750,
+   815,
+   820,
+   821
+  ],
+  "notes": "Elevation mode."
+ },
+ {
+  "id": "stats_geography_climate_tab",
+  "file": "lib/screens/climate_stats_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#5 of the 6 rounded-square icon buttons under the map on the Countries tab (mountain (terrain) icon; key stat-category-4)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Climate"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   169,
+   522,
+   540,
+   543,
+   558,
+   561,
+   578
+  ],
+  "notes": "'World Climate Map', climate ranking card with dropdown, All/Visited + High/Low, continent dropdown."
+ },
+ {
+  "id": "stats_geography_climate_map",
+  "file": "lib/screens/countries_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#5 of the 6 rounded-square icon buttons under the map on the Countries tab (mountain (terrain) icon; key stat-category-4)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Climate"
+   },
+   {
+    "tap": "World Climate Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Climate highlight map."
+ },
+ {
+  "id": "stats_specials_tab",
+  "file": "lib/screens/specials_stats_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#6 of the 6 rounded-square icon buttons under the map on the Countries tab (sparkle (auto_awesome) icon; key stat-category-5)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   144,
+   145,
+   275,
+   344,
+   517,
+   722,
+   912,
+   928
+  ],
+  "notes": "Specials container TabBar Specials/Sports. 'Countries A-Z Challenge' fixed letter grid, 'Physical Features', 'Internet & Social Media', group cards 'Visited Countries'/'Map'."
+ },
+ {
+  "id": "stats_specials_az_dialog",
+  "file": "lib/screens/specials_stats_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#6 of the 6 rounded-square icon buttons under the map on the Countries tab (sparkle (auto_awesome) icon; key stat-category-5)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "scroll_to": "Countries A-Z Challenge"
+   },
+   {
+    "tap": "A"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   257,
+   275,
+   320
+  ],
+  "notes": "Letter dialog listing countries with 'Map' and 'Close'."
+ },
+ {
+  "id": "stats_specials_group_map",
+  "file": "lib/screens/countries_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#6 of the 6 rounded-square icon buttons under the map on the Countries tab (sparkle (auto_awesome) icon; key stat-category-5)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "scroll_to": "Visited Countries"
+   },
+   {
+    "tap": "Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "Highlight map from specials group card."
+ },
+ {
+  "id": "stats_specials_sports_tab",
+  "file": "lib/screens/sports_stats_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#6 of the 6 rounded-square icon buttons under the map on the Countries tab (sparkle (auto_awesome) icon; key stat-category-5)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Sports"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   288,
+   299,
+   311,
+   319,
+   338,
+   361,
+   367,
+   384,
+   390,
+   632,
+   722,
+   723,
+   841
+  ],
+  "notes": "'Olympic Games' card with several DropdownButtons in one Row (Summer/Winter Olympics, Gold Medals/Total Medals, All Countries/Visited Only), achievements card 'Visited Entities'/'Map', '(*) Winter Only Host' legend, 'Most Popular Sports Map'."
+ },
+ {
+  "id": "stats_specials_sports_map",
+  "file": "lib/screens/countries_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#6 of the 6 rounded-square icon buttons under the map on the Countries tab (sparkle (auto_awesome) icon; key stat-category-5)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Sports"
+   },
+   {
+    "scroll_to": "Most Popular Sports Map"
+   },
+   {
+    "tap": "Most Popular Sports Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Sports highlight map."
+ },
+ {
+  "id": "stats_specials_olympics_dropdown",
+  "file": "lib/screens/sports_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Countries"
+   },
+   {
+    "tap_desc": "#6 of the 6 rounded-square icon buttons under the map on the Countries tab (sparkle (auto_awesome) icon; key stat-category-5)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the stat card below the icon row (key open-detailed-stats)"
+   },
+   {
+    "tap": "Sports"
+   },
+   {
+    "tap": "Summer Olympics"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   299,
+   311,
+   319
+  ],
+  "notes": "Olympics type dropdown menu."
+ },
+ {
+  "id": "cities_menu_default",
+  "file": "lib/screens/cities_menu_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Cities"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   696,
+   741,
+   868,
+   1032
+  ],
+  "notes": "Cities tab home: city map card (share + '+'), 'Total Visited'/'cities', 'Top Country', 'Top Region', icon row + stat card."
+ },
+ {
+  "id": "cities_menu_card_0_top_cities",
+  "file": "lib/screens/cities_menu_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded icon buttons under the city map on Cities tab (trophy (emoji_events) icon)"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   1368,
+   1376
+  ],
+  "notes": "Stat card shows 'Top Cities' + 'View detailed statistics' (ellipsized)."
+ },
+ {
+  "id": "cities_menu_card_1_general",
+  "file": "lib/screens/cities_menu_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded icon buttons under the city map on Cities tab (chart (insights) icon)"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   1368,
+   1376
+  ],
+  "notes": "Stat card shows 'General' + 'View detailed statistics' (ellipsized)."
+ },
+ {
+  "id": "cities_menu_card_2_culture",
+  "file": "lib/screens/cities_menu_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#3 of the 6 rounded icon buttons under the city map on Cities tab (people (groups) icon)"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   1368,
+   1376
+  ],
+  "notes": "Stat card shows 'Culture' + 'View detailed statistics' (ellipsized)."
+ },
+ {
+  "id": "cities_menu_card_3_travel",
+  "file": "lib/screens/cities_menu_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#4 of the 6 rounded icon buttons under the city map on Cities tab (tour flag icon)"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   1368,
+   1376
+  ],
+  "notes": "Stat card shows 'Travel' + 'View detailed statistics' (ellipsized)."
+ },
+ {
+  "id": "cities_menu_card_4_geography",
+  "file": "lib/screens/cities_menu_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#5 of the 6 rounded icon buttons under the city map on Cities tab (mountain (terrain) icon)"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   1368,
+   1376
+  ],
+  "notes": "Stat card shows 'Geography' + 'View detailed statistics' (ellipsized)."
+ },
+ {
+  "id": "cities_menu_card_5_specials",
+  "file": "lib/screens/cities_menu_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#6 of the 6 rounded icon buttons under the city map on Cities tab (sparkle (auto_awesome) icon)"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   1368,
+   1376
+  ],
+  "notes": "Stat card shows 'Specials' + 'View detailed statistics' (ellipsized)."
+ },
+ {
+  "id": "cities_menu_top_country",
+  "file": "lib/screens/country_detail_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap": "Top Country"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [],
+  "notes": "'Top Country' card pushes CountryDetailScreen (only if cities visited)."
+ },
+ {
+  "id": "cities_menu_login_prompt_sheet",
+  "file": "lib/screens/login_prompt_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#4 of the 6 rounded icon buttons under the city map on Cities tab (tour flag icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Logged-out Android: Travel/Geography/Specials arrow opens login prompt sheet."
+ },
+ {
+  "id": "cities_screen",
+  "file": "lib/screens/cities_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "round '+' button at top-right of the city map card on Cities tab"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   761,
+   1193,
+   1507,
+   1647,
+   2045,
+   2060,
+   2073,
+   2087
+  ],
+  "notes": "CitiesScreen: map toolbar (Color Settings, Show/Hide Legend, Share Map, Add Custom City), chips Visited/Wishlist/Home/Lived, 'Search Cities', city tiles (switch, wishlist, center). Do not toggle switches/wishlist."
+ },
+ {
+  "id": "cities_screen_legend",
+  "file": "lib/screens/cities_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "round '+' button at top-right of the city map card on Cities tab"
+   },
+   {
+    "tap": "Show Legend"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1046
+  ],
+  "notes": "Map legend overlay."
+ },
+ {
+  "id": "cities_screen_color_settings_dialog",
+  "file": "lib/screens/cities_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "round '+' button at top-right of the city map card on Cities tab"
+   },
+   {
+    "tap": "Color Settings"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   2045,
+   2060,
+   2073,
+   2087,
+   2111,
+   2118,
+   2121,
+   2131,
+   2134,
+   2141,
+   2144,
+   2151,
+   2154,
+   2186,
+   2341,
+   2419,
+   2519,
+   2532
+  ],
+  "notes": "'City Map Color Settings': 'Marker Style'/'Show Flags instead of Dots' switch row, 'Marker Sizing' By Population/By Duration/By Visit Count switch rows, 'Color Mode' options, 'Defaults', Cancel/Done. Press Cancel."
+ },
+ {
+  "id": "cities_screen_color_mode_by_visits",
+  "file": "lib/screens/cities_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "round '+' button at top-right of the city map card on Cities tab"
+   },
+   {
+    "tap": "Color Settings"
+   },
+   {
+    "tap": "By Visits"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   2341
+  ],
+  "notes": "Color Settings in 'By Visits' mode (range editors 'Visits'/'Days', rating/continent/subregion colour lists). Cancel afterwards. Path: removed scroll_to 'Color Mode' (dialog fling can overshoot); driver scrolls to the radio itself. Latest run: radio not found; dialog content is mid-scroll and the driver fling overshoots / first swipe may start outside the dialog list."
+ },
+ {
+  "id": "cities_screen_color_mode_by_duration",
+  "file": "lib/screens/cities_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "round '+' button at top-right of the city map card on Cities tab"
+   },
+   {
+    "tap": "Color Settings"
+   },
+   {
+    "tap": "By Duration"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   2341
+  ],
+  "notes": "Color Settings in 'By Duration' mode (range editors 'Visits'/'Days', rating/continent/subregion colour lists). Cancel afterwards. Path: removed scroll_to 'Color Mode' (dialog fling can overshoot); driver scrolls to the radio itself. Latest run: radio not found; dialog content is mid-scroll and the driver fling overshoots / first swipe may start outside the dialog list."
+ },
+ {
+  "id": "cities_screen_color_mode_by_rating",
+  "file": "lib/screens/cities_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "round '+' button at top-right of the city map card on Cities tab"
+   },
+   {
+    "tap": "Color Settings"
+   },
+   {
+    "tap": "By Rating"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   2341
+  ],
+  "notes": "Color Settings in 'By Rating' mode (range editors 'Visits'/'Days', rating/continent/subregion colour lists). Cancel afterwards. Path: removed scroll_to 'Color Mode' (dialog fling can overshoot); driver scrolls to the radio itself. Latest run: radio not found; dialog content is mid-scroll and the driver fling overshoots / first swipe may start outside the dialog list."
+ },
+ {
+  "id": "cities_screen_color_mode_by_continent",
+  "file": "lib/screens/cities_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "round '+' button at top-right of the city map card on Cities tab"
+   },
+   {
+    "tap": "Color Settings"
+   },
+   {
+    "tap": "By Continent"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   2341
+  ],
+  "notes": "Color Settings in 'By Continent' mode (range editors 'Visits'/'Days', rating/continent/subregion colour lists). Cancel afterwards. Path: removed scroll_to 'Color Mode' (dialog fling can overshoot); driver scrolls to the radio itself. Latest run: radio not found; dialog content is mid-scroll and the driver fling overshoots / first swipe may start outside the dialog list."
+ },
+ {
+  "id": "cities_screen_color_mode_by_subregion",
+  "file": "lib/screens/cities_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "round '+' button at top-right of the city map card on Cities tab"
+   },
+   {
+    "tap": "Color Settings"
+   },
+   {
+    "tap": "By Subregion"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   2341
+  ],
+  "notes": "Color Settings in 'By Subregion' mode (range editors 'Visits'/'Days', rating/continent/subregion colour lists). Cancel afterwards. Path: removed scroll_to 'Color Mode' (dialog fling can overshoot); driver scrolls to the radio itself. Latest run: radio not found; dialog content is mid-scroll and the driver fling overshoots / first swipe may start outside the dialog list."
+ },
+ {
+  "id": "cities_screen_home_lived_colors",
+  "file": "lib/screens/cities_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "round '+' button at top-right of the city map card on Cities tab"
+   },
+   {
+    "tap": "Color Settings"
+   },
+   {
+    "scroll_to": "Home & Lived Colors"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   2059,
+   2063,
+   2076,
+   2086,
+   2090
+  ],
+  "notes": "'Show Home Color'/'Show Lived Color'/'Show Wishlist' switch rows."
+ },
+ {
+  "id": "cities_screen_pick_color_dialog",
+  "file": "lib/screens/cities_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "round '+' button at top-right of the city map card on Cities tab"
+   },
+   {
+    "tap": "Color Settings"
+   },
+   {
+    "tap_desc": "first colour circle in dialog"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   2013,
+   2022
+  ],
+  "notes": "'Pick a color' + 'Select'."
+ },
+ {
+  "id": "cities_screen_add_city_dialog",
+  "file": "lib/screens/cities_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "round '+' button at top-right of the city map card on Cities tab"
+   },
+   {
+    "tap": "Add Custom City"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   593,
+   598,
+   605,
+   613,
+   624,
+   636,
+   643,
+   644,
+   658,
+   659,
+   672,
+   677,
+   680,
+   685,
+   686
+  ],
+  "notes": "'Add New Custom City' form: City Name, Latitude/Longitude, 'Tap on map to select', 'Country ISO A2 (e.g., US)', Continent/'Select Subregion (Optional)' dropdowns, 'Population (Leave blank for Unknown)', hint, Cancel/Add City. Press Cancel - NEVER Add City."
+ },
+ {
+  "id": "cities_screen_filter_visited",
+  "file": "lib/screens/cities_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "round '+' button at top-right of the city map card on Cities tab"
+   },
+   {
+    "tap": "Visited"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   761
+  ],
+  "notes": "Chip toggled (pref only)."
+ },
+ {
+  "id": "cities_screen_search",
+  "file": "lib/screens/cities_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "round '+' button at top-right of the city map card on Cities tab"
+   },
+   {
+    "tap": "Search Cities"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   1193
+  ],
+  "notes": "Type 'Paris'."
+ },
+ {
+  "id": "cities_screen_city_details_sheet",
+  "file": "lib/screens/cities_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "round '+' button at top-right of the city map card on Cities tab"
+   },
+   {
+    "tap_first_list_item": "first city tile in CitiesScreen list (tap name, not switch)"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   1507,
+   1514,
+   1523,
+   1616,
+   1647,
+   1656,
+   1680
+  ],
+  "notes": "City details sheet (no drag-dismiss): Cancel/Done, '$country | Lived | Home | Wishlist', 'Lived:' row, 'History (n visits, d days)' + 'Add Visit' spaceBetween Row. Press Cancel."
+ },
+ {
+  "id": "cities_screen_memo_dialog",
+  "file": "lib/screens/cities_screen.dart",
+  "kind": "dialog",
+  "path": [],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [
+   1333,
+   1340,
+   1349,
+   1354,
+   1370,
+   1378,
+   1411,
+   1418
+  ],
+  "notes": "'Memo & Photos for <city>' (Memo, 'Photos:', Photo Library/Camera sheet, Cancel/Save) - needs an existing city visit record."
+ },
+ {
+  "id": "cities_screen_visit_editor_tile",
+  "file": "lib/screens/cities_screen.dart",
+  "kind": "state",
+  "path": [],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "high",
+  "risk_lines": [
+   2785,
+   2914,
+   2992,
+   3010,
+   3025,
+   3045,
+   3053
+  ],
+  "notes": "City visit editor ExpansionTile (Title, Memo, Photos:, dates, 'Duration (days)', Transfer/Layover, Delete/Save) - only with existing records; adding = data change."
+ },
+ {
+  "id": "cities_screen_removal_confirm",
+  "file": "lib/screens/cities_screen.dart",
+  "kind": "dialog",
+  "path": [],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "low",
+  "risk_lines": [
+   1245,
+   1252,
+   1256
+  ],
+  "notes": "'Confirm Removal' when switching off a visited city with records - data change."
+ },
+ {
+  "id": "cities_screen_invalid_input_dialog",
+  "file": "lib/screens/cities_screen.dart",
+  "kind": "dialog",
+  "path": [],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "low",
+  "risk_lines": [
+   1895,
+   1898
+  ],
+  "notes": "'Invalid Input' from Add City validation - requires pressing Add City; avoid."
+ },
+ {
+  "id": "top_cities",
+  "file": "lib/screens/top_cities_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded icon buttons under the city map on Cities tab (trophy (emoji_events) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   134,
+   152,
+   164,
+   168,
+   236,
+   414,
+   432,
+   477,
+   489,
+   570,
+   581
+  ],
+  "notes": "Top Cities: 'Major Cities' (Capital/Largest dropdown, '%', 'Visited x of y', 'View Map'), 'Global Top Cities', 'GaWC Global City Rankings', 'Iconic Cities' ('40 cities · 7 landmarks each')."
+ },
+ {
+  "id": "top_cities_largest",
+  "file": "lib/screens/top_cities_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded icon buttons under the city map on Cities tab (trophy (emoji_events) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "tap": "Capital Cities"
+   },
+   {
+    "tap": "Largest Cities"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   152,
+   164,
+   168
+  ],
+  "notes": "Dropdown on Largest Cities."
+ },
+ {
+  "id": "capitals_screen",
+  "file": "lib/screens/capitals_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded icon buttons under the city map on Cities tab (trophy (emoji_events) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "tap": "View Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "CapitalsScreen (capital cities map/list)."
+ },
+ {
+  "id": "capitals_screen_largest",
+  "file": "lib/screens/capitals_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded icon buttons under the city map on Cities tab (trophy (emoji_events) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "tap": "Capital Cities"
+   },
+   {
+    "tap": "Largest Cities"
+   },
+   {
+    "tap": "View Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Largest-city mode."
+ },
+ {
+  "id": "top_cities_iconic",
+  "file": "lib/screens/landmark_cities_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#1 of the 6 rounded icon buttons under the city map on Cities tab (trophy (emoji_events) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "scroll_to": "Iconic Cities"
+   },
+   {
+    "tap": "Iconic Cities"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   782
+  ],
+  "notes": "LandmarkCitiesScreen (may duplicate Explore inventory)."
+ },
+ {
+  "id": "city_stats_overview_tab",
+  "file": "lib/screens/city_overview_stats_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded icon buttons under the city map on Cities tab (chart (insights) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   169,
+   170,
+   171,
+   202,
+   203,
+   204,
+   359,
+   362,
+   701,
+   742,
+   931,
+   958,
+   980,
+   1007,
+   1037,
+   1386,
+   1724
+  ],
+  "notes": "City General: TabBar in AppBar title (Overview/Population/Economy, 14sp, fixed). Overview: 'Visited Cities' ExpansionTile, 'Cities Visited', 'Cities by Continent', 'Data Explorer' dropdowns + 'Log' switches, chips Home/Lived/Transfer/Layover, 'Selected City', 'Rating Tiers'."
+ },
+ {
+  "id": "city_stats_visited_expansion",
+  "file": "lib/screens/city_overview_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded icon buttons under the city map on Cities tab (chart (insights) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "tap": "Visited Cities"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   359,
+   362,
+   380
+  ],
+  "notes": "Expanded visited-cities list."
+ },
+ {
+  "id": "city_tiers",
+  "file": "lib/screens/city_tiers_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded icon buttons under the city map on Cities tab (chart (insights) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "scroll_to": "Rating Tiers"
+   },
+   {
+    "tap_desc": "amber add_circle_outline IconButton right of the 'Rating Tiers' header title (nearest icon right of it; opens the tiers screen - the title itself is not tappable)"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   187,
+   189,
+   384,
+   434,
+   576
+  ],
+  "notes": "CityTiersScreen (TIERS/TABLE/CHART, All/Visited/Unvisited/Custom, fixed-width metric labels)."
+ },
+ {
+  "id": "city_tiers_table",
+  "file": "lib/screens/city_tiers_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded icon buttons under the city map on Cities tab (chart (insights) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "scroll_to": "Rating Tiers"
+   },
+   {
+    "tap_desc": "amber add_circle_outline IconButton right of the 'Rating Tiers' header title (nearest icon right of it; opens the tiers screen - the title itself is not tappable)"
+   },
+   {
+    "tap": "TABLE"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   408,
+   436,
+   444,
+   445
+  ],
+  "notes": "DataTable; popup Remove from view / Edit."
+ },
+ {
+  "id": "city_tiers_chart",
+  "file": "lib/screens/city_tiers_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded icon buttons under the city map on Cities tab (chart (insights) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "scroll_to": "Rating Tiers"
+   },
+   {
+    "tap_desc": "amber add_circle_outline IconButton right of the 'Rating Tiers' header title (nearest icon right of it; opens the tiers screen - the title itself is not tappable)"
+   },
+   {
+    "tap": "CHART"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   457,
+   459
+  ],
+  "notes": "Chart view."
+ },
+ {
+  "id": "city_tiers_metrics_dialog",
+  "file": "lib/screens/city_tiers_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded icon buttons under the city map on Cities tab (chart (insights) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "scroll_to": "Rating Tiers"
+   },
+   {
+    "tap_desc": "amber add_circle_outline IconButton right of the 'Rating Tiers' header title (nearest icon right of it; opens the tiers screen - the title itself is not tappable)"
+   },
+   {
+    "tap_desc": "checklist icon button right of the 'CHART' segment in the tiers header bar (nearest icon right of 'CHART')"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   299,
+   306,
+   349
+  ],
+  "notes": "'Select Metrics', 'Done'."
+ },
+ {
+  "id": "city_tiers_add_city_dialog",
+  "file": "lib/screens/city_tiers_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded icon buttons under the city map on Cities tab (chart (insights) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "scroll_to": "Rating Tiers"
+   },
+   {
+    "tap_desc": "amber add_circle_outline IconButton right of the 'Rating Tiers' header title (nearest icon right of it; opens the tiers screen - the title itself is not tappable)"
+   },
+   {
+    "tap_desc": "blue add icon in tiers header"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   263,
+   265,
+   284,
+   286,
+   288,
+   289
+  ],
+  "notes": "'Add City'/'Select City' with 'Search...'."
+ },
+ {
+  "id": "city_tiers_edit_dialog",
+  "file": "lib/screens/city_tiers_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded icon buttons under the city map on Cities tab (chart (insights) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "scroll_to": "Rating Tiers"
+   },
+   {
+    "tap_desc": "amber add_circle_outline IconButton right of the 'Rating Tiers' header title (nearest icon right of it; opens the tiers screen - the title itself is not tappable)"
+   },
+   {
+    "tap": "TABLE"
+   },
+   {
+    "tap": "Show menu"
+   },
+   {
+    "tap": "Edit"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   180,
+   187,
+   189,
+   228,
+   248
+  ],
+  "notes": "Edit dialog with fixed-width label boxes; Cancel."
+ },
+ {
+  "id": "city_stats_population_tab",
+  "file": "lib/screens/populations_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded icon buttons under the city map on Cities tab (chart (insights) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "tap": "Population"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   124,
+   338,
+   542,
+   593
+  ],
+  "notes": "'Population Distribution', 'No visited cities', ranking dropdown."
+ },
+ {
+  "id": "city_stats_economy_tab",
+  "file": "lib/screens/city_economy_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded icon buttons under the city map on Cities tab (chart (insights) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "tap": "Economy"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   309,
+   325,
+   371
+  ],
+  "notes": "City economy ranking with dropdown."
+ },
+ {
+  "id": "city_detail_modal_from_stats",
+  "file": "lib/screens/cities_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#2 of the 6 rounded icon buttons under the city map on Cities tab (chart (insights) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "tap": "Population"
+   },
+   {
+    "tap_first_list_item": "first city row in Population ranking"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   3364,
+   3376,
+   3414,
+   3445,
+   3480,
+   3485
+  ],
+  "notes": "External city detail sheet (same as country_detail_major_city_modal). Cancel."
+ },
+ {
+  "id": "city_stats_society_tab",
+  "file": "lib/screens/city_society_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#3 of the 6 rounded icon buttons under the city map on Cities tab (people (groups) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   42,
+   110,
+   117,
+   128,
+   131,
+   133
+  ],
+  "notes": "AppBar TabBar Society/History; 'RANKINGS' rank card."
+ },
+ {
+  "id": "city_stats_history_tab",
+  "file": "lib/screens/city_history_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#3 of the 6 rounded icon buttons under the city map on Cities tab (people (groups) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "tap": "History"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   109,
+   111,
+   132,
+   144,
+   179,
+   181,
+   184,
+   191,
+   201,
+   211,
+   213
+  ],
+  "notes": "'Oldest Cities' + continent dropdown, 'HISTORY' 'Former Imperial Capitals' + 'Map'."
+ },
+ {
+  "id": "city_stats_imperial_capitals_map",
+  "file": "lib/screens/city_stats_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#3 of the 6 rounded icon buttons under the city map on Cities tab (people (groups) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "tap": "History"
+   },
+   {
+    "scroll_to": "Former Imperial Capitals"
+   },
+   {
+    "tap": "Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   143,
+   151,
+   155
+  ],
+  "notes": "CityStatsMapScreen (marker -> city sheet; un-visiting asks 'Confirm Removal')."
+ },
+ {
+  "id": "city_stats_tourism_tab",
+  "file": "lib/screens/tourism_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#4 of the 6 rounded icon buttons under the city map on Cities tab (tour flag icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   46,
+   142,
+   149,
+   158,
+   169,
+   172,
+   174,
+   208,
+   210,
+   213,
+   220,
+   229
+  ],
+  "notes": "AppBar TabBar Tourism/Transportation; ranking + continent dropdown, 'SOCIAL' 'Top Instagram Posted' + 'Map'. Login needed on Android."
+ },
+ {
+  "id": "city_stats_instagram_map",
+  "file": "lib/screens/city_stats_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#4 of the 6 rounded icon buttons under the city map on Cities tab (tour flag icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "scroll_to": "Top Instagram Posted"
+   },
+   {
+    "tap": "Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "Top Instagram cities map."
+ },
+ {
+  "id": "city_stats_transportation_tab",
+  "file": "lib/screens/city_transportation_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#4 of the 6 rounded icon buttons under the city map on Cities tab (tour flag icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "tap": "Transportation"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   121,
+   145,
+   158,
+   210,
+   212,
+   243,
+   251,
+   262
+  ],
+  "notes": "Transport groups with 'Map'."
+ },
+ {
+  "id": "city_stats_transport_map",
+  "file": "lib/screens/city_stats_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#4 of the 6 rounded icon buttons under the city map on Cities tab (tour flag icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "tap": "Transportation"
+   },
+   {
+    "tap": "Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "First transport group map."
+ },
+ {
+  "id": "city_stats_geography_tab",
+  "file": "lib/screens/city_geography_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#5 of the 6 rounded icon buttons under the city map on Cities tab (mountain (terrain) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   187,
+   221,
+   1142
+  ],
+  "notes": "AppBar TabBar Geography/Climate; custom cards with closest/farthest city tiles and 'Map'."
+ },
+ {
+  "id": "city_stats_geography_map",
+  "file": "lib/screens/city_stats_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#5 of the 6 rounded icon buttons under the city map on Cities tab (mountain (terrain) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "scroll_to": "Map"
+   },
+   {
+    "tap": "Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "City geography map."
+ },
+ {
+  "id": "city_stats_climate_tab",
+  "file": "lib/screens/city_climate_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#5 of the 6 rounded icon buttons under the city map on Cities tab (mountain (terrain) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "tap": "Climate"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   151,
+   838
+  ],
+  "notes": "City climate cards, city tile rows, 'Map'."
+ },
+ {
+  "id": "city_stats_climate_map",
+  "file": "lib/screens/city_stats_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#5 of the 6 rounded icon buttons under the city map on Cities tab (mountain (terrain) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "tap": "Climate"
+   },
+   {
+    "scroll_to": "Map"
+   },
+   {
+    "tap": "Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "City climate map."
+ },
+ {
+  "id": "city_stats_specials_tab",
+  "file": "lib/screens/city_specials_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#6 of the 6 rounded icon buttons under the city map on Cities tab (sparkle (auto_awesome) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   226,
+   227,
+   274,
+   1267
+  ],
+  "notes": "AppBar TabBar Specials/Sports; specials cards, 'Map'."
+ },
+ {
+  "id": "city_stats_specials_map",
+  "file": "lib/screens/city_stats_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#6 of the 6 rounded icon buttons under the city map on Cities tab (sparkle (auto_awesome) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "scroll_to": "Map"
+   },
+   {
+    "tap": "Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "City specials map."
+ },
+ {
+  "id": "city_stats_sports_tab",
+  "file": "lib/screens/city_sports_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#6 of the 6 rounded icon buttons under the city map on Cities tab (sparkle (auto_awesome) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "tap": "Sports"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   137,
+   631
+  ],
+  "notes": "City sports cards + 'Map'."
+ },
+ {
+  "id": "city_stats_sports_map",
+  "file": "lib/screens/city_stats_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#6 of the 6 rounded icon buttons under the city map on Cities tab (sparkle (auto_awesome) icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "tap": "Sports"
+   },
+   {
+    "scroll_to": "Map"
+   },
+   {
+    "tap": "Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "City sports map."
+ },
+ {
+  "id": "city_search_sheet",
+  "file": "lib/widgets/next_adventure_card.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Adventure"
+   },
+   {
+    "tap": "Adventure"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   197,
+   198,
+   588,
+   607,
+   687
+  ],
+  "notes": "'Next Adventure' card on My Trips opens search sheet ('Search a country or city', example cities, 'No matching city', 'nearby'). Entry is My Trips; may duplicate that inventory."
+ },
+ {
+  "id": "city_search_country_result",
+  "file": "lib/screens/country_detail_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap_contains": "Adventure"
+   },
+   {
+    "type_text": "France"
+   },
+   {
+    "tap": "France"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [],
+  "notes": "Type 'France', tap the country result -> CountryDetailScreen. Needs typing 'France' into the search sheet; driver cannot type (card label is 'Next Adventure', Popular list only has Paris/London/Tokyo/New York City/Rome). Search sheet autofocuses its field, so type_text goes straight in; 'France' row is in the Countries section."
+ },
+ {
+  "id": "city_travel_modal",
+  "file": "lib/widgets/city_travel_modal.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap_contains": "Adventure"
+   },
+   {
+    "type_text": "Bordeaux"
+   },
+   {
+    "tap": "Bordeaux"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   607,
+   609,
+   655,
+   876,
+   1113,
+   1132,
+   1202,
+   1204,
+   1244,
+   1280,
+   1283,
+   1322,
+   1325,
+   1652,
+   1667,
+   1733
+  ],
+  "notes": "City travel sheet: 'Set your home airport', 'Search flights', fare row ('Checking fares for…', 'Price unavailable for this date — tap to search', 'Book' in Row), tours 'View tour', eSIM/guide/luggage rows, 'Coming soon', affiliate disclaimer. Never tap Book/affiliate links. Needs typing a city without a report (e.g. Lyon); driver cannot type and the Popular list only has cities with reports. (Next Adventure card label is 'Next Adventure'.) Bordeaux is in cities.json but has no city report (Lyon has one), so it opens the travel modal."
+ },
+ {
+  "id": "city_travel_hub_sheet",
+  "file": "lib/widgets/city_travel_modal.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap_contains": "Adventure"
+   },
+   {
+    "type_text": "Bordeaux"
+   },
+   {
+    "tap": "Bordeaux"
+   },
+   {
+    "tap": "Set your home airport"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   2038,
+   2039,
+   2054,
+   2086,
+   2100
+  ],
+  "notes": "'Set Your Hub' airport search sheet. Do not pick an airport (changes user setting). Needs typing a city without a report (e.g. Lyon); driver cannot type and the Popular list only has cities with reports. (Next Adventure card label is 'Next Adventure'.)"
+ },
+ {
+  "id": "city_report_screen",
+  "file": "lib/widgets/city_report_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap_contains": "Adventure"
+   },
+   {
+    "tap_contains": "Paris"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   152
+  ],
+  "notes": "CityReportScreen guide (itineraries, transport, costs, weather, hotels; 'Could not load this guide.'). Also via travel modal '<city> trip guide'. Popular list shown for an empty query (Paris/London/Tokyo/NYC/Rome) all have city reports."
+ },
+ {
+  "id": "rankings_tab",
+  "file": "lib/social/screens/stats_screen.dart",
+  "kind": "tab",
+  "path": [],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   45,
+   1213,
+   1217,
+   1313,
+   1434,
+   1490,
+   1529,
+   1568,
+   1662,
+   1685
+  ],
+  "notes": "Social StatsScreen 'Rankings' tab (My Stats/Friends/Rankings): 'Travelog collections', 'Unlock with Premium', 'Most visited countries/cities/landmarks', 'Show less', '% of users', 'All continents'. Entry is SocialHub.openStats (social/profile area, not Countries/Cities); path left to that agent."
+ }
+]

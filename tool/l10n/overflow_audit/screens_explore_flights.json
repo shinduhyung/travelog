@@ -1,0 +1,8212 @@
+[
+ {
+  "id": "explore_menu",
+  "file": "lib/screens/explore_menu_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Explore"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   325,
+   352,
+   554,
+   625
+  ],
+  "notes": "Explore tab home. UNESCO hero card, Map/Stats icon buttons (Row icon+Text, no Flexible), Cultural/Natural cards, Top Picks/Stats/Logs 3-up outline buttons (100px tall, unconstrained Text), Browse Activities banner. Requires signed-in user for most children (else LoginPrompt sheet)."
+ },
+ {
+  "id": "explore_menu_bottom",
+  "file": "lib/screens/explore_menu_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   585,
+   595
+  ],
+  "notes": "Scrolled to Activities banner: 26pt 'Browse Activities' + subtitle in fixed 140px card."
+ },
+ {
+  "id": "explore_login_prompt_sheet",
+  "file": "lib/screens/login_prompt_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "Only appears when signed out: tapping any gated card opens LoginPromptScreen sheet. Skip if signed in."
+ },
+ {
+  "id": "unesco_sites",
+  "file": "lib/screens/unesco_sites_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap_desc": "large orange-bordered UNESCO image card at top of Explore (shows visited count / total and a % box)"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   1022,
+   1033,
+   1097,
+   1105
+  ],
+  "notes": "UNESCO list. 'My Progress' Column not Expanded beside % box; filter Row = Wrap(Cult./Nat./Mix chips)+Spacer+Visited chip inside a Row (Wrap unbounded) -> overflow likely."
+ },
+ {
+  "id": "unesco_sites_sort_dropdown",
+  "file": "lib/screens/unesco_sites_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap_desc": "large orange-bordered UNESCO image card at top of Explore (shows visited count / total and a % box)"
+   },
+   {
+    "tap": "Name"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   1089,
+   1091
+  ],
+  "notes": "Sort dropdown open (Name / Country / Inscription Year)."
+ },
+ {
+  "id": "unesco_sites_sort_country",
+  "file": "lib/screens/unesco_sites_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap_desc": "large orange-bordered UNESCO image card at top of Explore (shows visited count / total and a % box)"
+   },
+   {
+    "tap": "Name"
+   },
+   {
+    "tap": "Country"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Sorted by country: group headers."
+ },
+ {
+  "id": "unesco_sites_visited_filter",
+  "file": "lib/screens/unesco_sites_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap_desc": "large orange-bordered UNESCO image card at top of Explore (shows visited count / total and a % box)"
+   },
+   {
+    "tap": "Visited"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   1105
+  ],
+  "notes": "Visited chip selected (checkmark adds width to chip row)."
+ },
+ {
+  "id": "unesco_sites_search",
+  "file": "lib/screens/unesco_sites_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap_desc": "large orange-bordered UNESCO image card at top of Explore (shows visited count / total and a % box)"
+   },
+   {
+    "tap": "Search sites or countries..."
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   1074
+  ],
+  "notes": "Search field focused (keyboard up, less height)."
+ },
+ {
+  "id": "unesco_sites_visit_log_expanded",
+  "file": "lib/screens/unesco_sites_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap_desc": "large orange-bordered UNESCO image card at top of Explore (shows visited count / total and a % box)"
+   },
+   {
+    "scroll_to": "Visit Log"
+   },
+   {
+    "tap_desc": "expand_more chevron IconButton at right of 'Visit Log' header"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": true,
+  "risk": "high",
+  "risk_lines": [
+   666,
+   673,
+   682
+  ],
+  "notes": "Visit Log expanded: header Row(icon + 'Visit Log' + By Year dropdown) not flexible, plus expand button. Needs logs to show content. Visit Log section is hidden unless a UNESCO site has a dated visit (unesco_sites_screen.dart _buildVisitLogSection); needs user data. Path itself is right."
+ },
+ {
+  "id": "unesco_sites_visit_log_by_country",
+  "file": "lib/screens/unesco_sites_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap_desc": "large orange-bordered UNESCO image card at top of Explore (shows visited count / total and a % box)"
+   },
+   {
+    "scroll_to": "Visit Log"
+   },
+   {
+    "tap_desc": "expand chevron right of 'Visit Log'"
+   },
+   {
+    "tap": "By Year"
+   },
+   {
+    "tap": "By Country"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": true,
+  "risk": "high",
+  "risk_lines": [
+   666,
+   693,
+   694
+  ],
+  "notes": "Visit log grouped by country (dropdown now shows longer 'By Country'). Visit Log section is hidden unless a UNESCO site has a dated visit (unesco_sites_screen.dart _buildVisitLogSection); needs user data. Path itself is right."
+ },
+ {
+  "id": "unesco_site_info_sheet",
+  "file": "lib/screens/unesco_sites_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap_desc": "large orange-bordered UNESCO image card at top of Explore (shows visited count / total and a % box)"
+   },
+   {
+    "scroll_to": "Visited"
+   },
+   {
+    "tap_first_list_item": "first UNESCO site card in list"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   1243
+  ],
+  "notes": "Site detail bottom sheet: header Cancel/Done, wishlist + 'My Rating:' + 5-star RatingBar Row, History header + Add Visit button."
+ },
+ {
+  "id": "unesco_site_visit_editor",
+  "file": "lib/screens/unesco_sites_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap_desc": "large orange-bordered UNESCO image card at top of Explore (shows visited count / total and a % box)"
+   },
+   {
+    "tap_first_list_item": "a visited UNESCO site that already has visit records"
+   },
+   {
+    "scroll_to": "Edit Record"
+   },
+   {
+    "tap": "Edit Record"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": true,
+  "risk": "high",
+  "risk_lines": [
+   1367,
+   1446
+  ],
+  "notes": "Visit editor card in edit mode (Visit Date row + Edit Date button, Title/Memo fields, location FilterChips, Cancel/Save). Requires an existing visit record; never tap 'Add Visit' or 'Save'."
+ },
+ {
+  "id": "unesco_site_delete_visit_dialog",
+  "file": "lib/screens/unesco_sites_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap_desc": "large orange-bordered UNESCO image card at top of Explore (shows visited count / total and a % box)"
+   },
+   {
+    "tap_first_list_item": "visited site with visits"
+   },
+   {
+    "tap_desc": "red delete_outline icon on a visit record"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": true,
+  "risk": "low",
+  "risk_lines": [
+   1370
+  ],
+  "notes": "Delete Visit Record confirm dialog; tap Cancel only."
+ },
+ {
+  "id": "unesco_remove_confirm_dialog",
+  "file": "lib/screens/unesco_sites_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap_desc": "large orange-bordered UNESCO image card at top of Explore (shows visited count / total and a % box)"
+   },
+   {
+    "tap_desc": "checked checkbox on a visited site that has visit dates"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": true,
+  "risk": "low",
+  "risk_lines": [
+   1115
+  ],
+  "notes": "Confirm Removal dialog (Cancel / Yes, Remove). Tap Cancel only. Requires visited site."
+ },
+ {
+  "id": "unesco_map",
+  "file": "lib/screens/unesco_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Map"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   577
+  ],
+  "notes": "UNESCO map + checklist. 'Map' is the first of two buttons under the UNESCO card. Search field fixed 150px wide."
+ },
+ {
+  "id": "unesco_map_settings_dialog",
+  "file": "lib/screens/unesco_map_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Map"
+   },
+   {
+    "tap": "Settings"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   770
+  ],
+  "notes": "Map color settings dialog: Switch rows with unflexed Text (Show Unvisited / Show Wishlist), color-mode radio list, Reset/Cancel/Done actions. 'Settings' is IconButton tooltip (content-desc)."
+ },
+ {
+  "id": "unesco_map_settings_by_visits",
+  "file": "lib/screens/unesco_map_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Map"
+   },
+   {
+    "tap": "Settings"
+   },
+   {
+    "scroll_to": "By Visits"
+   },
+   {
+    "tap": "By Visits"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Settings dialog with 'By Visits' color mode: extra range/color picker rows. Close with Cancel."
+ },
+ {
+  "id": "unesco_map_settings_by_rating",
+  "file": "lib/screens/unesco_map_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Map"
+   },
+   {
+    "tap": "Settings"
+   },
+   {
+    "scroll_to": "By Rating"
+   },
+   {
+    "tap": "By Rating"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Settings dialog with 'By Rating' color mode: extra range/color picker rows. Close with Cancel."
+ },
+ {
+  "id": "unesco_map_settings_by_continent",
+  "file": "lib/screens/unesco_map_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Map"
+   },
+   {
+    "tap": "Settings"
+   },
+   {
+    "scroll_to": "By Continent"
+   },
+   {
+    "tap": "By Continent"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Settings dialog with 'By Continent' color mode: extra range/color picker rows. Close with Cancel."
+ },
+ {
+  "id": "unesco_map_settings_by_subregion",
+  "file": "lib/screens/unesco_map_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Map"
+   },
+   {
+    "tap": "Settings"
+   },
+   {
+    "scroll_to": "By Subregion"
+   },
+   {
+    "tap": "By Subregion"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Settings dialog with 'By Subregion' color mode: extra range/color picker rows. Close with Cancel."
+ },
+ {
+  "id": "unesco_map_pick_color_dialog",
+  "file": "lib/screens/unesco_map_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Map"
+   },
+   {
+    "tap": "Settings"
+   },
+   {
+    "tap_desc": "first round color swatch in settings dialog"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   732
+  ],
+  "notes": "Pick a color dialog (ColorPicker + Select)."
+ },
+ {
+  "id": "unesco_map_info_sheet",
+  "file": "lib/screens/unesco_map_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Map"
+   },
+   {
+    "tap": "Info"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   963,
+   1319,
+   1390
+  ],
+  "notes": "Site detail sheet from checklist 'Info' tooltip button (first row)."
+ },
+ {
+  "id": "unesco_stats_paywall",
+  "file": "lib/widgets/subscription_sheet.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Stats"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Non-premium users: UNESCO 'Stats' (first 'Stats' button, under UNESCO card) opens SubscriptionSheet. Do not purchase; close."
+ },
+ {
+  "id": "unesco_stats",
+  "file": "lib/screens/unesco_stats_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Stats"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   244,
+   247,
+   353,
+   380
+  ],
+  "notes": "Premium only. Header Row 'UNESCO DISCOVERY STATUS' (letterSpacing) + % chip without Expanded; continent chip strip; continent header row."
+ },
+ {
+  "id": "unesco_stats_continent_asia",
+  "file": "lib/screens/unesco_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "scroll_to": "EXPLORE BY CONTINENT"
+   },
+   {
+    "tap": "Asia"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   377,
+   380,
+   385
+  ],
+  "notes": "Continent 'Asia' selected: uppercase continent title (20pt, letterSpacing 1.0) + count chip Row, Recent Discoveries list."
+ },
+ {
+  "id": "unesco_stats_continent_europe",
+  "file": "lib/screens/unesco_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "scroll_to": "EXPLORE BY CONTINENT"
+   },
+   {
+    "tap": "Europe"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   377,
+   380,
+   385
+  ],
+  "notes": "Continent 'Europe' selected: uppercase continent title (20pt, letterSpacing 1.0) + count chip Row, Recent Discoveries list."
+ },
+ {
+  "id": "unesco_stats_continent_africa",
+  "file": "lib/screens/unesco_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "scroll_to": "EXPLORE BY CONTINENT"
+   },
+   {
+    "tap": "Africa"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   377,
+   380,
+   385
+  ],
+  "notes": "Continent 'Africa' selected: uppercase continent title (20pt, letterSpacing 1.0) + count chip Row, Recent Discoveries list."
+ },
+ {
+  "id": "unesco_stats_continent_n_america",
+  "file": "lib/screens/unesco_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "scroll_to": "EXPLORE BY CONTINENT"
+   },
+   {
+    "tap": "N. America"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   377,
+   380,
+   385
+  ],
+  "notes": "Continent 'N. America' selected: uppercase continent title (20pt, letterSpacing 1.0) + count chip Row, Recent Discoveries list."
+ },
+ {
+  "id": "unesco_stats_continent_s_america",
+  "file": "lib/screens/unesco_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "scroll_to": "EXPLORE BY CONTINENT"
+   },
+   {
+    "tap": "S. America"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   377,
+   380,
+   385
+  ],
+  "notes": "Continent 'S. America' selected: uppercase continent title (20pt, letterSpacing 1.0) + count chip Row, Recent Discoveries list."
+ },
+ {
+  "id": "unesco_stats_continent_oceania",
+  "file": "lib/screens/unesco_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "scroll_to": "EXPLORE BY CONTINENT"
+   },
+   {
+    "tap": "Oceania"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   377,
+   380,
+   385
+  ],
+  "notes": "Continent 'Oceania' selected: uppercase continent title (20pt, letterSpacing 1.0) + count chip Row, Recent Discoveries list."
+ },
+ {
+  "id": "unesco_stats_rank_sort",
+  "file": "lib/screens/unesco_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "scroll_to": "Country Rankings"
+   },
+   {
+    "tap": "Sort by"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   761,
+   766
+  ],
+  "notes": "Country ranking sort dropdown open."
+ },
+ {
+  "id": "unesco_stats_rank_visited",
+  "file": "lib/screens/unesco_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "scroll_to": "Country Rankings"
+   },
+   {
+    "tap": "Visited"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   776,
+   778
+  ],
+  "notes": "SegmentedButton All/Visited + High/Low."
+ },
+ {
+  "id": "unesco_stats_top_sites",
+  "file": "lib/screens/unesco_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "scroll_to": "Top UNESCO Sites"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1166,
+   1170
+  ],
+  "notes": "Top UNESCO Sites card."
+ },
+ {
+  "id": "unesco_stats_site_sheet",
+  "file": "lib/screens/unesco_stats_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "scroll_to": "Top UNESCO Sites"
+   },
+   {
+    "tap_contains": " visits"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   912,
+   1109
+  ],
+  "notes": "Site detail sheet from stats (History header + Add Visit row). Top UNESCO Sites is below the 400px Country Rankings inner ListView; the driver swipe at (540,1750) can land inside that nested list and never scroll the page. If scroll_to still fails, calibrate. Rows are ListTiles (h<150) so tap_first_list_item can't match; tap_contains ' visits' hits a row's trailing badge. Target lies below/inside a fixed-height nested ListView card (400-600px); the driver swipe at (540,1750) is swallowed by the inner list so the page never scrolls. Needs calibration."
+ },
+ {
+  "id": "unesco_stats_type_stats",
+  "file": "lib/screens/unesco_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "scroll_to": "Type Statistics"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1234,
+   1242
+  ],
+  "notes": "Type Statistics card with label/value rows."
+ },
+ {
+  "id": "landmarks_menu_cultural",
+  "file": "lib/screens/landmarks_menu_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   52
+  ],
+  "notes": "Cultural Wonders 3-col grid; tile titles maxLines 2 + ellipsis (truncation, not overflow). Header 32pt."
+ },
+ {
+  "id": "natural_menu",
+  "file": "lib/screens/natural_menu_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Natural"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   40
+  ],
+  "notes": "Natural Wonders 3-col grid; titles ellipsized."
+ },
+ {
+  "id": "landmarks_list_ancient_medieval",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "scroll_to": "Ancient & Medieval"
+   },
+   {
+    "tap": "Ancient & Medieval"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Ancient & Medieval': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_modern_history",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "scroll_to": "Modern History"
+   },
+   {
+    "tap": "Modern History"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Modern History': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_archaeological_sites",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "scroll_to": "Archaeological Sites"
+   },
+   {
+    "tap": "Archaeological Sites"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Archaeological Sites': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_traditional_villages",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "scroll_to": "Traditional Villages"
+   },
+   {
+    "tap": "Traditional Villages"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Traditional Villages': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_castles_forts",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "scroll_to": "Castles & Forts"
+   },
+   {
+    "tap": "Castles & Forts"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Castles & Forts': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_palaces",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "scroll_to": "Palaces"
+   },
+   {
+    "tap": "Palaces"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Palaces': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_modern_architecture",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "scroll_to": "Modern Architecture"
+   },
+   {
+    "tap": "Modern Architecture"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Modern Architecture': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_towers",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "scroll_to": "Towers"
+   },
+   {
+    "tap": "Towers"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Towers': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_bridges",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "scroll_to": "Bridges"
+   },
+   {
+    "tap": "Bridges"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Bridges': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_arches_gates",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "scroll_to": "Arches & Gates"
+   },
+   {
+    "tap": "Arches & Gates"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Arches & Gates': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_christian",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "scroll_to": "Christian"
+   },
+   {
+    "tap": "Christian"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Christian': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_islamic",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "scroll_to": "Islamic"
+   },
+   {
+    "tap": "Islamic"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Islamic': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_buddhist",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "scroll_to": "Buddhist"
+   },
+   {
+    "tap": "Buddhist"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Buddhist': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_hindu",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "scroll_to": "Hindu"
+   },
+   {
+    "tap": "Hindu"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Hindu': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_other_religions",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "scroll_to": "Other Religions"
+   },
+   {
+    "tap": "Other Religions"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Other Religions': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_tombs_cemeteries",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "scroll_to": "Tombs & Cemeteries"
+   },
+   {
+    "tap": "Tombs & Cemeteries"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Tombs & Cemeteries': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_museums_galleries",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "scroll_to": "Museums & Galleries"
+   },
+   {
+    "tap": "Museums & Galleries"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Museums & Galleries': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_squares_old_towns",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "scroll_to": "Squares & Old Towns"
+   },
+   {
+    "tap": "Squares & Old Towns"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Squares & Old Towns': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_urban_hubs",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "scroll_to": "Urban Hubs"
+   },
+   {
+    "tap": "Urban Hubs"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Urban Hubs': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_universities",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "scroll_to": "Universities"
+   },
+   {
+    "tap": "Universities"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Universities': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_markets",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "scroll_to": "Markets"
+   },
+   {
+    "tap": "Markets"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Markets': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_statues",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "scroll_to": "Statues"
+   },
+   {
+    "tap": "Statues"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Statues': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_parks_gardens",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "scroll_to": "Parks & Gardens"
+   },
+   {
+    "tap": "Parks & Gardens"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Parks & Gardens': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_harbors_waterfronts",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "scroll_to": "Harbors & Waterfronts"
+   },
+   {
+    "tap": "Harbors & Waterfronts"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Harbors & Waterfronts': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_seas",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Natural"
+   },
+   {
+    "scroll_to": "Seas"
+   },
+   {
+    "tap": "Seas"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Seas': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_beaches",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Natural"
+   },
+   {
+    "scroll_to": "Beaches"
+   },
+   {
+    "tap": "Beaches"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Beaches': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_rivers",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Natural"
+   },
+   {
+    "scroll_to": "Rivers"
+   },
+   {
+    "tap": "Rivers"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Rivers': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. Rivers/Lakes/Mountains/Waterfalls add Length/Area/Height sort option + metric text."
+ },
+ {
+  "id": "landmarks_list_lakes",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Natural"
+   },
+   {
+    "scroll_to": "Lakes"
+   },
+   {
+    "tap": "Lakes"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Lakes': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. Rivers/Lakes/Mountains/Waterfalls add Length/Area/Height sort option + metric text."
+ },
+ {
+  "id": "landmarks_list_waterfalls",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Natural"
+   },
+   {
+    "scroll_to": "Waterfalls"
+   },
+   {
+    "tap": "Waterfalls"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Waterfalls': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. Rivers/Lakes/Mountains/Waterfalls add Length/Area/Height sort option + metric text."
+ },
+ {
+  "id": "landmarks_list_islands",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Natural"
+   },
+   {
+    "scroll_to": "Islands"
+   },
+   {
+    "tap": "Islands"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Islands': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_mountains",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Natural"
+   },
+   {
+    "scroll_to": "Mountains"
+   },
+   {
+    "tap": "Mountains"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Mountains': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. Rivers/Lakes/Mountains/Waterfalls add Length/Area/Height sort option + metric text."
+ },
+ {
+  "id": "landmarks_list_deserts",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Natural"
+   },
+   {
+    "scroll_to": "Deserts"
+   },
+   {
+    "tap": "Deserts"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Deserts': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_volcanic_lava",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Natural"
+   },
+   {
+    "scroll_to": "Volcanic & Lava"
+   },
+   {
+    "tap": "Volcanic & Lava"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Volcanic & Lava': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_canyons_cliffs",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Natural"
+   },
+   {
+    "scroll_to": "Canyons & Cliffs"
+   },
+   {
+    "tap": "Canyons & Cliffs"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Canyons & Cliffs': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_caves_underground",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Natural"
+   },
+   {
+    "scroll_to": "Caves & Underground"
+   },
+   {
+    "tap": "Caves & Underground"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Caves & Underground': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_geothermal",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Natural"
+   },
+   {
+    "scroll_to": "Geothermal"
+   },
+   {
+    "tap": "Geothermal"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Geothermal': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_glaciers",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Natural"
+   },
+   {
+    "scroll_to": "Glaciers"
+   },
+   {
+    "tap": "Glaciers"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Glaciers': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_forests_jungles",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Natural"
+   },
+   {
+    "scroll_to": "Forests & Jungles"
+   },
+   {
+    "tap": "Forests & Jungles"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Forests & Jungles': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_unique_landscapes",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Natural"
+   },
+   {
+    "scroll_to": "Unique Landscapes"
+   },
+   {
+    "tap": "Unique Landscapes"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Unique Landscapes': hero dashboard (Progress/% row, View Map + 'x / y visited' spaceBetween Row), sort dropdown + Visited FilterChip row, group headers. "
+ },
+ {
+  "id": "landmarks_list_sort_dropdown",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "tap": "Castles & Forts"
+   },
+   {
+    "tap": "Name (A-Z)"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   1110,
+   1145
+  ],
+  "notes": "Sort dropdown menu open (Name (A-Z) / Country)."
+ },
+ {
+  "id": "landmarks_list_sort_country",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "tap": "Castles & Forts"
+   },
+   {
+    "tap": "Name (A-Z)"
+   },
+   {
+    "tap": "Country"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1210
+  ],
+  "notes": "Country sort: flag + 'Country n/m' group headers (Expanded)."
+ },
+ {
+  "id": "landmarks_list_metric_sort",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Natural"
+   },
+   {
+    "tap": "Mountains"
+   },
+   {
+    "tap": "Name (A-Z)"
+   },
+   {
+    "tap": "Height"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1131
+  ],
+  "notes": "Mountains sorted by Height: metric subtitle under names."
+ },
+ {
+  "id": "landmarks_list_visited_only",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "tap": "Castles & Forts"
+   },
+   {
+    "tap": "Visited"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1157
+  ],
+  "notes": "Visited FilterChip selected (checkmark widens chip next to Expanded dropdown)."
+ },
+ {
+  "id": "landmarks_list_search",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "tap": "Castles & Forts"
+   },
+   {
+    "tap": "Search..."
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   1086
+  ],
+  "notes": "Search field focused."
+ },
+ {
+  "id": "landmark_info_sheet",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "tap": "Castles & Forts"
+   },
+   {
+    "tap_first_list_item": "first landmark card in Castles & Forts list"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   638,
+   664,
+   732,
+   735,
+   808,
+   809,
+   810,
+   846
+  ],
+  "notes": "Landmark info card sheet. Header Row Cancel / MyMatchBadge / Done (no flex); 'Wishlist:'+heart and 'My Rating:'+140px RatingBar side by side (~330px already in EN); 'History (n entries)' + 'Add Visit' OutlinedButton spaceBetween without Expanded."
+ },
+ {
+  "id": "landmark_info_sheet_painting",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap_contains": "Browse Activities"
+   },
+   {
+    "scroll_to": "Painting & Artworks"
+   },
+   {
+    "tap": "Painting & Artworks"
+   },
+   {
+    "tap_first_list_item": "first item in Painting & Artworks list"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   638,
+   664,
+   732,
+   735,
+   808,
+   809,
+   810,
+   846,
+   800,
+   801,
+   802
+  ],
+  "notes": "Info sheet variant for Painting & Artworks: artist (32pt), created, museum Row(icon+Text unflexed)."
+ },
+ {
+  "id": "landmark_info_sheet_food",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap_contains": "Browse Activities"
+   },
+   {
+    "scroll_to": "National Dishes"
+   },
+   {
+    "tap": "National Dishes"
+   },
+   {
+    "tap_first_list_item": "first item in National Dishes list"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   638,
+   664,
+   732,
+   735,
+   808,
+   809,
+   810,
+   846
+  ],
+  "notes": "Info sheet variant for National Dishes: Overview/History/Highlights blocks."
+ },
+ {
+  "id": "landmark_info_sheet_restaurant",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap_contains": "Browse Activities"
+   },
+   {
+    "scroll_to": "Restaurants"
+   },
+   {
+    "tap": "Restaurants"
+   },
+   {
+    "tap_first_list_item": "first item in Restaurants list"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   638,
+   664,
+   732,
+   735,
+   808,
+   809,
+   810,
+   846
+  ],
+  "notes": "Info sheet variant for Restaurants: History/Best Dishes/Highlights."
+ },
+ {
+  "id": "landmark_info_sheet_festival",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap_contains": "Browse Activities"
+   },
+   {
+    "scroll_to": "Festivals & Events"
+   },
+   {
+    "tap": "Festivals & Events"
+   },
+   {
+    "tap_first_list_item": "first item in Festivals & Events list"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   638,
+   664,
+   732,
+   735,
+   808,
+   809,
+   810,
+   846
+  ],
+  "notes": "Info sheet variant for Festivals & Events: History/Highlights."
+ },
+ {
+  "id": "landmark_info_sheet_river",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Natural"
+   },
+   {
+    "scroll_to": "Rivers"
+   },
+   {
+    "tap": "Rivers"
+   },
+   {
+    "tap_first_list_item": "first item in Rivers list"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   638,
+   664,
+   732,
+   735,
+   808,
+   809,
+   810,
+   846
+  ],
+  "notes": "Info sheet variant for Rivers: metric label under title (Length)."
+ },
+ {
+  "id": "landmark_info_sheet_multi_location",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "scroll_to": "Ancient & Medieval"
+   },
+   {
+    "tap": "Ancient & Medieval"
+   },
+   {
+    "tap_first_list_item": "first item in Ancient & Medieval list"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   638,
+   664,
+   732,
+   735,
+   808,
+   809,
+   810,
+   846
+  ],
+  "notes": "Info sheet variant for Ancient & Medieval: pick an item with multiple locations to see 'x / y visited' chip and Components / Locations checklist (toggling a checkbox changes data - don't)."
+ },
+ {
+  "id": "landmark_visit_editor",
+  "file": "lib/widgets/landmark_visit_editor_card.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "tap": "Castles & Forts"
+   },
+   {
+    "tap_first_list_item": "a landmark that already has visit records"
+   },
+   {
+    "scroll_to": "Edit Record"
+   },
+   {
+    "tap": "Edit Record"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": true,
+  "risk": "high",
+  "risk_lines": [
+   225,
+   266,
+   269,
+   272,
+   380,
+   392,
+   407
+  ],
+  "notes": "LandmarkVisitEditorCard edit mode: Row(spaceBetween) 'Visit Date: yyyy-m-d' Text (no Expanded) + 'Edit Date' TextButton.icon; Cancel/Save row. Needs an existing visit — creating one ('Add Visit') or tapping Save changes data."
+ },
+ {
+  "id": "landmark_visit_editor_collapsed",
+  "file": "lib/widgets/landmark_visit_editor_card.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "tap": "Castles & Forts"
+   },
+   {
+    "tap_first_list_item": "a landmark that already has visit records"
+   },
+   {
+    "scroll_to": "Visit Record"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [
+   222,
+   225,
+   405
+  ],
+  "notes": "Collapsed/expanded visit card (ExpansionTile) with 'Edit Record' button. Needs existing visits."
+ },
+ {
+  "id": "landmark_visit_delete_dialog",
+  "file": "lib/widgets/landmark_visit_editor_card.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "tap": "Castles & Forts"
+   },
+   {
+    "tap_first_list_item": "landmark with visit records"
+   },
+   {
+    "tap_desc": "red delete_outline icon on a visit record card"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": true,
+  "risk": "low",
+  "risk_lines": [
+   229,
+   244
+  ],
+  "notes": "Delete Visit Record dialog — tap Cancel only."
+ },
+ {
+  "id": "landmark_visit_date_picker",
+  "file": "lib/widgets/landmark_visit_editor_card.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "tap": "Castles & Forts"
+   },
+   {
+    "tap_first_list_item": "landmark with visit records"
+   },
+   {
+    "tap": "Edit Record"
+   },
+   {
+    "tap": "Edit Date"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": true,
+  "risk": "low",
+  "risk_lines": [
+   112
+  ],
+  "notes": "Material date picker (system-localized). Cancel."
+ },
+ {
+  "id": "landmarks_list_remove_confirm",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "tap": "Castles & Forts"
+   },
+   {
+    "tap_desc": "checked checkbox on a visited landmark that has visit dates"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": true,
+  "risk": "low",
+  "risk_lines": [
+   1272,
+   1281
+  ],
+  "notes": "Confirm Removal dialog (Cancel / Yes, Remove). Tap Cancel only."
+ },
+ {
+  "id": "landmark_map",
+  "file": "lib/screens/landmark_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "tap": "Castles & Forts"
+   },
+   {
+    "tap": "View Map"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   588,
+   610,
+   640
+  ],
+  "notes": "LandmarkMapScreen: map (search field fixed 150x40) + checklist ListTiles with 3 trailing buttons."
+ },
+ {
+  "id": "landmark_map_marker_popup",
+  "file": "lib/screens/landmark_map_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "tap": "Castles & Forts"
+   },
+   {
+    "tap": "View Map"
+   },
+   {
+    "tap_desc": "a tiny landmark marker dot on the map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   708,
+   712
+  ],
+  "notes": "Info popup Marker fixed 200x100: Row('Visits: n | Wishlisted' + info icon) unflexed inside fixed width."
+ },
+ {
+  "id": "landmark_map_settings_dialog",
+  "file": "lib/screens/landmark_map_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "tap": "Castles & Forts"
+   },
+   {
+    "tap": "View Map"
+   },
+   {
+    "tap": "Settings"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   1016,
+   1020,
+   1027,
+   1031,
+   1041,
+   1045,
+   1176
+  ],
+  "notes": "Map Color Settings dialog: 'Show Unvisited'/'Show Wishlist' Text + Switch rows without Expanded; Wishlist Color row; Reset/Cancel/Done actions."
+ },
+ {
+  "id": "landmark_map_settings_show_wishlist",
+  "file": "lib/screens/landmark_map_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "tap": "Castles & Forts"
+   },
+   {
+    "tap": "View Map"
+   },
+   {
+    "tap": "Settings"
+   },
+   {
+    "tap": "Show Wishlist"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   1041,
+   1045
+  ],
+  "notes": "Show Wishlist switched on (dialog-local until Done): reveals 'Wishlist Color' row (unflexed Text + swatch). Close with Cancel."
+ },
+ {
+  "id": "landmark_map_settings_by_visits",
+  "file": "lib/screens/landmark_map_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "tap": "Castles & Forts"
+   },
+   {
+    "tap": "View Map"
+   },
+   {
+    "tap": "Settings"
+   },
+   {
+    "scroll_to": "By Visits"
+   },
+   {
+    "tap": "By Visits"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1081,
+   1093,
+   1101
+  ],
+  "notes": "Color mode 'By Visits' (dialog-local).  Close with Cancel."
+ },
+ {
+  "id": "landmark_map_settings_by_rating",
+  "file": "lib/screens/landmark_map_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "tap": "Castles & Forts"
+   },
+   {
+    "tap": "View Map"
+   },
+   {
+    "tap": "Settings"
+   },
+   {
+    "scroll_to": "By Rating"
+   },
+   {
+    "tap": "By Rating"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   1110,
+   1117,
+   1122
+  ],
+  "notes": "Color mode 'By Rating' (dialog-local). Rating rows: Column(From label + RatingBar) + swatch in spaceBetween Row. Close with Cancel."
+ },
+ {
+  "id": "landmark_map_settings_by_continent",
+  "file": "lib/screens/landmark_map_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "tap": "Castles & Forts"
+   },
+   {
+    "tap": "View Map"
+   },
+   {
+    "tap": "Settings"
+   },
+   {
+    "scroll_to": "By Continent"
+   },
+   {
+    "tap": "By Continent"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1142
+  ],
+  "notes": "Color mode 'By Continent' (dialog-local).  Close with Cancel."
+ },
+ {
+  "id": "landmark_map_settings_by_subregion",
+  "file": "lib/screens/landmark_map_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "tap": "Castles & Forts"
+   },
+   {
+    "tap": "View Map"
+   },
+   {
+    "tap": "Settings"
+   },
+   {
+    "scroll_to": "By Subregion"
+   },
+   {
+    "tap": "By Subregion"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1153
+  ],
+  "notes": "Color mode 'By Subregion' (dialog-local).  Close with Cancel."
+ },
+ {
+  "id": "landmark_map_settings_wishlist_only",
+  "file": "lib/screens/landmark_map_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "tap": "Castles & Forts"
+   },
+   {
+    "tap": "View Map"
+   },
+   {
+    "tap": "Settings"
+   },
+   {
+    "scroll_to": "Wishlist Only"
+   },
+   {
+    "tap": "Wishlist Only"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Color mode 'Wishlist Only' (dialog-local).  Close with Cancel."
+ },
+ {
+  "id": "landmark_map_pick_color",
+  "file": "lib/screens/landmark_map_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "tap": "Castles & Forts"
+   },
+   {
+    "tap": "View Map"
+   },
+   {
+    "tap": "Settings"
+   },
+   {
+    "tap_desc": "first round color swatch in dialog"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   951,
+   956,
+   969
+  ],
+  "notes": "Pick a color dialog."
+ },
+ {
+  "id": "landmark_map_info_sheet",
+  "file": "lib/screens/landmark_map_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Cultural"
+   },
+   {
+    "tap": "Castles & Forts"
+   },
+   {
+    "tap": "View Map"
+   },
+   {
+    "tap": "Show Details"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   730,
+   1205
+  ],
+  "notes": "Landmark detail sheet from map checklist (first 'Show Details' tooltip button). Same layout family as list info card."
+ },
+ {
+  "id": "top_picks_menu",
+  "file": "lib/screens/top_picks_menu_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   529,
+   558,
+   562,
+   571,
+   715,
+   810
+  ],
+  "notes": "Top Picks menu. Hero card Row(icon + Column('Global Top Attractions' 19pt / 'World's Most Iconic') NOT Expanded) -> overflow with long strings. Quick-access 3-up cards ellipsized."
+ },
+ {
+  "id": "top_picks_menu_natural",
+  "file": "lib/screens/top_picks_menu_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "scroll_to": "Highest Falls"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   810,
+   819,
+   834
+  ],
+  "notes": "Scrolled to Natural Wonders list rows (Expanded title, fine)."
+ },
+ {
+  "id": "top_landmarks",
+  "file": "lib/screens/top_landmarks_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "tap": "Global Top Attractions"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   404,
+   407,
+   408,
+   750
+  ],
+  "notes": "Global Top Attractions list (big cards). Visited / count spaceBetween row; 'Multinational' badge."
+ },
+ {
+  "id": "top_landmarks_compact",
+  "file": "lib/screens/top_landmarks_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "tap": "Global Top Attractions"
+   },
+   {
+    "tap_desc": "square view-toggle IconButton right of the 'Discover the most iconic destinations' subtitle in the header"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   700,
+   715,
+   750,
+   760
+  ],
+  "notes": "Compact list mode: rank badge + flag + name/city + 'Multinational' chip."
+ },
+ {
+  "id": "top_landmarks_info_sheet",
+  "file": "lib/screens/top_landmarks_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "tap": "Global Top Attractions"
+   },
+   {
+    "tap_first_list_item": "first landmark card"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   808,
+   904,
+   1103,
+   1160,
+   1177
+  ],
+  "notes": "Detail sheet: 'Close' button header, History header Row + count chip + Spacer + 'Add' button."
+ },
+ {
+  "id": "top_landmarks_visit_editor",
+  "file": "lib/screens/top_landmarks_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "tap": "Global Top Attractions"
+   },
+   {
+    "tap_first_list_item": "landmark with visit records"
+   },
+   {
+    "scroll_to": "Edit Record"
+   },
+   {
+    "tap": "Edit Record"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": true,
+  "risk": "high",
+  "risk_lines": [
+   1455,
+   1517,
+   1551,
+   1561
+  ],
+  "notes": "Visit editor (edit mode) inside Top Landmarks sheet; needs existing visit."
+ },
+ {
+  "id": "world_wonders",
+  "file": "lib/screens/world_wonders_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "tap": "7 Wonders"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   201,
+   386
+  ],
+  "notes": "World Wonders: big 'World\\nWonders' header, 'VISITED' badges on wonder cards."
+ },
+ {
+  "id": "world_wonders_sheet",
+  "file": "lib/screens/world_wonders_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "tap": "7 Wonders"
+   },
+   {
+    "tap_contains": "Great Wall of China"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   479
+  ],
+  "notes": "Wonder detail sheet (info-card layout). Latest run: wonder name not found; 7 Wonders is behind gated() in Top Picks, so the click may have opened a login/premium prompt instead."
+ },
+ {
+  "id": "landmark_cities",
+  "file": "lib/screens/landmark_cities_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "tap": "Cities"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   131,
+   134,
+   228,
+   288,
+   559
+  ],
+  "notes": "Iconic Cities: header (title + '$n cities · 7 landmarks each'), _StatBar rows (Expanded label), per-city row: flag + name(Expanded) + check + 'x / 7' chip."
+ },
+ {
+  "id": "landmark_cities_landmark_sheet",
+  "file": "lib/screens/landmark_cities_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "tap": "Cities"
+   },
+   {
+    "tap": "Eiffel Tower"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   405,
+   442,
+   469,
+   471,
+   477,
+   504,
+   505,
+   507
+  ],
+  "notes": "Landmark sheet from a city card: Wishlist:/My Rating:+RatingBar spaceBetween Row; History + Add Visit row."
+ },
+ {
+  "id": "landmark_cities_city_modal",
+  "file": "lib/widgets/city_travel_modal.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "tap": "Cities"
+   },
+   {
+    "tap": "Paris"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "City details modal (showExternalCityDetailsModal) - shared with Cities area; listed for completeness. Don't tap the check circle (marks city visited)."
+ },
+ {
+  "id": "landmark_cities_visit_editor",
+  "file": "lib/screens/landmark_cities_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "tap": "Cities"
+   },
+   {
+    "tap_desc": "landmark card with visits"
+   },
+   {
+    "tap": "Edit Record"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": true,
+  "risk": "high",
+  "risk_lines": [
+   714,
+   738,
+   739,
+   741,
+   775,
+   778
+  ],
+  "notes": "Visit editor in cities sheet; needs existing visit."
+ },
+ {
+  "id": "instagram_ranking",
+  "file": "lib/screens/instagram_ranking_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "tap": "Instagram"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   92,
+   97,
+   101
+  ],
+  "notes": "Most Instagrammed top 10 (header already Flexible/FittedBox)."
+ },
+ {
+  "id": "instagram_ranking_sheet",
+  "file": "lib/screens/instagram_ranking_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "tap": "Instagram"
+   },
+   {
+    "tap_first_list_item": "first ranked landmark"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   292,
+   669
+  ],
+  "notes": "Instagram landmark detail sheet."
+ },
+ {
+  "id": "top_buildings",
+  "file": "lib/screens/top_buildings_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "scroll_to": "Highest Buildings"
+   },
+   {
+    "tap": "Highest Buildings"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   79,
+   82,
+   86
+  ],
+  "notes": "Pill Row('Tallest Buildings') unflexed; RichText 'Top 20 \\nTallest Buildings'. Rank rows: name maxLines 1."
+ },
+ {
+  "id": "top_buildings_sheet",
+  "file": "lib/screens/top_buildings_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "scroll_to": "Highest Buildings"
+   },
+   {
+    "tap": "Highest Buildings"
+   },
+   {
+    "tap_first_list_item": "first ranked item"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [],
+  "notes": "Landmark detail sheet (Cancel/Done header, Wishlist/My Rating row, History + Add Visit row)."
+ },
+ {
+  "id": "top_museums",
+  "file": "lib/screens/top_museums_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "scroll_to": "Top Museums"
+   },
+   {
+    "tap": "Top Museums"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   85,
+   91,
+   93
+  ],
+  "notes": "Pill 'Top Museums' + RichText title. Rank rows: name maxLines 1."
+ },
+ {
+  "id": "top_museums_sheet",
+  "file": "lib/screens/top_museums_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "scroll_to": "Top Museums"
+   },
+   {
+    "tap": "Top Museums"
+   },
+   {
+    "tap_first_list_item": "first ranked item"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [],
+  "notes": "Landmark detail sheet (Cancel/Done header, Wishlist/My Rating row, History + Add Visit row)."
+ },
+ {
+  "id": "top_universities",
+  "file": "lib/screens/top_universities_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "scroll_to": "Top Universities"
+   },
+   {
+    "tap": "Top Universities"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   200,
+   217,
+   237
+  ],
+  "notes": "'QS World Rankings' pill + RichText 'Top \\nUniversities'. Rank rows: name maxLines 1."
+ },
+ {
+  "id": "top_universities_sheet",
+  "file": "lib/screens/top_universities_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "scroll_to": "Top Universities"
+   },
+   {
+    "tap": "Top Universities"
+   },
+   {
+    "tap_first_list_item": "first ranked item"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [],
+  "notes": "Landmark detail sheet (Cancel/Done header, Wishlist/My Rating row, History + Add Visit row)."
+ },
+ {
+  "id": "top_public_squares",
+  "file": "lib/screens/top_public_squares_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "scroll_to": "Best Public Squares"
+   },
+   {
+    "tap": "Best Public Squares"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   75,
+   81,
+   83
+  ],
+  "notes": "Pill + RichText. Rank rows: name maxLines 1."
+ },
+ {
+  "id": "top_public_squares_sheet",
+  "file": "lib/screens/top_public_squares_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "scroll_to": "Best Public Squares"
+   },
+   {
+    "tap": "Best Public Squares"
+   },
+   {
+    "tap_first_list_item": "first ranked item"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [],
+  "notes": "Landmark detail sheet (Cancel/Done header, Wishlist/My Rating row, History + Add Visit row)."
+ },
+ {
+  "id": "top_statues",
+  "file": "lib/screens/top_statues_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "scroll_to": "Tallest Statues"
+   },
+   {
+    "tap": "Tallest Statues"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   85,
+   91,
+   93
+  ],
+  "notes": "Pill + RichText. Rank rows: name maxLines 1."
+ },
+ {
+  "id": "top_statues_sheet",
+  "file": "lib/screens/top_statues_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "scroll_to": "Tallest Statues"
+   },
+   {
+    "tap": "Tallest Statues"
+   },
+   {
+    "tap_first_list_item": "first ranked item"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [],
+  "notes": "Landmark detail sheet (Cancel/Done header, Wishlist/My Rating row, History + Add Visit row)."
+ },
+ {
+  "id": "top_mountains",
+  "file": "lib/screens/top_mountains_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "scroll_to": "Highest Mountains"
+   },
+   {
+    "tap": "Highest Mountains"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   73,
+   76,
+   81
+  ],
+  "notes": "Row(icon+'Highest Mountains') inside Expanded column beside visited box; RichText 'Top 10 Peaks'. Rank rows: name maxLines 1."
+ },
+ {
+  "id": "top_mountains_sheet",
+  "file": "lib/screens/top_mountains_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "scroll_to": "Highest Mountains"
+   },
+   {
+    "tap": "Highest Mountains"
+   },
+   {
+    "tap_first_list_item": "first ranked item"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [],
+  "notes": "Landmark detail sheet (Cancel/Done header, Wishlist/My Rating row, History + Add Visit row)."
+ },
+ {
+  "id": "top_rivers",
+  "file": "lib/screens/top_rivers_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "scroll_to": "Longest Rivers"
+   },
+   {
+    "tap": "Longest Rivers"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   79,
+   82
+  ],
+  "notes": "'Top 16 Longest' 28pt in Expanded column beside fixed visited box. Rank rows: name maxLines 1."
+ },
+ {
+  "id": "top_rivers_sheet",
+  "file": "lib/screens/top_rivers_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "scroll_to": "Longest Rivers"
+   },
+   {
+    "tap": "Longest Rivers"
+   },
+   {
+    "tap_first_list_item": "first ranked item"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [],
+  "notes": "Landmark detail sheet (Cancel/Done header, Wishlist/My Rating row, History + Add Visit row)."
+ },
+ {
+  "id": "top_lakes",
+  "file": "lib/screens/top_lakes_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "scroll_to": "Largest Lakes"
+   },
+   {
+    "tap": "Largest Lakes"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   83,
+   86
+  ],
+  "notes": "'Top 20 Largest' 28pt. Rank rows: name maxLines 1."
+ },
+ {
+  "id": "top_lakes_sheet",
+  "file": "lib/screens/top_lakes_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "scroll_to": "Largest Lakes"
+   },
+   {
+    "tap": "Largest Lakes"
+   },
+   {
+    "tap_first_list_item": "first ranked item"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [],
+  "notes": "Landmark detail sheet (Cancel/Done header, Wishlist/My Rating row, History + Add Visit row)."
+ },
+ {
+  "id": "top_falls",
+  "file": "lib/screens/top_falls_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "scroll_to": "Highest Falls"
+   },
+   {
+    "tap": "Highest Falls"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   83,
+   86,
+   88
+  ],
+  "notes": "'Top 20 Highest' 28pt. Rank rows: name maxLines 1."
+ },
+ {
+  "id": "top_falls_sheet",
+  "file": "lib/screens/top_falls_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "tap": "Top Picks"
+   },
+   {
+    "scroll_to": "Highest Falls"
+   },
+   {
+    "tap": "Highest Falls"
+   },
+   {
+    "tap_first_list_item": "first ranked item"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [],
+  "notes": "Landmark detail sheet (Cancel/Done header, Wishlist/My Rating row, History + Add Visit row)."
+ },
+ {
+  "id": "activities_menu",
+  "file": "lib/screens/activities_menu_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   68,
+   125,
+   141,
+   384
+  ],
+  "notes": "Activities menu: Top Activities banner + 3 horizontal carousels (Culture & Arts / Lifestyle / Leisure & Entertainment), 170px cards with maxLines 2 titles."
+ },
+ {
+  "id": "activities_list_painting_artworks",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "scroll_to": "Culture & Arts"
+   },
+   {
+    "scroll_to": "Painting & Artworks"
+   },
+   {
+    "tap": "Painting & Artworks"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Painting & Artworks' (section Culture & Arts; horizontal carousel - may need horizontal swipe to reveal). "
+ },
+ {
+  "id": "activities_list_libraries_bookstores",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "scroll_to": "Culture & Arts"
+   },
+   {
+    "scroll_to": "Libraries & Bookstores"
+   },
+   {
+    "tap": "Libraries & Bookstores"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Libraries & Bookstores' (section Culture & Arts; horizontal carousel - may need horizontal swipe to reveal). "
+ },
+ {
+  "id": "activities_list_filming_locations",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "scroll_to": "Culture & Arts"
+   },
+   {
+    "scroll_to": "Filming Locations"
+   },
+   {
+    "tap": "Filming Locations"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Filming Locations' (section Culture & Arts; horizontal carousel - may need horizontal swipe to reveal). "
+ },
+ {
+  "id": "activities_list_theaters",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "scroll_to": "Culture & Arts"
+   },
+   {
+    "scroll_to": "Theaters"
+   },
+   {
+    "tap": "Theaters"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Theaters' (section Culture & Arts; horizontal carousel - may need horizontal swipe to reveal). "
+ },
+ {
+  "id": "activities_list_national_dishes",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "scroll_to": "Lifestyle"
+   },
+   {
+    "scroll_to": "National Dishes"
+   },
+   {
+    "tap": "National Dishes"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'National Dishes' (section Lifestyle; horizontal carousel - may need horizontal swipe to reveal). Food category: no View Map button, Number of Locations sort."
+ },
+ {
+  "id": "activities_list_restaurants",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "scroll_to": "Lifestyle"
+   },
+   {
+    "scroll_to": "Restaurants"
+   },
+   {
+    "tap": "Restaurants"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Restaurants' (section Lifestyle; horizontal carousel - may need horizontal swipe to reveal). "
+ },
+ {
+  "id": "activities_list_breweries",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "scroll_to": "Lifestyle"
+   },
+   {
+    "scroll_to": "Breweries"
+   },
+   {
+    "tap": "Breweries"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Breweries' (section Lifestyle; horizontal carousel - may need horizontal swipe to reveal). "
+ },
+ {
+  "id": "activities_list_starbucks_reserve",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "scroll_to": "Lifestyle"
+   },
+   {
+    "scroll_to": "Starbucks Reserve"
+   },
+   {
+    "tap": "Starbucks Reserve"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Starbucks Reserve' (section Lifestyle; horizontal carousel - may need horizontal swipe to reveal). "
+ },
+ {
+  "id": "activities_list_fast_food",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "scroll_to": "Lifestyle"
+   },
+   {
+    "scroll_to": "Fast Food"
+   },
+   {
+    "tap": "Fast Food"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Fast Food' (section Lifestyle; horizontal carousel - may need horizontal swipe to reveal). Food category: no View Map button, Number of Locations sort."
+ },
+ {
+  "id": "activities_list_festivals_events",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "scroll_to": "Leisure & Entertainment"
+   },
+   {
+    "scroll_to": "Festivals & Events"
+   },
+   {
+    "tap": "Festivals & Events"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Festivals & Events' (section Leisure & Entertainment; horizontal carousel - may need horizontal swipe to reveal). "
+ },
+ {
+  "id": "activities_list_amusement_parks",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "scroll_to": "Leisure & Entertainment"
+   },
+   {
+    "scroll_to": "Amusement Parks"
+   },
+   {
+    "tap": "Amusement Parks"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Amusement Parks' (section Leisure & Entertainment; horizontal carousel - may need horizontal swipe to reveal). "
+ },
+ {
+  "id": "activities_list_football_stadiums",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "scroll_to": "Leisure & Entertainment"
+   },
+   {
+    "scroll_to": "Football Stadiums"
+   },
+   {
+    "tap": "Football Stadiums"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Football Stadiums' (section Leisure & Entertainment; horizontal carousel - may need horizontal swipe to reveal). "
+ },
+ {
+  "id": "activities_list_zoos",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "scroll_to": "Leisure & Entertainment"
+   },
+   {
+    "scroll_to": "Zoos"
+   },
+   {
+    "tap": "Zoos"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Zoos' (section Leisure & Entertainment; horizontal carousel - may need horizontal swipe to reveal). "
+ },
+ {
+  "id": "activities_list_aquariums",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "scroll_to": "Leisure & Entertainment"
+   },
+   {
+    "scroll_to": "Aquariums"
+   },
+   {
+    "tap": "Aquariums"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Aquariums' (section Leisure & Entertainment; horizontal carousel - may need horizontal swipe to reveal). "
+ },
+ {
+  "id": "activities_list_cruise_tours",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "scroll_to": "Leisure & Entertainment"
+   },
+   {
+    "scroll_to": "Cruise Tours"
+   },
+   {
+    "tap": "Cruise Tours"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Cruise Tours' (section Leisure & Entertainment; horizontal carousel - may need horizontal swipe to reveal). "
+ },
+ {
+  "id": "activities_list_cable_cars",
+  "file": "lib/screens/landmarks_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "scroll_to": "Leisure & Entertainment"
+   },
+   {
+    "scroll_to": "Cable Cars"
+   },
+   {
+    "tap": "Cable Cars"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   939,
+   973,
+   982,
+   1157
+  ],
+  "notes": "LandmarksListScreen 'Cable Cars' (section Leisure & Entertainment; horizontal carousel - may need horizontal swipe to reveal). "
+ },
+ {
+  "id": "top_activities_menu",
+  "file": "lib/screens/top_activities_menu_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "tap": "Top Activities"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   87,
+   91,
+   140,
+   145
+  ],
+  "notes": "Top Activities list (titles/subtitles maxLines 1)."
+ },
+ {
+  "id": "top_paintings",
+  "file": "lib/screens/top_paintings_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "tap": "Top Activities"
+   },
+   {
+    "tap": "Best Paintings"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   87,
+   91,
+   95
+  ],
+  "notes": "Header in Expanded column + progress pill."
+ },
+ {
+  "id": "top_paintings_sheet",
+  "file": "lib/screens/top_paintings_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "tap": "Top Activities"
+   },
+   {
+    "tap": "Best Paintings"
+   },
+   {
+    "tap_first_list_item": "first item in list"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [],
+  "notes": "Detail sheet for item (info-card layout with Wishlist/My Rating, History + Add Visit)."
+ },
+ {
+  "id": "film_festivals",
+  "file": "lib/screens/film_festivals_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "tap": "Top Activities"
+   },
+   {
+    "tap": "Film Festivals"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   72,
+   77,
+   81
+  ],
+  "notes": "Header ellipsized."
+ },
+ {
+  "id": "film_festivals_sheet",
+  "file": "lib/screens/film_festivals_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "tap": "Top Activities"
+   },
+   {
+    "tap": "Film Festivals"
+   },
+   {
+    "tap_first_list_item": "first item in list"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [],
+  "notes": "Detail sheet for item (info-card layout with Wishlist/My Rating, History + Add Visit)."
+ },
+ {
+  "id": "disneyland",
+  "file": "lib/screens/disneyland_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "tap": "Top Activities"
+   },
+   {
+    "tap": "Disneyland"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   72,
+   81,
+   87
+  ],
+  "notes": "'Disneyland Parks' header."
+ },
+ {
+  "id": "disneyland_sheet",
+  "file": "lib/screens/disneyland_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "tap": "Top Activities"
+   },
+   {
+    "tap": "Disneyland"
+   },
+   {
+    "tap_first_list_item": "first item in list"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [],
+  "notes": "Detail sheet for item (info-card layout with Wishlist/My Rating, History + Add Visit)."
+ },
+ {
+  "id": "universal_studios",
+  "file": "lib/screens/universal_studios_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "tap": "Top Activities"
+   },
+   {
+    "tap": "Universal Studios"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   53,
+   56,
+   59
+  ],
+  "notes": "'Universal Studios' 22pt without maxLines."
+ },
+ {
+  "id": "universal_studios_sheet",
+  "file": "lib/screens/universal_studios_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "tap": "Top Activities"
+   },
+   {
+    "tap": "Universal Studios"
+   },
+   {
+    "tap_first_list_item": "first item in list"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [],
+  "notes": "Detail sheet for item (info-card layout with Wishlist/My Rating, History + Add Visit)."
+ },
+ {
+  "id": "champions_league",
+  "file": "lib/screens/champions_league_teams_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "tap": "Top Activities"
+   },
+   {
+    "tap": "Champions League"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   62,
+   65,
+   68
+  ],
+  "notes": "Headers ellipsized."
+ },
+ {
+  "id": "champions_league_sheet",
+  "file": "lib/screens/champions_league_teams_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "tap": "Top Activities"
+   },
+   {
+    "tap": "Champions League"
+   },
+   {
+    "tap_first_list_item": "first item in list"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [],
+  "notes": "Detail sheet for item (info-card layout with Wishlist/My Rating, History + Add Visit)."
+ },
+ {
+  "id": "top_orchestras",
+  "file": "lib/screens/top_orchestras_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "tap": "Top Activities"
+   },
+   {
+    "tap": "Best Orchestras"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   64,
+   78,
+   79
+  ],
+  "notes": "Row(icon box + 'Best Orchestras' 26pt Text) with no Expanded -> overflow in DE/ID/EL."
+ },
+ {
+  "id": "top_orchestras_sheet",
+  "file": "lib/screens/top_orchestras_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Browse Activities"
+   },
+   {
+    "tap": "Browse Activities"
+   },
+   {
+    "tap": "Top Activities"
+   },
+   {
+    "tap": "Best Orchestras"
+   },
+   {
+    "tap_first_list_item": "first item in list"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [],
+  "notes": "Detail sheet for item (info-card layout with Wishlist/My Rating, History + Add Visit)."
+ },
+ {
+  "id": "landmark_stats",
+  "file": "lib/screens/landmark_stats_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Logs"
+   },
+   {
+    "tap": "Stats"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   376,
+   379,
+   389,
+   574,
+   578,
+   603,
+   605,
+   647
+  ],
+  "notes": "Landmark stats. 'DISCOVERY STATUS' + % chip Row (no Expanded); 'Country Rankings' Row(icon+Text) + settings button; two SegmentedButtons (All/Visited, High/Low) half-width each; ranking rows Text(country) unflexed beside value Row. Stats step: scroll_to 'Logs' brings the landmark button row on screen; the landmark 'Stats' button is narrower (1/3 row) than the UNESCO one so the driver's smallest-area match picks it. Check it did not open UNESCO stats. Nested 400/300px lists on this screen can swallow the page swipe."
+ },
+ {
+  "id": "landmark_stats_filter_dialog",
+  "file": "lib/screens/landmark_stats_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Logs"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "tap_desc": "grey settings gear IconButton at right of 'Country Rankings' header"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   130,
+   137,
+   160,
+   187
+  ],
+  "notes": "Select Landmark Types dialog: Wrap of FilterChips per group (Cultural/Natural/Activities). Tapping chips changes saved filter prefs (local only) - don't. Close. Stats step: scroll_to 'Logs' brings the landmark button row on screen; the landmark 'Stats' button is narrower (1/3 row) than the UNESCO one so the driver's smallest-area match picks it. Check it did not open UNESCO stats. Nested 400/300px lists on this screen can swallow the page swipe."
+ },
+ {
+  "id": "landmark_stats_sort_dropdown",
+  "file": "lib/screens/landmark_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Logs"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "tap": "By Visit Count"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   502,
+   588
+  ],
+  "notes": "Sort by dropdown open (By Visit Count / By Visit Percentage / By Number of Sites). Stats step: scroll_to 'Logs' brings the landmark button row on screen; the landmark 'Stats' button is narrower (1/3 row) than the UNESCO one so the driver's smallest-area match picks it. Check it did not open UNESCO stats. Nested 400/300px lists on this screen can swallow the page swipe."
+ },
+ {
+  "id": "landmark_stats_sort_percentage",
+  "file": "lib/screens/landmark_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Logs"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "tap": "By Visit Count"
+   },
+   {
+    "tap": "By Visit Percentage"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   647,
+   651,
+   655
+  ],
+  "notes": "Ranking rows show 'xx.x%' + '(v/t)' beside country name. Stats step: scroll_to 'Logs' brings the landmark button row on screen; the landmark 'Stats' button is narrower (1/3 row) than the UNESCO one so the driver's smallest-area match picks it. Check it did not open UNESCO stats. Nested 400/300px lists on this screen can swallow the page swipe. Target lies below/inside a fixed-height nested ListView card (400-600px); the driver swipe at (540,1750) is swallowed by the inner list so the page never scrolls. Needs calibration."
+ },
+ {
+  "id": "landmark_stats_segments",
+  "file": "lib/screens/landmark_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Logs"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "tap": "Visited"
+   },
+   {
+    "tap": "Low"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   603,
+   605
+  ],
+  "notes": "SegmentedButtons All|Visited and High|Low side by side in a Row (Expanded each) - label overflow in segments. Stats step: scroll_to 'Logs' brings the landmark button row on screen; the landmark 'Stats' button is narrower (1/3 row) than the UNESCO one so the driver's smallest-area match picks it. Check it did not open UNESCO stats. Nested 400/300px lists on this screen can swallow the page swipe. Target lies below/inside a fixed-height nested ListView card (400-600px); the driver swipe at (540,1750) is swallowed by the inner list so the page never scrolls. Needs calibration."
+ },
+ {
+  "id": "landmark_stats_top_landmarks",
+  "file": "lib/screens/landmark_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Logs"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "scroll_to": "Top Landmarks"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1251,
+   1255,
+   1290,
+   1292
+  ],
+  "notes": "Top Landmarks card: Row(icon + Text) unflexed; trailing '{n} visits' chip. Stats step: scroll_to 'Logs' brings the landmark button row on screen; the landmark 'Stats' button is narrower (1/3 row) than the UNESCO one so the driver's smallest-area match picks it. Check it did not open UNESCO stats. Nested 400/300px lists on this screen can swallow the page swipe."
+ },
+ {
+  "id": "landmark_stats_top_by_rating",
+  "file": "lib/screens/landmark_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Logs"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "scroll_to": "Top Landmarks"
+   },
+   {
+    "tap": "By Visits"
+   },
+   {
+    "tap": "By Ratings"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   695,
+   1287
+  ],
+  "notes": "Top Landmarks sorted by rating: RatingBarIndicator + number trailing. Stats step: scroll_to 'Logs' brings the landmark button row on screen; the landmark 'Stats' button is narrower (1/3 row) than the UNESCO one so the driver's smallest-area match picks it. Check it did not open UNESCO stats. Nested 400/300px lists on this screen can swallow the page swipe."
+ },
+ {
+  "id": "landmark_stats_site_sheet",
+  "file": "lib/screens/landmark_stats_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Logs"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "scroll_to": "Top Landmarks"
+   },
+   {
+    "tap_contains": " visits"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   778,
+   1019,
+   1025,
+   1135,
+   1136,
+   1172
+  ],
+  "notes": "Landmark detail sheet from stats: Cancel/Done header, Wishlist:/My Rating: row, History + Add Visit row. Stats step: scroll_to 'Logs' brings the landmark button row on screen; the landmark 'Stats' button is narrower (1/3 row) than the UNESCO one so the driver's smallest-area match picks it. Check it did not open UNESCO stats. Nested 400/300px lists on this screen can swallow the page swipe. Target lies below/inside a fixed-height nested ListView card (400-600px); the driver swipe at (540,1750) is swallowed by the inner list so the page never scrolls. Needs calibration."
+ },
+ {
+  "id": "landmark_stats_attribute_stats",
+  "file": "lib/screens/landmark_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Logs"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "scroll_to": "Attribute Statistics"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   1328,
+   1336,
+   1346,
+   1367
+  ],
+  "notes": "Attribute Statistics: Row(icon + 'Attribute Statistics' 18pt) unflexed; stat rows Text(label)+Text('n (x%)') spaceBetween without Expanded. Stats step: scroll_to 'Logs' brings the landmark button row on screen; the landmark 'Stats' button is narrower (1/3 row) than the UNESCO one so the driver's smallest-area match picks it. Check it did not open UNESCO stats. Nested 400/300px lists on this screen can swallow the page swipe. Target lies below/inside a fixed-height nested ListView card (400-600px); the driver swipe at (540,1750) is swallowed by the inner list so the page never scrolls. Needs calibration."
+ },
+ {
+  "id": "landmark_stats_explorer",
+  "file": "lib/screens/landmark_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Logs"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "scroll_to": "Landmark Explorer"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1411,
+   1415,
+   1422,
+   1435,
+   1446
+  ],
+  "notes": "Landmark Explorer: Row(icon + title) unflexed; Select Continent/Country dropdowns; Default|Alphabet SegmentedButton. Stats step: scroll_to 'Logs' brings the landmark button row on screen; the landmark 'Stats' button is narrower (1/3 row) than the UNESCO one so the driver's smallest-area match picks it. Check it did not open UNESCO stats. Nested 400/300px lists on this screen can swallow the page swipe."
+ },
+ {
+  "id": "landmark_stats_explorer_continent",
+  "file": "lib/screens/landmark_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Logs"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "scroll_to": "Landmark Explorer"
+   },
+   {
+    "tap": "Select Continent"
+   },
+   {
+    "tap": "Europe"
+   },
+   {
+    "tap": "Select Country"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   1435
+  ],
+  "notes": "Country dropdown open after picking a continent. Stats step: scroll_to 'Logs' brings the landmark button row on screen; the landmark 'Stats' button is narrower (1/3 row) than the UNESCO one so the driver's smallest-area match picks it. Check it did not open UNESCO stats. Nested 400/300px lists on this screen can swallow the page swipe."
+ },
+ {
+  "id": "landmark_stats_explorer_list",
+  "file": "lib/screens/landmark_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Logs"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "scroll_to": "Landmark Explorer"
+   },
+   {
+    "tap": "Select Continent"
+   },
+   {
+    "tap": "Europe"
+   },
+   {
+    "tap": "Select Country"
+   },
+   {
+    "tap": "France"
+   },
+   {
+    "tap": "Alphabet"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   1450
+  ],
+  "notes": "Landmark list for a country (tapping the circle icon toggles visited - don't). Stats step: scroll_to 'Logs' brings the landmark button row on screen; the landmark 'Stats' button is narrower (1/3 row) than the UNESCO one so the driver's smallest-area match picks it. Check it did not open UNESCO stats. Nested 400/300px lists on this screen can swallow the page swipe."
+ },
+ {
+  "id": "landmark_stats_visit_editor",
+  "file": "lib/screens/landmark_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Logs"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "scroll_to": "Top Landmarks"
+   },
+   {
+    "tap_contains": " visits"
+   },
+   {
+    "tap_contains": "Date: "
+   },
+   {
+    "tap": "Edit Record"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": true,
+  "risk": "high",
+  "risk_lines": [
+   1594,
+   1613,
+   1615,
+   1670,
+   1673
+  ],
+  "notes": "Visit editor (stats copy): 'Visit Date' + Edit Date row. Needs existing visit. Stats step: scroll_to 'Logs' brings the landmark button row on screen; the landmark 'Stats' button is narrower (1/3 row) than the UNESCO one so the driver's smallest-area match picks it. Check it did not open UNESCO stats. Nested 400/300px lists on this screen can swallow the page swipe."
+ },
+ {
+  "id": "landmark_visit_log",
+  "file": "lib/screens/landmark_visit_log_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Logs"
+   },
+   {
+    "tap": "Logs"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   414,
+   424,
+   428,
+   437,
+   439,
+   441,
+   472
+  ],
+  "notes": "Visit Log: header Expanded(title/'n total entries') + Year|Country toggle (fixed); group header Row(bar + key + count) unflexed; log tiles. Empty state 'No visits recorded yet' if no logs."
+ },
+ {
+  "id": "landmark_visit_log_by_country",
+  "file": "lib/screens/landmark_visit_log_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Logs"
+   },
+   {
+    "tap": "Logs"
+   },
+   {
+    "tap": "Country"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   441,
+   475
+  ],
+  "notes": "Grouped by country: long country names in unflexed group header Row."
+ },
+ {
+  "id": "landmark_visit_log_sheet",
+  "file": "lib/screens/landmark_visit_log_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Logs"
+   },
+   {
+    "tap": "Logs"
+   },
+   {
+    "tap_first_list_item": "first visit log tile"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   144,
+   303,
+   305,
+   320,
+   321,
+   325
+  ],
+  "notes": "Landmark detail sheet from log: Row(Wishlist) spaceBetween, History + Add Visit row."
+ },
+ {
+  "id": "landmark_visit_log_editor",
+  "file": "lib/screens/landmark_visit_log_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Explore"
+   },
+   {
+    "scroll_to": "Logs"
+   },
+   {
+    "tap": "Logs"
+   },
+   {
+    "tap_first_list_item": "first log tile"
+   },
+   {
+    "tap_contains": "Date: "
+   },
+   {
+    "tap": "Edit Record"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   584,
+   679
+  ],
+  "notes": "Visit editor inside log sheet (logs exist by definition). Path: 'Edit Record' only exists inside an expanded visit-record tile in the landmark sheet; tap_contains 'Date: ' expands the first record (subtitle 'Date: y-m-d'). Latest run: 'Edit Record' not found after expanding; verify the tile expanded."
+ },
+ {
+  "id": "tourism_tab_tourism",
+  "file": "lib/screens/tourism_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#4 of the 6 rounded icon buttons under the city map on Cities tab (tour flag icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   46,
+   149,
+   208,
+   210
+  ],
+  "notes": "TourismScreen (reached from Cities tab 'Travel' card). AppBar TabBar Tourism|Transportation; continent dropdown."
+ },
+ {
+  "id": "tourism_tab_transportation",
+  "file": "lib/screens/city_transportation_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#4 of the 6 rounded icon buttons under the city map on Cities tab (tour flag icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "tap": "Transportation"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Transportation tab (CityTransportationScreen)."
+ },
+ {
+  "id": "tourism_continent_dropdown",
+  "file": "lib/screens/tourism_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#4 of the 6 rounded icon buttons under the city map on Cities tab (tour flag icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "tap_desc": "continent dropdown (small, keyboard_arrow_down) in Tourism tab"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   149
+  ],
+  "notes": "Continent dropdown open."
+ },
+ {
+  "id": "tourism_instagram_map",
+  "file": "lib/screens/city_stats_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Cities"
+   },
+   {
+    "tap_desc": "#4 of the 6 rounded icon buttons under the city map on Cities tab (tour flag icon)"
+   },
+   {
+    "tap_desc": "white arrow_forward IconButton right of 'View detailed statistics' on the city stat card below the icon row"
+   },
+   {
+    "scroll_to": "Top Instagram Posted"
+   },
+   {
+    "tap_desc": "map button at right of 'Top Instagram Posted' card header"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   212
+  ],
+  "notes": "CityStatsMapScreen 'Top Instagram Posted'."
+ },
+ {
+  "id": "flights_menu",
+  "file": "lib/screens/flights_menu_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Flights"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   330,
+   336,
+   348,
+   515,
+   551,
+   563
+  ],
+  "notes": "Flights tab home: FLIGHT HUB hero (Expanded + maxLines), route-map preview card, AIRPORTS/AIRLINES summary cards (already ellipsized)."
+ },
+ {
+  "id": "flights_menu_hub_setup_sheet",
+  "file": "lib/screens/flights_menu_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "SET UP HUB"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   386,
+   1083,
+   1092,
+   1113,
+   1198,
+   1223
+  ],
+  "notes": "Only when no hub set: Airports card reads 'SET UP HUB' and opens 'Set Your Hub' search sheet. Don't pick an airport (sets hub)."
+ },
+ {
+  "id": "flights_menu_share",
+  "file": "lib/screens/flights_menu_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap_desc": "share icon on route-map preview card"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": true,
+  "risk": "low",
+  "risk_lines": [
+   859
+  ],
+  "notes": "Opens system share sheet - external; skip."
+ },
+ {
+  "id": "flight_hub",
+  "file": "lib/screens/flight_hub_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   100,
+   133,
+   175,
+   238,
+   403,
+   415,
+   605,
+   617,
+   1230
+  ],
+  "notes": "Flight Hub: Flight Logs featured card, Route Map + Connections cards (fixed 160 height Row), Flight Overview card, 2x2 analytics grid (aspect 1.1), Premium Cabins wide card."
+ },
+ {
+  "id": "flight_hub_analytics",
+  "file": "lib/screens/flight_hub_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "scroll_to": "Premium Cabins"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   270,
+   1123,
+   1194,
+   1230
+  ],
+  "notes": "Analytics grid scrolled into view: compact cards (title maxLines 1, count + unit) and 'Premium Cabins' + '$n Business & First Class flights'."
+ },
+ {
+  "id": "flight_log_list",
+  "file": "lib/screens/flight_log_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Flight Logs"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   661,
+   776,
+   896
+  ],
+  "notes": "Flight log list (ticket view): DEPARTURE/ARRIVAL labels in ticket card, CANCELED badge."
+ },
+ {
+  "id": "flight_log_list_compact",
+  "file": "lib/screens/flight_log_list_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Flight Logs"
+   },
+   {
+    "tap": "Compact list"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   196
+  ],
+  "notes": "Compact list mode via small FAB (tooltip 'Compact list')."
+ },
+ {
+  "id": "flight_log_list_delete_mode",
+  "file": "lib/screens/flight_log_list_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Flight Logs"
+   },
+   {
+    "tap": "Delete flights"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "low",
+  "risk_lines": [
+   186,
+   248
+  ],
+  "notes": "Delete mode (rows show 'Delete flight' buttons). Entering mode is harmless; never tap a row's delete. Tap 'Finish deleting' to exit."
+ },
+ {
+  "id": "add_flight_log",
+  "file": "lib/screens/add_flight_log_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Flight Logs"
+   },
+   {
+    "tap": "Add flight"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   624,
+   663,
+   717,
+   771,
+   785,
+   786,
+   811,
+   832,
+   839,
+   873,
+   1009
+  ],
+  "notes": "Add flight form (open only, NEVER save). Fast Search card, section headers, Departure/Arrival row, 'Unknown' checkbox columns (FittedBox 64px), My Score row."
+ },
+ {
+  "id": "add_flight_log_ticket_section",
+  "file": "lib/screens/add_flight_log_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Flight Logs"
+   },
+   {
+    "tap": "Add flight"
+   },
+   {
+    "scroll_to": "Ticket"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   832,
+   1129,
+   1131,
+   1132,
+   1148,
+   1154,
+   1155,
+   1171,
+   1279,
+   1281
+  ],
+  "notes": "Ticket section: Price field Expanded + 'USD' Text + Switch + 'Miles' Text in one Row; Upgrade Price same; VAT + USD."
+ },
+ {
+  "id": "add_flight_log_fast_search_off",
+  "file": "lib/screens/add_flight_log_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Flight Logs"
+   },
+   {
+    "tap": "Add flight"
+   },
+   {
+    "tap": "Fast Search"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   614,
+   663
+  ],
+  "notes": "Fast Search toggled (CheckboxListTile) - shows/hides search fields and 6-month note. Local form state only."
+ },
+ {
+  "id": "add_flight_log_status_section",
+  "file": "lib/screens/add_flight_log_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Flight Logs"
+   },
+   {
+    "tap": "Add flight"
+   },
+   {
+    "scroll_to": "Flight Status"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   680,
+   811
+  ],
+  "notes": "Flight Status checkbox rows (Flexible title + Checkbox)."
+ },
+ {
+  "id": "add_flight_log_through_ticket",
+  "file": "lib/screens/add_flight_log_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Flight Logs"
+   },
+   {
+    "tap": "Add flight"
+   },
+   {
+    "scroll_to": "Through-ticket"
+   },
+   {
+    "tap": "Through-ticket"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   839,
+   1448
+  ],
+  "notes": "Through-ticket checked: reveals 'Add Flight to Link' button."
+ },
+ {
+  "id": "add_flight_log_link_flights_dialog",
+  "file": "lib/screens/add_flight_log_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Flight Logs"
+   },
+   {
+    "tap": "Add flight"
+   },
+   {
+    "scroll_to": "Through-ticket"
+   },
+   {
+    "tap": "Through-ticket"
+   },
+   {
+    "tap": "Add Flight to Link"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1468,
+   1474,
+   1482,
+   1501,
+   1510
+  ],
+  "notes": "Select Flights to Link dialog (Cancel / Link Selected). Tap Cancel."
+ },
+ {
+  "id": "add_flight_log_seat_upgrade",
+  "file": "lib/screens/add_flight_log_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Flight Logs"
+   },
+   {
+    "tap": "Add flight"
+   },
+   {
+    "scroll_to": "Seat Class"
+   },
+   {
+    "tap": "Economy"
+   },
+   {
+    "tap": "Business"
+   },
+   {
+    "scroll_to": "Seat Upgrade"
+   },
+   {
+    "tap": "Seat Upgrade"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   907,
+   942,
+   1154,
+   1155,
+   1171
+  ],
+  "notes": "Seat Upgrade expansion: upgrade date + Upgrade Price/USD/Switch/Miles row. Seat Upgrade checkbox only shows when Seat Class is Premium Economy/Business/First (default Economy), so the path selects Business first. Local form state only. Opens the Seat Class dropdown by tapping its current value 'Economy' (label 'Seat Class' tap may have hit the Unknown checkbox)."
+ },
+ {
+  "id": "add_flight_log_airline_dialog",
+  "file": "lib/screens/add_flight_log_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Flight Logs"
+   },
+   {
+    "tap": "Add flight"
+   },
+   {
+    "tap": "Airline"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   1202,
+   1213,
+   1226,
+   1254
+  ],
+  "notes": "Search Airline dialog (Cancel)."
+ },
+ {
+  "id": "add_flight_log_aircraft_list",
+  "file": "lib/screens/add_flight_log_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Flight Logs"
+   },
+   {
+    "tap": "Add flight"
+   },
+   {
+    "scroll_to": "Aircraft"
+   },
+   {
+    "tap": "Select from list"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   959,
+   967,
+   997
+  ],
+  "notes": "Aircraft selection list (tooltip 'Select from list')."
+ },
+ {
+  "id": "add_flight_log_date_picker",
+  "file": "lib/screens/add_flight_log_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Flight Logs"
+   },
+   {
+    "tap": "Add flight"
+   },
+   {
+    "tap": "Date"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   591
+  ],
+  "notes": "System date picker. Cancel."
+ },
+ {
+  "id": "add_flight_log_seat_class_dropdown",
+  "file": "lib/screens/add_flight_log_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Flight Logs"
+   },
+   {
+    "tap": "Add flight"
+   },
+   {
+    "scroll_to": "Seat Class"
+   },
+   {
+    "tap": "Seat Class"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   1125
+  ],
+  "notes": "Seat class dropdown menu."
+ },
+ {
+  "id": "add_flight_log_photo_source_sheet",
+  "file": "lib/screens/add_flight_log_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Flight Logs"
+   },
+   {
+    "tap": "Add flight"
+   },
+   {
+    "scroll_to": "Ticket Photo"
+   },
+   {
+    "tap_desc": "add-photo button under 'Ticket Photo'"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   1321,
+   1324,
+   1325,
+   1338
+  ],
+  "notes": "Photo Library / Camera chooser sheet. Dismiss with back."
+ },
+ {
+  "id": "add_flight_log_memo_dialog",
+  "file": "lib/screens/add_flight_log_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Flight Logs"
+   },
+   {
+    "tap": "Add flight"
+   },
+   {
+    "scroll_to": "Memo & Photos"
+   },
+   {
+    "tap": "Memo & Photos"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1359,
+   1375,
+   1381,
+   1385,
+   1402
+  ],
+  "notes": "Memo & Photos dialog (Cancel/Save) - tap Cancel."
+ },
+ {
+  "id": "add_flight_log_edit_existing",
+  "file": "lib/screens/add_flight_log_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Flight Logs"
+   },
+   {
+    "tap_first_list_item": "first flight ticket card"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1014,
+   1020
+  ],
+  "notes": "Editing an existing log (isEditing: search button beside Flight Number). Never save/delete."
+ },
+ {
+  "id": "flight_route_map",
+  "file": "lib/screens/flight_route_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Route Map"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   575,
+   580,
+   617
+  ],
+  "notes": "Flight route map + 'My Routes' panel."
+ },
+ {
+  "id": "flight_route_map_settings",
+  "file": "lib/screens/flight_route_map_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Route Map"
+   },
+   {
+    "tap": "Map Settings"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   331,
+   338,
+   344,
+   351,
+   362,
+   382,
+   385
+  ],
+  "notes": "Map Settings dialog: SwitchListTiles 'Thicker lines for frequent routes', 'Highlight Hub Airports', Route Gradient row with swatches; Reset/Close."
+ },
+ {
+  "id": "flight_route_map_pick_color",
+  "file": "lib/screens/flight_route_map_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Route Map"
+   },
+   {
+    "tap": "Map Settings"
+   },
+   {
+    "tap_desc": "first color swatch next to 'Route Gradient'"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   289,
+   293,
+   306
+  ],
+  "notes": "Pick a color dialog."
+ },
+ {
+  "id": "flight_route_map_add_log",
+  "file": "lib/screens/add_flight_log_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Route Map"
+   },
+   {
+    "tap": "Add Flight Log"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Add Flight Log form from map (open only)."
+ },
+ {
+  "id": "flights_menu_route_map",
+  "file": "lib/screens/flight_route_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap_desc": "route map preview card below FLIGHT HUB on Flights tab"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Same route map reached from Flights tab preview card."
+ },
+ {
+  "id": "flight_connection",
+  "file": "lib/screens/flight_connection_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Connections"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   95,
+   110,
+   138,
+   143,
+   231
+  ],
+  "notes": "Connections list ('My Trips' / 'Connected Flights' header, itinerary cards). Swipe-to-delete exists - don't swipe."
+ },
+ {
+  "id": "flight_connection_builder",
+  "file": "lib/screens/flight_connection_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Connections"
+   },
+   {
+    "tap_desc": "orange + FloatingActionButton bottom-right"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   637,
+   662,
+   679
+  ],
+  "notes": "Itinerary builder (Trip Name field, flight slots, 'Add Flight' extended FAB, 'Save Itinerary'). Never save."
+ },
+ {
+  "id": "flight_connection_select_flight",
+  "file": "lib/screens/flight_connection_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Connections"
+   },
+   {
+    "tap_desc": "orange + FAB"
+   },
+   {
+    "tap_desc": "first empty flight slot card"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   410,
+   899,
+   905,
+   926
+  ],
+  "notes": "Select Flight dialog. Cancel."
+ },
+ {
+  "id": "flight_connection_layover_dialog",
+  "file": "lib/screens/flight_connection_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Connections"
+   },
+   {
+    "tap_desc": "orange + FAB"
+   },
+   {
+    "tap_desc": "layover/transfer box between two filled flight slots"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   456,
+   489,
+   517,
+   559,
+   582
+  ],
+  "notes": "Layover type/time dialog with Hours/Mins fields in a Row and Cancel/Confirm. Needs two flights selected first."
+ },
+ {
+  "id": "flight_connection_delete_dialog",
+  "file": "lib/screens/flight_connection_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Connections"
+   },
+   {
+    "tap_desc": "swipe an itinerary card horizontally"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": true,
+  "risk": "low",
+  "risk_lines": [
+   180,
+   183,
+   189,
+   194
+  ],
+  "notes": "'Delete Itinerary?' confirm (Keep / Delete) - tap Keep. Requires swipe; risky."
+ },
+ {
+  "id": "flight_overview_stats",
+  "file": "lib/screens/flight_overview_stats_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Flight Overview"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   603,
+   700,
+   981,
+   1315
+  ],
+  "notes": "Flight overview stats (many Rows, mostly maxLines). Period selector."
+ },
+ {
+  "id": "flight_overview_stats_bottom",
+  "file": "lib/screens/flight_overview_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "tap": "Flight Overview"
+   },
+   {
+    "scroll_to": "Most Frequent Period"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1315
+  ],
+  "notes": "Lower cards (Most Frequent Period etc.)."
+ },
+ {
+  "id": "aircraft_stats",
+  "file": "lib/screens/aircraft_stats_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "scroll_to": "Aircraft"
+   },
+   {
+    "tap": "Aircraft"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   563,
+   615,
+   704,
+   705
+  ],
+  "notes": "Aircraft stats: Total Flights, Aircraft Type chart, Flight Logs|Ranking segment."
+ },
+ {
+  "id": "aircraft_stats_ranking",
+  "file": "lib/screens/aircraft_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "scroll_to": "Aircraft"
+   },
+   {
+    "tap": "Aircraft"
+   },
+   {
+    "scroll_to": "Ranking"
+   },
+   {
+    "tap": "Ranking"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   738
+  ],
+  "notes": "Ranking view with By Aircraft Type | By Airline segment."
+ },
+ {
+  "id": "aircraft_stats_ranking_airline",
+  "file": "lib/screens/aircraft_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "scroll_to": "Aircraft"
+   },
+   {
+    "tap": "Aircraft"
+   },
+   {
+    "scroll_to": "Ranking"
+   },
+   {
+    "tap": "Ranking"
+   },
+   {
+    "tap": "By Airline"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   738
+  ],
+  "notes": "Ranking by airline."
+ },
+ {
+  "id": "flight_transfer_stats",
+  "file": "lib/screens/flight_transfer_stats_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "scroll_to": "Transfer"
+   },
+   {
+    "tap": "Transfer"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   89,
+   107,
+   480,
+   484,
+   609,
+   694,
+   904,
+   934,
+   980,
+   1028
+  ],
+  "notes": "Transfer stats: header Row with 'Connect Flights', Group by Itinerary SwitchListTile, many Rows with few maxLines (6 for 13 Rows)."
+ },
+ {
+  "id": "flight_transfer_group_itinerary",
+  "file": "lib/screens/flight_transfer_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "scroll_to": "Transfer"
+   },
+   {
+    "tap": "Transfer"
+   },
+   {
+    "tap": "Group by Itinerary"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   477
+  ],
+  "notes": "Group by Itinerary on (view setting)."
+ },
+ {
+  "id": "flight_transfer_airports_segment",
+  "file": "lib/screens/flight_transfer_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "scroll_to": "Transfer"
+   },
+   {
+    "tap": "Transfer"
+   },
+   {
+    "scroll_to": "Connection Type"
+   },
+   {
+    "tap": "Airports"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   1179,
+   1269,
+   1388,
+   1419,
+   1466
+  ],
+  "notes": "Airports|Flights segment -> airport ranking rows."
+ },
+ {
+  "id": "flight_transfer_ranking",
+  "file": "lib/screens/flight_transfer_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "scroll_to": "Transfer"
+   },
+   {
+    "tap": "Transfer"
+   },
+   {
+    "scroll_to": "Ranking"
+   },
+   {
+    "tap": "Ranking"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   1557,
+   1600,
+   1690,
+   1742
+  ],
+  "notes": "Logs|Ranking segment -> ranking list rows."
+ },
+ {
+  "id": "flight_frequency_stats",
+  "file": "lib/screens/flight_frequency_stats_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "scroll_to": "Frequency"
+   },
+   {
+    "tap": "Frequency"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   190,
+   266,
+   307,
+   308,
+   348,
+   378,
+   379,
+   380
+  ],
+  "notes": "Frequency stats: Flight Streaks, Flights|Airports segment with icons, Analysis Type dropdown, Departure|Arrival|In-Flight 3-way segment (23 Rows)."
+ },
+ {
+  "id": "flight_frequency_airports",
+  "file": "lib/screens/flight_frequency_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "scroll_to": "Frequency"
+   },
+   {
+    "tap": "Frequency"
+   },
+   {
+    "tap": "Airports"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   308
+  ],
+  "notes": "Airports source selected."
+ },
+ {
+  "id": "flight_frequency_analysis_dropdown",
+  "file": "lib/screens/flight_frequency_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "scroll_to": "Frequency"
+   },
+   {
+    "tap": "Frequency"
+   },
+   {
+    "tap_contains": "Analysis Type"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   348
+  ],
+  "notes": "Analysis Type dropdown open."
+ },
+ {
+  "id": "flight_frequency_inflight",
+  "file": "lib/screens/flight_frequency_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "scroll_to": "Frequency"
+   },
+   {
+    "tap": "Frequency"
+   },
+   {
+    "tap": "In-Flight"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   378,
+   380
+  ],
+  "notes": "3-segment Departure/Arrival/In-Flight selected In-Flight. 'In-Flight' is a SegmentedButton segment (flight_frequency_stats_screen.dart:381) inside a scroll; likely hidden by nested scroll or needs a prior analysis selection."
+ },
+ {
+  "id": "flight_frequency_detail_sheet",
+  "file": "lib/screens/flight_frequency_stats_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "scroll_to": "Frequency"
+   },
+   {
+    "tap": "Frequency"
+   },
+   {
+    "tap": "Airports"
+   },
+   {
+    "tap_first_list_item": "first airport row in frequency list"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   1252,
+   1377,
+   1467,
+   1471,
+   1595,
+   1912
+  ],
+  "notes": "Airport detail sheet (copy of airports detail: Visit Date, uses, Transfer/Layover/Stopover/Lounge Use rows)."
+ },
+ {
+  "id": "flight_frequency_memo_dialog",
+  "file": "lib/screens/flight_frequency_stats_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "scroll_to": "Frequency"
+   },
+   {
+    "tap": "Frequency"
+   },
+   {
+    "tap": "Airports"
+   },
+   {
+    "tap_first_list_item": "first airport"
+   },
+   {
+    "tap": "Add Memo and Photos"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1692
+  ],
+  "notes": "Memo & photos dialog; Cancel."
+ },
+ {
+  "id": "purchase_stats",
+  "file": "lib/screens/purchase_stats_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "scroll_to": "Purchase"
+   },
+   {
+    "tap": "Purchase"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   648,
+   654,
+   790,
+   880,
+   881
+  ],
+  "notes": "Purchase stats: Group by Itinerary switch, Purchase Type chart, Flight Logs|Ranking."
+ },
+ {
+  "id": "purchase_stats_ranking",
+  "file": "lib/screens/purchase_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "scroll_to": "Purchase"
+   },
+   {
+    "tap": "Purchase"
+   },
+   {
+    "scroll_to": "Ranking"
+   },
+   {
+    "tap": "Ranking"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1197,
+   1198,
+   1231
+  ],
+  "notes": "Ranking view with Cash|Mileage segment and Switch."
+ },
+ {
+  "id": "purchase_stats_mileage",
+  "file": "lib/screens/purchase_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "scroll_to": "Purchase"
+   },
+   {
+    "tap": "Purchase"
+   },
+   {
+    "scroll_to": "Ranking"
+   },
+   {
+    "tap": "Ranking"
+   },
+   {
+    "tap": "Mileage"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1198
+  ],
+  "notes": "Mileage ranking."
+ },
+ {
+  "id": "seat_class_stats",
+  "file": "lib/screens/seat_class_stats_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "scroll_to": "Premium Cabins"
+   },
+   {
+    "tap": "Premium Cabins"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   331,
+   361,
+   405,
+   512,
+   564,
+   657,
+   658
+  ],
+  "notes": "Seat class stats (8 Rows, 5 maxLines)."
+ },
+ {
+  "id": "seat_class_stats_ranking",
+  "file": "lib/screens/seat_class_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "FLIGHT HUB"
+   },
+   {
+    "scroll_to": "Premium Cabins"
+   },
+   {
+    "tap": "Premium Cabins"
+   },
+   {
+    "scroll_to": "Ranking"
+   },
+   {
+    "tap": "Ranking"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   683,
+   712,
+   806,
+   864
+  ],
+  "notes": "Ranking with Seat Class dropdown."
+ },
+ {
+  "id": "airlines_list",
+  "file": "lib/screens/airlines_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRLINES"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   400,
+   423,
+   537,
+   548,
+   611
+  ],
+  "notes": "Airlines list with scrollable alliance TabBar, View Statistics card, search, sort dropdown."
+ },
+ {
+  "id": "airlines_list_tab_all",
+  "file": "lib/screens/airlines_list_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRLINES"
+   },
+   {
+    "tap_contains": "ALL"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   399,
+   404
+  ],
+  "notes": "Alliance tab ALL (isScrollable, safe)."
+ },
+ {
+  "id": "airlines_list_tab_star",
+  "file": "lib/screens/airlines_list_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRLINES"
+   },
+   {
+    "tap_contains": "STAR"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   399,
+   404
+  ],
+  "notes": "Alliance tab ★ STAR (isScrollable, safe)."
+ },
+ {
+  "id": "airlines_list_tab_skyteam",
+  "file": "lib/screens/airlines_list_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRLINES"
+   },
+   {
+    "tap_contains": "SKYTEAM"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   399,
+   404
+  ],
+  "notes": "Alliance tab ☁ SKYTEAM (isScrollable, safe)."
+ },
+ {
+  "id": "airlines_list_tab_oneworld",
+  "file": "lib/screens/airlines_list_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRLINES"
+   },
+   {
+    "tap_contains": "ONEWORLD"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   399,
+   404
+  ],
+  "notes": "Alliance tab 🌍 ONEWORLD (isScrollable, safe)."
+ },
+ {
+  "id": "airlines_list_tab_other",
+  "file": "lib/screens/airlines_list_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRLINES"
+   },
+   {
+    "tap_contains": "OTHER"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   399,
+   404
+  ],
+  "notes": "Alliance tab ✈ OTHER (isScrollable, safe)."
+ },
+ {
+  "id": "airlines_list_filters_sheet",
+  "file": "lib/screens/airlines_list_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRLINES"
+   },
+   {
+    "tap": "Filters"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   136,
+   196,
+   210,
+   244,
+   258,
+   289
+  ],
+  "notes": "Filters sheet: FILTER BY Wrap chips (Flown Only/Favorites), Clear All / Apply Filters Expanded buttons. Close with back."
+ },
+ {
+  "id": "airlines_list_sort_dropdown",
+  "file": "lib/screens/airlines_list_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRLINES"
+   },
+   {
+    "tap": "A-Z"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   668,
+   708
+  ],
+  "notes": "Sort dropdown (A-Z/Most Flown/Recent/Top Rated/Favorites)."
+ },
+ {
+  "id": "airlines_list_empty",
+  "file": "lib/screens/airlines_list_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRLINES"
+   },
+   {
+    "tap": "Search airlines"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   870,
+   879
+  ],
+  "notes": "Type a nonsense query to see 'No airlines found' / 'Try adjusting your filters'."
+ },
+ {
+  "id": "airline_stats",
+  "file": "lib/screens/airline_stats_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRLINES"
+   },
+   {
+    "tap": "View Statistics"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   172,
+   176,
+   465,
+   521
+  ],
+  "notes": "Airline stats (All|Flown, High|Low segments ellipsized)."
+ },
+ {
+  "id": "airline_stats_flown",
+  "file": "lib/screens/airline_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRLINES"
+   },
+   {
+    "tap": "View Statistics"
+   },
+   {
+    "tap": "Flown"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   176
+  ],
+  "notes": "Flown filter selected."
+ },
+ {
+  "id": "airline_detail",
+  "file": "lib/screens/airline_detail_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRLINES"
+   },
+   {
+    "tap_first_list_item": "first airline row"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   348,
+   461,
+   469,
+   485,
+   511,
+   1092,
+   1110
+  ],
+  "notes": "Airline detail: Flight Logs, Mileage Program / Current Balance, Usage History, log cards with 'Connect Itinerary' button and CANCELED chip."
+ },
+ {
+  "id": "airline_detail_actions_sheet",
+  "file": "lib/screens/airline_detail_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRLINES"
+   },
+   {
+    "tap_first_list_item": "first airline row"
+   },
+   {
+    "tap_desc": "FloatingActionButton (+) bottom-right"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   272,
+   282,
+   291,
+   299,
+   307
+  ],
+  "notes": "Action options sheet: Add Flight Log / Book Award Flight (Miles) / Upgrade Seat (Miles) / Other Mileage Usage."
+ },
+ {
+  "id": "airline_detail_add_log",
+  "file": "lib/screens/add_flight_log_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRLINES"
+   },
+   {
+    "tap_first_list_item": "first airline row"
+   },
+   {
+    "tap_desc": "FAB (+)"
+   },
+   {
+    "tap": "Add Flight Log"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Add flight form prefilled with airline (open only)."
+ },
+ {
+  "id": "airline_detail_award_flight",
+  "file": "lib/screens/add_flight_log_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRLINES"
+   },
+   {
+    "tap_first_list_item": "first airline row"
+   },
+   {
+    "tap_desc": "FAB (+)"
+   },
+   {
+    "tap": "Book Award Flight (Miles)"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   1129,
+   1148,
+   1182
+  ],
+  "notes": "Add form in mileage mode (Mileage Program field, Miles switch on). FAB probably below y=1990 on this screen; add a calib.json coordinate."
+ },
+ {
+  "id": "airline_detail_upgrade_sheet",
+  "file": "lib/screens/airline_detail_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRLINES"
+   },
+   {
+    "tap_first_list_item": "first airline row"
+   },
+   {
+    "tap_desc": "FAB (+)"
+   },
+   {
+    "tap": "Upgrade Seat (Miles)"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   643,
+   667,
+   690,
+   704
+  ],
+  "notes": "Select Flight to Upgrade sheet."
+ },
+ {
+  "id": "airline_detail_other_usage_dialog",
+  "file": "lib/screens/airline_detail_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRLINES"
+   },
+   {
+    "tap_first_list_item": "first airline row"
+   },
+   {
+    "tap_desc": "FAB (+)"
+   },
+   {
+    "tap": "Other Mileage Usage"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   765,
+   769,
+   778,
+   789,
+   796,
+   801,
+   807,
+   817,
+   833
+  ],
+  "notes": "Log Other Mileage Usage form dialog (Cancel). 'Additional Payment (USD)' label long."
+ },
+ {
+  "id": "airline_detail_edit_balance_dialog",
+  "file": "lib/screens/airline_detail_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRLINES"
+   },
+   {
+    "tap_first_list_item": "first airline row"
+   },
+   {
+    "tap_desc": "edit IconButton next to 'Current Balance' in Mileage Program card"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   469,
+   558,
+   562,
+   566
+  ],
+  "notes": "Edit Mileage Balance dialog (Cancel)."
+ },
+ {
+  "id": "airline_detail_usage_options_sheet",
+  "file": "lib/screens/airline_detail_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRLINES"
+   },
+   {
+    "tap_first_list_item": "first airline row"
+   },
+   {
+    "tap_desc": "button opening mileage usage options in Usage History"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   589,
+   598,
+   614,
+   622
+  ],
+  "notes": "Mileage usage options sheet (Book a Flight with Miles / Upgrade a Seat / Other Usage (Hotel, Shopping, etc.))."
+ },
+ {
+  "id": "airline_detail_delete_dialog",
+  "file": "lib/screens/airline_detail_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRLINES"
+   },
+   {
+    "tap_first_list_item": "first airline row"
+   },
+   {
+    "tap_desc": "delete action on a flight log card"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": true,
+  "risk": "low",
+  "risk_lines": [
+   1193,
+   1197
+  ],
+  "notes": "Delete Flight Log confirm - Cancel only."
+ },
+ {
+  "id": "airports",
+  "file": "lib/screens/airports_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRPORTS"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   1457,
+   1542,
+   1553,
+   1611,
+   1662
+  ],
+  "notes": "Airports list (needs hub set; else card opens hub sheet). View Statistics card, search, sort dropdown, 'Not visited' labels."
+ },
+ {
+  "id": "airports_sort_dropdown",
+  "file": "lib/screens/airports_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRPORTS"
+   },
+   {
+    "tap": "A-Z"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   1662,
+   1712
+  ],
+  "notes": "Sort/filter dropdown (A-Z / Most Uses / Recent Visit / Top Rated / My Hubs Only / Favorites Only)."
+ },
+ {
+  "id": "airport_detail_sheet",
+  "file": "lib/screens/airports_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRPORTS"
+   },
+   {
+    "tap_first_list_item": "first airport row"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1031,
+   1073,
+   1081,
+   526,
+   617,
+   670,
+   692,
+   708,
+   748,
+   1024
+  ],
+  "notes": "Airport details sheet: Visit Date, My Hub/Favorite checkboxes, Average Rating, My Rating, Add Use, uses list."
+ },
+ {
+  "id": "airport_detail_uses",
+  "file": "lib/screens/airports_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRPORTS"
+   },
+   {
+    "tap_first_list_item": "first airport row"
+   },
+   {
+    "scroll_to": "Lounge Use"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   817,
+   821,
+   843,
+   860,
+   877,
+   901,
+   946,
+   985,
+   999
+  ],
+  "notes": "Use rows with Transfer/Layover/Stopover/Lounge Use checkboxes and H/M fields (airport with recorded uses)."
+ },
+ {
+  "id": "airport_memo_dialog",
+  "file": "lib/screens/airports_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRPORTS"
+   },
+   {
+    "tap_first_list_item": "first airport row"
+   },
+   {
+    "tap": "Add Memo and Photos"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   279,
+   302,
+   368,
+   376,
+   380,
+   430,
+   446,
+   452
+  ],
+  "notes": "Memo & photos dialog; Cancel."
+ },
+ {
+  "id": "airport_change_hub_dialog",
+  "file": "lib/screens/airports_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRPORTS"
+   },
+   {
+    "tap_first_list_item": "first airport row"
+   },
+   {
+    "tap": "My Hub"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "low",
+  "risk_lines": [
+   635,
+   639,
+   646,
+   650
+  ],
+  "notes": "Change Hub Airport confirm (No / Yes) - tap No."
+ },
+ {
+  "id": "airport_photo_source_sheet",
+  "file": "lib/screens/airports_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRPORTS"
+   },
+   {
+    "tap_first_list_item": "first airport row"
+   },
+   {
+    "tap": "Add Memo and Photos"
+   },
+   {
+    "tap": "Add Photo"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   388,
+   397,
+   405
+  ],
+  "notes": "Photo Library / Camera sheet."
+ },
+ {
+  "id": "airport_stats",
+  "file": "lib/screens/airport_stats_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRPORTS"
+   },
+   {
+    "tap": "View Statistics"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   76,
+   81,
+   289,
+   312,
+   313
+  ],
+  "notes": "Airport stats (Airport|Lounge toggle, Top 100 Airports, All|Flown)."
+ },
+ {
+  "id": "airport_stats_flown",
+  "file": "lib/screens/airport_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRPORTS"
+   },
+   {
+    "tap": "View Statistics"
+   },
+   {
+    "tap": "Flown"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   313
+  ],
+  "notes": "Flown filter."
+ },
+ {
+  "id": "lounge_stats",
+  "file": "lib/screens/flights_lounge_stats_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRPORTS"
+   },
+   {
+    "tap": "View Statistics"
+   },
+   {
+    "tap": "Lounge"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   198,
+   207,
+   209,
+   243,
+   262,
+   270,
+   353,
+   367,
+   374,
+   379,
+   408,
+   430,
+   473
+  ],
+  "notes": "LoungeStatsScreen embedded under 'Lounge' toggle: period dropdown + year Row, summary Rows, ranking trailing Row/'n Visits' Text unflexed, Lounge Log tiles with trailing Row(duration + rating), Yearly Trend chart. Only 2 maxLines in file."
+ },
+ {
+  "id": "lounge_stats_sort_dropdown",
+  "file": "lib/screens/flights_lounge_stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "Flights"
+   },
+   {
+    "tap": "AIRPORTS"
+   },
+   {
+    "tap": "View Statistics"
+   },
+   {
+    "tap": "Lounge"
+   },
+   {
+    "tap_desc": "sort type dropdown above lounge ranking"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   311
+  ],
+  "notes": "Lounge ranking sort dropdown."
+ }
+]

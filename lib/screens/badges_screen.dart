@@ -313,6 +313,8 @@ class _BadgesScreenState extends State<BadgesScreen> {
                         ),
                         child: Text(
                           tr('CURRENT RANK'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                             fontSize: 9,
                             fontWeight: FontWeight.w700,
@@ -324,6 +326,8 @@ class _BadgesScreenState extends State<BadgesScreen> {
                       const SizedBox(height: 6),
                       Text(
                         tr(currentLevel),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w800,
@@ -351,13 +355,17 @@ class _BadgesScreenState extends State<BadgesScreen> {
                             ),
                           ),
                           const SizedBox(width: 6),
-                          Text(
-                            tr('POINTS'),
-                            style: TextStyle(
-                              fontSize: 10,
-                              fontWeight: FontWeight.w600,
-                              color: levelColor.withOpacity(0.6),
-                              letterSpacing: 3.0,
+                          Flexible(
+                            child: Text(
+                              tr('POINTS'),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w600,
+                                color: levelColor.withOpacity(0.6),
+                                letterSpacing: 3.0,
+                              ),
                             ),
                           ),
                         ],
@@ -639,12 +647,16 @@ class _BadgesScreenState extends State<BadgesScreen> {
                           ),
                         ),
                         const SizedBox(width: 12),
-                        Text(
-                          tr(selectedCat['label'] as String),
-                          style: TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.grey[800],
+                        Flexible(
+                          child: Text(
+                            tr(selectedCat['label'] as String),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.grey[800],
+                            ),
                           ),
                         ),
                         const SizedBox(width: 8),
@@ -718,12 +730,16 @@ class _BadgesScreenState extends State<BadgesScreen> {
                             color: (cat['color'] as Color).withOpacity(0.5),
                           ),
                           const SizedBox(width: 12),
-                          Text(
-                            tr(cat['label'] as String),
-                            style: TextStyle(
-                              fontSize: 14,
-                              color: Colors.grey[700],
-                              fontWeight: FontWeight.w500,
+                          Flexible(
+                            child: Text(
+                              tr(cat['label'] as String),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.grey[700],
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
                           ),
                         ],
@@ -831,6 +847,8 @@ class _BadgesScreenState extends State<BadgesScreen> {
                 ),
                 child: Text(
                   tr('$points Points Required'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.w600,
@@ -1069,11 +1087,16 @@ class _BadgesScreenState extends State<BadgesScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text(
-                          achievement.name,
-                          style: const TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold,
+                        Flexible(
+                          child: Text(
+                            tr(achievement.name),
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                         const SizedBox(width: 8),
@@ -1106,7 +1129,7 @@ class _BadgesScreenState extends State<BadgesScreen> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(tr('Progress'), style: TextStyle(fontSize: 12, color: Colors.grey[600])),
+                            Flexible(child: Text(tr('Progress'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12, color: Colors.grey[600]))),
                             Text(tr(progressString), style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                           ],
                         ),
@@ -1144,9 +1167,13 @@ class _BadgesScreenState extends State<BadgesScreen> {
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                           elevation: 0,
                         ),
-                        child: Text(
-                          tr(isPremiumPendingClaim ? 'Subscribe to Claim' : 'View Checklist'),
-                          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                        child: FittedBox(
+                          fit: BoxFit.scaleDown,
+                          child: Text(
+                            tr(isPremiumPendingClaim ? 'Subscribe to Claim' : 'View Checklist'),
+                            maxLines: 1,
+                            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                          ),
                         ),
                       ),
                     ),

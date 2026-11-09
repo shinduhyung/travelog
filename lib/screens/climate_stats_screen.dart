@@ -354,6 +354,7 @@ class _ClimateZoneTile extends StatelessWidget {
                       const SizedBox(width: 12),
                       Text(
                         tr('$visited / $total Countries'),
+                        maxLines: 1,
                         style: theme.textTheme.bodyMedium?.copyWith(
                           color: Colors.grey.shade600,
                           fontWeight: FontWeight.w500,
@@ -527,7 +528,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                       value: group,
                       child: Row(children: [
                         Icon(group.icon, color: group.themeColor), const SizedBox(width: 12),
-                        Text(tr(group.title), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                        Flexible(child: Text(tr(group.title), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
                       ]),
                     )).toList(),
                     onChanged: (newValue) { if (newValue != null) { setState(() { _selectedRanking = newValue; _prepareList(); }); } },
@@ -539,7 +540,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                     Expanded(
                         child: SegmentedButton<int>(
                           showSelectedIcon: false,
-                          segments:  [ButtonSegment<int>(value: 0, label: Text(tr('All'))), ButtonSegment<int>(value: 1, label: Text(tr('Visited')))],
+                          segments:  [ButtonSegment<int>(value: 0, label: Text(tr('All'), maxLines: 1, overflow: TextOverflow.ellipsis)), ButtonSegment<int>(value: 1, label: Text(tr('Visited'), maxLines: 1, overflow: TextOverflow.ellipsis))],
                           selected: {_displaySegment},
                           onSelectionChanged: (s) { _displaySegment = s.first; _onFilterChanged(); },
                           style: SegmentedButton.styleFrom(
@@ -557,7 +558,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                     Expanded(
                         child: SegmentedButton<int>(
                           showSelectedIcon: false,
-                          segments:  [ButtonSegment<int>(value: 0, label: Text(tr('High'))), ButtonSegment<int>(value: 1, label: Text(tr('Low')))],
+                          segments:  [ButtonSegment<int>(value: 0, label: Text(tr('High'), maxLines: 1, overflow: TextOverflow.ellipsis)), ButtonSegment<int>(value: 1, label: Text(tr('Low'), maxLines: 1, overflow: TextOverflow.ellipsis))],
                           selected: {_sortOrderSegment},
                           onSelectionChanged: (s) { _sortOrderSegment = s.first; _onFilterChanged(); },
                           style: SegmentedButton.styleFrom(
@@ -628,7 +629,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                               const SizedBox(width: 12),
                               Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 18)), // 국기 추가
                               const SizedBox(width: 8),
-                              Expanded(child: Text(tr(country.name), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                              Expanded(child: Text(tr(country.name), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
                               Text(tr('$displayValue${_selectedRanking.unit}'), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),

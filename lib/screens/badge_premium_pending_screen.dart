@@ -61,8 +61,11 @@ class BadgePremiumPendingScreen extends StatelessWidget {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  Text(
+                  FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
                     tr("BADGE COMPLETE!"),
+                    maxLines: 1,
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w900,
@@ -72,6 +75,7 @@ class BadgePremiumPendingScreen extends StatelessWidget {
                         Shadow(color: Colors.black12, offset: Offset(1, 1), blurRadius: 2),
                       ],
                     ),
+                  ),
                   ),
                   const SizedBox(height: 6),
                   Text(
@@ -102,7 +106,7 @@ class BadgePremiumPendingScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 15),
                   Text(
-                    achievement.name,
+                    tr(achievement.name),
                     style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w600),
                     textAlign: TextAlign.center,
                   ),

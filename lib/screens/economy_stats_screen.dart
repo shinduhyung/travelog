@@ -491,11 +491,15 @@ class _StatusTile extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
-                            tr('$visited / $total Countries'),
-                            style: theme.textTheme.bodyMedium?.copyWith(
-                              color: Colors.grey.shade600,
-                              fontWeight: FontWeight.w500,
+                          Flexible(
+                            child: Text(
+                              tr('$visited / $total Countries'),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: theme.textTheme.bodyMedium?.copyWith(
+                                color: Colors.grey.shade600,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
                           ),
                         ],
@@ -613,11 +617,11 @@ class _TotalGdpCardState extends State<_TotalGdpCard> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      Text(tr('Global Wealth'), style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Colors.grey.shade500, letterSpacing: 0.5)),
+                    Flexible(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                      Text(tr('Global Wealth'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Colors.grey.shade500, letterSpacing: 0.5)),
                       const SizedBox(height: 4),
-                      Text(tr('Total GDP'), style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold, color: Colors.black87)),
-                    ]),
+                      Text(tr('Total GDP'), maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold, color: Colors.black87)),
+                    ])),
                     Row(
                       children: [
                         Text(tr('PPP'), style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: _isPpp ? primaryColor : Colors.grey)),
@@ -675,8 +679,8 @@ class _TotalGdpCardState extends State<_TotalGdpCard> {
         const SizedBox(width: 12),
         Expanded(
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text(tr(label), style: TextStyle(fontSize: 12, color: Colors.grey.shade600, fontWeight: FontWeight.w500)),
-            Text(tr(value), style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black87), overflow: TextOverflow.ellipsis),
+            Text(tr(label), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12, color: Colors.grey.shade600, fontWeight: FontWeight.w500)),
+            Text(tr(value), maxLines: 1, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black87), overflow: TextOverflow.ellipsis),
           ]),
         ),
       ],
@@ -736,7 +740,7 @@ class _GdpByContinentCardState extends State<_GdpByContinentCard> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(tr('GDP by Continent'), style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.black)),
+              Flexible(child: Text(tr('GDP by Continent'), maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.black))),
               Row(children: [
                 Text(tr('PPP'), style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: _isPpp ? Theme.of(context).primaryColor : Colors.grey)),
                 Switch(value: _isPpp, activeColor: Theme.of(context).primaryColor, onChanged: (val) => setState(() => _isPpp = val)),
@@ -857,7 +861,7 @@ class _AverageGdpCardState extends State<_AverageGdpCard> {
           children: [
             Row(children: [
               Icon(icon, size: 16, color: color), const SizedBox(width: 8),
-              Text(tr(label), style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey.shade700, fontSize: 13)),
+              Flexible(child: Text(tr(label), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey.shade700, fontSize: 13))),
               const Spacer(),
               Text(tr(formattedValue), style: TextStyle(fontWeight: FontWeight.bold, color: color, fontSize: 14)),
             ]),
@@ -1043,7 +1047,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                       child: Row(children: [
                         Icon(group.icon, color: group.themeColor),
                         const SizedBox(width: 12),
-                        Text(tr(group.title), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                        Flexible(child: Text(tr(group.title), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
                       ]),
                     )).toList(),
                     onChanged: (newValue) { if (newValue != null) { setState(() { _selectedRanking = newValue; _prepareList(); }); } },
@@ -1055,7 +1059,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                     Expanded(
                         child: SegmentedButton<int>(
                           showSelectedIcon: false,
-                          segments:  [ButtonSegment<int>(value: 0, label: Text(tr('All'))), ButtonSegment<int>(value: 1, label: Text(tr('Visited')))],
+                          segments:  [ButtonSegment<int>(value: 0, label: Text(tr('All'), maxLines: 1, overflow: TextOverflow.ellipsis)), ButtonSegment<int>(value: 1, label: Text(tr('Visited'), maxLines: 1, overflow: TextOverflow.ellipsis))],
                           selected: {_displaySegment},
                           onSelectionChanged: (s) { _displaySegment = s.first; _onFilterChanged(); },
                           style: SegmentedButton.styleFrom(
@@ -1073,7 +1077,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                     Expanded(
                         child: SegmentedButton<int>(
                           showSelectedIcon: false,
-                          segments:  [ButtonSegment<int>(value: 0, label: Text(tr('High'))), ButtonSegment<int>(value: 1, label: Text(tr('Low')))],
+                          segments:  [ButtonSegment<int>(value: 0, label: Text(tr('High'), maxLines: 1, overflow: TextOverflow.ellipsis)), ButtonSegment<int>(value: 1, label: Text(tr('Low'), maxLines: 1, overflow: TextOverflow.ellipsis))],
                           selected: {_sortOrderSegment},
                           onSelectionChanged: (s) { _sortOrderSegment = s.first; _onFilterChanged(); },
                           style: SegmentedButton.styleFrom(
@@ -1156,7 +1160,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                                 Text(tr(flagEmoji(countryObj.isoA2)), style: const TextStyle(fontSize: 18)), // 국기 추가
                                 const SizedBox(width: 8),
                               ],
-                              Expanded(child: Text(tr(displayName), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                              Expanded(child: Text(tr(displayName), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
                               Text(tr(formattedValue), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
@@ -1270,13 +1274,13 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
               child: Column(
                 children: [
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                    Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      Text(tr("Visited Countries"), style: textTheme.bodyLarge),
+                    Flexible(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                      Text(tr("Visited Countries"), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.bodyLarge),
                       Text.rich(TextSpan(
                         text: tr('$visited'), style: theme.textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
                         children: [TextSpan(text: tr(' / $total'), style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
                       )),
-                    ]),
+                    ])),
                     ElevatedButton.icon(
                       onPressed: () {
                         final groups = [HighlightGroup(name: _selectedGroup.mapLegend, color: _selectedGroup.themeColor, countryCodes: _selectedGroup.memberCodes)];

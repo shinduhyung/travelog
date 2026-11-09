@@ -9,6 +9,7 @@ import json
 import re
 import unicodedata
 from pathlib import Path
+from landmark_eligibility import eligible
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
@@ -201,7 +202,9 @@ def build_catalog():
             tags = {TAG_FIXES.get(x,x) for x in place.get('attributes',[])}
             record = {'source':source,'source_index':index,'name':place['name'],
                       'match_key':norm(place['name']),'countries':place.get('countriesIsoA3',[])}
-            if tags & FOOD:
+            if not eligible(place):
+                record.update(excluded=True, reason='excluded_by_landmark_eligibility_policy', groups=[])
+            elif tags & FOOD:
                 record.update(excluded=True, reason='food_or_drink_venue', groups=[])
             elif tags & LODGING:
                 record.update(excluded=True, reason='lodging_not_attraction', groups=[])

@@ -95,6 +95,8 @@ class VisaMapScreen extends StatelessWidget {
                   ),
                   child:  Text(
                     tr('Visa Requirements Map'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w800,

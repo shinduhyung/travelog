@@ -120,10 +120,14 @@ class PopulationsScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(width: 12),
-                    Text(
-                      tr('Population Distribution'),
-                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                        fontWeight: FontWeight.bold,
+                    Flexible(
+                      child: Text(
+                        tr('Population Distribution'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ],
@@ -238,6 +242,8 @@ class PopulationsScreen extends StatelessWidget {
           const SizedBox(height: 12),
           Text(
             tr(title),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
             style: Theme.of(context).textTheme.bodySmall?.copyWith(
               color: Colors.grey.shade700,
               fontWeight: FontWeight.w500,
@@ -517,10 +523,10 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                               Icon(e[1] == 0 ? Icons.public_outlined : Icons.check_circle_outline,
                                   size: 15, color: active ? Colors.white : const Color(0xFFAAAAAA)),
                               const SizedBox(width: 6),
-                              Text(tr(e[0] as String), style: TextStyle(
+                              Flexible(child: Text(tr(e[0] as String), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(
                                 fontSize: 12, fontWeight: active ? FontWeight.w700 : FontWeight.w400,
                                 color: active ? Colors.white : const Color(0xFFAAAAAA),
-                              )),
+                              ))),
                             ]),
                           ),
                         ),
@@ -609,7 +615,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                           valueColor: AlwaysStoppedAnimation<Color>(barColor),
                         )),
                         const SizedBox(height: 3),
-                        Text(tr(city.country), style: const TextStyle(fontSize: 10, color: Color(0xFFAAAAAA))),
+                        Text(tr(city.country), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 10, color: Color(0xFFAAAAAA))),
                       ])),
                     ]),
                   ),

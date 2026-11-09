@@ -269,7 +269,7 @@ class _AlphabeticalChallengeCardState extends State<_AlphabeticalChallengeCard> 
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(tr('"$alphabet" Countries'), style: theme.textTheme.titleLarge?.copyWith(color: Colors.white)),
+                Flexible(child: Text(tr('"$alphabet" Countries'), maxLines: 1, overflow: TextOverflow.ellipsis, style: theme.textTheme.titleLarge?.copyWith(color: Colors.white))),
                 TextButton.icon(
                   icon: const Icon(Icons.map_outlined, color: Colors.white),
                   label:  Text(tr('Map'), style: TextStyle(color: Colors.white)),
@@ -341,9 +341,9 @@ class _AlphabeticalChallengeCardState extends State<_AlphabeticalChallengeCard> 
               child: Row(children: [
                 Expanded(
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                    Text(tr('Countries A-Z Challenge'), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                    Text(tr('Countries A-Z Challenge'), maxLines: 2, overflow: TextOverflow.ellipsis, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
                     const SizedBox(height: 4),
-                    Text(tr('Visited Alphabets: $_totalVisitedAlphabets / $_totalAlphabets'), style: textTheme.bodyMedium?.copyWith(color: Colors.grey.shade600)),
+                    Text(tr('Visited Alphabets: $_totalVisitedAlphabets / $_totalAlphabets'), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.bodyMedium?.copyWith(color: Colors.grey.shade600)),
                   ]),
                 ),
                 SizedBox(
@@ -514,7 +514,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                   children: [
                     Icon(Icons.accessibility_new, color: rankingThemeColor),
                     const SizedBox(width: 8),
-                    Text(tr('Physical Features'), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                    Flexible(child: Text(tr('Physical Features'), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold))),
                   ],
                 ),
                 const SizedBox(height: 8),
@@ -528,7 +528,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                       value: group,
                       child: Row(children: [
                         Icon(group.icon, color: group.themeColor), const SizedBox(width: 12),
-                        Text(tr(group.title), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                        Flexible(child: Text(tr(group.title), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
                       ]),
                     )).toList(),
                     onChanged: (newValue) {
@@ -580,7 +580,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                               const SizedBox(width: 8),
                               Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 18)),
                               const SizedBox(width: 6),
-                              Expanded(child: Text(tr(country.name), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                              Expanded(child: Text(tr(country.name), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
                               Text(tr('${value.toStringAsFixed(_selectedRanking.precision)}${_selectedRanking.unit}'), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
@@ -719,7 +719,7 @@ class _CombinedInternetRankingCardState extends State<_CombinedInternetRankingCa
                   children: [
                     Icon(Icons.wifi_tethering, color: rankingThemeColor),
                     const SizedBox(width: 8),
-                    Text(tr('Internet & Social Media'), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                    Flexible(child: Text(tr('Internet & Social Media'), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold))),
                   ],
                 ),
                 const SizedBox(height: 8),
@@ -733,7 +733,7 @@ class _CombinedInternetRankingCardState extends State<_CombinedInternetRankingCa
                       child: Row(children: [
                         Icon(group.icon, color: group.themeColor),
                         const SizedBox(width: 12),
-                        Text(tr(group.title), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                        Flexible(child: Text(tr(group.title), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
                       ]),
                     )).toList(),
                     onChanged: (newValue) { if (newValue != null) { setState(() { _selectedRanking = newValue; _prepareList(); }); } },
@@ -789,7 +789,7 @@ class _CombinedInternetRankingCardState extends State<_CombinedInternetRankingCa
                               const SizedBox(width: 8),
                               Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 18)),
                               const SizedBox(width: 6),
-                              Expanded(child: Text(tr(country.name), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                              Expanded(child: Text(tr(country.name), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
                               Text(tr(formattedValue), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
@@ -908,13 +908,13 @@ class _CombinedFlagCardState extends State<_CombinedFlagCard> {
               child: Column(
                 children: [
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                    Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      Text(tr("Visited Countries"), style: textTheme.bodyLarge),
+                    Flexible(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                      Text(tr("Visited Countries"), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.bodyLarge),
                       Text.rich(TextSpan(
                         text: tr('$visited'), style: textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
                         children: [TextSpan(text: tr(' / $total'), style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
                       )),
-                    ]),
+                    ])),
                     ElevatedButton.icon(
                       onPressed: () {
                         final groups = <HighlightGroup>[];
@@ -1055,13 +1055,13 @@ class _CombinedNameCardState extends State<_CombinedNameCard> {
               child: Column(
                 children: [
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                    Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      Text(tr("Visited Countries"), style: textTheme.bodyLarge),
+                    Flexible(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                      Text(tr("Visited Countries"), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.bodyLarge),
                       Text.rich(TextSpan(
                         text: tr('$visited'), style: textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
                         children: [TextSpan(text: tr(' / $total'), style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
                       )),
-                    ]),
+                    ])),
                     ElevatedButton.icon(
                       onPressed: () {
                         final groups = <HighlightGroup>[];
@@ -1208,13 +1208,13 @@ class _CombinedVisitsCardState extends State<_CombinedVisitsCard> {
               child: Column(
                 children: [
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                    Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      Text(tr("Visited Countries"), style: textTheme.bodyLarge),
+                    Flexible(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                      Text(tr("Visited Countries"), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.bodyLarge),
                       Text.rich(TextSpan(
                         text: tr('$visited'), style: textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
                         children: [TextSpan(text: tr(' / $total'), style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
                       )),
-                    ]),
+                    ])),
                     ElevatedButton.icon(
                       onPressed: () {
                         final groups = <HighlightGroup>[];
@@ -1355,13 +1355,13 @@ class _CombinedSpaceCardState extends State<_CombinedSpaceCard> {
               child: Column(
                 children: [
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                    Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      Text(tr("Visited Countries"), style: textTheme.bodyLarge),
+                    Flexible(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                      Text(tr("Visited Countries"), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.bodyLarge),
                       Text.rich(TextSpan(
                         text: tr('$visited'), style: textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
                         children: [TextSpan(text: tr(' / $total'), style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
                       )),
-                    ]),
+                    ])),
                     ElevatedButton.icon(
                       onPressed: () {
                         final groups = <HighlightGroup>[];

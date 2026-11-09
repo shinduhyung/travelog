@@ -88,7 +88,7 @@ class HomeScreen extends StatelessWidget {
   Widget _buildMenuButton(BuildContext context, String title, IconData icon, VoidCallback onPressed) {
     return ElevatedButton.icon(
       icon: Icon(icon, color: Colors.white),
-      label: Text(tr(title), style: const TextStyle(fontSize: 18, color: Colors.white)),
+      label: Text(tr(title), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 18, color: Colors.white)),
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.black.withOpacity(0.5),

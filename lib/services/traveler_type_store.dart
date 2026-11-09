@@ -20,7 +20,7 @@ class TravelerTypeStore {
   TravelerTypeStore._();
 
   /// 점수 계산식을 바꿀 때마다 올린다. 이전 버전 결과는 자동으로 폐기된다.
-  static const int currentVersion = 3;
+  static const int currentVersion = 6;
 
   static const String resultKey = 'ai_analysis_result';
   static const String updatedAtField = 'ai_analysis_updated_at';

@@ -38,6 +38,27 @@ class PersonaScoreResult {
 class PersonaScorer {
   PersonaScorer._();
 
+  /// Describes observed agreement with a prototype, not causal attribution
+  /// to the subsequent distribution calibration.
+  static List<String> matchingAxes(Map<String, dynamic> prototype,
+      Map<String, double> user, {int limit = 3}) {
+    final data = prototype['data'] as Map<String, dynamic>;
+    final matches = <MapEntry<String, double>>[];
+    for (final entry in data.entries) {
+      final value = user[entry.key];
+      final target = (entry.value['P'] as num).toDouble();
+      final weight = (entry.value['W'] as num).toDouble();
+      if (value == null || !value.isFinite || value.abs() < .25 ||
+          weight <= 0 || target * value <= 0) continue;
+      matches.add(MapEntry(entry.key, weight * (1 - (value - target).abs() / 2)));
+    }
+    matches.sort((a, b) {
+      final order = b.value.compareTo(a.value);
+      return order == 0 ? a.key.compareTo(b.key) : order;
+    });
+    return matches.take(limit).map((e) => e.key).toList();
+  }
+
   static const double temperature = 0.5;
   static const int _calibrationSamples = 1500;
   static const double _calibrationSigma = 0.4;

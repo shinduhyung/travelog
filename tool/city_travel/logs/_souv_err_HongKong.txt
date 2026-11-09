@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "C:\Users\ahnlee123\Desktop\jidoapp\tool\city_travel\build_page.py", line 585, in <module>
+    main(sys.argv[1] if len(sys.argv) > 1 else "Abu Dhabi")
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ahnlee123\Desktop\jidoapp\tool\city_travel\build_page.py", line 374, in main
+    souvenirs_html = souvenir_section.render(slug(city), fetch_image)
+  File "C:\Users\ahnlee123\Desktop\jidoapp\tool\city_travel\souvenir_section.py", line 41, in render
+    f'<div class="tip">{e(it["tip"])}</div></div></article>')
+                        ~^^^^^^^^^^^
+  File "C:\Python314\Lib\html\__init__.py", line 19, in escape
+    s = s.replace("&", "&amp;") # Must be done first!
+        ^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'replace'

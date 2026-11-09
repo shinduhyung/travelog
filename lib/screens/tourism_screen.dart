@@ -65,17 +65,17 @@ class _TourismTab extends StatelessWidget{
       final instaPct=instaCities.isNotEmpty?instaVisited/instaCities.length:0.0;
 
       return SingleChildScrollView(physics:const BouncingScrollPhysics(),child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
-        const _SH(label:'RANKINGS'),
+        _SH(label:'RANKINGS'),
         Padding(padding:const EdgeInsets.symmetric(horizontal:16),child:_TourRankCard(provider:provider)),
-        const _SH(label:'COLLECTIONS'),
+        _SH(label:'COLLECTIONS'),
         Padding(padding:const EdgeInsets.symmetric(horizontal:16),child:Container(
           padding:const EdgeInsets.all(16),
           decoration:BoxDecoration(color:_C.ink,borderRadius:BorderRadius.circular(14)),
           child:Row(children:[
             Expanded(child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
-              Text(tr('$instaCompleted of 1 collections'),style:const TextStyle(fontSize:22,fontWeight:FontWeight.w800,color:Colors.white,letterSpacing:-0.5)),
+              Text(tr('$instaCompleted of 1 collections'),maxLines:1,overflow:TextOverflow.ellipsis,style:const TextStyle(fontSize:22,fontWeight:FontWeight.w800,color:Colors.white,letterSpacing:-0.5)),
               const SizedBox(height:4),
-              Text(tr(instaCompleted==0?'No collections fully completed yet':'All collections completed! 🎉'),style:const TextStyle(fontSize:12,color:Color(0xFF888888))),
+              Text(tr(instaCompleted==0?'No collections fully completed yet':'All collections completed! 🎉'),maxLines:1,overflow:TextOverflow.ellipsis,style:const TextStyle(fontSize:12,color:Color(0xFF888888))),
               const SizedBox(height:14),
               ClipRRect(borderRadius:BorderRadius.circular(4),child:SizedBox(height:6,child:Stack(children:[Container(color:const Color(0xFF2E2E2E)),FractionallySizedBox(widthFactor:instaPct,child:Container(color:const Color(0xFFD64545)))]))),
             ])),
@@ -139,7 +139,7 @@ class _TourRankCardState extends State<_TourRankCard>{
                 return Expanded(child:GestureDetector(onTap:()=>setState((){_sel=r;_cont='World';_prep();}),
                     child:AnimatedContainer(duration:const Duration(milliseconds:200),padding:const EdgeInsets.symmetric(vertical:10),margin:const EdgeInsets.symmetric(horizontal:3),
                         decoration:BoxDecoration(color:active?_C.ink:Colors.transparent,borderRadius:BorderRadius.circular(8)),
-                        child:Row(mainAxisAlignment:MainAxisAlignment.center,children:[Icon(r.icon,size:15,color:active?Colors.white:_C.inkLight),const SizedBox(width:6),Text(tr(r.title),style:TextStyle(fontSize:11,fontWeight:active?FontWeight.w700:FontWeight.w400,color:active?Colors.white:_C.inkLight))]))));
+                        child:Row(mainAxisAlignment:MainAxisAlignment.center,children:[Icon(r.icon,size:15,color:active?Colors.white:_C.inkLight),const SizedBox(width:6),Flexible(child:FittedBox(fit:BoxFit.scaleDown,child:Text(tr(r.title),maxLines:1,style:TextStyle(fontSize:11,fontWeight:active?FontWeight.w700:FontWeight.w400,color:active?Colors.white:_C.inkLight))))]))));
               }),
             ]),
             if(_sel.metricKey=='visitors')...[
@@ -171,7 +171,7 @@ class _TourRankCardState extends State<_TourRankCard>{
                     Expanded(child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
                       Row(children:[Expanded(child:Text(item.name,style:TextStyle(fontSize:13,fontWeight:isV?FontWeight.w700:FontWeight.w500,color:_C.ink),overflow:TextOverflow.ellipsis)),if(isV)...[const SizedBox(width:4),Icon(Icons.check_circle_rounded,size:14,color:_sel.themeColor)],const SizedBox(width:6),Text(tr(dStr),style:const TextStyle(fontSize:13,fontWeight:FontWeight.w700,color:_C.ink))]),
                       const SizedBox(height:5),ClipRRect(borderRadius:BorderRadius.circular(3),child:LinearProgressIndicator(value:barFrac,minHeight:3,backgroundColor:_C.divider,valueColor:AlwaysStoppedAnimation<Color>(barColor))),
-                      const SizedBox(height:3),Row(children:[Text(tr(_cf(item)),style:const TextStyle(fontSize:11)),const SizedBox(width:4),Text(tr(item.country),style:const TextStyle(fontSize:10,color:_C.inkLight))]),
+                      const SizedBox(height:3),Row(children:[Text(tr(_cf(item)),style:const TextStyle(fontSize:11)),const SizedBox(width:4),Flexible(child:Text(tr(item.country),maxLines:1,overflow:TextOverflow.ellipsis,style:const TextStyle(fontSize:10,color:_C.inkLight)))]),
                     ])),
                   ])));
         }),
@@ -205,19 +205,19 @@ class _InstaCardState extends State<_InstaCard> with SingleTickerProviderStateMi
         Container(width:42,height:42,decoration:BoxDecoration(color:_accent.withOpacity(0.10),borderRadius:BorderRadius.circular(10)),child:const Icon(Icons.camera_alt_outlined,size:20,color:_accent)),
         const SizedBox(width:14),
          Expanded(child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
-          Text(tr('SOCIAL'),style:TextStyle(fontSize:10,fontWeight:FontWeight.w700,letterSpacing:1.5,color:_accent)),
+          Text(tr('SOCIAL'),maxLines:1,overflow:TextOverflow.ellipsis,style:TextStyle(fontSize:10,fontWeight:FontWeight.w700,letterSpacing:1.5,color:_accent)),
           SizedBox(height:2),
-          Text(tr('Top Instagram Posted'),style:TextStyle(fontSize:15,fontWeight:FontWeight.w700,color:_C.ink,letterSpacing:-0.2)),
+          Text(tr('Top Instagram Posted'),maxLines:1,overflow:TextOverflow.ellipsis,style:TextStyle(fontSize:15,fontWeight:FontWeight.w700,color:_C.ink,letterSpacing:-0.2)),
         ])),
         GestureDetector(onTap:()=>Navigator.push(context,MaterialPageRoute(builder:(_)=>CityStatsMapScreen(cities:widget.cities,title:'Top Instagram Posted',markerColor:_accent))),
-            child:Container(padding:const EdgeInsets.symmetric(horizontal:10,vertical:6),decoration:BoxDecoration(color:_C.bg,borderRadius:BorderRadius.circular(8),border:Border.all(color:_C.divider)),child:Row(mainAxisSize:MainAxisSize.min,children:[Icon(Icons.map_outlined,size:14,color:_C.inkMid),SizedBox(width:4),Text(tr('Map'),style:TextStyle(fontSize:12,fontWeight:FontWeight.w600,color:_C.inkMid))]))),
+            child:Container(padding:const EdgeInsets.symmetric(horizontal:10,vertical:6),decoration:BoxDecoration(color:_C.bg,borderRadius:BorderRadius.circular(8),border:Border.all(color:_C.divider)),child:Row(mainAxisSize:MainAxisSize.min,children:[Icon(Icons.map_outlined,size:14,color:_C.inkMid),SizedBox(width:4),Text(tr('Map'),maxLines:1,style:TextStyle(fontSize:12,fontWeight:FontWeight.w600,color:_C.inkMid))]))),
         const SizedBox(width:4),
         RotationTransition(turns:_rA,child:const Icon(Icons.keyboard_arrow_down_rounded,size:22,color:_C.inkLight)),
       ]))),
       Padding(padding:const EdgeInsets.fromLTRB(16,0,16,14),child:Column(children:[
         ClipRRect(borderRadius:BorderRadius.circular(4),child:LinearProgressIndicator(value:pct,minHeight:5,backgroundColor:_C.divider,valueColor:const AlwaysStoppedAnimation<Color>(_accent))),
         const SizedBox(height:8),
-        Row(children:[_Ch(label:'Visited',value:'$vis',color:_accent),const SizedBox(width:8),_Ch(label:'Remaining',value:'${total-vis}',color:_C.inkLight),const Spacer(),Text(tr('${(pct*100).round()}%'),style:TextStyle(fontSize:20,fontWeight:FontWeight.w800,color:pct>0?_accent:_C.inkLight,letterSpacing:-0.5))]),
+        Row(children:[Expanded(child:Row(children:[Flexible(child:_Ch(label:'Visited',value:'$vis',color:_accent)),const SizedBox(width:8),Flexible(child:_Ch(label:'Remaining',value:'${total-vis}',color:_C.inkLight))])),Text(tr('${(pct*100).round()}%'),style:TextStyle(fontSize:20,fontWeight:FontWeight.w800,color:pct>0?_accent:_C.inkLight,letterSpacing:-0.5))]),
       ])),
       AnimatedSize(duration:const Duration(milliseconds:280),curve:Curves.easeInOut,child:_exp
           ?FadeTransition(opacity:_fA,child:Container(width:double.infinity,padding:const EdgeInsets.fromLTRB(16,4,16,16),decoration:const BoxDecoration(border:Border(top:BorderSide(color:_C.divider))),
@@ -237,4 +237,4 @@ class _InstaCardState extends State<_InstaCard> with SingleTickerProviderStateMi
 
 class _AP extends StatelessWidget{final double value;const _AP({required this.value});@override Widget build(BuildContext context)=>SizedBox(width:68,height:68,child:Stack(alignment:Alignment.center,children:[CustomPaint(size:const Size(68,68),painter:_APainter(value:value)),Column(mainAxisSize:MainAxisSize.min,children:[Text(tr('${(value*100).round()}'),style:const TextStyle(fontSize:20,fontWeight:FontWeight.w800,color:Colors.white,height:1)), Text(tr('%'),style:TextStyle(fontSize:10,color:Color(0xFF888888)))])]));}
 class _APainter extends CustomPainter{final double value;const _APainter({required this.value});@override void paint(Canvas canvas,Size size){final c=Offset(size.width/2,size.height/2);final r=size.width/2-4;canvas.drawCircle(c,r,Paint()..color=const Color(0xFF2E2E2E)..style=PaintingStyle.stroke..strokeWidth=4.0);if(value>0)canvas.drawArc(Rect.fromCircle(center:c,radius:r),-math.pi/2,2*math.pi*value,false,Paint()..color=Colors.white..style=PaintingStyle.stroke..strokeWidth=4.0..strokeCap=StrokeCap.round);}@override bool shouldRepaint(_APainter old)=>old.value!=value;}
-class _Ch extends StatelessWidget{final String label,value;final Color color;const _Ch({required this.label,required this.value,required this.color});@override Widget build(BuildContext context)=>Row(mainAxisSize:MainAxisSize.min,crossAxisAlignment:CrossAxisAlignment.baseline,textBaseline:TextBaseline.alphabetic,children:[Text(tr(value),style:TextStyle(fontSize:16,fontWeight:FontWeight.w800,color:color)),const SizedBox(width:3),Text(tr(label),style:const TextStyle(fontSize:10,fontWeight:FontWeight.w500,color:_C.inkLight,letterSpacing:0.3))]);}
+class _Ch extends StatelessWidget{final String label,value;final Color color;const _Ch({required this.label,required this.value,required this.color});@override Widget build(BuildContext context)=>Row(mainAxisSize:MainAxisSize.min,crossAxisAlignment:CrossAxisAlignment.baseline,textBaseline:TextBaseline.alphabetic,children:[Text(tr(value),style:TextStyle(fontSize:16,fontWeight:FontWeight.w800,color:color)),const SizedBox(width:3),Flexible(child:Text(tr(label),maxLines:1,overflow:TextOverflow.ellipsis,style:const TextStyle(fontSize:10,fontWeight:FontWeight.w500,color:_C.inkLight,letterSpacing:0.3)))]);}

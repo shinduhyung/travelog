@@ -70,6 +70,7 @@ class _NewBadge extends StatelessWidget {
           SizedBox(width: 2),
           Text(
             tr('NEW'),
+            maxLines: 1,
             style: TextStyle(fontSize: 9, fontWeight: FontWeight.w900, color: Colors.white, letterSpacing: 0.3),
           ),
         ],

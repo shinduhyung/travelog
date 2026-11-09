@@ -62,7 +62,8 @@ def adjust(scores, profile, strength):
             # A constant reference carries no evidence for a rank correction.
             logits[kind] = value
             continue
-        left,right = bisect.bisect_left(reference,value),bisect.bisect_right(reference,value)
+        # Treat machine-rounding differences as ties across Python/Dart/devices.
+        left,right = bisect.bisect_left(reference,value-1e-12),bisect.bisect_right(reference,value+1e-12)
         percentile = (left+right+1)/(2*(len(reference)+1))
         logit = math.log(percentile/(1-percentile))
         logits[kind] = (1-strength)*value+strength*logit

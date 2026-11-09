@@ -327,30 +327,35 @@ class _FlightsMenuScreenState extends State<FlightsMenuScreen>
                     ),
                   ),
                   const SizedBox(width: 20),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        tr("FLIGHT HUB"),
-                        style: TextStyle(
-                          color: Colors.white.withOpacity(0.8),
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1.2,
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          tr("FLIGHT HUB"),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            color: Colors.white.withOpacity(0.8),
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 1.2,
+                          ),
                         ),
-                      ),
-                      const SizedBox(height: 4),
-                      Text(
-                        tr("Logs, Maps & Stats"),
-                        style: TextStyle(
-                          color: Colors.white.withOpacity(0.9),
-                          fontSize: 14,
+                        const SizedBox(height: 4),
+                        Text(
+                          tr("Logs, Maps & Stats"),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            color: Colors.white.withOpacity(0.9),
+                            fontSize: 14,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                  const Spacer(),
                   Text(
                     tr("$count"),
                     style: const TextStyle(
@@ -505,13 +510,17 @@ class _FlightsMenuScreenState extends State<FlightsMenuScreen>
                         children: [
                           Row(
                             children: [
-                              Text(
-                                tr((isHubPrompt ? "SET UP HUB" : title).toUpperCase()),
-                                style: TextStyle(
-                                  fontSize: 11,
-                                  fontWeight: FontWeight.w700,
-                                  color: cardColor,
-                                  letterSpacing: 1.2,
+                              Flexible(
+                                child: Text(
+                                  tr((isHubPrompt ? "SET UP HUB" : title).toUpperCase()),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontSize: 11,
+                                    fontWeight: FontWeight.w700,
+                                    color: cardColor,
+                                    letterSpacing: 1.2,
+                                  ),
                                 ),
                               ),
                               if (!isHubPrompt) ...[
@@ -552,6 +561,8 @@ class _FlightsMenuScreenState extends State<FlightsMenuScreen>
                           const SizedBox(height: 2),
                           Text(
                             tr(isHubPrompt ? "Select your home airport" : subLabel),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                             style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w500,
@@ -1070,6 +1081,8 @@ class _HubSetupSheetState extends State<_HubSetupSheet> {
                           children: [
                             Text(
                               tr('Set Your Hub'),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
                               style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w800,
@@ -1077,6 +1090,8 @@ class _HubSetupSheetState extends State<_HubSetupSheet> {
                             ),
                             Text(
                               tr('Search by airport name or IATA code'),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
                               style: TextStyle(
                                 fontSize: 12,
                                 color: Colors.grey,

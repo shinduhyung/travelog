@@ -13,6 +13,7 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:jidoapp/models/visit_date_model.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
+import 'package:jidoapp/widgets/my_match_badge.dart';
 
 // top_picks_menu 기준 mountains 테마색
 const Color _kTheme = Color(0xFF52796F);
@@ -72,17 +73,17 @@ class TopMountainsScreen extends StatelessWidget {
                         Row(children: [
                           Icon(Icons.terrain_rounded, size: 14, color: _kTheme),
                           const SizedBox(width: 5),
-                          Text(tr('Highest Mountains'),
-                              style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _kTheme, letterSpacing: 0.3)),
+                          Flexible(child: Text(tr('Highest Mountains'), maxLines: 1, overflow: TextOverflow.ellipsis,
+                              style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _kTheme, letterSpacing: 0.3))),
                         ]),
                         const SizedBox(height: 6),
-                        RichText(text:  TextSpan(children: [
+                        FittedBox(fit: BoxFit.scaleDown, alignment: Alignment.centerLeft, child: RichText(maxLines: 1, text:  TextSpan(children: [
                           TextSpan(text: tr('Top '), style: TextStyle(fontSize: 26, fontWeight: FontWeight.w900, color: Color(0xFF111827), letterSpacing: -0.8, height: 1.1)),
                           TextSpan(text: tr('10'), style: TextStyle(fontSize: 32, fontWeight: FontWeight.w900, color: _kTheme, letterSpacing: -1.5, height: 1.0)),
                           TextSpan(text: tr(' Peaks'), style: TextStyle(fontSize: 26, fontWeight: FontWeight.w900, color: Color(0xFF111827), letterSpacing: -0.8, height: 1.1)),
-                        ])),
+                        ]))),
                         const SizedBox(height: 4),
-                        Text(tr('8,000+ metre summits'), style: TextStyle(fontSize: 12, color: Colors.grey[500], fontWeight: FontWeight.w500)),
+                        Text(tr('8,000+ metre summits'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12, color: Colors.grey[500], fontWeight: FontWeight.w500)),
                       ],
                     ),
                   ),
@@ -300,19 +301,21 @@ class TopMountainsScreen extends StatelessWidget {
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                   TextButton(onPressed: () => Navigator.pop(sheetContext),
                       child:  Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
+                  MyMatchBadge.landmark(landmark: freshLandmark, onDark: headerTextColor == Colors.white),
                   ElevatedButton(onPressed: () => Navigator.pop(sheetContext),
                       style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
                       child:  Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))),
                 ]),
                 const SizedBox(height: 12),
                 Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Expanded(child: Text(freshLandmark.name,
+                  Expanded(child: Text(freshLandmark.name, maxLines: 2, overflow: TextOverflow.ellipsis,
                       style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 26, color: headerTextColor, letterSpacing: -0.5, height: 1.2))),
                   if (isVisited) const Padding(
                     padding: EdgeInsets.only(left: 8, top: 4),
                     child: Icon(Icons.check_circle, color: headerTextColor, size: 24),
                   ),
                 ]),
+                
                 const SizedBox(height: 10),
                 buildFlags(),
               ]),
@@ -321,24 +324,24 @@ class TopMountainsScreen extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Row(mainAxisSize: MainAxisSize.min, children: [
-                     Text(tr('Wishlist:')),
+                  Flexible(child: Row(mainAxisSize: MainAxisSize.min, children: [
+                     Flexible(child: Text(tr('Wishlist:'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                     IconButton(visualDensity: VisualDensity.compact,
                         icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey),
                         onPressed: () => provider.toggleWishlistStatus(freshLandmark.name)),
-                  ]),
-                  Row(mainAxisSize: MainAxisSize.min, children: [
-                     Text(tr('My Rating:')),
+                  ])),
+                  Flexible(child: Row(mainAxisSize: MainAxisSize.min, children: [
+                     Flexible(child: Text(tr('My Rating:'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                     const SizedBox(width: 8),
                     RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0,
                         itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber),
                         onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating)),
-                  ]),
+                  ])),
                 ]),
                 const Divider(height: 20),
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text(tr('History (${freshLandmark.visitDates.length} entries)'), style: Theme.of(sheetContext).textTheme.titleSmall),
-                  OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit')), onPressed: () => provider.addVisitDate(freshLandmark.name)),
+                  Flexible(child: Text(tr('History (${freshLandmark.visitDates.length} entries)'), maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(sheetContext).textTheme.titleSmall)),
+                  OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit'), maxLines: 1, overflow: TextOverflow.ellipsis), onPressed: () => provider.addVisitDate(freshLandmark.name)),
                 ]),
                 const SizedBox(height: 8),
                 if (freshLandmark.visitDates.isNotEmpty)
@@ -452,6 +455,8 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
       child: ExpansionTile(
         title: Text(
           tr(widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record'),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
         ),
         subtitle: GestureDetector(
@@ -489,7 +494,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
               // 날짜 변경 버튼
               OutlinedButton.icon(
                 icon: const Icon(Icons.edit_calendar, size: 16),
-                label: Text(tr('Change Date  ($_year-$_month-$_day)')),
+                label: Text(tr('Change Date  ($_year-$_month-$_day)'), maxLines: 1, overflow: TextOverflow.ellipsis),
                 onPressed: () => _selectDate(context),
                 style: OutlinedButton.styleFrom(
                   foregroundColor: _kTheme,

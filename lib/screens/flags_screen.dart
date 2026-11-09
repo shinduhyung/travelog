@@ -27,7 +27,7 @@ class _FlagsScreenState extends State<FlagsScreen> {
     Localizations.maybeLocaleOf(context);
     return Scaffold(
       appBar: AppBar(
-        title:  Text(tr('Visited Flags')),
+        title:  Text(tr('Visited Flags'), maxLines: 1, overflow: TextOverflow.ellipsis),
         actions: [
           // 그룹핑 옵션 메뉴 버튼
           PopupMenuButton<GroupOption>(
@@ -198,6 +198,7 @@ class _FlagsScreenState extends State<FlagsScreen> {
             child: Text(
               tr(country.name),
               textAlign: TextAlign.center,
+              maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: const TextStyle(fontSize: 12),
             ),

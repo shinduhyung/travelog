@@ -18,6 +18,7 @@ import 'common.dart';
 import 'compare/compare_screen.dart';
 import 'new_duel_sheet.dart';
 import '../social_hub.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 
 /// 나든 친구든 같은 프로필 화면. 나일 때만 이름 변경/동기화/로그아웃/공개 범위.
 class ProfileScreen extends StatelessWidget {
@@ -25,16 +26,30 @@ class ProfileScreen extends StatelessWidget {
 
   final String uid;
 
-  Future<void> _editName(BuildContext context, String uid, String current) async {
+  Future<void> _editName(
+    BuildContext context,
+    String uid,
+    String current,
+  ) async {
     final controller = TextEditingController(text: current);
     final name = await showDialog<String>(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Name shown to friends'),
-        content: TextField(controller: controller, autofocus: true, maxLength: 20),
+        title: Text(tr('Name shown to friends')),
+        content: TextField(
+          controller: controller,
+          autofocus: true,
+          maxLength: 20,
+        ),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(context), child: const Text('Cancel')),
-          FilledButton(onPressed: () => Navigator.pop(context, controller.text), child: const Text('Save')),
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text(tr('Cancel')),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.pop(context, controller.text),
+            child: Text(tr('Save')),
+          ),
         ],
       ),
     );
@@ -56,24 +71,34 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          isSelf ? 'My profile' : (p?.displayName ?? 'Profile'),
+          isSelf ? tr('My profile') : (p?.displayName ?? tr('Profile')),
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
         ),
         actions: [
           if (isSelf) ...[
             IconButton(
-              tooltip: 'Change name',
-              onPressed: p == null ? null : () => _editName(context, store.uid, p.displayName),
+              tooltip: tr('Change name'),
+              onPressed: p == null
+                  ? null
+                  : () => _editName(context, store.uid, p.displayName),
               icon: const Icon(Icons.edit_outlined),
             ),
             if (store.syncing)
               const Padding(
                 padding: EdgeInsets.all(14),
-                child: SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2)),
+                child: SizedBox(
+                  width: 18,
+                  height: 18,
+                  child: CircularProgressIndicator(strokeWidth: 2),
+                ),
               )
             else
-              IconButton(tooltip: 'Sync from Travelog', onPressed: store.sync, icon: const Icon(Icons.sync)),
+              IconButton(
+                tooltip: tr('Sync from Travelog'),
+                onPressed: store.sync,
+                icon: const Icon(Icons.sync),
+              ),
           ],
         ],
       ),
@@ -84,8 +109,14 @@ class ProfileScreen extends StatelessWidget {
                 child: store.syncing || (!isSelf && !store.friendLoaded(uid))
                     ? const CircularProgressIndicator()
                     : isSelf
-                        ? FilledButton(onPressed: store.sync, child: const Text('Import Travelog records'))
-                        : const EmptyHint('This profile is not available yet.', emoji: '🫥'),
+                    ? FilledButton(
+                        onPressed: store.sync,
+                        child: Text(tr('Import Travelog records')),
+                      )
+                    : EmptyHint(
+                        tr('This profile is not available yet.'),
+                        emoji: '🫥',
+                      ),
               ),
             )
           : ListView(
@@ -111,15 +142,25 @@ class ProfileScreen extends StatelessWidget {
                   if (store.syncError != null)
                     Padding(
                       padding: const EdgeInsets.only(top: 8),
-                      child: Text('Sync failed: ${store.syncError}',
-                          maxLines: 3, overflow: TextOverflow.ellipsis, style: TextStyle(color: theme.colorScheme.error)),
+                      child: Text(
+                        tr('Sync failed: ${store.syncError}'),
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(color: theme.colorScheme.error),
+                      ),
                     ),
                   if (p.updatedAt != null)
                     Padding(
                       padding: const EdgeInsets.only(top: 8),
-                      child: Text('Last synced: ${p.updatedAt!.toLocal().toString().substring(0, 16)}',
-                          textAlign: TextAlign.center,
-                          style: theme.textTheme.bodySmall?.copyWith(color: AppColors.label)),
+                      child: Text(
+                        tr(
+                          'Last synced: ${p.updatedAt!.toLocal().toString().substring(0, 16)}',
+                        ),
+                        textAlign: TextAlign.center,
+                        style: theme.textTheme.bodySmall?.copyWith(
+                          color: AppColors.label,
+                        ),
+                      ),
                     ),
                 ],
               ],
@@ -160,7 +201,9 @@ class _Header extends StatelessWidget {
                       p.displayName,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
-                      style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w900),
+                      style: theme.textTheme.titleLarge?.copyWith(
+                        fontWeight: FontWeight.w900,
+                      ),
                     ),
                     if (p.isPremium) ...[
                       const SizedBox(height: 2),
@@ -169,28 +212,52 @@ class _Header extends StatelessWidget {
                     const SizedBox(height: 6),
                     Row(
                       children: [
-                        if (home != null) ...[Flag(home.iso2, width: 20, radius: 2), const SizedBox(width: 6)],
+                        if (home != null) ...[
+                          Flag(home.iso2, width: 20, radius: 2),
+                          const SizedBox(width: 6),
+                        ],
                         Expanded(
                           child: Text(
-                            home?.longName ?? 'No home country',
+                            home?.longName ?? tr('No home country'),
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
-                            style: theme.textTheme.labelMedium?.copyWith(color: AppColors.label, fontWeight: FontWeight.w600),
+                            style: theme.textTheme.labelMedium?.copyWith(
+                              color: AppColors.label,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
                       ],
                     ),
+                    if (p.travelerType != null) ...[
+                      const SizedBox(height: 6),
+                      Text(
+                        tr(p.travelerType!),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: theme.textTheme.labelMedium?.copyWith(
+                          color: AppColors.darkMint,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                    ],
                     if (rank != null) ...[
                       const SizedBox(height: 6),
                       Row(
                         children: [
-                          if (rankImage != null) ...[Image.asset(rankImage, width: 26, height: 26), const SizedBox(width: 6)],
+                          if (rankImage != null) ...[
+                            Image.asset(rankImage, width: 26, height: 26),
+                            const SizedBox(width: 6),
+                          ],
                           Expanded(
                             child: Text(
                               rankLabel[rank] ?? rank,
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
-                              style: theme.textTheme.labelLarge?.copyWith(fontWeight: FontWeight.w800, color: AppColors.darkMint),
+                              style: theme.textTheme.labelLarge?.copyWith(
+                                fontWeight: FontWeight.w800,
+                                color: AppColors.darkMint,
+                              ),
                             ),
                           ),
                         ],
@@ -213,35 +280,50 @@ class _Header extends StatelessWidget {
           ),
           const SizedBox(height: 6),
           Text(
-            '${(stats.worldPercent * 100).toStringAsFixed(1)}% of the world · '
-            '${stats.continentCount} continents',
+            tr(
+              '${(stats.worldPercent * 100).toStringAsFixed(1)}% of the world · '
+              '${stats.continentCount} continents',
+            ),
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
-            style: theme.textTheme.labelMedium?.copyWith(color: AppColors.label, fontWeight: FontWeight.w600),
+            style: theme.textTheme.labelMedium?.copyWith(
+              color: AppColors.label,
+              fontWeight: FontWeight.w600,
+            ),
           ),
           if (!isSelf) ...[
             const SizedBox(height: 14),
-            Row(children: [
-              Expanded(
-                child: FilledButton.icon(
-                  onPressed: () => Navigator.push(
-                    context,
-                    socialRoute<void>((_) => CompareScreen(friendUid: p.uid)),
+            Row(
+              children: [
+                Expanded(
+                  child: FilledButton.icon(
+                    onPressed: () => Navigator.push(
+                      context,
+                      socialRoute<void>((_) => CompareScreen(friendUid: p.uid)),
+                    ),
+                    icon: const Icon(Icons.compare_arrows, size: 18),
+                    label: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(tr('Compare')),
+                    ),
                   ),
-                  icon: const Icon(Icons.compare_arrows, size: 18),
-                  label: const FittedBox(fit: BoxFit.scaleDown, child: Text('Compare')),
                 ),
-              ),
-              const SizedBox(width: 10),
-              Expanded(
-                child: FilledButton.icon(
-                  style: FilledButton.styleFrom(backgroundColor: AppColors.indigo),
-                  onPressed: () => startDuelFlow(context, p),
-                  icon: const Icon(Icons.sports_esports, size: 18),
-                  label: const FittedBox(fit: BoxFit.scaleDown, child: Text('Duel')),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: FilledButton.icon(
+                    style: FilledButton.styleFrom(
+                      backgroundColor: AppColors.indigo,
+                    ),
+                    onPressed: () => startDuelFlow(context, p),
+                    icon: const Icon(Icons.sports_esports, size: 18),
+                    label: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(tr('Duel')),
+                    ),
+                  ),
                 ),
-              ),
-            ]),
+              ],
+            ),
           ],
         ],
       ),
@@ -260,7 +342,8 @@ class _Stats extends StatelessWidget {
     final s = ProfileStats(p);
     final theme = Theme.of(context);
 
-    VoidCallback open(ListCategory c) => () => Navigator.push(
+    VoidCallback open(ListCategory c) =>
+        () => Navigator.push(
           context,
           socialRoute<void>((_) => CategoryListScreen(uid: p.uid, category: c)),
         );
@@ -268,51 +351,90 @@ class _Stats extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        StatGrid(tiles: [
-          StatTile(emoji: '🌍', value: '${p.countryCount}', label: 'Countries', onTap: open(ListCategory.countries)),
-          StatTile(emoji: '🏙️', value: compactNumber(p.cityCount), label: 'Cities', onTap: open(ListCategory.cities)),
-          StatTile(emoji: '🗼', value: compactNumber(p.landmarkCount), label: 'Landmarks', onTap: open(ListCategory.landmarks)),
-          StatTile(
-              emoji: '🏛️', value: '${p.unescoCount}', label: 'UNESCO', color: const Color(0xFF8B5CF6), onTap: open(ListCategory.unesco)),
-          StatTile(
+        StatGrid(
+          tiles: [
+            StatTile(
+              emoji: '🌍',
+              value: '${p.countryCount}',
+              label: tr('Countries'),
+              onTap: open(ListCategory.countries),
+            ),
+            StatTile(
+              emoji: '🏙️',
+              value: compactNumber(p.cityCount),
+              label: tr('Cities'),
+              onTap: open(ListCategory.cities),
+            ),
+            StatTile(
+              emoji: '🗼',
+              value: compactNumber(p.landmarkCount),
+              label: tr('Landmarks'),
+              onTap: open(ListCategory.landmarks),
+            ),
+            StatTile(
+              emoji: '🏛️',
+              value: '${p.unescoCount}',
+              label: tr('UNESCO'),
+              color: const Color(0xFF8B5CF6),
+              onTap: open(ListCategory.unesco),
+            ),
+            StatTile(
               emoji: '✈️',
               value: compactNumber(p.flights.total),
-              label: 'Flights',
+              label: tr('Flights'),
               color: const Color(0xFF0EA5E9),
-              onTap: open(ListCategory.flights)),
-          StatTile(
+              onTap: open(ListCategory.flights),
+            ),
+            StatTile(
               emoji: '🛬',
               value: '${p.airportCount}',
-              label: 'Airports',
+              label: tr('Airports'),
               color: const Color(0xFF0EA5E9),
-              onTap: open(ListCategory.airports)),
-          StatTile(
+              onTap: open(ListCategory.airports),
+            ),
+            StatTile(
               emoji: '⭐',
               value: '${s.capitalCount}',
-              label: 'Capitals',
+              label: tr('Capitals'),
               color: const Color(0xFFF97316),
-              onTap: open(ListCategory.capitals)),
-          StatTile(
-              emoji: '📏', value: '${compactNumber(s.totalFlightKm.round())} km', label: 'Distance', color: const Color(0xFF0EA5E9)),
-          StatTile(
+              onTap: open(ListCategory.capitals),
+            ),
+            StatTile(
+              emoji: '📏',
+              value: '${compactNumber(s.totalFlightKm.round())} km',
+              label: tr('Distance'),
+              color: const Color(0xFF0EA5E9),
+            ),
+            StatTile(
               emoji: '🎖️',
               value: '${p.badgeCount}',
-              label: 'Badges',
+              label: tr('Badges'),
               color: AppColors.gold,
-              onTap: () => Navigator.push(context, socialRoute<void>((_) => BadgesScreen(uid: p.uid)))),
-        ]),
+              onTap: () => Navigator.push(
+                context,
+                socialRoute<void>((_) => BadgesScreen(uid: p.uid)),
+              ),
+            ),
+          ],
+        ),
         const SizedBox(height: 8),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(Icons.touch_app_outlined, size: 14, color: AppColors.label),
+            const Icon(
+              Icons.touch_app_outlined,
+              size: 14,
+              color: AppColors.label,
+            ),
             const SizedBox(width: 4),
             Flexible(
               child: Text(
-                'Tap a number to see the list',
+                tr('Tap a number to see the list'),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
-                style: theme.textTheme.labelSmall?.copyWith(color: AppColors.label),
+                style: theme.textTheme.labelSmall?.copyWith(
+                  color: AppColors.label,
+                ),
               ),
             ),
           ],
@@ -341,34 +463,61 @@ class _Timeline extends StatelessWidget {
     final theme = Theme.of(context);
     return SectionCard(
       emoji: '📅',
-      title: 'Travel timeline',
-      subtitle: 'By year of first visit',
-      child: Column(children: [
-        TimelineChart(mine: s.cumulativeCountries(), theirs: const {}, height: 170),
-        const SizedBox(height: 12),
-        for (final y in years.take(12))
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 6),
-            child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              SizedBox(
-                width: 54,
-                child: FittedBox(
-                  fit: BoxFit.scaleDown,
-                  alignment: Alignment.centerLeft,
-                  child: Text('$y', style: theme.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w900, color: AppColors.me)),
-                ),
-              ),
-              Expanded(
-                child: Wrap(spacing: 4, runSpacing: 4, children: [
-                  for (final c in byYear[y]!)
-                    Tooltip(message: GeoData.I.countryByName(c)?.longName ?? c, child: Flag.ofCountry(c, width: 26, radius: 3)),
-                ]),
-              ),
-              const SizedBox(width: 6),
-              Text('+${byYear[y]!.length}', style: theme.textTheme.labelMedium?.copyWith(color: AppColors.label)),
-            ]),
+      title: tr('Travel timeline'),
+      subtitle: tr('By year of first visit'),
+      child: Column(
+        children: [
+          TimelineChart(
+            mine: s.cumulativeCountries(),
+            theirs: const {},
+            height: 170,
           ),
-      ]),
+          const SizedBox(height: 12),
+          for (final y in years.take(12))
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 6),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    width: 54,
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        '$y',
+                        style: theme.textTheme.titleSmall?.copyWith(
+                          fontWeight: FontWeight.w900,
+                          color: AppColors.me,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Wrap(
+                      spacing: 4,
+                      runSpacing: 4,
+                      children: [
+                        for (final c in byYear[y]!)
+                          Tooltip(
+                            message: GeoData.I.countryByName(c)?.longName ?? c,
+                            child: Flag.ofCountry(c, width: 26, radius: 3),
+                          ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(width: 6),
+                  Text(
+                    '+${byYear[y]!.length}',
+                    style: theme.textTheme.labelMedium?.copyWith(
+                      color: AppColors.label,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+        ],
+      ),
     );
   }
 }
@@ -390,25 +539,51 @@ class _Privacy extends StatelessWidget {
       }
     }
 
-    Widget sw(String title, String subtitle, bool value, ValueChanged<bool> onChanged) => SwitchListTile(
-          contentPadding: EdgeInsets.zero,
-          title: Text(title, maxLines: 2, overflow: TextOverflow.ellipsis),
-          subtitle: Text(subtitle, maxLines: 3, overflow: TextOverflow.ellipsis),
-          value: value,
-          onChanged: store.syncing ? null : onChanged,
-        );
+    Widget sw(
+      String title,
+      String subtitle,
+      bool value,
+      ValueChanged<bool> onChanged,
+    ) => SwitchListTile(
+      contentPadding: EdgeInsets.zero,
+      title: Text(title, maxLines: 2, overflow: TextOverflow.ellipsis),
+      subtitle: Text(subtitle, maxLines: 3, overflow: TextOverflow.ellipsis),
+      value: value,
+      onChanged: store.syncing ? null : onChanged,
+    );
 
     return SectionCard(
       emoji: '🔒',
-      title: 'Privacy',
-      subtitle: 'Countries & landmarks are always shared',
-      child: Column(children: [
-        sw('🏙️ City records', 'Visited cities, city ratings, home city', pr.cities, (v) => set(pr.copyWith(cities: v))),
-        sw('✈️ Flight records', 'Flight count, routes, airlines, airports', pr.flights, (v) => set(pr.copyWith(flights: v))),
-        sw('🧬 Travel DNA', 'Scores for 8 travel traits', pr.dna, (v) => set(pr.copyWith(dna: v))),
-        sw('💭 Wishlist', 'Countries, cities, and landmarks you want to visit', pr.wishlist,
-            (v) => set(pr.copyWith(wishlist: v))),
-      ]),
+      title: tr('Privacy'),
+      subtitle: tr('Countries & landmarks are always shared'),
+      child: Column(
+        children: [
+          sw(
+            tr('🏙️ City records'),
+            tr('Visited cities, city ratings, home city'),
+            pr.cities,
+            (v) => set(pr.copyWith(cities: v)),
+          ),
+          sw(
+            tr('✈️ Flight records'),
+            tr('Flight count, routes, airlines, airports'),
+            pr.flights,
+            (v) => set(pr.copyWith(flights: v)),
+          ),
+          sw(
+            tr('🧬 Travel DNA'),
+            tr('Scores for 8 travel traits'),
+            pr.dna,
+            (v) => set(pr.copyWith(dna: v)),
+          ),
+          sw(
+            tr('💭 Wishlist'),
+            tr('Countries, cities, and landmarks you want to visit'),
+            pr.wishlist,
+            (v) => set(pr.copyWith(wishlist: v)),
+          ),
+        ],
+      ),
     );
   }
 }

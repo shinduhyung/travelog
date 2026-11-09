@@ -427,7 +427,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Icon(Icons.add_a_photo, color: Colors.blue),
-                                  Text(tr('Add Photo'), style: TextStyle(fontSize: 10)),
+                                  Text(tr('Add Photo'), maxLines: 2, overflow: TextOverflow.ellipsis, textAlign: TextAlign.center, style: TextStyle(fontSize: 10)),
                                 ],
                               ),
                             ),
@@ -479,6 +479,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
   Widget _buildDropdown<T>(
       String hint, T? value, List<T?> items, ValueChanged<T?> onChanged) {
     return DropdownButtonFormField<T>(
+      isExpanded: true,
       value: value,
       isDense: true,
       decoration: InputDecoration(
@@ -495,6 +496,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
             fontSize: (item == null) ? 11.0 : 15.0,
             color: (item == null) ? Colors.grey.shade600 : null,
           ),
+          maxLines: 1,
           overflow: TextOverflow.ellipsis,
         ),
       ))
@@ -523,7 +525,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-             Text(tr('Visit Date'), style: TextStyle(fontWeight: FontWeight.bold)),
+             Flexible(child: Text(tr('Visit Date'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontWeight: FontWeight.bold))),
             IconButton(
               visualDensity: VisualDensity.compact,
               icon: const Icon(Icons.clear, size: 20),
@@ -614,7 +616,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                 children: [
                   const Icon(Icons.star, color: Colors.amber),
                   const SizedBox(width: 8),
-                   Text(tr('My Hub')),
+                   Flexible(child: Text(tr('My Hub'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                   Checkbox(
                     value: isHub,
                     onChanged: (bool? value) async {
@@ -667,7 +669,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                 children: [
                   const Icon(Icons.favorite, color: Colors.red),
                   const SizedBox(width: 8),
-                   Text(tr('Favorite')),
+                   Flexible(child: Text(tr('Favorite'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                   Checkbox(
                     value: isFavorite,
                     onChanged: (bool? value) {
@@ -681,7 +683,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                 children: [
                   Icon(Icons.wine_bar, color: _wineColor),
                   const SizedBox(width: 8),
-                  Text(tr('Business Lounge: $loungeVisitCount Visits')),
+                  Flexible(child: Text(tr('Business Lounge: $loungeVisitCount Visits'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                 ],
               ),
               if (loungeVisitCount > 0)
@@ -689,7 +691,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                   padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 4.0, bottom: 8.0),
                   child: Row(
                     children: [
-                      Text(tr('Average Rating: '), style: Theme.of(context).textTheme.bodySmall),
+                      Flexible(child: Text(tr('Average Rating: '), maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(context).textTheme.bodySmall)),
                       Icon(Icons.wine_bar, color: _wineColor, size: 20),
                       Text(
                         tr(' (${averageLoungeRating.toStringAsFixed(1)})'),
@@ -705,7 +707,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(tr('My Rating'), style: Theme.of(context).textTheme.titleSmall),
+              Flexible(child: Text(tr('My Rating'), maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(context).textTheme.titleSmall)),
               IconButton(
                 icon: const Icon(Icons.note_alt_outlined, color: Colors.grey),
                 onPressed: () => _showMemoAndPhotoDialog(context, airport.iataCode),
@@ -735,9 +737,13 @@ class _AirportsScreenState extends State<AirportsScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                tr('History (${uses.length} uses)'),
-                style: Theme.of(context).textTheme.titleSmall,
+              Flexible(
+                child: Text(
+                  tr('History (${uses.length} uses)'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: Theme.of(context).textTheme.titleSmall,
+                ),
               ),
               OutlinedButton.icon(
                 icon: const Icon(Icons.add),
@@ -780,21 +786,27 @@ class _AirportsScreenState extends State<AirportsScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Row(
-                            children: [
-                              Text(
-                                tr('#${index + 1}: '),
-                                style: const TextStyle(fontWeight: FontWeight.bold),
-                              ),
-                              Text(
-                                tr(dateText),
-                                style: const TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 14,
-                                    color: Colors.black
+                          Expanded(
+                            child: Row(
+                              children: [
+                                Text(
+                                  tr('#${index + 1}: '),
+                                  style: const TextStyle(fontWeight: FontWeight.bold),
                                 ),
-                              ),
-                            ],
+                                Flexible(
+                                  child: Text(
+                                    tr(dateText),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: const TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 14,
+                                        color: Colors.black
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                           Row(
                             mainAxisSize: MainAxisSize.min,
@@ -830,7 +842,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                     scale: 0.8,
                                     alignment: Alignment.centerLeft,
                                     child: CheckboxListTile(
-                                      title:  Text(tr('Transfer'), style: TextStyle(fontSize: 11)),
+                                      title:  Text(tr('Transfer'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 11)),
                                       controlAffinity: ListTileControlAffinity.leading,
                                       contentPadding: EdgeInsets.zero,
                                       dense: true,
@@ -847,7 +859,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                     scale: 0.8,
                                     alignment: Alignment.centerLeft,
                                     child: CheckboxListTile(
-                                      title:  Text(tr('Layover'), style: TextStyle(fontSize: 11)),
+                                      title:  Text(tr('Layover'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 11)),
                                       controlAffinity: ListTileControlAffinity.leading,
                                       contentPadding: EdgeInsets.zero,
                                       dense: true,
@@ -864,7 +876,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                     scale: 0.8,
                                     alignment: Alignment.centerLeft,
                                     child: CheckboxListTile(
-                                      title:  Text(tr('Stopover'), style: TextStyle(fontSize: 11)),
+                                      title:  Text(tr('Stopover'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 11)),
                                       controlAffinity: ListTileControlAffinity.leading,
                                       contentPadding: EdgeInsets.zero,
                                       dense: true,
@@ -888,7 +900,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                     scale: 0.9,
                                     alignment: Alignment.centerLeft,
                                     child: CheckboxListTile(
-                                      title:  Text(tr('Lounge Use'), style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
+                                      title:  Text(tr('Lounge Use'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
                                       secondary: Icon(Icons.wine_bar, color: _wineColor, size: 16),
                                       controlAffinity: ListTileControlAffinity.leading,
                                       contentPadding: EdgeInsets.zero,
@@ -1055,20 +1067,24 @@ class _AirportsScreenState extends State<AirportsScreen> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            TextButton(
-                              onPressed: () {
-                                Navigator.pop(sheetContext);
-                              },
-                              child:  Text(tr('Cancel'), style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+                            Flexible(
+                              child: TextButton(
+                                onPressed: () {
+                                  Navigator.pop(sheetContext);
+                                },
+                                child:  Text(tr('Cancel'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+                              ),
                             ),
-                            ElevatedButton(
-                              onPressed: () {
-                                Navigator.pop(sheetContext);
-                              },
-                              child:  Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.bold)),
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.white,
-                                foregroundColor: Colors.blue.shade800,
+                            Flexible(
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  Navigator.pop(sheetContext);
+                                },
+                                child:  Text(tr('Done'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontWeight: FontWeight.bold)),
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.white,
+                                  foregroundColor: Colors.blue.shade800,
+                                ),
                               ),
                             ),
                           ],
@@ -1240,12 +1256,16 @@ class _AirportsScreenState extends State<AirportsScreen> {
                               if (isUsed) ...[
                                 Icon(Icons.flight_takeoff, size: 12, color: Colors.grey.shade500),
                                 const SizedBox(width: 4),
-                                Text(
-                                  tr('$useCount ${useCount == 1 ? 'use' : 'uses'}'),
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.grey.shade600,
-                                    fontWeight: FontWeight.w500,
+                                Flexible(
+                                  child: Text(
+                                    tr('$useCount ${useCount == 1 ? 'use' : 'uses'}'),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.grey.shade600,
+                                      fontWeight: FontWeight.w500,
+                                    ),
                                   ),
                                 ),
                                 if (rating > 0) ...[
@@ -1262,9 +1282,13 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                   ),
                                 ],
                               ] else
-                                Text(
-                                  tr('Not visited'),
-                                  style: TextStyle(fontSize: 12, color: Colors.grey.shade400),
+                                Flexible(
+                                  child: Text(
+                                    tr('Not visited'),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(fontSize: 12, color: Colors.grey.shade400),
+                                  ),
                                 ),
                             ],
                           ),
@@ -1433,6 +1457,8 @@ class _AirportsScreenState extends State<AirportsScreen> {
                   centerTitle: false,
                   title:  Text(
                     tr('Airports'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.black87,
@@ -1516,6 +1542,8 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                     children: [
                                        Text(
                                         tr('View Statistics'),
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
                                         style: TextStyle(
                                           color: Colors.white,
                                           fontSize: 20,
@@ -1525,6 +1553,8 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                       const SizedBox(height: 4),
                                       Text(
                                         tr('Explore your airport data'),
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
                                         style: TextStyle(
                                           color: Colors.white.withOpacity(0.9),
                                           fontSize: 13,
@@ -1631,7 +1661,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                   children: [
                                     Icon(Icons.sort_by_alpha, size: 20, color: Colors.grey),
                                     SizedBox(width: 10),
-                                    Text(tr('A-Z')),
+                                    Flexible(child: Text(tr('A-Z'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                                   ],
                                 ),
                               ),
@@ -1641,7 +1671,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                   children: [
                                     Icon(Icons.trending_up, size: 20, color: Colors.blue),
                                     SizedBox(width: 10),
-                                    Text(tr('Most Uses')),
+                                    Flexible(child: Text(tr('Most Uses'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                                   ],
                                 ),
                               ),
@@ -1651,7 +1681,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                   children: [
                                     Icon(Icons.schedule, size: 20, color: Colors.grey),
                                     SizedBox(width: 10),
-                                    Text(tr('Recent Visit')),
+                                    Flexible(child: Text(tr('Recent Visit'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                                   ],
                                 ),
                               ),
@@ -1661,7 +1691,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                   children: [
                                     Icon(Icons.star, size: 20, color: Colors.amber),
                                     SizedBox(width: 10),
-                                    Text(tr('Top Rated')),
+                                    Flexible(child: Text(tr('Top Rated'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                                   ],
                                 ),
                               ),
@@ -1671,7 +1701,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                   children: [
                                     Icon(Icons.home, size: 20, color: Colors.black),
                                     SizedBox(width: 10),
-                                    Text(tr('My Hubs Only')),
+                                    Flexible(child: Text(tr('My Hubs Only'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                                   ],
                                 ),
                               ),
@@ -1681,7 +1711,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                   children: [
                                     Icon(Icons.favorite, size: 20, color: Colors.red),
                                     SizedBox(width: 10),
-                                    Text(tr('Favorites Only')),
+                                    Flexible(child: Text(tr('Favorites Only'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                                   ],
                                 ),
                               ),

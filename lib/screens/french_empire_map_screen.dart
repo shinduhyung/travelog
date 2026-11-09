@@ -193,7 +193,7 @@ class _FrenchEmpireMapScreenState extends State<FrenchEmpireMapScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title:  Text(tr('French Empire (1920)'), style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
+        title:  Text(tr('French Empire (1920)'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
         backgroundColor: Colors.white,
         elevation: 0,
         iconTheme: const IconThemeData(color: Colors.black),

@@ -5,6 +5,7 @@
 raw/<stem>.jpg -> webp/<stem>.webp (1024x1024, quality 90) -> gs://.../new_countrydex/<stem>.webp with
 `gcloud storage cp --no-clobber`, the same command and bucket as tool/city_travel/images/publish_images.py.
 """
+import os
 import json
 import subprocess
 import sys
@@ -16,11 +17,12 @@ HERE = Path(__file__).resolve().parent
 BUCKET = "gs://proboscis-2025.firebasestorage.app/new_countrydex/"
 WEBP = HERE / "webp"
 WEBP.mkdir(exist_ok=True)
+PRE = {"paint": "paint_", "miss": "miss_"}.get(os.environ.get("LEO_SET"), "")  # other sets read their own qa.json
 DONE = HERE / "uploaded.json"
 
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
-    qa = json.loads((HERE / "qa.json").read_text(encoding="utf-8"))
+    qa = json.loads((HERE / f"{PRE}qa.json").read_text(encoding="utf-8"))
     done = json.loads(DONE.read_text(encoding="utf-8")) if DONE.exists() else {}
     todo = [f for f, d in qa.items() if d.get("pass") and f not in done]
     files = []

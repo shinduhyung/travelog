@@ -312,11 +312,15 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                                         ),
                                       ),
                                       const SizedBox(height: 4),
-                                       Text(
-                                        tr('My Trips'),
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 12,
+                                      FittedBox(
+                                        fit: BoxFit.scaleDown,
+                                        child: Text(
+                                          tr('My Trips'),
+                                          maxLines: 1,
+                                          style: const TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 12,
+                                          ),
                                         ),
                                       ),
                                     ],
@@ -356,8 +360,12 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                                         MainAxisAlignment.center,
                                         children: [
                                           Icon(Icons.emoji_events, size: 20),
-                                          Text(tr('Badges'),
-                                              style: TextStyle(fontSize: 10)),
+                                          FittedBox(
+                                            fit: BoxFit.scaleDown,
+                                            child: Text(tr('Badges'),
+                                                maxLines: 1,
+                                                style: const TextStyle(fontSize: 10)),
+                                          ),
                                         ],
                                       ),
                                     ),
@@ -388,8 +396,12 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                                         MainAxisAlignment.center,
                                         children: [
                                           Icon(Icons.settings, size: 20),
-                                          Text(tr('Set'),
-                                              style: TextStyle(fontSize: 10)),
+                                          FittedBox(
+                                            fit: BoxFit.scaleDown,
+                                            child: Text(tr('Set'),
+                                                maxLines: 1,
+                                                style: const TextStyle(fontSize: 10)),
+                                          ),
                                         ],
                                       ),
                                     ),

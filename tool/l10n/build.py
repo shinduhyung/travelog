@@ -187,13 +187,26 @@ def hash_code(text):
 
 
 def code_strings():
-    """Literal tr('...') strings in lib/, mapped to the file they appear in."""
+    """tr('...') strings in lib/, mapped to the file they appear in.
+
+    Interpolations ($name, ${expr}) become numbered slots ({0}, {1}) like the
+    catalog entries the app matches at runtime."""
     found = {}
     for path in (ROOT / 'lib').rglob('*.dart'):
-        for match in re.finditer(r"\btr\(\s*'((?:[^'\\$]|\\.)*)'\s*[,)]", path.read_text(encoding='utf-8')):
-            text = match[1].replace("\\'", "'").replace('\\n', '\n')
+        for match in re.finditer(r"\btr\(\s*'((?:[^'\\]|\\.)*)'\s*[,)]", path.read_text(encoding='utf-8')):
+            slots = iter(range(1000))
+            text = re.sub(
+                r"\\\$|\$\{[^{}]*\}|\$[A-Za-z_]\w*",
+                lambda m: '$' if m[0] == '\\$' else '{%d}' % next(slots),
+                match[1],
+            )
+            text = text.replace("\\'", "'").replace('\\n', '\n')
             if len(re.findall('[A-Za-z]', text)) > 3:
                 found.setdefault(text, path.name)
+    # English display text that lives in data (quiz questions, descriptions)
+    # and reaches tr() through a variable cannot be found by scanning calls.
+    for text in load_json(SOURCES / 'extra_sources.json', []):
+        found.setdefault(text, 'extra_sources.json')
     return found
 
 

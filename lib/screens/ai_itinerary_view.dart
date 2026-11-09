@@ -312,7 +312,7 @@ class _AiItineraryViewState extends State<AiItineraryView> {
       appBar: AppBar(
         backgroundColor: orange,
         foregroundColor: Colors.white,
-        title: Text(tr(widget.title), style: const TextStyle(fontWeight: FontWeight.bold)), // title 사용
+        title: Text(tr(widget.title), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.bold)), // title 사용
         // ... (나머지 AppBar 및 Body 코드는 이전과 동일)
         actions: [
           // 복사 버튼 등 기존 코드 유지
@@ -354,9 +354,9 @@ class _AiItineraryViewState extends State<AiItineraryView> {
           Expanded(
             child: Column(
               children: [
-                Text(tr(_dailyPages[_currentPage].date), style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
+                Text(tr(_dailyPages[_currentPage].date), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
                 if (_dailyPages[_currentPage].dayName.isNotEmpty)
-                  Text(tr(_dailyPages[_currentPage].dayName), style: TextStyle(color: Colors.white.withOpacity(0.9), fontSize: 14)),
+                  Text(tr(_dailyPages[_currentPage].dayName), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: Colors.white.withOpacity(0.9), fontSize: 14)),
               ],
             ),
           ),

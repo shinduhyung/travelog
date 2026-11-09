@@ -208,6 +208,8 @@ class _ReligionStatsScreenState extends State<ReligionStatsScreen> {
                 icon: const Icon(Icons.public, color: Colors.white, size: 20),
                 label:  Text(
                   tr('World Religions Map'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
@@ -229,9 +231,13 @@ class _ReligionStatsScreenState extends State<ReligionStatsScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                 Text(
-                  tr('Show Denominations'),
-                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                Flexible(
+                  child: Text(
+                    tr('Show Denominations'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                  ),
                 ),
                 Switch(
                   value: _showDenominations,
@@ -360,6 +366,7 @@ class _ReligionTile extends StatelessWidget {
                         Expanded(
                           child: Text(
                             tr(title),
+                            maxLines: 1,
                             style: theme.textTheme.titleMedium?.copyWith(
                               fontWeight: isExpanded ? FontWeight.w900 : FontWeight.bold,
                               fontSize: 16,
@@ -395,11 +402,15 @@ class _ReligionTile extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(width: 12),
-                        Text(
-                          tr('$visited / $total Countries'),
-                          style: theme.textTheme.bodyMedium?.copyWith(
-                            color: Colors.grey.shade600,
-                            fontWeight: FontWeight.w500,
+                        Flexible(
+                          child: Text(
+                            tr('$visited / $total Countries'),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: theme.textTheme.bodyMedium?.copyWith(
+                              color: Colors.grey.shade600,
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
                         ),
                         Icon(
@@ -579,7 +590,7 @@ class _ReligionPopulationRankingCardState extends State<_ReligionPopulationRanki
                   children: [
                     Icon(Icons.groups, color: rankingThemeColor),
                     const SizedBox(width: 8),
-                    Text(tr("Religious Populations"), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                    Flexible(child: Text(tr("Religious Populations"), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
                   ],
                 ),
                 const SizedBox(height: 8),
@@ -593,7 +604,7 @@ class _ReligionPopulationRankingCardState extends State<_ReligionPopulationRanki
                       child: Row(children: [
                         Icon(group.icon, color: group.themeColor, size: 20),
                         const SizedBox(width: 12),
-                        Text(tr(group.title), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15)),
+                        Flexible(child: Text(tr(group.title), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15))),
                       ]),
                     )).toList(),
                     onChanged: (newValue) { if (newValue != null) { setState(() { _selectedRanking = newValue; _prepareList(); }); } },
@@ -637,7 +648,7 @@ class _ReligionPopulationRankingCardState extends State<_ReligionPopulationRanki
                               const SizedBox(width: 12),
                               Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 18)), // 국기 추가
                               const SizedBox(width: 8),
-                              Expanded(child: Text(tr(country.name), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15))),
+                              Expanded(child: Text(tr(country.name), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15))),
                               Text(tr(numberFormatter.format(value)), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
@@ -751,7 +762,7 @@ class _CatholicHierarchyRankingCardState extends State<_CatholicHierarchyRanking
                   children: [
                     Icon(Icons.volunteer_activism, color: rankingThemeColor),
                     const SizedBox(width: 8),
-                    Text(tr("Catholic Hierarchy"), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                    Flexible(child: Text(tr("Catholic Hierarchy"), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
                   ],
                 ),
                 const SizedBox(height: 8),
@@ -765,7 +776,7 @@ class _CatholicHierarchyRankingCardState extends State<_CatholicHierarchyRanking
                       child: Row(children: [
                         Icon(group.icon, color: group.themeColor, size: 20),
                         const SizedBox(width: 12),
-                        Text(tr(group.title), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15)),
+                        Flexible(child: Text(tr(group.title), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15))),
                       ]),
                     )).toList(),
                     onChanged: (newValue) { if (newValue != null) { setState(() { _selectedRanking = newValue; _prepareList(); }); } },
@@ -809,7 +820,7 @@ class _CatholicHierarchyRankingCardState extends State<_CatholicHierarchyRanking
                               const SizedBox(width: 12),
                               Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 18)), // 국기 추가
                               const SizedBox(width: 8),
-                              Expanded(child: Text(tr(country.name), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15))),
+                              Expanded(child: Text(tr(country.name), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15))),
                               Text(tr('$value'), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),

@@ -146,13 +146,20 @@ class _TripLogListScreenState extends State<TripLogListScreen> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-           Text(
-            tr('My Trip Logs'),
-            style: TextStyle(
-              fontSize: 32,
-              fontWeight: FontWeight.w900,
-              color: orange,
-              letterSpacing: -1.0,
+          Flexible(
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.centerLeft,
+              child: Text(
+                tr('My Trip Logs'),
+                maxLines: 1,
+                style: TextStyle(
+                  fontSize: 32,
+                  fontWeight: FontWeight.w900,
+                  color: orange,
+                  letterSpacing: -1.0,
+                ),
+              ),
             ),
           ),
           Row(

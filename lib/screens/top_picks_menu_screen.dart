@@ -63,6 +63,8 @@ class TopPicksMenuScreen extends StatelessWidget {
                         const SizedBox(height: 4),
                         Text(
                           tr('Explore the world\'s finest landmarks'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                             fontSize: 15,
                             color: Colors.grey.shade600,
@@ -555,27 +557,33 @@ class TopPicksMenuScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 14),
-                   Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        tr('Global Top Attractions'),
-                        style: TextStyle(
-                          fontSize: 19,
-                          fontWeight: FontWeight.w800,
-                          color: Colors.white,
-                          letterSpacing: -0.5,
+                  Flexible(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          tr('Global Top Attractions'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(
+                            fontSize: 19,
+                            fontWeight: FontWeight.w800,
+                            color: Colors.white,
+                            letterSpacing: -0.5,
+                          ),
                         ),
-                      ),
-                      Text(
-                        tr('World\'s Most Iconic'),
-                        style: TextStyle(
-                          fontSize: 13,
-                          color: Colors.white70,
-                          fontWeight: FontWeight.w500,
+                        Text(
+                          tr('World\'s Most Iconic'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(
+                            fontSize: 13,
+                            color: Colors.white70,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ],
               ),
@@ -774,7 +782,8 @@ class TopPicksMenuScreen extends StatelessWidget {
         );
       },
       child: Container(
-        height: 76,
+        // Taller scripts (Arabic, Thai) need a few more pixels than Latin.
+        constraints: const BoxConstraints(minHeight: 76),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(16),
@@ -808,6 +817,8 @@ class TopPicksMenuScreen extends StatelessWidget {
                   children: [
                     Text(
                       tr(title),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.w700,
@@ -816,7 +827,9 @@ class TopPicksMenuScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 2),
                     Text(
-                      tr('$visited of $total'),
+                      tr('{0} of {1}').replaceAll('{0}', '$visited').replaceAll('{1}', '$total'),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: TextStyle(
                         fontSize: 13,
                         color: Colors.grey.shade500,

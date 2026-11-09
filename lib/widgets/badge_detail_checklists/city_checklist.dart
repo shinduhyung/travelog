@@ -80,6 +80,8 @@ class CityChecklist {
                 ),
                 title: Text(
                   cityName,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 15,
@@ -202,6 +204,8 @@ class CityChecklist {
                 ),
                 title: Text(
                   cityName,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 15,
@@ -234,14 +238,16 @@ class CityChecklist {
                           children: [
                             Icon(Icons.home, color: Colors.blue.shade600, size: 16),
                             const SizedBox(width: 4),
-                            Text(
+                            Flexible(child: Text(
                               tr('Home'),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
                               style: TextStyle(
                                 fontSize: 13,
                                 color: Colors.blue.shade700,
                                 fontWeight: FontWeight.w600,
                               ),
-                            ),
+                            )),
                           ],
                         ),
                       ),
@@ -263,8 +269,7 @@ class CityChecklist {
         children: [
           Icon(icon, size: 20, color: themeColor),
           const SizedBox(width: 12),
-          Text(tr(label), style: const TextStyle(fontSize: 15, color: Colors.black87)),
-          const Spacer(),
+          Expanded(child: Text(tr(label), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 15, color: Colors.black87))),
           Text(tr(value), style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
         ],
       ),
@@ -365,6 +370,8 @@ class CityChecklist {
                 ),
                 title: Text(
                   cityName,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 15,
@@ -472,6 +479,8 @@ class CityChecklist {
               ),
               title: Text(
                 city.name,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
                   fontWeight: FontWeight.w600,
                   fontSize: 15,
@@ -481,6 +490,8 @@ class CityChecklist {
                 padding: const EdgeInsets.only(top: 4),
                 child: Text(
                   tr(city.country),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontSize: 13,
                     color: Colors.grey[600],
@@ -606,6 +617,8 @@ class CityChecklist {
               ),
               title: Text(
                 city.name,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
                   fontWeight: FontWeight.w600,
                   fontSize: 15,
@@ -615,6 +628,8 @@ class CityChecklist {
                 padding: const EdgeInsets.only(top: 4),
                 child: Text(
                   tr(subtitle),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontSize: 13,
                     color: Colors.grey[600],

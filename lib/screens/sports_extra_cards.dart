@@ -119,6 +119,7 @@ class _SportsRankingCardState extends State<SportsRankingCard> {
                                 value: i,
                                 child: Text(
                                   tr(widget.tabs[i].label),
+                                  maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                 ),
                               ),
@@ -138,11 +139,11 @@ class _SportsRankingCardState extends State<SportsRankingCard> {
                         items: [
                           DropdownMenuItem(
                             value: false,
-                            child: Text(tr('All Countries')),
+                            child: Text(tr('All Countries'), maxLines: 1, overflow: TextOverflow.ellipsis),
                           ),
                           DropdownMenuItem(
                             value: true,
-                            child: Text(tr('Visited Only')),
+                            child: Text(tr('Visited Only'), maxLines: 1, overflow: TextOverflow.ellipsis),
                           ),
                         ],
                         onChanged: (v) =>
@@ -321,6 +322,8 @@ class _RankTile extends StatelessWidget {
                       children: [
                         Text(
                           tr(row.label),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: textTheme.titleMedium?.copyWith(
                             fontWeight: FontWeight.bold,
                             fontSize: 17,
@@ -329,6 +332,8 @@ class _RankTile extends StatelessWidget {
                         if (row.subtitle != null)
                           Text(
                             row.subtitle!,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                             style: textTheme.bodySmall?.copyWith(
                               color: Colors.grey.shade600,
                             ),
@@ -671,11 +676,11 @@ class _WorldCupResultsCardState extends State<WorldCupResultsCard> {
                   items: [
                     DropdownMenuItem(
                       value: false,
-                      child: Text(tr('All Countries')),
+                      child: Text(tr('All Countries'), maxLines: 1, overflow: TextOverflow.ellipsis),
                     ),
                     DropdownMenuItem(
                       value: true,
-                      child: Text(tr('Visited Only')),
+                      child: Text(tr('Visited Only'), maxLines: 1, overflow: TextOverflow.ellipsis),
                     ),
                   ],
                   onChanged: (v) => setState(() => _visitedOnly = v ?? false),

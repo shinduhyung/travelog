@@ -115,55 +115,64 @@ class _StatLockedPromoState extends State<StatLockedPromo> {
                     ),
                   ),
                   const SizedBox(height: 14),
+                  if (RewardedUnlockService.isSupported) ...[
+                    ListenableBuilder(
+                      listenable: RewardedUnlockService.instance,
+                      builder: (context, _) {
+                        final ready = RewardedUnlockService.instance.isReady;
+                        return SizedBox(
+                          width: double.infinity,
+                          child: FilledButton.icon(
+                            style: FilledButton.styleFrom(
+                              backgroundColor: _brand,
+                              padding: const EdgeInsets.symmetric(vertical: 14),
+                            ),
+                            onPressed: (ready && !_showing) ? _watch : null,
+                            icon: (_showing || !ready)
+                                ? const SizedBox(
+                                    width: 16,
+                                    height: 16,
+                                    child: CircularProgressIndicator(
+                                      strokeWidth: 2,
+                                      color: Colors.white,
+                                    ),
+                                  )
+                                : const Icon(Icons.play_circle_fill_rounded),
+                            label: FittedBox(
+                              fit: BoxFit.scaleDown,
+                              child: Text(
+                                tr('Watch a video to unlock this for now'),
+                                maxLines: 1,
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                    const SizedBox(height: 10),
+                  ],
                   SizedBox(
                     width: double.infinity,
                     child: FilledButton.icon(
                       style: FilledButton.styleFrom(
                         backgroundColor: _brand,
-                        padding: const EdgeInsets.symmetric(vertical: 12),
+                        padding: const EdgeInsets.symmetric(vertical: 14),
                       ),
                       onPressed: () => SubscriptionSheet.show(
                         context,
                         triggerContext: 'stat_lock',
                       ),
                       icon: const Icon(Icons.workspace_premium_rounded),
-                      label: Text(tr('Go Premium')),
+                      label: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(tr('Go Premium'), maxLines: 1),
+                      ),
                     ),
                   ),
                 ],
               ),
             ),
-            if (RewardedUnlockService.isSupported) ...[
-              const SizedBox(height: 12),
-              ListenableBuilder(
-                listenable: RewardedUnlockService.instance,
-                builder: (context, _) {
-                  final ready = RewardedUnlockService.instance.isReady;
-                  return SizedBox(
-                    width: double.infinity,
-                    child: OutlinedButton.icon(
-                      style: OutlinedButton.styleFrom(
-                        foregroundColor: _brand,
-                        side: const BorderSide(color: _brand, width: 1.5),
-                        padding: const EdgeInsets.symmetric(vertical: 14),
-                      ),
-                      onPressed: (ready && !_showing) ? _watch : null,
-                      icon: (_showing || !ready)
-                          ? const SizedBox(
-                              width: 16,
-                              height: 16,
-                              child: CircularProgressIndicator(strokeWidth: 2),
-                            )
-                          : const Icon(Icons.play_circle_fill_rounded),
-                      label: Text(
-                        tr('Watch a video to unlock this for now'),
-                        style: const TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  );
-                },
-              ),
-            ],
           ],
         ),
       ),

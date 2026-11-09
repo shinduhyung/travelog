@@ -497,10 +497,15 @@ class _PassportScreenState extends State<PassportScreen> {
   Widget _buildStatRow(String label, String value) {
     return Row(
       children: [
-        Text(
-          tr(label),
-          style: TextStyle(fontSize: 14, color: Colors.grey[600], fontWeight: FontWeight.w500),
+        Flexible(
+          child: Text(
+            tr(label),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(fontSize: 14, color: Colors.grey[600], fontWeight: FontWeight.w500),
+          ),
         ),
+        const SizedBox(width: 8),
         const Spacer(),
         Text(
           tr(value),
@@ -560,12 +565,13 @@ class _PassportScreenState extends State<PassportScreen> {
                 const SizedBox(width: 12),
                 Expanded(
                   child: DropdownButtonFormField<String>(
+                    isExpanded: true,
                     value: _selectedSex,
                     decoration: _inputDecoration('Sex', Icons.wc_outlined),
                     items: ['Male', 'Female', 'Other'].map((String value) {
                       return DropdownMenuItem<String>(
                         value: value,
-                        child: Text(tr(value)),
+                        child: Text(tr(value), maxLines: 1, overflow: TextOverflow.ellipsis),
                       );
                     }).toList(),
                     onChanged: (newValue) {
@@ -944,6 +950,8 @@ class _PassportScreenState extends State<PassportScreen> {
                       ),
                       subtitle: Text(
                         tr('${passportData.visaFreeCountries} visa-free destinations'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(color: Colors.grey[500], fontSize: 13),
                       ),
                       trailing:

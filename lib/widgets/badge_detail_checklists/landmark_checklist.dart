@@ -226,6 +226,8 @@ class LandmarkChecklist {
                   padding: const EdgeInsets.only(top: 4),
                   child: Text(
                     tr(_getDisplayCityName(landmark, landmarksProvider)),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 13,
                       color: Colors.grey[600],
@@ -407,6 +409,8 @@ class LandmarkChecklist {
                       padding: const EdgeInsets.only(top: 4),
                       child: Text(
                         tr(_getDisplayCityName(landmark, landmarksProvider)),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           fontSize: 13,
                           color: Colors.grey[600],
@@ -417,6 +421,8 @@ class LandmarkChecklist {
                       padding: const EdgeInsets.only(top: 4),
                       child: Text(
                         tr(dateStr),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           fontSize: 13,
                           color: Colors.grey[600],
@@ -558,6 +564,8 @@ class LandmarkChecklist {
                   padding: const EdgeInsets.only(top: 4),
                   child: Text(
                     tr(dateStr),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 13,
                       color: Colors.grey[600],

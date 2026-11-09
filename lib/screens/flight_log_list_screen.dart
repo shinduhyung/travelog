@@ -1,3 +1,4 @@
+import 'package:jidoapp/widgets/flight_log_delete.dart';
 // lib/screens/flight_log_list_screen.dart
 
 import 'package:flutter/material.dart';
@@ -12,10 +13,7 @@ import 'package:intl/intl.dart';
 class FlightLogListScreen extends StatefulWidget {
   final String? highlightLogId;
 
-  const FlightLogListScreen({
-    super.key,
-    this.highlightLogId,
-  });
+  const FlightLogListScreen({super.key, this.highlightLogId});
 
   @override
   State<FlightLogListScreen> createState() => _FlightLogListScreenState();
@@ -24,6 +22,8 @@ class FlightLogListScreen extends StatefulWidget {
 class _FlightLogListScreenState extends State<FlightLogListScreen> {
   final GlobalKey _targetKey = GlobalKey();
   bool _hasScrolled = false;
+  bool _deleteMode = false;
+  bool _compactView = false;
 
   @override
   void initState() {
@@ -64,9 +64,11 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
 
                   final allLogs = provider.allFlightLogs;
                   if (allLogs.isEmpty) {
-                    return  Center(
+                    return Center(
                       child: Text(
-                        tr('No flight logs yet.\nTap the + button below to add one!'),
+                        tr(
+                          'No flight logs yet.\nTap the + button below to add one!',
+                        ),
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 18, color: Colors.grey),
                       ),
@@ -75,8 +77,9 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
 
                   final connections = provider.flightConnections;
                   final logMap = {for (var log in allLogs) log.id: log};
-                  final connectedLogIds =
-                  connections.expand((c) => c.flightLogIds).toSet();
+                  final connectedLogIds = connections
+                      .expand((c) => c.flightLogIds)
+                      .toSet();
 
                   List<Widget> items = [];
 
@@ -95,7 +98,7 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
                         itineraryItems.add(
                           Container(
                             key: key,
-                            child: _buildBoardingPassCard(context, log, provider),
+                            child: _buildFlightItem(context, log, provider),
                           ),
                         );
 
@@ -140,11 +143,7 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
                         ),
                         child: Container(
                           key: key,
-                          child: _buildBoardingPassCard(
-                            context,
-                            log,
-                            provider,
-                          ),
+                          child: _buildFlightItem(context, log, provider),
                         ),
                       ),
                     );
@@ -178,18 +177,148 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const AddFlightLogScreen(),
+      floatingActionButton: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          FloatingActionButton.small(
+            key: const ValueKey('flight-delete-mode'),
+            heroTag: 'flight-delete-mode',
+            tooltip: tr(_deleteMode ? 'Finish deleting' : 'Delete flights'),
+            onPressed: () => setState(() => _deleteMode = !_deleteMode),
+            backgroundColor: _deleteMode ? Colors.red.shade600 : Colors.white,
+            foregroundColor: _deleteMode ? Colors.white : Colors.red.shade600,
+            child: const Icon(Icons.close_rounded),
+          ),
+          const SizedBox(width: 10),
+          FloatingActionButton.small(
+            key: const ValueKey('flight-view-toggle'),
+            heroTag: 'flight-view-toggle',
+            tooltip: tr(_compactView ? 'Ticket view' : 'Compact list'),
+            onPressed: () => setState(() => _compactView = !_compactView),
+            backgroundColor: Colors.white,
+            foregroundColor: Colors.deepPurple.shade600,
+            child: Icon(
+              _compactView
+                  ? Icons.view_agenda_rounded
+                  : Icons.view_list_rounded,
             ),
-          );
-        },
-        backgroundColor: Colors.deepPurple.shade600,
-        foregroundColor: Colors.white,
-        child: const Icon(Icons.add),
+          ),
+          const SizedBox(width: 10),
+          FloatingActionButton.small(
+            heroTag: 'flight-add',
+            tooltip: tr('Add flight'),
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const AddFlightLogScreen()),
+            ),
+            backgroundColor: Colors.deepPurple.shade600,
+            foregroundColor: Colors.white,
+            child: const Icon(Icons.add),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildFlightItem(
+    BuildContext context,
+    FlightLog log,
+    AirlineProvider provider,
+  ) => Stack(
+    key: ValueKey('flight-item-${log.id}'),
+    children: [
+      Padding(
+        padding: EdgeInsets.only(
+          top: _deleteMode ? 12 : 0,
+          right: _deleteMode ? 12 : 0,
+        ),
+        child: IgnorePointer(
+          ignoring: _deleteMode,
+          child: _compactView
+              ? _buildCompactFlight(context, log, provider)
+              : _buildBoardingPassCard(context, log, provider),
+        ),
+      ),
+      if (_deleteMode)
+        Positioned(
+          top: 0,
+          right: 0,
+          child: IconButton.filled(
+            key: ValueKey('delete-flight-${log.id}'),
+            tooltip: tr('Delete flight'),
+            style: IconButton.styleFrom(
+              backgroundColor: Colors.red.shade600,
+              foregroundColor: Colors.white,
+              minimumSize: const Size(40, 40),
+            ),
+            icon: const Icon(Icons.close_rounded, size: 20),
+            onPressed: () => deleteFlightLog(context, log),
+          ),
+        ),
+    ],
+  );
+
+  Widget _buildCompactFlight(
+    BuildContext context,
+    FlightLog log,
+    AirlineProvider provider,
+  ) {
+    final airline = provider.airlines
+        .where((a) => a.code == log.airlineCode)
+        .firstOrNull;
+    final accent = _parseHexColor(airline?.themeColorHex);
+    final details = [
+      if (log.date != 'Unknown') log.date,
+      if (log.flightNumber.isNotEmpty &&
+          log.flightNumber.toUpperCase() != 'UNKNOWN')
+        log.flightNumber,
+      if (log.airlineName != null) log.airlineName!,
+    ];
+    return Material(
+      color: Colors.white,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(14),
+        side: const BorderSide(color: Color(0xFFE2E8F0)),
+      ),
+      clipBehavior: Clip.antiAlias,
+      child: ListTile(
+        key: ValueKey('compact-flight-${log.id}'),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+        leading: Container(
+          width: 40,
+          height: 40,
+          decoration: BoxDecoration(
+            color: accent.withValues(alpha: .1),
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Icon(
+            log.isCanceled
+                ? Icons.flight_land_rounded
+                : Icons.flight_takeoff_rounded,
+            color: log.isCanceled ? Colors.grey : accent,
+            size: 22,
+          ),
+        ),
+        title: Text(
+          '${log.departureIata ?? "—"} → ${log.arrivalIata ?? "—"}',
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+          style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 17),
+        ),
+        subtitle: Text(
+          details.join(' · '),
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
+          style: const TextStyle(fontSize: 12),
+        ),
+        trailing: const Icon(Icons.chevron_right_rounded, size: 20),
+        onTap: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) =>
+                AddFlightLogScreen(initialLog: log, isEditing: true),
+          ),
+        ),
       ),
     );
   }
@@ -206,16 +335,23 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(Icons.connecting_airports,
-              color: Colors.orange.shade700, size: 20),
+          Icon(
+            Icons.connecting_airports,
+            color: Colors.orange.shade700,
+            size: 20,
+          ),
           const SizedBox(width: 8),
-          Text(
+          Flexible(
+           child: Text(
             tr(info.type.toUpperCase()),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
             style: TextStyle(
               color: Colors.orange.shade800,
               fontWeight: FontWeight.bold,
               letterSpacing: 1.2,
             ),
+           ),
           ),
           if (info.duration != null && info.duration!.trim().isNotEmpty)
             Text(
@@ -239,28 +375,30 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
 
   // 🎫 비행기 표 스타일 카드
   Widget _buildBoardingPassCard(
-      BuildContext context, FlightLog log, AirlineProvider provider) {
+    BuildContext context,
+    FlightLog log,
+    AirlineProvider provider,
+  ) {
     String displayDate = log.date;
     if (displayDate != 'Unknown') {
       try {
         final date = DateTime.parse(displayDate);
-        displayDate = DateFormat.MMMd(AppLocale.instance.locale.languageCode).format(date);
+        displayDate = DateFormat.MMMd(
+          AppLocale.instance.locale.languageCode,
+        ).format(date);
       } catch (e) {}
     }
 
     final flightNumberUpper = log.flightNumber.toUpperCase();
     final displayFlightNumber =
-    (flightNumberUpper == 'UNKNOWN' || flightNumberUpper.isEmpty)
+        (flightNumberUpper == 'UNKNOWN' || flightNumberUpper.isEmpty)
         ? '-'
         : flightNumberUpper;
 
     final airline = provider.airlines.firstWhere(
-          (a) => a.code == log.airlineCode,
-      orElse: () => Airline(
-        name: 'Unknown',
-        code: '',
-        themeColorHex: '#673AB7',
-      ),
+      (a) => a.code == log.airlineCode,
+      orElse: () =>
+          Airline(name: 'Unknown', code: '', themeColorHex: '#673AB7'),
     );
 
     Color accentColor = _parseHexColor(airline.themeColorHex);
@@ -300,11 +438,13 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
       classContainerColor = Colors.white.withOpacity(0.25);
     }
 
-    final double innerRadius =
-    (borderColor != null) ? cardRadius - borderWidth : cardRadius;
+    final double innerRadius = (borderColor != null)
+        ? cardRadius - borderWidth
+        : cardRadius;
 
     // code3를 사용하여 avcodes_banners 경로 설정
-    final String bannerCode = (airline.code3 != null && airline.code3!.isNotEmpty)
+    final String bannerCode =
+        (airline.code3 != null && airline.code3!.isNotEmpty)
         ? airline.code3!
         : (log.airlineCode ?? 'unknown');
     final bannerPath = 'assets/avcodes_banners/$bannerCode.png';
@@ -380,13 +520,17 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          log.airlineName ?? 'Unknown Airline',
-                          style: const TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            letterSpacing: 0.5,
+                        Flexible(
+                          child: Text(
+                            log.airlineName ?? 'Unknown Airline',
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              letterSpacing: 0.5,
+                            ),
                           ),
                         ),
                         if (classSuffix.isNotEmpty && !log.isCanceled)
@@ -402,10 +546,11 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
                                 if (log.seatClass == 'First' ||
                                     log.seatClass == 'Business')
                                   BoxShadow(
-                                    color: (log.seatClass == 'First'
-                                        ? Colors.pink.shade200
-                                        : Colors.purple.shade200)
-                                        .withOpacity(0.7),
+                                    color:
+                                        (log.seatClass == 'First'
+                                                ? Colors.pink.shade200
+                                                : Colors.purple.shade200)
+                                            .withOpacity(0.7),
                                     blurRadius: 5,
                                     offset: const Offset(0, 3),
                                   ),
@@ -424,8 +569,9 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
                                 Text(
                                   tr(classSuffix),
                                   style: TextStyle(
-                                    fontSize:
-                                    log.seatClass == 'First' ? 12 : 10,
+                                    fontSize: log.seatClass == 'First'
+                                        ? 12
+                                        : 10,
                                     fontWeight: classFontWeight,
                                     color: classTextColor,
                                     letterSpacing: 0.5,
@@ -447,24 +593,30 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Row(
-                              children: [
-                                Icon(
-                                  Icons.calendar_today,
-                                  size: 18,
-                                  color: accentColor,
-                                ),
-                                const SizedBox(width: 8),
-                                Text(
-                                  tr(displayDate),
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.grey.shade900,
-                                    letterSpacing: 0.3,
+                            Flexible(
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    Icons.calendar_today,
+                                    size: 18,
+                                    color: accentColor,
                                   ),
-                                ),
-                              ],
+                                  const SizedBox(width: 8),
+                                  Flexible(
+                                    child: Text(
+                                      tr(displayDate),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.grey.shade900,
+                                        letterSpacing: 0.3,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
 
                             Container(
@@ -529,7 +681,9 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
                                     ),
                                   ),
                                   if (log.scheduledDepartureTime != null &&
-                                      log.scheduledDepartureTime!.isNotEmpty) ...[
+                                      log
+                                          .scheduledDepartureTime!
+                                          .isNotEmpty) ...[
                                     const SizedBox(height: 4),
                                     Text(
                                       tr(log.scheduledDepartureTime!),
@@ -545,8 +699,9 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
                             ),
 
                             Padding(
-                              padding:
-                              const EdgeInsets.symmetric(horizontal: 8),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 8,
+                              ),
                               child: Column(
                                 children: [
                                   if (log.delay != null &&
@@ -595,8 +750,7 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
                                         color: accentColor.withOpacity(0.1),
                                         borderRadius: BorderRadius.circular(8),
                                         border: Border.all(
-                                          color:
-                                          accentColor.withOpacity(0.3),
+                                          color: accentColor.withOpacity(0.3),
                                           width: 1,
                                         ),
                                       ),
@@ -669,24 +823,31 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
                               borderRadius: BorderRadius.circular(8),
                             ),
                             child: Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceAround,
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 _buildInfoColumn(
-                                    'Terminal',
-                                    log.departureTerminal,
-                                    Icons.business),
-                                _buildVerticalDivider(),
-                                _buildInfoColumn('Gate', log.departureGate,
-                                    Icons.sensors),
+                                  'Terminal',
+                                  log.departureTerminal,
+                                  Icons.business,
+                                ),
                                 _buildVerticalDivider(),
                                 _buildInfoColumn(
-                                    'Arr. Terminal',
-                                    log.arrivalTerminal,
-                                    Icons.location_on),
+                                  'Gate',
+                                  log.departureGate,
+                                  Icons.sensors,
+                                ),
                                 _buildVerticalDivider(),
                                 _buildInfoColumn(
-                                    'Arr. Gate', log.arrivalGate, Icons.place),
+                                  'Arr. Terminal',
+                                  log.arrivalTerminal,
+                                  Icons.location_on,
+                                ),
+                                _buildVerticalDivider(),
+                                _buildInfoColumn(
+                                  'Arr. Gate',
+                                  log.arrivalGate,
+                                  Icons.place,
+                                ),
                               ],
                             ),
                           ),
@@ -758,41 +919,43 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
 
   Widget _buildInfoColumn(String label, String? value, IconData icon) {
     final displayValue =
-    (value != null && value.isNotEmpty && value != 'Unknown')
-        ? value
-        : '-';
-    return Column(
-      children: [
-        Icon(icon, size: 14, color: Colors.grey.shade600),
-        const SizedBox(height: 3),
-        Text(
-          tr(label),
-          style: TextStyle(
-            fontSize: 9,
-            color: Colors.grey.shade600,
-            fontWeight: FontWeight.w500,
+        (value != null && value.isNotEmpty && value != 'Unknown') ? value : '-';
+    return Flexible(
+      child: Column(
+        children: [
+          Icon(icon, size: 14, color: Colors.grey.shade600),
+          const SizedBox(height: 3),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              tr(label),
+              maxLines: 1,
+              style: TextStyle(
+                fontSize: 9,
+                color: Colors.grey.shade600,
+                fontWeight: FontWeight.w500,
+                overflow: TextOverflow.ellipsis,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          const SizedBox(height: 2),
+          Text(
+            tr(displayValue),
+            maxLines: 1,
             overflow: TextOverflow.ellipsis,
+            style: TextStyle(
+              fontSize: 13,
+              fontWeight: FontWeight.bold,
+              color: Colors.grey.shade800,
+            ),
           ),
-          textAlign: TextAlign.center,
-        ),
-        const SizedBox(height: 2),
-        Text(
-          tr(displayValue),
-          style: TextStyle(
-            fontSize: 13,
-            fontWeight: FontWeight.bold,
-            color: Colors.grey.shade800,
-          ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 
   Widget _buildVerticalDivider() {
-    return Container(
-      width: 1,
-      height: 35,
-      color: Colors.grey.shade300,
-    );
+    return Container(width: 1, height: 35, color: Colors.grey.shade300);
   }
 }

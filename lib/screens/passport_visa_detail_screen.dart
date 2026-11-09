@@ -227,13 +227,17 @@ class PassportVisaDetailScreen extends StatelessWidget {
             }
 
             return ListTile(
-              title: Text(item.name),
-              trailing: Column(
+              title: Text(AppLocale.instance.countryName(item.name)),
+              trailing: ConstrainedBox(
+                constraints: const BoxConstraints(maxWidth: 180),
+                child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Text(
                     tr(displayStatus.toUpperCase()),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       color: statusColor,
                       fontWeight: FontWeight.bold,
@@ -243,9 +247,12 @@ class PassportVisaDetailScreen extends StatelessWidget {
                   if (duration.isNotEmpty && !isTerritory)
                     Text(
                       tr(duration),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: const TextStyle(fontSize: 12, color: Colors.grey),
                     ),
                 ],
+              ),
               ),
               dense: true,
             );

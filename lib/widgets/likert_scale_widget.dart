@@ -19,16 +19,26 @@ class LikertScaleWidget extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(tr("Agree"),
-                style: TextStyle(
-                    color: const Color(0xFF009688), // Greenish
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14)),
-            Text(tr("Disagree"),
-                style: TextStyle(
-                    color: const Color(0xFF7B1FA2), // Purpleish
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14)),
+            Flexible(
+              child: Text(tr("Agree"),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                      color: const Color(0xFF009688), // Greenish
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14)),
+            ),
+            const SizedBox(width: 8),
+            Flexible(
+              child: Text(tr("Disagree"),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  textAlign: TextAlign.end,
+                  style: TextStyle(
+                      color: const Color(0xFF7B1FA2), // Purpleish
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14)),
+            ),
           ],
         ),
         const SizedBox(height: 10),

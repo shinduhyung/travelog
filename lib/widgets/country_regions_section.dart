@@ -222,9 +222,13 @@ class _CountryRegionsSectionState extends State<CountryRegionsSection> {
               color: Colors.grey.shade500,
             ),
             const SizedBox(width: 4),
-            Text(
-              tr('Tap a region on the map to mark it visited'),
-              style: TextStyle(fontSize: 12, color: Colors.grey.shade500),
+            Flexible(
+              child: Text(
+                tr('Tap a region on the map to mark it visited'),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(fontSize: 12, color: Colors.grey.shade500),
+              ),
             ),
           ],
         ),
@@ -373,18 +377,21 @@ class _RegionProgress extends StatelessWidget {
                 height: 1.0,
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 4, bottom: 1),
-              child: Text(
-                tr('/ $total regions visited'),
-                style: TextStyle(
-                  fontSize: 13,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.grey.shade600,
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.only(left: 4, bottom: 1),
+                child: Text(
+                  tr('/ $total regions visited'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.grey.shade600,
+                  ),
                 ),
               ),
             ),
-            const Spacer(),
             Text(
               tr('${(ratio * 100).round()}%'),
               style: const TextStyle(
@@ -433,7 +440,7 @@ class CountryRegionsMapScreen extends StatelessWidget {
         if (CountryRegionAccess.isUnlocked(country.isoA2))
           return _buildMapScreen(context);
         return Scaffold(
-          appBar: AppBar(title: Text(tr('${country.name} · Regions'))),
+          appBar: AppBar(title: Text(tr('${country.name} · Regions'), maxLines: 1, overflow: TextOverflow.ellipsis)),
           body: CountryRegionAccessGate(
             countryIsoA2: country.isoA2,
             builder: _buildMapScreen,
@@ -452,6 +459,8 @@ class CountryRegionsMapScreen extends StatelessWidget {
         elevation: 0,
         title: Text(
           tr('${country.name} · Regions'),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: TextStyle(fontWeight: FontWeight.bold, color: themeColor),
         ),
         iconTheme: IconThemeData(color: themeColor),
@@ -602,6 +611,8 @@ class _RegionListSheetState extends State<_RegionListSheet> {
                   Expanded(
                     child: Text(
                       tr('Regions of ${widget.country.name}'),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -675,6 +686,8 @@ class _RegionListSheetState extends State<_RegionListSheet> {
                                   children: [
                                     Text(
                                       region.name,
+                                      maxLines: 2,
+                                      overflow: TextOverflow.ellipsis,
                                       style: const TextStyle(
                                         fontSize: 15,
                                         fontWeight: FontWeight.w500,
@@ -683,6 +696,8 @@ class _RegionListSheetState extends State<_RegionListSheet> {
                                     if (region.typeLabel.isNotEmpty)
                                       Text(
                                         tr(region.typeLabel),
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
                                         style: TextStyle(
                                           fontSize: 12,
                                           color: Colors.grey.shade600,

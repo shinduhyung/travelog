@@ -260,10 +260,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     listenable: AppLocale.instance,
                     builder: (context, _) => ListTile(
                       leading: const Icon(Icons.language),
-                      title: Text(tr('Language')),
+                      title: Text(tr('Language'), maxLines: 1, overflow: TextOverflow.ellipsis),
                       // Shown in English: the language being fetched isn't here yet.
                       subtitle: AppLocale.instance.isDownloading
-                          ? const Text('Downloading language…')
+                          ? Text(tr('Downloading language…'))
                           : null,
                       trailing: DropdownButton<String>(
                         value: AppLocale.instance.language ?? 'system',
@@ -328,6 +328,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                           ? 'Premium Active'
                                           : 'Remove Ads',
                                     ),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
                                     style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 16,
@@ -345,6 +347,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                           ? 'Go ad-free for ${sub.productDetailsFor(sub.yearlyProductIdToOffer)!.price} / year'
                                           : 'Go ad-free',
                                     ),
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
                                       color: Colors.white.withOpacity(0.85),
                                       fontSize: 12,
@@ -369,7 +373,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   // ── Theme ─────────────────────────────────────────
                   ListTile(
                     leading: const Icon(Icons.palette_outlined),
-                    title: Text(tr('Theme')),
+                    title: Text(tr('Theme'), maxLines: 1, overflow: TextOverflow.ellipsis),
                     trailing: DropdownButton<ThemeMode>(
                       value: _themeMode,
                       onChanged: _setThemeMode,

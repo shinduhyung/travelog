@@ -16,6 +16,7 @@ import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/providers/city_provider.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/widgets/landmark_info_card.dart';
+import 'package:jidoapp/widgets/my_match_badge.dart';
 import 'package:jidoapp/screens/cities_screen.dart'; // showExternalCityDetailsModal
 
 const Color _kTheme = Color(0xFF4A5568);
@@ -126,13 +127,15 @@ class LandmarkCitiesScreen extends StatelessWidget {
                                 child: const Icon(Icons.location_city_rounded, color: Colors.white, size: 18),
                               ),
                               const SizedBox(width: 12),
-                              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                              Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                                  Text(tr('Iconic Cities'),
+                                    maxLines: 1, overflow: TextOverflow.ellipsis,
                                     style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900,
                                         color: Color(0xFF111827), letterSpacing: -0.6, height: 1.1)),
                                 Text(tr('$totalCities cities · 7 landmarks each'),
+                                    maxLines: 1, overflow: TextOverflow.ellipsis,
                                     style: TextStyle(fontSize: 12, color: Colors.grey[500], fontWeight: FontWeight.w500)),
-                              ]),
+                              ])),
                             ]),
                             const SizedBox(height: 20),
                             // 방문 진행 바
@@ -244,6 +247,8 @@ class LandmarkCitiesScreen extends StatelessWidget {
                       Expanded(
                         child: Text(
                           cityName,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w900, color: Color(0xFF111827), letterSpacing: -0.5),
                         ),
                       ),
@@ -285,6 +290,7 @@ class LandmarkCitiesScreen extends StatelessWidget {
                   ),
                   child: Text(
                     tr(isCompleted ? '★ 7/7' : '$visitedCount / ${landmarkNames.length}'),
+                    maxLines: 1,
                     style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w800,
@@ -439,11 +445,12 @@ class LandmarkCitiesScreen extends StatelessWidget {
               padding: const EdgeInsets.only(top: 16, left: 16, right: 8, bottom: 12),
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  TextButton(onPressed: () => Navigator.pop(sheetContext),
-                      child: Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
-                  ElevatedButton(onPressed: () => Navigator.pop(sheetContext),
+                  Flexible(child: TextButton(onPressed: () => Navigator.pop(sheetContext),
+                      child: Text(tr('Cancel'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600)))),
+                  MyMatchBadge.landmark(landmark: freshLandmark, onDark: headerTextColor == Colors.white),
+                  Flexible(child: ElevatedButton(onPressed: () => Navigator.pop(sheetContext),
                       style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
-                      child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))),
+                      child: Text(tr('Done'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)))),
                 ]),
                 const SizedBox(height: 12),
                 Row(children: [
@@ -451,6 +458,7 @@ class LandmarkCitiesScreen extends StatelessWidget {
                       style: Theme.of(sheetContext).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold, fontSize: 26, color: headerTextColor))),
                   if (isVisited || visitedSubCount > 0) Icon(Icons.check_circle, color: headerTextColor, size: 24),
                 ]),
+                
                 const SizedBox(height: 6),
                 Row(children: [
                   Icon(Icons.location_on, size: 14, color: headerTextColor.withOpacity(0.8)),
@@ -464,20 +472,20 @@ class LandmarkCitiesScreen extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Row(mainAxisSize: MainAxisSize.min, children: [
-                     Text(tr('Wishlist:')),
+                  Flexible(child: Row(mainAxisSize: MainAxisSize.min, children: [
+                     Flexible(child: Text(tr('Wishlist:'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                     IconButton(visualDensity: VisualDensity.compact,
                         icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey),
                         onPressed: () => provider.toggleWishlistStatus(freshLandmark.name)),
-                  ]),
-                  Row(mainAxisSize: MainAxisSize.min, children: [
-                     Text(tr('My Rating:')),
+                  ])),
+                  Flexible(flex: 2, child: Row(mainAxisSize: MainAxisSize.min, children: [
+                     Flexible(child: Text(tr('My Rating:'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                     const SizedBox(width: 8),
                     RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0,
                         direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0,
                         itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber),
                         onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating)),
-                  ]),
+                  ])),
                 ]),
                 const Divider(height: 20),
                 if (totalSubCount > 1) ...[
@@ -499,9 +507,10 @@ class LandmarkCitiesScreen extends StatelessWidget {
                   const Divider(height: 24),
                 ],
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text(tr('History (${freshLandmark.visitDates.length} entries)'),
-                      style: Theme.of(sheetContext).textTheme.titleSmall),
-                  OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit')),
+                  Flexible(child: Text(tr('History (${freshLandmark.visitDates.length} entries)'),
+                      maxLines: 1, overflow: TextOverflow.ellipsis,
+                      style: Theme.of(sheetContext).textTheme.titleSmall)),
+                  OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit'), maxLines: 1, overflow: TextOverflow.ellipsis),
                       onPressed: () => provider.addVisitDate(freshLandmark.name)),
                 ]),
                 const SizedBox(height: 8),
@@ -555,6 +564,7 @@ class _StatBar extends StatelessWidget {
       Row(children: [
         Expanded(
           child: Text(tr(label),
+              maxLines: 1, overflow: TextOverflow.ellipsis,
               style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: Colors.grey[600])),
         ),
         Text(tr('$value'),
@@ -709,8 +719,10 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
         controller: _expansionTileController,
         initiallyExpanded: _isEditing,
         title: Text(tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
+            maxLines: 1, overflow: TextOverflow.ellipsis,
             style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
         subtitle: Text(tr('Date: $_year-$_month-$_day'),
+            maxLines: 1, overflow: TextOverflow.ellipsis,
             style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(
           icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
@@ -733,9 +745,10 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               if (_isEditing) ...[
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text(tr('Visit Date: $_year-$_month-$_day'),
-                      style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
-                  TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label:  Text(tr('Edit Date')),
+                  Flexible(child: Text(tr('Visit Date: $_year-$_month-$_day'),
+                      maxLines: 1, overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14))),
+                  TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label:  Text(tr('Edit Date'), maxLines: 1, overflow: TextOverflow.ellipsis),
                       onPressed: () => _selectDate(context),
                       style: TextButton.styleFrom(visualDensity: VisualDensity.compact)),
                 ]),

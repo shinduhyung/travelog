@@ -162,11 +162,14 @@ class PopulationStatsScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(
+                    Flexible(
+                      child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           tr('Global Reach'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
@@ -177,12 +180,15 @@ class PopulationStatsScreen extends StatelessWidget {
                         const SizedBox(height: 4),
                         Text(
                           tr('Total Population'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                             fontWeight: FontWeight.bold,
                             color: Colors.black87,
                           ),
                         ),
                       ],
+                      ),
                     ),
                     // 백분율 표시 뱃지
                     Container(
@@ -293,6 +299,8 @@ class PopulationStatsScreen extends StatelessWidget {
             children: [
               Text(
                 tr(label),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   fontSize: 12,
                   color: Colors.grey.shade600,
@@ -306,6 +314,7 @@ class PopulationStatsScreen extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: Colors.black87,
                 ),
+                maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),
             ],
@@ -383,6 +392,7 @@ class PopulationStatsScreen extends StatelessWidget {
                         child: Text(
                           tr(name),
                           style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                          maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                         ),
                       ),
@@ -411,6 +421,7 @@ class PopulationStatsScreen extends StatelessWidget {
                                 color: Colors.grey.shade500,
                                 fontWeight: FontWeight.w500,
                               ),
+                              maxLines: 1,
                               overflow: TextOverflow.ellipsis,
                             ),
                           ),
@@ -505,15 +516,18 @@ class PopulationStatsScreen extends StatelessWidget {
               children: [
                 Icon(icon, size: 16, color: color),
                 const SizedBox(width: 8),
-                Text(
-                  tr(label),
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.grey.shade700,
-                    fontSize: 13,
+                Expanded(
+                  child: Text(
+                    tr(label),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey.shade700,
+                      fontSize: 13,
+                    ),
                   ),
                 ),
-                const Spacer(),
                 Text(
                   tr(formatter.format(value.round())),
                   style: TextStyle(
@@ -673,7 +687,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                   children: [
                     Icon(_selectedRanking.icon, color: rankingThemeColor),
                     const SizedBox(width: 12),
-                    Text(tr(_selectedRanking.title), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                    Flexible(child: Text(tr(_selectedRanking.title), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
                   ],
                 ),
                 const SizedBox(height: 8),
@@ -684,8 +698,8 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                       child: SegmentedButton<int>(
                         showSelectedIcon: false,
                         segments:  [
-                          ButtonSegment<int>(value: 0, label: Text(tr('All'))),
-                          ButtonSegment<int>(value: 1, label: Text(tr('Visited'))),
+                          ButtonSegment<int>(value: 0, label: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('All'), maxLines: 1))),
+                          ButtonSegment<int>(value: 1, label: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Visited'), maxLines: 1))),
                         ],
                         selected: {_displaySegment},
                         onSelectionChanged: (s) { _displaySegment = s.first; _onFilterChanged(); },
@@ -707,8 +721,8 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                       child: SegmentedButton<int>(
                         showSelectedIcon: false,
                         segments:  [
-                          ButtonSegment<int>(value: 0, label: Text(tr('High'))),
-                          ButtonSegment<int>(value: 1, label: Text(tr('Low'))),
+                          ButtonSegment<int>(value: 0, label: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('High'), maxLines: 1))),
+                          ButtonSegment<int>(value: 1, label: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Low'), maxLines: 1))),
                         ],
                         selected: {_sortOrderSegment},
                         onSelectionChanged: (s) { _sortOrderSegment = s.first; _onFilterChanged(); },
@@ -774,7 +788,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                               const SizedBox(width: 12),
                               Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 18)), // 국기 추가
                               const SizedBox(width: 8),
-                              Expanded(child: Text(tr(country.name), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                              Expanded(child: Text(tr(country.name), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
                               Text(tr(compactFormatter.format(value)), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),

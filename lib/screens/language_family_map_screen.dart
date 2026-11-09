@@ -120,7 +120,7 @@ class _LanguageFamilyMapScreenState extends State<LanguageFamilyMapScreen> {
 
     return Scaffold(
       backgroundColor: backgroundColor,
-      appBar: AppBar(title: Text(tr(_getAppBarTitle()))),
+      appBar: AppBar(title: Text(tr(_getAppBarTitle()), maxLines: 1, overflow: TextOverflow.ellipsis)),
       body: Stack(
         children: [
           FlutterMap(
@@ -142,15 +142,17 @@ class _LanguageFamilyMapScreenState extends State<LanguageFamilyMapScreen> {
           Positioned(
             top: 10,
             right: 10,
-            child: Card(
+            child: ConstrainedBox(
+              constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width - 20),
+              child: Card(
               elevation: 4,
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: SegmentedButton<LanguageMapView>(
                   segments:  [
-                    ButtonSegment(value: LanguageMapView.family, label: Text(tr('Family'))),
-                    ButtonSegment(value: LanguageMapView.subbranch, label: Text(tr('Branch'))),
-                    ButtonSegment(value: LanguageMapView.subsubbranch, label: Text(tr('Subbranch'))),
+                    ButtonSegment(value: LanguageMapView.family, label: Text(tr('Family'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                    ButtonSegment(value: LanguageMapView.subbranch, label: Text(tr('Branch'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                    ButtonSegment(value: LanguageMapView.subsubbranch, label: Text(tr('Subbranch'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                   ],
                   selected: {_mapView},
                   onSelectionChanged: (newSelection) {
@@ -163,6 +165,7 @@ class _LanguageFamilyMapScreenState extends State<LanguageFamilyMapScreen> {
                 ),
               ),
             ),
+            ),
           ),
           Positioned(
             bottom: 8,
@@ -170,7 +173,7 @@ class _LanguageFamilyMapScreenState extends State<LanguageFamilyMapScreen> {
             child: Card(
               elevation: 4,
               child: Container(
-                constraints: BoxConstraints(maxHeight: MediaQuery.of(context).size.height * 0.4),
+                constraints: BoxConstraints(maxHeight: MediaQuery.of(context).size.height * 0.4, maxWidth: MediaQuery.of(context).size.width - 32),
                 padding: const EdgeInsets.all(8.0),
                 child: SingleChildScrollView(
                   // ✅ 3. 그룹화된 범례 위젯 빌드
@@ -194,6 +197,8 @@ class _LanguageFamilyMapScreenState extends State<LanguageFamilyMapScreen> {
                                 padding: const EdgeInsets.only(top: 4.0, bottom: 2.0),
                                 child: Text(
                                   tr(parentKey),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
                                     fontSize: 11,
                                     fontWeight: FontWeight.bold,
@@ -225,7 +230,7 @@ class _LanguageFamilyMapScreenState extends State<LanguageFamilyMapScreen> {
         children: [
           Container(width: 12, height: 12, color: color),
           const SizedBox(width: 8),
-          Text(tr(name), style: const TextStyle(fontSize: 12)),
+          Flexible(child: Text(tr(name), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 12))),
         ],
       ),
     );
