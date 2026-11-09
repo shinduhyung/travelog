@@ -52,10 +52,7 @@ class _CapitalsScreenState extends State<CapitalsScreen> {
     _searchController.dispose();
 
     SystemChrome.setPreferredOrientations(DeviceOrientation.values);
-    SystemChrome.setEnabledSystemUIMode(
-      SystemUiMode.manual,
-      overlays: [SystemUiOverlay.bottom],
-    );
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
 
     super.dispose();
   }

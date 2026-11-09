@@ -93,6 +93,7 @@ const MaterialColor mintSwatch = MaterialColor(0xFF3DDAD7, <int, Color>{
 
 const SystemUiOverlayStyle _defaultSystemUiOverlayStyle = SystemUiOverlayStyle(
   statusBarColor: Colors.transparent,
+  statusBarBrightness: Brightness.light, // iOS: dark status bar text
   statusBarIconBrightness: Brightness.dark,
   systemNavigationBarColor: Colors.transparent,
   systemNavigationBarDividerColor: Colors.transparent,

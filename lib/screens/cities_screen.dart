@@ -192,10 +192,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
     }
 
     SystemChrome.setPreferredOrientations(DeviceOrientation.values);
-    SystemChrome.setEnabledSystemUIMode(
-      SystemUiMode.manual,
-      overlays: [SystemUiOverlay.bottom],
-    );
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
 
     super.dispose();
   }

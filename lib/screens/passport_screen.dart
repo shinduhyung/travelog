@@ -795,7 +795,7 @@ class _PassportScreenState extends State<PassportScreen> {
         final allCountries = countryProvider.allCountries;
         final myPassportIso = passportProvider.selectedPassportIso;
 
-        final hiddenTerritories = _sovereignTerritories.values.expand((e) => e).toSet();
+        const hiddenTerritories = PassportProvider.rankingHiddenIsos;
 
         final filteredPassportList = passportProvider.passportDataMap.entries.where((entry) {
           if (hiddenTerritories.contains(entry.key)) return false;

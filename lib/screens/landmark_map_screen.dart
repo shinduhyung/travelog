@@ -187,10 +187,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
     for (var range in _byVisitRanges) {
       range.controller.dispose();
     }
-    SystemChrome.setEnabledSystemUIMode(
-      SystemUiMode.manual,
-      overlays: [SystemUiOverlay.bottom],
-    );
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
     super.dispose();
   }
 
