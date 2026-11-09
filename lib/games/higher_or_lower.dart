@@ -642,8 +642,14 @@ class _GradientButtonState extends State<_GradientButton> {
                 Icon(widget.icon, color: fg, size: 20),
                 const SizedBox(width: 8),
               ],
-              Text(tr(widget.label),
-                  style: TextStyle(color: fg, fontSize: 15.5, fontWeight: FontWeight.w800, letterSpacing: 0.2)),
+              Flexible(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(tr(widget.label),
+                      maxLines: 1,
+                      style: TextStyle(color: fg, fontSize: 15.5, fontWeight: FontWeight.w800, letterSpacing: 0.2)),
+                ),
+              ),
             ],
           ),
         ),
@@ -735,8 +741,12 @@ class HigherOrLowerModeScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 10),
-                   Text(tr('CHOOSE A METRIC'),
-                      style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.1, color: _kMuted)),
+                  Flexible(
+                    child: Text(tr('CHOOSE A METRIC'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.1, color: _kMuted)),
+                  ),
                 ],
               ),
               const SizedBox(height: 16),
@@ -790,11 +800,18 @@ class HigherOrLowerModeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
                Text(tr('COMPARISON GAME'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800, letterSpacing: 1.6, color: _kMuted)),
               const SizedBox(height: 4),
-               Text(tr('Higher or Lower'),
-                  style: TextStyle(
-                      fontSize: 27, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.6, height: 1.05)),
+               FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: Alignment.centerLeft,
+                child: Text(tr('Higher or Lower'),
+                    maxLines: 1,
+                    style: TextStyle(
+                        fontSize: 27, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.6, height: 1.05)),
+              ),
               const SizedBox(height: 8),
               Text(tr('Pick which country has more, by the numbers. Choose a metric to start.'),
                   style: TextStyle(
@@ -838,9 +855,9 @@ class _MetricCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(tr(_metricLabel(metric)), style: const TextStyle(fontSize: 16.5, fontWeight: FontWeight.w800, color: _kInk)),
+                  Text(tr(_metricLabel(metric)), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 16.5, fontWeight: FontWeight.w800, color: _kInk)),
                   const SizedBox(height: 4),
-                  Text(tr(subtitle), style: const TextStyle(fontSize: 12.5, color: _kMuted, fontWeight: FontWeight.w500)),
+                  Text(tr(subtitle), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 12.5, color: _kMuted, fontWeight: FontWeight.w500)),
                 ],
               ),
             ),
@@ -905,8 +922,12 @@ class _DifficultyScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 10),
-                   Text(tr('CHOOSE A DIFFICULTY'),
-                      style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.1, color: _kMuted)),
+                  Flexible(
+                    child: Text(tr('CHOOSE A DIFFICULTY'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.1, color: _kMuted)),
+                  ),
                 ],
               ),
               const SizedBox(height: 16),
@@ -1005,11 +1026,18 @@ class _DifficultyScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
                Text(tr('HIGHER OR LOWER'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800, letterSpacing: 1.6, color: _kMuted)),
               const SizedBox(height: 4),
-              Text(tr(_metricLabel(metric)),
-                  style: const TextStyle(
-                      fontSize: 27, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.6, height: 1.05)),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: Alignment.centerLeft,
+                child: Text(tr(_metricLabel(metric)),
+                    maxLines: 1,
+                    style: const TextStyle(
+                        fontSize: 27, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.6, height: 1.05)),
+              ),
               const SizedBox(height: 8),
               Text(tr('Two countries, one metric. Pick the bigger one before time runs out.'),
                   style: TextStyle(
@@ -1061,8 +1089,12 @@ class _DifficultyCard extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Text(tr(_diffLabel(difficulty)),
-                          style: const TextStyle(fontSize: 17.5, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.2)),
+                      Flexible(
+                        child: Text(tr(_diffLabel(difficulty)),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(fontSize: 17.5, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.2)),
+                      ),
                       if (locked) ...[
                         const SizedBox(width: 6),
                         Icon(Icons.lock_rounded, size: 15, color: color),
@@ -1201,10 +1233,14 @@ class _LobbyScreenState extends State<_LobbyScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(tr('${_diffLabel(widget.difficulty).toUpperCase()} · ${_metricLabel(widget.metric).toUpperCase()}'),
+              Text('${tr(_diffLabel(widget.difficulty)).toUpperCase()} · ${tr(_metricLabel(widget.metric)).toUpperCase()}',
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.2, color: _kMuted)),
               const SizedBox(height: 2),
               Text(tr('${_diffLabel(widget.difficulty)} Mode'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(fontSize: 21, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.3)),
             ],
           ),
@@ -1285,6 +1321,8 @@ class _RecordTile extends StatelessWidget {
               children: [
                 Text(tr('${record.score}'), style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16, color: _kInk)),
                 Text(tr('${record.roundsCompleted}/${record.maxRounds} rounds · combo ${record.bestCombo}'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: const TextStyle(fontSize: 11.5, color: _kMuted)),
               ],
             ),
@@ -1496,7 +1534,7 @@ class _GameScreenState extends State<_GameScreen> {
             Container(width: 8, height: 8, decoration: BoxDecoration(color: _accent, shape: BoxShape.circle)),
             const SizedBox(width: 8),
             Flexible(
-              child: Text(tr('${_diffLabel(widget.difficulty)} · ${_metricLabel(widget.metric)}'),
+              child: Text('${tr(_diffLabel(widget.difficulty))} · ${tr(_metricLabel(widget.metric))}',
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800, color: _kInk, letterSpacing: -0.2)),
             ),
@@ -1562,8 +1600,12 @@ class _GameScreenState extends State<_GameScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(tr('ROUND ${_roundIndex + 1} / $_maxRounds'),
-                  style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 0.6, color: _kMuted)),
+              Flexible(
+                child: Text(tr('ROUND ${_roundIndex + 1} / $_maxRounds'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 0.6, color: _kMuted)),
+              ),
               if (_combo > 0)
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
@@ -1647,9 +1689,13 @@ class _GameScreenState extends State<_GameScreen> {
               child: Icon(pickedBigger ? Icons.check_rounded : Icons.close_rounded, color: Colors.white, size: 18),
             ),
             const SizedBox(width: 10),
-            Text(
-              tr(pickedBigger ? 'Correct! +${_lastRoundScore ?? 0}' : (timedOut ? "Time's up" : 'Wrong')),
-              style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w900, color: Colors.white),
+            Flexible(
+              child: Text(
+                tr(pickedBigger ? 'Correct! +${_lastRoundScore ?? 0}' : (timedOut ? "Time's up" : 'Wrong')),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w900, color: Colors.white),
+              ),
             ),
           ],
         ),
@@ -1761,11 +1807,11 @@ class _GameScreenState extends State<_GameScreen> {
                  Text(tr('TOTAL SCORE'), style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted)),
                 const SizedBox(height: 18),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  _StatChip(label: 'Rounds', value: '$_combo/$_maxRounds'),
+                  Flexible(child: _StatChip(label: 'Rounds', value: '$_combo/$_maxRounds')),
                   const SizedBox(width: 10),
-                  _StatChip(label: 'Best', value: '$_bestRoundScore'),
+                  Flexible(child: _StatChip(label: 'Best', value: '$_bestRoundScore')),
                   const SizedBox(width: 10),
-                  _StatChip(label: 'Combo', value: '$_combo'),
+                  Flexible(child: _StatChip(label: 'Combo', value: '$_combo')),
                 ]),
               ]),
             ),
@@ -1804,7 +1850,7 @@ class _ScoreBadge extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(tr('$score'), style: TextStyle(fontSize: 15, fontWeight: FontWeight.w900, color: accent)),
-            Text(tr('best $best'), style: const TextStyle(fontSize: 9.5, fontWeight: FontWeight.w700, color: _kMuted)),
+            Text(tr('best $best'), maxLines: 1, style: const TextStyle(fontSize: 9.5, fontWeight: FontWeight.w700, color: _kMuted)),
           ],
         ),
       ),
@@ -1825,8 +1871,13 @@ class _StatChip extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
       decoration: BoxDecoration(color: _kSurface, borderRadius: BorderRadius.circular(14)),
       child: Column(children: [
-        Text(tr(value), style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800, color: _kInk)),
-        Text(tr(label.toUpperCase()), style: const TextStyle(fontSize: 9.5, fontWeight: FontWeight.w800, letterSpacing: 0.4, color: _kMuted)),
+        FittedBox(fit: BoxFit.scaleDown, child: Text(tr(value), maxLines: 1, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800, color: _kInk))),
+        FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(tr(label.toUpperCase()),
+              maxLines: 1,
+              style: const TextStyle(fontSize: 9.5, fontWeight: FontWeight.w800, letterSpacing: 0.4, color: _kMuted)),
+        ),
       ]),
     );
   }

@@ -151,12 +151,16 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
               child: const Icon(Icons.menu_book, color: Colors.white, size: 20),
             ),
             const SizedBox(width: 12),
-             Text(
-              tr('CountryDex'),
-              style: TextStyle(
-                color: Colors.black87,
-                fontWeight: FontWeight.bold,
-                fontSize: 22,
+            Flexible(
+              child: Text(
+                tr('CountryDex'),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  color: Colors.black87,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22,
+                ),
               ),
             ),
           ],
@@ -270,6 +274,8 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
                   value: true,
                   label: Text(
                     tr('Newest First'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(fontWeight: FontWeight.w600),
                   ),
                 ),
@@ -277,6 +283,8 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
                   value: false,
                   label: Text(
                     tr('Oldest First'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(fontWeight: FontWeight.w600),
                   ),
                 ),
@@ -383,11 +391,15 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
                   : null,
             ),
             const SizedBox(width: 12),
-            Text(
-              tr(text),
-              style: TextStyle(
-                fontWeight: isSelected ? FontWeight.w600 : FontWeight.normal,
-                color: isSelected ? mintDark : Colors.black87,
+            Flexible(
+              child: Text(
+                tr(text),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  fontWeight: isSelected ? FontWeight.w600 : FontWeight.normal,
+                  color: isSelected ? mintDark : Colors.black87,
+                ),
               ),
             ),
           ],
@@ -576,12 +588,16 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
               ),
               child: Row(
                 children: [
-                  Text(
-                    tr(title),
-                    style: const TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: mintDark,
+                  Flexible(
+                    child: Text(
+                      tr(title),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: mintDark,
+                      ),
                     ),
                   ),
                   const SizedBox(width: 8),
@@ -752,6 +768,7 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
                           Flexible(
                             child: Text(
                               tr(country.name),
+                              maxLines: 1,
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
@@ -823,22 +840,30 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
                                     size: 14,
                                   ),
                                   const SizedBox(width: 4),
-                                  Text(
-                                    tr('$visitCount time${visitCount > 1 ? 's' : ''}'),
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      color: mintDark,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  ),
-                                  if (totalDays > 0) ...[
-                                    const SizedBox(width: 4),
-                                    Text(
-                                      tr('• $totalDays days'),
+                                  Flexible(
+                                    child: Text(
+                                      tr('$visitCount time${visitCount > 1 ? 's' : ''}'),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
                                         fontSize: 12,
                                         color: mintDark,
                                         fontWeight: FontWeight.w600,
+                                      ),
+                                    ),
+                                  ),
+                                  if (totalDays > 0) ...[
+                                    const SizedBox(width: 4),
+                                    Flexible(
+                                      child: Text(
+                                        tr('• $totalDays days'),
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          color: mintDark,
+                                          fontWeight: FontWeight.w600,
+                                        ),
                                       ),
                                     ),
                                   ],
@@ -865,13 +890,17 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
                                     size: 14,
                                   ),
                                   const SizedBox(width: 4),
-                                  Text(
+                                  Flexible(
+                                    child: Text(
                                     tr('Wishlisted'),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
                                       fontSize: 12,
                                       color: Colors.pink.shade700,
                                       fontWeight: FontWeight.w600,
                                     ),
+                                  ),
                                   ),
                                 ],
                               ),
@@ -889,6 +918,8 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
                               ),
                               child: Text(
                                 tr('Unvisited'),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
                                   fontSize: 12,
                                   color: Colors.grey.shade600,
@@ -938,7 +969,7 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
                 children: [
                   Icon(Icons.lock_outline_rounded, size: 12),
                   SizedBox(width: 3),
-                  Text(tr('Premium'), style: TextStyle(fontSize: 11)),
+                  Text(tr('Premium'), maxLines: 1, style: TextStyle(fontSize: 11)),
                 ],
               ),
             ),
@@ -1023,6 +1054,8 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
           const SizedBox(width: 4),
           Text(
             tr(text),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
             style: TextStyle(
               fontSize: 12,
               color: contentColor,

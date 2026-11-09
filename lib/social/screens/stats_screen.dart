@@ -412,7 +412,10 @@ class _HeroFigure extends StatelessWidget {
             child: Text(value, style: const TextStyle(fontSize: 18, height: 1.1, fontWeight: FontWeight.w800, color: AppColors.ink)),
           ),
           const SizedBox(height: 2),
-          Text(tr(label), style: const TextStyle(fontSize: 10, fontWeight: FontWeight.w700, letterSpacing: 1, color: AppColors.label)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(tr(label), maxLines: 1, style: const TextStyle(fontSize: 10, fontWeight: FontWeight.w700, letterSpacing: 1, color: AppColors.label)),
+          ),
         ],
       ),
     );
@@ -435,8 +438,7 @@ class _SectionLabel extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(4, 22, 4, 10),
       child: Row(
         children: [
-          Text(tr(title), style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)),
-          const Spacer(),
+          Expanded(child: Text(tr(title), maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800))),
           const _Legend(),
         ],
       ),
@@ -504,8 +506,10 @@ class _Footer extends StatelessWidget {
       child: Row(mainAxisSize: MainAxisSize.min, children: [
         Icon(Icons.group_rounded, size: 14, color: friend!.rank == 1 ? AppColors.gold : AppColors.friend),
         const SizedBox(width: 3),
-        Text(friend!.rank == 1 ? tr('Friends #1') : tr('Friends #${friend!.rank}/${friend!.of}'),
-            maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w800, color: AppColors.ink)),
+        Flexible(
+          child: Text(friend!.rank == 1 ? tr('Friends #1') : tr('Friends #${friend!.rank}/${friend!.of}'),
+              maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w800, color: AppColors.ink)),
+        ),
       ]),
     );
   }
@@ -718,7 +722,11 @@ void _showRankShares(BuildContext context, List<(String, double)> shares, String
                   const SizedBox(width: 8),
                   SizedBox(
                     width: 94,
-                    child: Text(tr(name), style: TextStyle(fontSize: 14, fontWeight: name == myRank ? FontWeight.w900 : FontWeight.w700, color: name == myRank ? AppColors.darkMint : null)),
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      alignment: Alignment.centerLeft,
+                      child: Text(tr(name), maxLines: 1, style: TextStyle(fontSize: 14, fontWeight: name == myRank ? FontWeight.w900 : FontWeight.w700, color: name == myRank ? AppColors.darkMint : null)),
+                    ),
                   ),
                   Expanded(
                     child: ClipRRect(
@@ -780,7 +788,7 @@ class _BadgeTile extends StatelessWidget {
             children: [
               if (b != null) ...[_RankImage(b.rank, size: 28), const SizedBox(width: 6)],
               Expanded(
-                child: Text(b == null ? '' : '${b.points} ${tr('pts')} · ${tr(b.rank)}',
+                child: Text(b == null ? '' : '${tr('${b.points} pts')} · ${tr(b.rank)}',
                     maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 12, color: AppColors.label, fontWeight: FontWeight.w600)),
               ),
             ],
@@ -1036,7 +1044,7 @@ class _FriendRankRow extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(profile.displayName, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w800)),
-                if (isMe) Text(tr('YOU'), style: TextStyle(fontSize: 10, fontWeight: FontWeight.w900, letterSpacing: 0.8, color: AppColors.darkMint)),
+                if (isMe) Text(tr('YOU'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 10, fontWeight: FontWeight.w900, letterSpacing: 0.8, color: AppColors.darkMint)),
               ],
             ),
           ),
@@ -1065,7 +1073,7 @@ class _FriendRankRow extends StatelessWidget {
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Text(tr('Stats'), style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w800, color: AppColors.darkMint)),
+                          Flexible(child: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Stats'), maxLines: 1, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w800, color: AppColors.darkMint)))),
                           const Icon(Icons.chevron_right_rounded, size: 16, color: AppColors.darkMint),
                         ],
                       ),
@@ -1214,7 +1222,7 @@ class _SiteCollectionsState extends State<_SiteCollections> {
                 crossAxisAlignment: CrossAxisAlignment.baseline,
                 textBaseline: TextBaseline.alphabetic,
                 children: [
-                  Text(tr('Travelog collections'), style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)),
+                  Flexible(child: Text(tr('Travelog collections'), maxLines: 1, overflow: TextOverflow.ellipsis, style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800))),
                   const SizedBox(width: 8),
                   Text('${all.length}', style: theme.textTheme.bodySmall?.copyWith(color: AppColors.label)),
                 ],
@@ -1442,7 +1450,7 @@ class _UserBoardState extends State<_UserBoard> {
     if (_premiumOnly && !SubscriptionService.instance.isPremium) {
       Navigator.of(context).push(MaterialPageRoute<void>(
         builder: (_) => Scaffold(
-          appBar: AppBar(title: Text(_title)),
+          appBar: AppBar(title: Text(_title, maxLines: 1, overflow: TextOverflow.ellipsis)),
           body: StatLockGuard(
             statKey: 'board.${widget.kind}',
             locked: true,
@@ -1487,7 +1495,7 @@ class _UserBoardState extends State<_UserBoard> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       if (locked && !_open) const Padding(padding: EdgeInsets.only(right: 6), child: Icon(Icons.lock_rounded, size: 14, color: AppColors.darkMint)),
-                      Text(_open ? tr('Show less') : tr('Show all ${rows.length}'), style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: AppColors.darkMint)),
+                      Flexible(child: Text(_open ? tr('Show less') : tr('Show all ${rows.length}'), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: AppColors.darkMint))),
                       Icon(_open ? Icons.keyboard_arrow_up_rounded : Icons.keyboard_arrow_down_rounded, size: 20, color: AppColors.darkMint),
                     ],
                   ),
@@ -1526,7 +1534,7 @@ class _BoardCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(title, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w900)),
-                    if (action != null) Text(tr('% of users'), style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: AppColors.label)),
+                    if (action != null) Text(tr('% of users'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: AppColors.label)),
                   ],
                 ),
               ),
@@ -1667,7 +1675,7 @@ class _BoardLine extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(row.label, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700)),
+                Text(tr(row.label), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700)),
                 const SizedBox(height: 4),
                 ClipRRect(
                   borderRadius: BorderRadius.circular(2),

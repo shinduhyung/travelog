@@ -173,7 +173,7 @@ class _MongolEmpireMapScreenState extends State<MongolEmpireMapScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title:  Text(tr('Mongol Empire'), style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
+        title:  Text(tr('Mongol Empire'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
         backgroundColor: Colors.white,
         elevation: 0,
         iconTheme: const IconThemeData(color: Colors.black),

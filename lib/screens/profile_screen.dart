@@ -80,6 +80,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
         title:  Text(
           tr('My Profile'),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
@@ -435,6 +437,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                           children: [
                                              Text(
                                               tr('Go Lifetime'),
+                                              maxLines: 1,
+                                              overflow: TextOverflow.ellipsis,
                                               style: TextStyle(
                                                   fontSize: 16, fontWeight: FontWeight.w800, color: Colors.white),
                                             ),
@@ -443,6 +447,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                               tr(lifetime != null
                                                   ? 'Pay ${lifetime.price} once — never renew again'
                                                   : 'Pay once — never renew again'),
+                                              maxLines: 1,
+                                              overflow: TextOverflow.ellipsis,
                                               style: TextStyle(fontSize: 12, color: Colors.white.withOpacity(0.9)),
                                             ),
                                           ],

@@ -55,7 +55,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
     final fmt = m.format ?? compactNumber;
 
     return Scaffold(
-      appBar: AppBar(title: Text(tr('Friend Ranking'))),
+      appBar: AppBar(title: Text(tr('Friend Ranking'), maxLines: 1, overflow: TextOverflow.ellipsis)),
       body: Column(
         children: [
           SizedBox(

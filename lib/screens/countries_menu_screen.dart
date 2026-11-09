@@ -449,7 +449,8 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                         fontWeight: FontWeight.w900,
                       ),
                     ),
-                    Container(
+                    Flexible(
+                      child: Container(
                       padding: const EdgeInsets.symmetric(
                         horizontal: 8,
                         vertical: 3,
@@ -460,12 +461,15 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                       ),
                       child: Text(
                         tr('${visitedList.length} Countries'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
                           color: Colors.white,
                           fontSize: 10,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
+                    ),
                     ),
                   ],
                 ),
@@ -536,6 +540,7 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
               Expanded(
                 child: Text(
                   tr(name),
+                  maxLines: 1,
                   style: const TextStyle(
                     fontSize: 8,
                     fontWeight: FontWeight.bold,
@@ -780,8 +785,11 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                                           const SizedBox(
                                                             width: 6,
                                                           ),
-                                                          Text(
+                                                          Flexible(
+                                                          child: Text(
                                                             tr('Countries'),
+                                                            maxLines: 1,
+                                                            overflow: TextOverflow.ellipsis,
                                                             style: TextStyle(
                                                               fontSize: 12,
                                                               fontWeight:
@@ -791,6 +799,7 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                                                 context,
                                                               ).primaryColor,
                                                             ),
+                                                          ),
                                                           ),
                                                         ],
                                                       ),
@@ -1206,6 +1215,8 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                         children: [
                                           Text(
                                             tr(statisticsItems[_selectedStatIndex]['title']),
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
                                             style: const TextStyle(
                                               fontSize: 18,
                                               fontWeight: FontWeight.w700,
@@ -1214,6 +1225,8 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                           const SizedBox(height: 2),
                                           Text(
                                             tr('View detailed statistics'),
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
                                             style: TextStyle(
                                               fontSize: 13,
                                               color: Colors.grey.shade500,

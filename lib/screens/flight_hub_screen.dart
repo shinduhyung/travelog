@@ -93,14 +93,19 @@ class FlightHubScreen extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                tr('Flight Hub'),
-                                style: TextStyle(
-                                  fontSize: 36,
-                                  fontWeight: FontWeight.w900,
-                                  color: Colors.black,
-                                  height: 1.0,
-                                  letterSpacing: -1.2,
+                              FittedBox(
+                                fit: BoxFit.scaleDown,
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  tr('Flight Hub'),
+                                  maxLines: 1,
+                                  style: TextStyle(
+                                    fontSize: 36,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.black,
+                                    height: 1.0,
+                                    letterSpacing: -1.2,
+                                  ),
                                 ),
                               ),
                               const SizedBox(height: 8),
@@ -123,12 +128,16 @@ class FlightHubScreen extends StatelessWidget {
                                       ),
                                     ),
                                     const SizedBox(width: 6),
-                                    Text(
-                                      tr('All systems active'),
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.w600,
+                                    Flexible(
+                                      child: Text(
+                                        tr('All systems active'),
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w600,
+                                        ),
                                       ),
                                     ),
                                   ],
@@ -164,6 +173,8 @@ class FlightHubScreen extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 24),
                     child: Text(
                       tr('Quick Access'),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.w800,
@@ -225,6 +236,8 @@ class FlightHubScreen extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 24),
                 child: Text(
                   tr('Flight Analytics'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.w800,
@@ -388,6 +401,8 @@ class FlightHubScreen extends StatelessWidget {
                 children: [
                   Text(
                     tr('Flight Logs'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.w800,
@@ -398,6 +413,8 @@ class FlightHubScreen extends StatelessWidget {
                   const SizedBox(height: 4),
                   Text(
                     tr('View all your flights'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 14,
                       color: Colors.white.withOpacity(0.9),
@@ -486,6 +503,8 @@ class FlightHubScreen extends StatelessWidget {
               children: [
                 Text(
                   tr(title),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.w700,
@@ -496,6 +515,8 @@ class FlightHubScreen extends StatelessWidget {
                 const SizedBox(height: 4),
                 Text(
                   tr(subtitle),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontSize: 13,
                     color: Colors.grey.shade600,
@@ -582,6 +603,8 @@ class FlightHubScreen extends StatelessWidget {
                     children: [
                       Text(
                         tr('Route Map'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w700,
@@ -592,6 +615,8 @@ class FlightHubScreen extends StatelessWidget {
                       const SizedBox(height: 2),
                       Text(
                         tr('Explore World'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           fontSize: 12,
                           color: Colors.white.withOpacity(0.6),
@@ -665,11 +690,17 @@ class FlightHubScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Column(
+                  Flexible(
+                    child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    alignment: Alignment.bottomLeft,
+                    child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         tr('Explore Route Map'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w800,
@@ -680,6 +711,8 @@ class FlightHubScreen extends StatelessWidget {
                       const SizedBox(height: 4),
                       Text(
                         tr('View your global flight network'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           fontSize: 14,
                           color: Colors.white.withOpacity(0.9),
@@ -687,6 +720,8 @@ class FlightHubScreen extends StatelessWidget {
                         ),
                       ),
                     ],
+                  ),
+                    ),
                   ),
                 ],
               ),
@@ -735,13 +770,17 @@ class FlightHubScreen extends StatelessWidget {
                       color: Color(0xFF667EEA), size: 22),
                 ),
                 const SizedBox(width: 12),
-                Text(
-                  tr('Flight Overview'),
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.black87,
-                    letterSpacing: -0.3,
+                Flexible(
+                  child: Text(
+                    tr('Flight Overview'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.black87,
+                      letterSpacing: -0.3,
+                    ),
                   ),
                 ),
                 const Spacer(),
@@ -768,6 +807,8 @@ class FlightHubScreen extends StatelessWidget {
                       const SizedBox(height: 4),
                       Text(
                         tr('Total Flights'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           fontSize: 13,
                           color: Colors.grey.shade600,
@@ -799,6 +840,8 @@ class FlightHubScreen extends StatelessWidget {
                       const SizedBox(height: 4),
                       Text(
                         tr('Unique Routes'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           fontSize: 13,
                           color: Colors.grey.shade600,
@@ -864,6 +907,8 @@ class FlightHubScreen extends StatelessWidget {
             const SizedBox(height: 20),
             Text(
               tr('Flight Overview'),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.w700,
@@ -890,6 +935,8 @@ class FlightHubScreen extends StatelessWidget {
                       const SizedBox(height: 2),
                       Text(
                         tr('Total Flights'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           fontSize: 13,
                           color: Colors.white.withOpacity(0.85),
@@ -921,6 +968,8 @@ class FlightHubScreen extends StatelessWidget {
                       const SizedBox(height: 2),
                       Text(
                         tr('Unique Routes'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           fontSize: 13,
                           color: Colors.white.withOpacity(0.85),
@@ -981,6 +1030,8 @@ class FlightHubScreen extends StatelessWidget {
                 children: [
                   Text(
                     tr(title),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w700,
@@ -991,6 +1042,8 @@ class FlightHubScreen extends StatelessWidget {
                   const SizedBox(height: 4),
                   Text(
                     tr(subtitle),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 14,
                       color: Colors.grey.shade600,
@@ -1047,6 +1100,8 @@ class FlightHubScreen extends StatelessWidget {
             const SizedBox(height: 18),
             Text(
               tr(title),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
               style: TextStyle(
                 fontSize: 17,
                 fontWeight: FontWeight.w700,
@@ -1057,6 +1112,8 @@ class FlightHubScreen extends StatelessWidget {
             const SizedBox(height: 4),
             Text(
               tr(subtitle),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
               style: TextStyle(
                 fontSize: 13,
                 color: Colors.grey.shade600,
@@ -1110,6 +1167,8 @@ class FlightHubScreen extends StatelessWidget {
                 children: [
                   Text(
                     tr(title),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 17,
                       fontWeight: FontWeight.w700,
@@ -1119,6 +1178,8 @@ class FlightHubScreen extends StatelessWidget {
                   const SizedBox(height: 2),
                   Text(
                     tr(subtitle),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 13,
                       color: Colors.grey.shade600,
@@ -1172,6 +1233,8 @@ class FlightHubScreen extends StatelessWidget {
                 Expanded(
                   child: Text(
                     tr(title),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w700,
@@ -1198,6 +1261,8 @@ class FlightHubScreen extends StatelessWidget {
                 const SizedBox(height: 2),
                 Text(
                   tr(unit),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontSize: 13,
                     color: Colors.grey.shade500,

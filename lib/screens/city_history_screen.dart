@@ -57,9 +57,9 @@ class CityHistoryTabScreen extends StatelessWidget{
           decoration:BoxDecoration(color:_C.ink,borderRadius:BorderRadius.circular(14)),
           child:Row(children:[
             Expanded(child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
-              Text(tr('$imperialCompleted of 1 collections'),style:const TextStyle(fontSize:22,fontWeight:FontWeight.w800,color:Colors.white,letterSpacing:-0.5)),
+              Text(tr('$imperialCompleted of 1 collections'),maxLines:1,overflow:TextOverflow.ellipsis,style:const TextStyle(fontSize:22,fontWeight:FontWeight.w800,color:Colors.white,letterSpacing:-0.5)),
               const SizedBox(height:4),
-              Text(tr(imperialCompleted==0?'No collections fully completed yet':'All collections completed! 🎉'),style:const TextStyle(fontSize:12,color:Color(0xFF888888))),
+              Text(tr(imperialCompleted==0?'No collections fully completed yet':'All collections completed! 🎉'),maxLines:1,overflow:TextOverflow.ellipsis,style:const TextStyle(fontSize:12,color:Color(0xFF888888))),
               const SizedBox(height:14),
               ClipRRect(borderRadius:BorderRadius.circular(4),child:SizedBox(height:6,child:Stack(children:[Container(color:const Color(0xFF2E2E2E)),FractionallySizedBox(widthFactor:pct,child:Container(color:_HC.imperial))]))),
             ])),
@@ -80,7 +80,7 @@ class CityHistoryScreen extends StatelessWidget{
   @override Widget build(BuildContext context)=>const CityHistoryTabScreen();
 }
 
-class _SH extends StatelessWidget{final String label;const _SH({required this.label});@override Widget build(BuildContext context)=>Padding(padding:const EdgeInsets.fromLTRB(16,24,16,12),child:Row(children:[Text(tr(label),style:const TextStyle(fontSize:11,fontWeight:FontWeight.w700,letterSpacing:2.0,color:_C.inkLight)),const SizedBox(width:12),Expanded(child:Container(height:1,color:_C.divider))]));}
+class _SH extends StatelessWidget{final String label;const _SH({required this.label});@override Widget build(BuildContext context)=>Padding(padding:const EdgeInsets.fromLTRB(16,24,16,12),child:Row(children:[Flexible(child:Text(tr(label),maxLines:1,overflow:TextOverflow.ellipsis,style:const TextStyle(fontSize:11,fontWeight:FontWeight.w700,letterSpacing:2.0,color:_C.inkLight))),const SizedBox(width:12),Expanded(child:Container(height:1,color:_C.divider))]));}
 
 class _OldestCard extends StatefulWidget{
   final List<City> allData;final Set<String> visitedNames;final bool useDefaultColor;
@@ -106,7 +106,7 @@ class _OldestCardState extends State<_OldestCard>{
           child:Row(children:[
             Container(width:42,height:42,decoration:BoxDecoration(color:_HC.history.withOpacity(0.10),borderRadius:BorderRadius.circular(10)),child:const Icon(Icons.history_edu_outlined,size:20,color:_HC.history)),
             const SizedBox(width:12),
-             Expanded(child:Text(tr('Oldest Cities'),style:TextStyle(fontSize:15,fontWeight:FontWeight.w700,color:_C.ink,letterSpacing:-0.2))),
+             Expanded(child:Text(tr('Oldest Cities'),maxLines:1,overflow:TextOverflow.ellipsis,style:TextStyle(fontSize:15,fontWeight:FontWeight.w700,color:_C.ink,letterSpacing:-0.2))),
             Container(height:36,padding:const EdgeInsets.symmetric(horizontal:10),decoration:BoxDecoration(color:_C.bg,borderRadius:BorderRadius.circular(8),border:Border.all(color:_C.divider)),
                 child:DropdownButtonHideUnderline(child:DropdownButton<String>(value:_cont,icon:const Icon(Icons.keyboard_arrow_down_rounded,size:16,color:_C.inkMid),style:const TextStyle(fontSize:12,color:_C.ink,fontWeight:FontWeight.w600),items:_conts.map((v)=>DropdownMenuItem(value:v,child:Text(tr(v)))).toList(),onChanged:(v){if(v!=null)setState((){_cont=v;_prep();}); }))),
           ]),
@@ -141,7 +141,7 @@ class _OldestCardState extends State<_OldestCard>{
                     const SizedBox(height:5),
                     ClipRRect(borderRadius:BorderRadius.circular(3),child:LinearProgressIndicator(value:barFrac,minHeight:3,backgroundColor:_C.divider,valueColor:AlwaysStoppedAnimation<Color>(barColor))),
                     const SizedBox(height:3),
-                    Row(children:[Text(tr(_cf(item)),style:const TextStyle(fontSize:11)),const SizedBox(width:4),Text(tr(item.country),style:const TextStyle(fontSize:10,color:_C.inkLight))]),
+                    Row(children:[Text(tr(_cf(item)),style:const TextStyle(fontSize:11)),const SizedBox(width:4),Flexible(child:Text(tr(item.country),maxLines:1,overflow:TextOverflow.ellipsis,style:const TextStyle(fontSize:10,color:_C.inkLight)))]),
                   ])),
                 ]),
               ),
@@ -176,9 +176,9 @@ class _ImperialCardState extends State<_ImperialCard> with SingleTickerProviderS
           Container(width:42,height:42,decoration:BoxDecoration(color:_HC.imperial.withOpacity(0.10),borderRadius:BorderRadius.circular(10)),child:const Icon(Icons.account_balance_outlined,size:20,color:_HC.imperial)),
           const SizedBox(width:14),
            Expanded(child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
-            Text(tr('HISTORY'),style:TextStyle(fontSize:10,fontWeight:FontWeight.w700,letterSpacing:1.5,color:_HC.imperial)),
+            Text(tr('HISTORY'),maxLines:1,overflow:TextOverflow.ellipsis,style:TextStyle(fontSize:10,fontWeight:FontWeight.w700,letterSpacing:1.5,color:_HC.imperial)),
             SizedBox(height:2),
-            Text(tr('Former Imperial Capitals'),style:TextStyle(fontSize:15,fontWeight:FontWeight.w700,color:_C.ink,letterSpacing:-0.2)),
+            Text(tr('Former Imperial Capitals'),maxLines:1,overflow:TextOverflow.ellipsis,style:TextStyle(fontSize:15,fontWeight:FontWeight.w700,color:_C.ink,letterSpacing:-0.2)),
           ])),
           GestureDetector(onTap:()=>Navigator.push(context,MaterialPageRoute(builder:(_)=>CityStatsMapScreen(cities:widget.cities,title:'Imperial Capitals',markerColor:_HC.imperial))),
               child:Container(padding:const EdgeInsets.symmetric(horizontal:10,vertical:6),decoration:BoxDecoration(color:_C.bg,borderRadius:BorderRadius.circular(8),border:Border.all(color:_C.divider)),child:Row(mainAxisSize:MainAxisSize.min,children:[Icon(Icons.map_outlined,size:14,color:_C.inkMid),SizedBox(width:4),Text(tr('Map'),style:TextStyle(fontSize:12,fontWeight:FontWeight.w600,color:_C.inkMid))]))),

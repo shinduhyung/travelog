@@ -207,7 +207,10 @@ class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
             FilledButton.icon(
               onPressed: action,
               icon: const Icon(Icons.auto_awesome_rounded),
-              label: Text(tr('Discover my type')),
+              label: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(tr('Discover my type'), maxLines: 1),
+              ),
             ),
           ],
         ],

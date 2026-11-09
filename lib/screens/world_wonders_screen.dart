@@ -229,12 +229,16 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                tr("Humanity's greatest achievements"),
-                style: TextStyle(
-                  fontSize: 11,
-                  color: Colors.grey[500],
-                  letterSpacing: 0.2,
+              Flexible(
+                child: Text(
+                  tr("Humanity's greatest achievements"),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontSize: 11,
+                    color: Colors.grey[500],
+                    letterSpacing: 0.2,
+                  ),
                 ),
               ),
               Text(
@@ -380,6 +384,7 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                             SizedBox(width: 4),
                             Text(
                               tr('VISITED'),
+                              maxLines: 1,
                               style: TextStyle(
                                 fontSize: 10,
                                 fontWeight: FontWeight.w800,
@@ -410,6 +415,8 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                         children: [
                           Text(
                             tr(name),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                             style: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w800,
@@ -429,11 +436,15 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                                 ),
                               ),
                               const SizedBox(width: 5),
-                              Text(
-                                tr(location),
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.grey[500],
+                              Flexible(
+                                child: Text(
+                                  tr(location),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    color: Colors.grey[500],
+                                  ),
                                 ),
                               ),
                             ],
@@ -619,6 +630,8 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                           Expanded(
                             child: Text(
                               tr(locationDisplay),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
                               style: TextStyle(
                                 color: headerTextColor.withOpacity(0.7),
                                 fontSize: 13,
@@ -647,7 +660,8 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Row(
+                              Flexible(
+                                child: Row(
                                 children: [
                                   GestureDetector(
                                     onTap: () => provider.toggleWishlistStatus(
@@ -678,17 +692,22 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                                     ),
                                   ),
                                   const SizedBox(width: 8),
-                                  Text(
-                                    tr(isWishlisted ? 'Wishlisted' : 'Wishlist'),
-                                    style: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w600,
-                                      color: isWishlisted
-                                          ? Colors.red[400]
-                                          : Colors.grey[500],
+                                  Flexible(
+                                    child: Text(
+                                      tr(isWishlisted ? 'Wishlisted' : 'Wishlist'),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: TextStyle(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w600,
+                                        color: isWishlisted
+                                            ? Colors.red[400]
+                                            : Colors.grey[500],
+                                      ),
                                     ),
                                   ),
                                 ],
+                                ),
                               ),
                               RatingBar.builder(
                                 initialRating: freshLandmark.rating ?? 0.0,
@@ -714,13 +733,17 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                             Text(
-                              tr('Visit History'),
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w800,
-                                color: Color(0xFF1A1A1A),
-                                letterSpacing: -0.3,
+                            Flexible(
+                              child: Text(
+                                tr('Visit History'),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w800,
+                                  color: Color(0xFF1A1A1A),
+                                  letterSpacing: -0.3,
+                                ),
                               ),
                             ),
                             GestureDetector(

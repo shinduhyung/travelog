@@ -9,6 +9,7 @@ Files: prompts.json (from make_prompts.py), generated.json (results). Images lan
 named like Firebase new_countrydex/{iso3}_{snake}.webp, never in the browser's Downloads folder.
 """
 import io
+import os
 import json
 import sys
 import urllib.request
@@ -19,7 +20,13 @@ from PIL import Image
 HERE = Path(__file__).resolve().parent
 RAW = HERE / "raw"
 RAW.mkdir(exist_ok=True)
-GEN = HERE / "generated.json"
+# LEO_SET=paint switches to the artwork queue (paint_prompts.json / paint_generated.json / paint_qa.json).
+SET = os.environ.get("LEO_SET", "")
+PRE = {"paint": "paint_", "souvenir": "souv_", "miss": "miss_"}.get(SET, "")
+if SET == "souvenir":  # souvenir set saves straight to Desktop/souvenir under the file name from the prompts
+    RAW = Path.home() / "Desktop" / "souvenir"
+    RAW.mkdir(exist_ok=True)
+GEN = HERE / f"{PRE}generated.json"
 
 
 def load(p, default):
@@ -33,11 +40,11 @@ def save(gen):
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
     cmd = sys.argv[1]
-    prompts, gen = load(HERE / "prompts.json", {}), load(GEN, {})
+    prompts, gen = load(HERE / f"{PRE}prompts.json", {}), load(GEN, {})
     if cmd == "next":
         nxt = next((v for f, v in prompts.items() if f not in gen), None)
         if not nxt:  # main pass done: one retry for QA failures, with the reviewer's note as a correction
-            qa = load(HERE / "qa.json", {})
+            qa = load(HERE / f"{PRE}qa.json", {})
             for f, d in qa.items():
                 if not d.get("pass") and f in prompts and not gen.get(f, {}).get("retried"):
                     fix = d.get("note", "")
@@ -48,7 +55,7 @@ if __name__ == "__main__":
                     nxt = {**prompts[f], "prompt": prompts[f]["prompt"] + f" Correction of a previous attempt: {fix}"}
                     gen[f]["retried"] = True
                     qa.pop(f)  # re-check the new image
-                    (HERE / "qa.json").write_text(json.dumps(qa, ensure_ascii=False, indent=1), encoding="utf-8")
+                    (HERE / f"{PRE}qa.json").write_text(json.dumps(qa, ensure_ascii=False, indent=1), encoding="utf-8")
                     save(gen)
                     break
         print(json.dumps({"file": nxt["file"], "name": nxt["name"], "prompt": nxt["prompt"]}, ensure_ascii=False)
@@ -62,7 +69,7 @@ if __name__ == "__main__":
             gen[f] = {"status": "bad_size", "url": url, "size": size}
             save(gen)
             sys.exit(f"STOP: {f} is {size}, not 1024x1024")
-        (RAW / (Path(f).stem + ".jpg")).write_bytes(raw)
+        (RAW / (f if SET == "souvenir" else Path(f).stem + ".jpg")).write_bytes(raw)
         gen[f] = {"status": "made", "url": url, "retried": gen.get(f, {}).get("retried", False)}
         save(gen)
         print(f"saved raw/{Path(f).stem}.jpg ({sum(1 for v in gen.values() if v['status'] == 'made')} made)")

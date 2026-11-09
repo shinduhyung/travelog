@@ -460,19 +460,23 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.18),
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(color: headerTextColor.withOpacity(0.4), width: 1),
-                  ),
-                  child: Text(
-                    tr(text),
-                    style: const TextStyle(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w700,
-                      color: headerTextColor,
+                Flexible(
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.18),
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(color: headerTextColor.withOpacity(0.4), width: 1),
+                    ),
+                    child: Text(
+                      tr(text),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w700,
+                        color: headerTextColor,
+                      ),
                     ),
                   ),
                 ),
@@ -481,6 +485,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                     padding: const EdgeInsets.only(left: 8),
                     child: Text(
                       tr(openedText),
+                      maxLines: 1,
                       style: TextStyle(
                         fontSize: 13,
                         fontWeight: FontWeight.w600,
@@ -694,7 +699,8 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                             const SizedBox(height: 10),
                             Row(
                               children: [
-                                Container(
+                                Flexible(
+                                  child: Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                                   decoration: BoxDecoration(
                                     color: Colors.white.withOpacity(0.18),
@@ -708,6 +714,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                                       Flexible(
                                         child: Text(
                                           tr(locationDisplay),
+                                          maxLines: 1,
                                           overflow: TextOverflow.ellipsis,
                                           style: TextStyle(
                                             fontSize: 12.5,
@@ -718,6 +725,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                                       ),
                                     ],
                                   ),
+                                ),
                                 ),
                                 if (isVisited || visitedSubCount > 0) ...[
                                   const SizedBox(width: 8),
@@ -799,7 +807,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                           if (_isItemCategory(freshLandmark, 'Painting') || _isItemCategory(freshLandmark, 'Artwork')) ...[
                             if (freshLandmark.artist != null) Text(tr(freshLandmark.artist!), style: Theme.of(sheetContext).textTheme.displaySmall?.copyWith(fontWeight: FontWeight.bold, fontSize: 32)),
                             if (freshLandmark.created != null) Padding(padding: const EdgeInsets.only(top: 4), child: Text(tr(freshLandmark.created!), style: Theme.of(sheetContext).textTheme.headlineSmall?.copyWith(color: Colors.black54, fontStyle: FontStyle.italic))),
-                            if (freshLandmark.museum != null) Padding(padding: const EdgeInsets.only(top: 8), child: Row(children: [Icon(Icons.museum_outlined, color: themeColor, size: 20), const SizedBox(width: 8), Text(tr(freshLandmark.museum!), style: Theme.of(sheetContext).textTheme.titleMedium)])),
+                            if (freshLandmark.museum != null) Padding(padding: const EdgeInsets.only(top: 8), child: Row(children: [Icon(Icons.museum_outlined, color: themeColor, size: 20), const SizedBox(width: 8), Flexible(child: Text(tr(freshLandmark.museum!), style: Theme.of(sheetContext).textTheme.titleMedium))])),
                             const Padding(padding: EdgeInsets.symmetric(vertical: 16), child: Divider(thickness: 1)),
                           ],
 
@@ -807,7 +815,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('Wishlist:')), IconButton(visualDensity: VisualDensity.compact, icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey), onPressed: () => provider.toggleWishlistStatus(freshLandmark.name))]),
-                              Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('My Rating:')), const SizedBox(width: 8), RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating))]),
+                              Flexible(child: Row(mainAxisSize: MainAxisSize.min, children: [ Flexible(child: Text(tr('My Rating:'), maxLines: 1, overflow: TextOverflow.ellipsis)), const SizedBox(width: 8), RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating))])),
                             ],
                           ),
                           const Divider(height: 20),
@@ -843,7 +851,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                             const Divider(height: 24),
                           ],
 
-                          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text(tr('History (${freshLandmark.visitDates.length} entries)'), style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit')), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
+                          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Flexible(child: Text(tr('History (${freshLandmark.visitDates.length} entries)'), maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(sheetContext).textTheme.titleSmall)), OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit')), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
                           const SizedBox(height: 8),
                           if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => LandmarkVisitEditorCard(
                             key: ValueKey('${freshLandmark.name}_${entry.key}'),
@@ -932,12 +940,14 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Row(
-                      children: [
-                        const Icon(Icons.emoji_events_rounded, size: 20, color: Colors.white),
-                        const SizedBox(width: 8),
-                         Text(tr('Progress'), style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white)),
-                      ],
+                    Flexible(
+                      child: Row(
+                        children: [
+                          const Icon(Icons.emoji_events_rounded, size: 20, color: Colors.white),
+                          const SizedBox(width: 8),
+                          Flexible(child: Text(tr('Progress'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white))),
+                        ],
+                      ),
                     ),
                     Text(tr('${(percentage * 100).toStringAsFixed(0)}%'), style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white)),
                   ],
@@ -970,7 +980,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                             children: [
                               const Icon(Icons.map_outlined, color: Colors.white, size: 16),
                               const SizedBox(width: 6),
-                               Text(tr('View Map'), style: TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.w600)),
+                               Text(tr('View Map'), maxLines: 1, style: TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.w600)),
                             ],
                           ),
                         ),
@@ -978,9 +988,13 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                     else
                       const SizedBox.shrink(),
 
-                    Text(
-                        tr('$visitedCount / $totalCount visited'),
-                        style: TextStyle(fontSize: 13, color: Colors.white.withOpacity(0.9), fontWeight: FontWeight.w500)
+                    Flexible(
+                      child: Text(
+                          tr('$visitedCount / $totalCount visited'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(fontSize: 13, color: Colors.white.withOpacity(0.9), fontWeight: FontWeight.w500)
+                      ),
                     ),
                   ],
                 ),
@@ -1122,31 +1136,31 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                                     items: [
                                        DropdownMenuItem(
                                         value: LandmarkSortOption.nameAsc,
-                                        child: Text(tr("Name (A-Z)"), style: TextStyle(fontSize: 14)),
+                                        child: Text(tr("Name (A-Z)"), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 14)),
                                       ),
                                        DropdownMenuItem(
                                         value: LandmarkSortOption.country,
-                                        child: Text(tr("Country"), style: TextStyle(fontSize: 14)),
+                                        child: Text(tr("Country"), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 14)),
                                       ),
                                       if (widget.attributes.contains('River'))
                                          DropdownMenuItem(
                                           value: LandmarkSortOption.metricDesc,
-                                          child: Text(tr("Length"), style: TextStyle(fontSize: 14)),
+                                          child: Text(tr("Length"), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 14)),
                                         ),
                                       if (widget.attributes.contains('Lake'))
                                          DropdownMenuItem(
                                           value: LandmarkSortOption.metricDesc,
-                                          child: Text(tr("Area"), style: TextStyle(fontSize: 14)),
+                                          child: Text(tr("Area"), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 14)),
                                         ),
                                       if (widget.attributes.contains('Mountain') || widget.attributes.contains('Falls') || widget.attributes.contains('Waterfall'))
                                          DropdownMenuItem(
                                           value: LandmarkSortOption.metricDesc,
-                                          child: Text(tr("Height"), style: TextStyle(fontSize: 14)),
+                                          child: Text(tr("Height"), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 14)),
                                         ),
                                       if (widget.attributes.contains('Fast Food'))
                                          DropdownMenuItem(
                                           value: LandmarkSortOption.metricDesc,
-                                          child: Text(tr("Number of Locations"), style: TextStyle(fontSize: 14)),
+                                          child: Text(tr("Number of Locations"), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 14)),
                                         ),
                                     ],
                                   ),
@@ -1233,7 +1247,9 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
 
                                     Expanded(
                                       child: Text(
-                                          tr("$groupKey $visitedInGroup/${groupItems.length}"),
+                                          "${tr(groupKey)} $visitedInGroup/${groupItems.length}",
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
                                           style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black87)
                                       ),
                                     ),
@@ -1411,11 +1427,11 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(item.name, style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15), maxLines: 2, overflow: TextOverflow.ellipsis),
+                        Text(tr(item.name), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15), maxLines: 2, overflow: TextOverflow.ellipsis),
                         if (metricText.isNotEmpty)
                           Padding(
                             padding: const EdgeInsets.only(top: 2.0),
-                            child: Text(tr(metricText), style: TextStyle(fontSize: 12, color: Colors.grey[600], fontWeight: FontWeight.w500)),
+                            child: Text(tr(metricText), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12, color: Colors.grey[600], fontWeight: FontWeight.w500)),
                           ),
                       ],
                     ),

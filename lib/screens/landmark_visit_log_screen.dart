@@ -244,7 +244,8 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
                             const SizedBox(height: 10),
                             Row(
                               children: [
-                                Container(
+                                Flexible(
+                                  child: Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                                   decoration: BoxDecoration(
                                     color: Colors.white.withOpacity(0.18),
@@ -258,6 +259,7 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
                                       Flexible(
                                         child: Text(
                                           tr(countryNames),
+                                          maxLines: 1,
                                           overflow: TextOverflow.ellipsis,
                                           style: TextStyle(
                                             fontSize: 12.5,
@@ -267,6 +269,7 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
                                         ),
                                       ),
                                     ],
+                                  ),
                                   ),
                                 ),
                                 if (isVisited) ...[
@@ -283,6 +286,7 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
                                         Icon(Icons.check_circle, size: 13, color: finalColor),
                                         const SizedBox(width: 4),
                                         Text(tr('Visited'),
+                                            maxLines: 1,
                                             style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: finalColor)),
                                       ],
                                     ),
@@ -301,13 +305,13 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                     _buildLandmarkHeroImage(freshLandmark),
                     Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                      Row(children: [
-                         Text(tr('Wishlist:')),
+                      Expanded(child: Row(children: [
+                        Flexible(child: Text(tr('Wishlist:'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                         IconButton(
                             icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border,
                                 color: isWishlisted ? Colors.red : Colors.grey),
                             onPressed: () => provider.toggleWishlistStatus(freshLandmark.name)),
-                      ]),
+                      ])),
                       RatingBar.builder(
                           initialRating: freshLandmark.rating ?? 0.0,
                           allowHalfRating: true, itemSize: 28,
@@ -318,8 +322,12 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
 
                     // ── Visit History ───────────────────────
                     Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                      Text(tr('History (${freshLandmark.visitDates.length} entries)'),
-                          style: Theme.of(sheetContext).textTheme.titleSmall),
+                      Flexible(
+                        child: Text(tr('History (${freshLandmark.visitDates.length} entries)'),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: Theme.of(sheetContext).textTheme.titleSmall),
+                      ),
                       OutlinedButton.icon(
                         icon: const Icon(Icons.add),
                         label:  Text(tr('Add Visit')),
@@ -423,9 +431,13 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
                     const SizedBox(width: 12),
                     Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                        Text(tr('Visit Log'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900,
                               color: Color(0xFF111827), letterSpacing: -0.6, height: 1.1)),
                       Text(tr('$totalLogs total entries'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyle(fontSize: 12, color: Colors.grey[500], fontWeight: FontWeight.w500)),
                     ])),
                     // 그룹 토글 — 작은 세그먼트 형태
@@ -472,9 +484,13 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
                           Container(width: 3, height: 16,
                               decoration: BoxDecoration(color: _kTheme, borderRadius: BorderRadius.circular(2))),
                           const SizedBox(width: 8),
-                          Text(tr(key),
-                              style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800,
-                                  color: Color(0xFF111827), letterSpacing: -0.3)),
+                          Flexible(
+                            child: Text(tr(key),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800,
+                                    color: Color(0xFF111827), letterSpacing: -0.3)),
+                          ),
                           const SizedBox(width: 8),
                           Text(tr('${items.length}'),
                               style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: Colors.grey[500])),
@@ -504,6 +520,7 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
           boxShadow: active ? [BoxShadow(color: Colors.black.withOpacity(0.08), blurRadius: 4, offset: const Offset(0, 1))] : [],
         ),
         child: Text(tr(label),
+            maxLines: 1,
             style: TextStyle(
               fontSize: 12, fontWeight: FontWeight.w700,
               color: active ? _kTheme : Colors.grey[500],
@@ -534,10 +551,14 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
           // 텍스트
           Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Text(item.site.name,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 14, color: Color(0xFF111827))),
             const SizedBox(height: 2),
             Text(
               tr(hasTitle ? '${item.visit.title}  ·  $dateStr' : dateStr),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
               style: TextStyle(fontSize: 12, color: Colors.grey[500]),
             ),
           ])),
@@ -673,8 +694,10 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
       child: ExpansionTile(
         controller: _expansionTileController, initiallyExpanded: _isEditing,
         title: Text(tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
             style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
-        subtitle: Text(tr('Date: $_year-$_month-$_day'), style: TextStyle(color: Colors.grey[600], fontSize: 13)),
+        subtitle: Text(tr('Date: $_year-$_month-$_day'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
             onPressed: () => showDialog(context: context, builder: (ctx) => AlertDialog(
                 title:  Text(tr('Delete Visit Record')),
@@ -691,7 +714,8 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             if (_isEditing) ...[
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                Text(tr('Visit Date: $_year-$_month-$_day'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                Flexible(child: Text(tr('Visit Date: $_year-$_month-$_day'), maxLines: 1, overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14))),
                 TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label:  Text(tr('Edit Date')),
                     onPressed: () => _selectDate(context), style: TextButton.styleFrom(visualDensity: VisualDensity.compact)),
               ]),

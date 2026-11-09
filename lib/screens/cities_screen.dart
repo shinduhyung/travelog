@@ -640,10 +640,11 @@ class _CitiesScreenState extends State<CitiesScreen> {
                     const SizedBox(height: 12),
                     DropdownButtonFormField<String>(
                       value: selectedContinent,
+                      isExpanded: true,
                       decoration:  InputDecoration(labelText: tr('Continent'), border: OutlineInputBorder()),
-                      hint:  Text(tr('Select Continent')),
+                      hint:  Text(tr('Select Continent'), maxLines: 1, overflow: TextOverflow.ellipsis),
                       items: continents.map((continent) {
-                        return DropdownMenuItem(value: continent, child: Text(tr(continent)));
+                        return DropdownMenuItem(value: continent, child: Text(tr(continent), maxLines: 1, overflow: TextOverflow.ellipsis));
                       }).toList(),
                       onChanged: (String? newValue) {
                         setStateDialog(() {
@@ -655,11 +656,12 @@ class _CitiesScreenState extends State<CitiesScreen> {
                     const SizedBox(height: 12),
                     DropdownButtonFormField<String>(
                       value: selectedSubregion,
+                      isExpanded: true,
                       decoration:  InputDecoration(labelText: tr('Subregion'), border: OutlineInputBorder()),
-                      hint:  Text(tr('Select Subregion (Optional)')),
+                      hint:  Text(tr('Select Subregion (Optional)'), maxLines: 1, overflow: TextOverflow.ellipsis),
                       items: selectedContinent != null
                           ? getSubregionsForContinent(selectedContinent!).map((subregion) {
-                        return DropdownMenuItem(value: subregion, child: Text(tr(subregion)));
+                        return DropdownMenuItem(value: subregion, child: Text(tr(subregion), maxLines: 1, overflow: TextOverflow.ellipsis));
                       }).toList()
                           : [],
                       onChanged: selectedContinent != null
@@ -669,7 +671,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                         });
                       }
                           : null,
-                      disabledHint:  Text(tr('Select a Continent first')),
+                      disabledHint:  Text(tr('Select a Continent first'), maxLines: 1, overflow: TextOverflow.ellipsis),
                     ),
                     const SizedBox(height: 12),
                     TextField(
@@ -1507,20 +1509,24 @@ class _CitiesScreenState extends State<CitiesScreen> {
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
-                                    TextButton(
-                                      onPressed: () {
-                                        Navigator.pop(sheetContext);
-                                      },
-                                      child:  Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.bold)),
-                                    ),
-                                    ElevatedButton(
-                                      onPressed: () {
-                                        Navigator.pop(sheetContext);
-                                      },
-                                      style: ElevatedButton.styleFrom(
-                                        backgroundColor: headerTextColor,
+                                    Flexible(
+                                      child: TextButton(
+                                        onPressed: () {
+                                          Navigator.pop(sheetContext);
+                                        },
+                                        child:  Text(tr('Cancel'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: headerTextColor, fontWeight: FontWeight.bold)),
                                       ),
-                                      child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.bold, color: headerColor)),
+                                    ),
+                                    Flexible(
+                                      child: ElevatedButton(
+                                        onPressed: () {
+                                          Navigator.pop(sheetContext);
+                                        },
+                                        style: ElevatedButton.styleFrom(
+                                          backgroundColor: headerTextColor,
+                                        ),
+                                        child: Text(tr('Done'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontWeight: FontWeight.bold, color: headerColor)),
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -1601,40 +1607,45 @@ class _CitiesScreenState extends State<CitiesScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              IconButton(
-                visualDensity: VisualDensity.compact,
-                padding: const EdgeInsets.symmetric(horizontal: 2),
-                icon: Icon(
-                  isHome ? Icons.home_rounded : Icons.home_outlined,
-                  color: isHome ? Theme.of(context).primaryColor : Colors.grey,
+              Expanded(
+                child: Row(
+                children: [
+                IconButton(
+                  visualDensity: VisualDensity.compact,
+                  padding: const EdgeInsets.symmetric(horizontal: 2),
+                  icon: Icon(
+                    isHome ? Icons.home_rounded : Icons.home_outlined,
+                    color: isHome ? Theme.of(context).primaryColor : Colors.grey,
+                  ),
+                  onPressed: () {
+                    provider.setCityHomeStatus(city.name, !isHome);
+                  },
                 ),
-                onPressed: () {
-                  provider.setCityHomeStatus(city.name, !isHome);
-                },
-              ),
-              const SizedBox(width: 6),
-               Text(tr('Lived:'), style: TextStyle(fontSize: 14)),
-              const SizedBox(width: 4),
-              Checkbox(
-                visualDensity: VisualDensity.compact,
-                value: hasLived,
-                onChanged: (bool? value) {
-                  provider.toggleCityLivedStatus(city.name);
-                },
-              ),
-              const SizedBox(width: 16),
-              IconButton(
-                visualDensity: VisualDensity.compact,
-                padding: const EdgeInsets.symmetric(horizontal: 2),
-                icon: Icon(
-                  isWishlisted ? Icons.favorite : Icons.favorite_border,
-                  color: isWishlisted ? wishlistColor : Colors.grey,
+                const SizedBox(width: 6),
+                 Flexible(child: Text(tr('Lived:'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 14))),
+                const SizedBox(width: 4),
+                Checkbox(
+                  visualDensity: VisualDensity.compact,
+                  value: hasLived,
+                  onChanged: (bool? value) {
+                    provider.toggleCityLivedStatus(city.name);
+                  },
                 ),
-                onPressed: () {
-                  provider.toggleCityWishlistStatus(city.name);
-                },
+                const SizedBox(width: 16),
+                IconButton(
+                  visualDensity: VisualDensity.compact,
+                  padding: const EdgeInsets.symmetric(horizontal: 2),
+                  icon: Icon(
+                    isWishlisted ? Icons.favorite : Icons.favorite_border,
+                    color: isWishlisted ? wishlistColor : Colors.grey,
+                  ),
+                  onPressed: () {
+                    provider.toggleCityWishlistStatus(city.name);
+                  },
+                ),
+                ],
+                ),
               ),
-              const Spacer(),
               _StarRating(
                 rating: cityVisitDetail?.rating ?? 0.0,
                 onRatingChanged: (rating) {
@@ -1647,9 +1658,13 @@ class _CitiesScreenState extends State<CitiesScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                tr('History ($visitedCount visits, $totalDuration days)'),
-                style: Theme.of(context).textTheme.titleSmall,
+              Flexible(
+                child: Text(
+                  tr('History ($visitedCount visits, $totalDuration days)'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: Theme.of(context).textTheme.titleSmall,
+                ),
               ),
               OutlinedButton.icon(
                 icon: const Icon(Icons.add),
@@ -2045,7 +2060,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(tr(label)),
+            Flexible(child: Text(tr(label), maxLines: 2, overflow: TextOverflow.ellipsis)),
             buildColorPicker(currentColor, onColorChanged),
           ],
         ),
@@ -2060,7 +2075,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-               Text(tr('Show Home Color')),
+               Flexible(child: Text(tr('Show Home Color'), maxLines: 2, overflow: TextOverflow.ellipsis)),
               Switch(
                 value: tempShowHome,
                 onChanged: (value) => setStateDialog(() => tempShowHome = value),
@@ -2073,7 +2088,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-               Text(tr('Show Lived Color')),
+               Flexible(child: Text(tr('Show Lived Color'), maxLines: 2, overflow: TextOverflow.ellipsis)),
               Switch(
                 value: tempShowLived,
                 onChanged: (value) => setStateDialog(() => tempShowLived = value),
@@ -2087,7 +2102,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-               Text(tr('Show Wishlist')),
+               Flexible(child: Text(tr('Show Wishlist'), maxLines: 2, overflow: TextOverflow.ellipsis)),
               Switch(
                 value: tempShowWishlist,
                 onChanged: (value) => setStateDialog(() => tempShowWishlist = value),
@@ -2118,7 +2133,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                         Text(tr('Show Flags instead of Dots')),
+                         Flexible(child: Text(tr('Show Flags instead of Dots'), maxLines: 2, overflow: TextOverflow.ellipsis)),
                         Switch(
                           value: tempShowFlags,
                           onChanged: (val) => setStateDialog(() => tempShowFlags = val),
@@ -2131,7 +2146,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                         Text(tr('By Population')),
+                         Flexible(child: Text(tr('By Population'), maxLines: 2, overflow: TextOverflow.ellipsis)),
                         Switch(
                           value: tempSizingMode == SizingMode.population,
                           onChanged: (val) => updateSizingMode(setStateDialog, SizingMode.population, val),
@@ -2141,7 +2156,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                         Text(tr('By Duration')),
+                         Flexible(child: Text(tr('By Duration'), maxLines: 2, overflow: TextOverflow.ellipsis)),
                         Switch(
                           value: tempSizingMode == SizingMode.duration,
                           onChanged: (val) => updateSizingMode(setStateDialog, SizingMode.duration, val),
@@ -2151,7 +2166,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                         Text(tr('By Visit Count')),
+                         Flexible(child: Text(tr('By Visit Count'), maxLines: 2, overflow: TextOverflow.ellipsis)),
                         Switch(
                           value: tempSizingMode == SizingMode.visitCount,
                           onChanged: (val) => updateSizingMode(setStateDialog, SizingMode.visitCount, val),
@@ -2416,7 +2431,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                             backgroundColor: Theme.of(context).buttonTheme.colorScheme?.secondary ?? Theme.of(context).primaryColor,
                             foregroundColor: Colors.white,
                           ),
-                          child:  Text(tr('Defaults'), style: TextStyle(fontSize: 8)),
+                          child: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Defaults'), maxLines: 1, style: TextStyle(fontSize: 8))),
                           onPressed: () {
                             setStateDialog(() {
                               tempSizingMode = SizingMode.population;
@@ -2516,7 +2531,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 2.0),
                         child: ElevatedButton(
-                          child:  Text(tr('Cancel'), style: TextStyle(fontSize: 9)),
+                          child: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Cancel'), maxLines: 1, style: TextStyle(fontSize: 9))),
                           onPressed: () => Navigator.pop(context),
                         ),
                       ),
@@ -2529,7 +2544,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                             backgroundColor: Theme.of(context).primaryColor,
                             foregroundColor: Colors.white,
                           ),
-                          child:  Text(tr('Done'), style: TextStyle(fontSize: 9)),
+                          child: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Done'), maxLines: 1, style: TextStyle(fontSize: 9))),
                           onPressed: validateAndSave,
                         ),
                       ),
@@ -2638,10 +2653,12 @@ class CityVisitControlTile extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Text(city.name, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+                    Text(city.name, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
                     const SizedBox(height: 2),
                     Text(
                         tr('$countryName  ${NumberFormat.compact().format(city.population)}'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(color: Colors.grey.shade600, fontSize: 12)
                     ),
                   ],
@@ -3007,7 +3024,7 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                           Text(tr('Transfer')),
+                           Flexible(child: Text(tr('Transfer'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                           Checkbox(
                             value: _isTransfer,
                             onChanged: (val) {
@@ -3022,7 +3039,7 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                           Text(tr('Layover')),
+                           Flexible(child: Text(tr('Layover'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                           Checkbox(
                             value: _isLayover,
                             onChanged: (val) {
@@ -3107,6 +3124,7 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
   Widget _buildDropdown<T>(
       String hint, T? value, List<T> items, ValueChanged<T?> onChanged) {
     return DropdownButtonFormField<T>(
+      isExpanded: true,
       value: value,
       isDense: true,
       decoration: InputDecoration(
@@ -3122,6 +3140,7 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
             fontSize: (item == null) ? 11.0 : 15.0,
             color: (item == null) ? Colors.grey.shade600 : null,
           ),
+          maxLines: 1,
           overflow: TextOverflow.ellipsis,
         ),
       ))
@@ -3360,20 +3379,24 @@ void showExternalCityDetailsModal(BuildContext context, City city) {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  TextButton(
-                                    onPressed: () {
-                                      Navigator.pop(sheetContext);
-                                    },
-                                    child:  Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.bold)),
-                                  ),
-                                  ElevatedButton(
-                                    onPressed: () {
-                                      Navigator.pop(sheetContext);
-                                    },
-                                    style: ElevatedButton.styleFrom(
-                                      backgroundColor: headerTextColor,
+                                  Flexible(
+                                    child: TextButton(
+                                      onPressed: () {
+                                        Navigator.pop(sheetContext);
+                                      },
+                                      child:  Text(tr('Cancel'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: headerTextColor, fontWeight: FontWeight.bold)),
                                     ),
-                                    child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.bold, color: headerColor)),
+                                  ),
+                                  Flexible(
+                                    child: ElevatedButton(
+                                      onPressed: () {
+                                        Navigator.pop(sheetContext);
+                                      },
+                                      style: ElevatedButton.styleFrom(
+                                        backgroundColor: headerTextColor,
+                                      ),
+                                      child: Text(tr('Done'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontWeight: FontWeight.bold, color: headerColor)),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -3430,40 +3453,45 @@ void showExternalCityDetailsModal(BuildContext context, City city) {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                IconButton(
-                                  visualDensity: VisualDensity.compact,
-                                  padding: const EdgeInsets.symmetric(horizontal: 2),
-                                  icon: Icon(
-                                    isHome ? Icons.home_rounded : Icons.home_outlined,
-                                    color: isHome ? Theme.of(context).primaryColor : Colors.grey,
+                                Expanded(
+                                  child: Row(
+                                  children: [
+                                  IconButton(
+                                    visualDensity: VisualDensity.compact,
+                                    padding: const EdgeInsets.symmetric(horizontal: 2),
+                                    icon: Icon(
+                                      isHome ? Icons.home_rounded : Icons.home_outlined,
+                                      color: isHome ? Theme.of(context).primaryColor : Colors.grey,
+                                    ),
+                                    onPressed: () {
+                                      provider.setCityHomeStatus(city.name, !isHome);
+                                    },
                                   ),
-                                  onPressed: () {
-                                    provider.setCityHomeStatus(city.name, !isHome);
-                                  },
-                                ),
-                                const SizedBox(width: 6),
-                                 Text(tr('Lived:'), style: TextStyle(fontSize: 14)),
-                                const SizedBox(width: 4),
-                                Checkbox(
-                                  visualDensity: VisualDensity.compact,
-                                  value: hasLived,
-                                  onChanged: (bool? value) {
-                                    provider.toggleCityLivedStatus(city.name);
-                                  },
-                                ),
-                                const SizedBox(width: 16),
-                                IconButton(
-                                  visualDensity: VisualDensity.compact,
-                                  padding: const EdgeInsets.symmetric(horizontal: 2),
-                                  icon: Icon(
-                                    isWishlisted ? Icons.favorite : Icons.favorite_border,
-                                    color: isWishlisted ? wishlistColor : Colors.grey,
+                                  const SizedBox(width: 6),
+                                   Flexible(child: Text(tr('Lived:'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 14))),
+                                  const SizedBox(width: 4),
+                                  Checkbox(
+                                    visualDensity: VisualDensity.compact,
+                                    value: hasLived,
+                                    onChanged: (bool? value) {
+                                      provider.toggleCityLivedStatus(city.name);
+                                    },
                                   ),
-                                  onPressed: () {
-                                    provider.toggleCityWishlistStatus(city.name);
-                                  },
+                                  const SizedBox(width: 16),
+                                  IconButton(
+                                    visualDensity: VisualDensity.compact,
+                                    padding: const EdgeInsets.symmetric(horizontal: 2),
+                                    icon: Icon(
+                                      isWishlisted ? Icons.favorite : Icons.favorite_border,
+                                      color: isWishlisted ? wishlistColor : Colors.grey,
+                                    ),
+                                    onPressed: () {
+                                      provider.toggleCityWishlistStatus(city.name);
+                                    },
+                                  ),
+                                  ],
+                                  ),
                                 ),
-                                const Spacer(),
                                 _StarRating(
                                   rating: cityVisitDetail?.rating ?? 0.0,
                                   onRatingChanged: (rating) {
@@ -3476,9 +3504,13 @@ void showExternalCityDetailsModal(BuildContext context, City city) {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(
-                                  tr('History ($visitedCount visits, $totalDuration days)'),
-                                  style: Theme.of(context).textTheme.titleSmall,
+                                Flexible(
+                                  child: Text(
+                                    tr('History ($visitedCount visits, $totalDuration days)'),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: Theme.of(context).textTheme.titleSmall,
+                                  ),
                                 ),
                                 OutlinedButton.icon(
                                   icon: const Icon(Icons.add),

@@ -191,12 +191,16 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                             child: const Icon(Icons.filter_alt, color: Colors.white, size: 24),
                           ),
                           const SizedBox(width: 16),
-                           Text(
-                            tr('Filters'),
-                            style: TextStyle(
-                              fontSize: 28,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black87,
+                          Flexible(
+                            child: Text(
+                              tr('Filters'),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                fontSize: 28,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black87,
+                              ),
                             ),
                           ),
                         ],
@@ -248,12 +252,16 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                                   borderRadius: BorderRadius.circular(16),
                                 ),
                               ),
-                              child: Text(
-                                tr('Clear All'),
-                                style: TextStyle(
-                                  color: Colors.grey[700],
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
+                              child: FittedBox(
+                                fit: BoxFit.scaleDown,
+                                child: Text(
+                                  tr('Clear All'),
+                                  maxLines: 1,
+                                  style: TextStyle(
+                                    color: Colors.grey[700],
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
                                 ),
                               ),
                               onPressed: () {
@@ -275,11 +283,15 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                                   borderRadius: BorderRadius.circular(16),
                                 ),
                               ),
-                              child:  Text(
-                                tr('Apply Filters'),
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
+                              child: FittedBox(
+                                fit: BoxFit.scaleDown,
+                                child: Text(
+                                  tr('Apply Filters'),
+                                  maxLines: 1,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
                                 ),
                               ),
                               onPressed: () => Navigator.pop(context),
@@ -409,6 +421,8 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                 centerTitle: false,
                 title:  Text(
                   tr('Airlines'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.black87,
@@ -521,6 +535,8 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                                   children: [
                                      Text(
                                       tr('View Statistics'),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 20,
@@ -530,6 +546,8 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                                     const SizedBox(height: 4),
                                     Text(
                                       tr('Explore your flight data'),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
                                         color: Colors.white.withOpacity(0.9),
                                         fontSize: 13,
@@ -647,7 +665,7 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                                       children: [
                                         Icon(Icons.sort_by_alpha, size: 20),
                                         SizedBox(width: 10),
-                                        Text(tr('A-Z')),
+                                        Flexible(child: Text(tr('A-Z'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                                       ],
                                     ),
                                   ),
@@ -657,7 +675,7 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                                       children: [
                                         Icon(Icons.trending_up, size: 20),
                                         SizedBox(width: 10),
-                                        Text(tr('Most Flown')),
+                                        Flexible(child: Text(tr('Most Flown'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                                       ],
                                     ),
                                   ),
@@ -667,7 +685,7 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                                       children: [
                                         Icon(Icons.schedule, size: 20),
                                         SizedBox(width: 10),
-                                        Text(tr('Recent')),
+                                        Flexible(child: Text(tr('Recent'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                                       ],
                                     ),
                                   ),
@@ -677,7 +695,7 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                                       children: [
                                         Icon(Icons.star, size: 20),
                                         SizedBox(width: 10),
-                                        Text(tr('Top Rated')),
+                                        Flexible(child: Text(tr('Top Rated'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                                       ],
                                     ),
                                   ),
@@ -687,7 +705,7 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                                       children: [
                                         Icon(Icons.favorite, size: 20, color: Colors.pink),
                                         SizedBox(width: 10),
-                                        Text(tr('Favorites')),
+                                        Flexible(child: Text(tr('Favorites'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                                       ],
                                     ),
                                   ),
@@ -989,12 +1007,16 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                       Row(
                         children: [
                           if (allianceName != null) ...[
-                            Text(
-                              tr(allianceName),
-                              style: TextStyle(
-                                fontSize: 12,
-                                color: Colors.grey[500],
-                                fontWeight: FontWeight.w500,
+                            Flexible(
+                              child: Text(
+                                tr(allianceName),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.grey[500],
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
                             ),
                             Container(
@@ -1023,11 +1045,15 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                               ],
                             )
                           else
-                            Text(
-                              tr('No Rating'),
-                              style: TextStyle(
-                                fontSize: 12,
-                                color: Colors.grey[400],
+                            Flexible(
+                              child: Text(
+                                tr('No Rating'),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.grey[400],
+                                ),
                               ),
                             ),
                         ],
@@ -1069,6 +1095,7 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                         ),
                         child: Text(
                           tr('${totalFlights} flights'),
+                          maxLines: 1,
                           style: TextStyle(
                             fontSize: 11,
                             fontWeight: FontWeight.bold,

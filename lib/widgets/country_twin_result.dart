@@ -115,6 +115,8 @@ class CountryTwinResult extends StatelessWidget {
                         Flexible(
                           child: Text(
                             tr('YOUR TRAVEL SOULMATE'),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                             style: const TextStyle(
                               color: Color(0xFF99F6E4),
                               fontWeight: FontWeight.w800,
@@ -143,6 +145,8 @@ class CountryTwinResult extends StatelessWidget {
                               match['travelerType'] as String? ??
                                   'Traveler type not set',
                             ),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                             style: const TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.w700,
@@ -277,6 +281,8 @@ class CountryTwinResult extends StatelessWidget {
                     ? 'Request sent'
                     : 'Send friend request',
               ),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
             ),
           ),
         ],
@@ -322,6 +328,8 @@ class CountryTwinResult extends StatelessWidget {
                         const SizedBox(height: 6),
                         Text(
                           tr(stat.$1),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: const TextStyle(
                             fontSize: 12,
                             fontWeight: FontWeight.w700,
@@ -365,6 +373,8 @@ class CountryTwinResult extends StatelessWidget {
                   children: [
                     Text(
                       '${match['badgeScore'] ?? '—'} ${tr('Badge points')}',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w900,
@@ -373,6 +383,8 @@ class CountryTwinResult extends StatelessWidget {
                     ),
                     Text(
                       '${match['badgeCount'] ?? '—'} ${tr('Badges')}',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
                         color: Color(0xFFDDD6FE),
                         fontSize: 12,

@@ -382,6 +382,8 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                           Expanded(
                             child: Text(
                               tr("Question ${index + 1}"),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
                               style: TextStyle(
                                 color: isAnswered
                                     ? Theme.of(context).primaryColor
@@ -412,20 +414,30 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
-                            tr('Disagree'),
-                            style: TextStyle(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.grey[500],
+                          Flexible(
+                            child: Text(
+                              tr('Disagree'),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.grey[500],
+                              ),
                             ),
                           ),
-                          Text(
-                            tr('Agree'),
-                            style: TextStyle(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.grey[500],
+                          const SizedBox(width: 8),
+                          Flexible(
+                            child: Text(
+                              tr('Agree'),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              textAlign: TextAlign.right,
+                              style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.grey[500],
+                              ),
                             ),
                           ),
                         ],
@@ -487,19 +499,23 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
           onPressed: allAnswered && !_showingReward
               ? () => _viewResults(provider)
               : null,
-          child: Text(
-            tr(
-              _showingReward
-                  ? 'Opening video...'
-                  : !_ads.needsAd
-                  ? 'View Results'
-                  : 'Watch one ad to view results',
-            ),
-            style: TextStyle(
-              fontSize: 17,
-              fontWeight: FontWeight.w700,
-              color: allAnswered ? Colors.white : Colors.grey[500],
-              letterSpacing: 0.3,
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              tr(
+                _showingReward
+                    ? 'Opening video...'
+                    : !_ads.needsAd
+                    ? 'View Results'
+                    : 'Watch one ad to view results',
+              ),
+              maxLines: 1,
+              style: TextStyle(
+                fontSize: 17,
+                fontWeight: FontWeight.w700,
+                color: allAnswered ? Colors.white : Colors.grey[500],
+                letterSpacing: 0.3,
+              ),
             ),
           ),
         ),

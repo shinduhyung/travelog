@@ -252,7 +252,7 @@ class _CountriesTabState extends State<CountriesTab> with AutomaticKeepAliveClie
                     if ((cmp.friend.countryInfo[n]?.visits ?? 0) > 1) tr('${cmp.friend.countryInfo[n]!.visits} visits'),
                     if (cmp.friend.countryInfo[n]?.firstYear != null) '${cmp.friend.countryInfo[n]!.firstYear}',
                   ].join(' · '),
-                  maxLines: 2,
+                  maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: theme.textTheme.bodySmall?.copyWith(color: AppColors.label),
                 ),
@@ -322,7 +322,7 @@ class _MostVisited extends StatelessWidget {
                 ),
                 const SizedBox(height: 6),
                 if (rows.isEmpty)
-                  Text(tr('Nothing yet'), style: theme.textTheme.labelSmall?.copyWith(color: AppColors.label))
+                  Text(tr('Nothing yet'), maxLines: 1, overflow: TextOverflow.ellipsis, style: theme.textTheme.labelSmall?.copyWith(color: AppColors.label))
                 else
                   ...rows,
               ],

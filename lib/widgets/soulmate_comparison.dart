@@ -86,6 +86,8 @@ class SoulmateComparison extends StatelessWidget {
           leading: Icon(icon, color: color),
           title: Text(
             tr(title),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
             style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800),
           ),
           subtitle: Column(
@@ -94,6 +96,8 @@ class SoulmateComparison extends StatelessWidget {
               const SizedBox(height: 5),
               Text(
                 '${tr('You')} ${yours.length}  /  ${tr('Them')} ${theirs.length}',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: const TextStyle(fontSize: 12),
               ),
               const SizedBox(height: 7),
@@ -111,6 +115,8 @@ class SoulmateComparison extends StatelessWidget {
               const SizedBox(height: 5),
               Text(
                 '${sets[0].length} ${tr('in common')}',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   color: color,
                   fontSize: 11,

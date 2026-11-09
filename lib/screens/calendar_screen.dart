@@ -255,6 +255,8 @@ class _CalendarScreenState extends State<CalendarScreen> {
               child:  Center(
                 child: Text(
                   tr('My Calendar'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w900,
@@ -571,11 +573,13 @@ class _MemoEditPageState extends State<_MemoEditPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      ElevatedButton.icon(onPressed: () => _pickImage(ImageSource.gallery), icon: const Icon(Icons.photo_library), label:  Text(tr('Change Photo'))),
-                      ElevatedButton.icon(
-                        onPressed: () => setState(() { _selectedImage = null; _existingImageUrl = null; _deleteExistingImage = true; }),
-                        icon: const Icon(Icons.delete_forever), label:  Text(tr('Remove Photo')),
-                        style: ElevatedButton.styleFrom(backgroundColor: Colors.red.shade400, foregroundColor: Colors.white),
+                      Flexible(child: ElevatedButton.icon(onPressed: () => _pickImage(ImageSource.gallery), icon: const Icon(Icons.photo_library), label:  Text(tr('Change Photo'), maxLines: 1, overflow: TextOverflow.ellipsis))),
+                      Flexible(
+                        child: ElevatedButton.icon(
+                          onPressed: () => setState(() { _selectedImage = null; _existingImageUrl = null; _deleteExistingImage = true; }),
+                          icon: const Icon(Icons.delete_forever), label:  Text(tr('Remove Photo'), maxLines: 1, overflow: TextOverflow.ellipsis),
+                          style: ElevatedButton.styleFrom(backgroundColor: Colors.red.shade400, foregroundColor: Colors.white),
+                        ),
                       ),
                     ],
                   ),

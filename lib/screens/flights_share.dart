@@ -54,7 +54,7 @@ class FlightsShare {
 
       await Share.shareXFiles(
         filesToShare,
-        text: 'Check out my flight map! I have flown ${stats['distance']} via Travelog.',
+        text: tr('Check out my flight map! I have flown ${stats['distance']} via Travelog.'),
         sharePositionOrigin: sharePositionOrigin,
       );
     } catch (e) {
@@ -420,6 +420,8 @@ class FlightsShare {
                   const SizedBox(height: 4),
                   Text(
                     tr(label),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 11,
                       fontWeight: FontWeight.w600,

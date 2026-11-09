@@ -136,13 +136,17 @@ class _TravelogPollsScreenState extends State<TravelogPollsScreen>
                       ? Icons.check_circle_outline
                       : Icons.how_to_vote_outlined,
                 ),
-                label: Text(
-                  tr(
-                    _voting
-                        ? 'Saving...'
-                        : voted != null
-                        ? 'Vote saved'
-                        : 'Cast my vote',
+                label: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    tr(
+                      _voting
+                          ? 'Saving...'
+                          : voted != null
+                          ? 'Vote saved'
+                          : 'Cast my vote',
+                    ),
+                    maxLines: 1,
                   ),
                 ),
               ),
@@ -195,6 +199,8 @@ class _TravelogPollsScreenState extends State<TravelogPollsScreen>
                       Localizations.localeOf(context).languageCode == 'ko'
                           ? '과거 여론조사 결과'
                           : tr('Past poll results'),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: const TextStyle(fontWeight: FontWeight.w700),
                     ),
                     if (_data?['preview'] == true)
@@ -202,6 +208,8 @@ class _TravelogPollsScreenState extends State<TravelogPollsScreen>
                         Localizations.localeOf(context).languageCode == 'ko'
                             ? '지난주 · 음식이 가장 맛있는 나라'
                             : tr('Last week · Best food'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
                           fontSize: 10,
                           color: Color(0xFF64748B),

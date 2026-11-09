@@ -76,13 +76,13 @@ class TopRiversScreen extends StatelessWidget {
                   Row(children: [
                     const Icon(Icons.waves_rounded, size: 14, color: _kTheme),
                     const SizedBox(width: 5),
-                     Text(tr('Longest Rivers'), style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _kTheme, letterSpacing: 0.3)),
+                     Flexible(child: Text(tr('Longest Rivers'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _kTheme, letterSpacing: 0.3))),
                   ]),
                   const SizedBox(height: 6),
-                   Text(tr('Top 16 Longest'),
-                      style: TextStyle(fontSize: 28, fontWeight: FontWeight.w900, color: Color(0xFF111827), letterSpacing: -1.0, height: 1.1)),
+                   FittedBox(fit: BoxFit.scaleDown, alignment: Alignment.centerLeft, child: Text(tr('Top 16 Longest'), maxLines: 1,
+                      style: TextStyle(fontSize: 28, fontWeight: FontWeight.w900, color: Color(0xFF111827), letterSpacing: -1.0, height: 1.1))),
                   const SizedBox(height: 4),
-                  Text(tr('The world\'s longest waterways'), style: TextStyle(fontSize: 12, color: Colors.grey[500], fontWeight: FontWeight.w500)),
+                  Text(tr('The world\'s longest waterways'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12, color: Colors.grey[500], fontWeight: FontWeight.w500)),
                 ])),
                 Consumer<LandmarksProvider>(builder: (context, provider, _) {
                   final visited = _top16Rivers.where((m) => provider.visitedLandmarks.contains(m['name'])).length;
@@ -97,7 +97,7 @@ class TopRiversScreen extends StatelessWidget {
                       Text(tr('$visited'), style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: _kTheme, height: 1.0)),
                        Text(tr('/ 16'), style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _kTheme, height: 1.2)),
                       const SizedBox(height: 2),
-                       Text(tr('visited'), style: TextStyle(fontSize: 10, fontWeight: FontWeight.w500, color: _kTheme)),
+                       Text(tr('visited'), maxLines: 1, style: TextStyle(fontSize: 10, fontWeight: FontWeight.w500, color: _kTheme)),
                     ]),
                   );
                 }),
@@ -220,11 +220,11 @@ class TopRiversScreen extends StatelessWidget {
                 child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                     TextButton(onPressed: () => Navigator.pop(sheetContext),
-                        child:  Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
+                        child:  Text(tr('Cancel'), maxLines: 1, style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
                     MyMatchBadge.landmark(landmark: freshLandmark, onDark: headerTextColor == Colors.white),
                     ElevatedButton(onPressed: () => Navigator.pop(sheetContext),
                         style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
-                        child:  Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))),
+                        child:  Text(tr('Done'), maxLines: 1, style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))),
                   ]),
                   const SizedBox(height: 12),
                   Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -241,24 +241,24 @@ class TopRiversScreen extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Row(mainAxisSize: MainAxisSize.min, children: [
-                     Text(tr('Wishlist:')),
+                  Flexible(child: Row(mainAxisSize: MainAxisSize.min, children: [
+                     Flexible(child: Text(tr('Wishlist:'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                     IconButton(visualDensity: VisualDensity.compact,
                         icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey),
                         onPressed: () => provider.toggleWishlistStatus(freshLandmark.name)),
-                  ]),
-                  Row(mainAxisSize: MainAxisSize.min, children: [
-                     Text(tr('My Rating:')),
+                  ])),
+                  Flexible(child: Row(mainAxisSize: MainAxisSize.min, children: [
+                     Flexible(child: Text(tr('My Rating:'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                     const SizedBox(width: 8),
                     RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0,
                         direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0,
                         itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber),
                         onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating)),
-                  ]),
+                  ])),
                 ]),
                 const Divider(height: 20),
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text(tr('History (${freshLandmark.visitDates.length} entries)'), style: Theme.of(sheetContext).textTheme.titleSmall),
+                  Flexible(child: Text(tr('History (${freshLandmark.visitDates.length} entries)'), maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(sheetContext).textTheme.titleSmall)),
                   OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit')),
                       onPressed: () => provider.addVisitDate(freshLandmark.name)),
                 ]),
@@ -347,7 +347,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
       elevation: 1, margin: const EdgeInsets.symmetric(vertical: 4),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: ExpansionTile(
-        title: Text(tr(widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record'),
+        title: Text(tr(widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record'), maxLines: 1, overflow: TextOverflow.ellipsis,
             style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
         subtitle: GestureDetector(
           onTap: () => _selectDate(context),

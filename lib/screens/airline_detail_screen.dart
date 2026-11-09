@@ -188,12 +188,16 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
               Row(
                 children: [
                   if (allianceName != null) ...[
-                    Text(
-                      tr(allianceName),
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: Colors.grey[500],
-                        fontWeight: FontWeight.w500,
+                    Flexible(
+                      child: Text(
+                        tr(allianceName),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: Colors.grey[500],
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
                     ),
                     Container(
@@ -348,13 +352,26 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              tr('Total Flights: ${airline.totalTimes}'),
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey.shade600),
+            Flexible(
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  tr('Total Flights: ${airline.totalTimes}'),
+                  maxLines: 1,
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey.shade600),
+                ),
+              ),
             ),
-            Text(
-              tr('Total Cash Spent: \$${numberFormatter.format(totalCashSpent)}'),
-              style: TextStyle(fontSize: 16, color: themeColor.withOpacity(0.8), fontWeight: FontWeight.bold),
+            const SizedBox(width: 8),
+            Flexible(
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  tr('Total Cash Spent: \$${numberFormatter.format(totalCashSpent)}'),
+                  maxLines: 1,
+                  style: TextStyle(fontSize: 16, color: themeColor.withOpacity(0.8), fontWeight: FontWeight.bold),
+                ),
+              ),
             ),
           ],
         ),
@@ -439,9 +456,13 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-             Text(
-              tr('Mileage Program'),
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            Flexible(
+              child: Text(
+                tr('Mileage Program'),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
             ),
             IconButton(
               icon: Icon(Icons.edit, color: Colors.grey.shade600),
@@ -711,7 +732,7 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
             ],
           ),
         ),
-        subtitle: Text(tr('${log.date} ・ ${trSeatClass(log.seatClass)}')),
+        subtitle: Text(tr('${log.date} ・ ${trSeatClass(log.seatClass)}'), maxLines: 1, overflow: TextOverflow.ellipsis),
         onTap: () {
           Navigator.pop(context);
           Navigator.push(
@@ -764,9 +785,10 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
                     },
                   ),
                   DropdownButtonFormField<String>(
+                    isExpanded: true,
                     value: selectedCategory,
-                    hint:  Text(tr('Category')),
-                    items: categories.map((c) => DropdownMenuItem(value: c, child: Text(tr(c)))).toList(),
+                    hint:  Text(tr('Category'), maxLines: 1, overflow: TextOverflow.ellipsis),
+                    items: categories.map((c) => DropdownMenuItem(value: c, child: Text(tr(c), maxLines: 1, overflow: TextOverflow.ellipsis))).toList(),
                     onChanged: (val) => selectedCategory = val,
                     validator: (val) => val == null ? tr('Please select a category') : null,
                   ),
@@ -919,6 +941,8 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
                   Expanded(
                     child: Text(
                       tr('${log.departureIata} → ${log.arrivalIata}'),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                     ),
                   ),
@@ -977,6 +1001,8 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
                 Expanded(
                   child: Text(
                     tr(usage.description),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                   ),
                 ),
@@ -1157,7 +1183,7 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
         children: [
           Icon(icon, size: 16, color: Colors.grey.shade700),
           const SizedBox(width: 8),
-          Text(tr('$label: '), style: TextStyle(fontSize: 14, color: Colors.grey.shade800, fontWeight: FontWeight.w500)),
+          Text('${tr(label)}: ', style: TextStyle(fontSize: 14, color: Colors.grey.shade800, fontWeight: FontWeight.w500)),
           Expanded(child: Text(tr(value), style: TextStyle(fontSize: 14, color: Colors.grey.shade600), textAlign: TextAlign.end,)),
         ],
       ),

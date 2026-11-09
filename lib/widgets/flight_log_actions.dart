@@ -28,7 +28,7 @@ class FlightLogActions extends StatelessWidget {
       ),
     );
     Widget label(String text) =>
-        Text(tr(text), textAlign: TextAlign.center, maxLines: 2);
+        Text(tr(text), textAlign: TextAlign.center, maxLines: 2, overflow: TextOverflow.ellipsis);
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
       color: Theme.of(context).scaffoldBackgroundColor,

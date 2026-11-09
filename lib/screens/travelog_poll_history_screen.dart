@@ -41,7 +41,7 @@ class TravelogPollHistoryScreen extends StatelessWidget {
       });
     }
     return DiscoverScaffold(
-      appBar: AppBar(title: Text(ko ? '과거 여론조사 결과' : tr('Past poll results'))),
+      appBar: AppBar(title: Text(ko ? '과거 여론조사 결과' : tr('Past poll results'), maxLines: 1, overflow: TextOverflow.ellipsis)),
       body: items.isEmpty
           ? Center(
               child: Text(
@@ -143,6 +143,8 @@ class _PollHistoryRow extends StatelessWidget {
                     child: Text(
                       (ko ? winner['ko'] ?? winner['label'] : tr(winner['label'] as String))
                           as String,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 14,
@@ -172,7 +174,7 @@ class TravelogPollResultScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final ko = Localizations.localeOf(context).languageCode == 'ko';
     return DiscoverScaffold(
-      appBar: AppBar(title: Text(ko ? '투표 결과' : tr('Poll results'))),
+      appBar: AppBar(title: Text(ko ? '투표 결과' : tr('Poll results'), maxLines: 1, overflow: TextOverflow.ellipsis)),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
@@ -294,12 +296,16 @@ class _PollReveal extends StatelessWidget {
                                 color: Color(0xFFFFD77A),
                               ),
                               const SizedBox(width: 5),
-                              Text(
-                                ko ? '1위' : tr('1ST PLACE'),
-                                style: const TextStyle(
-                                  fontSize: 11,
-                                  color: Color(0xFFFFD77A),
-                                  fontWeight: FontWeight.w800,
+                              Flexible(
+                                child: Text(
+                                  ko ? '1위' : tr('1ST PLACE'),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: const TextStyle(
+                                    fontSize: 11,
+                                    color: Color(0xFFFFD77A),
+                                    fontWeight: FontWeight.w800,
+                                  ),
                                 ),
                               ),
                             ],
@@ -307,6 +313,8 @@ class _PollReveal extends StatelessWidget {
                           const SizedBox(height: 5),
                           Text(
                             name(winner),
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
                             style: const TextStyle(
                               fontSize: 23,
                               fontWeight: FontWeight.w800,
@@ -358,6 +366,8 @@ class _PollReveal extends StatelessWidget {
                             Expanded(
                               child: Text(
                                 name(options[i]),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
                                 style: const TextStyle(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w700,

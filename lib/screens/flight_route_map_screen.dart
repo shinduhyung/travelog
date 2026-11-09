@@ -359,7 +359,7 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(tr('Route Gradient'), style: GoogleFonts.poppins(fontSize: 14, fontWeight: FontWeight.w500)),
+                          Flexible(child: Text(tr('Route Gradient'), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins(fontSize: 14, fontWeight: FontWeight.w500))),
                           Row(
                             children: [
                               _buildColorPicker(settingsProvider.routeColor1, (c) => settingsProvider.setRouteColor1(c)),
@@ -612,12 +612,16 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
+                        Flexible(
+                          child: Text(
                           tr('My Routes'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: GoogleFonts.poppins(
                             color: Colors.white,
                             fontSize: 22,
                             fontWeight: FontWeight.bold,
+                          ),
                           ),
                         ),
                         Container(
@@ -810,6 +814,8 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
                                                     children: [
                                                       Text(
                                                         tr('${log.airlineName} ${log.flightNumber}'),
+                                                        maxLines: 1,
+                                                        overflow: TextOverflow.ellipsis,
                                                         style: GoogleFonts.poppins(
                                                           color: Colors.white,
                                                           fontSize: 14,
@@ -818,6 +824,8 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
                                                       ),
                                                       Text(
                                                         tr('${log.date}  •  ${log.times} flight(s)'),
+                                                        maxLines: 1,
+                                                        overflow: TextOverflow.ellipsis,
                                                         style: GoogleFonts.poppins(
                                                           color: Colors.grey[500],
                                                           fontSize: 12,

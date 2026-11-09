@@ -234,7 +234,7 @@ class _FriendsScreenState extends State<FriendsScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(tr('Friends')),
+        title: Text(tr('Friends'), maxLines: 1, overflow: TextOverflow.ellipsis),
         actions: [
           if (store.syncing)
             const Padding(
@@ -551,7 +551,7 @@ class _PlanLegend extends StatelessWidget {
               ),
               const SizedBox(width: 4),
               Text(
-                e.value.label,
+                tr(e.value.label),
                 style: t.labelSmall?.copyWith(color: AppColors.label),
               ),
             ],
@@ -1060,6 +1060,8 @@ class FlagRow extends StatelessWidget {
                     alignment: Alignment.centerLeft,
                     child: Text(
                       tr('None'),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: theme.textTheme.labelSmall?.copyWith(
                         color: AppColors.label,
                       ),

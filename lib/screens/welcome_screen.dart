@@ -165,14 +165,18 @@ class _PrimaryButton extends StatelessWidget {
           ],
         ),
         child: Center(
-          child: Text(
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
             tr(label),
+            maxLines: 1,
             style: GoogleFonts.poppins(
               color: const Color(0xFF1ABFBC),
               fontWeight: FontWeight.w700,
               fontSize: 15,
               letterSpacing: 0.5,
             ),
+          ),
           ),
         ),
       ),
@@ -203,13 +207,17 @@ class _SecondaryButton extends StatelessWidget {
           ),
         ),
         child: Center(
-          child: Text(
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
             tr(label),
+            maxLines: 1,
             style: GoogleFonts.poppins(
               color: Colors.white,
               fontWeight: FontWeight.w600,
               fontSize: 15,
             ),
+          ),
           ),
         ),
       ),

@@ -534,10 +534,14 @@ class _CityTravelSheet extends StatelessWidget {
                     children: [
                       Text(
                         city.name,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
                         style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w800, color: Colors.white),
                       ),
                       Text(
                         tr(city.country),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(fontSize: 13, fontWeight: FontWeight.w500, color: Colors.white.withOpacity(0.85)),
                       ),
                     ],
@@ -556,7 +560,7 @@ class _CityTravelSheet extends StatelessWidget {
       children: [
         Icon(icon, size: 18, color: themeColor),
         const SizedBox(width: 8),
-        Text(tr(title), style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: Color(0xFF111827))),
+        Flexible(child: Text(tr(title), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: Color(0xFF111827)))),
       ],
     );
   }
@@ -604,9 +608,9 @@ class _CityTravelSheet extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                     Text(tr('Set your home airport'), style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: Color(0xFF111827))),
+                     Text(tr('Set your home airport'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: Color(0xFF111827))),
                     const SizedBox(height: 2),
-                    Text(tr('Tap to set your hub and see prices instantly'), style: TextStyle(fontSize: 12, color: Colors.grey.shade500)),
+                    Text(tr('Tap to set your hub and see prices instantly'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12, color: Colors.grey.shade500)),
                   ],
                 ),
               ),
@@ -650,9 +654,9 @@ class _CityTravelSheet extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('${hubAirport.iataCode} → ${city.name}', style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w800, color: Color(0xFF111827))),
+                        Text('${hubAirport.iataCode} → ${city.name}', maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w800, color: Color(0xFF111827))),
                         const SizedBox(height: 4),
-                        Text(tr('Search flights'), style: TextStyle(fontSize: 12, color: Colors.grey.shade500)),
+                        Text(tr('Search flights'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12, color: Colors.grey.shade500)),
                       ],
                     ),
                   ),
@@ -704,11 +708,16 @@ class _CityTravelSheet extends StatelessWidget {
                     size: 22,
                   ),
                   const Spacer(),
-                  Text(
-                    tr(type['label']!),
-                    style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFF111827)),
+                  FittedBox(
+                    fit: BoxFit.scaleDown,
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      tr(type['label']!),
+                      maxLines: 1,
+                      style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFF111827)),
+                    ),
                   ),
-                  Text(type['provider']!, style: TextStyle(fontSize: 10, color: Colors.grey.shade500)),
+                  Text(type['provider']!, maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 10, color: Colors.grey.shade500)),
                 ],
               ),
             ),
@@ -861,6 +870,8 @@ class _CityTravelSheet extends StatelessWidget {
                                 Expanded(
                                   child: Text(
                                     landmark.name,
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
                                     style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w800),
                                   ),
                                 ),
@@ -873,7 +884,7 @@ class _CityTravelSheet extends StatelessWidget {
                                       children: [
                                         Icon(Icons.check_circle, size: 13, color: themeColor),
                                         const SizedBox(width: 4),
-                                        Text(tr('Visited'), style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: themeColor)),
+                                        Text(tr('Visited'), maxLines: 1, style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: themeColor)),
                                       ],
                                     ),
                                   ),
@@ -1164,9 +1175,9 @@ class _CityTravelSheet extends StatelessWidget {
           children: [
             Icon(icon, color: themeColor, size: 22),
             const SizedBox(height: 10),
-            Text(tr(label), style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFF111827))),
+            Text(tr(label), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFF111827))),
             const SizedBox(height: 2),
-            Text(tr(subtitle), style: TextStyle(fontSize: 11, color: Colors.grey.shade500)),
+            Text(tr(subtitle), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 11, color: Colors.grey.shade500)),
           ],
         ),
       ),
@@ -1200,8 +1211,10 @@ class _CityTravelSheet extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(tr('Get an eSIM for ${city.name}', entities: [city.name]),
+                      maxLines: 1, overflow: TextOverflow.ellipsis,
                       style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: Colors.white)),
                   Text(tr('Stay connected in ${city.country} from day one'),
+                      maxLines: 2, overflow: TextOverflow.ellipsis,
                       style: TextStyle(fontSize: 12, color: Colors.white.withOpacity(0.85))),
                 ],
               ),
@@ -1238,10 +1251,15 @@ class _CityTravelSheet extends StatelessWidget {
                 children: [
                   Icon(item['icon'] as IconData, color: Colors.grey.shade500, size: 20),
                   const Spacer(),
-                  Text(tr(item['label'] as String),
-                      style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: Colors.grey.shade700)),
+                  FittedBox(
+                    fit: BoxFit.scaleDown,
+                    alignment: Alignment.centerLeft,
+                    child: Text(tr(item['label'] as String),
+                        maxLines: 1,
+                        style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: Colors.grey.shade700)),
+                  ),
                   const SizedBox(height: 2),
-                  Text(tr('Coming soon'), style: TextStyle(fontSize: 9, color: Colors.grey.shade400)),
+                  Text(tr('Coming soon'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 9, color: Colors.grey.shade400)),
                 ],
               ),
             ),
@@ -1278,9 +1296,11 @@ class _CityTravelSheet extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(tr('${city.name} trip guide', entities: [city.name]),
+                            maxLines: 1, overflow: TextOverflow.ellipsis,
                             style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: Color(0xFF111827))),
                         const SizedBox(height: 2),
                         Text(tr('Itineraries, getting around, costs, weather and hotels'),
+                            maxLines: 2, overflow: TextOverflow.ellipsis,
                             style: TextStyle(fontSize: 12, color: Colors.grey.shade600)),
                       ],
                     ),
@@ -1320,9 +1340,11 @@ class _CityTravelSheet extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(tr('Store your bags in ${city.name}', entities: [city.name]),
+                      maxLines: 1, overflow: TextOverflow.ellipsis,
                       style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: Color(0xFF111827))),
                   const SizedBox(height: 2),
                   Text(tr('Drop luggage at nearby shops and hotels with Bounce'),
+                      maxLines: 2, overflow: TextOverflow.ellipsis,
                       style: TextStyle(fontSize: 12, color: Colors.grey.shade500)),
                 ],
               ),
@@ -1541,7 +1563,7 @@ class _FlightSearchCardState extends State<_FlightSearchCard> {
           children: [
             Icon(icon, size: 13, color: widget.themeColor),
             const SizedBox(width: 5),
-            Text(tr(label), style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: widget.themeColor)),
+            Flexible(child: Text(tr(label), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: widget.themeColor))),
           ],
         ),
       ),
@@ -1649,7 +1671,7 @@ class _FlightSearchCardState extends State<_FlightSearchCard> {
                       child: CircularProgressIndicator(strokeWidth: 2, color: widget.themeColor),
                     ),
                     const SizedBox(width: 12),
-                    Text(tr('Checking fares for $routeLabel…'), style: TextStyle(fontSize: 13, color: Colors.grey.shade500)),
+                    Flexible(child: Text(tr('Checking fares for $routeLabel…'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 13, color: Colors.grey.shade500))),
                   ],
                 );
               }
@@ -1688,7 +1710,8 @@ class _FlightSearchCardState extends State<_FlightSearchCard> {
                               style: TextStyle(fontSize: 22, fontWeight: FontWeight.w800, color: widget.themeColor),
                             ),
                             const SizedBox(width: 6),
-                            Padding(
+                            Flexible(
+                              child: Padding(
                               padding: const EdgeInsets.only(bottom: 3),
                               child: Container(
                                 padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
@@ -1698,6 +1721,8 @@ class _FlightSearchCardState extends State<_FlightSearchCard> {
                                 ),
                                 child: Text(
                                   tr(result.isTripComPrice ? 'Trip.com price' : 'Estimated'),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
                                     fontSize: 9.5,
                                     fontWeight: FontWeight.w700,
@@ -1705,6 +1730,7 @@ class _FlightSearchCardState extends State<_FlightSearchCard> {
                                   ),
                                 ),
                               ),
+                            ),
                             ),
                           ],
                         ),
@@ -1714,6 +1740,8 @@ class _FlightSearchCardState extends State<_FlightSearchCard> {
                             if (result.isDirect) 'Direct' else if (result.stopCount != null) '${result.stopCount} stop(s)',
                             if (result.carrier != null) result.carrier!,
                           ].join(' · ')),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyle(fontSize: 11, color: Colors.grey.shade500),
                         ),
                       ],
@@ -1825,7 +1853,7 @@ class _AirportPickerSheetState extends State<_AirportPickerSheet> {
                   padding: const EdgeInsets.fromLTRB(20, 16, 20, 8),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text(tr(widget.title), style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
+                    child: Text(tr(widget.title), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
                   ),
                 ),
                 Padding(
@@ -2035,8 +2063,9 @@ class _TravelModalHubSetupSheetState extends State<_TravelModalHubSetupSheet> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(tr('Set Your Hub'), style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
+                            Text(tr('Set Your Hub'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
                             Text(tr('Search by airport name or IATA code'),
+                                maxLines: 1, overflow: TextOverflow.ellipsis,
                                 style: TextStyle(fontSize: 12, color: Colors.grey)),
                           ],
                         ),

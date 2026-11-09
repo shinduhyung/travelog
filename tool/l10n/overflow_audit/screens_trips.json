@@ -1,0 +1,5509 @@
+[
+ {
+  "id": "my_trips_tab_top",
+  "file": "lib/screens/my_trips_tab_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   416,
+   514,
+   602,
+   646,
+   806,
+   1146,
+   1193
+  ],
+  "notes": "Header card: profile row, Go Premium pill, Traveler Type, Rank + 'N pts' chip. Stat rows (Countries/Top Cities/Top Landmarks/Flights) use Row(spaceBetween) with two Texts and no Expanded (1193)."
+ },
+ {
+  "id": "my_trips_tab_daily_quiz_games_rows",
+  "file": "lib/screens/my_trips_tab_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   858,
+   911,
+   953
+  ],
+  "notes": "Daily Quiz row with 'Go!' gradient chip + Travelog Games row. Expert variant shows 'Daily Quiz · Expert'."
+ },
+ {
+  "id": "my_trips_tab_stats_section",
+  "file": "lib/screens/my_trips_tab_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Top Landmarks"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   1146,
+   1193
+  ],
+  "notes": "Label 'Top Landmarks' and value '123 / 250' share a Row(spaceBetween) without Flexible."
+ },
+ {
+  "id": "social_menu_card",
+  "file": "lib/social/social_menu.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   66
+  ],
+  "notes": "TRAVEL WITH FRIENDS card + Profile/Friends/Stats shortcuts (Expanded) + NEW badge."
+ },
+ {
+  "id": "next_adventure_card",
+  "file": "lib/widgets/next_adventure_card.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Adventure"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   188,
+   233,
+   253
+  ],
+  "notes": "RichText 'Next '+'Adventure' + NewTag in Row without flex (188). Tag row is FittedBox-scaled."
+ },
+ {
+  "id": "my_hub_board",
+  "file": "lib/widgets/my_hub_board.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "4x2 shortcut grid; labels FittedBox scaleDown (shrink, no overflow)."
+ },
+ {
+  "id": "contact_sheet",
+  "file": "lib/widgets/my_hub_board.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Contact"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "Contact us sheet. Do NOT tap 'Send email' (opens mail app); 'Copy address' is harmless."
+ },
+ {
+  "id": "login_prompt_sheet",
+  "file": "lib/screens/login_prompt_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   224,
+   331,
+   423
+  ],
+  "notes": "Only appears when signed OUT (any login-gated tile). Benefit rows + 'Sign in with Google/Apple' buttons (Row center, no flex). Never tap sign-in buttons."
+ },
+ {
+  "id": "login_prompt_from_profile_row",
+  "file": "lib/screens/login_prompt_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap": "Sign in to sync"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [
+   331,
+   423
+  ],
+  "notes": "Signed-out variant: header row text 'Sign in to sync' opens login sheet.",
+  "unsafe_reason": "'Sign in to sync' row only exists when signed out; signing out is not allowed."
+ },
+ {
+  "id": "welcome_screen",
+  "file": "lib/screens/welcome_screen.dart",
+  "kind": "screen",
+  "path": [],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "First-run only (main.dart shows it before onboarding). Requires clearing app data/fresh install. Buttons 'Get Started', 'I already have an account'."
+ },
+ {
+  "id": "welcome_login_prompt",
+  "file": "lib/screens/login_prompt_screen.dart",
+  "kind": "screen",
+  "path": [],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [
+   331,
+   423
+  ],
+  "notes": "First-run: Welcome -> 'I already have an account' pushes LoginPromptScreen fullscreen. Requires fresh install."
+ },
+ {
+  "id": "onboarding_tutorial",
+  "file": "lib/screens/onboarding_tutorial_screen.dart",
+  "kind": "screen",
+  "path": [],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [
+   189,
+   618,
+   640
+  ],
+  "notes": "First-run only (Welcome -> 'Get Started'); multi-step tutorial with 3 bottom sheets (lines ~189, 618, 640). Needs fresh install/clear data."
+ },
+ {
+  "id": "login_screen_legacy",
+  "file": "lib/screens/login_screen.dart",
+  "kind": "screen",
+  "path": [],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "Legacy login screen; no navigation to it found from My Trips. Likely unreachable."
+ },
+ {
+  "id": "profile_screen",
+  "file": "lib/screens/profile_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap_desc": "Profile header row at top of the white card (avatar + email text + '>' arrow)"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   312,
+   533
+  ],
+  "notes": "My Profile: plan card, benefits list, 'Go Lifetime' row, Log Out. Email text varies, so tap the row by position. Do NOT tap 'Log Out'."
+ },
+ {
+  "id": "profile_logout_button",
+  "file": "lib/screens/profile_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap_desc": "Profile header row at top of the white card (avatar + email text + '>' arrow)"
+   },
+   {
+    "scroll_to": "Log Out"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "Scroll to bottom only; tapping Log Out signs out (unsafe)."
+ },
+ {
+  "id": "subscription_sheet_from_header",
+  "file": "lib/widgets/subscription_sheet.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap": "Go Premium"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [
+   138,
+   523,
+   746,
+   773
+  ],
+  "notes": "Non-premium only. Plan switch pills Monthly/Yearly/Lifetime (Expanded), price Row (price + '/ year') without flex (746), benefit rows. Never tap 'Subscribe Now'/'Get Lifetime Access'.",
+  "unsafe_reason": "'Go Premium' header button only exists for non-premium users; the audit account is premium."
+ },
+ {
+  "id": "subscription_sheet_monthly",
+  "file": "lib/widgets/subscription_sheet.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap": "Go Premium"
+   },
+   {
+    "tap": "Monthly"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [
+   746
+  ],
+  "notes": "Monthly hero card: tagline 'Try it out, cancel anytime'.",
+  "unsafe_reason": "'Go Premium' header button only exists for non-premium users; the audit account is premium."
+ },
+ {
+  "id": "subscription_sheet_lifetime",
+  "file": "lib/widgets/subscription_sheet.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap": "Go Premium"
+   },
+   {
+    "tap": "Lifetime"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [
+   746
+  ],
+  "notes": "Lifetime card, CTA 'Get Lifetime Access', disclosure 'One-time payment...'.",
+  "unsafe_reason": "'Go Premium' header button only exists for non-premium users; the audit account is premium."
+ },
+ {
+  "id": "subscription_sheet_from_profile",
+  "file": "lib/widgets/subscription_sheet.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap_desc": "Profile header row at top of the white card (avatar + email text + '>' arrow)"
+   },
+   {
+    "tap_desc": "Plan card / premium banner on My Profile (opens subscription sheet)"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   746
+  ],
+  "notes": "Same sheet, trigger 'profile'."
+ },
+ {
+  "id": "subscription_sheet_premium_active",
+  "file": "lib/widgets/subscription_sheet.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap": "Premium Active"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   138,
+   182
+  ],
+  "notes": "Premium users only: active-plan variant with 'Premium Active' row and lifetime upgrade text."
+ },
+ {
+  "id": "settings_screen",
+  "file": "lib/screens/settings_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Settings"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   263,
+   268,
+   313,
+   373,
+   420,
+   435
+  ],
+  "notes": "Language & Theme ListTiles with trailing DropdownButton ('System Default'); premium banner Row; long switch titles 'Use Default Country Ranking Bar Color'."
+ },
+ {
+  "id": "settings_theme_dropdown",
+  "file": "lib/screens/settings_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Settings"
+   },
+   {
+    "tap": "Theme"
+   },
+   {
+    "tap_desc": "Theme trailing dropdown button"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   373
+  ],
+  "notes": "Opens dropdown menu: System Default / Light / Dark. Press back to close without changing."
+ },
+ {
+  "id": "settings_language_dropdown",
+  "file": "lib/screens/settings_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Settings"
+   },
+   {
+    "tap": "English"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   268
+  ],
+  "notes": "Language picker (native names). Driver changes language here anyway."
+ },
+ {
+  "id": "settings_reset_confirm_dialog",
+  "file": "lib/screens/settings_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Settings"
+   },
+   {
+    "scroll_to": "Reset All Data"
+   },
+   {
+    "tap": "Reset All Data"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   88
+  ],
+  "notes": "Confirm Reset dialog. Only tap 'Cancel' - 'Reset' wipes data."
+ },
+ {
+  "id": "settings_subscription_sheet",
+  "file": "lib/widgets/subscription_sheet.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Settings"
+   },
+   {
+    "tap": "Remove Ads"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [
+   746
+  ],
+  "notes": "Non-premium wording; premium users see 'Premium Active'.",
+  "unsafe_reason": "'Remove Ads' row only exists for non-premium users (premium shows 'Premium Active')."
+ },
+ {
+  "id": "trip_log_list",
+  "file": "lib/screens/trip_log_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   146,
+   377,
+   384
+  ],
+  "notes": "Signed-in user assumed; when signed out this tap opens the login sheet instead (see login_prompt_sheet). Header Row(spaceBetween): 'My Trip Logs' (32px) + search + add icons, no Expanded (146)."
+ },
+ {
+  "id": "trip_log_list_empty",
+  "file": "lib/screens/trip_log_list_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "Empty state 'No logs yet' (not wrapped in tr) when user has no logs."
+ },
+ {
+  "id": "trip_log_search",
+  "file": "lib/screens/trip_log_list_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   },
+   {
+    "tap_desc": "search icon button right of the 'My Trip Logs' header title (nearest icon right of it)"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   117
+  ],
+  "notes": "Search field 'Search logs...'; type nothing for 'No results found' needs typing."
+ },
+ {
+  "id": "trip_log_new",
+  "file": "lib/screens/edit_trip_log_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   },
+   {
+    "tap_desc": "Orange circled + icon at top-right of Trip Log header"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "New Trip Log editor; bottom button 'Save & Analyze'. Do NOT save (creates log + AI call)."
+ },
+ {
+  "id": "trip_log_card_menu",
+  "file": "lib/screens/trip_log_list_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   },
+   {
+    "tap": "Show menu"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   437,
+   447,
+   458
+  ],
+  "notes": "Popup: Edit / Change Flags / Delete. Needs at least one log."
+ },
+ {
+  "id": "trip_log_change_flags_dialog",
+  "file": "lib/screens/trip_log_list_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   },
+   {
+    "tap": "Show menu"
+   },
+   {
+    "tap": "Change Flags"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   571
+  ],
+  "notes": "Country checklist dialog; tap Cancel to leave."
+ },
+ {
+  "id": "trip_log_delete_dialog",
+  "file": "lib/screens/trip_log_list_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   },
+   {
+    "tap": "Show menu"
+   },
+   {
+    "tap": "Delete"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "Delete Log confirm; tap 'Cancel' only."
+ },
+ {
+  "id": "trip_log_edit",
+  "file": "lib/screens/edit_trip_log_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   },
+   {
+    "tap": "Show menu"
+   },
+   {
+    "tap": "Edit"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "Edit Trip Log; do not save."
+ },
+ {
+  "id": "trip_log_detail",
+  "file": "lib/screens/trip_log_detail_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   },
+   {
+    "tap_first_list_item": "first trip log card"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "Quill viewer; AppBar edit icon -> editor."
+ },
+ {
+  "id": "ai_summary_summary_tab",
+  "file": "lib/screens/ai_summary_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   },
+   {
+    "tap_desc": "auto_awesome sparkle icon left of the 'Show menu' 3-dot button on the first trip log card"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   1669,
+   1966,
+   1969,
+   3209,
+   4093,
+   6645
+  ],
+  "notes": "Needs an analysed log. SegmentedButton Summary/Itinerary (1669). Card headers Row(spaceBetween){Row(icon,Text) , IconButton} with no flex: 'Countries & Cities', Flights, Trains, Buses, Ferries, Cars, Explore, Airports. Bottom buttons 'Save Modifications', 'Re-run Database Matching', 'Save Changes to My Data' (don't tap)."
+ },
+ {
+  "id": "ai_summary_itinerary_tab",
+  "file": "lib/screens/ai_itinerary_view.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   },
+   {
+    "tap_desc": "auto_awesome sparkle icon left of the 'Show menu' 3-dot button on the first trip log card"
+   },
+   {
+    "tap": "Itinerary"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   256,
+   391,
+   423
+  ],
+  "notes": "Day pager 'DAY n' + 'n / m'."
+ },
+ {
+  "id": "ai_itinerary_edit_activity_dialog",
+  "file": "lib/screens/ai_itinerary_view.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   },
+   {
+    "tap_desc": "auto_awesome sparkle icon left of the 'Show menu' 3-dot button on the first trip log card"
+   },
+   {
+    "tap": "Itinerary"
+   },
+   {
+    "tap_desc": "Edit icon on first activity of the day page"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "Edit Activity dialog; Cancel only."
+ },
+ {
+  "id": "ai_summary_add_city_dialog",
+  "file": "lib/screens/ai_summary_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   },
+   {
+    "tap_desc": "auto_awesome sparkle icon left of the 'Show menu' 3-dot button on the first trip log card"
+   },
+   {
+    "scroll_to": "Countries & Cities"
+   },
+   {
+    "tap_desc": "+ (add_circle_outline) icon at right of 'Countries & Cities' card header"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "'Add New City' AlertDialog with form fields; tap Cancel only."
+ },
+ {
+  "id": "ai_summary_add_flight_dialog",
+  "file": "lib/screens/ai_summary_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   },
+   {
+    "tap_desc": "auto_awesome sparkle icon left of the 'Show menu' 3-dot button on the first trip log card"
+   },
+   {
+    "scroll_to": "Flights"
+   },
+   {
+    "tap_desc": "+ icon at right of 'Flights' card header"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "'Add New Flight' AlertDialog with form fields; tap Cancel only."
+ },
+ {
+  "id": "ai_summary_add_train_dialog",
+  "file": "lib/screens/ai_summary_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   },
+   {
+    "tap_desc": "auto_awesome sparkle icon left of the 'Show menu' 3-dot button on the first trip log card"
+   },
+   {
+    "scroll_to": "Trains"
+   },
+   {
+    "tap_desc": "+ icon at right of 'Trains' card header"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "'Add New Train Journey' AlertDialog with form fields; tap Cancel only."
+ },
+ {
+  "id": "ai_summary_add_bus_dialog",
+  "file": "lib/screens/ai_summary_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   },
+   {
+    "tap_desc": "auto_awesome sparkle icon left of the 'Show menu' 3-dot button on the first trip log card"
+   },
+   {
+    "scroll_to": "Buses"
+   },
+   {
+    "tap_desc": "+ icon at right of 'Buses' card header"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "'Add New Bus Journey' AlertDialog with form fields; tap Cancel only."
+ },
+ {
+  "id": "ai_summary_add_ferry_dialog",
+  "file": "lib/screens/ai_summary_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   },
+   {
+    "tap_desc": "auto_awesome sparkle icon left of the 'Show menu' 3-dot button on the first trip log card"
+   },
+   {
+    "scroll_to": "Ferries"
+   },
+   {
+    "tap_desc": "+ icon at right of 'Ferries' card header"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "'Add New Ferry Journey' AlertDialog with form fields; tap Cancel only."
+ },
+ {
+  "id": "ai_summary_add_car_dialog",
+  "file": "lib/screens/ai_summary_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   },
+   {
+    "tap_desc": "auto_awesome sparkle icon left of the 'Show menu' 3-dot button on the first trip log card"
+   },
+   {
+    "scroll_to": "Cars"
+   },
+   {
+    "tap_desc": "+ icon at right of 'Cars' card header"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "'Add New Car Journey' AlertDialog with form fields; tap Cancel only."
+ },
+ {
+  "id": "ai_summary_add_landmark_dialog",
+  "file": "lib/screens/ai_summary_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   },
+   {
+    "tap_desc": "auto_awesome sparkle icon left of the 'Show menu' 3-dot button on the first trip log card"
+   },
+   {
+    "scroll_to": "Explore"
+   },
+   {
+    "tap_desc": "+ icon at right of 'Explore' card header"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "'Add New Landmark' AlertDialog with form fields; tap Cancel only."
+ },
+ {
+  "id": "ai_summary_add_airport_dialog",
+  "file": "lib/screens/ai_summary_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   },
+   {
+    "tap_desc": "auto_awesome sparkle icon left of the 'Show menu' 3-dot button on the first trip log card"
+   },
+   {
+    "scroll_to": "Airports"
+   },
+   {
+    "tap_desc": "+ icon at right of 'Airports' card header"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "'Add Airport' AlertDialog with form fields; tap Cancel only."
+ },
+ {
+  "id": "ai_summary_edit_city_dialog",
+  "file": "lib/screens/ai_summary_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   },
+   {
+    "tap_desc": "auto_awesome sparkle icon left of the 'Show menu' 3-dot button on the first trip log card"
+   },
+   {
+    "tap_desc": "first city row edit icon in Countries & Cities card"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Edit City Visit dialog (also Delete City confirm exists). Cancel only."
+ },
+ {
+  "id": "ai_summary_save_selection_dialog",
+  "file": "lib/screens/ai_summary_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   },
+   {
+    "tap_desc": "auto_awesome sparkle icon left of the 'Show menu' 3-dot button on the first trip log card"
+   },
+   {
+    "scroll_to": "Save Changes to My Data"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [
+   8082,
+   8524,
+   8593
+  ],
+  "notes": "Selection dialog opened by 'Save Changes to My Data' (writes to user data). Path stops before the tap."
+ },
+ {
+  "id": "trip_map_screen",
+  "file": "lib/screens/trip_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   },
+   {
+    "tap_desc": "auto_awesome sparkle icon left of the 'Show menu' 3-dot button on the first trip log card"
+   },
+   {
+    "tap": "View on Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   2125,
+   2329,
+   2648,
+   2969,
+   4693
+  ],
+  "notes": "Trip Map with toolbar icons (tooltips Locations, Transportation, Edit Mode, Play/Pause Animation, Stop Animation, Settings, Fit Bounds); 'Speed:' row."
+ },
+ {
+  "id": "trip_map_settings_panel",
+  "file": "lib/screens/trip_map_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   },
+   {
+    "tap_desc": "auto_awesome sparkle icon left of the 'Show menu' 3-dot button on the first trip log card"
+   },
+   {
+    "tap": "View on Map"
+   },
+   {
+    "tap": "Settings"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   1527,
+   1545,
+   1579,
+   1597,
+   1631,
+   1649
+  ],
+  "notes": "Panel rows 'Cities/Airports Icons', 'Size:' + slider + '%', 'Transportation' 'Width:'."
+ },
+ {
+  "id": "trip_map_edit_mode",
+  "file": "lib/screens/trip_map_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   },
+   {
+    "tap_desc": "auto_awesome sparkle icon left of the 'Show menu' 3-dot button on the first trip log card"
+   },
+   {
+    "tap": "View on Map"
+   },
+   {
+    "tap": "Edit Mode"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   1495,
+   1922,
+   1977,
+   2003,
+   2020
+  ],
+  "notes": "Bottom buttons 'Add New Location' / 'Add New Route' / Cancel / Edit in a Row."
+ },
+ {
+  "id": "trip_map_add_route_dialog",
+  "file": "lib/screens/trip_map_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Trip Log"
+   },
+   {
+    "tap_desc": "auto_awesome sparkle icon left of the 'Show menu' 3-dot button on the first trip log card"
+   },
+   {
+    "tap": "View on Map"
+   },
+   {
+    "tap": "Edit Mode"
+   },
+   {
+    "tap": "Add New Route"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   2584,
+   2591,
+   2597,
+   2604
+  ],
+  "notes": "Requires tapping origin/destination on map, then 'Add New Route Details' dialog with Hours/Minutes row. Cancel only."
+ },
+ {
+  "id": "calendar_screen",
+  "file": "lib/screens/calendar_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Calendar"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   269,
+   273
+  ],
+  "notes": "Signed-in user assumed; when signed out this tap opens the login sheet instead (see login_prompt_sheet). Header row: chevrons + year/month DropdownButtons in a Row (no flex); translated month abbreviations."
+ },
+ {
+  "id": "calendar_month_dropdown",
+  "file": "lib/screens/calendar_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Calendar"
+   },
+   {
+    "tap_desc": "Month dropdown (second dropdown in header row)"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   276
+  ],
+  "notes": "Month menu; back to close."
+ },
+ {
+  "id": "calendar_new_memo",
+  "file": "lib/screens/calendar_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Calendar"
+   },
+   {
+    "tap_desc": "Floating action button (+) bottom-right"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   521,
+   526,
+   587
+  ],
+  "notes": "New Memo page (title not tr'd) with 'SAVE' action, Title/Content fields, 'Add Photo'. Don't save."
+ },
+ {
+  "id": "calendar_memo_edit_with_photo",
+  "file": "lib/screens/calendar_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Calendar"
+   },
+   {
+    "tap_first_list_item": "first memo in the selected day's list"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   571
+  ],
+  "notes": "Existing memo with photo shows Row(spaceEvenly) 'Change Photo' + 'Remove Photo' buttons, no flex. tap_first_list_item needs wide (>=700px) rows; this is a narrow/horizontal or data-dependent item (needs a memo / visited landmark). Calibrate."
+ },
+ {
+  "id": "calendar_itinerary_event",
+  "file": "lib/screens/ai_itinerary_view.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Calendar"
+   },
+   {
+    "tap_first_list_item": "first trip-log/itinerary event under the calendar"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   256,
+   391,
+   423
+  ],
+  "notes": "Opens AiItineraryView at that date. Needs events."
+ },
+ {
+  "id": "favorites_screen",
+  "file": "lib/screens/favorites_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Favorites"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   134,
+   186
+  ],
+  "notes": "Signed-in user assumed; when signed out this tap opens the login sheet instead (see login_prompt_sheet). Sections COUNTRIES/CITIES/LANDMARKS/AIRPORTS/AIRLINES (uppercase)."
+ },
+ {
+  "id": "favorites_empty",
+  "file": "lib/screens/favorites_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Favorites"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "'No favorites added yet.' when nothing favourited."
+ },
+ {
+  "id": "favorites_city_sheet",
+  "file": "lib/screens/favorites_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Favorites"
+   },
+   {
+    "scroll_to": "CITIES"
+   },
+   {
+    "tap_first_list_item": "first card in CITIES row"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   407,
+   430,
+   458,
+   471
+  ],
+  "notes": "City detail sheet with 'Close', 'My Rating', 'Visits' + 'Add' (don't tap Add)."
+ },
+ {
+  "id": "favorites_landmark_sheet",
+  "file": "lib/screens/favorites_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Favorites"
+   },
+   {
+    "scroll_to": "LANDMARKS"
+   },
+   {
+    "tap_first_list_item": "first card in LANDMARKS row"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   581,
+   597,
+   611,
+   635,
+   638,
+   811
+  ],
+  "notes": "Landmark sheet 'Cancel'/'Done' header Row, 'Wishlist:', 'History (n entries)' + 'Add Visit'. Visit editor Row 'Visit Date: yyyy-m-d' + 'Edit Date' TextButton without flex (811). tap_first_list_item needs wide (>=700px) rows; this is a narrow/horizontal or data-dependent item (needs a memo / visited landmark). Calibrate."
+ },
+ {
+  "id": "favorites_country_detail",
+  "file": "lib/screens/country_detail_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Favorites"
+   },
+   {
+    "scroll_to": "COUNTRIES"
+   },
+   {
+    "tap_first_list_item": "first card in COUNTRIES row"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Country detail is owned by Countries-tab agent."
+ },
+ {
+  "id": "passport_my_passport_tab",
+  "file": "lib/screens/passport_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Passport"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   257,
+   264,
+   375,
+   455,
+   459
+  ],
+  "notes": "Signed-in user assumed; when signed out this tap opens the login sheet instead (see login_prompt_sheet). Non-scrollable TabBar 'My Passport'/'Global Rankings'; stat rows 'Power Rank', 'Visa-Free' label+value Row; 'View Visa Map'."
+ },
+ {
+  "id": "passport_personal_details",
+  "file": "lib/screens/passport_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Passport"
+   },
+   {
+    "scroll_to": "Personal Details"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   264,
+   265,
+   901
+  ],
+  "notes": "Form with DropdownButtonFormField + 'Save Details' (don't save). 'No saved details' card."
+ },
+ {
+  "id": "passport_nationality_dropdown",
+  "file": "lib/screens/passport_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Passport"
+   },
+   {
+    "tap_desc": "Nationality dropdown under 'Nationality' label"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   376
+  ],
+  "notes": "Country list menu; back without choosing (choosing changes saved passport)."
+ },
+ {
+  "id": "passport_expiry_date_picker",
+  "file": "lib/screens/passport_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Passport"
+   },
+   {
+    "scroll_to": "Personal Details"
+   },
+   {
+    "tap_desc": "expiry date field"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   651
+  ],
+  "notes": "Material date picker (system-localized). Cancel."
+ },
+ {
+  "id": "passport_global_rankings_tab",
+  "file": "lib/screens/passport_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Passport"
+   },
+   {
+    "tap": "Global Rankings"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   905,
+   921,
+   946
+  ],
+  "notes": "Rank list '#n' + name + 'ME' badge; search 'Search country...'."
+ },
+ {
+  "id": "passport_visa_detail_map",
+  "file": "lib/screens/passport_visa_detail_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Passport"
+   },
+   {
+    "tap": "View Visa Map"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   51,
+   53,
+   91,
+   106
+  ],
+  "notes": "Tabs with icons 'Map View'/'List View'; legend box rows 'Home Country', 'Visa-Free / VOA', 'e-Visa / eTA', 'Visa Required'."
+ },
+ {
+  "id": "passport_visa_detail_list",
+  "file": "lib/screens/passport_visa_detail_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Passport"
+   },
+   {
+    "tap": "View Visa Map"
+   },
+   {
+    "tap": "List View"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "Expansion tiles per continent."
+ },
+ {
+  "id": "passport_visa_detail_from_ranking",
+  "file": "lib/screens/passport_visa_detail_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Passport"
+   },
+   {
+    "tap": "Global Rankings"
+   },
+   {
+    "tap_first_list_item": "first passport ranking row"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   91
+  ],
+  "notes": "Same screen for another passport."
+ },
+ {
+  "id": "visa_screen",
+  "file": "lib/screens/visa_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Visa"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Signed-in user assumed; when signed out this tap opens the login sheet instead (see login_prompt_sheet). 'My Visas', 'Add New Visa' form (don't tap 'Save Visa Info'), 'Saved Visas' list / 'No visas saved yet.'."
+ },
+ {
+  "id": "visa_view_notes_dialog",
+  "file": "lib/screens/visa_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Visa"
+   },
+   {
+    "tap": "View Notes"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "Needs a saved visa. Dialog with Close/Edit; 'Edit' -> 'Edit Note' dialog (Cancel)."
+ },
+ {
+  "id": "visa_edit_note_dialog",
+  "file": "lib/screens/visa_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Visa"
+   },
+   {
+    "tap": "View Notes"
+   },
+   {
+    "tap": "Edit"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "Cancel only."
+ },
+ {
+  "id": "visa_remove_dialog",
+  "file": "lib/screens/visa_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Visa"
+   },
+   {
+    "tap": "Delete"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "'Remove Visa?' confirm; Cancel only. Needs a saved visa."
+ },
+ {
+  "id": "visa_expiry_date_picker",
+  "file": "lib/screens/visa_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Visa"
+   },
+   {
+    "tap_desc": "Expiry date field in Add New Visa form"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   245
+  ],
+  "notes": "Date picker; Cancel."
+ },
+ {
+  "id": "visa_map_screen_unused",
+  "file": "lib/screens/visa_map_screen.dart",
+  "kind": "screen",
+  "path": [],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   143
+  ],
+  "notes": "VisaMapScreen has no callers in lib/ (unreachable)."
+ },
+ {
+  "id": "discover_hub",
+  "file": "lib/screens/discover_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Discover"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "Signed-in user assumed; when signed out this tap opens the login sheet instead (see login_prompt_sheet). 7 feature tiles; heights measured from text so long text shouldn't overflow (maxLines 2 ellipsis)."
+ },
+ {
+  "id": "traveler_type_ai_from_discover",
+  "file": "lib/screens/traveler_type_ai_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Discover"
+   },
+   {
+    "tap": "Traveler Type AI"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Empty states ('Let your travels tell your story' / 'What kind of traveler are you?' + 'Discover my type') or result."
+ },
+ {
+  "id": "traveler_type_result",
+  "file": "lib/widgets/traveler_type_result.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Discover"
+   },
+   {
+    "tap": "Traveler Type AI"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Result card when analysis exists. 'Discover my type' triggers an AI run (avoid)."
+ },
+ {
+  "id": "recommendations_screen",
+  "file": "lib/screens/recommendations_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Discover"
+   },
+   {
+    "tap": "AI Recommendation"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   284,
+   375
+  ],
+  "notes": "Countries/Cities/Landmarks sections with 'Top N' chip; empty prompts if <5 ratings."
+ },
+ {
+  "id": "recommendations_landmark_sheet",
+  "file": "lib/screens/recommendations_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Discover"
+   },
+   {
+    "tap": "AI Recommendation"
+   },
+   {
+    "scroll_to": "Landmarks"
+   },
+   {
+    "tap_first_list_item": "first landmark recommendation row"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   561,
+   641,
+   899,
+   1406
+  ],
+  "notes": "Landmark details sheet (Cancel/Done, Wishlist:, Add Visit, visit editor rows). Same pattern as favorites sheet."
+ },
+ {
+  "id": "recommendations_city_tour",
+  "file": "lib/widgets/city_tour_navigation.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Discover"
+   },
+   {
+    "tap": "AI Recommendation"
+   },
+   {
+    "scroll_to": "Cities"
+   },
+   {
+    "tap_first_list_item": "first city recommendation row"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "openCityTour -> city report/modal; owned by Cities-tab agent."
+ },
+ {
+  "id": "country_twin_screen",
+  "file": "lib/screens/country_twin_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Discover"
+   },
+   {
+    "tap": "Travel Soulmate"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Travel Soulmate result (country_twin_result.dart / soulmate_comparison.dart). Friend request button sends a request (unsafe, don't tap)."
+ },
+ {
+  "id": "country_twin_result_widget",
+  "file": "lib/widgets/country_twin_result.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Discover"
+   },
+   {
+    "tap": "Travel Soulmate"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Result body."
+ },
+ {
+  "id": "soulmate_comparison_widget",
+  "file": "lib/widgets/soulmate_comparison.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Discover"
+   },
+   {
+    "tap": "Travel Soulmate"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Comparison section."
+ },
+ {
+  "id": "travelog_polls",
+  "file": "lib/screens/travelog_polls_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Discover"
+   },
+   {
+    "tap": "Travelog Polls"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "THIS WEEK / PREVIEW / REVEAL badges; voting is a write (don't vote)."
+ },
+ {
+  "id": "travelog_poll_history",
+  "file": "lib/screens/travelog_poll_history_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Discover"
+   },
+   {
+    "tap": "Travelog Polls"
+   },
+   {
+    "tap": "Past poll results"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "List or 'No results revealed yet'."
+ },
+ {
+  "id": "travelog_poll_result",
+  "file": "lib/screens/travelog_poll_history_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Discover"
+   },
+   {
+    "tap": "Travelog Polls"
+   },
+   {
+    "tap": "Past poll results"
+   },
+   {
+    "tap_first_list_item": "first past poll"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "'Poll results' with '1ST PLACE' / 'LAST WEEK · PREVIEW' labels."
+ },
+ {
+  "id": "tourist_local_quiz",
+  "file": "lib/screens/discover_quiz_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Discover"
+   },
+   {
+    "tap": "Tourist vs Local"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   109,
+   207,
+   385
+  ],
+  "notes": "DiscoverQuizScreen(local). Footer: 64px 'Back' (FittedBox) + Next button."
+ },
+ {
+  "id": "tourist_local_result",
+  "file": "lib/widgets/tourist_footprint_result.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Discover"
+   },
+   {
+    "tap": "Tourist vs Local"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Result only after answering all questions (may show rewarded ad: 'Watch ad & see result'). Saves answers."
+ },
+ {
+  "id": "survival_quiz",
+  "file": "lib/screens/discover_quiz_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Discover"
+   },
+   {
+    "tap": "Travel Survival"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   109,
+   207,
+   385
+  ],
+  "notes": "Question page; option rows with long text."
+ },
+ {
+  "id": "survival_quiz_next_question",
+  "file": "lib/screens/discover_quiz_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Discover"
+   },
+   {
+    "tap": "Travel Survival"
+   },
+   {
+    "tap_first_list_item": "first answer option"
+   },
+   {
+    "tap": "Next"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   385
+  ],
+  "notes": "Step 2 shows 'Back' button in 64px slot. Answers saved as draft locally."
+ },
+ {
+  "id": "overpaying_quiz",
+  "file": "lib/screens/discover_quiz_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Discover"
+   },
+   {
+    "tap": "Overpaying Test"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   109,
+   207,
+   385
+  ],
+  "notes": "quizId savvy."
+ },
+ {
+  "id": "discover_quiz_review",
+  "file": "lib/screens/discover_quiz_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "My Hub"
+   },
+   {
+    "tap": "Discover"
+   },
+   {
+    "tap": "Travel Survival"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Result + 'Review your answers' section only after finishing all questions (may require ad)."
+ },
+ {
+  "id": "traveler_type_selector",
+  "file": "lib/screens/traveler_type_selector_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap": "Traveler Type"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "YOUR PROFILE / Travel Type card or 'No Analysis Yet', option cards 'Travel DNA Test' / 'Traveler Type AI'."
+ },
+ {
+  "id": "trip_dna_quiz",
+  "file": "lib/screens/trip_dna_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap": "Traveler Type"
+   },
+   {
+    "tap": "Travel DNA Test"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   61
+  ],
+  "notes": "60 Likert questions with 'Disagree'/'Agree' labels; 'Reset Quiz' tooltip."
+ },
+ {
+  "id": "trip_dna_results",
+  "file": "lib/screens/trip_dna_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap": "Traveler Type"
+   },
+   {
+    "tap": "Travel DNA Test"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [
+   61
+  ],
+  "notes": "Results view ('YOUR RESULTS', 'Travel DNA', 'Retake Quiz') only after completing/if saved. Completing changes saved type."
+ },
+ {
+  "id": "trip_dna_reset_dialog",
+  "file": "lib/screens/trip_dna_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap": "Traveler Type"
+   },
+   {
+    "tap": "Travel DNA Test"
+   },
+   {
+    "tap": "Reset Quiz"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "If a confirm appears, cancel."
+ },
+ {
+  "id": "traveler_type_ai_from_selector",
+  "file": "lib/screens/traveler_type_ai_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap": "Traveler Type"
+   },
+   {
+    "tap": "Traveler Type AI"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Signed-out: opens login sheet instead."
+ },
+ {
+  "id": "badges_screen",
+  "file": "lib/screens/badges_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap": "Rank"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   457,
+   618,
+   679,
+   686,
+   696
+  ],
+  "notes": "CURRENT RANK card, level ladder buttons (Start..Legend) in a Row, category selector + 3 icon filter toggles, badge grid."
+ },
+ {
+  "id": "badges_category_menu",
+  "file": "lib/screens/badges_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap": "Rank"
+   },
+   {
+    "tap": "All"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   618,
+   717,
+   734
+  ],
+  "notes": "Category dropdown list (All/Country/City/Landmarks/Flight...)."
+ },
+ {
+  "id": "badges_category_city",
+  "file": "lib/screens/badges_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap": "Rank"
+   },
+   {
+    "tap": "All"
+   },
+   {
+    "tap": "City"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Filtered grid."
+ },
+ {
+  "id": "badges_filters_none",
+  "file": "lib/screens/badges_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap": "Rank"
+   },
+   {
+    "tap_desc": "unlocked filter toggle icon right of category selector"
+   },
+   {
+    "tap_desc": "locked filter toggle icon"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   211
+  ],
+  "notes": "Empty state 'No badges match filters'."
+ },
+ {
+  "id": "badges_level_dialog",
+  "file": "lib/screens/badges_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap": "Rank"
+   },
+   {
+    "tap": "Explorer"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   833,
+   848
+  ],
+  "notes": "Level dialog '<level>' + 'N Points Required'."
+ },
+ {
+  "id": "badges_badge_dialog",
+  "file": "lib/screens/badges_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap": "Rank"
+   },
+   {
+    "tap_first_list_item": "first badge tile in grid"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1091,
+   1109,
+   1132
+  ],
+  "notes": "Badge dialog: name + '+ pts' chip Row, Progress row, 'View Checklist'/'Subscribe to Claim' button, share."
+ },
+ {
+  "id": "badge_detail_screen",
+  "file": "lib/screens/badge_detail_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap": "Rank"
+   },
+   {
+    "tap_first_list_item": "first badge tile in grid"
+   },
+   {
+    "tap": "View Checklist"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   416,
+   1015,
+   1032,
+   1117,
+   1159,
+   1162
+  ],
+  "notes": "Checklist screen: 'Progress', 'Multinational', 'Home' chips, empty 'No countries visited yet'."
+ },
+ {
+  "id": "badge_detail_landmark_sheet",
+  "file": "lib/screens/badge_detail_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap": "Rank"
+   },
+   {
+    "tap": "All"
+   },
+   {
+    "tap": "Landmarks"
+   },
+   {
+    "tap_first_list_item": "first badge tile"
+   },
+   {
+    "tap_first_list_item": "first landmark item"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   1162,
+   1163,
+   1194,
+   1745
+  ],
+  "notes": "Landmark sheet: 'Wishlist:' / 'My Rating:' rows (min size), 'History (n entries)' + 'Add Visit' Row no flex (1194), visit editor 'Visit Date' + 'Edit Date' (1745). Removed 'View Checklist' step: no such button, the checklist is rendered directly below the section title."
+ },
+ {
+  "id": "badge_detail_city_sheet",
+  "file": "lib/screens/badge_detail_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap": "Rank"
+   },
+   {
+    "tap": "All"
+   },
+   {
+    "tap": "City"
+   },
+   {
+    "tap_first_list_item": "first badge tile"
+   },
+   {
+    "tap_first_list_item": "first city item"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1311,
+   1347
+  ],
+  "notes": "City sheet with Close/My Rating/Visits. Removed 'View Checklist' step: no such button, the checklist is rendered directly below the section title."
+ },
+ {
+  "id": "badge_detail_unesco_sheet",
+  "file": "lib/screens/badge_detail_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap": "Rank"
+   },
+   {
+    "tap_first_list_item": "first badge tile in grid"
+   },
+   {
+    "tap_first_list_item": "first UNESCO site item (UNESCO badges)"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   1499,
+   1507,
+   1527,
+   1913
+  ],
+  "notes": "UNESCO sheet 'Visit History (n)' + 'Add Visit'; visit editor rows. Removed 'View Checklist' step: no such button, the checklist is rendered directly below the section title."
+ },
+ {
+  "id": "badge_detail_arrival_departure_sheet",
+  "file": "lib/screens/badge_detail_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap": "Rank"
+   },
+   {
+    "tap_first_list_item": "first badge tile in grid"
+   },
+   {
+    "tap_desc": "date range edit on a visit"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   2041,
+   2058
+  ],
+  "notes": "Arrival/Departure fields sheet; Cancel. Removed 'View Checklist' step: no such button, the checklist is rendered directly below the section title."
+ },
+ {
+  "id": "badge_premium_subscribe",
+  "file": "lib/widgets/subscription_sheet.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "tap": "Rank"
+   },
+   {
+    "tap": "Subscribe to Claim"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [
+   746
+  ],
+  "notes": "Only for premium-pending badges (non-premium users).",
+  "unsafe_reason": "'Subscribe to Claim' only exists for non-premium users with premium-pending badges."
+ },
+ {
+  "id": "badge_collected_popup",
+  "file": "lib/screens/badge_collected_screen.dart",
+  "kind": "screen",
+  "path": [],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Shown automatically when a badge unlocks (requires changing visit data)."
+ },
+ {
+  "id": "rank_collected_popup",
+  "file": "lib/screens/rank_collected_screen.dart",
+  "kind": "screen",
+  "path": [],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Shown on rank-up only."
+ },
+ {
+  "id": "badge_premium_pending_screen",
+  "file": "lib/screens/badge_premium_pending_screen.dart",
+  "kind": "screen",
+  "path": [],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Shown when a premium badge is earned by a free user."
+ },
+ {
+  "id": "badge_summary_dialog",
+  "file": "lib/widgets/badge_summary_dialog.dart",
+  "kind": "dialog",
+  "path": [],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Shown after bulk unlocks."
+ },
+ {
+  "id": "daily_quiz_normal",
+  "file": "lib/screens/daily_quiz_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Daily Quiz"
+   },
+   {
+    "tap": "Daily Quiz"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   845,
+   853,
+   867,
+   632
+  ],
+  "notes": "Mode tabs NORMAL/EXPERT (Expanded), PREMIUM badge on Expert, 'Default: Normal' row, question + options. Answering writes quiz history (unsafe)."
+ },
+ {
+  "id": "daily_quiz_default_mode_expanded",
+  "file": "lib/screens/daily_quiz_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Daily Quiz"
+   },
+   {
+    "tap": "Daily Quiz"
+   },
+   {
+    "tap_contains": "Default: "
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   632,
+   688
+  ],
+  "notes": "Expanded default-mode row with 'Default' toggle and notification icon."
+ },
+ {
+  "id": "daily_quiz_expert_tab",
+  "file": "lib/screens/daily_quiz_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Daily Quiz"
+   },
+   {
+    "tap": "Daily Quiz"
+   },
+   {
+    "tap": "EXPERT"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1180,
+   1189
+  ],
+  "notes": "Premium: expert question. Non-premium: subscription prompt (subscription sheet)."
+ },
+ {
+  "id": "daily_quiz_answered",
+  "file": "lib/screens/daily_quiz_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Daily Quiz"
+   },
+   {
+    "tap": "Daily Quiz"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [
+   1433,
+   1701
+  ],
+  "notes": "After answering: 'Correct!' / 'Explanation' card and tappable answer chips. Answering records today's quiz."
+ },
+ {
+  "id": "daily_quiz_option_landmark_sheet",
+  "file": "lib/screens/daily_quiz_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Daily Quiz"
+   },
+   {
+    "tap": "Daily Quiz"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [
+   2051,
+   2068,
+   2094,
+   2130,
+   2460
+  ],
+  "notes": "After answering, tapping a landmark option opens detail sheet (Wishlist, My Rating, 'Components / Locations', 'Visit History'). Country/airline options push other-area screens."
+ },
+ {
+  "id": "daily_quiz_date_picker",
+  "file": "lib/screens/daily_quiz_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Daily Quiz"
+   },
+   {
+    "tap": "Daily Quiz"
+   },
+   {
+    "tap_desc": "calendar/date selector icon in quiz header"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   2303
+  ],
+  "notes": "Past-date picker; 'No quiz found for this date.' state."
+ },
+ {
+  "id": "travelog_games_hub",
+  "file": "lib/screens/travelog_games_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Header 'PLAY & EXPLORE', 'Travelog Games', 6 game cards (title + subtitle)."
+ },
+ {
+  "id": "flag_guess_difficulty",
+  "file": "lib/games/flag_guess.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Flag Guess"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   2011,
+   2062
+  ],
+  "notes": "'CHOOSE A DIFFICULTY' + Easy/Medium/Hard/Insane cards (Insane premium/trial-gated)."
+ },
+ {
+  "id": "flag_guess_lobby_easy",
+  "file": "lib/games/flag_guess.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Flag Guess"
+   },
+   {
+    "tap": "Easy"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   2011,
+   2062
+  ],
+  "notes": "Lobby: 'DIFFICULTY' / 'Easy Mode', LEADERBOARD or 'No runs yet', 'Start Game'."
+ },
+ {
+  "id": "flag_guess_insane_gate",
+  "file": "lib/games/flag_guess.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Flag Guess"
+   },
+   {
+    "tap": "Insane"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Non-premium: trial / subscription prompt for Insane; premium: lobby."
+ },
+ {
+  "id": "flag_guess_game",
+  "file": "lib/games/flag_guess.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Flag Guess"
+   },
+   {
+    "tap": "Easy"
+   },
+   {
+    "tap": "Start Game"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   2011,
+   2062
+  ],
+  "notes": "In-game round screen (score/combo header). Leaving mid-run is fine."
+ },
+ {
+  "id": "flag_guess_game_over",
+  "file": "lib/games/flag_guess.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Flag Guess"
+   },
+   {
+    "tap": "Easy"
+   },
+   {
+    "tap": "Start Game"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [
+   2350
+  ],
+  "notes": "Game-over panel: _StatChip row (Rounds/Best/Combo, wrapped in Flexible) + 'Play Again' / 'Back to Lobby'. Reached only by finishing a run (saves a leaderboard record)."
+ },
+ {
+  "id": "which_is_farther_difficulty",
+  "file": "lib/games/which_is_farther.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Which Is Farther?"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   423,
+   508,
+   676,
+   859,
+   1218,
+   1294
+  ],
+  "notes": "'CHOOSE A DIFFICULTY' + Easy/Medium/Hard/Insane cards (Insane premium/trial-gated)."
+ },
+ {
+  "id": "which_is_farther_lobby_easy",
+  "file": "lib/games/which_is_farther.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Which Is Farther?"
+   },
+   {
+    "tap": "Easy"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   423,
+   508,
+   676,
+   859,
+   1218,
+   1294
+  ],
+  "notes": "Lobby: 'DIFFICULTY' / 'Easy Mode', LEADERBOARD or 'No runs yet', 'Start Game'."
+ },
+ {
+  "id": "which_is_farther_insane_gate",
+  "file": "lib/games/which_is_farther.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Which Is Farther?"
+   },
+   {
+    "tap": "Insane"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Non-premium: trial / subscription prompt for Insane; premium: lobby."
+ },
+ {
+  "id": "which_is_farther_game",
+  "file": "lib/games/which_is_farther.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Which Is Farther?"
+   },
+   {
+    "tap": "Easy"
+   },
+   {
+    "tap": "Start Game"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   423,
+   508,
+   676,
+   859,
+   1218,
+   1294
+  ],
+  "notes": "In-game round screen (score/combo header). Leaving mid-run is fine."
+ },
+ {
+  "id": "which_is_farther_game_over",
+  "file": "lib/games/which_is_farther.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Which Is Farther?"
+   },
+   {
+    "tap": "Easy"
+   },
+   {
+    "tap": "Start Game"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "high",
+  "risk_lines": [
+   1572
+  ],
+  "notes": "Game-over panel: _StatChip row (Rounds/Best/Combo, NOT wrapped in Flexible/Expanded) + 'Play Again' / 'Back to Lobby'. Reached only by finishing a run (saves a leaderboard record)."
+ },
+ {
+  "id": "border_chain_difficulty",
+  "file": "lib/games/border_chain.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Border Chain"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1535,
+   1830
+  ],
+  "notes": "'CHOOSE A DIFFICULTY' + Easy/Medium/Hard/Insane cards (Insane premium/trial-gated)."
+ },
+ {
+  "id": "border_chain_lobby_easy",
+  "file": "lib/games/border_chain.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Border Chain"
+   },
+   {
+    "tap": "Easy"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1535,
+   1830
+  ],
+  "notes": "Lobby: 'DIFFICULTY' / 'Easy Mode', LEADERBOARD or 'No runs yet', 'Start Game'."
+ },
+ {
+  "id": "border_chain_insane_gate",
+  "file": "lib/games/border_chain.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Border Chain"
+   },
+   {
+    "tap": "Insane"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Non-premium: trial / subscription prompt for Insane; premium: lobby."
+ },
+ {
+  "id": "border_chain_game",
+  "file": "lib/games/border_chain.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Border Chain"
+   },
+   {
+    "tap": "Easy"
+   },
+   {
+    "tap": "Start Game"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1535,
+   1830
+  ],
+  "notes": "In-game round screen (score/combo header). Leaving mid-run is fine."
+ },
+ {
+  "id": "border_chain_game_over",
+  "file": "lib/games/border_chain.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Border Chain"
+   },
+   {
+    "tap": "Easy"
+   },
+   {
+    "tap": "Start Game"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "high",
+  "risk_lines": [
+   1781
+  ],
+  "notes": "Game-over panel: _StatChip row (Rounds/Best/Combo, NOT wrapped in Flexible/Expanded) + 'Play Again' / 'Back to Lobby'. Reached only by finishing a run (saves a leaderboard record)."
+ },
+ {
+  "id": "timezone_impostor_difficulty",
+  "file": "lib/games/timezone_impostor.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Timezone Impostor"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1111
+  ],
+  "notes": "'CHOOSE A DIFFICULTY' + Easy/Medium/Hard/Insane cards (Insane premium/trial-gated)."
+ },
+ {
+  "id": "timezone_impostor_lobby_easy",
+  "file": "lib/games/timezone_impostor.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Timezone Impostor"
+   },
+   {
+    "tap": "Easy"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1111
+  ],
+  "notes": "Lobby: 'DIFFICULTY' / 'Easy Mode', LEADERBOARD or 'No runs yet', 'Start Game'."
+ },
+ {
+  "id": "timezone_impostor_insane_gate",
+  "file": "lib/games/timezone_impostor.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Timezone Impostor"
+   },
+   {
+    "tap": "Insane"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Non-premium: trial / subscription prompt for Insane; premium: lobby."
+ },
+ {
+  "id": "timezone_impostor_game",
+  "file": "lib/games/timezone_impostor.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Timezone Impostor"
+   },
+   {
+    "tap": "Easy"
+   },
+   {
+    "tap": "Start Game"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1111
+  ],
+  "notes": "In-game round screen (score/combo header). Leaving mid-run is fine."
+ },
+ {
+  "id": "timezone_impostor_game_over",
+  "file": "lib/games/timezone_impostor.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Timezone Impostor"
+   },
+   {
+    "tap": "Easy"
+   },
+   {
+    "tap": "Start Game"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "high",
+  "risk_lines": [
+   1292
+  ],
+  "notes": "Game-over panel: _StatChip row (Rounds/Best/Combo, NOT wrapped in Flexible/Expanded) + 'Play Again' / 'Back to Lobby'. Reached only by finishing a run (saves a leaderboard record)."
+ },
+ {
+  "id": "respawn_mode",
+  "file": "lib/games/respawn.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Respawn"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   777,
+   1175,
+   1333,
+   1381
+  ],
+  "notes": "'MY COUNTRY' card ('Not set — tap to choose'), 'CHOOSE A MODE': Random Respawn / Richer Country / Poorer Country."
+ },
+ {
+  "id": "respawn_country_picker",
+  "file": "lib/games/respawn.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Respawn"
+   },
+   {
+    "tap_contains": "MY COUNTRY"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "Country picker sheet; selecting stores the home country for the game. Back to close."
+ },
+ {
+  "id": "respawn_game",
+  "file": "lib/games/respawn.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Respawn"
+   },
+   {
+    "tap": "Random Respawn"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1132,
+   1144,
+   1153,
+   1159,
+   1208
+  ],
+  "notes": "Result card: Population / GDP/capita / Area / Odds / Success rate chips (Expanded), comparison rows, 'Respawn Again'. Needs home country set."
+ },
+ {
+  "id": "respawn_summary",
+  "file": "lib/games/respawn.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Respawn"
+   },
+   {
+    "tap": "Random Respawn"
+   },
+   {
+    "tap": "Respawn Again"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1249,
+   1258
+  ],
+  "notes": "Averages: 'Avg. Pop', 'Avg. GDP/cap', 'Avg. Area', 'Avg. vs home (Pop)'."
+ },
+ {
+  "id": "higher_or_lower_metric",
+  "file": "lib/games/higher_or_lower.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Higher or Lower"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   638,
+   727,
+   897,
+   1062,
+   1562,
+   1571
+  ],
+  "notes": "'CHOOSE A METRIC': Population / Tourist Arrivals / GDP per Capita / Land Area."
+ },
+ {
+  "id": "higher_or_lower_difficulty",
+  "file": "lib/games/higher_or_lower.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Higher or Lower"
+   },
+   {
+    "tap": "Population"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   638,
+   727,
+   897,
+   1062,
+   1562,
+   1571
+  ],
+  "notes": "'CHOOSE A DIFFICULTY'."
+ },
+ {
+  "id": "higher_or_lower_lobby",
+  "file": "lib/games/higher_or_lower.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Higher or Lower"
+   },
+   {
+    "tap": "Population"
+   },
+   {
+    "tap": "Easy"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   638,
+   727,
+   897,
+   1062,
+   1562,
+   1571
+  ],
+  "notes": "Lobby + 'Start Game'."
+ },
+ {
+  "id": "higher_or_lower_game",
+  "file": "lib/games/higher_or_lower.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Higher or Lower"
+   },
+   {
+    "tap": "Population"
+   },
+   {
+    "tap": "Easy"
+   },
+   {
+    "tap": "Start Game"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   638,
+   727,
+   897,
+   1062,
+   1562,
+   1571
+  ],
+  "notes": "Game screen."
+ },
+ {
+  "id": "higher_or_lower_game_over",
+  "file": "lib/games/higher_or_lower.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Games"
+   },
+   {
+    "tap": "Travelog Games"
+   },
+   {
+    "tap": "Higher or Lower"
+   },
+   {
+    "tap": "Population"
+   },
+   {
+    "tap": "Easy"
+   },
+   {
+    "tap": "Start Game"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "high",
+  "risk_lines": [
+   1764,
+   1773,
+   1775
+  ],
+  "notes": "Game-over StatChip row not flexible. Requires finishing a run."
+ },
+ {
+  "id": "airport_code_unreachable",
+  "file": "lib/games/airport_code.dart",
+  "kind": "screen",
+  "path": [],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   954
+  ],
+  "notes": "No navigation to this game found outside its own file (not listed on Travelog Games hub) - likely unreachable; static review only."
+ },
+ {
+  "id": "map_lab_unreachable",
+  "file": "lib/games/map_lab.dart",
+  "kind": "screen",
+  "path": [],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "No navigation to this game found outside its own file (not listed on Travelog Games hub) - likely unreachable; static review only."
+ },
+ {
+  "id": "reveal_unreachable",
+  "file": "lib/games/reveal.dart",
+  "kind": "screen",
+  "path": [],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1437
+  ],
+  "notes": "No navigation to this game found outside its own file (not listed on Travelog Games hub) - likely unreachable; static review only."
+ },
+ {
+  "id": "second_city_unreachable",
+  "file": "lib/games/second_city.dart",
+  "kind": "screen",
+  "path": [],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   717
+  ],
+  "notes": "No navigation to this game found outside its own file (not listed on Travelog Games hub) - likely unreachable; static review only."
+ },
+ {
+  "id": "next_adventure_search_sheet",
+  "file": "lib/widgets/next_adventure_card.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Adventure"
+   },
+   {
+    "tap": "Paris"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   571,
+   622,
+   655
+  ],
+  "notes": "Search sheet: field 'Search a country or city', sections 'City guides'/'Cities'/'Landmarks'/'Countries' with counts. Empty-result state 'No matching city' needs typing."
+ },
+ {
+  "id": "next_adventure_landmark_sheet",
+  "file": "lib/widgets/next_adventure_card.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Adventure"
+   },
+   {
+    "tap": "Paris"
+   },
+   {
+    "tap_first_list_item": "first row in 'Landmarks' section (requires typing a query, e.g. 'Eiffel')"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Landmark sheet with LandmarkInfoCard and '<City> Plans' button."
+ },
+ {
+  "id": "landmark_info_card",
+  "file": "lib/widgets/landmark_info_card.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Adventure"
+   },
+   {
+    "tap": "Paris"
+   },
+   {
+    "tap_first_list_item": "first landmark row"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Overview/History/Highlights card inside landmark sheet."
+ },
+ {
+  "id": "next_adventure_city_report",
+  "file": "lib/widgets/city_report_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Adventure"
+   },
+   {
+    "tap": "Paris"
+   },
+   {
+    "tap_first_list_item": "first row in 'City guides' section"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "City report / city travel modal (owned by Cities-tab agent)."
+ },
+ {
+  "id": "next_adventure_country_detail",
+  "file": "lib/screens/country_detail_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Adventure"
+   },
+   {
+    "tap": "Paris"
+   },
+   {
+    "tap_first_list_item": "first row in 'Countries' section (type a country name)"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Owned by Countries-tab agent."
+ },
+ {
+  "id": "my_trips_shortcut_countries_map",
+  "file": "lib/screens/countries_map_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Countries"
+   },
+   {
+    "tap_desc": "round +/arrow button at right end of the 'Countries' progress row"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Entry from My Trips stats; screen itself covered by its own tab agent."
+ },
+ {
+  "id": "my_trips_shortcut_top_cities",
+  "file": "lib/screens/top_cities_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Top Cities"
+   },
+   {
+    "tap_desc": "round +/arrow button at right end of the 'Top Cities' progress row"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Entry from My Trips stats; screen itself covered by its own tab agent."
+ },
+ {
+  "id": "my_trips_shortcut_top_landmarks",
+  "file": "lib/screens/top_landmarks_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Top Landmarks"
+   },
+   {
+    "tap_desc": "round +/arrow button at right end of the 'Top Landmarks' progress row"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Entry from My Trips stats; screen itself covered by its own tab agent."
+ },
+ {
+  "id": "my_trips_shortcut_flight_log_list",
+  "file": "lib/screens/flight_log_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Flights"
+   },
+   {
+    "tap_desc": "round +/arrow button at right end of the 'Flights' progress row"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Entry from My Trips stats; screen itself covered by its own tab agent."
+ },
+ {
+  "id": "social_friends",
+  "file": "lib/social/screens/friends_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Friends"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   322,
+   331,
+   816,
+   821,
+   826,
+   848,
+   868,
+   886
+  ],
+  "notes": "Requires sign-in; first open shows a loading dialog while geo data loads. Ranking header, friend cards with segmented 'Both' / 'Only you' / 'Only <name>' and 'Profile'/'Compare'/'Duel' buttons in a Row."
+ },
+ {
+  "id": "social_friends_via_card",
+  "file": "lib/social/screens/friends_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Travelog Social"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   848
+  ],
+  "notes": "Social menu card opens Friends as well."
+ },
+ {
+  "id": "social_add_friend_sheet",
+  "file": "lib/social/screens/friends_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Friends"
+   },
+   {
+    "tap": "Add friend"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "'Add friend' sheet: Invite / Enter code options."
+ },
+ {
+  "id": "social_enter_code_dialog",
+  "file": "lib/social/screens/friends_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Friends"
+   },
+   {
+    "tap": "Add friend"
+   },
+   {
+    "tap": "Enter code"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "'Enter invite code' dialog; Cancel only."
+ },
+ {
+  "id": "social_invite_code_dialog",
+  "file": "lib/social/screens/friends_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Friends"
+   },
+   {
+    "tap": "Add friend"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "'Invite' creates an invite code on the server (Copy/Share buttons). Stop before tapping 'Invite'."
+ },
+ {
+  "id": "social_duels",
+  "file": "lib/social/screens/duels_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Friends"
+   },
+   {
+    "tap": "Duels"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Win/loss summary, sections Invites/Live now/Waiting for friend/Finished, status pills, FAB 'New duel'."
+ },
+ {
+  "id": "social_new_duel_friend_picker",
+  "file": "lib/social/screens/new_duel_sheet.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Friends"
+   },
+   {
+    "tap": "Duels"
+   },
+   {
+    "tap": "New duel"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "'Who do you want to duel?' picker; with no friends shows 'Add a friend first'."
+ },
+ {
+  "id": "social_new_duel_setup",
+  "file": "lib/social/screens/new_duel_sheet.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Friends"
+   },
+   {
+    "tap": "Duels"
+   },
+   {
+    "tap": "New duel"
+   },
+   {
+    "tap_first_list_item": "first friend in picker"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "high",
+  "risk_lines": [
+   145,
+   159,
+   175,
+   205
+  ],
+  "notes": "Setup sheet: Game / Difficulty / Scoring selectors + 'Send challenge' (sends invite - never tap)."
+ },
+ {
+  "id": "social_duel_game",
+  "file": "lib/social/screens/duel_game_screen.dart",
+  "kind": "screen",
+  "path": [],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": true,
+  "risk": "high",
+  "risk_lines": [
+   883,
+   1603
+  ],
+  "notes": "Live duel / waiting / result screens need a real opponent; static review only. Leave dialog 'Leave this duel?'."
+ },
+ {
+  "id": "social_leaderboard",
+  "file": "lib/social/screens/leaderboard_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Friends"
+   },
+   {
+    "tap": "More rankings"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   174
+  ],
+  "notes": "Friend Ranking with metric ChoiceChips (emoji + label)."
+ },
+ {
+  "id": "social_friend_compare_overview",
+  "file": "lib/social/screens/compare/compare_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Friends"
+   },
+   {
+    "tap": "Compare"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   116
+  ],
+  "notes": "Needs >=1 friend. Scrollable TabBar: Overview/Countries/Cities/Landmarks/Flights/Travel DNA/.../Duels. Hero 'You vs <name>', 'Start a duel'."
+ },
+ {
+  "id": "social_compare_countries_tab",
+  "file": "lib/social/screens/compare/countries_tab.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Friends"
+   },
+   {
+    "tap": "Compare"
+   },
+   {
+    "tap_contains": "Countries"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   113
+  ],
+  "notes": "Tab label includes an emoji prefix; use tap_contains. ChoiceChip filters. 'Compare'/'Profile' buttons exist only inside an expanded friend comparison card (friends_screen.dart ~848); needs a friend and a tap on a friend first."
+ },
+ {
+  "id": "social_compare_cities_tab",
+  "file": "lib/social/screens/compare/cities_tab.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Friends"
+   },
+   {
+    "tap": "Compare"
+   },
+   {
+    "tap_contains": "Cities"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   147
+  ],
+  "notes": "Tab label includes an emoji prefix; use tap_contains. SegmentedButton. 'Compare'/'Profile' buttons exist only inside an expanded friend comparison card (friends_screen.dart ~848); needs a friend and a tap on a friend first."
+ },
+ {
+  "id": "social_compare_landmarks_tab",
+  "file": "lib/social/screens/compare/landmarks_tab.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Friends"
+   },
+   {
+    "tap": "Compare"
+   },
+   {
+    "tap_contains": "Landmarks"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Tab label includes an emoji prefix; use tap_contains."
+ },
+ {
+  "id": "social_compare_flights_tab",
+  "file": "lib/social/screens/compare/flights_tab.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Friends"
+   },
+   {
+    "tap": "Compare"
+   },
+   {
+    "tap_contains": "Flights"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Tab label includes an emoji prefix; use tap_contains."
+ },
+ {
+  "id": "social_compare_travel_dna_tab",
+  "file": "lib/social/screens/compare/dna_tab.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Friends"
+   },
+   {
+    "tap": "Compare"
+   },
+   {
+    "tap_contains": "Travel DNA"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Tab label includes an emoji prefix; use tap_contains."
+ },
+ {
+  "id": "social_compare_duels_tab",
+  "file": "lib/social/screens/compare/duels_tab.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Friends"
+   },
+   {
+    "tap": "Compare"
+   },
+   {
+    "tap_contains": "Duels"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Tab label includes an emoji prefix; use tap_contains."
+ },
+ {
+  "id": "social_compare_play_tab",
+  "file": "lib/social/screens/compare/play_tab.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Friends"
+   },
+   {
+    "tap": "Compare"
+   },
+   {
+    "tap_contains": "Quiz & Games"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Tab label has emoji prefix (brain emoji + Quiz & Games)."
+ },
+ {
+  "id": "social_unfriend_dialog",
+  "file": "lib/social/screens/compare/compare_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Friends"
+   },
+   {
+    "tap": "Compare"
+   },
+   {
+    "tap_desc": "AppBar overflow (3-dot) menu"
+   },
+   {
+    "tap": "Unfriend"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "'Unfriend <name>?' confirm; tap Cancel only."
+ },
+ {
+  "id": "social_my_profile",
+  "file": "lib/social/screens/profile_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Profile"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   300,
+   307,
+   321,
+   359,
+   432
+  ],
+  "notes": "Requires sign-in; first open shows a loading dialog while geo data loads. Stat grid (Countries/Cities/Landmarks/UNESCO/Flights/Airports/Capitals/Distance/Badges), maps SegmentedButton, travel timeline, Privacy toggles."
+ },
+ {
+  "id": "social_profile_maps_segmented",
+  "file": "lib/social/widgets/profile_maps.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Profile"
+   },
+   {
+    "scroll_to": "Landmarks"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   123,
+   126,
+   127,
+   128,
+   151
+  ],
+  "notes": "SegmentedButton Countries/Cities/Landmarks + 'By count' chip in one row."
+ },
+ {
+  "id": "social_change_name_dialog",
+  "file": "lib/social/screens/profile_screen.dart",
+  "kind": "dialog",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Profile"
+   },
+   {
+    "tap": "Change name"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "'Name shown to friends' dialog; Cancel only."
+ },
+ {
+  "id": "social_category_list_countries",
+  "file": "lib/social/screens/category_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Profile"
+   },
+   {
+    "tap": "Countries"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "'Your countries' list with search 'Search countries' and Sort icon."
+ },
+ {
+  "id": "social_category_list_cities",
+  "file": "lib/social/screens/category_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Profile"
+   },
+   {
+    "tap": "Cities"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "City list."
+ },
+ {
+  "id": "social_category_list_flights",
+  "file": "lib/social/screens/category_list_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Profile"
+   },
+   {
+    "scroll_to": "Flights"
+   },
+   {
+    "tap": "Flights"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [],
+  "notes": "Flights/routes list."
+ },
+ {
+  "id": "social_category_sort_sheet",
+  "file": "lib/social/screens/category_list_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Profile"
+   },
+   {
+    "tap": "Countries"
+   },
+   {
+    "tap": "Sort"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [],
+  "notes": "Sort options sheet."
+ },
+ {
+  "id": "social_category_item_sheet",
+  "file": "lib/social/screens/category_list_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Profile"
+   },
+   {
+    "tap": "Landmarks"
+   },
+   {
+    "tap_first_list_item": "first landmark row"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   585,
+   586,
+   587,
+   588
+  ],
+  "notes": "Item detail sheet with chips 'World #n', category, dates, visits."
+ },
+ {
+  "id": "social_badges",
+  "file": "lib/social/screens/badges_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Profile"
+   },
+   {
+    "scroll_to": "Badges"
+   },
+   {
+    "tap": "See all"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   189
+  ],
+  "notes": "'My badges' with category ChoiceChips 'All n/m'."
+ },
+ {
+  "id": "social_badge_sheet",
+  "file": "lib/social/screens/badges_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Profile"
+   },
+   {
+    "scroll_to": "Badges"
+   },
+   {
+    "tap": "See all"
+   },
+   {
+    "tap_first_list_item": "first badge"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   320,
+   321,
+   322
+  ],
+  "notes": "Badge sheet with Chips (level, category, pts)."
+ },
+ {
+  "id": "social_friend_profile",
+  "file": "lib/social/screens/profile_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Friends"
+   },
+   {
+    "tap": "Profile"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   300,
+   307,
+   321
+  ],
+  "notes": "Friend profile with 'Compare' / 'Duel' buttons row. 'Compare'/'Profile' buttons exist only inside an expanded friend comparison card (friends_screen.dart ~848); needs a friend and a tap on a friend first."
+ },
+ {
+  "id": "social_stats_my_stats",
+  "file": "lib/social/screens/stats_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Stats"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   45,
+   319,
+   328,
+   343,
+   360
+  ],
+  "notes": "Requires sign-in; first open shows a loading dialog while geo data loads. TabBar My Stats/Friends/Rankings (fixed). Hero countries card 'Friends #n/m', 'Top', 'Ahead of n% of travelers'; stat tiles 'of 189'; Premium labels."
+ },
+ {
+  "id": "social_stats_rarity_sheet",
+  "file": "lib/social/screens/stats_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "tap": "RARITY"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   661,
+   683
+  ],
+  "notes": "Rarity score sheet."
+ },
+ {
+  "id": "social_stats_level_sheet",
+  "file": "lib/social/screens/stats_screen.dart",
+  "kind": "sheet",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "scroll_to": "Badges"
+   },
+   {
+    "tap": "Badges"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   707,
+   709,
+   761,
+   776,
+   783
+  ],
+  "notes": "'Level distribution' sheet."
+ },
+ {
+  "id": "social_stats_friends_tab",
+  "file": "lib/social/screens/stats_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "tap": "Friends"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   985,
+   1039,
+   1049,
+   1068
+  ],
+  "notes": "'Countries · world rank' list; 'Add friends to compare stats.' when none."
+ },
+ {
+  "id": "social_friend_stats_screen",
+  "file": "lib/social/screens/stats_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "tap": "Friends"
+   },
+   {
+    "tap_first_list_item": "first friend row"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "high",
+  "risk_lines": [
+   319,
+   328
+  ],
+  "notes": "FriendStatsScreen (same _MyStatsTab body)."
+ },
+ {
+  "id": "social_stats_rankings_tab",
+  "file": "lib/social/screens/stats_screen.dart",
+  "kind": "tab",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "tap": "Rankings"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   1217,
+   1275,
+   1304,
+   1490,
+   1529,
+   1568
+  ],
+  "notes": "'Travelog collections', 'Most visited ...', continent dropdown, premium lock 'Unlock with Premium' for free users."
+ },
+ {
+  "id": "social_stats_rankings_continent_dropdown",
+  "file": "lib/social/screens/stats_screen.dart",
+  "kind": "state",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "tap": "Rankings"
+   },
+   {
+    "tap": "All continents"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   1568
+  ],
+  "notes": "Dropdown menu."
+ },
+ {
+  "id": "social_stats_site_image",
+  "file": "lib/social/screens/stats_screen.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Stats"
+   },
+   {
+    "tap": "Rankings"
+   },
+   {
+    "tap_first_list_item": "first landmark in 'Most visited landmarks'"
+   }
+  ],
+  "scroll": false,
+  "needs_calibration": false,
+  "unsafe": false,
+  "risk": "low",
+  "risk_lines": [
+   1825
+  ],
+  "notes": "Full image page with Share tooltip."
+ },
+ {
+  "id": "social_top_landmarks",
+  "file": "lib/social/widgets/top_landmarks.dart",
+  "kind": "screen",
+  "path": [
+   {
+    "tab": "My Trips"
+   },
+   {
+    "scroll_to": "Travelog Social"
+   },
+   {
+    "tap": "Profile"
+   },
+   {
+    "scroll_to": "Top landmarks"
+   },
+   {
+    "tap_contains": "See all"
+   }
+  ],
+  "scroll": true,
+  "needs_calibration": true,
+  "unsafe": false,
+  "risk": "medium",
+  "risk_lines": [
+   329
+  ],
+  "notes": "TopLandmarksScreen with ChoiceChip filters."
+ }
+]

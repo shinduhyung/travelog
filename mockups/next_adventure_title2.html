@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Next Adventure Title Styles 2</title>
+<style>
+  *{box-sizing:border-box;margin:0}
+  body{font-family:-apple-system,"Segoe UI",Roboto,sans-serif;background:#e9ebf2;color:#111827;padding:28px 16px 60px}
+  h1{font-size:20px;margin-bottom:4px}
+  .lead{font-size:13px;color:#6b7280;margin-bottom:24px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px;max-width:1240px}
+  .col{display:flex;flex-direction:column;gap:6px}
+  .tag{font-size:12px;font-weight:800;color:#1E1B6B}
+  .note{font-size:12.5px;color:#4b5563;line-height:1.5;min-height:38px}
+  .phone{background:#fff;border-radius:26px;padding:16px;border:1px solid #dfe2ec}
+  .card{background:#F6F7FB;border-radius:22px;padding:14px 8px 14px 16px}
+  .bar{height:46px;background:#fff;border-radius:23px;display:flex;align-items:center;padding:0 4px 0 14px;gap:8px;color:#9ca3af;font-size:15px}
+  .bar span{flex:1}
+  .go{width:38px;height:38px;border-radius:50%;background:#00C2E8;color:#fff;display:grid;place-items:center;font-size:18px}
+  .ttl{font-size:16px;font-weight:800;color:#111827}
+  .head{margin-bottom:10px;padding-right:8px}
+
+  /* 7 route line */
+  .h7{display:flex;align-items:center;gap:8px}
+  .h7 .line{flex:1;border-top:2px dotted #b6e9f5;position:relative;top:1px}
+  .h7 .pl{font-size:14px;transform:rotate(0deg)}
+
+  /* 8 highlighter */
+  .h8 .ttl{background:linear-gradient(transparent 58%,#bdf0fb 58%);padding:0 3px;margin-left:-3px}
+
+  /* 9 weight contrast */
+  .h9 .ttl{font-size:18px;letter-spacing:-.3px}
+  .h9 .ttl b{font-weight:300}
+  .h9 .ttl i{font-style:normal;font-weight:900}
+
+  /* 10 left bar */
+  .h10{border-left:4px solid #00C2E8;padding-left:9px;border-radius:2px}
+
+  /* 11 pin with ping */
+  .h11{display:flex;align-items:center;gap:7px}
+  .h11 .dot{width:9px;height:9px;border-radius:50%;background:#00C2E8;box-shadow:0 0 0 4px rgba(0,194,232,.2)}
+
+  /* 12 sparkles */
+  .h12{display:flex;align-items:center;gap:6px}
+  .h12 .sp{color:#00C2E8;font-size:12px}
+  .h12 .sp.s{font-size:8px;position:relative;top:-6px;opacity:.7}
+
+  /* 13 arrow chip right */
+  .h13{display:flex;justify-content:space-between;align-items:center}
+  .h13 span.r{font-size:12px;font-weight:700;color:#6b7280}
+</style>
+</head>
+<body>
+<h1>Next Adventure: more title ideas</h1>
+<p class="lead">Round 2. Same card, same search bar. Only the title area changes.</p>
+
+<div class="grid">
+
+  <div class="col">
+    <div class="tag">7 · Dotted route line</div>
+    <div class="note">A faint dotted flight path runs from the title to a tiny plane. Travel feel, nearly invisible.</div>
+    <div class="phone"><div class="card">
+      <div class="head h7"><span class="ttl">Next Adventure</span><span class="line"></span><span class="pl">✈️</span></div>
+      <div class="bar">🔍<span>Search</span><div class="go">→</div></div>
+    </div></div>
+  </div>
+
+  <div class="col">
+    <div class="tag">8 · Highlighter</div>
+    <div class="note">Soft cyan marker stroke behind the title, like a note you highlighted. Flat and light.</div>
+    <div class="phone"><div class="card">
+      <div class="head h8"><span class="ttl">Next Adventure</span></div>
+      <div class="bar">🔍<span>Search</span><div class="go">→</div></div>
+    </div></div>
+  </div>
+
+  <div class="col">
+    <div class="tag">9 · Weight contrast</div>
+    <div class="note">"Next" thin, "Adventure" heavy, slightly larger. Pure typography, no colors or icons added.</div>
+    <div class="phone"><div class="card">
+      <div class="head h9"><span class="ttl"><b>Next</b> <i>Adventure</i></span></div>
+      <div class="bar">🔍<span>Search</span><div class="go">→</div></div>
+    </div></div>
+  </div>
+
+  <div class="col">
+    <div class="tag">10 · Left accent bar</div>
+    <div class="note">Thin cyan bar beside the title, editorial section-header style.</div>
+    <div class="phone"><div class="card">
+      <div class="head"><div class="h10"><span class="ttl">Next Adventure</span></div></div>
+      <div class="bar">🔍<span>Search</span><div class="go">→</div></div>
+    </div></div>
+  </div>
+
+  <div class="col">
+    <div class="tag">11 · Location dot</div>
+    <div class="note">A glowing cyan dot like a map marker before the title.</div>
+    <div class="phone"><div class="card">
+      <div class="head h11"><span class="dot"></span><span class="ttl">Next Adventure</span></div>
+      <div class="bar">🔍<span>Search</span><div class="go">→</div></div>
+    </div></div>
+  </div>
+
+  <div class="col">
+    <div class="tag">12 · Sparkles</div>
+    <div class="note">Two tiny four-point sparkles after the title. Playful, matches the ✨ used on city pages.</div>
+    <div class="phone"><div class="card">
+      <div class="head h12"><span class="ttl">Next Adventure</span><span class="sp">✦</span><span class="sp s">✦</span></div>
+      <div class="bar">🔍<span>Search</span><div class="go">→</div></div>
+    </div></div>
+  </div>
+
+  <div class="col">
+    <div class="tag">13 · Quiet right label</div>
+    <div class="note">Plain gray "City guides ›" at the right end, a text link instead of a pill.</div>
+    <div class="phone"><div class="card">
+      <div class="head h13"><span class="ttl">Next Adventure</span><span class="r">City guides ›</span></div>
+      <div class="bar">🔍<span>Search</span><div class="go">→</div></div>
+    </div></div>
+  </div>
+
+</div>
+</body>
+</html>

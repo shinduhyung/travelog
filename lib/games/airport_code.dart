@@ -330,8 +330,14 @@ class _GradientButtonState extends State<_GradientButton> {
                 Icon(widget.icon, color: fg, size: 20),
                 const SizedBox(width: 8),
               ],
-              Text(tr(widget.label),
-                  style: TextStyle(color: fg, fontSize: 15.5, fontWeight: FontWeight.w800, letterSpacing: 0.2)),
+              Flexible(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(tr(widget.label),
+                      maxLines: 1,
+                      style: TextStyle(color: fg, fontSize: 15.5, fontWeight: FontWeight.w800, letterSpacing: 0.2)),
+                ),
+              ),
             ],
           ),
         ),
@@ -380,6 +386,8 @@ class AirportCodeDifficultyScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         title:  Text(tr('Airport Code'),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900, color: _kInk)),
         iconTheme: const IconThemeData(color: _kInk),
       ),
@@ -452,9 +460,11 @@ class _DifficultyCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(tr(_tierLabel(difficulty)),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: const TextStyle(fontSize: 16.5, fontWeight: FontWeight.w800, color: _kInk)),
                   const SizedBox(height: 4),
-                  Text(tr(subtitle), style: const TextStyle(fontSize: 12.5, color: _kMuted, fontWeight: FontWeight.w500)),
+                  Text(tr(subtitle), maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 12.5, color: _kMuted, fontWeight: FontWeight.w500)),
                 ],
               ),
             ),
@@ -516,6 +526,8 @@ class _LobbyScreenState extends State<_LobbyScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         title: Text(tr('${_tierLabel(widget.difficulty)} Mode'),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
             style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: _kInk)),
         iconTheme: const IconThemeData(color: _kInk),
       ),
@@ -609,6 +621,8 @@ class _RecordTile extends StatelessWidget {
               children: [
                 Text(tr('${record.score}'), style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16, color: _kInk)),
                 Text(tr('${record.roundsCompleted}/${record.maxRounds} rounds · combo ${record.bestCombo}'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: const TextStyle(fontSize: 11.5, color: _kMuted)),
               ],
             ),
@@ -865,6 +879,8 @@ class _GameScreenState extends State<_GameScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         title: Text(tr('${_tierLabel(widget.difficulty)} Mode'),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
             style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: _kInk)),
         iconTheme: const IconThemeData(color: _kInk),
         actions: (_phase == _RoundPhase.loading || _phase == _RoundPhase.error || _phase == _RoundPhase.complete)
@@ -925,8 +941,12 @@ class _GameScreenState extends State<_GameScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(tr('ROUND ${_roundIndex + 1} / $_maxRounds'),
-                  style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 0.6, color: _kMuted)),
+              Flexible(
+                child: Text(tr('ROUND ${_roundIndex + 1} / $_maxRounds'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 0.6, color: _kMuted)),
+              ),
               if (_combo > 0)
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
@@ -1073,9 +1093,13 @@ class _GameScreenState extends State<_GameScreen> {
                     tr(correct
                         ? 'Correct! +${_lastRoundScore ?? 0}'
                         : (_isInsane ? 'Wrong — it was ${_current.code}' : 'Wrong')),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w900, color: Colors.white),
                   ),
                   Text('${_current.flagEmoji} ${_current.city}, ${AppLocale.instance.countryName(_current.country)}',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w600, color: Colors.white70)),
                 ],
               ),
@@ -1163,11 +1187,11 @@ class _GameScreenState extends State<_GameScreen> {
                  Text(tr('TOTAL SCORE'), style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted)),
                 const SizedBox(height: 18),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  _StatChip(label: 'Rounds', value: '$_combo/$_maxRounds'),
+                  Flexible(child: _StatChip(label: 'Rounds', value: '$_combo/$_maxRounds')),
                   const SizedBox(width: 10),
-                  _StatChip(label: 'Best', value: '$_bestRoundScore'),
+                  Flexible(child: _StatChip(label: 'Best', value: '$_bestRoundScore')),
                   const SizedBox(width: 10),
-                  _StatChip(label: 'Combo', value: '$_combo'),
+                  Flexible(child: _StatChip(label: 'Combo', value: '$_combo')),
                 ]),
               ]),
             ),
@@ -1227,8 +1251,8 @@ class _StatChip extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
       decoration: BoxDecoration(color: _kSurface, borderRadius: BorderRadius.circular(14)),
       child: Column(children: [
-        Text(tr(value), style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800, color: _kInk)),
-        Text(tr(label.toUpperCase()), style: const TextStyle(fontSize: 9.5, fontWeight: FontWeight.w800, letterSpacing: 0.4, color: _kMuted)),
+        FittedBox(fit: BoxFit.scaleDown, child: Text(tr(value), maxLines: 1, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800, color: _kInk))),
+        FittedBox(fit: BoxFit.scaleDown, child: Text(tr(label.toUpperCase()), maxLines: 1, style: const TextStyle(fontSize: 9.5, fontWeight: FontWeight.w800, letterSpacing: 0.4, color: _kMuted))),
       ]),
     );
   }

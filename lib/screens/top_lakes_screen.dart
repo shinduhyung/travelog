@@ -80,13 +80,18 @@ class TopLakesScreen extends StatelessWidget {
                   Row(children: [
                     const Icon(Icons.water_rounded, size: 14, color: _kTheme),
                     const SizedBox(width: 5),
-                     Text(tr('Largest Lakes'), style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _kTheme, letterSpacing: 0.3)),
+                    Flexible(child: Text(tr('Largest Lakes'), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _kTheme, letterSpacing: 0.3))),
                   ]),
                   const SizedBox(height: 6),
-                   Text(tr('Top 20 Largest'),
-                      style: TextStyle(fontSize: 28, fontWeight: FontWeight.w900, color: Color(0xFF111827), letterSpacing: -1.0, height: 1.1)),
+                  FittedBox(
+                    fit: BoxFit.scaleDown,
+                    alignment: Alignment.centerLeft,
+                    child: Text(tr('Top 20 Largest'),
+                        maxLines: 1,
+                        style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w900, color: Color(0xFF111827), letterSpacing: -1.0, height: 1.1)),
+                  ),
                   const SizedBox(height: 4),
-                  Text(tr('The world\'s biggest lakes & inland seas'), style: TextStyle(fontSize: 12, color: Colors.grey[500], fontWeight: FontWeight.w500)),
+                  Text(tr('The world\'s biggest lakes & inland seas'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12, color: Colors.grey[500], fontWeight: FontWeight.w500)),
                 ])),
                 Consumer<LandmarksProvider>(builder: (context, provider, _) {
                   final visited = _top20Lakes.where((m) => provider.visitedLandmarks.contains(m['name'])).length;
@@ -245,24 +250,24 @@ class TopLakesScreen extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Row(mainAxisSize: MainAxisSize.min, children: [
-                     Text(tr('Wishlist:')),
+                  Flexible(child: Row(mainAxisSize: MainAxisSize.min, children: [
+                    Flexible(child: Text(tr('Wishlist:'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                     IconButton(visualDensity: VisualDensity.compact,
                         icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey),
                         onPressed: () => provider.toggleWishlistStatus(freshLandmark.name)),
-                  ]),
-                  Row(mainAxisSize: MainAxisSize.min, children: [
-                     Text(tr('My Rating:')),
+                  ])),
+                  Flexible(child: Row(mainAxisSize: MainAxisSize.min, children: [
+                    Flexible(child: Text(tr('My Rating:'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                     const SizedBox(width: 8),
                     RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0,
                         direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0,
                         itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber),
                         onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating)),
-                  ]),
+                  ])),
                 ]),
                 const Divider(height: 20),
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text(tr('History (${freshLandmark.visitDates.length} entries)'), style: Theme.of(sheetContext).textTheme.titleSmall),
+                  Flexible(child: Text(tr('History (${freshLandmark.visitDates.length} entries)'), maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(sheetContext).textTheme.titleSmall)),
                   OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit')),
                       onPressed: () => provider.addVisitDate(freshLandmark.name)),
                 ]),

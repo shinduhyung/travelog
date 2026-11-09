@@ -73,7 +73,7 @@ class TopBuildingsScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(children: [
-                    Container(
+                    Flexible(child: Container(
                       padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4),
                       decoration: BoxDecoration(
                         color: _kTheme.withOpacity(0.1),
@@ -82,9 +82,9 @@ class TopBuildingsScreen extends StatelessWidget {
                       child: Row(mainAxisSize: MainAxisSize.min, children: [
                         Icon(Icons.apartment_rounded, size: 12, color: _kTheme),
                         const SizedBox(width: 4),
-                        Text(tr('Tallest Buildings'), style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: _kTheme)),
+                        Flexible(child: Text(tr('Tallest Buildings'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: _kTheme))),
                       ]),
-                    ),
+                    )),
                   ]),
                   const SizedBox(height: 12),
                   RichText(text: TextSpan(children: [
@@ -93,7 +93,7 @@ class TopBuildingsScreen extends StatelessWidget {
                      TextSpan(text: tr('\nTallest Buildings'), style: TextStyle(fontSize: 28, fontWeight: FontWeight.w900, color: Color(0xFF111827), letterSpacing: -1.0, height: 1.1)),
                   ])),
                   const SizedBox(height: 6),
-                  Text(tr('The world\'s highest skyscrapers'), style: TextStyle(fontSize: 13, color: Colors.grey[500], fontWeight: FontWeight.w500)),
+                  Text(tr('The world\'s highest skyscrapers'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 13, color: Colors.grey[500], fontWeight: FontWeight.w500)),
                 ],
               ),
             ),
@@ -149,7 +149,7 @@ class TopBuildingsScreen extends StatelessWidget {
                         Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                           Text(tr(name), style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xFF111827)), maxLines: 1, overflow: TextOverflow.ellipsis),
                           const SizedBox(height: 3),
-                          Text(tr(height), style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _kTheme.withOpacity(0.85))),
+                          Text(tr(height), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _kTheme.withOpacity(0.85))),
                         ])),
                         // 방문 여부
                         if (isVisited)
@@ -233,8 +233,8 @@ class TopBuildingsScreen extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('Wishlist:')), IconButton(visualDensity: VisualDensity.compact, icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey), onPressed: () => provider.toggleWishlistStatus(freshLandmark.name))]),
-                  Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('My Rating:')), const SizedBox(width: 8), RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating))]),
+                  Flexible(child: Row(mainAxisSize: MainAxisSize.min, children: [ Flexible(child: Text(tr('Wishlist:'), maxLines: 1, overflow: TextOverflow.ellipsis)), IconButton(visualDensity: VisualDensity.compact, icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey), onPressed: () => provider.toggleWishlistStatus(freshLandmark.name))])),
+                  Flexible(child: Row(mainAxisSize: MainAxisSize.min, children: [ Flexible(child: Text(tr('My Rating:'), maxLines: 1, overflow: TextOverflow.ellipsis)), const SizedBox(width: 8), RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating))])),
                 ]),
                 const Divider(height: 20),
                 if (totalSubCount > 1) ...[
@@ -250,7 +250,7 @@ class TopBuildingsScreen extends StatelessWidget {
                   const Divider(height: 24),
                 ],
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text(tr('History (${freshLandmark.visitDates.length} entries)'), style: Theme.of(sheetContext).textTheme.titleSmall),
+                  Flexible(child: Text(tr('History (${freshLandmark.visitDates.length} entries)'), maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(sheetContext).textTheme.titleSmall)),
                   OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit')), onPressed: () => provider.addVisitDate(freshLandmark.name)),
                 ]),
                 const SizedBox(height: 8),
@@ -357,8 +357,8 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: ExpansionTile(
         controller: _expansionTileController, initiallyExpanded: _isEditing,
-        title: Text(tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
-        subtitle: Text(tr('Date: $_year-$_month-$_day'), style: TextStyle(color: Colors.grey[600], fontSize: 13)),
+        title: Text(tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
+        subtitle: Text(tr('Date: $_year-$_month-$_day'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
             onPressed: () => showDialog(context: context, builder: (ctx) => AlertDialog(
               title:  Text(tr('Delete Visit Record')), content:  Text(tr('Are you sure you want to delete this visit record?')),
@@ -371,7 +371,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             if (_isEditing) ...[
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                Text(tr('Visit Date: $_year-$_month-$_day'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                Flexible(child: Text(tr('Visit Date: $_year-$_month-$_day'), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14))),
                 TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label:  Text(tr('Edit Date')), onPressed: () => _selectDate(context), style: TextButton.styleFrom(visualDensity: VisualDensity.compact)),
               ]),
               const SizedBox(height: 12),

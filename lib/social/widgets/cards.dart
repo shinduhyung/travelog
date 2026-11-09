@@ -267,9 +267,15 @@ class PassportCard extends StatelessWidget {
                           Column(
                             children: [
                               Image.asset(rankImage, width: 46, height: 46),
-                              Text(tr(rankLabel[rank] ?? rank!),
-                                  maxLines: 1,
-                                  style: theme.textTheme.labelSmall?.copyWith(color: white, fontWeight: FontWeight.w700)),
+                              ConstrainedBox(
+                                constraints: const BoxConstraints(maxWidth: 96),
+                                child: FittedBox(
+                                  fit: BoxFit.scaleDown,
+                                  child: Text(tr(rankLabel[rank] ?? rank!),
+                                      maxLines: 1,
+                                      style: theme.textTheme.labelSmall?.copyWith(color: white, fontWeight: FontWeight.w700)),
+                                ),
+                              ),
                             ],
                           ),
                       ],
@@ -428,9 +434,13 @@ class LandmarkCard extends StatelessWidget {
                   left: 8,
                   top: 8,
                   child: Container(
+                    constraints: BoxConstraints(maxWidth: width - 60),
                     padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                     decoration: BoxDecoration(color: badgeColor ?? AppColors.both, borderRadius: BorderRadius.circular(8)),
-                    child: Text(badge!, style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.w700)),
+                    child: Text(badge!,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.w700)),
                   ),
                 ),
               if (meta != null && meta.rank > 0)
@@ -617,10 +627,14 @@ Future<void> showCountrySheet(
                     overflow: TextOverflow.ellipsis,
                     style: theme.textTheme.labelLarge?.copyWith(color: color, fontWeight: FontWeight.w800)),
                 const SizedBox(height: 4),
-                Text(visited ? (info?.lived == true ? tr('🏠 Lived here') : tr('✅ Visited')) : (wish ? tr('💭 On wishlist') : tr('Not yet'))),
-                if (visited && (info?.visits ?? 0) > 1) Text(tr('${info!.visits} visits'), style: theme.textTheme.labelSmall),
-                if (visited && info?.firstYear != null) Text(tr('First in ${info!.firstYear}'), style: theme.textTheme.labelSmall),
-                if (cities > 0) Text(cities == 1 ? tr('1 city') : tr('$cities cities'), style: theme.textTheme.labelSmall),
+                Text(visited ? (info?.lived == true ? tr('🏠 Lived here') : tr('✅ Visited')) : (wish ? tr('💭 On wishlist') : tr('Not yet')),
+                    maxLines: 1, overflow: TextOverflow.ellipsis),
+                if (visited && (info?.visits ?? 0) > 1)
+                  Text(tr('${info!.visits} visits'), maxLines: 1, overflow: TextOverflow.ellipsis, style: theme.textTheme.labelSmall),
+                if (visited && info?.firstYear != null)
+                  Text(tr('First in ${info!.firstYear}'), maxLines: 1, overflow: TextOverflow.ellipsis, style: theme.textTheme.labelSmall),
+                if (cities > 0)
+                  Text(cities == 1 ? tr('1 city') : tr('$cities cities'), maxLines: 1, overflow: TextOverflow.ellipsis, style: theme.textTheme.labelSmall),
                 if ((info?.rating ?? 0) > 0) Stars(info!.rating),
               ],
             ),

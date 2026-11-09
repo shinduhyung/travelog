@@ -82,11 +82,15 @@ class TouristFootprintResult extends StatelessWidget {
                           color: Color(0xFF1F2937),
                         ),
                       ),
-                      Text(
-                        tr(localLeads ? 'Local side' : 'Tourist side'),
-                        style: const TextStyle(
-                          fontSize: 12,
-                          color: Color(0xFF64748B),
+                      FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          tr(localLeads ? 'Local side' : 'Tourist side'),
+                          maxLines: 1,
+                          style: const TextStyle(
+                            fontSize: 12,
+                            color: Color(0xFF64748B),
+                          ),
                         ),
                       ),
                     ],
@@ -178,6 +182,8 @@ class TouristFootprintResult extends StatelessWidget {
         const SizedBox(height: 3),
         Text(
           tr(label),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: const TextStyle(fontSize: 12, color: Color(0xFF64748B)),
         ),
       ],
@@ -202,6 +208,8 @@ class TouristFootprintResult extends StatelessWidget {
                 children: [
                   Text(
                     city.name,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w700,
@@ -216,6 +224,8 @@ class TouristFootprintResult extends StatelessWidget {
                           ? 'Quieter corners'
                           : 'A bit of both',
                     ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(fontSize: 12, color: color),
                   ),
                   const SizedBox(height: 9),

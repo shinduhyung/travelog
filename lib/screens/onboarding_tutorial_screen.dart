@@ -219,7 +219,7 @@ class _OnboardingTutorialScreenState extends State<OnboardingTutorialScreen>
                   const SizedBox(height: 16),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Text(tr('Add a country'),
+                    child: Text(tr('Add a country'), maxLines: 1, overflow: TextOverflow.ellipsis,
                         style: GoogleFonts.poppins(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w700)),
                   ),
                   const SizedBox(height: 12),
@@ -276,7 +276,7 @@ class _OnboardingTutorialScreenState extends State<OnboardingTutorialScreen>
                                       child: CountryFlag.fromCountryCode(c.isoA2)),
                                 ),
                                 const SizedBox(width: 12),
-                                Expanded(child: Text(c.name,
+                                Expanded(child: Text(AppLocale.instance.countryName(c.name),
                                     style: GoogleFonts.poppins(color: Colors.white, fontSize: 14))),
                                 const Icon(Icons.add, color: Colors.white70, size: 18),
                               ],
@@ -702,9 +702,8 @@ class _Step0HomeCountryState extends State<_Step0HomeCountry> {
                             border: Border.all(color: isSelected ? Colors.white.withOpacity(0.6) : Colors.transparent),
                           ),
                           child: Row(children: [
-                            Text(tr(name), style: GoogleFonts.poppins(color: Colors.white, fontSize: 13,
-                                fontWeight: isSelected ? FontWeight.w600 : FontWeight.w400)),
-                            const Spacer(),
+                            Expanded(child: Text(tr(name), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins(color: Colors.white, fontSize: 13,
+                                fontWeight: isSelected ? FontWeight.w600 : FontWeight.w400))),
                             if (isSelected) const Icon(Icons.check, color: Colors.white, size: 16),
                           ]),
                         ),
@@ -774,7 +773,7 @@ class _Step0HomeCountryState extends State<_Step0HomeCountry> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(tr('Passport'), style: GoogleFonts.poppins(color: Colors.white.withOpacity(0.65), fontSize: 11)),
+                        Text(tr('Passport'), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins(color: Colors.white.withOpacity(0.65), fontSize: 11)),
                         const SizedBox(height: 2),
                         Text(
                           tr(countryProvider.isoToCountryNameMap[passportIso] ?? passportIso ?? ''),
@@ -794,7 +793,7 @@ class _Step0HomeCountryState extends State<_Step0HomeCountry> {
                             child: Row(mainAxisSize: MainAxisSize.min, children: [
                               const Icon(Icons.swap_horiz, color: Colors.white, size: 13),
                               const SizedBox(width: 4),
-                              Text(tr('Change passport'), style: GoogleFonts.poppins(color: Colors.white, fontSize: 11, fontWeight: FontWeight.w500)),
+                              Flexible(child: Text(tr('Change passport'), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins(color: Colors.white, fontSize: 11, fontWeight: FontWeight.w500))),
                             ]),
                           ),
                         ),
@@ -1076,8 +1075,8 @@ class _AddCountryButton extends StatelessWidget {
               child: const Icon(Icons.add, color: Colors.white, size: 18),
             ),
             const SizedBox(width: 10),
-            Text(tr('Add another country'),
-                style: GoogleFonts.poppins(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w500)),
+            Flexible(child: Text(tr('Add another country'), maxLines: 1, overflow: TextOverflow.ellipsis,
+                style: GoogleFonts.poppins(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w500))),
           ],
         ),
       ),
@@ -1123,7 +1122,7 @@ class _LightCountryListTile extends StatelessWidget {
               child: SizedBox(width: 32, height: 22, child: CountryFlag.fromCountryCode(country.isoA2)),
             ),
             const SizedBox(width: 14),
-            Expanded(child: Text(tr(country.name),
+            Expanded(child: Text(tr(country.name), maxLines: 1, overflow: TextOverflow.ellipsis,
                 style: GoogleFonts.poppins(color: Colors.white, fontSize: 14,
                     fontWeight: isSelected ? FontWeight.w600 : FontWeight.w400))),
             if (isSelected) const Icon(Icons.check_circle, color: Colors.white, size: 20),
@@ -1219,7 +1218,7 @@ class _CountryListTile extends StatelessWidget {
               child: SizedBox(width: 32, height: 22, child: CountryFlag.fromCountryCode(country.isoA2)),
             ),
             const SizedBox(width: 14),
-            Expanded(child: Text(tr(country.name),
+            Expanded(child: Text(tr(country.name), maxLines: 1, overflow: TextOverflow.ellipsis,
                 style: GoogleFonts.poppins(color: Colors.white, fontSize: 14,
                     fontWeight: isSelected ? FontWeight.w600 : FontWeight.w400))),
             if (isSelected) const Icon(Icons.check_circle, color: Colors.white, size: 20),
@@ -1344,10 +1343,10 @@ class _PopularCountryTile extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(tr(name), style: GoogleFonts.poppins(
+                  Text(tr(name), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins(
                       color: Colors.white, fontSize: 14,
                       fontWeight: isOn ? FontWeight.w600 : FontWeight.w400)),
-                  if (isHome) Text(tr('Your home country'),
+                  if (isHome) Text(tr('Your home country'), maxLines: 1, overflow: TextOverflow.ellipsis,
                       style: GoogleFonts.poppins(color: Colors.white.withOpacity(0.6), fontSize: 11)),
                 ],
               ),
@@ -1356,7 +1355,7 @@ class _PopularCountryTile extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                 decoration: BoxDecoration(color: Colors.white.withOpacity(0.25), borderRadius: BorderRadius.circular(8)),
-                child: Text(tr('Home'), style: GoogleFonts.poppins(color: Colors.white, fontSize: 11, fontWeight: FontWeight.w600)),
+                child: Text(tr('Home'), maxLines: 1, style: GoogleFonts.poppins(color: Colors.white, fontSize: 11, fontWeight: FontWeight.w600)),
               )
             else
               AnimatedContainer(
@@ -1784,9 +1783,9 @@ class _BottomButton extends StatelessWidget {
                 boxShadow: enabled ? [BoxShadow(color: Colors.black.withOpacity(0.15), blurRadius: 16, offset: const Offset(0, 6))] : [],
               ),
               child: Center(
-                child: Text(tr(label), style: GoogleFonts.poppins(
+                child: FittedBox(fit: BoxFit.scaleDown, child: Text(tr(label), maxLines: 1, style: GoogleFonts.poppins(
                     color: enabled ? const Color(0xFF1ABFBC) : Colors.white.withOpacity(0.5),
-                    fontWeight: FontWeight.w700, fontSize: 15, letterSpacing: 1)),
+                    fontWeight: FontWeight.w700, fontSize: 15, letterSpacing: 1))),
               ),
             ),
           ),
@@ -1806,11 +1805,11 @@ class _BottomButton extends StatelessWidget {
                   children: [
                     Icon(Icons.skip_next_rounded, color: Colors.white.withOpacity(0.9), size: 16),
                     const SizedBox(width: 6),
-                    Text(tr(subLabel!),
+                    Flexible(child: Text(tr(subLabel!), maxLines: 1, overflow: TextOverflow.ellipsis,
                         style: GoogleFonts.poppins(
                             color: Colors.white.withOpacity(0.9),
                             fontSize: 13,
-                            fontWeight: FontWeight.w500)),
+                            fontWeight: FontWeight.w500))),
                   ],
                 ),
               ),

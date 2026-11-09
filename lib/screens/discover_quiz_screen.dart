@@ -212,7 +212,13 @@ class _DiscoverQuizScreenState extends State<DiscoverQuizScreen> {
     if (_loading)
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     return DiscoverScaffold(
-      appBar: AppBar(title: Text(tr(quiz.title))),
+      appBar: AppBar(
+        title: Text(
+          tr(quiz.title),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+        ),
+      ),
       bottomNavigationBar: _finished ? null : _footer(),
       body: LayoutBuilder(
         builder: (context, constraints) => ListView(
@@ -391,7 +397,10 @@ class _DiscoverQuizScreenState extends State<DiscoverQuizScreen> {
                               setState(() => _step--);
                               _saveDraft();
                             },
-                      child: Text(tr('Back')),
+                      child: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(tr('Back'), maxLines: 1),
+                      ),
                     ),
             ),
             const SizedBox(width: 12),

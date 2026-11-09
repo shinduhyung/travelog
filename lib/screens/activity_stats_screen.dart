@@ -43,11 +43,15 @@ class ActivityStatsScreen extends StatelessWidget {
                     onPressed: () => Navigator.pop(context),
                   ),
                   const SizedBox(width: 4),
-                   Text(
-                    tr('Activity Statistics'),
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 24,
+                   Flexible(
+                    child: Text(
+                      tr('Activity Statistics'),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 24,
+                      ),
                     ),
                   ),
                 ],

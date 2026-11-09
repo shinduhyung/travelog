@@ -14,7 +14,7 @@ class GeolocationStatsScreen extends StatelessWidget {
     Localizations.maybeLocaleOf(context);
     return Scaffold(
       appBar: AppBar(
-        title:  Text(tr('Geolocation Statistics')),
+        title:  Text(tr('Geolocation Statistics'), maxLines: 1, overflow: TextOverflow.ellipsis),
         elevation: 1,
       ),
       body: Consumer<CountryProvider>(

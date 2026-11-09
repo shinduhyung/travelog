@@ -307,13 +307,17 @@ class _SectionHeader extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(16, 24, 16, 12),
       child: Row(
         children: [
-          Text(
-            tr(label),
-            style: const TextStyle(
-              fontSize: 11,
-              fontWeight: FontWeight.w700,
-              letterSpacing: 2.0,
-              color: _ST.inkLight,
+          Flexible(
+            child: Text(
+              tr(label),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(
+                fontSize: 11,
+                fontWeight: FontWeight.w700,
+                letterSpacing: 2.0,
+                color: _ST.inkLight,
+              ),
             ),
           ),
           const SizedBox(width: 12),
@@ -357,13 +361,18 @@ class _SportsSummaryBar extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  tr('$completed of $total collections'),
-                  style: const TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.w800,
-                    color: Colors.white,
-                    letterSpacing: -0.5,
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    tr('$completed of $total collections'),
+                    maxLines: 1,
+                    style: const TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.w800,
+                      color: Colors.white,
+                      letterSpacing: -0.5,
+                    ),
                   ),
                 ),
                 const SizedBox(height: 4),
@@ -373,6 +382,8 @@ class _SportsSummaryBar extends StatelessWidget {
                       : completed == total
                       ? 'All collections completed! 🎉'
                       : '${total - completed} remaining to complete'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     fontSize: 12,
                     color: Color(0xFF888888),
@@ -588,6 +599,8 @@ class _SportsCardState extends State<_SportsCard> with SingleTickerProviderState
                       children: [
                         Text(
                           tr(d.label),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                             fontSize: 10, fontWeight: FontWeight.w700,
                             letterSpacing: 1.5, color: d.color,
@@ -596,6 +609,8 @@ class _SportsCardState extends State<_SportsCard> with SingleTickerProviderState
                         const SizedBox(height: 2),
                         Text(
                           tr(d.title),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: const TextStyle(
                             fontSize: 15, fontWeight: FontWeight.w700,
                             color: _ST.ink, letterSpacing: -0.2,
@@ -664,9 +679,9 @@ class _SportsCardState extends State<_SportsCard> with SingleTickerProviderState
                 const SizedBox(height: 8),
                 Row(
                   children: [
-                    _Chip(label: 'Visited', value: '$visited', color: d.color),
+                    Flexible(child: _Chip(label: 'Visited', value: '$visited', color: d.color)),
                     const SizedBox(width: 8),
-                    _Chip(label: 'Remaining', value: '$remaining', color: _ST.inkLight),
+                    Flexible(child: _Chip(label: 'Remaining', value: '$remaining', color: _ST.inkLight)),
                     const Spacer(),
                     Text(
                       tr('${(pct * 100).round()}%'),
@@ -741,10 +756,12 @@ class _Chip extends StatelessWidget {
       children: [
         Text(tr(value), style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: color)),
         const SizedBox(width: 3),
-        Text(tr(label), style: const TextStyle(
-          fontSize: 10, fontWeight: FontWeight.w500,
-          color: _ST.inkLight, letterSpacing: 0.3,
-        )),
+        Flexible(
+          child: Text(tr(label), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(
+            fontSize: 10, fontWeight: FontWeight.w500,
+            color: _ST.inkLight, letterSpacing: 0.3,
+          )),
+        ),
       ],
     );
   }
@@ -785,13 +802,17 @@ class _CityChip extends StatelessWidget {
               Text(tr(flag), style: const TextStyle(fontSize: 11)),
               const SizedBox(width: 5),
             ],
-            Text(
-              name,
-              style: TextStyle(
-                fontSize: 12,
-                fontWeight: isVisited ? FontWeight.w700 : FontWeight.w500,
-                color: isVisited ? Colors.white : _ST.inkMid,
-                letterSpacing: 0.1,
+            Flexible(
+              child: Text(
+                name,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: isVisited ? FontWeight.w700 : FontWeight.w500,
+                  color: isVisited ? Colors.white : _ST.inkMid,
+                  letterSpacing: 0.1,
+                ),
               ),
             ),
           ],

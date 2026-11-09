@@ -670,9 +670,13 @@ class _Lobby extends StatelessWidget {
                       shape: BoxShape.circle,
                       boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.06), blurRadius: 10, offset: const Offset(0, 3))],
                     ),
-                    child: Text(
-                      tr('VS'),
-                      style: TextStyle(fontSize: 12, fontWeight: FontWeight.w900, color: _kMuted),
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(
+                        tr('VS'),
+                        maxLines: 1,
+                        style: TextStyle(fontSize: 12, fontWeight: FontWeight.w900, color: _kMuted),
+                      ),
                     ),
                   ),
                 ),
@@ -758,9 +762,13 @@ class _Countdown extends StatelessWidget {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(
-                    tr('ROUND ${duel.round + 1} OF ${duel.questions.length}'),
-                    style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted),
+                  FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      tr('ROUND ${duel.round + 1} OF ${duel.questions.length}'),
+                      maxLines: 1,
+                      style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted),
+                    ),
                   ),
                   const SizedBox(height: 18),
                   TweenAnimationBuilder<double>(
@@ -1349,6 +1357,8 @@ class _QuestionView extends StatelessWidget {
                         padding: const EdgeInsets.only(top: 3),
                         child: Text(
                           detail,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyle(fontSize: 13.5, fontWeight: FontWeight.w700, color: fg.withValues(alpha: 0.75)),
                         ),
                       ),
@@ -1388,6 +1398,8 @@ class _QuestionView extends StatelessWidget {
         const SizedBox(height: 4),
         Text(
           tr('which is farther?'),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: TextStyle(fontSize: 13, color: _kMuted, fontWeight: FontWeight.w600),
         ),
         const SizedBox(height: 16),
@@ -1405,9 +1417,13 @@ class _QuestionView extends StatelessWidget {
                   shape: BoxShape.circle,
                   boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.06), blurRadius: 10, offset: const Offset(0, 3))],
                 ),
-                child: Text(
-                  tr('VS'),
-                  style: TextStyle(fontSize: 11, fontWeight: FontWeight.w900, color: _kMuted),
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    tr('VS'),
+                    maxLines: 1,
+                    style: TextStyle(fontSize: 11, fontWeight: FontWeight.w900, color: _kMuted),
+                  ),
                 ),
               ),
               const SizedBox(height: 12),

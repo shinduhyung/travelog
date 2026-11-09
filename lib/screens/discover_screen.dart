@@ -99,7 +99,7 @@ class DiscoverScreen extends StatelessWidget {
     final tileHeight = 32.0 + (contentHeight > 44 ? contentHeight : 44.0);
     return DiscoverScaffold(
       appBar: AppBar(
-        title: Text(tr('Discover')),
+        title: Text(tr('Discover'), maxLines: 1, overflow: TextOverflow.ellipsis),
         backgroundColor: const Color(0xFFF8FAFC),
       ),
       body: ListView(

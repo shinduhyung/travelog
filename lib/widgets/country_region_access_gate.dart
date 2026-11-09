@@ -69,6 +69,8 @@ class _RegionsPitch extends StatelessWidget {
               icon: const Icon(Icons.workspace_premium_rounded),
               label: Text(
                 tr('Go Premium'),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: const TextStyle(fontWeight: FontWeight.bold),
               ),
             ),

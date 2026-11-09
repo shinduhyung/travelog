@@ -89,16 +89,16 @@ class _InstagramRankingScreenState extends State<InstagramRankingScreen> {
                         child: const Icon(Icons.camera_alt_rounded, color: Colors.white, size: 12), // 수정: 아이콘 크기 줄임
                       ),
                       const SizedBox(width: 8), // 수정: 간격 늘림
-                       Text(tr('Most Instagrammed'),
+                       Flexible(child: Text(tr('Most Instagrammed'), maxLines: 1, overflow: TextOverflow.ellipsis,
                           style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, // 수정: 폰트 크기 줄임, 굵기 늘림
-                              color: _kThemePink, letterSpacing: 0.1)), // 수정: letterSpacing 줄임
+                              color: _kThemePink, letterSpacing: 0.1))), // 수정: letterSpacing 줄임
                     ]),
                     const SizedBox(height: 8), // 수정: 간격 늘림
-                     Text(tr('Top 10 Landmarks'),
+                     FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Top 10 Landmarks'), maxLines: 1,
                         style: TextStyle(fontSize: 26, fontWeight: FontWeight.w800, // 수정: 폰트 크기 줄임, 굵기 줄임
-                            color: Color(0xFF111827), letterSpacing: -0.8, height: 1.0)), // 수정: letterSpacing, height 줄임
+                            color: Color(0xFF111827), letterSpacing: -0.8, height: 1.0))), // 수정: letterSpacing, height 줄임
                     const SizedBox(height: 4),
-                    Text(tr('Most tagged places on Instagram'),
+                    Text(tr('Most tagged places on Instagram'), maxLines: 1, overflow: TextOverflow.ellipsis,
                         style: TextStyle(fontSize: 12, color: Colors.grey[500], fontWeight: FontWeight.w500)),
                   ]),
                 ),
@@ -124,7 +124,7 @@ class _InstagramRankingScreenState extends State<InstagramRankingScreen> {
                       Text(tr('/ 10'), style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600,
                           color: _kThemePink.withOpacity(0.7), height: 1.2)),
                       const SizedBox(height: 2),
-                      Text(tr('visited'), style: TextStyle(fontSize: 10, fontWeight: FontWeight.w500,
+                      Text(tr('visited'), maxLines: 1, style: TextStyle(fontSize: 10, fontWeight: FontWeight.w500,
                           color: _kThemePink.withOpacity(0.5))),
                     ]),
                   );
@@ -263,7 +263,7 @@ class _InstagramRankingScreenState extends State<InstagramRankingScreen> {
                               ),
                               const SizedBox(width: 10),
                               Expanded(
-                                child: Text(tr(name),
+                                child: Text(tr(name), maxLines: 2, overflow: TextOverflow.ellipsis,
                                     style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: Color(0xFF111827), letterSpacing: -0.3)),
                               ),
                               // 인스타 그라디언트 화살표
@@ -413,20 +413,20 @@ class _InstagramRankingScreenState extends State<InstagramRankingScreen> {
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                     // Wishlist + Rating
                     Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                      Row(mainAxisSize: MainAxisSize.min, children: [
-                         Text(tr('Wishlist:')),
+                      Flexible(child: Row(mainAxisSize: MainAxisSize.min, children: [
+                         Flexible(child: Text(tr('Wishlist:'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                         IconButton(visualDensity: VisualDensity.compact,
                             icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey),
                             onPressed: () => provider.toggleWishlistStatus(freshLandmark.name)),
-                      ]),
-                      Row(mainAxisSize: MainAxisSize.min, children: [
-                         Text(tr('My Rating:')),
+                      ])),
+                      Flexible(child: Row(mainAxisSize: MainAxisSize.min, children: [
+                         Flexible(child: Text(tr('My Rating:'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                         const SizedBox(width: 8),
                         RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0,
                             direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0,
                             itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber),
                             onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating)),
-                      ]),
+                      ])),
                     ]),
                     const Divider(height: 20),
 
@@ -452,8 +452,8 @@ class _InstagramRankingScreenState extends State<InstagramRankingScreen> {
 
                     // Visit history
                     Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                      Text(tr('History (${freshLandmark.visitDates.length} entries)'),
-                          style: Theme.of(sheetContext).textTheme.titleSmall),
+                      Flexible(child: Text(tr('History (${freshLandmark.visitDates.length} entries)'), maxLines: 1, overflow: TextOverflow.ellipsis,
+                          style: Theme.of(sheetContext).textTheme.titleSmall)),
                       OutlinedButton.icon(
                         icon: const Icon(Icons.add),
                         label:  Text(tr('Add Visit')),
@@ -660,9 +660,11 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
         initiallyExpanded: _isEditing,
         title: Text(
           tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
         ),
-        subtitle: Text(tr('Date: $_year-$_month-$_day'),
+        subtitle: Text(tr('Date: $_year-$_month-$_day'), maxLines: 1, overflow: TextOverflow.ellipsis,
             style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(
           icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
@@ -689,8 +691,8 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               if (_isEditing) ...[
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text(tr('Visit Date: $_year-$_month-$_day'),
-                      style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                  Flexible(child: Text(tr('Visit Date: $_year-$_month-$_day'), maxLines: 1, overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14))),
                   TextButton.icon(
                     icon: const Icon(Icons.edit_calendar, size: 18),
                     label:  Text(tr('Edit Date')),

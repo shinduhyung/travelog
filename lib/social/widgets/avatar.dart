@@ -127,6 +127,8 @@ class PlanBadge extends StatelessWidget {
       ),
       child: Text(
         tr(style.label).toUpperCase(),
+        maxLines: 1,
+        overflow: TextOverflow.ellipsis,
         style: const TextStyle(
           color: Colors.white,
           fontSize: 9,

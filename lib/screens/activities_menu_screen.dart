@@ -130,6 +130,8 @@ class ActivitiesMenuScreen extends StatelessWidget {
                                 children: [
                                   Text(
                                     tr('Top Activities'),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
                                       fontSize: 22,
                                       fontWeight: FontWeight.w800,
@@ -141,6 +143,8 @@ class ActivitiesMenuScreen extends StatelessWidget {
                                   const SizedBox(height: 3),
                                   Text(
                                     tr('Must-visit destinations'),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
                                       fontSize: 13,
                                       color: accentBlack.withOpacity(0.4),
@@ -243,6 +247,8 @@ class ActivitiesMenuScreen extends StatelessWidget {
               Expanded(
                 child: Text(
                   tr(title),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.w800,

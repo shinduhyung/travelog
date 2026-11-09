@@ -119,26 +119,32 @@ class _TopCitiesScreenState extends State<TopCitiesScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      color: modeColor.withOpacity(0.1),
-                      shape: BoxShape.circle,
+              Flexible(
+                child: Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: modeColor.withOpacity(0.1),
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(Icons.bar_chart_rounded, color: modeColor, size: 20),
                     ),
-                    child: Icon(Icons.bar_chart_rounded, color: modeColor, size: 20),
-                  ),
-                  const SizedBox(width: 10),
-                  Text(
-                    tr("Major Cities"),
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.grey.shade700,
+                    const SizedBox(width: 10),
+                    Flexible(
+                      child: Text(
+                        tr("Major Cities"),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey.shade700,
+                        ),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               Container(
                 height: 36,
@@ -185,7 +191,8 @@ class _TopCitiesScreenState extends State<TopCitiesScreen> {
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              Column(
+              Expanded(
+                child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
@@ -200,6 +207,8 @@ class _TopCitiesScreenState extends State<TopCitiesScreen> {
                   const SizedBox(height: 4),
                   Text(
                     tr('Visited $visited of $total'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 14,
                       color: Colors.grey.shade500,
@@ -207,8 +216,8 @@ class _TopCitiesScreenState extends State<TopCitiesScreen> {
                     ),
                   ),
                 ],
+                ),
               ),
-              const Spacer(),
 
               InkWell(
                 onTap: () => Navigator.push(
@@ -289,13 +298,17 @@ class _TopCitiesScreenState extends State<TopCitiesScreen> {
                     children: [
                       Image.asset(asset, width: 16, height: 16, color: color),
                       const SizedBox(width: 6),
-                      Text(
-                          name,
-                          style: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 12,
-                              color: Colors.grey.shade700
-                          )
+                      Flexible(
+                        child: Text(
+                            name,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 12,
+                                color: Colors.grey.shade700
+                            )
+                        ),
                       ),
                     ],
                   ),
@@ -430,6 +443,8 @@ class _TopCitiesScreenState extends State<TopCitiesScreen> {
                                   padding: const EdgeInsets.only(left: 44),
                                   child: Text(
                                     tr('GaWC Global City Rankings'),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w500,
@@ -568,6 +583,8 @@ class _TopCitiesScreenState extends State<TopCitiesScreen> {
                                         children: [
                                           Text(
                                             tr('Iconic Cities'),
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
                                             style: TextStyle(
                                               fontSize: 16,
                                               fontWeight: FontWeight.w900,
@@ -579,6 +596,8 @@ class _TopCitiesScreenState extends State<TopCitiesScreen> {
                                           SizedBox(height: 3),
                                           Text(
                                             tr('40 cities · 7 landmarks each'),
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
                                             style: TextStyle(
                                               fontSize: 12,
                                               color: Color(0xFF9CA3AF),
@@ -732,6 +751,8 @@ class _GaWCRankingListState extends State<_GaWCRankingList> {
               children: [
                 Text(
                   city.name,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w700,
@@ -742,6 +763,8 @@ class _GaWCRankingListState extends State<_GaWCRankingList> {
                 if (city.countryIsoA2.isNotEmpty)
                   Text(
                     tr(city.country),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 12,
                       color: Colors.grey[500],
@@ -834,6 +857,8 @@ class _GaWCRankingListState extends State<_GaWCRankingList> {
                           children: [
                             Text(
                               tr(tierName),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
                               style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w800,
@@ -844,6 +869,8 @@ class _GaWCRankingListState extends State<_GaWCRankingList> {
                             const SizedBox(height: 4),
                             Text(
                                 tr('$total Cities'),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
                                   fontSize: 14,
                                   color: Colors.grey.shade500,
@@ -1081,6 +1108,8 @@ class _IconicStatBar extends StatelessWidget {
             Expanded(
               child: Text(
                 tr(label),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.w600,

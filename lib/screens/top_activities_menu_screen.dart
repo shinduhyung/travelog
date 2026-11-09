@@ -80,15 +80,19 @@ class TopActivitiesMenuScreen extends StatelessWidget {
                     child: const Icon(Icons.explore_rounded, color: Colors.white, size: 20),
                   ),
                   const SizedBox(width: 14),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                       Text(tr('Top Activities'),
-                          style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900,
-                              color: Color(0xFF111827), letterSpacing: -0.6, height: 1.1)),
-                      Text(tr('Explore the best experiences'),
-                          style: TextStyle(fontSize: 12, color: Colors.grey[500], fontWeight: FontWeight.w500)),
-                    ],
+                  Flexible(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(tr('Top Activities'),
+                            maxLines: 1, overflow: TextOverflow.ellipsis,
+                            style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900,
+                                color: Color(0xFF111827), letterSpacing: -0.6, height: 1.1)),
+                        Text(tr('Explore the best experiences'),
+                            maxLines: 1, overflow: TextOverflow.ellipsis,
+                            style: TextStyle(fontSize: 12, color: Colors.grey[500], fontWeight: FontWeight.w500)),
+                      ],
+                    ),
                   ),
                 ],
               ),
@@ -134,10 +138,12 @@ class TopActivitiesMenuScreen extends StatelessWidget {
                         const SizedBox(width: 14),
                         Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                           Text(tr(title),
+                              maxLines: 1, overflow: TextOverflow.ellipsis,
                               style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700,
                                   color: Color(0xFF111827), letterSpacing: -0.3)),
                           const SizedBox(height: 2),
                           Text(tr(sub),
+                              maxLines: 1, overflow: TextOverflow.ellipsis,
                               style: TextStyle(fontSize: 12, color: Colors.grey[500], fontWeight: FontWeight.w500)),
                         ])),
                         Icon(Icons.arrow_forward_ios_rounded, size: 14, color: Colors.grey[400]),

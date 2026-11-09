@@ -321,20 +321,26 @@ class _HistoryStatsScreenState extends State<HistoryStatsScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
-                  children: [
-                    Icon(Icons.public, color: Colors.white.withOpacity(0.9), size: 24),
-                    const SizedBox(width: 12),
-                    Text(
-                      tr('View $title Map'),
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 0.5,
+                Expanded(
+                  child: Row(
+                    children: [
+                      Icon(Icons.public, color: Colors.white.withOpacity(0.9), size: 24),
+                      const SizedBox(width: 12),
+                      Flexible(
+                        child: Text(
+                          tr('View $title Map'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 0.5,
+                          ),
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
                 const Icon(Icons.arrow_forward_ios_rounded, color: Colors.white, size: 18),
               ],
@@ -397,7 +403,7 @@ class _HistoryStatsScreenState extends State<HistoryStatsScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(tr('${numberFormat.format(visitedCount)} / ${numberFormat.format(totalCount)} countries visited'), style: theme.textTheme.bodySmall?.copyWith(color: Colors.grey.shade600)),
+                      Flexible(child: Text(tr('${numberFormat.format(visitedCount)} / ${numberFormat.format(totalCount)} countries visited'), maxLines: 1, overflow: TextOverflow.ellipsis, style: theme.textTheme.bodySmall?.copyWith(color: Colors.grey.shade600))),
                       Icon(isExpanded ? Icons.keyboard_arrow_up : Icons.keyboard_arrow_down, color: Colors.grey.shade400),
                     ],
                   ),
@@ -442,7 +448,7 @@ class _HistoryStatsScreenState extends State<HistoryStatsScreen> {
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      Text(tr(countryName), style: theme.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold, color: isVisited ? Colors.black87 : Colors.grey.shade500)),
+                                      Text(tr(countryName), maxLines: 1, overflow: TextOverflow.ellipsis, style: theme.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold, color: isVisited ? Colors.black87 : Colors.grey.shade500)),
                                       Text(tr('${numberFormat.format(area.round())} km²'), style: theme.textTheme.bodySmall?.copyWith(color: Colors.grey.shade400)),
                                     ],
                                   ),
@@ -567,7 +573,7 @@ class _CombinedHistoricalUnionCardState extends State<_CombinedHistoricalUnionCa
                       children: [
                         Icon(group.icon, color: group.themeColor),
                         const SizedBox(width: 12),
-                        Text(tr(group.title), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                        Flexible(child: Text(tr(group.title), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold))),
                       ],
                     ),
                   );
@@ -704,6 +710,7 @@ class _CombinedHistoricalUnionCardState extends State<_CombinedHistoricalUnionCa
                               child: Text(
                                 tr(country.name),
                                 style: theme.textTheme.bodyMedium,
+                                maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
                               ),
                             ),

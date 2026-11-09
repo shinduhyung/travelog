@@ -368,8 +368,14 @@ class _GradientButtonState extends State<_GradientButton> {
                 Icon(widget.icon, color: fg, size: 20),
                 const SizedBox(width: 8),
               ],
-              Text(tr(widget.label),
-                  style: TextStyle(color: fg, fontSize: 15.5, fontWeight: FontWeight.w800, letterSpacing: 0.2)),
+              Flexible(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(tr(widget.label),
+                      maxLines: 1,
+                      style: TextStyle(color: fg, fontSize: 15.5, fontWeight: FontWeight.w800, letterSpacing: 0.2)),
+                ),
+              ),
             ],
           ),
         ),
@@ -439,8 +445,8 @@ class TimezoneImpostorDifficultyScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 10),
-                   Text(tr('CHOOSE A DIFFICULTY'),
-                      style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.1, color: _kMuted)),
+                   Flexible(child: Text(tr('CHOOSE A DIFFICULTY'), maxLines: 1, overflow: TextOverflow.ellipsis,
+                      style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.1, color: _kMuted))),
                 ],
               ),
               const SizedBox(height: 16),
@@ -538,12 +544,13 @@ class TimezoneImpostorDifficultyScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-               Text(tr('TIMEZONE PUZZLE'),
+               Text(tr('TIMEZONE PUZZLE'), maxLines: 1, overflow: TextOverflow.ellipsis,
                   style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800, letterSpacing: 1.6, color: _kMuted)),
               const SizedBox(height: 4),
-               Text(tr('Timezone Impostor'),
+               FittedBox(fit: BoxFit.scaleDown, alignment: Alignment.centerLeft,
+                 child: Text(tr('Timezone Impostor'), maxLines: 1,
                   style: TextStyle(
-                      fontSize: 27, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.6, height: 1.05)),
+                      fontSize: 27, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.6, height: 1.05))),
               const SizedBox(height: 8),
               Text(tr('Four cities, one clock that doesn\'t match. Spot the impostor before time runs out.'),
                   style: TextStyle(
@@ -599,8 +606,8 @@ class _DifficultyCard extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Text(tr(_diffLabel(difficulty)),
-                          style: const TextStyle(fontSize: 17.5, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.2)),
+                      Flexible(child: Text(tr(_diffLabel(difficulty)), maxLines: 1, overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(fontSize: 17.5, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.2))),
                       if (locked) ...[
                         const SizedBox(width: 6),
                         Icon(Icons.lock_rounded, size: 15, color: color),
@@ -738,11 +745,12 @@ class _LobbyScreenState extends State<_LobbyScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-               Text(tr('DIFFICULTY'),
+               Text(tr('DIFFICULTY'), maxLines: 1, overflow: TextOverflow.ellipsis,
                   style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.4, color: _kMuted)),
               const SizedBox(height: 2),
-              Text(tr('${_diffLabel(widget.difficulty)} Mode'),
-                  style: const TextStyle(fontSize: 21, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.3)),
+              FittedBox(fit: BoxFit.scaleDown, alignment: Alignment.centerLeft,
+                child: Text(tr('${_diffLabel(widget.difficulty)} Mode'), maxLines: 1,
+                  style: const TextStyle(fontSize: 21, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.3))),
             ],
           ),
         ),
@@ -821,7 +829,7 @@ class _RecordTile extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(tr('${record.score}'), style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16, color: _kInk)),
-                Text(tr('${record.roundsCompleted}/${record.maxRounds} rounds · combo ${record.bestCombo}'),
+                Text(tr('${record.roundsCompleted}/${record.maxRounds} rounds · combo ${record.bestCombo}'), maxLines: 1, overflow: TextOverflow.ellipsis,
                     style: const TextStyle(fontSize: 11.5, color: _kMuted)),
               ],
             ),
@@ -1030,8 +1038,8 @@ class _GameScreenState extends State<_GameScreen> {
           children: [
             Container(width: 8, height: 8, decoration: BoxDecoration(color: _accent, shape: BoxShape.circle)),
             const SizedBox(width: 8),
-            Text(tr('${_diffLabel(widget.difficulty)} Mode'),
-                style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: _kInk, letterSpacing: -0.2)),
+            Flexible(child: Text(tr('${_diffLabel(widget.difficulty)} Mode'), maxLines: 1, overflow: TextOverflow.ellipsis,
+                style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: _kInk, letterSpacing: -0.2))),
           ],
         ),
         iconTheme: const IconThemeData(color: _kInk),
@@ -1094,8 +1102,8 @@ class _GameScreenState extends State<_GameScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(tr('ROUND ${_roundIndex + 1} / $_maxRounds'),
-                  style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 0.6, color: _kMuted)),
+              Flexible(child: Text(tr('ROUND ${_roundIndex + 1} / $_maxRounds'), maxLines: 1, overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 0.6, color: _kMuted))),
               if (_combo > 0)
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
@@ -1126,8 +1134,8 @@ class _GameScreenState extends State<_GameScreen> {
             children: [
               Icon(Icons.travel_explore_rounded, size: 18, color: _accent),
               const SizedBox(width: 6),
-               Text(tr('FIND THE IMPOSTOR'),
-                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w900, letterSpacing: 0.5, color: _kInk)),
+               Flexible(child: Text(tr('FIND THE IMPOSTOR'), maxLines: 1, overflow: TextOverflow.ellipsis,
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w900, letterSpacing: 0.5, color: _kInk))),
             ],
           ),
           const SizedBox(height: 5),
@@ -1179,9 +1187,13 @@ class _GameScreenState extends State<_GameScreen> {
               child: Icon(correct ? Icons.check_rounded : Icons.close_rounded, color: Colors.white, size: 18),
             ),
             const SizedBox(width: 10),
-            Text(
-              tr(correct ? 'Correct! +${_lastRoundScore ?? 0}' : (timedOut ? "Time's up" : 'Wrong')),
-              style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w900, color: Colors.white),
+            Flexible(
+              child: Text(
+                tr(correct ? 'Correct! +${_lastRoundScore ?? 0}' : (timedOut ? "Time's up" : 'Wrong')),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w900, color: Colors.white),
+              ),
             ),
           ],
         ),

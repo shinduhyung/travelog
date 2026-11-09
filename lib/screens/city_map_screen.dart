@@ -107,7 +107,7 @@ class _CityMapScreenState extends State<CityMapScreen> {
     const double sizeRatio = 0.7;
 
     return Scaffold(
-      appBar: AppBar(title: Text(tr(widget.title))),
+      appBar: AppBar(title: Text(tr(widget.title), maxLines: 1, overflow: TextOverflow.ellipsis)),
       body: Column(
         children: [
           Padding(
@@ -205,17 +205,22 @@ class _CityMapScreenState extends State<CityMapScreen> {
   }
 
   Widget _buildSizingSwitch(String label, SizingMode mode) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Text(tr(label), style: const TextStyle(fontSize: 12)),
-        Switch(
-          value: _sizingMode == mode,
-          onChanged: (value) {
-            _updateSizingMode(mode, value);
-          },
-        ),
-      ],
+    return Flexible(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(tr(label), style: const TextStyle(fontSize: 12), maxLines: 1),
+          ),
+          Switch(
+            value: _sizingMode == mode,
+            onChanged: (value) {
+              _updateSizingMode(mode, value);
+            },
+          ),
+        ],
+      ),
     );
   }
 }

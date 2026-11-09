@@ -181,7 +181,8 @@ class TopUniversitiesScreen extends StatelessWidget {
                   // 상단 작은 라벨
                   Row(
                     children: [
-                      Container(
+                      Flexible(
+                        child: Container(
                         padding: const EdgeInsets.symmetric(
                             horizontal: 9, vertical: 4),
                         decoration: BoxDecoration(
@@ -194,16 +195,21 @@ class TopUniversitiesScreen extends StatelessWidget {
                             Icon(Icons.school_rounded,
                                 size: 12, color: Color(0xFF7B9CAE)),
                             SizedBox(width: 4),
-                            Text(
-                              tr('QS World Rankings'),
-                              style: TextStyle(
-                                fontSize: 11,
-                                fontWeight: FontWeight.w700,
-                                color: Color(0xFF7B9CAE),
-                                letterSpacing: 0.2,
+                            Flexible(
+                              child: Text(
+                                tr('QS World Rankings'),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.w700,
+                                  color: Color(0xFF7B9CAE),
+                                  letterSpacing: 0.2,
+                                ),
                               ),
                             ),
                           ],
+                        ),
                         ),
                       ),
                     ],
@@ -249,6 +255,8 @@ class TopUniversitiesScreen extends StatelessWidget {
                   const SizedBox(height: 6),
                   Text(
                     tr("World's most prestigious institutions"),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 13,
                       color: Colors.grey[500],
@@ -396,6 +404,7 @@ class TopUniversitiesScreen extends StatelessWidget {
                                     color: const Color(0xFF7B9CAE)
                                         .withOpacity(0.8),
                                   ),
+                                  maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                 ),
                               ],
@@ -495,21 +504,31 @@ class TopUniversitiesScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        TextButton(
+                        Flexible(
+                          child: TextButton(
                             onPressed: () => Navigator.pop(sheetContext),
-                            child: Text(tr('Cancel'),
+                            child: FittedBox(
+                              fit: BoxFit.scaleDown,
+                              child: Text(tr('Cancel'),
+                                maxLines: 1,
                                 style: TextStyle(
                                     color: headerTextColor,
-                                    fontWeight: FontWeight.w600))),
+                                    fontWeight: FontWeight.w600)))),
+                        ),
                         MyMatchBadge.landmark(landmark: freshLandmark, onDark: headerTextColor == Colors.white),
-                        ElevatedButton(
+                        Flexible(
+                          child: ElevatedButton(
                             onPressed: () => Navigator.pop(sheetContext),
                             style: ElevatedButton.styleFrom(
                                 backgroundColor: headerTextColor),
-                            child: Text(tr('Done'),
+                            child: FittedBox(
+                              fit: BoxFit.scaleDown,
+                              child: Text(tr('Done'),
+                                maxLines: 1,
                                 style: TextStyle(
                                     fontWeight: FontWeight.w600,
-                                    color: themeColor))),
+                                    color: themeColor)))),
+                        ),
                       ],
                     ),
                     const SizedBox(height: 12),
@@ -539,6 +558,8 @@ class TopUniversitiesScreen extends StatelessWidget {
                         const SizedBox(width: 4),
                         Expanded(
                             child: Text(tr(locationDisplay),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
                                 style: Theme.of(sheetContext)
                                     .textTheme
                                     .titleSmall
@@ -560,8 +581,8 @@ class TopUniversitiesScreen extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Row(mainAxisSize: MainAxisSize.min, children: [
-                               Text(tr('Wishlist:')),
+                            Flexible(child: Row(mainAxisSize: MainAxisSize.min, children: [
+                               Flexible(child: Text(tr('Wishlist:'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                               IconButton(
                                   visualDensity: VisualDensity.compact,
                                   icon: Icon(
@@ -574,7 +595,7 @@ class TopUniversitiesScreen extends StatelessWidget {
                                   onPressed: () =>
                                       provider.toggleWishlistStatus(
                                           freshLandmark.name))
-                            ]),
+                            ])),
                             Row(mainAxisSize: MainAxisSize.min, children: [
                                Text(tr('My Rating:')),
                               const SizedBox(width: 8),
@@ -598,11 +619,15 @@ class TopUniversitiesScreen extends StatelessWidget {
                             mainAxisAlignment:
                             MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
+                              Flexible(
+                                child: Text(
                                   tr('History (${freshLandmark.visitDates.length} entries)'),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
                                   style: Theme.of(sheetContext)
                                       .textTheme
                                       .titleSmall),
+                              ),
                               OutlinedButton.icon(
                                   icon: const Icon(Icons.add),
                                   label:  Text(tr('Add Visit')),
@@ -834,6 +859,8 @@ class _LandmarkVisitEditorCardState
         initiallyExpanded: _isEditing,
         title: Text(
           tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: const TextStyle(
               fontWeight: FontWeight.w600, fontSize: 15),
         ),
@@ -884,9 +911,13 @@ class _LandmarkVisitEditorCardState
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(tr('Visit Date: $_year-$_month-$_day'),
+                      Flexible(
+                        child: Text(tr('Visit Date: $_year-$_month-$_day'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: const TextStyle(
                               fontWeight: FontWeight.w600, fontSize: 14)),
+                      ),
                       TextButton.icon(
                         icon: const Icon(Icons.edit_calendar, size: 18),
                         label:  Text(tr('Edit Date')),

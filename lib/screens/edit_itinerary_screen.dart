@@ -83,7 +83,7 @@ class _EditItineraryScreenState extends State<EditItineraryScreen> {
     Localizations.maybeLocaleOf(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text(tr(widget.entry == null ? 'New Itinerary' : 'Edit Itinerary')),
+        title: Text(tr(widget.entry == null ? 'New Itinerary' : 'Edit Itinerary'), maxLines: 1, overflow: TextOverflow.ellipsis),
         // --- actions (저장 아이콘) 제거 ---
       ),
       body: Padding(
@@ -116,7 +116,7 @@ class _EditItineraryScreenState extends State<EditItineraryScreen> {
               icon: _isLoading
                   ? const SizedBox(width: 24, height: 24, child: CircularProgressIndicator(strokeWidth: 2))
                   : const Icon(Icons.auto_awesome),
-              label: Text(tr(_isLoading ? 'Generating...' : 'Generate Itinerary')),
+              label: Text(tr(_isLoading ? 'Generating...' : 'Generate Itinerary'), maxLines: 1, overflow: TextOverflow.ellipsis),
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size(double.infinity, 50),
                 textStyle: const TextStyle(fontSize: 18),

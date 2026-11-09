@@ -107,21 +107,21 @@ class _CountrySubregionsScreenState extends State<CountrySubregionsScreen> {
 
     if (subregionProvider.isLoading) {
       return Scaffold(
-        appBar: AppBar(title: Text(tr(widget.country.name))),
+        appBar: AppBar(title: Text(tr(widget.country.name), maxLines: 1, overflow: TextOverflow.ellipsis)),
         body: const Center(child: CircularProgressIndicator()),
       );
     }
 
     if (_subregionNameList.isEmpty) {
       return Scaffold(
-        appBar: AppBar(title: Text(tr(widget.country.name))),
+        appBar: AppBar(title: Text(tr(widget.country.name), maxLines: 1, overflow: TextOverflow.ellipsis)),
         body:  Center(child: Text(tr('No subregion data available.'))),
       );
     }
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(tr(widget.country.name)),
+        title: Text(tr(widget.country.name), maxLines: 1, overflow: TextOverflow.ellipsis),
       ),
       // 🆕 Stack을 사용하여 지도를 배경에, 체크리스트를 위에 띄움
       body: Stack(
@@ -188,6 +188,8 @@ class _CountrySubregionsScreenState extends State<CountrySubregionsScreen> {
                       padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
                       child: Text(
                         tr('Visited States'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
                       ),
                     ),

@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Next Adventure Card Ideas</title>
+<style>
+  *{box-sizing:border-box;margin:0}
+  body{font-family:-apple-system,"Segoe UI",Roboto,sans-serif;background:#e9ebf2;color:#111827;padding:28px 16px 60px}
+  h1{font-size:20px;margin-bottom:4px}
+  .lead{font-size:13px;color:#6b7280;margin-bottom:24px;max-width:700px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:22px;max-width:1240px}
+  .col{display:flex;flex-direction:column;gap:8px}
+  .tag{font-size:12px;font-weight:800;color:#1E1B6B}
+  .note{font-size:12.5px;color:#4b5563;line-height:1.5;min-height:52px}
+  .phone{background:#fff;border-radius:26px;padding:16px;border:1px solid #dfe2ec}
+  .navy{color:#1E1B6B}
+  .go{width:38px;height:38px;border-radius:50%;background:#00C2E8;color:#fff;display:grid;place-items:center;font-size:18px;flex:none}
+
+  /* 1 */
+  .k1{background:#F6F7FB;border-radius:22px;padding:16px}
+  .k1 h3{font-size:18px;font-weight:800}
+  .k1 p{font-size:12.5px;color:#6b7280;margin:3px 0 12px}
+  .k1 .bar{height:46px;background:#fff;border-radius:23px;display:flex;align-items:center;padding:0 4px 0 14px;gap:8px;color:#9ca3af;font-size:14.5px}
+  .k1 .bar span{flex:1}
+  .k1 .chips{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+  .k1 .chips span{font-size:11.5px;font-weight:700;background:#fff;color:#374151;padding:5px 10px;border-radius:14px}
+
+  /* 2 */
+  .k2 .head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+  .k2 h3{font-size:18px;font-weight:800}
+  .k2 .more{font-size:12px;font-weight:700;color:#00A5C7}
+  .k2 .row{display:flex;gap:10px;overflow:hidden}
+  .k2 .city{flex:0 0 96px;height:120px;border-radius:16px;color:#fff;padding:9px;display:flex;flex-direction:column;justify-content:flex-end}
+  .k2 .city small{font-size:10.5px;opacity:.9}
+  .k2 .city strong{font-size:14px;font-weight:800}
+  .g1{background:linear-gradient(160deg,#f472b6,#7c3aed)}
+  .g2{background:linear-gradient(160deg,#fb923c,#e11d48)}
+  .g3{background:linear-gradient(160deg,#22d3ee,#2563eb)}
+  .g4{background:linear-gradient(160deg,#34d399,#0f766e)}
+  .k2 .foot{font-size:11.5px;color:#6b7280;margin-top:10px}
+
+  /* 3 */
+  .k3{background:linear-gradient(135deg,#1E1B6B,#3b36b8);border-radius:22px;padding:16px;color:#fff;position:relative;overflow:hidden}
+  .k3::after{content:"";position:absolute;right:-30px;top:-30px;width:130px;height:130px;border-radius:50%;background:rgba(0,194,232,.22)}
+  .k3 .eyebrow{font-size:11px;font-weight:700;color:#7ce7ff;letter-spacing:.5px;margin-bottom:4px;position:relative}
+  .k3 h3{font-size:19px;font-weight:800;position:relative}
+  .k3 p{font-size:12.5px;color:#c7c9f2;margin:3px 0 14px;position:relative}
+  .k3 .btn{display:inline-flex;gap:8px;background:#00C2E8;color:#04243a;font-weight:800;font-size:14px;padding:11px 16px;border-radius:24px;position:relative}
+
+  /* 4 */
+  .k4{background:#F6F7FB;border-radius:22px;padding:16px}
+  .k4 h3{font-size:22px;font-weight:900;line-height:1.15;letter-spacing:-.3px}
+  .k4 h3 em{font-style:normal;color:#00A5C7}
+  .k4 .bar{height:50px;background:#fff;border-radius:25px;display:flex;align-items:center;padding:0 5px 0 16px;gap:8px;color:#9ca3af;font-size:15px;margin-top:14px;box-shadow:0 1px 4px rgba(30,27,107,.08)}
+  .k4 .bar span{flex:1}
+  .k4 .go{width:40px;height:40px}
+
+  /* 5 */
+  .k5{background:#F6F7FB;border-radius:22px;padding:14px}
+  .k5 h3{font-size:16px;font-weight:800;margin:0 2px 10px}
+  .k5 .bar{height:44px;background:#fff;border-radius:22px;display:flex;align-items:center;padding:0 14px;gap:8px;color:#9ca3af;font-size:14.5px}
+  .k5 .tiles{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+  .k5 .tiles div{background:#fff;border-radius:14px;padding:10px 12px;display:flex;gap:10px;align-items:center}
+  .k5 .tiles i{font-style:normal;font-size:20px}
+  .k5 .tiles b{font-size:13px;display:block}
+  .k5 .tiles small{font-size:11px;color:#6b7280}
+
+  /* 6 */
+  .k6{background:#F6F7FB;border-radius:22px;padding:16px}
+  .k6 .top{display:flex;align-items:center;gap:12px}
+  .k6 .ic{width:44px;height:44px;border-radius:14px;background:#fff;display:grid;place-items:center;font-size:22px;flex:none}
+  .k6 .tx{flex:1}
+  .k6 h3{font-size:16px;font-weight:800}
+  .k6 p{font-size:12px;color:#6b7280;margin-top:1px}
+  .k6 .pills{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}
+  .k6 .pills span{font-size:12.5px;font-weight:700;background:#fff;border:1px solid #e5e7eb;color:#1E1B6B;padding:6px 12px;border-radius:16px}
+</style>
+</head>
+<body>
+<h1>Next adventure card: new ideas</h1>
+<p class="lead">Every version answers one thing at a glance: pick a city, get its trip guide (day trips, plans, hotels, souvenirs). The faint "Paris" fake input is gone.</p>
+
+<div class="grid">
+
+  <div class="col">
+    <div class="tag">1 · Plan a city trip</div>
+    <div class="note">Closest to today's layout. Title says the action, one line says what you get, search stays inline.</div>
+    <div class="phone"><div class="k1">
+      <h3>Plan a city trip</h3>
+      <p>Pick a city and get everything for the trip in one place</p>
+      <div class="bar">🔍<span>Search a city</span><div class="go">→</div></div>
+      <div class="chips"><span>Day trips</span><span>Plans</span><span>Hotels</span><span>Souvenirs</span></div>
+    </div></div>
+  </div>
+
+  <div class="col">
+    <div class="tag">2 · City Guides</div>
+    <div class="note">Shows popular cities with photos so the feature explains itself. Search moves to "See all". Use the existing city photos.</div>
+    <div class="phone"><div class="k2">
+      <div class="head"><h3>City Guides</h3><span class="more">Search all</span></div>
+      <div class="row">
+        <div class="city g1"><small>France</small><strong>Paris</strong></div>
+        <div class="city g2"><small>Japan</small><strong>Tokyo</strong></div>
+        <div class="city g3"><small>Spain</small><strong>Barcelona</strong></div>
+        <div class="city g4"><small>Thailand</small><strong>Bangkok</strong></div>
+      </div>
+      <div class="foot">Day trips, plans, hotels and souvenirs for each city</div>
+    </div></div>
+  </div>
+
+  <div class="col">
+    <div class="tag">3 · Start a trip (button)</div>
+    <div class="note">No inline search. One clear call to action; search opens on tap. Smallest and boldest, but one extra tap.</div>
+    <div class="phone"><div class="k3">
+      <div class="eyebrow">NEXT TRIP</div>
+      <h3>Where to next?</h3>
+      <p>City guides, day trips, hotels and more</p>
+      <div class="btn">🔍 Find a city →</div>
+    </div></div>
+  </div>
+
+  <div class="col">
+    <div class="tag">4 · Big question</div>
+    <div class="note">Large headline with the one accent word, and a larger search bar. Minimal, no chips at all, purpose is in the headline.</div>
+    <div class="phone"><div class="k4">
+      <h3>Find your next <em>city break</em></h3>
+      <div class="bar">🔍<span>Search any city</span><div class="go">→</div></div>
+    </div></div>
+  </div>
+
+  <div class="col">
+    <div class="tag">5 · Search + what's inside</div>
+    <div class="note">Four small tiles each say what a city page contains. Clearest about the "what", slightly denser.</div>
+    <div class="phone"><div class="k5">
+      <h3>Trip guide for any city</h3>
+      <div class="bar">🔍 Search a city</div>
+      <div class="tiles">
+        <div><i>🚌</i><span><b>Day trips</b><small>Nearby escapes</small></span></div>
+        <div><i>🗓️</i><span><b>Plans</b><small>Ready itineraries</small></span></div>
+        <div><i>🏨</i><span><b>Hotels</b><small>Where to stay</small></span></div>
+        <div><i>🎁</i><span><b>Souvenirs</b><small>What to bring</small></span></div>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="col">
+    <div class="tag">6 · Quick-pick pills</div>
+    <div class="note">Compact row plus tappable city pills, so most people reach a guide in one tap without typing.</div>
+    <div class="phone"><div class="k6">
+      <div class="top">
+        <div class="ic">🧭</div>
+        <div class="tx"><h3>Where to next?</h3><p>Open a trip guide for any city</p></div>
+        <div class="go">🔍</div>
+      </div>
+      <div class="pills"><span>Paris</span><span>Tokyo</span><span>Rome</span><span>New York</span><span>Bangkok</span></div>
+    </div></div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -193,9 +193,10 @@ class _LoungeStatsScreenState extends State<LoungeStatsScreen> {
   Widget _buildPeriodSelector() => Column(
       children: [
         DropdownButtonFormField<String>(
+          isExpanded: true,
           value: _selectedPeriod,
           decoration: InputDecoration(contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8), border: OutlineInputBorder(borderRadius: BorderRadius.circular(20))),
-          items: _periods.map((String value) => DropdownMenuItem<String>(value: value, child: Text(tr(value)))).toList(),
+          items: _periods.map((String value) => DropdownMenuItem<String>(value: value, child: Text(tr(value), maxLines: 1, overflow: TextOverflow.ellipsis))).toList(),
           onChanged: (String? newValue) {
             if (newValue == 'Custom') { _showCustomDateRangePicker(); }
             else if (newValue != null) { setState(() { _selectedPeriod = newValue; }); _prepareData(); }
@@ -238,13 +239,14 @@ class _LoungeStatsScreenState extends State<LoungeStatsScreen> {
     Widget statItem(String title, String value, {Widget? icon}) {
       return Column(
         children: [
-          Text(tr(title), style: Theme.of(context).textTheme.titleSmall),
+          FittedBox(fit: BoxFit.scaleDown, child: Text(tr(title), maxLines: 1, style: Theme.of(context).textTheme.titleSmall)),
           const SizedBox(height: 8),
           Row(
+            mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               if(icon != null) ...[icon, const SizedBox(width: 8)],
-              Text(tr(value), style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: _themeColor)),
+              Flexible(child: FittedBox(fit: BoxFit.scaleDown, child: Text(tr(value), maxLines: 1, style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: _themeColor)))),
             ],
           )
         ],
@@ -261,16 +263,16 @@ class _LoungeStatsScreenState extends State<LoungeStatsScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                statItem('Total Visits', NumberFormat.compact().format(totalLoungeVisits)),
-                statItem('Usage Rate', '${ratio.toStringAsFixed(1)}%'),
+                Flexible(child: statItem('Total Visits', NumberFormat.compact().format(totalLoungeVisits))),
+                Flexible(child: statItem('Usage Rate', '${ratio.toStringAsFixed(1)}%')),
               ],
             ),
             const Divider(height: 24),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                statItem('Total Duration', formatDuration(totalDuration.toDouble())),
-                statItem('Average Duration', formatDuration(avgDuration)),
+                Flexible(child: statItem('Total Duration', formatDuration(totalDuration.toDouble()))),
+                Flexible(child: statItem('Average Duration', formatDuration(avgDuration))),
               ],
             ),
             const Divider(height: 24),
@@ -300,6 +302,7 @@ class _LoungeStatsScreenState extends State<LoungeStatsScreen> {
         child: Column(
           children: [
             DropdownButtonFormField<LoungeSortType>(
+              isExpanded: true,
               value: _sortType,
               decoration: InputDecoration(
                 filled: true,
@@ -307,7 +310,7 @@ class _LoungeStatsScreenState extends State<LoungeStatsScreen> {
                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide.none),
               ),
               items: LoungeSortType.values.map((type) {
-                return DropdownMenuItem(value: type, child: Text(tr(getSortTypeName(type)), style: const TextStyle(fontWeight: FontWeight.bold)));
+                return DropdownMenuItem(value: type, child: Text(tr(getSortTypeName(type)), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.bold)));
               }).toList(),
               onChanged: (type) {
                 if (type != null) {

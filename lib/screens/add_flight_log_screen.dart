@@ -619,12 +619,16 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
                     color: isFastSearch ? specialColor.shade700 : Colors.grey,
                   ),
                   const SizedBox(width: 8),
-                  Text(
-                    tr('Fast Search'),
-                    style: TextStyle(
-                      fontWeight: FontWeight.w900,
-                      color: isFastSearch ? specialColor.shade900 : Colors.black87,
-                      letterSpacing: 0.5,
+                  Flexible(
+                    child: Text(
+                      tr('Fast Search'),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w900,
+                        color: isFastSearch ? specialColor.shade900 : Colors.black87,
+                        letterSpacing: 0.5,
+                      ),
                     ),
                   ),
                   if (!isPremium) ...[
@@ -676,9 +680,13 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
-            tr(title),
-            style: const TextStyle(fontWeight: FontWeight.w600),
+          Flexible(
+            child: Text(
+              tr(title),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(fontWeight: FontWeight.w600),
+            ),
           ),
           Checkbox(
             value: value,
@@ -704,9 +712,13 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  tr('My Score: '),
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.deepPurple.shade700),
+                Flexible(
+                  child: Text(
+                    tr('My Score: '),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.deepPurple.shade700),
+                  ),
                 ),
                 Text(
                   tr(_rating.toStringAsFixed(1)),
@@ -967,7 +979,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
         items: _aircraftModels.map((String value) {
           return DropdownMenuItem<String>(
             value: value,
-            child: Text(tr(value), overflow: TextOverflow.ellipsis),
+            child: Text(tr(value), maxLines: 1, overflow: TextOverflow.ellipsis),
           );
         }).toList(),
         onChanged: _isAircraftUnknown ? null : (value) {
@@ -994,7 +1006,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
   Widget _buildFieldRowWithUnknown({required Widget child, required bool isUnknown, required ValueChanged<bool> onUnknownChanged}) {
     return Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
       Expanded(child: child),
-      Transform.scale(scale: 0.8, child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [ Text(tr('Unknown'), style: TextStyle(fontSize: 12)), Checkbox(value: isUnknown, onChanged: (val) => onUnknownChanged(val ?? false), visualDensity: VisualDensity.compact)])),
+      Transform.scale(scale: 0.8, child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [ ConstrainedBox(constraints: const BoxConstraints(maxWidth: 64), child: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Unknown'), maxLines: 1, style: TextStyle(fontSize: 12)))), Checkbox(value: isUnknown, onChanged: (val) => onUnknownChanged(val ?? false), visualDensity: VisualDensity.compact)])),
     ]);
   }
 
@@ -1096,12 +1108,15 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
 
   Widget _buildSeatClassDropdown() {
     return DropdownButtonFormField<String>(
+      isExpanded: true,
       value: _selectedSeatClass,
       items: ['Economy', 'Premium Economy', 'Business', 'First'].map((label) =>
           DropdownMenuItem(
               value: label,
               child: Text(
                 trSeatClass(label),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   color: _seatClassColors[label],
                   fontWeight: FontWeight.bold,

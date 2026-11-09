@@ -228,6 +228,8 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
       appBar: AppBar(
         title: Text(
           tr('Select Countries'),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: GoogleFonts.poppins(
             fontWeight: FontWeight.w600,
             color: Colors.white,
@@ -290,12 +292,16 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          item.title,
-                          style: GoogleFonts.poppins(
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                            color: _mintDark,
+                        Flexible(
+                          child: Text(
+                            tr(item.title),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: GoogleFonts.poppins(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                              color: _mintDark,
+                            ),
                           ),
                         ), // 진한 민트색 텍스트
                         Container(
@@ -309,6 +315,7 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
                           ),
                           child: Text(
                             tr(item.stats),
+                            maxLines: 1,
                             style: GoogleFonts.poppins(
                               fontSize: 12,
                               fontWeight: FontWeight.w600,
@@ -395,6 +402,8 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
                                   Expanded(
                                     child: Text(
                                       tr(country.name),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
                                       style: GoogleFonts.poppins(
                                         fontSize: 16,
                                         fontWeight: isSelected
@@ -520,9 +529,13 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
                         side: BorderSide(color: Colors.grey.shade300),
                         foregroundColor: Colors.grey.shade600,
                       ),
-                      child: Text(
-                        tr('Cancel'),
-                        style: GoogleFonts.poppins(fontWeight: FontWeight.w500),
+                      child: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          tr('Cancel'),
+                          maxLines: 1,
+                          style: GoogleFonts.poppins(fontWeight: FontWeight.w500),
+                        ),
                       ),
                     ),
                   ),
@@ -615,11 +628,15 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
                           borderRadius: BorderRadius.circular(14),
                         ),
                       ),
-                      child: Text(
-                        tr('Apply Changes'),
-                        style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16,
+                      child: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          tr('Apply Changes'),
+                          maxLines: 1,
+                          style: GoogleFonts.poppins(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16,
+                          ),
                         ),
                       ),
                     ),

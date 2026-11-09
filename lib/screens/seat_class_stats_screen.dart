@@ -298,6 +298,8 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
                   value: value,
                   child: Text(
                     tr(value),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
                       color: _primaryColor,
@@ -652,8 +654,8 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
         // 🚨 [수정] 체크 아이콘 제거
         showSelectedIcon: false,
         segments:  [
-          ButtonSegment<bool>(value: false, label: Text(tr('Flight Logs')), icon: Icon(Icons.list_alt)),
-          ButtonSegment<bool>(value: true, label: Text(tr('Ranking')), icon: Icon(Icons.emoji_events)),
+          ButtonSegment<bool>(value: false, label: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Flight Logs'), maxLines: 1)), icon: Icon(Icons.list_alt)),
+          ButtonSegment<bool>(value: true, label: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Ranking'), maxLines: 1)), icon: Icon(Icons.emoji_events)),
         ],
         selected: {_showRanking},
         onSelectionChanged: (Set<bool> newSelection) {
@@ -702,6 +704,7 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
         ],
       ),
       child: DropdownButtonFormField<String>(
+        isExpanded: true,
         value: _selectedSeatClass,
         decoration: inputDecoration,
         items: _seatClassInfo.entries.map((entry) {
@@ -711,9 +714,13 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
               children: [
                 Container(width: 8, height: 8, decoration: BoxDecoration(color: entry.value['color'], shape: BoxShape.circle)),
                 const SizedBox(width: 12),
-                Text(
-                  trSeatClass(entry.value['name']),
-                  style: TextStyle(color: entry.value['color'], fontWeight: FontWeight.w600),
+                Flexible(
+                  child: Text(
+                    trSeatClass(entry.value['name']),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(color: entry.value['color'], fontWeight: FontWeight.w600),
+                  ),
                 ),
               ],
             ),
@@ -870,9 +877,13 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
                   child: Icon(Icons.trending_up, color: _primaryColor, size: 24),
                 ),
                 const SizedBox(width: 12),
-                Text(
-                  tr("Yearly Trend (10 Years)"),
-                  style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold, fontSize: 20),
+                Flexible(
+                  child: Text(
+                    tr("Yearly Trend (10 Years)"),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
                 ),
               ],
             ),
@@ -991,7 +1002,7 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(log.airlineName ?? tr('Unknown'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16)),
+                    Text(log.airlineName ?? tr('Unknown'), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16)),
                     const SizedBox(height: 4),
                     Text(tr(displayFlightNumber), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: _primaryColor)),
                     const SizedBox(height: 4),

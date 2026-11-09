@@ -285,7 +285,7 @@ class _OlympicsRankingCardState extends State<_OlympicsRankingCard> {
                   children: [
                     Icon(Icons.emoji_events, color: olympicColor),
                     const SizedBox(width: 8),
-                    Text(tr('Olympic Games'), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                    Flexible(child: Text(tr('Olympic Games'), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold))),
                   ],
                 ),
                 const SizedBox(height: 8),
@@ -308,7 +308,7 @@ class _OlympicsRankingCardState extends State<_OlympicsRankingCard> {
                               child: Row(children: [
                                 Icon(Icons.wb_sunny, color: Colors.amber.shade700),
                                 const SizedBox(width: 8),
-                                Text(tr('Summer Olympics'), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                                Flexible(child: Text(tr('Summer Olympics'), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
                               ]),
                             ),
                             DropdownMenuItem<int>(
@@ -316,7 +316,7 @@ class _OlympicsRankingCardState extends State<_OlympicsRankingCard> {
                               child: Row(children: [
                                 Icon(Icons.ac_unit, color: Colors.lightBlue.shade700),
                                 const SizedBox(width: 8),
-                                Text(tr('Winter Olympics'), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                                Flexible(child: Text(tr('Winter Olympics'), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
                               ]),
                             ),
                           ],
@@ -364,8 +364,8 @@ class _OlympicsRankingCardState extends State<_OlympicsRankingCard> {
                           isExpanded: true,
                           icon: Icon(Icons.arrow_drop_down, color: olympicColor),
                           items:  [
-                            DropdownMenuItem(value: 0, child: Text(tr('Gold Medals'))),
-                            DropdownMenuItem(value: 1, child: Text(tr('Total Medals'))),
+                            DropdownMenuItem(value: 0, child: Text(tr('Gold Medals'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                            DropdownMenuItem(value: 1, child: Text(tr('Total Medals'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                           ],
                           onChanged: (val) {
                             if (val != null) {
@@ -387,8 +387,8 @@ class _OlympicsRankingCardState extends State<_OlympicsRankingCard> {
                           isExpanded: true,
                           icon: Icon(Icons.arrow_drop_down, color: olympicColor),
                           items:  [
-                            DropdownMenuItem(value: 0, child: Text(tr('All Countries'))),
-                            DropdownMenuItem(value: 1, child: Text(tr('Visited Only'))),
+                            DropdownMenuItem(value: 0, child: Text(tr('All Countries'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                            DropdownMenuItem(value: 1, child: Text(tr('Visited Only'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                           ],
                           onChanged: (val) {
                             if (val != null) {
@@ -444,7 +444,7 @@ class _OlympicsRankingCardState extends State<_OlympicsRankingCard> {
                               const SizedBox(width: 8),
                               Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 18)),
                               const SizedBox(width: 6),
-                              Expanded(child: Text(tr(country.name), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 17))),
+                              Expanded(child: Text(tr(country.name), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 17))),
                               const SizedBox(width: 8),
                               Text(tr(medalValue.toString()), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                             ],
@@ -607,7 +607,7 @@ class _CombinedSportsAchievementCardState extends State<_CombinedSportsAchieveme
                   child: Row(
                     children: [
                       Icon(group.icon, color: group.themeColor), const SizedBox(width: 12),
-                      Text(tr(group.title), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                      Flexible(child: Text(tr(group.title), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold))),
                     ],
                   ),
                 )).toList(),
@@ -626,16 +626,18 @@ class _CombinedSportsAchievementCardState extends State<_CombinedSportsAchieveme
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Column(
+                        Flexible(
+                          child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(tr("Visited Entities"), style: textTheme.bodyLarge),
+                            Text(tr("Visited Entities"), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.bodyLarge),
                             Text.rich(TextSpan(
                               text: tr('$visited'),
                               style: textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
                               children: [TextSpan(text: tr(' / $total'), style: textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
                             )),
                           ],
+                          ),
                         ),
                         ElevatedButton.icon(
                           onPressed: () {
@@ -839,6 +841,8 @@ class _MostPopularSportSectionState extends State<_MostPopularSportSection> {
               icon: const Icon(Icons.sports_soccer, color: Colors.white, size: 20),
               label:  Text(
                 tr('Most Popular Sports Map'),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
@@ -998,6 +1002,7 @@ class _SportTile extends StatelessWidget {
                       const SizedBox(width: 12),
                       Text(
                         tr('$visited / $total Countries'),
+                        maxLines: 1,
                         style: theme.textTheme.bodyMedium?.copyWith(
                           color: Colors.grey.shade600,
                           fontWeight: FontWeight.w500,

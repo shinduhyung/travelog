@@ -138,9 +138,13 @@ class _StatLockedPromoState extends State<StatLockedPromo> {
                                     ),
                                   )
                                 : const Icon(Icons.play_circle_fill_rounded),
-                            label: Text(
-                              tr('Watch a video to unlock this for now'),
-                              style: const TextStyle(fontWeight: FontWeight.bold),
+                            label: FittedBox(
+                              fit: BoxFit.scaleDown,
+                              child: Text(
+                                tr('Watch a video to unlock this for now'),
+                                maxLines: 1,
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              ),
                             ),
                           ),
                         );
@@ -160,7 +164,10 @@ class _StatLockedPromoState extends State<StatLockedPromo> {
                         triggerContext: 'stat_lock',
                       ),
                       icon: const Icon(Icons.workspace_premium_rounded),
-                      label: Text(tr('Go Premium')),
+                      label: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(tr('Go Premium'), maxLines: 1),
+                      ),
                     ),
                   ),
                 ],

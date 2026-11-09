@@ -57,7 +57,7 @@ class _CountryTwinScreenState extends State<CountryTwinScreen> {
 
   @override
   Widget build(BuildContext context) => DiscoverScaffold(
-    appBar: AppBar(title: Text(tr('Travel Soulmate'))),
+    appBar: AppBar(title: Text(tr('Travel Soulmate'), maxLines: 1, overflow: TextOverflow.ellipsis)),
     body: FutureBuilder<Map<String, dynamic>>(
       future: _future,
       builder: (context, snapshot) {

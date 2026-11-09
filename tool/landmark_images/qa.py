@@ -7,6 +7,7 @@ Writes qa.json {file: {"pass": bool, "people": bool, "subject_ok": bool, "text":
 Failed images are listed for one regeneration; nothing is uploaded from here.
 """
 import base64
+import os
 import json
 import sys
 import time
@@ -18,7 +19,8 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 KEY = next(l.split("=", 1)[1].strip() for l in (ROOT / ".env").read_text(encoding="utf-8").splitlines()
            if l.startswith("ANTHROPIC_API_KEY="))
-QA = HERE / "qa.json"
+PRE = {"miss": "miss_"}.get(os.environ.get("LEO_SET"), "")  # other sets keep their own prompts/qa files
+QA = HERE / f"{PRE}qa.json"
 ASK = """This is a generated travel-app illustration of "{name}" ({city}). Check it strictly and reply with JSON only:
 {{"people": <true if ANY person, human figure, silhouette, face, hand or human reflection is visible, even tiny or distant>,
 "subject_ok": <false ONLY if it clearly shows a different specific landmark (e.g. another famous bridge), the wrong kind of place, or a well-known landmark drawn clearly wrong (wrong shape or structure). A generic but plausible picture of a little-known place is true>,
@@ -49,9 +51,10 @@ def check(item):
 
 
 def run():
-    prompts = json.loads((HERE / "prompts.json").read_text(encoding="utf-8"))
+    prompts = json.loads((HERE / f"{PRE}prompts.json").read_text(encoding="utf-8"))
     qa = json.loads(QA.read_text(encoding="utf-8")) if QA.exists() else {}
-    todo = [(f, prompts[f]) for f in prompts if f not in qa and (HERE / "raw" / (Path(f).stem + ".jpg")).exists()]
+    made = json.loads((HERE / f"{PRE}generated.json").read_text(encoding="utf-8")) if PRE else {}
+    todo = [(f, prompts[f]) for f in prompts if f not in qa and (not PRE or f in made) and (HERE / "raw" / (Path(f).stem + ".jpg")).exists()]
     with ThreadPoolExecutor(4) as pool:
         for f, d in pool.map(check, todo):
             if d:

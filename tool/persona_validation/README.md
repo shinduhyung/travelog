@@ -50,7 +50,7 @@ dart tool/persona_validation/rerun_jev.dart --self-test
 
 `out/jev/`에 도시 목록, 랜드마크 분류 연결표, 질문과 축 방향, 공개 정보만 담은 요청 299개, 고정된 500명 코호트를 생성합니다. 도시 후보는 기존 `city_type`와 `city_rank`의 합집합이며 국가 정보까지 확인합니다. 기존 P/W 점수는 Jev 입력으로 재사용하지 않습니다. 음식 태그는 제외하고 숙박 시설도 관광지 채점에서 제외합니다. UNESCO 방문은 별도 기본 분류로 연결하고 같은 이름의 중복 방문은 한 번만 반영합니다. 동명이면서 분류가 다른 장소는 추측하지 않습니다.
 
-**API 키를 넣기 전까지 `score --execute`를 실행하지 않습니다.** 키는 무시된 프로젝트 `.env`의 `TYPESAFE_API_KEY` 또는 환경변수로 설정합니다. 키는 화면이나 산출물에 출력하지 않습니다. 준비 시점에는 실제 API를 호출하지 않았습니다.
+**API 키를 넣기 전까지 `score --execute`를 실행하지 않습니다.** 키는 무시된 로컬 도구 전용 `.env.jev`의 `TYPESAFE_API_KEY` 또는 환경변수로 설정합니다. 앱에 번들되는 `.env`에서는 Jev 키를 제거합니다. 키는 화면이나 산출물에 출력하지 않습니다. 준비 시점에는 실제 API를 호출하지 않았습니다.
 
 ```powershell
 # 키 설정 후 소량 파일럿: 대표 도시 3개, 분류 2개
@@ -64,7 +64,7 @@ dart tool/persona_validation/rerun_jev.dart
 
 채점은 버전 고정 `jev-1.14.0`, 공식 `https://api.typesafe.ai/v1/systemone` 엔드포인트를 사용합니다. [공식 API](https://docs.typesafe.ai/api/system-one), [Score 응답](https://docs.typesafe.ai/primitives/score), [모델/요금](https://docs.typesafe.ai/models)을 기준으로 구성했습니다. 요금 추적은 입력 100만 토큰당 $0.042를 사용하므로 실제 실행 전 변경 여부를 확인합니다. `--max-usd`는 실행 한 번의 추정 요금 한도이며 공급자 측 청구 한도를 대신하지 않습니다. POST를 자동 재시도하지 않으며, 받은 응답은 검증 전에 저장해 중복 요청을 방지합니다.
 
-각 축은 5단계 점수와 근거 충분 여부를 함께 물어봅니다. 0~4점을 -1~1로 변환하고, 초기 confidence 0.35/근거 확률 0.75 미만은 제외합니다. 분류만으로 알 수 없는 혼잡도·비용·현지인/관광객 비율·밤문화는 계산하지 않습니다. 이 방식은 13개 축을 모두 강제로 채우지 않습니다. 4개 랜드마크 축은 기존 온라인 AI 프롬프트와 프로토타입 사이의 방향 충돌이 있어, 명시적인 `axis_contract.json`의 프로토타입 기준으로 채점합니다. 아직 프로덕션 AI 경로를 바꾸는 작업은 아닙니다.
+각 축은 5단계 점수와 근거 충분 여부를 함께 물어봅니다. 0~4점을 -1~1로 변환하고, 초기 confidence 0.35/근거 확률 0.75 미만은 제외합니다. 분류만으로 알 수 없는 혼잡도·비용·현지인/관광객 비율·밤문화는 계산하지 않습니다. 이 방식은 13개 축을 모두 강제로 채우지 않습니다. 4개 랜드마크 축은 기존 온라인 AI 프롬프트와 프로토타입 사이의 방향 충돌이 있어, 명시적인 `axis_contract.json`의 프로토타입 기준으로 채점합니다. 앱에서는 아래의 런타임 자산 내보내기로 이 축 방향과 채점 결과를 재사용합니다.
 
 방문 평점에는 음수가 되지 않는 제한된 상대 가중치를 쓰고, 분류별 기여량을 제한해 놀이공원 방문 목록이 길다는 이유로 결과를 지배하지 않게 합니다. 사용자 자료나 프로덕션 앱 파일은 API로 보내지 않습니다. 결과 캐시는 질문·자료·모델 버전의 해시로 묶고, 사용자 데이터가 준비 이후 바뀌면 재결합을 중단합니다.
 
@@ -95,3 +95,18 @@ python -m unittest discover -s tool/persona_validation -p test_strong_distributi
 이 목표는 실제 성향 비율에 관한 통계적 주장이 아니라 사용자가 요청한 제품상의 분포 목표입니다. 새로운 사용자를 타입별 정원에 배정하지 않고 저장된 고정 오프셋으로 개별 채점합니다. 따라서 보정 집단의 분포가 균등해도 확인용 집단이나 새 사용자의 분포가 정확히 10%가 된다는 보장은 없습니다. 정확도보다 분포 균형을 더 우선하므로 원래 추천과 크게 다른 타입으로 바뀔 수 있습니다.
 
 `distribution_strong_profile.json`, `distribution_strong_comparison.json`, `distribution_strong_results_500.jsonl`에 별도로 저장하며 원본과 직전 보정 결과는 유지합니다. 프로덕션 앱에는 연결하지 않은 실험입니다.
+
+
+## 앱 연결 (2026-10-28)
+
+최종 강한 보정은 `assets/traveler_type/place_profiles.json`과 `distribution_balance.json`으로 정제해 앱에 연결했습니다. 위 실험 JSON의 `app_integration: false`는 각 실험 생성 시점의 상태이며 원본 기록으로 유지합니다. 앱 계산은 `PersonaRuntimeModel`을 사용하고 `TravelPersonaEngine`이 도시/랜드마크/UNESCO Provider의 실제 방문·평점을 전달합니다. AI HTTP 요청 없이 설명과 점수를 로컬에서 생성하며, 완료된 설문과 여행 근거가 있는 경우 고정 보정을 적용합니다. 자료 없는 축, 식당·숙박, 동명이면서 분류가 다른 장소는 제외합니다.
+
+```powershell
+# 기존 Jev 캐시를 런타임 자산으로 내보내기: 추가 API 호출 없음
+python tool/persona_validation/export_runtime_assets.py
+# 실제 앱의 공유 계산 코드가 동일한 500명/보정 결과를 재현하는지 확인
+ dart tool/persona_validation/verify_app_model.dart
+flutter test --no-pub test/persona_runtime_model_test.dart test/travel_persona_engine_local_test.dart test/persona_scorer_test.dart test/traveler_type_store_test.dart test/travel_quantifier_evidence_test.dart
+```
+
+앱에는 장소 이름/분류/지원되는 축과 숫자 모델 파라미터만 포함합니다. 원본 사용자 행, 문항별 답변, 사용자 ID, 보정·확인 집단 ID, API 키는 포함하지 않습니다. Python/Dart 간 부동소수점 차이가 백분위 경계에서 증폭되지 않도록 로그 점수 1e-12 이내는 동점으로 처리합니다. 기존 고정 오프셋은 재학습하지 않으며 500명 전체의 1위 타입이 마지막 실험과 일치하는지 검증합니다. 새 자산/계산식은 캐시 엔진 버전 5를 사용하므로 이전 결과는 폐기하고 재분석합니다. 앱 재빌드/재실행이 필요합니다.

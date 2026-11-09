@@ -271,7 +271,7 @@ class _CombinedMembershipCardState extends State<_CombinedMembershipCard> {
                       children: [
                         Icon(group.icon, color: group.themeColor),
                         const SizedBox(width: 12),
-                        Text(tr(group.title), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                        Flexible(child: Text(tr(group.title), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold))),
                       ],
                     ),
                   );
@@ -529,7 +529,7 @@ class _CombinedRecognitionCardState extends State<_CombinedRecognitionCard> {
                       children: [
                         Icon(group.icon, color: group.themeColor),
                         const SizedBox(width: 12),
-                        Text(tr(group.title), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                        Flexible(child: Text(tr(group.title), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold))),
                       ],
                     ),
                   );
@@ -807,12 +807,16 @@ class _ColdWarGeopoliticsSectionState
                 padding: const EdgeInsets.symmetric(vertical: 8),
               ),
               icon: const Icon(Icons.public, color: Colors.white, size: 20),
-              label:  Text(
-                tr('Cold War Geopolitics Map'),
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.white,
+              label: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  tr('Cold War Geopolitics Map'),
+                  maxLines: 1,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.white,
+                  ),
                 ),
               ),
               onPressed: () {

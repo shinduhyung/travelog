@@ -70,6 +70,8 @@ class _FriendRequestsState extends State<FriendRequests> {
                     Expanded(
                       child: Text(
                         '${tr('Friend requests')} (${snapshot.data!.length})',
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
                           fontWeight: FontWeight.w800,
                           fontSize: 17,
@@ -101,6 +103,8 @@ class _FriendRequestsState extends State<FriendRequests> {
                       Expanded(
                         child: Text(
                           tr('Fellow traveler'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: const TextStyle(fontWeight: FontWeight.w700),
                         ),
                       ),
@@ -114,7 +118,7 @@ class _FriendRequestsState extends State<FriendRequests> {
                           onPressed: _busy.contains(row['uid'])
                               ? null
                               : () => _respond(row['uid'] as String, false),
-                          child: Text(tr('Decline')),
+                          child: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Decline'), maxLines: 1)),
                         ),
                       ),
                       const SizedBox(width: 8),
@@ -123,7 +127,7 @@ class _FriendRequestsState extends State<FriendRequests> {
                           onPressed: _busy.contains(row['uid'])
                               ? null
                               : () => _respond(row['uid'] as String, true),
-                          child: Text(tr('Accept')),
+                          child: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Accept'), maxLines: 1)),
                         ),
                       ),
                     ],

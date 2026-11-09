@@ -139,6 +139,8 @@ class ContinentChecklist extends StatelessWidget {
               ),
               title: Text(
                 tr(continent),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 16,

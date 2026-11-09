@@ -73,12 +73,12 @@ class _AirportStatsScreenState extends State<AirportStatsScreen> {
                   segments:  [
                     ButtonSegment<int>(
                       value: 0,
-                      label: Text(tr('Airport')),
+                      label: Text(tr('Airport'), maxLines: 1, overflow: TextOverflow.ellipsis),
                       icon: Icon(Icons.flight),
                     ),
                     ButtonSegment<int>(
                       value: 1,
-                      label: Text(tr('Lounge')),
+                      label: Text(tr('Lounge'), maxLines: 1, overflow: TextOverflow.ellipsis),
                       icon: Icon(Icons.wine_bar),
                     ),
                   ],
@@ -281,12 +281,14 @@ class _AirportRankingCardViewState extends State<_AirportRankingCardView> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
-                  children: [
-                    Icon(Icons.emoji_events, color: widget.themeColor[800]),
-                    const SizedBox(width: 8),
-                    Text(tr('Top 100 Airports'), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
-                  ],
+                Flexible(
+                  child: Row(
+                    children: [
+                      Icon(Icons.emoji_events, color: widget.themeColor[800]),
+                      const SizedBox(width: 8),
+                      Flexible(child: Text(tr('Top 100 Airports'), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                    ],
+                  ),
                 ),
                 SizedBox(
                   height: 40,
@@ -307,8 +309,8 @@ class _AirportRankingCardViewState extends State<_AirportRankingCardView> {
                       textStyle: MaterialStateProperty.all(const TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                     ),
                     segments:  [
-                      ButtonSegment<int>(value: 0, label: Center(child: Text(tr('All')))),
-                      ButtonSegment<int>(value: 1, label: Center(child: Text(tr('Flown')))),
+                      ButtonSegment<int>(value: 0, label: Center(child: Text(tr('All'), maxLines: 1, overflow: TextOverflow.ellipsis))),
+                      ButtonSegment<int>(value: 1, label: Center(child: Text(tr('Flown'), maxLines: 1, overflow: TextOverflow.ellipsis))),
                     ],
                     selected: {_displaySegment},
                     onSelectionChanged: (Set<int> newSelection) {
@@ -561,7 +563,7 @@ class _AirportRankingByFlightsCardState extends State<_AirportRankingByFlightsCa
               children: [
                 Icon(Icons.flight, color: widget.themeColor[800]),
                 const SizedBox(width: 8),
-                Text(tr('Most Visited Airports'), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                Flexible(child: Text(tr('Most Visited Airports'), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
               ],
             ),
           ),
@@ -609,8 +611,8 @@ class _AirportRankingByFlightsCardState extends State<_AirportRankingByFlightsCa
                       child: SegmentedButton<int>(
                         showSelectedIcon: false,
                         segments:  [
-                          ButtonSegment<int>(value: 0, label: Text(tr('High'))),
-                          ButtonSegment<int>(value: 1, label: Text(tr('Low'))),
+                          ButtonSegment<int>(value: 0, label: Text(tr('High'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                          ButtonSegment<int>(value: 1, label: Text(tr('Low'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                         ],
                         selected: {_sortOrderSegment},
                         onSelectionChanged: (Set<int> newSelection) => setState(() {
@@ -918,11 +920,15 @@ class _AirportYearlyTrendCardState extends State<_AirportYearlyTrendCard> {
                   child: Icon(Icons.trending_up, color: widget.primaryColor, size: 24),
                 ),
                 const SizedBox(width: 12),
-                Text(
-                  tr("Yearly Trend (10 Years)"),
-                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
+                Flexible(
+                  child: Text(
+                    tr("Yearly Trend (10 Years)"),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
                   ),
                 ),
               ],

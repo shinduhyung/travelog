@@ -24,7 +24,7 @@ class ItemListScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(tr(title)),
+        title: Text(tr(title), maxLines: 1, overflow: TextOverflow.ellipsis),
       ),
       body: ListView.builder(
         itemCount: sortedCountries.length,

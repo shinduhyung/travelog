@@ -30,7 +30,7 @@ class _HistoricalEmpireScreenState extends State<HistoricalEmpireScreen> {
     final countryProvider = Provider.of<CountryProvider>(context);
     if (countryProvider.isLoading) {
       return Scaffold(
-          appBar: AppBar(title: Text(widget.empire.name)),
+          appBar: AppBar(title: Text(tr(widget.empire.name), maxLines: 1, overflow: TextOverflow.ellipsis)),
           body: const Center(child: CircularProgressIndicator()));
     }
 
@@ -41,12 +41,12 @@ class _HistoricalEmpireScreenState extends State<HistoricalEmpireScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.empire.name),
+        title: Text(tr(widget.empire.name), maxLines: 1, overflow: TextOverflow.ellipsis),
         // 3. AppBar에 스위치 추가
         actions: [
           Row(
             children: [
-               Text(tr('Show Territory'), style: TextStyle(fontSize: 12)),
+               Text(tr('Show Territory'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12)),
               Switch(
                 value: _showTerritory,
                 onChanged: (value) {
@@ -146,6 +146,8 @@ class _HistoricalEmpireScreenState extends State<HistoricalEmpireScreen> {
           padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
           child: Text(
             tr('Countries in this Territory (${countriesInEmpire.length})'),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
             style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
           ),
         ),
@@ -158,7 +160,7 @@ class _HistoricalEmpireScreenState extends State<HistoricalEmpireScreen> {
               final isVisited = visitedCountries.contains(country.name);
 
               return CheckboxListTile(
-                title: Text(tr(country.name)),
+                title: Text(tr(country.name), maxLines: 1, overflow: TextOverflow.ellipsis),
                 value: isVisited,
                 onChanged: (bool? value) {
                   if (value == true) {

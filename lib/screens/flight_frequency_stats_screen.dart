@@ -343,6 +343,7 @@ class _FlightFrequencyStatsScreenState
         ],
       ),
       child: DropdownButtonFormField<FrequencyChartType>(
+        isExpanded: true,
         value: _selectedChartType,
         decoration: InputDecoration(
           labelText: tr('Analysis Type'),
@@ -356,7 +357,7 @@ class _FlightFrequencyStatsScreenState
         items: availableTypes.map((type) {
           return DropdownMenuItem(
             value: type,
-            child: Text(tr(type.title), style: const TextStyle(fontWeight: FontWeight.w500)),
+            child: Text(tr(type.title), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.w500)),
           );
         }).toList(),
         onChanged: (FrequencyChartType? newValue) {
@@ -426,7 +427,8 @@ class _FlightFrequencyStatsScreenState
                   children: [
                     Icon(Icons.military_tech, color: _getThemeColor(), size: 24),
                     const SizedBox(width: 12),
-                    RichText(
+                    Flexible(
+                      child: RichText(
                       textAlign: TextAlign.center,
                       text: TextSpan(
                         style: Theme.of(context).textTheme.titleMedium,
@@ -440,7 +442,7 @@ class _FlightFrequencyStatsScreenState
                             ),
                           ),
                           TextSpan(
-                            text: tr('($_count $unit)'),
+                            text: '(${tr('$_count $unit')})',
                             style: TextStyle(
                               color: Colors.grey.shade600,
                               fontSize: 16,
@@ -449,6 +451,7 @@ class _FlightFrequencyStatsScreenState
                           ),
                         ],
                       ),
+                    ),
                     ),
                   ],
                 ),
@@ -653,7 +656,7 @@ class _FlightFrequencyStatsScreenState
 
                           if (foundPoint != null) {
                             return ScatterTooltipItem(
-                              '${foundPoint.flight.airlineName ?? 'Unknown'} ${foundPoint.flight.flightNumber}\n${(foundPoint.durationMinutes / 60).toStringAsFixed(1)}h / ${foundPoint.distanceKm.toStringAsFixed(0)}km',
+                              '${foundPoint.flight.airlineName ?? tr('Unknown')} ${foundPoint.flight.flightNumber}\n${(foundPoint.durationMinutes / 60).toStringAsFixed(1)}h / ${foundPoint.distanceKm.toStringAsFixed(0)}km',
                               textStyle: const TextStyle(color: Colors.white, fontSize: 12),
                             );
                           }
@@ -790,7 +793,7 @@ class _FlightFrequencyStatsScreenState
                 key = '${hour.toString().padLeft(2, '0')}:00~${nextHour.toString().padLeft(2, '0')}:00';
               }
               return BarTooltipItem(
-                '$key\n',
+                '${tr(key)}\n',
                 const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),
                 children: <TextSpan>[ TextSpan(text: tr(displayValue), style: const TextStyle(color: Colors.white70, fontSize: 14, fontWeight: FontWeight.w500))],
               );
@@ -1007,11 +1010,15 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 // 🚨 [수정] 제목을 Frequent Routes로 변경 (유지)
-                Text(
-                  tr('Frequent Routes'),
-                  style: textTheme.titleLarge?.copyWith(
-                    fontWeight: FontWeight.bold,
-                    color: widget.themeColor.darken(0.1),
+                Flexible(
+                  child: Text(
+                    tr('Frequent Routes'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: textTheme.titleLarge?.copyWith(
+                      fontWeight: FontWeight.bold,
+                      color: widget.themeColor.darken(0.1),
+                    ),
                   ),
                 ),
                 // 🚀 [수정] 스위치 디자인 개선
@@ -1230,6 +1237,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
       child: Center(
         child: Text(
           tr(text),
+          maxLines: 1,
           style: TextStyle(
             color: isSelected ? Colors.white : widget.themeColor.darken(0.2),
             fontWeight: FontWeight.bold,
@@ -1340,7 +1348,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                 children: [
                   Icon(Icons.wine_bar, color: _wineColor),
                   const SizedBox(width: 8),
-                  Text(tr('Business Lounge: $loungeVisitCount Visits')),
+                  Flexible(child: Text(tr('Business Lounge: $loungeVisitCount Visits'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                 ],
               ),
               if (loungeVisitCount > 0)
@@ -1348,7 +1356,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                   padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 4.0, bottom: 8.0),
                   child: Row(
                     children: [
-                      Text(tr('Average Rating: '), style: Theme.of(context).textTheme.bodySmall),
+                      Flexible(child: Text(tr('Average Rating: '), maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(context).textTheme.bodySmall)),
                       Icon(Icons.wine_bar, color: _wineColor, size: 20),
                       Text(
                         tr(' (${averageLoungeRating.toStringAsFixed(1)})'),
@@ -1392,9 +1400,13 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                tr('History (${uses.length} uses)'),
-                style: Theme.of(context).textTheme.titleSmall,
+              Flexible(
+                child: Text(
+                  tr('History (${uses.length} uses)'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: Theme.of(context).textTheme.titleSmall,
+                ),
               ),
               OutlinedButton.icon(
                 icon: const Icon(Icons.add),
@@ -1478,7 +1490,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                                     scale: 0.8,
                                     alignment: Alignment.centerLeft,
                                     child: CheckboxListTile(
-                                      title:  Text(tr('Transfer'), style: TextStyle(fontSize: 11)),
+                                      title:  Text(tr('Transfer'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 11)),
                                       controlAffinity: ListTileControlAffinity.leading,
                                       contentPadding: EdgeInsets.zero,
                                       dense: true,
@@ -1495,7 +1507,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                                     scale: 0.8,
                                     alignment: Alignment.centerLeft,
                                     child: CheckboxListTile(
-                                      title:  Text(tr('Layover'), style: TextStyle(fontSize: 11)),
+                                      title:  Text(tr('Layover'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 11)),
                                       controlAffinity: ListTileControlAffinity.leading,
                                       contentPadding: EdgeInsets.zero,
                                       dense: true,
@@ -1512,7 +1524,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                                     scale: 0.8,
                                     alignment: Alignment.centerLeft,
                                     child: CheckboxListTile(
-                                      title:  Text(tr('Stopover'), style: TextStyle(fontSize: 11)),
+                                      title:  Text(tr('Stopover'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 11)),
                                       controlAffinity: ListTileControlAffinity.leading,
                                       contentPadding: EdgeInsets.zero,
                                       dense: true,
@@ -1536,7 +1548,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                                     scale: 0.9,
                                     alignment: Alignment.centerLeft,
                                     child: CheckboxListTile(
-                                      title:  Text(tr('Lounge Use'), style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
+                                      title:  Text(tr('Lounge Use'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
                                       secondary: Icon(Icons.wine_bar, color: _wineColor, size: 16),
                                       controlAffinity: ListTileControlAffinity.leading,
                                       contentPadding: EdgeInsets.zero,
@@ -1701,7 +1713,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
               }
             }
             return AlertDialog(
-              title: Text(isForLounge && isPerUseMemo ? 'Lounge Memo & Photos for Visit #${useIndex}' : (isPerUseMemo ? 'Memo & Photos for Use #$useIndex' : 'Memo & Photos for $iataCode')),
+              title: Text(tr(isForLounge && isPerUseMemo ? 'Lounge Memo & Photos for Visit #${useIndex}' : (isPerUseMemo ? 'Memo & Photos for Use #$useIndex' : 'Memo & Photos for $iataCode'))),
               content: SingleChildScrollView(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -1930,6 +1942,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
 
   Widget _buildDropdown<T>(String hint, T? value, List<T?> items, ValueChanged<T?> onChanged) {
     return DropdownButtonFormField<T>(
+      isExpanded: true,
       value: value,
       isDense: true,
       decoration: InputDecoration(
@@ -1946,6 +1959,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
             fontSize: (item == null) ? 11.0 : 15.0,
             color: (item == null) ? Colors.grey.shade600 : null,
           ),
+          maxLines: 1,
           overflow: TextOverflow.ellipsis,
         ),
       ))

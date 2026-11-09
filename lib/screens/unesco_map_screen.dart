@@ -664,8 +664,12 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
                     ),
                   Row(
                     children: [
-                      Text(tr(statusText),
-                          style: TextStyle(fontSize: 10, color: Colors.grey[700])),
+                      Flexible(
+                        child: Text(tr(statusText),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(fontSize: 10, color: Colors.grey[700])),
+                      ),
                       const SizedBox(width: 6),
                       GestureDetector(
                         onTap: () {
@@ -788,7 +792,7 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(tr('Show Unvisited'), style: GoogleFonts.poppins()),
+                          Flexible(child: Text(tr('Show Unvisited'), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins())),
                           Switch(
                               value: tempShowUnvisited,
                               onChanged: (v) => setStateDialog(() => tempShowUnvisited = v),
@@ -800,7 +804,7 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(tr('Show Wishlist'), style: GoogleFonts.poppins()),
+                          Flexible(child: Text(tr('Show Wishlist'), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins())),
                           Switch(
                               value: tempShowWishlist,
                               onChanged: (v) => setStateDialog(() => tempShowWishlist = v),
@@ -814,7 +818,7 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(tr('Wishlist Color'), style: GoogleFonts.poppins(fontSize: 13)),
+                              Flexible(child: Text(tr('Wishlist Color'), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins(fontSize: 13))),
                               buildColorPicker(tempWishlistColor, (c) => setStateDialog(() => tempWishlistColor = c))
                             ],
                           ),
@@ -851,7 +855,7 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(tr('Visited Color'), style: GoogleFonts.poppins()),
+                            Flexible(child: Text(tr('Visited Color'), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins())),
                             buildColorPicker(tempSameColor, (c) => setStateDialog(() => tempSameColor = c))
                           ],
                         ),
@@ -881,9 +885,13 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
                                   ),
                                 ),
                                 const SizedBox(width: 8),
-                                Text(
-                                    tr(index == tempByVisitRanges.length - 1 ? 'Visits +' : 'Visits'),
-                                    style: GoogleFonts.poppins(fontSize: 13)
+                                Flexible(
+                                  child: Text(
+                                      tr(index == tempByVisitRanges.length - 1 ? 'Visits +' : 'Visits'),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: GoogleFonts.poppins(fontSize: 13)
+                                  ),
                                 ),
                                 const Spacer(),
                                 buildColorPicker(range.color, (newColor) {
@@ -907,7 +915,7 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(tr(entry.key), style: GoogleFonts.poppins(fontSize: 13)),
+                                Flexible(child: Text(tr(entry.key), maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.poppins(fontSize: 13))),
                                 buildColorPicker(entry.value, (newColor) {
                                   setStateDialog(() {
                                     tempTypeColors[entry.key] = newColor;
@@ -1152,10 +1160,11 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
                                   ),
                                 ],
                               ),
-                              Row(
+                              Flexible(
+                                child: Row(
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
-                                   Text(tr('My Rating:')),
+                                   Flexible(child: Text(tr('My Rating:'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                                   const SizedBox(width: 8),
                                   RatingBar.builder(
                                     initialRating: freshSite.rating ?? 0.0,
@@ -1168,6 +1177,7 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
                                     onRatingUpdate: (rating) => provider.updateLandmarkRating(freshSite.name, rating),
                                   ),
                                 ],
+                              ),
                               ),
                             ],
                           ),
@@ -1198,7 +1208,7 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(tr('History (${freshSite.visitDates.length} entries)'), style: Theme.of(sheetContext).textTheme.titleSmall),
+                              Flexible(child: Text(tr('History (${freshSite.visitDates.length} entries)'), maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(sheetContext).textTheme.titleSmall)),
                               OutlinedButton.icon(
                                 icon: const Icon(Icons.add),
                                 label:  Text(tr('Add Visit')),
@@ -1519,8 +1529,9 @@ class _UnescoVisitEditorCardState extends State<_UnescoVisitEditorCard> {
         controller: _expansionTileController,
         initiallyExpanded: _isEditing,
         title: Text(tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
+            maxLines: 1, overflow: TextOverflow.ellipsis,
             style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
-        subtitle: Text(tr('Date: $_year-$_month-$_day'), style: TextStyle(color: Colors.grey[600], fontSize: 13)),
+        subtitle: Text(tr('Date: $_year-$_month-$_day'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(
           icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
           onPressed: () => showDialog(context: context, builder: (ctx) => AlertDialog(
@@ -1539,7 +1550,7 @@ class _UnescoVisitEditorCardState extends State<_UnescoVisitEditorCard> {
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             if (_isEditing) ...[
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                Text(tr('Visit Date: $_year-$_month-$_day'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                Flexible(child: Text(tr('Visit Date: $_year-$_month-$_day'), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14))),
                 TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label:  Text(tr('Edit Date')),
                     onPressed: () => _selectDate(context),
                     style: TextButton.styleFrom(visualDensity: VisualDensity.compact)),

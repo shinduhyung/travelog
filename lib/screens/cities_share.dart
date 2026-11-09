@@ -43,7 +43,7 @@ class CitiesShare {
 
       await Share.shareXFiles(
         [XFile(statsImagePath.path)],
-        text: 'Check out my city travels! I have visited ${visitedCities.length} cities via Travelog.',
+        text: tr('Check out my city travels! I have visited ${visitedCities.length} cities via Travelog.'),
         sharePositionOrigin: sharePositionOrigin,
       );
     } catch (e) {
@@ -131,26 +131,32 @@ class CitiesShare {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Row(
-                children: [
-                  Image.asset(
-                    'assets/icons/app_logo_large.png',
-                    width: 32,
-                    height: 32,
-                    errorBuilder: (_, __, ___) => const Icon(Icons.public, size: 32),
-                  ),
-                  const SizedBox(width: 10),
-                  Text(
-                    tr('Travelog'),
-                    style: TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.w900,
-                      color: primaryColor,
-                      letterSpacing: -0.5,
-                      decoration: TextDecoration.none,
+              Flexible(
+                child: Row(
+                  children: [
+                    Image.asset(
+                      'assets/icons/app_logo_large.png',
+                      width: 32,
+                      height: 32,
+                      errorBuilder: (_, __, ___) => const Icon(Icons.public, size: 32),
                     ),
-                  ),
-                ],
+                    const SizedBox(width: 10),
+                    Flexible(
+                      child: Text(
+                        tr('Travelog'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: 28,
+                          fontWeight: FontWeight.w900,
+                          color: primaryColor,
+                          letterSpacing: -0.5,
+                          decoration: TextDecoration.none,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
@@ -186,6 +192,7 @@ class CitiesShare {
                       padding: const EdgeInsets.only(bottom: 2),
                       child: Text(
                         tr('Cities'),
+                        maxLines: 1,
                         style: TextStyle(
                           fontSize: 11,
                           fontWeight: FontWeight.w600,
@@ -282,7 +289,7 @@ class CitiesShare {
 
     return Expanded(
       child: Container(
-        height: 64,
+        constraints: const BoxConstraints(minHeight: 64),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(12),

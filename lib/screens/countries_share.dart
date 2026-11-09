@@ -64,7 +64,7 @@ class CountriesShare {
 
       await Share.shareXFiles(
         filesToShare,
-        text: 'Check out my travel map! I have visited ${visitedCountries.length} countries via Travelog.',
+        text: tr('Check out my travel map! I have visited ${visitedCountries.length} countries via Travelog.'),
         sharePositionOrigin: sharePositionOrigin,
       );
     } catch (e) {
@@ -310,7 +310,7 @@ class CountriesShare {
 
     return Expanded(
       child: Container(
-        height: 64,
+        constraints: const BoxConstraints(minHeight: 64),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(12),
@@ -361,6 +361,7 @@ class CountriesShare {
                       decoration: TextDecoration.none,
                       color: Colors.black87,
                     ),
+                    maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
                 ),

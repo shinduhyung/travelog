@@ -133,13 +133,19 @@ class FavoritesScreen extends StatelessWidget {
         children: [
           Row(
             children: [
-               Text(
-                tr('My Favorites'),
-                style: TextStyle(
-                  fontSize: 32,
-                  fontWeight: FontWeight.w900,
-                  color: Colors.black,
-                  letterSpacing: -1.0,
+               Flexible(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    tr('My Favorites'),
+                    maxLines: 1,
+                    style: TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.w900,
+                      color: Colors.black,
+                      letterSpacing: -1.0,
+                    ),
+                  ),
                 ),
               ),
             ],
@@ -187,13 +193,17 @@ class FavoritesScreen extends StatelessWidget {
             children: [
               Icon(icon, size: 18, color: Colors.grey.shade400),
               const SizedBox(width: 8),
-              Text(
-                tr(title.toUpperCase()),
-                style: TextStyle(
-                  fontSize: 13,
-                  fontWeight: FontWeight.w700,
-                  color: Colors.grey.shade500,
-                  letterSpacing: 1.5,
+              Flexible(
+                child: Text(
+                  tr(title.toUpperCase()),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.grey.shade500,
+                    letterSpacing: 1.5,
+                  ),
                 ),
               ),
             ],
@@ -441,6 +451,8 @@ class FavoritesScreen extends StatelessWidget {
                               ),
                               Text(
                                   tr(countryModel?.name ?? countryCode),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
                                   style: TextStyle(fontSize: 16, color: headerTextColor.withOpacity(0.8), fontWeight: FontWeight.w500)
                               ),
                             ],
@@ -457,7 +469,7 @@ class FavoritesScreen extends StatelessWidget {
                         children: [
                           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                             Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                               Text(tr('My Rating'), style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.grey)),
+                               Text(tr('My Rating'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.grey)),
                               const SizedBox(height: 4),
                               RatingBar.builder(initialRating: cityVisitDetail.rating, allowHalfRating: true, itemCount: 5, itemSize: 24, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateCityVisitDetail(cityName, cityVisitDetail.copyWith(rating: rating))),
                             ]),
@@ -469,7 +481,7 @@ class FavoritesScreen extends StatelessWidget {
                             const Divider(height: 40),
                           ],
                           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                             Text(tr('Visits'), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                             Flexible(child: Text(tr('Visits'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold))),
                             TextButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add')), onPressed: () {
                               final updated = cityVisitDetail.copyWith(visitDateRanges: [...cityVisitDetail.visitDateRanges, DateRange()]);
                               provider.updateCityVisitDetail(cityName, updated);
@@ -504,8 +516,7 @@ class FavoritesScreen extends StatelessWidget {
       child: Row(children: [
         Icon(icon, size: 20, color: themeColor),
         const SizedBox(width: 12),
-        Text(tr(label), style: const TextStyle(fontSize: 15, color: Colors.black87)),
-        const Spacer(),
+        Expanded(child: Text(tr(label), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 15, color: Colors.black87))),
         Text(tr(value), style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
       ]),
     );
@@ -635,14 +646,16 @@ class FavoritesScreen extends StatelessWidget {
                                   Row(
                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
-                                        Row(
-                                            children: [
-                                               Text(tr('Wishlist:')),
-                                              IconButton(
-                                                  icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey),
-                                                  onPressed: () => provider.toggleWishlistStatus(freshLandmark.name)
-                                              )
-                                            ]
+                                        Flexible(
+                                          child: Row(
+                                              children: [
+                                                 Flexible(child: Text(tr('Wishlist:'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                                                IconButton(
+                                                    icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey),
+                                                    onPressed: () => provider.toggleWishlistStatus(freshLandmark.name)
+                                                )
+                                              ]
+                                          ),
                                         ),
                                         RatingBar.builder(
                                             initialRating: freshLandmark.rating ?? 0.0,
@@ -791,8 +804,9 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
       child: ExpansionTile(
         controller: _expansionTileController, initiallyExpanded: _isEditing,
         title: Text(tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
+            maxLines: 1, overflow: TextOverflow.ellipsis,
             style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
-        subtitle: Text(tr('Date: $_year-$_month-$_day'), style: TextStyle(color: Colors.grey[600], fontSize: 13)),
+        subtitle: Text(tr('Date: $_year-$_month-$_day'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
             onPressed: () => showDialog(context: context, builder: (ctx) => AlertDialog(
                 title:  Text(tr('Delete Visit Record')),
@@ -809,7 +823,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             if (_isEditing) ...[
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                Text(tr('Visit Date: $_year-$_month-$_day'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                Flexible(child: Text(tr('Visit Date: $_year-$_month-$_day'), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14))),
                 TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label:  Text(tr('Edit Date')),
                     onPressed: () => _selectDate(context), style: TextButton.styleFrom(visualDensity: VisualDensity.compact)),
               ]),

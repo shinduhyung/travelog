@@ -107,7 +107,7 @@ class _AggregateMapScreenState extends State<AggregateMapScreen> {
   Widget build(BuildContext context) {
     Localizations.maybeLocaleOf(context);
     return Scaffold(
-      appBar: AppBar(title: Text(tr(widget.title))),
+      appBar: AppBar(title: Text(tr(widget.title), maxLines: 1, overflow: TextOverflow.ellipsis)),
       body: Column(
         children: [
           Expanded(flex: 3, child: _buildMap(widget.visitedItems)),
@@ -297,8 +297,8 @@ class _AggregateMapScreenState extends State<AggregateMapScreen> {
               }
 
               return ListTile(
-                title: Text(item.name),
-                subtitle: Text(tr(item.countriesIsoA3.join(', '))),
+                title: Text(item.name, maxLines: 1, overflow: TextOverflow.ellipsis),
+                subtitle: Text(tr(item.countriesIsoA3.join(', ')), maxLines: 1, overflow: TextOverflow.ellipsis),
                 onTap: () {
                   widget.onToggleVisited(item.name);
                 },

@@ -296,6 +296,8 @@ class MatchExplanationSheet extends StatelessWidget {
                     Expanded(
                       child: Text(
                         ko ? '여행 궁합' : tr('TRAVEL MATCH'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
                           fontSize: 11,
                           letterSpacing: 1.3,
@@ -422,11 +424,15 @@ class MatchExplanationSheet extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        ko ? '계속 둘러보기' : tr('Keep exploring'),
-                        style: const TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w700,
+                      Flexible(
+                        child: Text(
+                          ko ? '계속 둘러보기' : tr('Keep exploring'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w700,
+                          ),
                         ),
                       ),
                       const SizedBox(width: 10),

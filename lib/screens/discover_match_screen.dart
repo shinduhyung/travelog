@@ -60,7 +60,7 @@ class _DiscoverMatchScreenState extends State<DiscoverMatchScreen> {
         ? 'Your Country Twin'
         : 'Your Soul City';
     return DiscoverScaffold(
-      appBar: AppBar(title: Text(tr(title))),
+      appBar: AppBar(title: Text(tr(title), maxLines: 1, overflow: TextOverflow.ellipsis)),
       body: FutureBuilder<DiscoverResult>(
         future: _future,
         builder: (context, snapshot) {
@@ -160,6 +160,8 @@ class _DiscoverMatchScreenState extends State<DiscoverMatchScreen> {
                   Expanded(
                     child: Text(
                       tr('YOUR SOUL CITY'),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
                         color: Color(0xFFDDD6FE),
                         fontSize: 11,

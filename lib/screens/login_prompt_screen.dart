@@ -82,6 +82,7 @@ class _LoginPromptScreenState extends State<LoginPromptScreen> {
                   // 헤더 텍스트
                    Text(
                     tr("Sign in to continue"),
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.w500,
@@ -118,7 +119,7 @@ class _LoginPromptScreenState extends State<LoginPromptScreen> {
                             fontSize: 16,
                           ),
                         ),
-                        TextSpan(text: tr(".\nNo payment needed to get started.")),
+                        TextSpan(text: ".\n${tr('No payment needed to get started.')}"),
                       ],
                     ),
                   ),
@@ -240,6 +241,8 @@ class _BenefitRow extends StatelessWidget {
             children: [
               Text(
                 tr(title),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w500,
@@ -249,6 +252,8 @@ class _BenefitRow extends StatelessWidget {
               const SizedBox(height: 2),
               Text(
                 tr(subtitle),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
                   fontSize: 12,
                   color: Colors.grey,
@@ -341,12 +346,18 @@ class _GoogleSignInButton extends StatelessWidget {
               ),
             ),
             SizedBox(width: 12),
-            Text(
-              tr("Sign in with Google"),
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w500,
-                color: Color(0xFF4A4A4A),
+            Flexible(
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  tr("Sign in with Google"),
+                  maxLines: 1,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Color(0xFF4A4A4A),
+                  ),
+                ),
               ),
             ),
           ],
@@ -429,12 +440,18 @@ class _AppleSignInButton extends StatelessWidget {
               size: 22,
             ),
             SizedBox(width: 10),
-            Text(
-              tr("Sign in with Apple"),
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w500,
-                color: Colors.white,
+            Flexible(
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  tr("Sign in with Apple"),
+                  maxLines: 1,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.white,
+                  ),
+                ),
               ),
             ),
           ],

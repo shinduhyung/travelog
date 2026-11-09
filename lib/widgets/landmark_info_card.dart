@@ -80,12 +80,16 @@ class LandmarkInfoCard extends StatelessWidget {
           children: [
             Icon(icon, size: 20, color: themeColor),
             const SizedBox(width: 8),
-            Text(
-              tr(title),
-              style: const TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 0.5,
+            Flexible(
+              child: Text(
+                tr(title),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 0.5,
+                ),
               ),
             ),
           ],

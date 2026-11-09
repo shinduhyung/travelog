@@ -10,7 +10,7 @@ class FlightRecordsStatsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Localizations.maybeLocaleOf(context);
     return Scaffold(
-      appBar: AppBar(title:  Text(tr('Flight Records'))),
+      appBar: AppBar(title:  Text(tr('Flight Records'), maxLines: 1, overflow: TextOverflow.ellipsis)),
       body:  Center(
         child: Text(tr('Flight Records Screen')),
       ),

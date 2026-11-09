@@ -94,7 +94,7 @@ class _BadgesScreenState extends State<BadgesScreen> {
 
     if (p == null) {
       return Scaffold(
-        appBar: AppBar(title: Text(tr('Badges'))),
+        appBar: AppBar(title: Text(tr('Badges'), maxLines: 1, overflow: TextOverflow.ellipsis)),
         body: Center(child: EmptyHint(tr('This profile is not available yet.'))),
       );
     }
@@ -275,7 +275,7 @@ class _BadgeCell extends StatelessWidget {
             const SizedBox(height: 6),
             Expanded(
               child: Text(
-                meta.name,
+                tr(meta.name),
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.center,
@@ -310,20 +310,20 @@ Future<void> showBadgeSheet(BuildContext context, BadgeMeta b, {required bool un
             children: [
               BadgeIcon(meta: b, size: 120, locked: !unlocked),
               const SizedBox(height: 14),
-              Text(b.name,
+              Text(tr(b.name),
                   textAlign: TextAlign.center,
                   maxLines: 3,
                   overflow: TextOverflow.ellipsis,
                   style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w900)),
               const SizedBox(height: 10),
               Wrap(alignment: WrapAlignment.center, spacing: 8, runSpacing: 8, children: [
-                if (b.level != null) Chip(avatar: const Text('🏅'), label: Text(b.level!)),
+                if (b.level != null) Chip(avatar: const Text('🏅'), label: Text(tr(b.level!))),
                 if (b.category != null) Chip(avatar: Text(_categoryEmoji[b.category] ?? '🎖️'), label: Text(tr(b.category!))),
                 Chip(avatar: const Text('⭐'), label: Text(tr('${b.points} pts'))),
               ]),
               const SizedBox(height: 12),
               if (b.description.isNotEmpty)
-                Text(b.description, textAlign: TextAlign.center, style: theme.textTheme.bodyMedium),
+                Text(tr(b.description), textAlign: TextAlign.center, style: theme.textTheme.bodyMedium),
               const SizedBox(height: 12),
               Text(status,
                   textAlign: TextAlign.center,
@@ -396,7 +396,7 @@ class BadgesSection extends StatelessWidget {
                     padding: EdgeInsets.only(left: i == 0 ? 0 : gap),
                     child: GestureDetector(
                       onTap: () => showBadgeSheet(context, shown[i], unlocked: true),
-                      child: Tooltip(message: shown[i].name, child: BadgeIcon(meta: shown[i], size: size)),
+                      child: Tooltip(message: tr(shown[i].name), child: BadgeIcon(meta: shown[i], size: size)),
                     ),
                   ),
               ]);

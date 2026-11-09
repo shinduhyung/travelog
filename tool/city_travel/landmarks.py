@@ -46,6 +46,10 @@ def collect(city, center, all_landmarks, app_cities):
     for lm in all_landmarks:
         if lm['name'] in scope.get('exclude', {}).get(city, []) or "(defunct)" in lm["name"].lower():
             continue
+        if "Restaurant" in (lm.get("attributes") or []):  # restaurants are not trip-page landmarks (user, 2026-10-30)
+            continue
+        if set(lm.get("attributes") or []) == {"Fast Food"}:  # chain/fast-food-only entries are not trip landmarks (user, 2026-11-01)
+            continue
         lc = lm.get("city")
         keep = lc == city or lc in attach
         if not keep and center and lm.get("latitude") is not None and lc not in app_cities:

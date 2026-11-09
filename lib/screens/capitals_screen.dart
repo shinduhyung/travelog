@@ -388,8 +388,8 @@ class _CapitalsScreenState extends State<CapitalsScreen> {
                     child: CountryFlag.fromCountryCode(city.countryIsoA2),
                   ),
                 ),
-                title: Text(city.name, style: const TextStyle(fontWeight: FontWeight.w600)),
-                subtitle: Text(tr(city.country), style: TextStyle(color: Colors.grey.shade600, fontSize: 12)),
+                title: Text(city.name, style: const TextStyle(fontWeight: FontWeight.w600), maxLines: 1, overflow: TextOverflow.ellipsis),
+                subtitle: Text(tr(city.country), style: TextStyle(color: Colors.grey.shade600, fontSize: 12), maxLines: 1, overflow: TextOverflow.ellipsis),
                 onTap: () {
                   setState(() {
                     _highlightedCityName = city.name;

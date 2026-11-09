@@ -183,7 +183,7 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
     decoration: BoxDecoration(color: themeColor.withOpacity(0.06), borderRadius: BorderRadius.circular(12)),
     child: Row(children: [
       Icon(icon, size: 18, color: themeColor), const SizedBox(width: 8),
-      Text(tr(title), style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: themeColor)),
+      Flexible(child: Text(tr(title), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: themeColor))),
     ]),
   );
 
@@ -222,7 +222,7 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
             Icon(isActive ? iconActive : icon, size: 24,
                 color: isActive ? activeColor : Colors.grey.shade400),
             const SizedBox(height: 3),
-            Text(tr(label), style: TextStyle(fontSize: 10,
+            Text(tr(label), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 10,
                 color: isActive ? activeColor : Colors.grey.shade600,
                 fontWeight: isActive ? FontWeight.bold : FontWeight.normal)),
           ]),
@@ -342,6 +342,7 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
                   if (freshL.attributes.isNotEmpty) ...[
                     const SizedBox(height: 4),
                     Text(tr(freshL.attributes.take(2).join(' · ')),
+                        maxLines: 1, overflow: TextOverflow.ellipsis,
                         style: TextStyle(fontSize: 12, color: Colors.grey.shade500)),
                   ],
                   if (freshL.overview != null && freshL.overview!.isNotEmpty) ...[
@@ -360,18 +361,18 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
                   // visit history — add/delete here only
                   const SizedBox(height: 20),
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                    Row(children: [
+                    Flexible(child: Row(children: [
                       Icon(Icons.history, size: 18, color: themeColor),
                       const SizedBox(width: 8),
-                      Text(tr('Visit history'), style: TextStyle(fontSize: 15,
-                          fontWeight: FontWeight.w700, color: Colors.grey.shade800)),
+                      Flexible(child: Text(tr('Visit history'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 15,
+                          fontWeight: FontWeight.w700, color: Colors.grey.shade800))),
                       const SizedBox(width: 6),
                       Container(
                           padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
                           decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(10)),
                           child: Text(tr('${freshL.visitDates.length}'),
                               style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: Colors.grey.shade700))),
-                    ]),
+                    ])),
                     OutlinedButton.icon(
                       icon: const Icon(Icons.add, size: 16),
                       label:  Text(tr('Add')),
@@ -409,7 +410,7 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
   Widget _lmSec(String title, IconData icon, String body) => Column(
       crossAxisAlignment: CrossAxisAlignment.start, children: [
     Row(children: [Icon(icon, size: 16, color: themeColor), const SizedBox(width: 6),
-      Text(tr(title), style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: themeColor))]),
+      Flexible(child: Text(tr(title), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: themeColor)))]),
     const SizedBox(height: 6),
     Text(tr(body), style: const TextStyle(fontSize: 13, color: Colors.black54, height: 1.6)),
   ]);
@@ -418,7 +419,7 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
     final lines = raw.split('\n').map((l) => l.trim()).where((l) => l.isNotEmpty).toList();
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Row(children: [Icon(Icons.star_outline, size: 16, color: themeColor), const SizedBox(width: 6),
-        Text(tr('Highlights'), style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: themeColor))]),
+        Flexible(child: Text(tr('Highlights'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: themeColor)))]),
       const SizedBox(height: 6),
       ...lines.map((line) => Padding(padding: const EdgeInsets.only(bottom: 6),
           child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -531,6 +532,7 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
               ]),
               const SizedBox(height: 3),
               Text(tr([city.country, if (country?.continent != null) country!.continent!].join(' · ')),
+                  maxLines: 1, overflow: TextOverflow.ellipsis,
                   style: TextStyle(fontSize: 13, color: Colors.grey.shade600)),
 
               const SizedBox(height: 10),
@@ -562,6 +564,7 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
               Text(tr(visitCount > 0
                   ? '$visitCount ${visitCount == 1 ? 'visit' : 'visits'} · $totalDays ${totalDays == 1 ? 'day' : 'days'}'
                   : 'Not visited yet'),
+                  maxLines: 1, overflow: TextOverflow.ellipsis,
                   style: TextStyle(fontSize: 13, color: Colors.grey.shade600)),
               const SizedBox(height: 10),
 
@@ -597,8 +600,9 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
               // ── Add Visit → addCityDateRange (즉시 생성, unknown) ─────────
               const SizedBox(height: 14),
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                Text(tr('History ($visitCount visits, $totalDays days)'),
-                    style: Theme.of(context).textTheme.titleSmall),
+                Flexible(child: Text(tr('History ($visitCount visits, $totalDays days)'),
+                    maxLines: 1, overflow: TextOverflow.ellipsis,
+                    style: Theme.of(context).textTheme.titleSmall)),
                 OutlinedButton.icon(
                   icon: const Icon(Icons.add),
                   label:  Text(tr('Add Visit')),
@@ -905,14 +909,14 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
               const SizedBox(height: 12),
               Row(children: [
                 Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                   Text(tr('Transfer')),
+                   Flexible(child: Text(tr('Transfer'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                   Checkbox(value: _isTransfer, onChanged: (val) {
                     setState(() => _isTransfer = val ?? false);
                     widget.onSave(widget.range.copyWith(isTransfer: val ?? false));
                   }),
                 ])),
                 Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                   Text(tr('Layover')),
+                   Flexible(child: Text(tr('Layover'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                   Checkbox(value: _isLayover, onChanged: (val) {
                     setState(() => _isLayover = val ?? false);
                     widget.onSave(widget.range.copyWith(isLayover: val ?? false));
@@ -961,6 +965,7 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
 
   Widget _buildDropdown<T>(String hint, T? value, List<T> items, ValueChanged<T?> onChanged) =>
       DropdownButtonFormField<T>(
+        isExpanded: true,
         value: value, isDense: true,
         decoration: InputDecoration(labelText: tr(hint), border: const OutlineInputBorder(),
             contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12)),
@@ -968,7 +973,7 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
             child: Text(tr(item?.toString() ?? 'Unknown'),
                 style: TextStyle(fontSize: item == null ? 11.0 : 15.0,
                     color: item == null ? Colors.grey.shade600 : null),
-                overflow: TextOverflow.ellipsis))).toList(),
+                maxLines: 1, overflow: TextOverflow.ellipsis))).toList(),
         onChanged: onChanged,
       );
 }
@@ -1066,7 +1071,7 @@ class _LandmarkVisitTileState extends State<_LandmarkVisitTile> {
                       Text(tr(_dateLabel), style: TextStyle(fontSize: 13,
                           color: _year != null ? Colors.black87 : Colors.grey)),
                       const Spacer(),
-                      Text(tr('Tap to change'), style: TextStyle(fontSize: 11, color: Colors.grey.shade400)),
+                      Flexible(child: Text(tr('Tap to change'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 11, color: Colors.grey.shade400))),
                     ]))),
             const SizedBox(height: 8),
             TextField(controller: _titleCtrl,

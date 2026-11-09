@@ -26,6 +26,7 @@ import flights as flight_search  # noqa: E402
 import landmarks as landmark_section  # noqa: E402
 import esim as esim_picker  # noqa: E402
 import daytrip_section  # noqa: E402
+import souvenir_section  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 ASSETS = ROOT / "assets"
@@ -37,6 +38,25 @@ AIRALO_TRACKING = "https://airalo.pxf.io/c/7592796/1268485/15608"
 BOUNCE_REF = "TRAVELOG999083578969"
 STORAGE = "https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/"
 COST_LABELS = ["", "$ · Very cheap", "$$ · Affordable", "$$$ · Moderate", "$$$$ · Expensive", "$$$$$ · Very expensive"]
+
+
+ISO3 = {c["iso_a2"]: c["iso_a3"] for c in json.loads((ROOT / "assets" / "countries_light.json").read_text(encoding="utf-8"))}
+SAFETY = {1: "Very safe", 2: "Generally safe", 3: "Exercise caution", 4: "High risk", 5: "Do not travel"}
+SAFETY_CSS = """
+.glance dd.safety { display: flex; align-items: center; gap: 5px; min-height: 1.2em; }
+.glance dd.safety i { width: 14px; height: 14px; border-radius: 50%; background: var(--line); flex: none; }
+.glance dd.safety i.on { background: var(--sc); }
+.safety.lv1 { --sc: #2ECC71; } .safety.lv2 { --sc: #F1C40F; } .safety.lv3 { --sc: #E67E22; }
+.safety.lv4 { --sc: #E74C3C; } .safety.lv5 { --sc: #2C2C2C; }
+"""
+
+
+
+def safety_dots(level):
+    """Level 1 (safest) = 5 filled dots ... level 5 = 1; no text, the label is in the title attribute."""
+    on = 6 - level
+    return (f'<span role="img" aria-label="{SAFETY[level]}, {on} of 5" title="{SAFETY[level]}" style="display:contents">'
+            + "".join(f'<i class="on"></i>' if n < on else "<i></i>" for n in range(5)) + "</span>")
 
 
 def load(name):
@@ -105,9 +125,13 @@ def landmark_photo(lm, width):
     new_countrydex/{first ISO3}_{snake}.webp, else new_countrydex/m_{snake}.webp (multi-country)."""
     if not lm:
         return None
-    name = snake(lm["name"])
+    # accents folded first (Alcázar -> alcazar), then the old accent-dropped name, like lib/utils/storage_name.dart
+    folded = snake(unicodedata.normalize("NFKD", lm["name"]).encode("ascii", "ignore").decode())
     iso3 = (re.findall(r"[A-Z]{3}", str(lm.get("countriesIsoA3") or "")) or [""])[0].lower()
-    for file in ([f"{iso3}_{name}"] if iso3 else []) + [f"m_{name}"]:
+    files = []
+    for name in dict.fromkeys([folded, snake(lm["name"])]):
+        files += ([f"{iso3}_{name}"] if iso3 else []) + [f"m_{name}"]
+    for file in files:
         src = fetch_image(f"new_countrydex%2F{file}.webp", width)
         if src:
             return src
@@ -116,6 +140,23 @@ def landmark_photo(lm, width):
 
 def flag(iso):
     return "".join(chr(0x1F1E6 + ord(c) - 65) for c in iso.upper()) if len(iso or "") == 2 else ""
+
+
+
+def flag_img(iso):
+    """Flag as an inline image (emoji flags show as two letters on Windows). Cached in images/flags/."""
+    if len(iso or "") != 2:
+        return ""
+    f = Path(__file__).resolve().parent / "images" / "flags" / f"{iso.lower()}.png"
+    if not f.is_file():
+        try:
+            with urllib.request.urlopen(f"https://flagcdn.com/w80/{iso.lower()}.png", timeout=20) as r:
+                f.parent.mkdir(parents=True, exist_ok=True)
+                f.write_bytes(r.read())
+        except Exception:
+            return flag(iso) + " "
+    uri = "data:image/png;base64," + base64.b64encode(f.read_bytes()).decode()
+    return f'<img class="flag" src="{uri}" alt="" width="24" height="16"> '
 
 
 def a(href, inner, cls=""):
@@ -211,8 +252,8 @@ def money_section(cost_level, currency, costs=None):
     note = ""
     if costs and all(k in costs for k, _, _ in keys):
         # The overall level is derived from the three parts (stay weighs most), so they always agree.
-        cost_level = max(1, min(5, int(sum(costs[k][0] * w for k, _, w in keys) + .5)))
-        note = "Weighted from stay, food and transport"
+        cost_level = costs.get("overall") or max(1, min(5, int(sum(costs[k][0] * w for k, _, w in keys) + .5)))
+        note = "" if costs.get("overall") else "Weighted from stay, food and transport"
     if cost_level:
         parts = "".join(f'<li><span>{label}</span><b>{dollars(costs[key][0])}</b><small>{e(costs[key][1])}</small></li>'
                         for key, label, _ in keys if key in (costs or {}))
@@ -268,6 +309,10 @@ def main(city):
         glance.append(("Local time", info["timezone"], ""))
     if info.get("population"):
         glance.append(("Population", info["population"], ""))
+    # Same country safety level as the app's Country Detail badge (assets/country_safety.json)
+    safety = int((json.loads((ROOT / "assets" / "country_safety.json").read_text(encoding="utf-8")).get(ISO3.get(iso, iso)) or {}).get("level") or 0)
+    if safety in SAFETY:
+        glance.append(("Safety", safety, ""))
 
     # Flight route search. The host supplies each signed-in user's Hub.
     airport_choices = (planner._read(planner.HERE / "planner" / f"{slug(city)}.json") or {}).get("airports", [])
@@ -340,7 +385,7 @@ def main(city):
     tips_html = f'<ol class="tips">{tips}</ol>' if tips else '<p class="muted">No city tips yet.</p>'
 
     hero_style = f' style="background-image:url({hero})"' if hero else ""
-    glance_html = "".join(f'<div><dt>{e(k)}</dt><dd{" class=\"status\"" if k == "Status" else ""}>{e(v).replace(chr(10), "<br>")}</dd>{f"<small>{e(s)}</small>" if s else ""}</div>' for k, v, s in glance)
+    glance_html = "".join(f'<div><dt>{e(k)}</dt><dd{" class=\"status\"" if k == "Status" else f" class=\"safety lv{safety}\"" if k == "Safety" else ""}>{safety_dots(v) if k == "Safety" else e(v).replace(chr(10), "<br>")}</dd>{f"<small>{e(s)}</small>" if s else ""}</div>' for k, v, s in glance)
     # Live local time + difference from the viewer's own device clock (no GPS, no question asked).
     # The city's IANA zone comes from its hub airport, so daylight saving is handled.
     clock_js = ""
@@ -370,8 +415,9 @@ def main(city):
         extra=[lm_by_name_all[n] for n in dt_lms if n not in own])
     if no_photo:
         print(f"landmarks without a photo ({len(no_photo)}): " + ", ".join(no_photo))
+    souvenirs_html = souvenir_section.render(slug(city), fetch_image)
     toc_items = [("h-arrive", "Getting in", arrive_html), ("h-landmarks", "Landmarks", landmarks_html), ("h-daytrips", "Day trips", daytrips_html),
-                 ("h-plans", "Plans", plans_html), ("h-tours", "Tours", True), ("h-flights", "Flights", True), ("h-stays", "Hotels", True),
+                 ("h-plans", "Plans", plans_html), ("h-tours", "Tours", True), ("h-souvenirs", "Souvenirs", souvenirs_html), ("h-flights", "Flights", True), ("h-stays", "Hotels", True),
                  ("h-esim", "eSIM", True), ("h-tips", "Tips", True)]
     toc = "".join(f'<a href="#{i}"{" class=\"hl\"" if i == "h-plans" else ""}>{label}</a>' for i, label, on in toc_items if on)
     toc += a(bounce_url, 'Luggage')
@@ -382,10 +428,10 @@ def main(city):
         money=money_html,
         city_intro=e((planner._read(planner.HERE / "planner" / f"{slug(city)}.json") or {}).get("intro_line")
                      or f"Discover the places, flavours and journeys that define {city}."),
-        clock_js=clock_js, plans=plans_html, plans_css=plans_css + planner_css + landmark_section.CSS + daytrip_section.CSS, daytrips=daytrips_html, landmarks=landmarks_html, plans_js=plans_js + planner_js, toc=toc, arrive=arrive_html,
-        city=e(city), country=e(country), flag=flag(iso), hero_style=hero_style,
+        clock_js=clock_js, plans=plans_html, plans_css=plans_css + planner_css + landmark_section.CSS + daytrip_section.CSS + souvenir_section.CSS + SAFETY_CSS, daytrips=daytrips_html, landmarks=landmarks_html, plans_js=plans_js + planner_js, toc=toc, arrive=arrive_html,
+        city=e(city), country=e(country), flag=flag(iso), flag_img=flag_img(iso), hero_style=hero_style,
         glance=glance_html, flights=flights, stays=stays_block, tours="".join(tour_cards),
-        esim=esim, luggage=luggage,
+        esim=esim, luggage=luggage, souvenirs=souvenirs_html,
     )
     tips_block = f'<div class="aside tips-box" id="h-tips"><h3>Tips</h3>{tips_html}</div>'
     page = page.replace("<!--TIPS-->", tips_block, 1) if "<!--TIPS-->" in page else page.replace("</main>", f"<section>{tips_block}</section></main>", 1)
@@ -462,6 +508,7 @@ svg.inline {{ width: 16px; height: 16px; vertical-align: -3px; }}
 .hero::after {{ content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,.62)); }}
 .hero-text {{ position: relative; z-index: 1; padding: 24px; }}
 .eyebrow {{ font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; opacity: .9; }}
+.eyebrow .flag {{ vertical-align: -3px; border-radius: 3px; margin-right: 6px; box-shadow: 0 0 0 1px rgba(0,0,0,.15); }}
 h1 {{ font: 800 clamp(40px, 11vw, 64px)/0.95 var(--font-display); letter-spacing: -.02em; margin: 6px 0 4px; text-wrap: balance; }}
 .hero-text p {{ margin: 0; font-weight: 500; }}
 
@@ -550,7 +597,7 @@ footer {{ font-size: 13px; color: var(--muted); border-top: 1px solid var(--line
 <main>
   <header class="hero"{hero_style}>
     <div class="hero-text">
-      <div class="eyebrow">Trip prep · {flag} {country}</div>
+      <div class="eyebrow">{flag_img}{country}</div>
       <h1>{city}</h1>
       <p>{city_intro}</p>
     </div>
@@ -564,6 +611,7 @@ footer {{ font-size: 13px; color: var(--muted); border-top: 1px solid var(--line
   {daytrips}
   {plans}
   <section aria-labelledby="h-tours"><h2 id="h-tours">Tours &amp; activities</h2>{tours}</section>
+  {souvenirs}
   <section aria-labelledby="h-flights"><h2 id="h-flights">Flights</h2>{flights}</section>
   <section aria-labelledby="h-stays"><h2 id="h-stays">Hotels</h2>{stays}</section>
   <section aria-labelledby="h-esim"><h2 id="h-esim">eSIM</h2>{esim}</section>

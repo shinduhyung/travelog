@@ -52,6 +52,7 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(height: 8),
                Text(
                 tr("AI Travel Journal"),
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w300, // 얇게 처리하여 세련됨 강조
@@ -114,12 +115,18 @@ class _GoogleSignInButton extends StatelessWidget {
               ),
             ),
             const SizedBox(width: 12),
-             Text(
-              tr("Sign in with Google"),
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w500, // 너무 두껍지 않게
-                color: Color(0xFF4A4A4A), // 부드러운 텍스트 색상
+            Flexible(
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  tr("Sign in with Google"),
+                  maxLines: 1,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500, // 너무 두껍지 않게
+                    color: Color(0xFF4A4A4A), // 부드러운 텍스트 색상
+                  ),
+                ),
               ),
             ),
           ],

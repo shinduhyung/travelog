@@ -102,15 +102,19 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
                   ),
                 ),
                 const SizedBox(width: 12),
-                 Text(
-                  tr('Connect Flights'),
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 0.5,
+                 Flexible(
+                   child: Text(
+                    tr('Connect Flights'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 0.5,
+                    ),
                   ),
-                ),
+                 ),
                 const SizedBox(width: 8),
                 const Icon(
                   Icons.arrow_forward_ios,
@@ -703,12 +707,16 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
                   ),
                 ),
                 const SizedBox(width: 12),
-                Text(
-                  tr('Interline Connections: $_interlineConnectionsCount'),
-                  style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    color: Colors.purple.shade900,
-                    fontSize: 15,
+                Flexible(
+                  child: Text(
+                    tr('Interline Connections: $_interlineConnectionsCount'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      color: Colors.purple.shade900,
+                      fontSize: 15,
+                    ),
                   ),
                 ),
               ],
@@ -900,13 +908,17 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
           Icon(Icons.arrow_downward, color: typeColor, size: 18),
           const SizedBox(width: 10),
           // 해당 타입 색상의 텍스트
-          Text(
-            tr(info.type.toUpperCase()),
-            style: TextStyle(
-              color: typeColor,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 1.5,
-              fontSize: 13,
+          Flexible(
+            child: Text(
+              tr(info.type.toUpperCase()),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                color: typeColor,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 1.5,
+                fontSize: 13,
+              ),
             ),
           ),
           // 🚨 [수정] 시간(Duration) 표시
@@ -1096,6 +1108,8 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
             Text(
               tr(title),
               textAlign: TextAlign.center,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
               style: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w500,
@@ -1664,6 +1678,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
         ],
       ),
       child: DropdownButtonFormField<String>(
+        isExpanded: true,
         value: _selectedVisitType,
         decoration: inputDecoration,
         items: visitTypes.entries.map((entry) {
@@ -1684,11 +1699,15 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
                   ),
                 ),
                 const SizedBox(width: 12),
-                Text(
-                  tr(name),
-                  style: TextStyle(
-                    color: entry.value['color'],
-                    fontWeight: FontWeight.w600,
+                Flexible(
+                  child: Text(
+                    tr(name),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      color: entry.value['color'],
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
               ],
@@ -1738,11 +1757,15 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
                   child: Icon(Icons.trending_up, color: _primaryColor, size: 24),
                 ),
                 const SizedBox(width: 12),
-                Text(
-                  tr("Yearly Trend (10 Years)"),
-                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
+                Flexible(
+                  child: Text(
+                    tr("Yearly Trend (10 Years)"),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
                   ),
                 ),
               ],

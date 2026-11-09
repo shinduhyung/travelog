@@ -183,9 +183,13 @@ class BadgeShare {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
-                            tr('Progress'),
-                            style: TextStyle(fontSize: 15, color: Colors.grey[600], fontWeight: FontWeight.w500),
+                          Flexible(
+                            child: Text(
+                              tr('Progress'),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(fontSize: 15, color: Colors.grey[600], fontWeight: FontWeight.w500),
+                            ),
                           ),
                           Text(
                             tr(progressDetailText),

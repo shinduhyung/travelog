@@ -263,10 +263,12 @@ class _SectionHeader extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(16, 24, 16, 12),
       child: Row(
         children: [
-          Text(tr(label), style: const TextStyle(
-            fontSize: 11, fontWeight: FontWeight.w700,
-            letterSpacing: 2.0, color: _CT.inkLight,
-          )),
+          Flexible(
+            child: Text(tr(label), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(
+              fontSize: 11, fontWeight: FontWeight.w700,
+              letterSpacing: 2.0, color: _CT.inkLight,
+            )),
+          ),
           const SizedBox(width: 12),
           Expanded(child: Container(height: 1, color: _CT.divider)),
         ],
@@ -377,11 +379,16 @@ class _ClimateRankingCardState extends State<_ClimateRankingCard> {
                             Icon(r.icon, size: 15,
                                 color: active ? Colors.white : _CT.inkLight),
                             const SizedBox(width: 6),
-                            Text(tr(r.title), style: TextStyle(
-                              fontSize: 12,
-                              fontWeight: active ? FontWeight.w700 : FontWeight.w400,
-                              color: active ? Colors.white : _CT.inkLight,
-                            )),
+                            Flexible(
+                              child: FittedBox(
+                                fit: BoxFit.scaleDown,
+                                child: Text(tr(r.title), maxLines: 1, style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: active ? FontWeight.w700 : FontWeight.w400,
+                                  color: active ? Colors.white : _CT.inkLight,
+                                )),
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -417,6 +424,7 @@ class _ClimateRankingCardState extends State<_ClimateRankingCard> {
                         const SizedBox(width: 4),
                         Text(
                           tr(_sortDir == 0 ? 'High' : 'Low'),
+                          maxLines: 1,
                           style: const TextStyle(
                             fontSize: 11, fontWeight: FontWeight.w600, color: _CT.inkMid,
                           ),
@@ -550,7 +558,7 @@ class _RankRow extends StatelessWidget {
                     children: [
                       Text(tr(_cityFlagEmoji(city)), style: const TextStyle(fontSize: 11)),
                       const SizedBox(width: 4),
-                      Text(tr(city.country), style: const TextStyle(fontSize: 10, color: _CT.inkLight)),
+                      Flexible(child: Text(tr(city.country), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 10, color: _CT.inkLight))),
                     ],
                   ),
                 ],
@@ -591,16 +599,23 @@ class _ClimateSummaryBar extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  tr('$completed of $total collections'),
-                  style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w800,
-                      color: Colors.white, letterSpacing: -0.5),
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    tr('$completed of $total collections'),
+                    maxLines: 1,
+                    style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w800,
+                        color: Colors.white, letterSpacing: -0.5),
+                  ),
                 ),
                 const SizedBox(height: 4),
                 Text(
                   tr(completed == 0 ? 'No collections fully completed yet'
                       : completed == total ? 'All collections completed! 🎉'
                       : '${total - completed} remaining to complete'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(fontSize: 12, color: Color(0xFF888888)),
                 ),
                 const SizedBox(height: 14),
@@ -804,12 +819,12 @@ class _ClimateCollectionCardState extends State<_ClimateCollectionCard>
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(tr(g.label), style: TextStyle(
+                        Text(tr(g.label), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(
                           fontSize: 10, fontWeight: FontWeight.w700,
                           letterSpacing: 1.5, color: g.color,
                         )),
                         const SizedBox(height: 2),
-                        Text(tr(g.title), style: const TextStyle(
+                        Text(tr(g.title), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(
                           fontSize: 15, fontWeight: FontWeight.w700,
                           color: _CT.ink, letterSpacing: -0.2,
                         )),
@@ -835,7 +850,7 @@ class _ClimateCollectionCardState extends State<_ClimateCollectionCard>
                         children:  [
                           Icon(Icons.map_outlined, size: 14, color: _CT.inkMid),
                           SizedBox(width: 4),
-                          Text(tr('Map'), style: TextStyle(
+                          Text(tr('Map'), maxLines: 1, style: TextStyle(
                             fontSize: 12, fontWeight: FontWeight.w600, color: _CT.inkMid,
                           )),
                         ],

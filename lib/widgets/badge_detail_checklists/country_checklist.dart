@@ -106,6 +106,8 @@ class CountryChecklist {
                 ),
                 title: Text(
                   tr(country.name),
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 15,
@@ -239,6 +241,8 @@ class CountryChecklist {
                 ),
                 title: Text(
                   tr(country.name),
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 15,

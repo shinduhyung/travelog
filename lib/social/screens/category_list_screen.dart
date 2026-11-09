@@ -173,7 +173,7 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
     final all = (profile == null || hidden)
         ? <_Item>[]
         : _buildItems(profile, me, myProfile: store.me, friendProfile: self ? null : profile);
-    final owner = self ? tr('Your ${tr(cat.noun)}') : tr("${profile?.displayName ?? tr('Friend')}'s ${tr(cat.noun)}");
+    final owner = self ? tr('Your ${tr(cat.noun)}') : tr("{0}'s {1}").replaceAll('{0}', profile?.displayName ?? tr('Friend')).replaceAll('{1}', tr(cat.noun));
 
     Widget body;
     if (profile == null) {
@@ -360,10 +360,10 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
               final meta = geo.countryByName(name);
               final info = p.countryInfo[name];
               return _Item(
-                title: meta?.longName ?? name,
+                title: tr(meta?.longName ?? name),
                 search: '${meta?.longName ?? name} $name',
                 leading: flagLead(meta?.iso2),
-                place: placeLine(meta?.subregion ?? meta?.continent, info),
+                place: placeLine(tr(meta?.subregion ?? meta?.continent), info),
                 details: detailLine(info),
                 rating: info?.rating ?? 0,
                 date: _sortDate(info),

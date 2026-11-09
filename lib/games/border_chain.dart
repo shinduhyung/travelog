@@ -422,8 +422,14 @@ class _GradientButtonState extends State<_GradientButton> {
                 Icon(widget.icon, color: fg, size: 20),
                 const SizedBox(width: 8),
               ],
-              Text(tr(widget.label),
-                  style: TextStyle(color: fg, fontSize: 15.5, fontWeight: FontWeight.w800, letterSpacing: 0.2)),
+              Flexible(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(tr(widget.label),
+                      maxLines: 1,
+                      style: TextStyle(color: fg, fontSize: 15.5, fontWeight: FontWeight.w800, letterSpacing: 0.2)),
+                ),
+              ),
             ],
           ),
         ),
@@ -672,8 +678,12 @@ class BorderChainDifficultyScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 10),
-                   Text(tr('CHOOSE A DIFFICULTY'),
-                      style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.1, color: _kMuted)),
+                   Flexible(
+                     child: Text(tr('CHOOSE A DIFFICULTY'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.1, color: _kMuted)),
+                   ),
                 ],
               ),
               const SizedBox(height: 16),
@@ -760,11 +770,17 @@ class BorderChainDifficultyScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
                Text(tr('BORDER PUZZLE'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800, letterSpacing: 1.6, color: _kMuted)),
               const SizedBox(height: 4),
-               Text(tr('Border Chain'),
-                  style: TextStyle(
-                      fontSize: 27, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.6, height: 1.05)),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(tr('Border Chain'),
+                    maxLines: 1,
+                    style: TextStyle(
+                        fontSize: 27, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.6, height: 1.05)),
+              ),
               const SizedBox(height: 8),
               Text(tr('Link neighboring countries along the shortest path. Chains get longer, decoys get sneakier.'),
                   style: TextStyle(
@@ -831,8 +847,12 @@ class _DifficultyCard extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Text(tr(_labelFor(difficulty)),
-                          style: const TextStyle(fontSize: 17.5, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.2)),
+                      Flexible(
+                        child: Text(tr(_labelFor(difficulty)),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(fontSize: 17.5, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.2)),
+                      ),
                       if (locked) ...[
                         const SizedBox(width: 6),
                         Icon(Icons.lock_rounded, size: 15, color: color),
@@ -1010,6 +1030,8 @@ class _BorderChainLobbyScreenState extends State<_BorderChainLobbyScreen> {
                   style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.4, color: _kMuted)),
               const SizedBox(height: 2),
               Text(tr('${_labelFor(widget.difficulty)} Mode'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(fontSize: 21, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.3)),
             ],
           ),
@@ -1048,8 +1070,12 @@ class _BorderChainLobbyScreenState extends State<_BorderChainLobbyScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                 Text(tr('LEADERBOARD'),
-                    style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted)),
+                 Flexible(
+                   child: Text(tr('LEADERBOARD'),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted)),
+                 ),
                 Text(tr('${records.length} run${records.length == 1 ? '' : 's'}'),
                     style: const TextStyle(fontSize: 12, color: _kFaint, fontWeight: FontWeight.w600)),
               ],
@@ -1118,6 +1144,8 @@ class _RecordTile extends StatelessWidget {
                 const SizedBox(height: 2),
                 Text(
                   tr('${record.roundsSolved}/${record.maxRounds} solved · longest path ${record.bestPathLength} · ${_formatDate(record.playedAt)}'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(fontSize: 11.5, color: _kMuted),
                 ),
               ],
@@ -1335,8 +1363,12 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
           children: [
             Container(width: 8, height: 8, decoration: BoxDecoration(color: _accent, shape: BoxShape.circle)),
             const SizedBox(width: 8),
-            Text(tr('${_labelFor(widget.difficulty)} Mode'),
+            Flexible(
+              child: Text(tr('${_labelFor(widget.difficulty)} Mode'),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: _kInk, letterSpacing: -0.2)),
+            ),
           ],
         ),
         iconTheme: const IconThemeData(color: _kInk),
@@ -1369,11 +1401,20 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(tr('ROUND ${_roundIndex + 1} / $_maxRounds'),
-                  style: const TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800, letterSpacing: 0.6, color: _kMuted)),
-              Text(
+              Flexible(
+                child: Text(tr('ROUND ${_roundIndex + 1} / $_maxRounds'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800, letterSpacing: 0.6, color: _kMuted)),
+              ),
+              const SizedBox(width: 8),
+              Flexible(
+               child: Text(
                 tr(_isEasy ? 'SHORTEST PATH: ${_puzzle.shortestDistance} HOPS' : 'SHORTEST PATH: ??? HOPS'),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800, letterSpacing: 0.4, color: _accent),
+               ),
               ),
             ],
           ),
@@ -1394,7 +1435,9 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
           if (!resolved) ...[
             if (!compact)
               Text(
-                _isEasy ? 'WHICH COUNTRY BORDERS ${_current.name.toUpperCase()}?' : 'SEARCH FOR A COUNTRY BORDERING ${_current.name.toUpperCase()}',
+                tr(_isEasy ? 'WHICH COUNTRY BORDERS ${_current.name.toUpperCase()}?' : 'SEARCH FOR A COUNTRY BORDERING ${_current.name.toUpperCase()}'),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
                 style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 0.5, color: _kMuted),
               ),
             if (!compact) const SizedBox(height: 8),
@@ -1447,16 +1490,25 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
   }
 
   Widget _buildEndpointChip(_BorderCountry country, String label) {
-    return Column(
-      children: [
-        Text(tr(country.emoji), style: const TextStyle(fontSize: 26)),
-        const SizedBox(height: 2),
-        Text(tr(country.name),
-            textAlign: TextAlign.center,
-            style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, color: _kInk)),
-        Text(tr(label),
-            style: TextStyle(fontSize: 9, fontWeight: FontWeight.w800, letterSpacing: 0.6, color: _accent)),
-      ],
+    return ConstrainedBox(
+      constraints: const BoxConstraints(maxWidth: 150),
+      child: Column(
+        children: [
+          Text(tr(country.emoji), style: const TextStyle(fontSize: 26)),
+          const SizedBox(height: 2),
+          Text(tr(country.name),
+              textAlign: TextAlign.center,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, color: _kInk)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(tr(label),
+                maxLines: 1,
+                style: TextStyle(fontSize: 9, fontWeight: FontWeight.w800, letterSpacing: 0.6, color: _accent)),
+          ),
+        ],
+      ),
     );
   }
 
@@ -1485,7 +1537,7 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
               children: [
                 Text(tr(c.emoji), style: const TextStyle(fontSize: 13)),
                 const SizedBox(width: 5),
-                Text(c.name,
+                Text(AppLocale.instance.countryName(c.name),
                     style: TextStyle(
                         fontSize: 12,
                         fontWeight: isLast ? FontWeight.w800 : FontWeight.w600,
@@ -1510,9 +1562,13 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                  Text(tr('CURRENTLY IN'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(fontSize: 10, fontWeight: FontWeight.w800, letterSpacing: 0.8, color: _kMuted)),
                 const SizedBox(height: 2),
-                Text(_current.name,
+                Text(AppLocale.instance.countryName(_current.name),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
                     style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900, color: _kInk)),
               ],
             ),
@@ -1552,7 +1608,7 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
                 Text(tr(c.emoji), style: const TextStyle(fontSize: 18)),
                 const SizedBox(width: 6),
                 Flexible(
-                  child: Text(c.name,
+                  child: Text(AppLocale.instance.countryName(c.name),
                       textAlign: TextAlign.center,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
@@ -1620,7 +1676,9 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
                       Text(tr(c.emoji), style: const TextStyle(fontSize: 20)),
                       const SizedBox(width: 12),
                       Expanded(
-                        child: Text(c.name,
+                        child: Text(AppLocale.instance.countryName(c.name),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                             style: const TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700, color: _kInk)),
                       ),
                       const Icon(Icons.chevron_right_rounded, size: 18, color: _kFaint),
@@ -1677,9 +1735,13 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    tr(solved ? 'Shortest path found! +${_puzzle.shortestDistance}' : 'Not the shortest path'),
-                    style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w900, color: Colors.white),
+                  FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      tr(solved ? 'Shortest path found! +${_puzzle.shortestDistance}' : 'Not the shortest path'),
+                      maxLines: 1,
+                      style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w900, color: Colors.white),
+                    ),
                   ),
                   if (!solved && wrongCountry != null)
                     Text(

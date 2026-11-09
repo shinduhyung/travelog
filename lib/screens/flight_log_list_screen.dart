@@ -341,13 +341,17 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
             size: 20,
           ),
           const SizedBox(width: 8),
-          Text(
+          Flexible(
+           child: Text(
             tr(info.type.toUpperCase()),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
             style: TextStyle(
               color: Colors.orange.shade800,
               fontWeight: FontWeight.bold,
               letterSpacing: 1.2,
             ),
+           ),
           ),
           if (info.duration != null && info.duration!.trim().isNotEmpty)
             Text(
@@ -516,13 +520,17 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          log.airlineName ?? 'Unknown Airline',
-                          style: const TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            letterSpacing: 0.5,
+                        Flexible(
+                          child: Text(
+                            log.airlineName ?? 'Unknown Airline',
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              letterSpacing: 0.5,
+                            ),
                           ),
                         ),
                         if (classSuffix.isNotEmpty && !log.isCanceled)
@@ -585,24 +593,30 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Row(
-                              children: [
-                                Icon(
-                                  Icons.calendar_today,
-                                  size: 18,
-                                  color: accentColor,
-                                ),
-                                const SizedBox(width: 8),
-                                Text(
-                                  tr(displayDate),
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.grey.shade900,
-                                    letterSpacing: 0.3,
+                            Flexible(
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    Icons.calendar_today,
+                                    size: 18,
+                                    color: accentColor,
                                   ),
-                                ),
-                              ],
+                                  const SizedBox(width: 8),
+                                  Flexible(
+                                    child: Text(
+                                      tr(displayDate),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.grey.shade900,
+                                        letterSpacing: 0.3,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
 
                             Container(
@@ -906,30 +920,38 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
   Widget _buildInfoColumn(String label, String? value, IconData icon) {
     final displayValue =
         (value != null && value.isNotEmpty && value != 'Unknown') ? value : '-';
-    return Column(
-      children: [
-        Icon(icon, size: 14, color: Colors.grey.shade600),
-        const SizedBox(height: 3),
-        Text(
-          tr(label),
-          style: TextStyle(
-            fontSize: 9,
-            color: Colors.grey.shade600,
-            fontWeight: FontWeight.w500,
+    return Flexible(
+      child: Column(
+        children: [
+          Icon(icon, size: 14, color: Colors.grey.shade600),
+          const SizedBox(height: 3),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              tr(label),
+              maxLines: 1,
+              style: TextStyle(
+                fontSize: 9,
+                color: Colors.grey.shade600,
+                fontWeight: FontWeight.w500,
+                overflow: TextOverflow.ellipsis,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          const SizedBox(height: 2),
+          Text(
+            tr(displayValue),
+            maxLines: 1,
             overflow: TextOverflow.ellipsis,
+            style: TextStyle(
+              fontSize: 13,
+              fontWeight: FontWeight.bold,
+              color: Colors.grey.shade800,
+            ),
           ),
-          textAlign: TextAlign.center,
-        ),
-        const SizedBox(height: 2),
-        Text(
-          tr(displayValue),
-          style: TextStyle(
-            fontSize: 13,
-            fontWeight: FontWeight.bold,
-            color: Colors.grey.shade800,
-          ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 

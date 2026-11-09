@@ -89,6 +89,12 @@ class AppLocale extends ChangeNotifier with WidgetsBindingObserver {
   final _templates = <(RegExp, String)>[];
   final _cache = <String, String>{};
 
+  /// Debug-only (set by the l10n audit): keep every applied catalog in memory
+  /// so switching back to a language skips the multi-MB parse.
+  static bool keepCatalogs = false;
+  final _kept = <String, (Map<String, String>, Map<String, String>,
+      Map<String, String>, List<(RegExp, String)>)>{};
+
   /// Replaceable in tests to serve catalogs without the network.
   static CatalogStore store = CatalogStore();
   Map<String, dynamic> _manifest = const {};
@@ -174,6 +180,18 @@ class AppLocale extends ChangeNotifier with WidgetsBindingObserver {
       return;
     }
     final language = current;
+    final kept = keepCatalogs ? _kept['$target ${language.entry['file']}'] : null;
+    if (kept != null) {
+      _messages = kept.$1;
+      _countries = kept.$2;
+      _caseFolded = kept.$3;
+      _templates
+        ..clear()
+        ..addAll(kept.$4);
+      _cache.clear();
+      _catalogCode = target;
+      return;
+    }
     final local = await store.local(language.entry);
     if (target != code) return; // The language changed while loading.
     if (local != null) {
@@ -227,6 +245,10 @@ class AppLocale extends ChangeNotifier with WidgetsBindingObserver {
       final pattern = parts.map(RegExp.escape).join('(.*?)');
       _templates.add((RegExp('^$pattern\$', dotAll: true), entry.value));
     }
+    if (keepCatalogs && target != null) {
+      _kept['$target ${current.entry['file']}'] =
+          (_messages, _countries, _caseFolded, List.of(_templates));
+    }
   }
 
   Future<void> setLanguage(String? language) async {
@@ -247,6 +269,20 @@ class AppLocale extends ChangeNotifier with WidgetsBindingObserver {
     await _loadCatalog();
     notifyListeners();
   }
+
+  /// Debug-only (tool/l10n/overflow_audit): shows [catalog] under the
+  /// left-to-right language [base], so one pass checks the longest text of
+  /// every language at once.
+  Future<void> debugShowCatalog(String base, Map<String, dynamic> catalog) async {
+    await setLanguage(base);
+    _applyCatalog(null, catalog);
+    _catalogCode = base;
+    notifyListeners();
+  }
+
+  /// Forgets a catalog set by [debugShowCatalog], so the next switch loads a
+  /// real one.
+  void debugForgetCatalog() => _catalogCode = null;
 
   @override
   void didChangeLocales(List<Locale>? locales) {

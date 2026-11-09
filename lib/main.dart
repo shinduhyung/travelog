@@ -12,6 +12,8 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_quill/flutter_quill.dart'
     show FlutterQuillLocalizations;
 import 'package:jidoapp/l10n/app_localizations.dart';
+import 'package:jidoapp/l10n/l10n_audit.dart';
+import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:jidoapp/screens/daily_quiz_screen.dart';
@@ -296,6 +298,16 @@ void main() {
   FlutterError.onError = (FlutterErrorDetails details) {
     debugPrint('🔴🔴🔴 [FlutterError] ${details.exceptionAsString()}');
     debugPrint('🔴 [FlutterError] Stack:\n${details.stack}');
+    // 오버플로우 위치(파일:줄)를 매번 한 줄로 남긴다. presentError는 두 번째부터 요약만 찍는다.
+    if (kDebugMode && details.exceptionAsString().contains('overflowed')) {
+      final where = details
+          .toString()
+          .split('\n')
+          .where((l) => l.contains('lib/'))
+          .map((l) => l.trim())
+          .join(' | ');
+      debugPrint('[OVERFLOW] ${details.exceptionAsString().split('\n').first} @ $where');
+    }
     FlutterError.presentError(details);
   };
 
@@ -306,6 +318,7 @@ void main() {
 
       WidgetsFlutterBinding.ensureInitialized();
       await AppLocale.instance.load();
+      unawaited(L10nAudit.start());
       debugPrint('🟢 [DEBUG] 1) WidgetsFlutterBinding.ensureInitialized 완료');
 
       // 플랫폼 레벨(네이티브 채널 등) uncaught 에러를 잡습니다.
@@ -1544,13 +1557,17 @@ class _NewBadgesExpansionDialog extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 6),
-                  Text(
-                    tr('New Badges Just Landed'),
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w800,
-                      color: Colors.white,
-                      letterSpacing: -0.3,
+                  FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      tr('New Badges Just Landed'),
+                      maxLines: 1,
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w800,
+                        color: Colors.white,
+                        letterSpacing: -0.3,
+                      ),
                     ),
                   ),
                   const SizedBox(height: 10),
@@ -1579,11 +1596,15 @@ class _NewBadgesExpansionDialog extends StatelessWidget {
                         ),
                         elevation: 0,
                       ),
-                      child: Text(
-                        tr('View New Badges'),
-                        style: TextStyle(
-                          fontSize: 15.5,
-                          fontWeight: FontWeight.w800,
+                      child: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          tr('View New Badges'),
+                          maxLines: 1,
+                          style: TextStyle(
+                            fontSize: 15.5,
+                            fontWeight: FontWeight.w800,
+                          ),
                         ),
                       ),
                     ),
@@ -1808,12 +1829,16 @@ class _BadgeSharePromoDialogState extends State<_BadgeSharePromoDialog> {
                                   color: Color(0xFFFFB347),
                                 ),
                           const SizedBox(width: 8),
-                          Text(
-                            tr('Share My Badge'),
-                            style: TextStyle(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w700,
-                              color: Color(0xFFFFB347),
+                          Flexible(
+                            child: Text(
+                              tr('Share My Badge'),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w700,
+                                color: Color(0xFFFFB347),
+                              ),
                             ),
                           ),
                         ],

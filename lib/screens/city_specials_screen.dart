@@ -413,13 +413,17 @@ class _SectionHeader extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(16, 24, 16, 12),
       child: Row(
         children: [
-          Text(
-            tr(label),
-            style: const TextStyle(
-              fontSize: 11,
-              fontWeight: FontWeight.w700,
-              letterSpacing: 2.0,
-              color: _AppTheme.inkLight,
+          Flexible(
+            child: Text(
+              tr(label),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(
+                fontSize: 11,
+                fontWeight: FontWeight.w700,
+                letterSpacing: 2.0,
+                color: _AppTheme.inkLight,
+              ),
             ),
           ),
           const SizedBox(width: 12),
@@ -467,13 +471,18 @@ class _CollectionSummaryRow extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  tr('$completedGroups of $totalGroups collections'),
-                  style: const TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.w800,
-                    color: Colors.white,
-                    letterSpacing: -0.5,
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    tr('$completedGroups of $totalGroups collections'),
+                    maxLines: 1,
+                    style: const TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.w800,
+                      color: Colors.white,
+                      letterSpacing: -0.5,
+                    ),
                   ),
                 ),
                 const SizedBox(height: 4),
@@ -483,6 +492,8 @@ class _CollectionSummaryRow extends StatelessWidget {
                       : completedGroups == totalGroups
                       ? 'All collections completed! 🎉'
                       : '${totalGroups - completedGroups} remaining to complete'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     fontSize: 12,
                     color: Color(0xFF888888),
@@ -743,13 +754,19 @@ class _RankingCardState extends State<_RankingCard> {
                             color: isActive ? Colors.white : _AppTheme.inkLight,
                           ),
                           const SizedBox(width: 6),
-                          Text(
-                            tr(r.title),
-                            style: TextStyle(
-                              fontSize: 12,
-                              fontWeight: isActive ? FontWeight.w700 : FontWeight.w400,
-                              color: isActive ? Colors.white : _AppTheme.inkLight,
-                              letterSpacing: 0.2,
+                          Flexible(
+                            child: FittedBox(
+                              fit: BoxFit.scaleDown,
+                              child: Text(
+                                tr(r.title),
+                                maxLines: 1,
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: isActive ? FontWeight.w700 : FontWeight.w400,
+                                  color: isActive ? Colors.white : _AppTheme.inkLight,
+                                  letterSpacing: 0.2,
+                                ),
+                              ),
                             ),
                           ),
                         ],
@@ -894,7 +911,7 @@ class _RankingRow extends StatelessWidget {
                     children: [
                       Text(tr(_cityFlagEmoji(city)), style: const TextStyle(fontSize: 11)),
                       const SizedBox(width: 4),
-                      Text(tr(city.country), style: const TextStyle(fontSize: 10, color: _AppTheme.inkLight, letterSpacing: 0.1)),
+                      Flexible(child: Text(tr(city.country), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 10, color: _AppTheme.inkLight, letterSpacing: 0.1))),
                     ],
                   ),
                 ],
@@ -1020,6 +1037,8 @@ class _CollectionCardState extends State<_CollectionCard>
                       children: [
                         Text(
                           tr(g.label),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                             fontSize: 10,
                             fontWeight: FontWeight.w700,
@@ -1030,6 +1049,8 @@ class _CollectionCardState extends State<_CollectionCard>
                         const SizedBox(height: 2),
                         Text(
                           tr(g.title),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: const TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.w700,
@@ -1085,18 +1106,27 @@ class _CollectionCardState extends State<_CollectionCard>
                 const SizedBox(height: 8),
                 Row(
                   children: [
-                    _StatChip(
-                      label: 'Visited',
-                      value: '$visited',
-                      color: g.color,
+                    Expanded(
+                      child: Row(
+                        children: [
+                          Flexible(
+                            child: _StatChip(
+                              label: 'Visited',
+                              value: '$visited',
+                              color: g.color,
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          Flexible(
+                            child: _StatChip(
+                              label: 'Remaining',
+                              value: '$notVisitedCount',
+                              color: _AppTheme.inkLight,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                    const SizedBox(width: 8),
-                    _StatChip(
-                      label: 'Remaining',
-                      value: '$notVisitedCount',
-                      color: _AppTheme.inkLight,
-                    ),
-                    const Spacer(),
                     Text(
                       tr('${(pct * 100).round()}%'),
                       style: TextStyle(
@@ -1181,13 +1211,17 @@ class _StatChip extends StatelessWidget {
           ),
         ),
         const SizedBox(width: 3),
-        Text(
-          tr(label),
-          style: const TextStyle(
-            fontSize: 10,
-            fontWeight: FontWeight.w500,
-            color: _AppTheme.inkLight,
-            letterSpacing: 0.3,
+        Flexible(
+          child: Text(
+            tr(label),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: const TextStyle(
+              fontSize: 10,
+              fontWeight: FontWeight.w500,
+              color: _AppTheme.inkLight,
+              letterSpacing: 0.3,
+            ),
           ),
         ),
       ],

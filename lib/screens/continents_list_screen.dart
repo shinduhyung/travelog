@@ -19,7 +19,7 @@ class ContinentsListScreen extends StatelessWidget {
     final provider = Provider.of<CountryProvider>(context);
 
     return Scaffold(
-      appBar: AppBar(title:  Text(tr('Continents'))),
+      appBar: AppBar(title:  Text(tr('Continents'), maxLines: 1, overflow: TextOverflow.ellipsis)),
       body: provider.isLoading
           ? const Center(child: CircularProgressIndicator())
           : ListView.builder(

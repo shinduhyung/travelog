@@ -564,8 +564,14 @@ class _GradientButtonState extends State<_GradientButton> {
                 Icon(widget.icon, color: fg, size: 20),
                 const SizedBox(width: 8),
               ],
-              Text(tr(widget.label),
-                  style: TextStyle(color: fg, fontSize: 15.5, fontWeight: FontWeight.w800, letterSpacing: 0.2)),
+              Flexible(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(tr(widget.label),
+                      maxLines: 1,
+                      style: TextStyle(color: fg, fontSize: 15.5, fontWeight: FontWeight.w800, letterSpacing: 0.2)),
+                ),
+              ),
             ],
           ),
         ),
@@ -663,7 +669,7 @@ class _CountrySearchSheetState extends State<_CountrySearchSheet> {
                     return ListTile(
                       contentPadding: EdgeInsets.zero,
                       leading: Text(tr(c.emoji), style: const TextStyle(fontSize: 24)),
-                      title: Text(c.name,
+                      title: Text(AppLocale.instance.countryName(c.name),
                           style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: _kInk)),
                       onTap: () => Navigator.pop(context, c.code),
                     );
@@ -785,7 +791,9 @@ class _RespawnModeScreenState extends State<RespawnModeScreen> {
                                   style: TextStyle(
                                       fontSize: 10.5, fontWeight: FontWeight.w800, letterSpacing: 0.8, color: _kMuted)),
                               const SizedBox(height: 2),
-                              Text(home?.name ?? tr('Not set — tap to choose'),
+                              Text(home != null ? AppLocale.instance.countryName(home.name) : tr('Not set — tap to choose'),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.w800,
@@ -810,9 +818,13 @@ class _RespawnModeScreenState extends State<RespawnModeScreen> {
                       ),
                     ),
                     const SizedBox(width: 10),
-                     Text(tr('CHOOSE A MODE'),
-                        style: TextStyle(
-                            fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.1, color: _kMuted)),
+                     Flexible(
+                       child: Text(tr('CHOOSE A MODE'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                              fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.1, color: _kMuted)),
+                     ),
                   ],
                 ),
                 const SizedBox(height: 16),
@@ -922,8 +934,12 @@ class _ModeCard extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Text(tr(mode.title),
-                          style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.2)),
+                      Flexible(
+                        child: Text(tr(mode.title),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.2)),
+                      ),
                       if (locked) ...[
                         const SizedBox(width: 6),
                         Icon(Icons.lock_rounded, size: 15, color: color),
@@ -1046,8 +1062,12 @@ class _RespawnGameScreenState extends State<_RespawnGameScreen> {
           children: [
             Container(width: 8, height: 8, decoration: const BoxDecoration(color: _kAccent, shape: BoxShape.circle)),
             const SizedBox(width: 8),
-            Text(tr(widget.mode.title),
-                style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: _kInk, letterSpacing: -0.2)),
+            Flexible(
+              child: Text(tr(widget.mode.title),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: _kInk, letterSpacing: -0.2)),
+            ),
           ],
         ),
         iconTheme: const IconThemeData(color: _kInk),
@@ -1101,7 +1121,7 @@ class _RespawnGameScreenState extends State<_RespawnGameScreen> {
           ],
           Text(tr(drawn.emoji), style: const TextStyle(fontSize: 64)),
           const SizedBox(height: 10),
-          Text(drawn.name,
+          Text(AppLocale.instance.countryName(drawn.name),
               style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: _kInk)),
           const SizedBox(height: 4),
           Text(tr(widget.mode.resultLine(drawn)),
@@ -1175,9 +1195,13 @@ class _RespawnGameScreenState extends State<_RespawnGameScreen> {
             children: [
               Text(tr(home.emoji), style: const TextStyle(fontSize: 16)),
               const SizedBox(width: 6),
-              Text(tr('VS YOUR COUNTRY (${home.name.toUpperCase()})'),
-                  style: const TextStyle(
-                      fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 0.5, color: _kMuted)),
+              Flexible(
+                child: Text(tr('VS YOUR COUNTRY (${home.name.toUpperCase()})'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                        fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 0.5, color: _kMuted)),
+              ),
             ],
           ),
           const SizedBox(height: 14),
@@ -1258,8 +1282,12 @@ class _RespawnGameScreenState extends State<_RespawnGameScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(tr('${rate.toStringAsFixed(0)}% SUCCESS RATE'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(fontSize: 19, fontWeight: FontWeight.w900, color: color)),
                 Text(tr('$_successCount of $_attemptCount respawns this visit'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: const TextStyle(fontSize: 11.5, fontWeight: FontWeight.w600, color: _kMuted)),
               ],
             ),
@@ -1312,7 +1340,7 @@ class _RespawnGameScreenState extends State<_RespawnGameScreen> {
                     ],
                     Text(tr(c.emoji), style: const TextStyle(fontSize: 13)),
                     const SizedBox(width: 5),
-                    Text(c.name, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _kInk)),
+                    Text(AppLocale.instance.countryName(c.name), style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _kInk)),
                   ],
                 ),
               );
@@ -1380,9 +1408,12 @@ class _StatChip extends StatelessWidget {
         children: [
           Text(tr(value),
               style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w800, color: _kInk),
+              maxLines: 1,
               overflow: TextOverflow.ellipsis),
           const SizedBox(height: 2),
           Text(tr(label.toUpperCase()),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
               style: const TextStyle(fontSize: 9, fontWeight: FontWeight.w800, letterSpacing: 0.3, color: _kMuted)),
         ],
       ),

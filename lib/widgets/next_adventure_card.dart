@@ -187,14 +187,17 @@ class NextAdventureCard extends StatelessWidget {
               padding: const EdgeInsets.only(left: 4),
               child: Row(
                 children: [
-                  RichText(
-                    maxLines: 1,
-                    text: TextSpan(
-                      style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w800, letterSpacing: -0.2),
-                      children: [
-                        TextSpan(text: tr('Next '), style: const TextStyle(color: Color(0xFF111827))),
-                        TextSpan(text: tr('Adventure'), style: const TextStyle(color: Color(0xFF0AA4C8))),
-                      ],
+                  Flexible(
+                    child: RichText(
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      text: TextSpan(
+                        style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w800, letterSpacing: -0.2),
+                        children: [
+                          TextSpan(text: tr('Next '), style: const TextStyle(color: Color(0xFF111827))),
+                          TextSpan(text: tr('Adventure'), style: const TextStyle(color: Color(0xFF0AA4C8))),
+                        ],
+                      ),
                     ),
                   ),
                   const SizedBox(width: 8),
@@ -307,7 +310,7 @@ void _showLandmarkSheet(BuildContext context, Landmark lm) {
             const SizedBox(height: 14),
             Text(lm.name, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: _ink)),
             const SizedBox(height: 4),
-            Text('${country == null ? '' : '${_flag(country.isoA2)} '}${lm.city}${country == null ? '' : ', ${country.name}'}',
+            Text('${country == null ? '' : '${_flag(country.isoA2)} '}${lm.city}${country == null ? '' : ', ${tr(country.name)}'}',
                 style: TextStyle(fontSize: 14, color: Colors.grey.shade600, fontWeight: FontWeight.w600)),
             const SizedBox(height: 16),
             LandmarkInfoCard(overview: lm.overview, historySignificance: lm.history_significance, highlights: lm.highlights, themeColor: color),
@@ -326,7 +329,7 @@ void _showLandmarkSheet(BuildContext context, Landmark lm) {
                     }
                   },
                   icon: const Icon(Icons.travel_explore_rounded),
-                  label: Text('${city.name} ${tr('Plans')}'),
+                  label: Text('${city.name} ${tr('Plans')}', maxLines: 1, overflow: TextOverflow.ellipsis),
                 ),
               ),
             ],
@@ -621,7 +624,12 @@ class _SearchSheetState extends State<_SearchSheet> {
         padding: const EdgeInsets.fromLTRB(10, 14, 10, 4),
         child: Row(
           children: [
-            Text(tr(title), style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w900, color: Color(0xFF6B7280), letterSpacing: 0.3)),
+            Flexible(
+              child: Text(tr(title),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w900, color: Color(0xFF6B7280), letterSpacing: 0.3)),
+            ),
             const SizedBox(width: 6),
             Text('${rows.length}', style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: Colors.grey.shade400)),
           ],
@@ -683,7 +691,7 @@ class _SearchSheetState extends State<_SearchSheet> {
         fallback: Text(flag, style: const TextStyle(fontSize: 24)),
       ),
       title: c.name,
-      sub: '$flag ${c.country}$extra',
+      sub: '$flag ${tr(c.country)}$extra',
       guide: guide,
       onTap: () => Navigator.pop(context, _Pick.city(c)),
     );
@@ -713,7 +721,7 @@ class _SearchSheetState extends State<_SearchSheet> {
         ),
       ),
       title: l.name,
-      sub: '${country == null ? '' : '${_flag(country.isoA2)} '}${l.city}${country == null ? '' : ', ${country.name}'}',
+      sub: '${country == null ? '' : '${_flag(country.isoA2)} '}${l.city}${country == null ? '' : ', ${tr(country.name)}'}',
       onTap: () => Navigator.pop(context, _Pick.landmark(l)),
     );
   }
@@ -721,8 +729,8 @@ class _SearchSheetState extends State<_SearchSheet> {
   Widget _countryRow(Country c) {
     return _row(
       thumb: _thumb(fallback: Text(_flag(c.isoA2), style: const TextStyle(fontSize: 26))),
-      title: c.name,
-      sub: c.continent ?? '',
+      title: tr(c.name),
+      sub: tr(c.continent ?? ''),
       onTap: () => Navigator.pop(context, _Pick.country(c)),
     );
   }

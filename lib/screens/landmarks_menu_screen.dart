@@ -46,12 +46,17 @@ class LandmarksMenuScreen extends StatelessWidget {
             // Header
             Padding(
               padding: const EdgeInsets.fromLTRB(20, 24, 20, 16),
-              child:  Text(
-                tr('Cultural Wonders'),
-                style: TextStyle(
-                  fontSize: 32,
-                  fontWeight: FontWeight.w800,
-                  letterSpacing: -1.2,
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  tr('Cultural Wonders'),
+                  maxLines: 1,
+                  style: const TextStyle(
+                    fontSize: 32,
+                    fontWeight: FontWeight.w800,
+                    letterSpacing: -1.2,
+                  ),
                 ),
               ),
             ),

@@ -499,9 +499,13 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
               children: [
                 Icon(Icons.local_fire_department_rounded, size: 18, color: Colors.white),
                 SizedBox(width: 6),
-                Text(
-                  tr("Daily Quiz · Expert"),
-                  style: TextStyle(fontWeight: FontWeight.w800, color: Colors.white),
+                Flexible(
+                  child: Text(
+                    tr("Daily Quiz · Expert"),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(fontWeight: FontWeight.w800, color: Colors.white),
+                  ),
                 ),
               ],
             ),
@@ -509,6 +513,8 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
               :  Text(
             tr("Daily Quiz"),
             key: ValueKey('normal_title'),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
             style: TextStyle(fontWeight: FontWeight.w800, color: Colors.black87),
           ),
         ),
@@ -631,7 +637,8 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
                   color: _defaultIsExpert ? _expertGradient.first : _normalGradient.first,
                 ),
                 const SizedBox(width: 7),
-                Text.rich(
+                Expanded(
+                  child: Text.rich(
                   TextSpan(
                     children: [
                       TextSpan(
@@ -648,8 +655,10 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
                       ),
                     ],
                   ),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                 ),
-                const Spacer(),
+                ),
                 Icon(Icons.expand_more_rounded, size: 16, color: Colors.grey.shade400),
               ],
             ),
@@ -680,11 +689,14 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
           children: [
             Icon(Icons.notifications_active_rounded, size: 16, color: Colors.grey.shade400),
             const SizedBox(width: 8),
-            Text(
-              tr('Default'),
-              style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: Colors.grey.shade500),
+            Expanded(
+              child: Text(
+                tr('Default'),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: Colors.grey.shade500),
+              ),
             ),
-            const Spacer(),
             _buildDefaultModeChip(
               label: 'Normal',
               icon: Icons.psychology_rounded,
@@ -878,21 +890,26 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            AnimatedDefaultTextStyle(
-              duration: const Duration(milliseconds: 200),
-              style: TextStyle(
-                fontSize: 13,
-                fontWeight: FontWeight.w800,
-                letterSpacing: 0.5,
-                color: selected ? Colors.white : Colors.grey.shade500,
-              ),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Icon(icon, size: 16, color: selected ? Colors.white : Colors.grey.shade500),
-                  const SizedBox(width: 6),
-                  Text(tr(label)),
-                ],
+            Flexible(
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: AnimatedDefaultTextStyle(
+                  duration: const Duration(milliseconds: 200),
+                  style: TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w800,
+                    letterSpacing: 0.5,
+                    color: selected ? Colors.white : Colors.grey.shade500,
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(icon, size: 16, color: selected ? Colors.white : Colors.grey.shade500),
+                      const SizedBox(width: 6),
+                      Text(tr(label)),
+                    ],
+                  ),
+                ),
               ),
             ),
           ],
@@ -993,15 +1010,19 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        tr(DateFormat('E').format(date)),
-                        style: TextStyle(
-                          color: isSelected
-                              ? Colors.white70
-                              : isFuture
-                              ? Colors.grey.shade400
-                              : Colors.grey,
-                          fontSize: 12,
+                      FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          tr(DateFormat('E').format(date)),
+                          maxLines: 1,
+                          style: TextStyle(
+                            color: isSelected
+                                ? Colors.white70
+                                : isFuture
+                                ? Colors.grey.shade400
+                                : Colors.grey,
+                            fontSize: 12,
+                          ),
                         ),
                       ),
                       const SizedBox(height: 4),
@@ -1409,7 +1430,7 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
           Row(children: [
             Icon(Icons.lightbulb, color: iconColor, size: 20),
             const SizedBox(width: 8),
-            Text(tr("Explanation"), style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: titleColor)),
+            Flexible(child: Text(tr("Explanation"), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: titleColor))),
           ]),
           const SizedBox(height: 12),
           Text(tr(_explanation), style: TextStyle(fontSize: 15, color: bodyColor, height: 1.5)),
@@ -1936,6 +1957,8 @@ class _QuizLandmarkModalState extends State<_QuizLandmarkModal> {
                                   Expanded(
                                     child: Text(
                                       freshLandmark.name,
+                                      maxLines: 2,
+                                      overflow: TextOverflow.ellipsis,
                                       style: const TextStyle(
                                         fontWeight: FontWeight.w900,
                                         fontSize: 24,
@@ -1970,6 +1993,8 @@ class _QuizLandmarkModalState extends State<_QuizLandmarkModal> {
                                           const SizedBox(height: 6),
                                           Text(
                                             tr(displayCity),
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
                                             style: TextStyle(fontSize: 14, color: headerTextColor.withOpacity(0.9), fontWeight: FontWeight.w500),
                                           ),
                                         ],
@@ -1984,9 +2009,13 @@ class _QuizLandmarkModalState extends State<_QuizLandmarkModal> {
                                   children: [
                                     Icon(Icons.layers, size: 16, color: headerTextColor.withOpacity(0.9)),
                                     const SizedBox(width: 6),
-                                    Text(
-                                      tr('$visitedSubCount / $totalSubCount locations visited'),
-                                      style: TextStyle(fontSize: 13, color: headerTextColor.withOpacity(0.85), fontWeight: FontWeight.w500),
+                                    Flexible(
+                                      child: Text(
+                                        tr('$visitedSubCount / $totalSubCount locations visited'),
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(fontSize: 13, color: headerTextColor.withOpacity(0.85), fontWeight: FontWeight.w500),
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -2019,8 +2048,7 @@ class _QuizLandmarkModalState extends State<_QuizLandmarkModal> {
                                   children: [
                                     Icon(Icons.favorite_border, size: 20, color: Colors.grey[700]),
                                     const SizedBox(width: 8),
-                                    Text(tr('Wishlist'), style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: Colors.grey[800])),
-                                    const Spacer(),
+                                    Expanded(child: Text(tr('Wishlist'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: Colors.grey[800]))),
                                     IconButton(
                                       visualDensity: VisualDensity.compact,
                                       icon: Icon(
@@ -2037,8 +2065,7 @@ class _QuizLandmarkModalState extends State<_QuizLandmarkModal> {
                                   children: [
                                     Icon(Icons.star_border, size: 20, color: Colors.grey[700]),
                                     const SizedBox(width: 8),
-                                    Text(tr('My Rating'), style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: Colors.grey[800])),
-                                    const Spacer(),
+                                    Expanded(child: Text(tr('My Rating'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: Colors.grey[800]))),
                                     RatingBar.builder(
                                       initialRating: freshLandmark.rating ?? 0.0,
                                       minRating: 0,
@@ -2064,7 +2091,7 @@ class _QuizLandmarkModalState extends State<_QuizLandmarkModal> {
                                 child: Icon(Icons.layers, size: 18, color: themeColor),
                               ),
                               const SizedBox(width: 12),
-                              Text(tr('Components / Locations'), style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey[900])),
+                              Flexible(child: Text(tr('Components / Locations'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey[900]))),
                             ]),
                             const SizedBox(height: 12),
                             Container(
@@ -2098,14 +2125,17 @@ class _QuizLandmarkModalState extends State<_QuizLandmarkModal> {
                               child: Icon(Icons.history, size: 18, color: themeColor),
                             ),
                             const SizedBox(width: 12),
-                            Text(tr('Visit History'), style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey[900])),
-                            const SizedBox(width: 8),
-                            Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                              decoration: BoxDecoration(color: Colors.grey[200], borderRadius: BorderRadius.circular(12)),
-                              child: Text(tr('${freshLandmark.visitDates.length}'), style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: Colors.grey[700])),
+                            Expanded(
+                              child: Row(children: [
+                                Flexible(child: Text(tr('Visit History'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey[900]))),
+                                const SizedBox(width: 8),
+                                Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                                  decoration: BoxDecoration(color: Colors.grey[200], borderRadius: BorderRadius.circular(12)),
+                                  child: Text(tr('${freshLandmark.visitDates.length}'), style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: Colors.grey[700])),
+                                ),
+                              ]),
                             ),
-                            const Spacer(),
                             OutlinedButton.icon(
                               icon: const Icon(Icons.add, size: 18),
                               label:  Text(tr('Add')),
@@ -2380,9 +2410,11 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
         initiallyExpanded: _isEditing,
         title: Text(
           tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
         ),
-        subtitle: Text(tr('Date: $_year-$_month-$_day'), style: TextStyle(color: Colors.grey[600], fontSize: 13)),
+        subtitle: Text(tr('Date: $_year-$_month-$_day'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(
           icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
           onPressed: () {
@@ -2425,7 +2457,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(tr('Visit Date: $_year-$_month-$_day'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                      Flexible(child: Text(tr('Visit Date: $_year-$_month-$_day'), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14))),
                       TextButton.icon(
                         icon: const Icon(Icons.edit_calendar, size: 18),
                         label:  Text(tr('Edit Date')),

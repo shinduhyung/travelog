@@ -28,14 +28,14 @@ class DuelsScreen extends StatelessWidget {
     final nothing = invites.isEmpty && live.isEmpty && waiting.isEmpty && done.isEmpty;
 
     return Scaffold(
-      appBar: AppBar(title: Text(tr('Duels'))),
+      appBar: AppBar(title: Text(tr('Duels'), maxLines: 1, overflow: TextOverflow.ellipsis)),
       floatingActionButton: FloatingActionButton.extended(
         heroTag: 'new-duel',
         backgroundColor: AppColors.indigo,
         foregroundColor: Colors.white,
         onPressed: () => pickFriendAndDuel(context),
         icon: const Icon(Icons.add),
-        label: Text(tr('New duel')),
+        label: Text(tr('New duel'), maxLines: 1, overflow: TextOverflow.ellipsis),
       ),
       body: !store.duelsLoaded
           ? const Center(child: CircularProgressIndicator())
@@ -197,7 +197,7 @@ class DuelTile extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        tr('vs $name'),
+                        tr('vs {0}').replaceAll('{0}', name),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: theme.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w700),

@@ -182,8 +182,8 @@ def load_key():
     for key in ('TYPESAFE_API_KEY','JEV_API_KEY'):
         if os.environ.get(key):
             return os.environ[key].strip()
-    path = ROOT / '.env'
-    if path.exists():
+    for path in (ROOT / '.env.jev', ROOT / '.env'):
+      if path.exists():
         values = {}
         for line in path.read_text(encoding='utf-8-sig').splitlines():
             key, sep, value = line.strip().partition('=')

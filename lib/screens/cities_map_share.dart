@@ -84,7 +84,7 @@ class CitiesMapShare {
 
       await Share.shareXFiles(
         [XFile(imagePath.path)],
-        text: 'Check out my city travels! I have visited ${visitedCities.length} cities via Travelog.',
+        text: tr('Check out my city travels! I have visited ${visitedCities.length} cities via Travelog.'),
         sharePositionOrigin: sharePositionOrigin,
       );
     } catch (e) {

@@ -54,6 +54,15 @@ def _tour(city, slug, trip):
     return gyg(v["u"]), v["t"], v.get("r"), v.get("n"), v.get("p")
 
 
+def _quest_ok(lm):
+    """Day-trip quests skip restaurants, fast-food-only entries, amusement parks, filming locations,
+    and football stadiums outside Liverpool (user, 2026-11-09)."""
+    a = set(lm.get("attributes") or [])
+    if a & {"Restaurant", "Amusement Park", "Filming Location"} or a == {"Fast Food"}:
+        return False
+    return "Football Stadium" not in a or lm.get("city") == "Liverpool"
+
+
 def render(city, slug, lm_by_name, photo, icon):
     p = HERE / "daytrips" / f"{slug}.json"
     if not p.exists():
@@ -93,7 +102,7 @@ def render(city, slug, lm_by_name, photo, icon):
         tr = "".join(f'<li><b>{MODE_LABEL[k]}{' <span class="dt-best" title="Best way">★</span>' if k == rec else ""}</b>'
                      f'<span>{txt}</span>{btn}</li>' for k, txt, btn in rows)
         see = "".join(f"<li>{e(s)}</li>" for s in t["see"])
-        quests = [n for n in t["quests"] if n in lm_by_name]
+        quests = [n for n in t["quests"] if n in lm_by_name and _quest_ok(lm_by_name[n])]
         used += quests
         thumbs = ""
         if quests:

@@ -133,7 +133,7 @@ class _ReligionMapScreenState extends State<ReligionMapScreen> {
     return Scaffold(
       backgroundColor: backgroundColor,
       appBar: AppBar(
-        title: Text(tr(widget.denominationFilter ?? widget.religionFilter ?? 'World Religions Map')),
+        title: Text(tr(widget.denominationFilter ?? widget.religionFilter ?? 'World Religions Map'), maxLines: 1, overflow: TextOverflow.ellipsis),
         backgroundColor: Colors.transparent,
         elevation: 0,
         foregroundColor: isDarkMode ? Colors.white : Colors.black, // 다크 모드/라이트 모드 제목 색상 조정

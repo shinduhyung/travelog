@@ -225,7 +225,10 @@ class _EditTripLogScreenState extends State<EditTripLogScreen> {
               ),
             )
                 : const Icon(Icons.check_rounded),
-            label: Text(tr(_isLoading ? 'Analyzing...' : 'Save & Analyze')),
+            label: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(tr(_isLoading ? 'Analyzing...' : 'Save & Analyze'), maxLines: 1),
+            ),
             style: ElevatedButton.styleFrom(
               backgroundColor: orange,
               foregroundColor: Colors.white,

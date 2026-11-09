@@ -18,6 +18,13 @@ present) before starting.
 
 ## Rules
 
+- Invented app feature names (CountryDex, mode and game names, badge names)
+  are not brands: localize or paraphrase them, never leave them in English.
+  Use one name per feature everywhere in the language. Only "Travelog",
+  acronyms/codes and real third-party brands stay in Latin script.
+- Tight UI labels (icon-grid tiles, tabs, chips, buttons, FittedBox text) must
+  stay short: about 12 characters or fewer (CJK counts double), preferably a
+  single noun. The app shrinks long text until it is unreadable.
 - Write fluent, natural text as a native editor would for a travel guide.
   Restructure sentences rather than translating word for word.
 - Keep placeholders such as `{0}` and `{1}` exactly. Word order may move them.

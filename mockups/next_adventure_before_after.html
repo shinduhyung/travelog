@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Next Adventure Before After</title>
+<style>
+  *{box-sizing:border-box;margin:0}
+  body{font-family:-apple-system,"Segoe UI",Roboto,sans-serif;background:#e9ebf2;color:#111827;padding:28px 16px 60px}
+  h1{font-size:20px;margin-bottom:4px}
+  .lead{font-size:13px;color:#6b7280;margin-bottom:24px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;max-width:1100px}
+  .col{display:flex;flex-direction:column;gap:6px}
+  .tag{font-size:12px;font-weight:800;color:#1E1B6B}
+  .note{font-size:12.5px;color:#4b5563;line-height:1.5;min-height:38px}
+  .phone{background:#fff;border-radius:26px;padding:16px;border:1px solid #dfe2ec}
+  .card{background:#F6F7FB;border-radius:22px;padding:14px 8px 14px 16px}
+  .bar{height:46px;background:#fff;border-radius:23px;display:flex;align-items:center;padding:0 4px 0 14px;gap:8px;color:#9ca3af;font-size:15px}
+  .bar span{flex:1}
+  .go{width:38px;height:38px;border-radius:50%;background:#00C2E8;color:#fff;display:grid;place-items:center;font-size:18px}
+  .ttl{font-size:16px;font-weight:800;color:#111827}
+  .head{margin-bottom:10px;padding-right:8px}
+  .sub{font-size:12px;font-weight:600;color:#6b7280;margin-top:10px}
+
+  .h3 em{font-style:normal;color:#00A5C7}
+  .h8 .ttl{background:linear-gradient(transparent 58%,#bdf0fb 58%);padding:0 3px;margin-left:-3px}
+  .h9 .ttl{font-size:18px;letter-spacing:-.3px}
+  .h9 .ttl b{font-weight:300}
+  .h9 .ttl i{font-style:normal;font-weight:900}
+  .h7{display:flex;align-items:center;gap:8px}
+  .h7 .line{flex:1;border-top:2px dotted #b6e9f5;position:relative;top:1px}
+  .h1{display:flex;align-items:center;gap:8px}
+  .h1 .ic{width:26px;height:26px;border-radius:9px;background:linear-gradient(135deg,#00C2E8,#3b36b8);display:grid;place-items:center;font-size:14px}
+</style>
+</head>
+<body>
+<h1>Next Adventure: before and after</h1>
+<p class="lead">Based on the current screen. After: title becomes "Next Adventure", placeholder becomes "Search", the gray feature line is removed, and the title gets one light touch.</p>
+
+<div class="grid">
+
+  <div class="col">
+    <div class="tag">Now</div>
+    <div class="note">Fake "Paris" text, gray feature line.</div>
+    <div class="phone"><div class="card">
+      <div class="head"><span class="ttl">Your next adventure</span></div>
+      <div class="bar">🔍<span>Paris</span><div class="go">→</div></div>
+      <div class="sub">Day trips · Plans · Hotels · Souvenirs</div>
+    </div></div>
+  </div>
+
+  <div class="col">
+    <div class="tag">A · Accent word</div>
+    <div class="note">Simplest. Only "Adventure" in cyan.</div>
+    <div class="phone"><div class="card">
+      <div class="head h3"><span class="ttl">Next <em>Adventure</em></span></div>
+      <div class="bar">🔍<span>Search</span><div class="go">→</div></div>
+    </div></div>
+  </div>
+
+  <div class="col">
+    <div class="tag">B · Weight contrast</div>
+    <div class="note">Typography only, no extra color.</div>
+    <div class="phone"><div class="card">
+      <div class="head h9"><span class="ttl"><b>Next</b> <i>Adventure</i></span></div>
+      <div class="bar">🔍<span>Search</span><div class="go">→</div></div>
+    </div></div>
+  </div>
+
+  <div class="col">
+    <div class="tag">C · Highlighter</div>
+    <div class="note">Soft marker stroke behind the title.</div>
+    <div class="phone"><div class="card">
+      <div class="head h8"><span class="ttl">Next Adventure</span></div>
+      <div class="bar">🔍<span>Search</span><div class="go">→</div></div>
+    </div></div>
+  </div>
+
+  <div class="col">
+    <div class="tag">D · Route line</div>
+    <div class="note">Dotted flight path to a tiny plane.</div>
+    <div class="phone"><div class="card">
+      <div class="head h7"><span class="ttl">Next Adventure</span><span class="line"></span><span>✈️</span></div>
+      <div class="bar">🔍<span>Search</span><div class="go">→</div></div>
+    </div></div>
+  </div>
+
+  <div class="col">
+    <div class="tag">E · Icon badge</div>
+    <div class="note">Small compass tile before the title.</div>
+    <div class="phone"><div class="card">
+      <div class="head h1"><div class="ic">🧭</div><span class="ttl">Next Adventure</span></div>
+      <div class="bar">🔍<span>Search</span><div class="go">→</div></div>
+    </div></div>
+  </div>
+
+</div>
+</body>
+</html>

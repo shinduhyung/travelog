@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Next Adventure Phone View</title>
+<style>
+  *{box-sizing:border-box;margin:0}
+  body{font-family:-apple-system,"Segoe UI",Roboto,sans-serif;background:#e9ebf2;color:#111827;padding:24px 16px 60px}
+  h1{font-size:20px;margin-bottom:4px}
+  .lead{font-size:13px;color:#6b7280;margin-bottom:22px;max-width:640px}
+  .wrap{display:flex;flex-wrap:wrap;gap:24px}
+  .col{width:360px;display:flex;flex-direction:column;gap:6px}
+  .tag{font-size:12px;font-weight:800;color:#1E1B6B}
+  .note{font-size:12.5px;color:#4b5563;line-height:1.5;min-height:56px}
+
+  /* 360px phone screen, portrait */
+  .screen{width:360px;background:#fff;border-radius:28px;border:1px solid #d6d9e5;padding:14px 16px 18px;overflow:hidden}
+  .status{display:flex;justify-content:space-between;font-size:11px;font-weight:700;color:#6b7280;margin:0 4px 12px}
+  .ghost{height:70px;border-radius:22px;background:#f1f2f7;margin-bottom:12px}
+  .ghost.s{height:46px;margin:12px 0 0}
+
+  .card{background:#F6F7FB;border-radius:22px;padding:14px 12px 14px 16px}
+  .ttl{font-size:16px;font-weight:800;color:#111827;margin-bottom:10px;padding-right:4px}
+  .ttl em{font-style:normal;color:#00A5C7}
+  .bar{height:46px;background:#fff;border-radius:23px;display:flex;align-items:center;padding:0 4px 0 14px;gap:8px;color:#9ca3af;font-size:15px}
+  .bar span{flex:1}
+  .go{width:38px;height:38px;border-radius:50%;background:#00C2E8;color:#fff;display:grid;place-items:center;font-size:18px}
+
+  /* F1 one-row chips */
+  .f1{display:flex;gap:6px;margin-top:10px;padding-right:4px}
+  .f1 span{flex:1;background:#fff;border-radius:12px;padding:7px 0;text-align:center;font-size:11.5px;font-weight:700;color:#374151;white-space:nowrap}
+
+  /* F2 round icons */
+  .f2{display:flex;justify-content:space-between;margin-top:12px;padding:0 6px 0 2px}
+  .f2 div{text-align:center;width:64px}
+  .f2 i{display:grid;place-items:center;width:40px;height:40px;margin:0 auto 4px;border-radius:50%;background:#fff;font-style:normal;font-size:19px}
+  .f2 b{font-size:11px;font-weight:700;color:#4b5563}
+
+  /* F3 inline text with icons */
+  .f3{margin-top:11px;font-size:12px;font-weight:600;color:#6b7280;display:flex;justify-content:space-between;padding-right:6px}
+
+  /* F4 2x2 */
+  .f4{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px;padding-right:4px}
+  .f4 div{background:#fff;border-radius:12px;padding:8px 10px;display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;color:#374151}
+
+  /* F5 sentence */
+  .f5{margin-top:10px;font-size:12.5px;color:#6b7280;line-height:1.4;padding-right:6px}
+  .f5 b{color:#374151}
+</style>
+</head>
+<body>
+<h1>Next Adventure: phone view, with the bottom line fixed too</h1>
+<p class="lead">Shown at real portrait width (360px) inside a home screen. Title uses the accent-word style; swap in any other title style from the earlier files. The gray "Day trips · Plans · Hotels · Souvenirs" line is redesigned in five ways.</p>
+
+<div class="wrap">
+
+  <div class="col">
+    <div class="tag">Now</div>
+    <div class="note">Text-only gray line, fake "Paris".</div>
+    <div class="screen"><div class="status"><span>9:41</span><span>●●●</span></div>
+      <div class="ghost"></div>
+      <div class="card">
+        <div class="ttl" style="margin-bottom:10px">Your next adventure</div>
+        <div class="bar">🔍<span>Paris</span><div class="go">→</div></div>
+        <div style="margin-top:10px;font-size:12px;font-weight:600;color:#6b7280">Day trips · Plans · Hotels · Souvenirs</div>
+      </div>
+      <div class="ghost s"></div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="tag">F1 · Four chips in one row</div>
+    <div class="note">Same info, now tappable-looking chips that fill the width evenly. Closest to today, easiest to build.</div>
+    <div class="screen"><div class="status"><span>9:41</span><span>●●●</span></div>
+      <div class="ghost"></div>
+      <div class="card">
+        <div class="ttl">Next <em>Adventure</em></div>
+        <div class="bar">🔍<span>Search a city</span><div class="go">→</div></div>
+        <div class="f1"><span>🚌 Day trips</span><span>🗓️ Plans</span><span>🏨 Hotels</span><span>🎁 Gifts</span></div>
+      </div>
+      <div class="ghost s"></div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="tag">F2 · Round icons with labels</div>
+    <div class="note">Like quick actions. Reads as "what's inside", more visual, a bit taller.</div>
+    <div class="screen"><div class="status"><span>9:41</span><span>●●●</span></div>
+      <div class="ghost"></div>
+      <div class="card">
+        <div class="ttl">Next <em>Adventure</em></div>
+        <div class="bar">🔍<span>Search a city</span><div class="go">→</div></div>
+        <div class="f2">
+          <div><i>🚌</i><b>Day trips</b></div>
+          <div><i>🗓️</i><b>Plans</b></div>
+          <div><i>🏨</i><b>Hotels</b></div>
+          <div><i>🎁</i><b>Souvenirs</b></div>
+        </div>
+      </div>
+      <div class="ghost s"></div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="tag">F3 · Icons in the gray line</div>
+    <div class="note">Keep the quiet one-line look but add small icons so each word is easier to scan. Smallest change.</div>
+    <div class="screen"><div class="status"><span>9:41</span><span>●●●</span></div>
+      <div class="ghost"></div>
+      <div class="card">
+        <div class="ttl">Next <em>Adventure</em></div>
+        <div class="bar">🔍<span>Search a city</span><div class="go">→</div></div>
+        <div class="f3"><span>🚌 Day trips</span><span>🗓️ Plans</span><span>🏨 Hotels</span><span>🎁 Souvenirs</span></div>
+      </div>
+      <div class="ghost s"></div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="tag">F4 · 2×2 tiles</div>
+    <div class="note">Biggest tap targets, clearest list of features. Makes the card taller, so it dominates the home screen more.</div>
+    <div class="screen"><div class="status"><span>9:41</span><span>●●●</span></div>
+      <div class="ghost"></div>
+      <div class="card">
+        <div class="ttl">Next <em>Adventure</em></div>
+        <div class="bar">🔍<span>Search a city</span><div class="go">→</div></div>
+        <div class="f4"><div>🚌 Day trips</div><div>🗓️ Plans</div><div>🏨 Hotels</div><div>🎁 Souvenirs</div></div>
+      </div>
+      <div class="ghost s"></div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="tag">F5 · One sentence</div>
+    <div class="note">Plain sentence explaining the result: "Search a city for day trips, plans, hotels and souvenirs." Most literal.</div>
+    <div class="screen"><div class="status"><span>9:41</span><span>●●●</span></div>
+      <div class="ghost"></div>
+      <div class="card">
+        <div class="ttl">Next <em>Adventure</em></div>
+        <div class="bar">🔍<span>Search a city</span><div class="go">→</div></div>
+        <div class="f5">Get <b>day trips</b>, <b>plans</b>, <b>hotels</b> and <b>souvenirs</b> for any city.</div>
+      </div>
+      <div class="ghost s"></div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

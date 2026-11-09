@@ -162,11 +162,14 @@ class AreaStatsScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(
+                    Expanded(
+                      child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           tr('Land Covered'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
@@ -177,12 +180,15 @@ class AreaStatsScreen extends StatelessWidget {
                         const SizedBox(height: 4),
                         Text(
                           tr('Total Area'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                             fontWeight: FontWeight.bold,
                             color: Colors.black87,
                           ),
                         ),
                       ],
+                    ),
                     ),
                     // 백분율 뱃지
                     Container(
@@ -293,6 +299,8 @@ class AreaStatsScreen extends StatelessWidget {
             children: [
               Text(
                 tr(label),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   fontSize: 12,
                   color: Colors.grey.shade600,
@@ -505,15 +513,18 @@ class AreaStatsScreen extends StatelessWidget {
               children: [
                 Icon(icon, size: 16, color: color),
                 const SizedBox(width: 8),
-                Text(
-                  tr(label),
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.grey.shade700,
-                    fontSize: 13,
+                Expanded(
+                  child: Text(
+                    tr(label),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey.shade700,
+                      fontSize: 13,
+                    ),
                   ),
                 ),
-                const Spacer(),
                 Text(
                   tr(formattedValue),
                   style: TextStyle(
@@ -668,7 +679,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                   children: [
                     Icon(_selectedRanking.icon, color: rankingThemeColor),
                     const SizedBox(width: 12),
-                    Text(tr(_selectedRanking.title), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                    Flexible(child: Text(tr(_selectedRanking.title), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
                   ],
                 ),
                 const SizedBox(height: 8),
@@ -677,7 +688,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                     Expanded(
                         child: SegmentedButton<int>(
                           showSelectedIcon: false,
-                          segments:  [ButtonSegment<int>(value: 0, label: Text(tr('All'))), ButtonSegment<int>(value: 1, label: Text(tr('Visited')))],
+                          segments:  [ButtonSegment<int>(value: 0, label: Text(tr('All'), maxLines: 1, overflow: TextOverflow.ellipsis)), ButtonSegment<int>(value: 1, label: Text(tr('Visited'), maxLines: 1, overflow: TextOverflow.ellipsis))],
                           selected: {_displaySegment},
                           onSelectionChanged: (s) { _displaySegment = s.first; _onFilterChanged(); },
                           style: SegmentedButton.styleFrom(
@@ -695,7 +706,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                     Expanded(
                         child: SegmentedButton<int>(
                           showSelectedIcon: false,
-                          segments:  [ButtonSegment<int>(value: 0, label: Text(tr('High'))), ButtonSegment<int>(value: 1, label: Text(tr('Low')))],
+                          segments:  [ButtonSegment<int>(value: 0, label: Text(tr('High'), maxLines: 1, overflow: TextOverflow.ellipsis)), ButtonSegment<int>(value: 1, label: Text(tr('Low'), maxLines: 1, overflow: TextOverflow.ellipsis))],
                           selected: {_sortOrderSegment},
                           onSelectionChanged: (s) { _sortOrderSegment = s.first; _onFilterChanged(); },
                           style: SegmentedButton.styleFrom(
@@ -757,7 +768,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                               const SizedBox(width: 12),
                               Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 18)), // 국기 추가
                               const SizedBox(width: 8),
-                              Expanded(child: Text(tr(country.name), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                              Expanded(child: Text(tr(country.name), maxLines: 1, overflow: TextOverflow.ellipsis, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
                               Text(tr('${compactFormatter.format(value)}${_selectedRanking.unit}'), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),

@@ -194,7 +194,7 @@ class _RomanEmpireMapScreenState extends State<RomanEmpireMapScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title:  Text(tr('Roman Empire (100 AD)'), style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
+        title:  Text(tr('Roman Empire (100 AD)'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
         backgroundColor: Colors.white,
         elevation: 0,
         iconTheme: const IconThemeData(color: Colors.black),
@@ -238,17 +238,18 @@ class _RomanEmpireMapScreenState extends State<RomanEmpireMapScreen> {
             bottom: 30, left: 20,
             child: Container(
               padding: const EdgeInsets.all(12),
+              constraints: BoxConstraints(maxWidth: MediaQuery.sizeOf(context).width - 40),
               decoration: BoxDecoration(color: Colors.white.withOpacity(0.95), borderRadius: BorderRadius.circular(12), boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 10)]),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                    Text(tr('Legend'), style: TextStyle(fontWeight: FontWeight.bold)),
                   const SizedBox(height: 8),
-                  Row(children: [Container(width: 12, height: 12, decoration: BoxDecoration(color: Colors.purple.shade700.withOpacity(0.5), shape: BoxShape.circle)), const SizedBox(width: 8),  Text(tr('Visited (Inside Empire)'))]),
+                  Row(mainAxisSize: MainAxisSize.min, children: [Container(width: 12, height: 12, decoration: BoxDecoration(color: Colors.purple.shade700.withOpacity(0.5), shape: BoxShape.circle)), const SizedBox(width: 8),  Flexible(child: Text(tr('Visited (Inside Empire)'), maxLines: 1, overflow: TextOverflow.ellipsis))]),
                   const SizedBox(height: 4),
-                  Row(children: [Container(width: 12, height: 12, decoration: BoxDecoration(border: Border.all(color: Colors.grey.withOpacity(0.5)), shape: BoxShape.circle)), const SizedBox(width: 8),  Text(tr('Other Countries'))]),
+                  Row(mainAxisSize: MainAxisSize.min, children: [Container(width: 12, height: 12, decoration: BoxDecoration(border: Border.all(color: Colors.grey.withOpacity(0.5)), shape: BoxShape.circle)), const SizedBox(width: 8),  Flexible(child: Text(tr('Other Countries'), maxLines: 1, overflow: TextOverflow.ellipsis))]),
                   const SizedBox(height: 4),
-                  Row(children: [Container(width: 12, height: 12, decoration: BoxDecoration(border: Border.all(color: Colors.black, width: 2.0), shape: BoxShape.circle)), const SizedBox(width: 8),  Text(tr('Empire Border'))]),
+                  Row(mainAxisSize: MainAxisSize.min, children: [Container(width: 12, height: 12, decoration: BoxDecoration(border: Border.all(color: Colors.black, width: 2.0), shape: BoxShape.circle)), const SizedBox(width: 8),  Flexible(child: Text(tr('Empire Border'), maxLines: 1, overflow: TextOverflow.ellipsis))]),
                 ],
               ),
             ),

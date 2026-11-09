@@ -348,27 +348,37 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                TextButton(
-                                  onPressed: () => Navigator.pop(sheetContext),
-                                  style: TextButton.styleFrom(
-                                    backgroundColor: Colors.white.withOpacity(0.18),
-                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                                Flexible(
+                                  child: TextButton(
+                                    onPressed: () => Navigator.pop(sheetContext),
+                                    style: TextButton.styleFrom(
+                                      backgroundColor: Colors.white.withOpacity(0.18),
+                                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                                      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                                    ),
+                                    child: FittedBox(
+                                      fit: BoxFit.scaleDown,
+                                      child: Text(tr('Cancel'), maxLines: 1,
+                                          style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600, fontSize: 13)),
+                                    ),
                                   ),
-                                  child:  Text(tr('Cancel'),
-                                      style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600, fontSize: 13)),
                                 ),
                                 MyMatchBadge.landmark(landmark: freshLandmark, onDark: true),
-                                ElevatedButton(
-                                  onPressed: () => Navigator.pop(sheetContext),
-                                  style: ElevatedButton.styleFrom(
-                                    backgroundColor: headerTextColor,
-                                    foregroundColor: themeColor,
-                                    elevation: 0,
-                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                                    padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
+                                Flexible(
+                                  child: ElevatedButton(
+                                    onPressed: () => Navigator.pop(sheetContext),
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: headerTextColor,
+                                      foregroundColor: themeColor,
+                                      elevation: 0,
+                                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                                      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
+                                    ),
+                                    child: FittedBox(
+                                      fit: BoxFit.scaleDown,
+                                      child: Text(tr('Done'), maxLines: 1, style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13)),
+                                    ),
                                   ),
-                                  child:  Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13)),
                                 ),
                               ],
                             ),
@@ -388,7 +398,8 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                             const SizedBox(height: 10),
                             Row(
                               children: [
-                                Container(
+                                Flexible(
+                                  child: Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                                   decoration: BoxDecoration(
                                     color: Colors.white.withOpacity(0.18),
@@ -402,6 +413,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                                       Flexible(
                                         child: Text(
                                           tr(locationDisplay),
+                                          maxLines: 1,
                                           overflow: TextOverflow.ellipsis,
                                           style: TextStyle(
                                             fontSize: 12.5,
@@ -412,6 +424,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                                       ),
                                     ],
                                   ),
+                                ),
                                 ),
                                 if (isVisited || visitedSubCount > 0) ...[
                                   const SizedBox(width: 8),
@@ -451,8 +464,8 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('Wishlist:')), IconButton(visualDensity: VisualDensity.compact, icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey), onPressed: () => provider.toggleWishlistStatus(freshLandmark.name))]),
-                              Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('My Rating:')), const SizedBox(width: 8), RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating))]),
+                              Flexible(child: Row(mainAxisSize: MainAxisSize.min, children: [ Flexible(child: Text(tr('Wishlist:'), maxLines: 1, overflow: TextOverflow.ellipsis)), IconButton(visualDensity: VisualDensity.compact, icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey), onPressed: () => provider.toggleWishlistStatus(freshLandmark.name))])),
+                              Flexible(child: Row(mainAxisSize: MainAxisSize.min, children: [ Flexible(child: Text(tr('My Rating:'), maxLines: 1, overflow: TextOverflow.ellipsis)), const SizedBox(width: 8), RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating))])),
                             ],
                           ),
                           const Divider(height: 20),
@@ -477,7 +490,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                             ),
                             const Divider(height: 24),
                           ],
-                          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text(tr('History (${freshLandmark.visitDates.length} entries)'), style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit')), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
+                          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Flexible(child: Text(tr('History (${freshLandmark.visitDates.length} entries)'), maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(sheetContext).textTheme.titleSmall)), OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit')), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
                           const SizedBox(height: 8),
                           if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => _LandmarkVisitEditorCard(
                             key: ValueKey('${freshLandmark.name}_${entry.key}'),
@@ -526,8 +539,8 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                      TextButton(onPressed: () => Navigator.pop(sheetContext), child: Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
-                      ElevatedButton(onPressed: () => Navigator.pop(sheetContext), child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)), style: ElevatedButton.styleFrom(backgroundColor: headerTextColor)),
+                      Flexible(child: TextButton(onPressed: () => Navigator.pop(sheetContext), child: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Cancel'), maxLines: 1, style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))))),
+                      Flexible(child: ElevatedButton(onPressed: () => Navigator.pop(sheetContext), child: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Done'), maxLines: 1, style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))), style: ElevatedButton.styleFrom(backgroundColor: headerTextColor))),
                     ]),
                     const SizedBox(height: 12),
                     Row(children: [
@@ -545,8 +558,8 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                          Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('Wishlist:')), IconButton(visualDensity: VisualDensity.compact, icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey), onPressed: () => provider.toggleWishlistStatus(freshSite.name))]),
-                          Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('My Rating:')), const SizedBox(width: 8), RatingBar.builder(initialRating: freshSite.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshSite.name, rating))]),
+                          Flexible(child: Row(mainAxisSize: MainAxisSize.min, children: [ Flexible(child: Text(tr('Wishlist:'), maxLines: 1, overflow: TextOverflow.ellipsis)), IconButton(visualDensity: VisualDensity.compact, icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey), onPressed: () => provider.toggleWishlistStatus(freshSite.name))])),
+                          Flexible(child: Row(mainAxisSize: MainAxisSize.min, children: [ Flexible(child: Text(tr('My Rating:'), maxLines: 1, overflow: TextOverflow.ellipsis)), const SizedBox(width: 8), RatingBar.builder(initialRating: freshSite.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshSite.name, rating))])),
                         ]),
                         const Divider(height: 20),
                         if (freshSite.locations.length > 1) ...[
@@ -561,7 +574,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                           ),
                           const Divider(height: 24),
                         ],
-                        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text(tr('History (${freshSite.visitDates.length} entries)'), style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit')), onPressed: () => provider.addVisitDate(freshSite.name))]),
+                        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Flexible(child: Text(tr('History (${freshSite.visitDates.length} entries)'), maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(sheetContext).textTheme.titleSmall)), OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit')), onPressed: () => provider.addVisitDate(freshSite.name))]),
                         const SizedBox(height: 8),
                         if (freshSite.visitDates.isNotEmpty) ...freshSite.visitDates.asMap().entries.map((entry) => _UnescoVisitEditorCard(key: ValueKey('${freshSite.name}_${entry.key}'), siteName: freshSite.name, visitDate: entry.value, index: entry.key, onDelete: () => provider.removeVisitDate(freshSite.name, entry.key), availableLocations: freshSite.locations)) else  Center(child: Text(tr('No visits recorded.'))),
                         const Divider(height: 24),
@@ -594,7 +607,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
         children: [
           Icon(icon, size: 22, color: themeColor),
           const SizedBox(width: 10),
-          Text(tr(title), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: themeColor)),
+          Flexible(child: Text(tr(title), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: themeColor))),
         ],
       ),
     );
@@ -687,7 +700,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                 if (showSubtitle)
                   Padding(
                     padding: const EdgeInsets.only(top: 4, left: 0),
-                    child: Text(tr(subtitle), style: TextStyle(fontSize: 13, color: Colors.grey.shade600)),
+                    child: Text(tr(subtitle), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 13, color: Colors.grey.shade600)),
                   ),
               ],
             ),
@@ -877,8 +890,8 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(tr(title), style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-                      Text(tr(subtitle), style: TextStyle(fontSize: 12, color: Colors.grey.shade600)),
+                      Text(tr(title), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                      Text(tr(subtitle), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12, color: Colors.grey.shade600)),
                     ],
                   ),
                 ),
@@ -1189,12 +1202,16 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                     children: [
                       const Icon(Icons.emoji_events_rounded, color: Colors.amber, size: 24),
                       const SizedBox(width: 8),
-                      Text(
-                        tr('Highlights in ${widget.country.name}'),
-                        style: const TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w800,
-                          color: Color(0xFF111827),
+                      Flexible(
+                        child: Text(
+                          tr('Highlights in ${widget.country.name}'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w800,
+                            color: Color(0xFF111827),
+                          ),
                         ),
                       ),
                     ],
@@ -1476,7 +1493,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          InkWell(
+                          Flexible(child: InkWell(
                             onTap: () {
                               if (isHomeCountry) {
                                 countryProvider.clearHomeCountry();
@@ -1496,19 +1513,23 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                                     size: 24,
                                   ),
                                   const SizedBox(height: 3),
-                                  Text(
-                                    tr('Home'),
-                                    style: TextStyle(
-                                      fontSize: 10,
-                                      color: isHomeCountry ? cardColor : Colors.grey.shade600,
-                                      fontWeight: isHomeCountry ? FontWeight.bold : FontWeight.normal,
+                                  FittedBox(
+                                    fit: BoxFit.scaleDown,
+                                    child: Text(
+                                      tr('Home'),
+                                      maxLines: 1,
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        color: isHomeCountry ? cardColor : Colors.grey.shade600,
+                                        fontWeight: isHomeCountry ? FontWeight.bold : FontWeight.normal,
+                                      ),
                                     ),
                                   ),
                                 ],
                               ),
                             ),
-                          ),
-                          InkWell(
+                          )),
+                          Flexible(child: InkWell(
                             onTap: () {
                               countryProvider.toggleLivedStatus(widget.country.name);
                             },
@@ -1524,19 +1545,23 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                                     size: 24,
                                   ),
                                   const SizedBox(height: 3),
-                                  Text(
-                                    tr('Lived'),
-                                    style: TextStyle(
-                                      fontSize: 10,
-                                      color: hasLived ? cardColor : Colors.grey.shade600,
-                                      fontWeight: hasLived ? FontWeight.bold : FontWeight.normal,
+                                  FittedBox(
+                                    fit: BoxFit.scaleDown,
+                                    child: Text(
+                                      tr('Lived'),
+                                      maxLines: 1,
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        color: hasLived ? cardColor : Colors.grey.shade600,
+                                        fontWeight: hasLived ? FontWeight.bold : FontWeight.normal,
+                                      ),
                                     ),
                                   ),
                                 ],
                               ),
                             ),
-                          ),
-                          InkWell(
+                          )),
+                          Flexible(child: InkWell(
                             onTap: () {
                               countryProvider.toggleCountryWishlistStatus(widget.country.name);
                             },
@@ -1552,18 +1577,22 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                                     size: 24,
                                   ),
                                   const SizedBox(height: 3),
-                                  Text(
-                                    tr('Favorite'),
-                                    style: TextStyle(
-                                      fontSize: 10,
-                                      color: isWishlisted ? Colors.red : Colors.grey.shade600,
-                                      fontWeight: isWishlisted ? FontWeight.bold : FontWeight.normal,
+                                  FittedBox(
+                                    fit: BoxFit.scaleDown,
+                                    child: Text(
+                                      tr('Favorite'),
+                                      maxLines: 1,
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        color: isWishlisted ? Colors.red : Colors.grey.shade600,
+                                        fontWeight: isWishlisted ? FontWeight.bold : FontWeight.normal,
+                                      ),
                                     ),
                                   ),
                                 ],
                               ),
                             ),
-                          ),
+                          )),
                         ],
                       ),
                     ),
@@ -2173,6 +2202,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
     return IgnorePointer(
       ignoring: !_isEditMode,
       child: DropdownButtonFormField<T>(
+        isExpanded: true,
         value: value,
         isDense: true,
         decoration: InputDecoration(
@@ -2201,6 +2231,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
               fontSize: (item == null) ? 9.0 : 13.5,
               color: (item == null) ? Colors.grey.shade600 : null,
             ),
+            maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),
         ))
@@ -2227,6 +2258,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
             Flexible(
               child: Text(
                 tr(widget.title),
+                maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -2240,6 +2272,8 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
         subtitle: widget.subtitle != null
             ? Text(
           tr(widget.subtitle!),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: TextStyle(fontSize: 13, color: Colors.grey.shade600),
         )
             : null,
@@ -2692,7 +2726,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                                 color: _isTransfer ? Colors.blue : Colors.grey.shade600,
                               ),
                               const SizedBox(width: 6),
-                               Text(tr('Transfer'), style: TextStyle(fontWeight: FontWeight.w500)),
+                               Flexible(child: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Transfer'), maxLines: 1, style: TextStyle(fontWeight: FontWeight.w500)))),
                               Checkbox(
                                 value: _isTransfer,
                                 onChanged: !_isEditMode ? null : (val) {
@@ -2731,7 +2765,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                                 color: _isLayover ? Colors.orange : Colors.grey.shade600,
                               ),
                               const SizedBox(width: 6),
-                               Text(tr('Layover'), style: TextStyle(fontWeight: FontWeight.w500)),
+                               Flexible(child: FittedBox(fit: BoxFit.scaleDown, child: Text(tr('Layover'), maxLines: 1, style: TextStyle(fontWeight: FontWeight.w500)))),
                               Checkbox(
                                 value: _isLayover,
                                 onChanged: !_isEditMode ? null : (val) {
@@ -2925,7 +2959,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: ExpansionTile(
         controller: _expansionTileController, initiallyExpanded: _isEditing,
-        title: Text(tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
+        title: Text(tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'), maxLines: 1, overflow: TextOverflow.ellipsis,
             style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
         subtitle: Text(tr('Date: $_year-$_month-$_day'), style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
@@ -2944,7 +2978,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             if (_isEditing) ...[
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                Text(tr('Visit Date: $_year-$_month-$_day'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                Flexible(child: Text(tr('Visit Date: $_year-$_month-$_day'), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14))),
                 TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label:  Text(tr('Edit Date')),
                     onPressed: () => _selectDate(context), style: TextButton.styleFrom(visualDensity: VisualDensity.compact)),
               ]),
@@ -3096,7 +3130,7 @@ class _UnescoVisitEditorCardState extends State<_UnescoVisitEditorCard> {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: ExpansionTile(
         controller: _expansionTileController, initiallyExpanded: _isEditing,
-        title: Text(tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
+        title: Text(tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'), maxLines: 1, overflow: TextOverflow.ellipsis,
             style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
         subtitle: Text(tr('Date: $_year-$_month-$_day'), style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
@@ -3115,7 +3149,7 @@ class _UnescoVisitEditorCardState extends State<_UnescoVisitEditorCard> {
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             if (_isEditing) ...[
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                Text(tr('Visit Date: $_year-$_month-$_day'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                Flexible(child: Text(tr('Visit Date: $_year-$_month-$_day'), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14))),
                 TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label:  Text(tr('Edit Date')),
                     onPressed: () => _selectDate(context), style: TextButton.styleFrom(visualDensity: VisualDensity.compact)),
               ]),

@@ -106,10 +106,12 @@ class OverviewTab extends StatelessWidget {
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900, color: color)),
-          Text(label,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: theme.textTheme.labelSmall?.copyWith(color: AppColors.label, fontWeight: FontWeight.w600)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(label,
+                maxLines: 1,
+                style: theme.textTheme.labelSmall?.copyWith(color: AppColors.label, fontWeight: FontWeight.w600)),
+          ),
         ],
       ),
     );

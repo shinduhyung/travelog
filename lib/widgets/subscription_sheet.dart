@@ -144,12 +144,16 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
                   size: 20,
                 ),
                 SizedBox(width: 8),
-                Text(
-                  tr('Premium Active'),
-                  style: TextStyle(
-                    color: Color(0xFF3DDAD7),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 15,
+                Flexible(
+                  child: Text(
+                    tr('Premium Active'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      color: Color(0xFF3DDAD7),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                    ),
                   ),
                 ),
               ],
@@ -551,13 +555,17 @@ class _PlanSwitch extends StatelessWidget {
                   ]
                 : null,
           ),
-          child: Text(
-            tr(label),
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 13,
-              fontWeight: FontWeight.w700,
-              color: active ? Colors.white : const Color(0xFF888C99),
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              tr(label),
+              textAlign: TextAlign.center,
+              maxLines: 1,
+              style: TextStyle(
+                fontSize: 13,
+                fontWeight: FontWeight.w700,
+                color: active ? Colors.white : const Color(0xFF888C99),
+              ),
             ),
           ),
         ),
@@ -756,9 +764,13 @@ class _PlanHeroCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 6),
-              Text(
-                tr(_priceSuffix),
-                style: TextStyle(fontSize: 13, color: suffixColor),
+              Flexible(
+                child: Text(
+                  tr(_priceSuffix),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(fontSize: 13, color: suffixColor),
+                ),
               ),
             ],
           ),
@@ -1069,12 +1081,16 @@ class _GradientGlowButton extends StatelessWidget {
                         valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
                       ),
                     )
-                  : Text(
-                      tr(label),
-                      style: const TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                  : FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(
+                        tr(label),
+                        maxLines: 1,
+                        style: const TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
             ),

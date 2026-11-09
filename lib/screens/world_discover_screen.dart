@@ -91,6 +91,8 @@ class _WorldDiscoverScreenState extends State<WorldDiscoverScreen> {
                   ),
                   title:  Text(
                     tr('Discover'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       color: Colors.black87,
                       fontWeight: FontWeight.w800,
@@ -150,9 +152,13 @@ class _WorldDiscoverScreenState extends State<WorldDiscoverScreen> {
         children: [
           Icon(Icons.search_rounded, color: Colors.grey.shade400, size: 22),
           const SizedBox(width: 10),
-          Text(
-            tr('Search destinations'),
-            style: TextStyle(color: Colors.grey.shade400, fontSize: 15, fontWeight: FontWeight.w500),
+          Expanded(
+            child: Text(
+              tr('Search destinations'),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(color: Colors.grey.shade400, fontSize: 15, fontWeight: FontWeight.w500),
+            ),
           ),
         ],
       ),
@@ -172,7 +178,7 @@ class _WorldDiscoverScreenState extends State<WorldDiscoverScreen> {
           return GestureDetector(
             onTap: () => setState(() => _selectedCategory = category),
             child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               decoration: BoxDecoration(
                 color: isSelected ? mint : Colors.white,
                 borderRadius: BorderRadius.circular(999),
@@ -183,6 +189,7 @@ class _WorldDiscoverScreenState extends State<WorldDiscoverScreen> {
               alignment: Alignment.center,
               child: Text(
                 tr(category),
+                maxLines: 1,
                 style: TextStyle(
                   color: isSelected ? Colors.white : Colors.grey.shade700,
                   fontWeight: FontWeight.w600,

@@ -291,6 +291,8 @@ class _TravelerTypeSelectorScreenState extends State<TravelerTypeSelectorScreen>
                 children: [
                   Text(
                     tr(_topTypeLabel!),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.w900,
@@ -480,6 +482,8 @@ class _TravelerTypeSelectorScreenState extends State<TravelerTypeSelectorScreen>
                 children: [
                   Text(
                     tr(title),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w800,
@@ -490,6 +494,8 @@ class _TravelerTypeSelectorScreenState extends State<TravelerTypeSelectorScreen>
                   const SizedBox(height: 4),
                   Text(
                     tr(subtitle),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 13,
                       color: Colors.grey[600],

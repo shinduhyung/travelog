@@ -14,6 +14,9 @@ void main() {
   test('old-engine results (no version) are invalid and get discarded', () {
     expect(TravelerTypeStore.isValid(_result()), isFalse);
     expect(TravelerTypeStore.isValid(_result(version: 1)), isFalse);
+    expect(TravelerTypeStore.isValid(_result(version: 3)), isFalse);
+    expect(TravelerTypeStore.isValid(_result(version: 4)), isFalse);
+    expect(TravelerTypeStore.isValid(_result(version: 5)), isFalse);
   });
 
   test('current-engine result with scores is valid', () {

@@ -626,14 +626,18 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
               children: [
                 Icon(Icons.calendar_today, size: 16, color: Colors.grey.shade700),
                 const SizedBox(width: 8),
-                Text(
-                  tr(_selectedDateRangeOption == 'Custom' && _customDateRange != null
-                      ? '${_customDateRange!.start.toLocal().toString().split(' ')[0]} ~ ${_customDateRange!.end.toLocal().toString().split(' ')[0]}'
-                      : _selectedDateRangeOption),
-                  style: TextStyle(
-                    fontSize: 13,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.grey.shade800,
+                Flexible(
+                  child: Text(
+                    tr(_selectedDateRangeOption == 'Custom' && _customDateRange != null
+                        ? '${_customDateRange!.start.toLocal().toString().split(' ')[0]} ~ ${_customDateRange!.end.toLocal().toString().split(' ')[0]}'
+                        : _selectedDateRangeOption),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.grey.shade800,
+                    ),
                   ),
                 ),
                 const SizedBox(width: 4),
@@ -811,6 +815,8 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                       children: [
                         Text(
                           tr('$remainingCountries ${_selectedContinentOption == 'All' ? 'countries' : 'in $_selectedContinentOption'} waiting'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: const TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 15,
@@ -818,6 +824,8 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                         ),
                         Text(
                           tr('Keep exploring!'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                             fontSize: 12,
                             color: Colors.grey.shade600,
@@ -880,11 +888,15 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          tr(subregion),
-                          style: const TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
+                        Flexible(
+                          child: Text(
+                            tr(subregion),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                         Container(
@@ -1003,12 +1015,16 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      tr(subregion),
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15,
-                        color: Colors.black87,
+                    Flexible(
+                      child: Text(
+                        tr(subregion),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                          color: Colors.black87,
+                        ),
                       ),
                     ),
                     Row(
@@ -1135,7 +1151,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                   children: [
                     Icon(Icons.insights, color: Theme.of(context).primaryColor),
                     const SizedBox(width: 8),
-                    Text(tr('Data Explorer'), style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                    Flexible(child: Text(tr('Data Explorer'), maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
                   ],
                 ),
                 const SizedBox(height: 16),
@@ -1489,7 +1505,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                     final country = spotIndexToCountry[spots.indexOf(spot)];
                     if (country != null) {
                       return ScatterTooltipItem(
-                        country.name,
+                        tr(country.name),
                         textStyle: const TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -1532,7 +1548,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                        Text(tr('Selected Country'), style: TextStyle(fontSize: 10, color: Colors.grey, fontWeight: FontWeight.bold)),
-                      Text(tr(_selectedCountry!.name), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                      Text(tr(_selectedCountry!.name), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                     ],
                   ),
                 ),
@@ -1919,9 +1935,13 @@ class _OverviewRankingCardState extends State<_OverviewRankingCard> {
                         child: Row(children: [
                           Icon(group.icon, color: group.themeColor),
                           const SizedBox(width: 12),
-                          Text(tr(group.title),
-                              style: textTheme.titleMedium
-                                  ?.copyWith(fontWeight: FontWeight.bold)),
+                          Flexible(
+                            child: Text(tr(group.title),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: textTheme.titleMedium
+                                    ?.copyWith(fontWeight: FontWeight.bold)),
+                          ),
                         ]),
                       ))
                           .toList(),
@@ -1943,8 +1963,8 @@ class _OverviewRankingCardState extends State<_OverviewRankingCard> {
                       child: SegmentedButton<int>(
                         showSelectedIcon: false,
                         segments:  [
-                          ButtonSegment<int>(value: 0, label: Text(tr('High'))),
-                          ButtonSegment<int>(value: 1, label: Text(tr('Low'))),
+                          ButtonSegment<int>(value: 0, label: Text(tr('High'), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                          ButtonSegment<int>(value: 1, label: Text(tr('Low'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                         ],
                         selected: {_sortOrderSegment},
                         onSelectionChanged: (s) {
@@ -2065,6 +2085,8 @@ class _OverviewRankingCardState extends State<_OverviewRankingCard> {
                               const SizedBox(width: 6),
                               Expanded(
                                   child: Text(tr(country.name),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
                                       style: textTheme.titleMedium?.copyWith(
                                           fontWeight: FontWeight.bold))),
                               Text(
@@ -2249,16 +2271,22 @@ class _RatingTierCard extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Row(
-                      children: [
-                        const Icon(Icons.star_rounded, color: Colors.amber),
-                        const SizedBox(width: 8),
-                        Text(
-                          tr('Rating Tiers'),
-                          style: textTheme.titleMedium
-                              ?.copyWith(fontWeight: FontWeight.bold),
-                        ),
-                      ],
+                    Flexible(
+                      child: Row(
+                        children: [
+                          const Icon(Icons.star_rounded, color: Colors.amber),
+                          const SizedBox(width: 8),
+                          Flexible(
+                            child: Text(
+                              tr('Rating Tiers'),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: textTheme.titleMedium
+                                  ?.copyWith(fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                     IconButton(
                       icon: const Icon(Icons.add_circle_outline),
@@ -2298,16 +2326,22 @@ class _RatingTierCard extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
-                  children: [
-                    const Icon(Icons.star_rounded, color: Colors.amber),
-                    const SizedBox(width: 8),
-                    Text(
-                      tr('Rating Tiers'),
-                      style: textTheme.titleMedium
-                          ?.copyWith(fontWeight: FontWeight.bold),
-                    ),
-                  ],
+                Flexible(
+                  child: Row(
+                    children: [
+                      const Icon(Icons.star_rounded, color: Colors.amber),
+                      const SizedBox(width: 8),
+                      Flexible(
+                        child: Text(
+                          tr('Rating Tiers'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: textTheme.titleMedium
+                              ?.copyWith(fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 IconButton(
                   icon: const Icon(Icons.add_circle_outline),

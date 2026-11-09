@@ -162,7 +162,7 @@ class _RecommendationsScreenState extends State<RecommendationsScreen> {
     Localizations.maybeLocaleOf(context);
     if (_error != null) {
       return DiscoverScaffold(
-        appBar: AppBar(title: Text(tr('AI Recommendation'))),
+        appBar: AppBar(title: Text(tr('AI Recommendation'), maxLines: 1, overflow: TextOverflow.ellipsis)),
         body: Center(
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -179,14 +179,14 @@ class _RecommendationsScreenState extends State<RecommendationsScreen> {
     }
     if (!_isDataLoaded) {
       return DiscoverScaffold(
-        appBar: AppBar(title: Text(tr('AI Recommendation'))),
+        appBar: AppBar(title: Text(tr('AI Recommendation'), maxLines: 1, overflow: TextOverflow.ellipsis)),
         body: const Center(child: CircularProgressIndicator()),
       );
     }
 
     if ((_results['country']?.ratedCount ?? 0) < 5) {
       return DiscoverScaffold(
-        appBar: AppBar(title: Text(tr('AI Recommendation'))),
+        appBar: AppBar(title: Text(tr('AI Recommendation'), maxLines: 1, overflow: TextOverflow.ellipsis)),
         body: SafeArea(
           child: Center(
             child: Padding(
@@ -199,7 +199,7 @@ class _RecommendationsScreenState extends State<RecommendationsScreen> {
     }
 
     return DiscoverScaffold(
-      appBar: AppBar(title: Text(tr('AI Recommendation'))),
+      appBar: AppBar(title: Text(tr('AI Recommendation'), maxLines: 1, overflow: TextOverflow.ellipsis)),
       body: SafeArea(
         child: CustomScrollView(
           physics: const BouncingScrollPhysics(),
@@ -294,13 +294,17 @@ class _RecommendationsScreenState extends State<RecommendationsScreen> {
                 const SizedBox(width: 10),
                 Icon(icon, size: 16, color: color),
                 const SizedBox(width: 6),
-                Text(
-                  tr(title),
-                  style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w800,
-                    color: const Color(0xFF111827),
-                    letterSpacing: -0.2,
+                Flexible(
+                  child: Text(
+                    tr(title),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w800,
+                      color: const Color(0xFF111827),
+                      letterSpacing: -0.2,
+                    ),
                   ),
                 ),
                 const Spacer(),
@@ -386,7 +390,7 @@ class _RecommendationsScreenState extends State<RecommendationsScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    match.name,
+                    AppLocale.instance.countryName(match.name),
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
@@ -401,6 +405,8 @@ class _RecommendationsScreenState extends State<RecommendationsScreen> {
                     const SizedBox(height: 5),
                     Text(
                       tr(country),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
                         fontSize: 12,
                         color: Color(0xFF64748B),
@@ -612,6 +618,8 @@ class _RecommendationsScreenState extends State<RecommendationsScreen> {
                               ),
                               Text(
                                 tr(countryModel?.name ?? countryCode),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
                                   fontSize: 16,
                                   color: headerTextColor.withOpacity(0.8),
@@ -698,11 +706,15 @@ class _RecommendationsScreenState extends State<RecommendationsScreen> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
-                                tr('Visits'),
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
+                              Flexible(
+                                child: Text(
+                                  tr('Visits'),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
                               ),
                               TextButton.icon(
@@ -779,9 +791,13 @@ class _RecommendationsScreenState extends State<RecommendationsScreen> {
         children: [
           Icon(icon, size: 20, color: themeColor),
           const SizedBox(width: 12),
-          Text(
-            tr(label),
-            style: const TextStyle(fontSize: 15, color: Colors.black87),
+          Flexible(
+            child: Text(
+              tr(label),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(fontSize: 15, color: Colors.black87),
+            ),
           ),
           const Spacer(),
           Text(
@@ -974,9 +990,10 @@ class _RecommendationsScreenState extends State<RecommendationsScreen> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Row(
+                              Flexible(
+                                child: Row(
                                 children: [
-                                  Text(tr('Wishlist:')),
+                                  Flexible(child: Text(tr('Wishlist:'), maxLines: 1, overflow: TextOverflow.ellipsis)),
                                   IconButton(
                                     icon: Icon(
                                       isWishlisted
@@ -992,6 +1009,7 @@ class _RecommendationsScreenState extends State<RecommendationsScreen> {
                                         ),
                                   ),
                                 ],
+                              ),
                               ),
                               RatingBar.builder(
                                 initialRating: freshLandmark.rating ?? 0.0,
@@ -1231,10 +1249,14 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
         initiallyExpanded: _isEditing,
         title: Text(
           tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
         ),
         subtitle: Text(
           tr('Date: $_year-$_month-$_day'),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: TextStyle(color: Colors.grey[600], fontSize: 13),
         ),
         trailing: IconButton(
@@ -1282,11 +1304,15 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        tr('Visit Date: $_year-$_month-$_day'),
-                        style: const TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 14,
+                      Flexible(
+                        child: Text(
+                          tr('Visit Date: $_year-$_month-$_day'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 14,
+                          ),
                         ),
                       ),
                       TextButton.icon(

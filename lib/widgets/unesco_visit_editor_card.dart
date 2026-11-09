@@ -164,10 +164,14 @@ class _UnescoVisitEditorCardState extends State<UnescoVisitEditorCard> {
         initiallyExpanded: _isEditing,
         title: Text(
           tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
         ),
         subtitle: Text(
           tr('Date: $_year-$_month-$_day'),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: TextStyle(color: Colors.grey[600], fontSize: 13),
         ),
         trailing: IconButton(
@@ -200,8 +204,12 @@ class _UnescoVisitEditorCardState extends State<UnescoVisitEditorCard> {
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               if (_isEditing) ...[
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text(tr('Visit Date: $_year-$_month-$_day'),
-                      style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                  Flexible(
+                    child: Text(tr('Visit Date: $_year-$_month-$_day'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                  ),
                   TextButton.icon(
                     icon: const Icon(Icons.edit_calendar, size: 18),
                     label:  Text(tr('Edit Date')),

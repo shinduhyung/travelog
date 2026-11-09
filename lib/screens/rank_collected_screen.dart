@@ -51,13 +51,17 @@ class RankCollectedScreen extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                Text(
-                  tr("RANK PROMOTED!"),
-                  style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.w900,
-                    color: levelColor,
-                    letterSpacing: 1.2,
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    tr("RANK PROMOTED!"),
+                    maxLines: 1,
+                    style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.w900,
+                      color: levelColor,
+                      letterSpacing: 1.2,
+                    ),
                   ),
                 ),
                 const SizedBox(height: 12),
@@ -67,12 +71,16 @@ class RankCollectedScreen extends StatelessWidget {
                   style: TextStyle(fontSize: 14, color: Colors.grey, fontWeight: FontWeight.w500),
                 ),
                 const SizedBox(height: 24),
-                Text(
-                  tr(rankName),
-                  style: TextStyle(
-                    fontSize: 32,
-                    fontWeight: FontWeight.w800,
-                    color: levelColor,
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    tr(rankName),
+                    maxLines: 1,
+                    style: TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.w800,
+                      color: levelColor,
+                    ),
                   ),
                 ),
                 const SizedBox(height: 32),
@@ -89,6 +97,8 @@ class RankCollectedScreen extends StatelessWidget {
                     ),
                     child:  Text(
                       tr("Awesome!"),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
                   ),

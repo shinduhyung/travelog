@@ -688,12 +688,15 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                             ),
                                           ),
                                           const SizedBox(width: 16),
-                                          Column(
+                                          Flexible(
+                                          child: Column(
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
                                                 tr('Total Visited'),
+                                                maxLines: 1,
+                                                overflow: TextOverflow.ellipsis,
                                                 style: TextStyle(
                                                   fontSize: 13,
                                                   fontWeight: FontWeight.w600,
@@ -737,18 +740,23 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                                         },
                                                   ),
                                                   const SizedBox(width: 6),
-                                                   Text(
-                                                    tr('cities'),
-                                                    style: TextStyle(
-                                                      fontSize: 16,
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                      color: Colors.black54,
+                                                  Flexible(
+                                                    child: Text(
+                                                      tr('cities'),
+                                                      maxLines: 1,
+                                                      overflow: TextOverflow.ellipsis,
+                                                      style: TextStyle(
+                                                        fontSize: 16,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                        color: Colors.black54,
+                                                      ),
                                                     ),
                                                   ),
                                                 ],
                                               ),
                                             ],
+                                          ),
                                           ),
                                         ],
                                       ),
@@ -866,6 +874,8 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                                         Expanded(
                                                           child: Text(
                                                             tr('Top Country'),
+                                                            maxLines: 1,
+                                                            overflow: TextOverflow.ellipsis,
                                                             style: TextStyle(
                                                               fontSize: 11,
                                                               fontWeight:
@@ -939,6 +949,8 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                                       ),
                                                       child: Text(
                                                         tr('$topCountryCityCount ${topCountryCityCount == 1 ? 'city' : 'cities'}'),
+                                                        maxLines: 1,
+                                                        overflow: TextOverflow.ellipsis,
                                                         style: TextStyle(
                                                           fontSize: 14,
                                                           fontWeight:
@@ -1030,6 +1042,8 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                                       Expanded(
                                                         child: Text(
                                                           tr('Top Region'),
+                                                          maxLines: 1,
+                                                          overflow: TextOverflow.ellipsis,
                                                           style: TextStyle(
                                                             fontSize: 11,
                                                             fontWeight:
@@ -1104,6 +1118,8 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                                     ),
                                                     child: Text(
                                                       tr('$topContinentCount ${topContinentCount == 1 ? 'city' : 'cities'}'),
+                                                      maxLines: 1,
+                                                      overflow: TextOverflow.ellipsis,
                                                       style: TextStyle(
                                                         fontSize: 14,
                                                         fontWeight:
@@ -1367,6 +1383,8 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                           children: [
                                             Text(
                                               tr(statisticsItems[_selectedStatIndex]['title']),
+                                              maxLines: 1,
+                                              overflow: TextOverflow.ellipsis,
                                               style: const TextStyle(
                                                 fontSize: 18,
                                                 fontWeight: FontWeight.w700,

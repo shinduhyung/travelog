@@ -2292,6 +2292,7 @@ class _MiniToggle extends StatelessWidget {
         ),
         child: Text(
           tr(label),
+          maxLines: 1,
           style: TextStyle(
             color: value
                 ? accent
@@ -2505,7 +2506,7 @@ class _MapLabCountrySelectorState extends State<MapLabCountrySelector> {
 
     return _countries
         .where((c) =>
-    c.name.toLowerCase().contains(q) ||
+    AppLocale.instance.matchesCountry(c.name, q) ||
         c.isoA2.toLowerCase().contains(q))
         .toList();
   }
@@ -2543,6 +2544,8 @@ class _MapLabCountrySelectorState extends State<MapLabCountrySelector> {
       appBar: AppBar(
         title:  Text(
           tr('Select Countries'),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: TextStyle(fontWeight: FontWeight.w700, color: Colors.white),
         ),
         centerTitle: true,
@@ -2664,7 +2667,7 @@ class _MapLabCountrySelectorState extends State<MapLabCountrySelector> {
                       const SizedBox(width: 10),
                       Expanded(
                         child: Text(
-                          c.name,
+                          AppLocale.instance.countryName(c.name),
                           style: TextStyle(
                             fontSize: 15.5,
                             color: selected ? mintDark : Colors.black87,
@@ -2698,7 +2701,7 @@ class _MapLabCountrySelectorState extends State<MapLabCountrySelector> {
           Expanded(
             child: OutlinedButton(
               onPressed: () => Navigator.pop(context, false),
-              child:  Text(tr('Cancel')),
+              child:  Text(tr('Cancel'), maxLines: 1, overflow: TextOverflow.ellipsis),
             ),
           ),
           const SizedBox(width: 12),
@@ -2706,7 +2709,7 @@ class _MapLabCountrySelectorState extends State<MapLabCountrySelector> {
             child: FilledButton(
               onPressed: _apply,
               style: FilledButton.styleFrom(backgroundColor: mint),
-              child:  Text(tr('Apply')),
+              child:  Text(tr('Apply'), maxLines: 1, overflow: TextOverflow.ellipsis),
             ),
           ),
         ],

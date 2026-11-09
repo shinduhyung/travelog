@@ -93,6 +93,8 @@ class _FlightConnectionScreenState extends State<FlightConnectionScreen> {
                 children: [
                   Text(
                     tr('My Trips'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
@@ -101,13 +103,18 @@ class _FlightConnectionScreenState extends State<FlightConnectionScreen> {
                     ),
                   ),
                   const SizedBox(height: 4),
-                   Text(
-                    tr('Connected Flights'),
-                    style: TextStyle(
-                      fontSize: 32,
-                      fontWeight: FontWeight.w800,
-                      color: Colors.black87,
-                      letterSpacing: -0.5,
+                  FittedBox(
+                    fit: BoxFit.scaleDown,
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      tr('Connected Flights'),
+                      maxLines: 1,
+                      style: TextStyle(
+                        fontSize: 32,
+                        fontWeight: FontWeight.w800,
+                        color: Colors.black87,
+                        letterSpacing: -0.5,
+                      ),
                     ),
                   ),
                 ],
@@ -273,6 +280,7 @@ class _FlightConnectionScreenState extends State<FlightConnectionScreen> {
                               ),
                               child: Text(
                                 tr(startDate),
+                                maxLines: 1,
                                 style: TextStyle(
                                     fontSize: 12,
                                     color: Colors.grey.shade600,
@@ -292,6 +300,7 @@ class _FlightConnectionScreenState extends State<FlightConnectionScreen> {
                       ),
                       child: Text(
                         tr('$count flights'),
+                        maxLines: 1,
                         style: TextStyle(fontSize: 12, color: Colors.orange.shade800, fontWeight: FontWeight.bold),
                       ),
                     )
@@ -610,6 +619,7 @@ class _ItineraryBuilderScreenState extends State<_ItineraryBuilderScreen> {
       backgroundColor: Colors.grey[50],
       appBar: AppBar(
         title: Text(tr(widget.existingConnection != null ? 'Edit Itinerary' : 'Add Itinerary'),
+            maxLines: 1, overflow: TextOverflow.ellipsis,
             style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
@@ -706,6 +716,8 @@ class _ItineraryBuilderScreenState extends State<_ItineraryBuilderScreen> {
       Icon(Icons.add_circle, color: Colors.orange.shade200, size: 40),
       const SizedBox(height: 10),
       Text(tr('Tap to select Flight ${index + 1}'),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: TextStyle(color: Colors.orange.shade800, fontSize: 16, fontWeight: FontWeight.w600)
       ),
     ]),
@@ -716,10 +728,12 @@ class _ItineraryBuilderScreenState extends State<_ItineraryBuilderScreen> {
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-            decoration: BoxDecoration(color: Colors.grey[100], borderRadius: BorderRadius.circular(8)),
-            child: Text(log.airlineName ?? 'Airline', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+          Flexible(
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+              decoration: BoxDecoration(color: Colors.grey[100], borderRadius: BorderRadius.circular(8)),
+              child: Text(log.airlineName ?? 'Airline', maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+            ),
           ),
           Text(tr(log.date ?? ''), style: const TextStyle(color: Colors.grey, fontSize: 12)),
         ],
@@ -847,14 +861,19 @@ class _ItineraryBuilderScreenState extends State<_ItineraryBuilderScreen> {
                     color: hasDuration ? themeColor : Colors.grey[400],
                   ),
                   const SizedBox(width: 6),
-                  Text(
-                    tr(hasDuration
-                        ? (durationStr == 'Unknown' ? 'Unknown' : durationStr!)
-                        : 'Set Duration'),
-                    style: TextStyle(
-                      color: hasDuration ? themeColor : Colors.grey[400],
-                      fontWeight: FontWeight.w600,
-                      fontSize: 12,
+                  ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 120),
+                    child: Text(
+                      tr(hasDuration
+                          ? (durationStr == 'Unknown' ? 'Unknown' : durationStr!)
+                          : 'Set Duration'),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        color: hasDuration ? themeColor : Colors.grey[400],
+                        fontWeight: FontWeight.w600,
+                        fontSize: 12,
+                      ),
                     ),
                   ),
                 ],

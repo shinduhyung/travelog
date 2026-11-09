@@ -24,6 +24,8 @@ class NewTag extends StatelessWidget {
           const SizedBox(width: 2),
           Text(
             tr('NEW'),
+            maxLines: 1,
+            softWrap: false,
             style: const TextStyle(fontSize: 9, fontWeight: FontWeight.w900, color: Colors.white, letterSpacing: 0.3),
           ),
         ],

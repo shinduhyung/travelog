@@ -126,6 +126,8 @@ class _MyJourneyScreenState extends State<MyJourneyScreen> {
         scrolledUnderElevation: 0,
         title:  Text(
           tr('My Journey'),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: TextStyle(
             fontWeight: FontWeight.w800,
             color: Colors.black87,
@@ -153,12 +155,16 @@ class _MyJourneyScreenState extends State<MyJourneyScreen> {
                         borderRadius: BorderRadius.circular(2)),
                   ),
                   const SizedBox(width: 8),
-                  Text(
-                    tr('My Documents'),
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w700,
-                      color: Colors.grey.shade800,
+                  Flexible(
+                    child: Text(
+                      tr('My Documents'),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.grey.shade800,
+                      ),
                     ),
                   ),
                 ],
@@ -220,6 +226,8 @@ class _MyJourneyScreenState extends State<MyJourneyScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(tr('Traveler Type'),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.w600,
@@ -229,6 +237,8 @@ class _MyJourneyScreenState extends State<MyJourneyScreen> {
                       tr(_travelerType?.isNotEmpty == true
                           ? _travelerType!
                           : 'Analyze DNA'),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.w700,
@@ -340,6 +350,8 @@ class _MyJourneyScreenState extends State<MyJourneyScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(tr(title),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w700,
@@ -347,6 +359,8 @@ class _MyJourneyScreenState extends State<MyJourneyScreen> {
                     if (subtitle.isNotEmpty) ...[
                       const SizedBox(height: 2),
                       Text(tr(subtitle),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                               fontSize: 13,
                               color: Colors.grey.shade500,
@@ -367,6 +381,8 @@ class _MyJourneyScreenState extends State<MyJourneyScreen> {
           const SizedBox(height: 12),
           Text(tr(title),
               textAlign: TextAlign.center,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
               style: const TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w700,
@@ -433,6 +449,8 @@ class _MyJourneyScreenState extends State<MyJourneyScreen> {
               Icon(icon, color: color, size: 32),
               const SizedBox(height: 12),
               Text(tr(title),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w600,

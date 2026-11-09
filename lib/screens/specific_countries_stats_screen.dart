@@ -33,7 +33,7 @@ class SpecificCountriesStatsScreen extends StatelessWidget {
       itemBuilder: (context, index) {
         final country = countries[index];
         return ListTile(
-          title: Text(tr(country.name)),
+          title: Text(tr(country.name), maxLines: 1, overflow: TextOverflow.ellipsis),
           trailing: const Icon(Icons.arrow_forward_ios, size: 16),
           onTap: () {
             // 탭하면 해당 국가의 세부 지역 화면으로 이동

@@ -70,7 +70,7 @@ class _FlagCountry {
 
   String get displayName => code.length == 2
       ? AppLocale.instance.countryName(name)
-      : name;
+      : tr(name);
 
   /// Emoji to render, or null if this entry renders from an image instead.
   String? get emoji {
@@ -1117,8 +1117,14 @@ class _GradientButtonState extends State<_GradientButton> {
                 Icon(widget.icon, color: fg, size: 20),
                 const SizedBox(width: 8),
               ],
-              Text(tr(widget.label),
-                  style: TextStyle(color: fg, fontSize: 15.5, fontWeight: FontWeight.w800, letterSpacing: 0.2)),
+              Flexible(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(tr(widget.label),
+                      maxLines: 1,
+                      style: TextStyle(color: fg, fontSize: 15.5, fontWeight: FontWeight.w800, letterSpacing: 0.2)),
+                ),
+              ),
             ],
           ),
         ),
@@ -1193,8 +1199,12 @@ class FlagGuessDifficultyScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 10),
-                   Text(tr('CHOOSE A DIFFICULTY'),
-                      style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.1, color: _kMuted)),
+                   Flexible(
+                    child: Text(tr('CHOOSE A DIFFICULTY'),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.1, color: _kMuted)),
+                  ),
                 ],
               ),
               const SizedBox(height: 16),
@@ -1281,11 +1291,18 @@ class FlagGuessDifficultyScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
                Text(tr('FLAG QUIZ'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800, letterSpacing: 1.6, color: _kMuted)),
               const SizedBox(height: 4),
-               Text(tr('Flag Guess'),
-                  style: TextStyle(
-                      fontSize: 27, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.6, height: 1.05)),
+               FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: Alignment.centerLeft,
+                child: Text(tr('Flag Guess'),
+                    maxLines: 1,
+                    style: TextStyle(
+                        fontSize: 27, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.6, height: 1.05)),
+              ),
               const SizedBox(height: 8),
               Text(tr('Name the country from its flag before time runs out.'),
                   style: TextStyle(
@@ -1365,8 +1382,12 @@ class _DifficultyCard extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Text(tr(_labelFor(difficulty)),
-                          style: const TextStyle(fontSize: 17.5, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.2)),
+                      Flexible(
+                        child: Text(tr(_labelFor(difficulty)),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(fontSize: 17.5, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.2)),
+                      ),
                       if (locked) ...[
                         const SizedBox(width: 6),
                         Icon(Icons.lock_rounded, size: 15, color: color),
@@ -1510,9 +1531,13 @@ class _FlagGuessLobbyScreenState extends State<_FlagGuessLobbyScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
                Text(tr('DIFFICULTY'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.4, color: _kMuted)),
               const SizedBox(height: 2),
               Text(tr('${_labelFor(widget.difficulty)} Mode'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(fontSize: 21, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.3)),
             ],
           ),
@@ -1551,9 +1576,13 @@ class _FlagGuessLobbyScreenState extends State<_FlagGuessLobbyScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(tr('LEADERBOARD'),
-                    style: TextStyle(
-                        fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted)),
+                Flexible(
+                  child: Text(tr('LEADERBOARD'),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                          fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted)),
+                ),
                 Text(tr('${records.length} run${records.length == 1 ? '' : 's'}'),
                     style: TextStyle(fontSize: 12, color: _kFaint, fontWeight: FontWeight.w600)),
               ],
@@ -1627,6 +1656,8 @@ class _RecordTile extends StatelessWidget {
                 const SizedBox(height: 2),
                 Text(
                   tr('${record.roundsCompleted}/${record.maxRounds} rounds · combo ${record.bestCombo} · ${_formatDate(record.playedAt)}'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(fontSize: 11.5, color: _kMuted),
                 ),
               ],
@@ -1936,8 +1967,12 @@ class _FlagGuessGameScreenState extends State<_FlagGuessGameScreen> {
           children: [
             Container(width: 8, height: 8, decoration: BoxDecoration(color: _accent, shape: BoxShape.circle)),
             const SizedBox(width: 8),
-            Text(tr('${_labelFor(widget.difficulty)} Mode'),
-                style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: _kInk, letterSpacing: -0.2)),
+            Flexible(
+              child: Text(tr('${_labelFor(widget.difficulty)} Mode'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: _kInk, letterSpacing: -0.2)),
+            ),
           ],
         ),
         iconTheme: const IconThemeData(color: _kInk),
@@ -2011,8 +2046,12 @@ class _FlagGuessGameScreenState extends State<_FlagGuessGameScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(tr('ROUND ${_roundIndex + 1} / $_maxRounds'),
-                  style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 0.6, color: _kMuted)),
+              Flexible(
+                child: Text(tr('ROUND ${_roundIndex + 1} / $_maxRounds'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 0.6, color: _kMuted)),
+              ),
               if (_combo > 0)
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
@@ -2113,11 +2152,15 @@ class _FlagGuessGameScreenState extends State<_FlagGuessGameScreen> {
                 children: [
                   Text(
                     tr(correct ? 'Correct! +${_lastRoundScore!.toStringAsFixed(1)}' : 'Wrong'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900, color: Colors.white),
                   ),
                   if (!correct) ...[
                     const SizedBox(height: 2),
                     Text(tr('Answer: ${_answer!.displayName}', entities: [_answer!.displayName]),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
                             fontSize: 13.5, fontWeight: FontWeight.w600, color: Colors.white)),
                   ],
@@ -2304,11 +2347,11 @@ class _FlagGuessGameScreenState extends State<_FlagGuessGameScreen> {
                     style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted)),
                 const SizedBox(height: 18),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  _StatChip(label: 'Rounds', value: '${completed ? _maxRounds : _roundIndex}/$_maxRounds'),
+                  Flexible(child: _StatChip(label: 'Rounds', value: '${completed ? _maxRounds : _roundIndex}/$_maxRounds')),
                   const SizedBox(width: 10),
-                  _StatChip(label: 'Best', value: _bestRoundScore.toStringAsFixed(1)),
+                  Flexible(child: _StatChip(label: 'Best', value: _bestRoundScore.toStringAsFixed(1))),
                   const SizedBox(width: 10),
-                  _StatChip(label: 'Combo', value: '$_combo'),
+                  Flexible(child: _StatChip(label: 'Combo', value: '$_combo')),
                 ]),
               ]),
             ),
@@ -2375,10 +2418,14 @@ class _StatChip extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
       decoration: BoxDecoration(color: _kSurface, borderRadius: BorderRadius.circular(14)),
       child: Column(children: [
-        Text(tr(value), style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800, color: _kInk)),
+        FittedBox(fit: BoxFit.scaleDown, child: Text(tr(value), maxLines: 1, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800, color: _kInk))),
         const SizedBox(height: 2),
-        Text(tr(label.toUpperCase()),
-            style: const TextStyle(fontSize: 9.5, fontWeight: FontWeight.w800, letterSpacing: 0.4, color: _kMuted)),
+        FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(tr(label.toUpperCase()),
+              maxLines: 1,
+              style: const TextStyle(fontSize: 9.5, fontWeight: FontWeight.w800, letterSpacing: 0.4, color: _kMuted)),
+        ),
       ]),
     );
   }

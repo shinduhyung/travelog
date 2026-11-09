@@ -233,6 +233,8 @@ class _Header extends StatelessWidget {
                       const SizedBox(height: 6),
                       Text(
                         tr(p.travelerType!),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: theme.textTheme.labelMedium?.copyWith(
                           color: AppColors.darkMint,
                           fontWeight: FontWeight.w800,
