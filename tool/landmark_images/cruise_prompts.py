@@ -10,7 +10,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 from redo import ask, HERE
 
-NAMES = ["Bruges Canal Boat Tour", "Jungle Queen Riverboat", "Lake Annecy Cruise", "Lake Brienz & Thun Cruise",
+NAMES = sys.argv[1:] or ["Bruges Canal Boat Tour", "Jungle Queen Riverboat", "Lake Annecy Cruise", "Lake Brienz & Thun Cruise",
          "Lake Como Ferry", "Lake Lucerne Panoramic Yacht", "Leie River Cruise", "Maid of the Mist",
          "Mekong Delta Sampan", "Melaka River Cruise", "Moliceiro Boat Tour", "Neckar River Solar Boat",
          "Punting on the Cam", "Rideau Canal Cruise", "Trang An Boat Tour"]
@@ -35,7 +35,8 @@ if __name__ == "__main__":
         f = f"{iso}_{snake(n)}.webp"
         row = {"name": n, "city": l.get("city"), "iso3": iso, "file": f, "attributes": l.get("attributes") or [],
                "overview": l.get("overview", "") or "", "prompt": ""}
-        items.append((f, row, "none yet, write it fresh. Show the boat on the water with the place's signature scenery; no passengers' faces"))
+        why = "Show the boat on the water with the place's signature scenery; no passengers' faces" if not sys.argv[1:] else "show the place itself, empty, with its signature features; for an event show its setting and decorations with no crowds; for a painting show the artwork itself"
+        items.append((f, row, "none yet, write it fresh. " + why))
     with ThreadPoolExecutor(5) as pool:
         for f, v in pool.map(ask, items):
             if v:

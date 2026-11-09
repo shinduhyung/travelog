@@ -54,9 +54,18 @@ def _tour(city, slug, trip):
     return gyg(v["u"]), v["t"], v.get("r"), v.get("n"), v.get("p")
 
 
+SKIP_QUESTS = {  # weak day-trip reasons: corporate breweries, people-centred or seasonal events, ordinary zoos (user, 2026-11-09)
+    "Beck's Brewery", "Miller Brewery", "Cervejaria Bohemia", "Holi Festival", "Montreux Jazz Festival", "Chester Zoo",
+    "Zoo Leipzig", "National Zoological Gardens of South Africa", "Aquarium of the Pacific", "Tennessee Aquarium",
+    "Gewandhaus",
+}
+
+
 def _quest_ok(lm):
     """Day-trip quests skip restaurants, fast-food-only entries, amusement parks, filming locations,
-    and football stadiums outside Liverpool (user, 2026-11-09)."""
+    football stadiums outside Liverpool and SKIP_QUESTS (user, 2026-11-09)."""
+    if lm["name"] in SKIP_QUESTS:
+        return False
     a = set(lm.get("attributes") or [])
     if a & {"Restaurant", "Amusement Park", "Filming Location"} or a == {"Fast Food"}:
         return False
