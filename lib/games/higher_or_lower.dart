@@ -32,6 +32,7 @@
 //       - assets/data/higher_or_lower_countries.json
 
 import 'dart:convert';
+import 'package:jidoapp/services/screen_tracking.dart';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -761,7 +762,7 @@ class HigherOrLowerModeScreen extends StatelessWidget {
                   },
                   onTap: () => Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (_) => _DifficultyScreen(metric: m)),
+                    MaterialPageRoute(builder: (_) => AnalyticsScreen(name: 'higher_or_lower_difficulty', child: _DifficultyScreen(metric: m))),
                   ),
                 ),
                 const SizedBox(height: 14),
@@ -935,7 +936,7 @@ class _DifficultyScreen extends StatelessWidget {
                 difficulty: _Difficulty.easy,
                 onTap: () => Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (_) => _LobbyScreen(metric: metric, difficulty: _Difficulty.easy)),
+                  MaterialPageRoute(builder: (_) => AnalyticsScreen(name: 'higher_or_lower_lobby', child: _LobbyScreen(metric: metric, difficulty: _Difficulty.easy))),
                 ),
               ),
               const SizedBox(height: 14),
@@ -943,7 +944,7 @@ class _DifficultyScreen extends StatelessWidget {
                 difficulty: _Difficulty.medium,
                 onTap: () => Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (_) => _LobbyScreen(metric: metric, difficulty: _Difficulty.medium)),
+                  MaterialPageRoute(builder: (_) => AnalyticsScreen(name: 'higher_or_lower_lobby', child: _LobbyScreen(metric: metric, difficulty: _Difficulty.medium))),
                 ),
               ),
               const SizedBox(height: 14),
@@ -951,7 +952,7 @@ class _DifficultyScreen extends StatelessWidget {
                 difficulty: _Difficulty.hard,
                 onTap: () => Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (_) => _LobbyScreen(metric: metric, difficulty: _Difficulty.hard)),
+                  MaterialPageRoute(builder: (_) => AnalyticsScreen(name: 'higher_or_lower_lobby', child: _LobbyScreen(metric: metric, difficulty: _Difficulty.hard))),
                 ),
               ),
               const SizedBox(height: 14),
@@ -963,7 +964,7 @@ class _DifficultyScreen extends StatelessWidget {
                       difficulty: _Difficulty.insane,
                       onTap: () => Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (_) => _LobbyScreen(metric: metric, difficulty: _Difficulty.insane)),
+                        MaterialPageRoute(builder: (_) => AnalyticsScreen(name: 'higher_or_lower_lobby', child: _LobbyScreen(metric: metric, difficulty: _Difficulty.insane))),
                       ),
                     );
                   }
@@ -982,7 +983,7 @@ class _DifficultyScreen extends StatelessWidget {
                             if (context.mounted) {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (_) => _LobbyScreen(metric: metric, difficulty: _Difficulty.insane)),
+                                MaterialPageRoute(builder: (_) => AnalyticsScreen(name: 'higher_or_lower_lobby', child: _LobbyScreen(metric: metric, difficulty: _Difficulty.insane))),
                               );
                             }
                           }
@@ -1172,7 +1173,7 @@ class _LobbyScreenState extends State<_LobbyScreen> {
     await GameAdService.instance.requestStartGame();
     await Navigator.push(
       context,
-      MaterialPageRoute(builder: (_) => _GameScreen(metric: widget.metric, difficulty: widget.difficulty)),
+      MaterialPageRoute(builder: (_) => AnalyticsScreen(name: 'higher_or_lower_game', child: _GameScreen(metric: widget.metric, difficulty: widget.difficulty))),
     );
     _reload();
   }

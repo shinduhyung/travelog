@@ -41,6 +41,7 @@
 //     based on, it's an explore/discover toy, not a quiz.
 
 import 'dart:math';
+import 'package:jidoapp/services/screen_tracking.dart';
 
 import 'package:flutter/material.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
@@ -739,7 +740,7 @@ class _RespawnModeScreenState extends State<RespawnModeScreen> {
   void _openMode(_RespawnMode mode) {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (_) => _RespawnGameScreen(mode: mode)),
+      MaterialPageRoute(builder: (_) => AnalyticsScreen(name: 'respawn_game', child: _RespawnGameScreen(mode: mode))),
     ).then((_) => _load());
   }
 

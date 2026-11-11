@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:jidoapp/services/screen_tracking.dart';
 import 'dart:io';
 
 import 'package:cached_network_image/cached_network_image.dart';
@@ -1449,14 +1450,17 @@ class _UserBoardState extends State<_UserBoard> {
   void _showAll(List<_BoardRow> rows) {
     if (_premiumOnly && !SubscriptionService.instance.isPremium) {
       Navigator.of(context).push(MaterialPageRoute<void>(
-        builder: (_) => Scaffold(
-          appBar: AppBar(title: Text(_title, maxLines: 1, overflow: TextOverflow.ellipsis)),
-          body: StatLockGuard(
-            statKey: 'board.${widget.kind}',
-            locked: true,
-            child: ListView(
-              padding: EdgeInsets.fromLTRB(16, 12, 16, 32 + MediaQuery.of(context).viewPadding.bottom),
-              children: [_BoardCard(title: _title, rows: rows, shown: rows.length)],
+        builder: (_) => AnalyticsScreen(
+          name: 'social_board_locked',
+          child: Scaffold(
+            appBar: AppBar(title: Text(_title, maxLines: 1, overflow: TextOverflow.ellipsis)),
+            body: StatLockGuard(
+              statKey: 'board.${widget.kind}',
+              locked: true,
+              child: ListView(
+                padding: EdgeInsets.fromLTRB(16, 12, 16, 32 + MediaQuery.of(context).viewPadding.bottom),
+                children: [_BoardCard(title: _title, rows: rows, shown: rows.length)],
+              ),
             ),
           ),
         ),
@@ -1794,7 +1798,7 @@ class _SiteLockedRow extends StatelessWidget {
 }
 
 void _openSiteImage(BuildContext context, _SiteItem item, bool locked) {
-  Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => _SiteImagePage(item: item, locked: locked)));
+  Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => AnalyticsScreen(name: 'social_site_image', child: _SiteImagePage(item: item, locked: locked))));
 }
 
 class _SiteImagePage extends StatelessWidget {

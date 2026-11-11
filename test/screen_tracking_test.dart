@@ -39,13 +39,19 @@ void main() {
   });
 
   test(
-    'original taxonomy has 152 unique entries; typed active map has 120',
+    'taxonomy has 152 original + 42 later entries; typed active map has 136',
     () {
-      expect(screenGroups.length, 152);
-      expect(screenWidgetNames.length, 120);
-      expect(screenWidgetNames.values.toSet().length, 120);
+      expect(screenGroups.length, 194);
+      expect(screenWidgetNames.length, 136);
+      expect(screenWidgetNames.values.toSet().length, 136);
       expect(screenWidgetNames.values.every(screenGroups.containsKey), isTrue);
       expect(screenGroups['population_stats'], '2-2');
+      for (final name in const [
+        'discover', 'travelog_polls', 'city_report', 'flag_guess_game',
+        'higher_or_lower_lobby', 'social_stats', 'social_duel_game',
+      ]) {
+        expect(screenGroups[name], isNotNull, reason: name);
+      }
       expect(screenWidgetNames.values, isNot(contains('countries_share')));
     },
   );

@@ -1,6 +1,7 @@
 // lib/screens/calendar_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/services/screen_tracking.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:jidoapp/models/calendar_memo_model.dart';
@@ -218,11 +219,11 @@ class _CalendarScreenState extends State<CalendarScreen> {
   void _showMemoEditPage(BuildContext context, {CalendarMemoModel? memoToEdit}) {
     Navigator.of(context).push(MaterialPageRoute(
       fullscreenDialog: true,
-      builder: (context) => _MemoEditPage(
+      builder: (context) => AnalyticsScreen(name: 'calendar_memo_edit', child: _MemoEditPage(
         memoToEdit: memoToEdit,
         selectedDay: memoToEdit != null ? DateTime.parse(memoToEdit.date) : _selectedDay ?? DateTime.now(),
         pastelBlueMain: _pastelBlueMain,
-      ),
+      )),
     ));
   }
 

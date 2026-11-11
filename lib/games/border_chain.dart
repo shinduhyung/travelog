@@ -67,6 +67,7 @@
 // leaderboard.
 
 import 'dart:convert';
+import 'package:jidoapp/services/screen_tracking.dart';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -795,7 +796,7 @@ class BorderChainDifficultyScreen extends StatelessWidget {
   void _openLobby(BuildContext context, _BorderChainDifficulty difficulty) {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (_) => _BorderChainLobbyScreen(difficulty: difficulty)),
+      MaterialPageRoute(builder: (_) => AnalyticsScreen(name: 'border_chain_lobby', child: _BorderChainLobbyScreen(difficulty: difficulty))),
     );
   }
 }
@@ -930,7 +931,7 @@ class _BorderChainLobbyScreenState extends State<_BorderChainLobbyScreen> {
     await GameAdService.instance.requestStartGame();
     await Navigator.push(
       context,
-      MaterialPageRoute(builder: (_) => _BorderChainGameScreen(difficulty: widget.difficulty)),
+      MaterialPageRoute(builder: (_) => AnalyticsScreen(name: 'border_chain_game', child: _BorderChainGameScreen(difficulty: widget.difficulty))),
     );
     _reload();
   }

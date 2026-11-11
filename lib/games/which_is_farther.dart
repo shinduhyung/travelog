@@ -19,6 +19,7 @@
 // imported into the same place. To add this game somewhere, just:
 //
 //   import 'package:jidoapp/games/which_is_farther.dart';
+import 'package:jidoapp/services/screen_tracking.dart';
 //   ...
 //   Navigator.push(context, MaterialPageRoute(
 //     builder: (_) => const WhichIsFartherDifficultyScreen(),
@@ -640,7 +641,7 @@ class WhichIsFartherDifficultyScreen extends StatelessWidget {
   void _openLobby(BuildContext context, _WhichIsFartherDifficulty difficulty) {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (_) => _WhichIsFartherLobbyScreen(difficulty: difficulty)),
+      MaterialPageRoute(builder: (_) => AnalyticsScreen(name: 'which_is_farther_lobby', child: _WhichIsFartherLobbyScreen(difficulty: difficulty))),
     );
   }
 }
@@ -772,7 +773,7 @@ class _WhichIsFartherLobbyScreenState extends State<_WhichIsFartherLobbyScreen> 
     await GameAdService.instance.requestStartGame();
     await Navigator.push(
       context,
-      MaterialPageRoute(builder: (_) => _WhichIsFartherGameScreen(difficulty: widget.difficulty)),
+      MaterialPageRoute(builder: (_) => AnalyticsScreen(name: 'which_is_farther_game', child: _WhichIsFartherGameScreen(difficulty: widget.difficulty))),
     );
     _reload();
   }
