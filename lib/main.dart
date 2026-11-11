@@ -93,6 +93,7 @@ const MaterialColor mintSwatch = MaterialColor(0xFF3DDAD7, <int, Color>{
 
 const SystemUiOverlayStyle _defaultSystemUiOverlayStyle = SystemUiOverlayStyle(
   statusBarColor: Colors.transparent,
+  statusBarBrightness: Brightness.light, // iOS: dark status bar text
   statusBarIconBrightness: Brightness.dark,
   systemNavigationBarColor: Colors.transparent,
   systemNavigationBarDividerColor: Colors.transparent,
@@ -1090,7 +1091,7 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
   }
 
   void _triggerWidgetUpdate(CountryProvider countryProvider) {
-    if (!Platform.isAndroid) return;
+    if (!HomeWidgetService.isSupported) return;
 
     final visitedNames = countryProvider.visitedCountries;
     final visitedList = countryProvider.allCountries

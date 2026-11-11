@@ -41,8 +41,9 @@ class SocialRepository {
     final uid = user.uid;
     final userRef = _db.collection('users').doc(uid);
 
+    // 로그인 직후엔 캐시에 앱이 막 쓴 일부 필드만 있을 수 있어 원본은 서버에서 읽는다
     final results = await Future.wait([
-      userRef.get(),
+      userRef.get(const GetOptions(source: Source.server)),
       userRef.collection('badges').doc('unlocked').get(),
       _db.collection('game_scores').doc(uid).get(),
       userRef.collection('quiz_history').get(),

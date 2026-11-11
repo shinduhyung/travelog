@@ -117,6 +117,11 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
   late DateTime _selectedDate;
   String _dateStr = "";
 
+  // Date strip scroll: rebuilt per mode so it opens on the selected date, not the start date
+  static const double _calendarItemExtent = 68; // 60 wide + 4 margin each side
+  ScrollController? _calendarController;
+  bool? _calendarControllerExpert;
+
   String _question = "";
   List<String> _options = [];
   bool _isUserCorrect = false;
@@ -198,6 +203,7 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
     _celebrationController.dispose();
     _shakeController.dispose();
     _shimmerController.dispose();
+    _calendarController?.dispose();
     super.dispose();
   }
 
@@ -929,7 +935,21 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
       height: 116,
       color: Colors.white,
       padding: const EdgeInsets.symmetric(vertical: 8),
-      child: ListView.builder(
+      child: LayoutBuilder(builder: (context, constraints) {
+        if (_calendarControllerExpert != _isExpertMode) {
+          final selectedDay = DateTime(_selectedDate.year, _selectedDate.month, _selectedDate.day);
+          final selectedIndex = selectedDay.difference(startDay).inDays.clamp(0, itemCount - 1);
+          final maxOffset = itemCount * _calendarItemExtent - constraints.maxWidth;
+          final centered = (selectedIndex + 0.5) * _calendarItemExtent - constraints.maxWidth / 2;
+          _calendarController?.dispose();
+          _calendarController = ScrollController(
+            initialScrollOffset: maxOffset <= 0 ? 0 : centered.clamp(0, maxOffset).toDouble(),
+          );
+          _calendarControllerExpert = _isExpertMode;
+        }
+        return ListView.builder(
+        key: ValueKey(_isExpertMode),
+        controller: _calendarController,
         scrollDirection: Axis.horizontal,
         itemCount: itemCount,
         itemBuilder: (context, index) {
@@ -1045,7 +1065,8 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
             ],
           );
         },
-      ),
+      );
+      }),
     );
   }
 

@@ -61,6 +61,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
       value: const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
         statusBarIconBrightness: Brightness.light,
+        statusBarBrightness: Brightness.dark,
       ),
       child: Scaffold(
         backgroundColor: const Color(0xFF1ABFBC),

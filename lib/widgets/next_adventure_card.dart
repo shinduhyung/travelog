@@ -322,10 +322,11 @@ void _showLandmarkSheet(BuildContext context, Landmark lm) {
                   style: FilledButton.styleFrom(backgroundColor: _cyan, padding: const EdgeInsets.symmetric(vertical: 14)),
                   onPressed: () async {
                     Navigator.pop(sheetContext);
-                    if (await CityReports.has(city!.name)) {
-                      if (context.mounted) openCityReport(context, city.name);
+                    final target = city!;
+                    if (await CityReports.has(target.name)) {
+                      if (context.mounted) openCityReport(context, target.name);
                     } else if (context.mounted) {
-                      showCityTravelModal(context, city);
+                      showCityTravelModal(context, target);
                     }
                   },
                   icon: const Icon(Icons.travel_explore_rounded),

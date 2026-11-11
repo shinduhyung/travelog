@@ -68,6 +68,7 @@ dependencies:
   uuid: ^4.0.0
   equatable: ^2.0.5
   path_provider: ^2.1.3
+  path_provider_foundation: ^2.4.0
   share_plus: ^12.0.1
   screenshot: ^3.0.0
 
@@ -122,6 +123,10 @@ flutter_native_splash:
     icon_background_color: "#FFFFFF"
 
 flutter:
+  # iOS: gma_mediation_meta declares iOS 13 in its Swift package while the Meta
+  # adapter needs iOS 15, so build plugins through CocoaPods instead of SwiftPM.
+  config:
+    enable-swift-package-manager: false
   uses-material-design: true
 
   assets:

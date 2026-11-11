@@ -49,6 +49,18 @@ class PassportProvider with ChangeNotifier {
     'GGY': 'GBR', 'IMN': 'GBR', 'JEY': 'GBR',
   };
 
+  // Territories left out of the Global Rankings list (they share their sovereign's passport)
+  static const Set<String> rankingHiddenIsos = {
+    'GUM', 'MNP', 'PRI', 'VIR',
+    'BLM', 'MAF', 'NCL', 'PYF', 'SPM', 'WLF',
+    'ABW', 'CUW', 'SXM',
+    'COK', 'NIU',
+    'NFK',
+    'ALA',
+    'GGY', 'IMN', 'JEY', 'GIB',
+    'FRO', 'GRL',
+  };
+
   PassportProvider() {
     loadPassportData();
   }
@@ -123,7 +135,19 @@ class PassportProvider with ChangeNotifier {
         }
       });
 
-      // 3. Load User Selection (Sync with Firebase)
+      // 3. Power Rank: dense rank by visa-free count, same as the Global Rankings tab
+      final rankedScores = _passportDataMap.entries
+          .where((e) => !rankingHiddenIsos.contains(e.key))
+          .map((e) => e.value.visaFreeCountries)
+          .toSet();
+      _passportDataMap = _passportDataMap.map((iso, data) => MapEntry(iso, PassportData(
+        passportName: data.passportName,
+        powerRank: rankedScores.where((s) => s > data.visaFreeCountries).length + 1,
+        visaFreeCountries: data.visaFreeCountries,
+        visaRequirements: data.visaRequirements,
+      )));
+
+      // 4. Load User Selection (Sync with Firebase)
       await _loadUserSelection();
 
     } catch (e) {

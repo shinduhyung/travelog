@@ -411,13 +411,12 @@ class _TripLogCard extends StatelessWidget {
               ),
               if (isoCodesA2.isNotEmpty) ...[
                 const SizedBox(height: 16),
-                Row(
-                  children: isoCodesA2.take(10).map((code) => Padding(
-                    padding: const EdgeInsets.only(right: 8),
-                    child: Text(
-                      tr(_isoToEmoji(code)),
-                      style: const TextStyle(fontSize: 22),
-                    ),
+                Wrap(
+                  spacing: 8,
+                  runSpacing: 4,
+                  children: isoCodesA2.take(10).map((code) => Text(
+                    tr(_isoToEmoji(code)),
+                    style: const TextStyle(fontSize: 22),
                   )).toList(),
                 ),
               ],

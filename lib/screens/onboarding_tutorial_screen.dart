@@ -302,6 +302,7 @@ class _OnboardingTutorialScreenState extends State<OnboardingTutorialScreen>
       value: const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
         statusBarIconBrightness: Brightness.light,
+        statusBarBrightness: Brightness.dark,
       ),
       child: Scaffold(
         backgroundColor: const Color(0xFF1ABFBC),
