@@ -134,6 +134,11 @@ service cloud.firestore {
       allow create: if true;
     }
 
+    // 전면광고 띄우기 실패 / 오래된 광고 폐기 기록 (광고 회사·광고 나이 계측용)
+    match /ad_show_issue_events/{docId} {
+      allow create: if true;
+    }
+
     match /subscription_funnel_events/{docId} {
       allow create: if true;
     }

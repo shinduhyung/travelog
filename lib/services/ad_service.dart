@@ -51,6 +51,20 @@ class AdService {
 
   InterstitialAd? _interstitialAd;
 
+  // 지금 받아둔 광고의 로드 시각과 광고 회사(어댑터). 오래된 광고 폐기와
+  // 실패·노출 계측에 쓴다.
+  DateTime? _adLoadedAt;
+  String? _loadedAdSource;
+
+  // 받아둔 지 이만큼 지난 광고는 띄우지 않고 버린 뒤 새로 받는다.
+  // 미디에이션 광고(특히 Unity)는 오래 묵으면 show가 실패할 수 있어서,
+  // AdMob 권장 유효시간(1시간)보다 여유 있게 잡는다.
+  static const Duration _maxAdAge = Duration(minutes: 50);
+
+  // 실제로 show를 호출한 광고의 회사/나이 (노출 기록용)
+  String? _shownAdSource;
+  int? _shownAdAgeSeconds;
+
   // ─── 광고 SDK 초기화 / 동의 흐름 상태 ────────────────────────────────────
   // MobileAds.initialize()는 UMP 동의(와 iOS ATT)가 끝난 뒤에만 호출한다.
   // 동의 전에 초기화하면 미디에이션 SDK들이 동의 상태를 모른 채 시작된다.
@@ -180,6 +194,8 @@ class AdService {
     _loadRetryTimer?.cancel();
     _interstitialAd?.dispose();
     _interstitialAd = null;
+    _adLoadedAt = null;
+    _loadedAdSource = null;
     // pending 상태로 대기 중이던 광고가 있었더라도, 프리미엄으로 전환된
     // 이상 이후 화면 전환에서 튀어나오면 안 되므로 여기서 완전히 폐기한다.
     _clearPendingAd();
@@ -560,6 +576,8 @@ class AdService {
           _interstitialAd = ad;
           final String adSourceName =
               ad.responseInfo?.mediationAdapterClassName ?? 'unknown';
+          _adLoadedAt = DateTime.now();
+          _loadedAdSource = adSourceName;
 
           ad.onPaidEvent =
               (
@@ -623,8 +641,19 @@ class AdService {
                     '[AdService] failed to show: code=${error.code} '
                     'domain=${error.domain} msg=${error.message}',
                   );
+                  _logAdShowIssueToFirestore(
+                    reason: 'show_failed',
+                    adSourceName: _shownAdSource ?? adSourceName,
+                    adAgeSeconds: _shownAdAgeSeconds,
+                    errorCode: error.code,
+                    errorDomain: error.domain,
+                    errorMessage: error.message,
+                  );
                   ad.dispose();
                   _interstitialAd = null;
+                  // 띄우기에 실패했으면 이번 광고 차례를 버리지 않고 다시
+                  // pending으로 되살려, 다음 화면 전환 때 새 광고로 재시도한다.
+                  _restorePendingAfterShowFailure();
                   loadInterstitialAd();
                 },
           );
@@ -697,6 +726,8 @@ class AdService {
         'triggerSource': _pendingTriggerSource ?? 'unknown',
         'elapsedSecondsSinceLastAd': _pendingElapsedSeconds,
         'touchesSinceLastAd': _pendingTouchesSinceLastAd,
+        'adSourceName': _shownAdSource ?? 'unknown',
+        'adAgeSeconds': _shownAdAgeSeconds,
         'timestamp': FieldValue.serverTimestamp(),
       });
     } catch (e) {
@@ -783,6 +814,24 @@ class AdService {
       return;
     }
 
+    if (_interstitialAd != null && _isLoadedAdStale) {
+      // 너무 오래 묵은 광고 — 띄우다 실패할 수 있으니 버리고 새로 받는다.
+      // pending은 그대로 두고, 새 광고가 준비된 뒤 다음 화면 전환에서 띄운다.
+      _logAdShowIssueToFirestore(
+        reason: 'stale_discarded',
+        adSourceName: _loadedAdSource ?? 'unknown',
+        adAgeSeconds: _loadedAdAgeSeconds,
+      );
+      debugPrint(
+        '[AdService] discarding stale ad ($_loadedAdSource, '
+        '${_loadedAdAgeSeconds}s old)',
+      );
+      _interstitialAd!.dispose();
+      _interstitialAd = null;
+      _adLoadedAt = null;
+      _loadedAdSource = null;
+    }
+
     if (_interstitialAd == null) {
       // 아직 로드가 안 된 상태 — pending은 삭제하지 않고 로드만 요청한다.
       // 지금 화면에서 갑자기 띄우지 않고, 다음 적절한 화면 전환을 기다린다.
@@ -792,6 +841,10 @@ class AdService {
 
     final String triggerSource = _queuedTriggerSource ?? 'timer';
     final now = DateTime.now();
+
+    // 노출/실패 기록용 — show 직전 광고의 회사와 나이를 캡처
+    _shownAdSource = _loadedAdSource;
+    _shownAdAgeSeconds = _loadedAdAgeSeconds;
 
     // Firestore 계측용 필드 — 화면 전환 시점이 아니라 조건을 처음 만족한
     // "그 순간" 캡처된 값을 그대로 사용해서 triggerSource/경과시간/터치수가
@@ -807,8 +860,58 @@ class AdService {
     _isPostTutorialGraceActive = false; // 유예 기간의 첫 광고 노출 → 이후 평소 로직으로 전환
     _interstitialAd!.show();
     _interstitialAd = null;
+    _adLoadedAt = null;
+    _loadedAdSource = null;
 
     _refreshTimerState(); // 시간트리거를 지금 시점부터 다시 카운트하게 재시작
+  }
+
+  bool get _isLoadedAdStale =>
+      _adLoadedAt != null &&
+      DateTime.now().difference(_adLoadedAt!) > _maxAdAge;
+
+  int? get _loadedAdAgeSeconds => _adLoadedAt == null
+      ? null
+      : DateTime.now().difference(_adLoadedAt!).inSeconds;
+
+  /// show 실패 시, _presentPendingAd()가 비워버린 이번 광고 차례를 되살린다.
+  /// 계측값은 _presentPendingAd()가 _pending*에 옮겨둔 원래 값을 그대로
+  /// 돌려놓아서, 재시도로 노출될 때도 최초 조건 충족 시점 기준으로 기록된다.
+  void _restorePendingAfterShowFailure() {
+    if (_isPremium) return;
+    _isAdPending = true;
+    _queuedTriggerSource = _pendingTriggerSource ?? 'timer';
+    _queuedElapsedSeconds = _pendingElapsedSeconds;
+    _queuedTouchesSinceLastAd = _pendingTouchesSinceLastAd;
+    _refreshTimerState(); // pending 중이므로 시간 트리거는 꺼진 상태로 유지됨
+  }
+
+  /// 전면광고 띄우기 실패 / 오래된 광고 폐기 기록. 어떤 광고 회사의 광고가
+  /// 몇 초 묵었을 때 문제가 생기는지 확인하기 위함. 실패해도 광고 흐름엔 영향 없음.
+  Future<void> _logAdShowIssueToFirestore({
+    required String reason,
+    required String adSourceName,
+    int? adAgeSeconds,
+    int? errorCode,
+    String? errorDomain,
+    String? errorMessage,
+  }) async {
+    try {
+      await FirebaseFirestore.instance.collection('ad_show_issue_events').add({
+        'reason': reason, // 'show_failed' | 'stale_discarded'
+        'adSourceName': adSourceName,
+        'adAgeSeconds': adAgeSeconds,
+        'errorCode': errorCode,
+        'errorDomain': errorDomain,
+        'errorMessage': errorMessage,
+        'platform': Platform.isIOS ? 'ios' : 'android',
+        'adExperimentGroup': _groupLabel,
+        'deviceId': _deviceId,
+        'timestamp': FieldValue.serverTimestamp(),
+      });
+    } catch (e) {
+      debugPrint('[AdService] show issue log error: $e');
+    }
   }
 
   /// [추가] 실제 PageRoute 화면 전환(push/pop/replace, 필요시 탭 전환)이

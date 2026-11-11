@@ -31,15 +31,17 @@ class GameAdService {
 
   static final GameAdService instance = GameAdService._();
 
-  // Reuses the same real interstitial unit as the main app -- this service
-  // just manages its own independent load/show lifecycle and trigger
-  // rules, kept entirely separate from AdService's experiment state.
-  // Android 전용 광고 단위
+  // 게임 전용 광고 단위. 메인 앱(AdService)과 같은 광고 단위를 쓰면 두
+  // 서비스가 광고를 하나씩 따로 받아두게 되는데, Unity Ads는 한 placement에
+  // 광고를 1개만 받아둘 수 있어서(오류 코드 108) 서로 충돌한다. 그래서 게임은
+  // 별도 광고 단위를 쓰고, 이 단위는 미디에이션 그룹에 넣지 않아 AdMob
+  // (default) 그룹 = AdMob Network만 받는다.
+  // Android 게임 전용 광고 단위 (interstitial_games)
   static const String _androidAdUnitId =
-      'ca-app-pub-3945470636956441/8397434180';
+      'ca-app-pub-3945470636956441/8926072590';
 
-  // iOS 전용 광고 단위 (travelog_apple_interstitial)
-  static const String _iosAdUnitId = 'ca-app-pub-3945470636956441/5308407850';
+  // iOS 게임 전용 광고 단위 (travelog_apple_interstitial_games)
+  static const String _iosAdUnitId = 'ca-app-pub-3945470636956441/7830493670';
 
   static String get _adUnitId =>
       Platform.isIOS ? _iosAdUnitId : _androidAdUnitId;
@@ -48,7 +50,11 @@ class GameAdService {
   static const Duration _postGameDelay = Duration(seconds: 2);
 
   InterstitialAd? _interstitialAd;
+  DateTime? _adLoadedAt;
   bool _isLoadingAd = false;
+
+  // 받아둔 지 이만큼 지난 광고는 띄우지 않고 새로 받는다 (AdService와 동일 기준)
+  static const Duration _maxAdAge = Duration(minutes: 50);
 
   // 로드 실패 시 20·60·120초 간격으로 최대 3회 재시도.
   static const List<int> _retryDelaysSec = [20, 60, 120];
@@ -143,6 +149,7 @@ class GameAdService {
       adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (ad) {
           _interstitialAd = ad;
+          _adLoadedAt = DateTime.now();
           _isLoadingAd = false;
           _loadRetryAttempt = 0;
         },
@@ -162,6 +169,15 @@ class GameAdService {
   Future<void> _showAdNow() async {
     if (_isPremium) return;
 
+    if (_interstitialAd != null &&
+        _adLoadedAt != null &&
+        DateTime.now().difference(_adLoadedAt!) > _maxAdAge) {
+      // 너무 오래 묵은 광고 — 버리고 다음 번을 위해 새로 받는다.
+      _interstitialAd!.dispose();
+      _interstitialAd = null;
+      _adLoadedAt = null;
+    }
+
     if (_interstitialAd == null) {
       // No ad ready yet -- don't block gameplay waiting for a network
       // load; just kick off a fresh load for next time and move on.
@@ -171,6 +187,7 @@ class GameAdService {
 
     final ad = _interstitialAd!;
     _interstitialAd = null;
+    _adLoadedAt = null;
 
     final completer = Completer<void>();
     ad.fullScreenContentCallback = FullScreenContentCallback(
