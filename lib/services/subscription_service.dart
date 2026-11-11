@@ -171,6 +171,23 @@ class SubscriptionService extends ChangeNotifier {
     }
   }
 
+  /// 캐시에 있으면 그대로, 없으면 스토어에서 해당 상품만 조회해 캐시에 넣는다.
+  /// 조회 실패 시 null을 돌려주며, 구매 처리 자체는 막지 않는다.
+  Future<ProductDetails?> _resolveProductDetails(String productId) async {
+    final cached = _productDetailsById[productId];
+    if (cached != null) return cached;
+    try {
+      if (!await _iap.isAvailable()) return null;
+      final response = await _iap.queryProductDetails({productId});
+      for (final details in response.productDetails) {
+        _productDetailsById[details.id] = details;
+      }
+    } catch (e) {
+      debugPrint('[SubscriptionService] product lookup failed for $productId: $e');
+    }
+    return _productDetailsById[productId];
+  }
+
   void _onPurchaseUpdate(List<PurchaseDetails> purchases) {
     for (final purchase in purchases) {
       switch (purchase.status) {
@@ -257,7 +274,10 @@ class SubscriptionService extends ChangeNotifier {
     final bool isLifetimePurchase = productId == kLifetimeId;
 
     // 실제 스토어 가격 및 통화
-    final ProductDetails? details = _productDetailsById[productId];
+    // 스토어 상품 정보가 아직 안 불러와졌거나 이 상품이 목록에 없으면 가격이 0으로
+    // 기록되어 광고 전환 금액과 주문 금액이 모두 0이 된다(2026-09-02 주문 실제 사례).
+    // 그래서 비어 있으면 이 상품만 즉석에서 다시 조회한다.
+    final ProductDetails? details = await _resolveProductDetails(productId);
     final double price = details?.rawPrice ?? 0.0;
     final String currencyCode = details?.currencyCode ?? 'USD';
 
