@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
+import 'package:in_app_purchase_storekit/store_kit_wrappers.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/services/ad_service.dart';
 import 'package:jidoapp/services/subscription_service.dart';
@@ -312,7 +314,23 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
               label: _ctaLabel(),
               onTap: () => _handlePurchase(context, sub),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 4),
+
+            // Promo / partner code — right under the CTA. Android hands off to
+            // the Play redeem screen (code pre-filled); iOS opens Apple's
+            // native offer-code sheet.
+            TextButton(
+              onPressed: sub.isLoading ? null : () => _openPromoCode(context),
+              child: Text(
+                'Have a promo code?',
+                style: TextStyle(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w600,
+                  color: theme.solid,
+                ),
+              ),
+            ),
+            const SizedBox(height: 6),
 
             // Auto-renew / one-time disclosure — required by store policy,
             // wording changes with the selected plan.
@@ -341,6 +359,30 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
   }
 
   // ── Helpers ──────────────────────────────────────────────────────────
+
+  Future<void> _openPromoCode(BuildContext context) async {
+    try {
+      if (Platform.isIOS) {
+        await SKPaymentQueueWrapper().presentCodeRedemptionSheet();
+        return;
+      }
+      final String? code = await showModalBottomSheet<String>(
+        context: context,
+        isScrollControlled: true,
+        backgroundColor: Colors.transparent,
+        builder: (_) => _PromoCodeSheet(theme: _themeFor(_selected)),
+      );
+      if (code == null || code.isEmpty) return;
+      await launchUrl(
+        Uri.parse(
+          'https://play.google.com/redeem?code=${Uri.encodeQueryComponent(code)}',
+        ),
+        mode: LaunchMode.externalApplication,
+      );
+    } catch (e) {
+      debugPrint('[promo] open redeem failed: $e');
+    }
+  }
 
   ProductDetails? _productDetailsFor(
     _PlanChoice choice,
@@ -412,6 +454,142 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
       color: Color(0xFF3DDAD7),
     ),
   );
+}
+
+/// Promo-code entry sheet — same look as the paywall (white rounded sheet,
+/// handle bar, plan-themed field + gradient CTA). Pops the trimmed code.
+class _PromoCodeSheet extends StatefulWidget {
+  final _PlanTheme theme;
+  const _PromoCodeSheet({required this.theme});
+
+  @override
+  State<_PromoCodeSheet> createState() => _PromoCodeSheetState();
+}
+
+class _PromoCodeSheetState extends State<_PromoCodeSheet> {
+  final _controller = TextEditingController();
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  void _submit() => Navigator.of(context).pop(_controller.text.trim());
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = widget.theme;
+    final bottomInset = MediaQuery.of(context).viewInsets.bottom;
+    return Padding(
+      padding: EdgeInsets.only(bottom: bottomInset),
+      child: Container(
+        decoration: const BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+        ),
+        padding: EdgeInsets.fromLTRB(
+          24,
+          12,
+          24,
+          MediaQuery.of(context).padding.bottom + 24,
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Container(
+              width: 40,
+              height: 4,
+              decoration: BoxDecoration(
+                color: Colors.grey[300],
+                borderRadius: BorderRadius.circular(2),
+              ),
+            ),
+            const SizedBox(height: 22),
+            Container(
+              width: 52,
+              height: 52,
+              decoration: BoxDecoration(
+                gradient: theme.gradient,
+                shape: BoxShape.circle,
+              ),
+              child: const Icon(
+                Icons.card_giftcard_rounded,
+                color: Colors.white,
+                size: 26,
+              ),
+            ),
+            const SizedBox(height: 14),
+            const Text(
+              'Have a promo code?',
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: Color(0xFF1A1A2E),
+              ),
+            ),
+            const SizedBox(height: 6),
+            Text(
+              'Enter it below to redeem your offer.',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+            ),
+            const SizedBox(height: 20),
+            TextField(
+              controller: _controller,
+              autofocus: true,
+              textAlign: TextAlign.center,
+              textCapitalization: TextCapitalization.characters,
+              textInputAction: TextInputAction.done,
+              onSubmitted: (_) => _submit(),
+              style: const TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w700,
+                letterSpacing: 1.5,
+                color: Color(0xFF1A1A2E),
+              ),
+              decoration: InputDecoration(
+                hintText: 'PROMO CODE',
+                hintStyle: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                  letterSpacing: 1.5,
+                  color: Colors.grey[400],
+                ),
+                filled: true,
+                fillColor: const Color(0xFFF1F3F6),
+                contentPadding: const EdgeInsets.symmetric(vertical: 16),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(14),
+                  borderSide: BorderSide.none,
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(14),
+                  borderSide: BorderSide(color: theme.solid, width: 2),
+                ),
+              ),
+            ),
+            const SizedBox(height: 18),
+            _GradientGlowButton(
+              theme: theme,
+              enabled: true,
+              loading: false,
+              label: 'Continue',
+              onTap: _submit,
+            ),
+            const SizedBox(height: 4),
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: Text(
+                'Cancel',
+                style: TextStyle(fontSize: 13, color: Colors.grey[500]),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }
 
 class _BenefitRow extends StatelessWidget {
