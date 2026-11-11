@@ -19,6 +19,7 @@
 // imported into the same place. To add this game somewhere, just:
 //
 //   import 'package:jidoapp/games/which_is_farther.dart';
+import 'package:jidoapp/ads_mock/banner_mock.dart' show BannerMock;
 import 'package:jidoapp/services/screen_tracking.dart';
 //   ...
 //   Navigator.push(context, MaterialPageRoute(
@@ -1198,6 +1199,7 @@ class _WhichIsFartherGameScreenState extends State<_WhichIsFartherGameScreen> {
       _gameOver = true;
       _endReason = reason;
     });
+    BannerMock.resultShowing.value = true;
     GameAdService.instance.notifyGameFinished();
     _saveRecord(reason);
   }
@@ -1229,6 +1231,7 @@ class _WhichIsFartherGameScreenState extends State<_WhichIsFartherGameScreen> {
       _bestRoundScore = 0;
       _combo = 0;
       _gameOver = false;
+      BannerMock.resultShowing.value = false;
       _endReason = null;
       _recorded = false;
     });

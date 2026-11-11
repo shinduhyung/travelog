@@ -13,6 +13,7 @@
 // the same place. To add this game somewhere, just:
 //
 //   import 'package:jidoapp/games/flag_guess.dart';
+import 'package:jidoapp/ads_mock/banner_mock.dart' show BannerMock;
 import 'package:jidoapp/services/screen_tracking.dart';
 //   ...
 //   Navigator.push(context, MaterialPageRoute(
@@ -1913,6 +1914,7 @@ class _FlagGuessGameScreenState extends State<_FlagGuessGameScreen> {
       _gameOver = true;
       _endReason = reason;
     });
+    BannerMock.resultShowing.value = true;
     GameAdService.instance.notifyGameFinished();
     _saveRecord(reason);
   }
@@ -1943,6 +1945,7 @@ class _FlagGuessGameScreenState extends State<_FlagGuessGameScreen> {
       _bestRoundScore = 0;
       _combo = 0;
       _gameOver = false;
+      BannerMock.resultShowing.value = false;
       _endReason = null;
       _recorded = false;
       _rounds = _buildRoundOrder(widget.difficulty).take(_maxRounds).toList();

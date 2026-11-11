@@ -1,3 +1,5 @@
+import 'package:jidoapp/ads_mock/banner_mock.dart';
+import 'package:jidoapp/ads_mock/mock_routes.dart';
 import 'package:jidoapp/widgets/automatic_back_guard.dart';
 import 'package:jidoapp/services/social_notification_service.dart';
 import 'dart:async';
@@ -455,6 +457,8 @@ void main() {
 
       debugPrint('🟢 [DEBUG] 16) runApp 직전 — 여기까지 왔으면 초기화 단계는 전부 통과');
       ScreenTracking.instance.start();
+      BannerMock.start();
+      startMockGoto();
       runApp(const JidoRoot());
       debugPrint('🟢 [DEBUG] 17) runApp 호출 완료');
     },
@@ -1194,11 +1198,13 @@ Widget _buildAppShell(Widget home, {GlobalKey<NavigatorState>? navKey}) {
               AdService.instance.recordGlobalTouch();
             },
             child: BadgeGlobalListener(
-              child: Stack(
-                children: [
-                  child ?? const SizedBox.shrink(),
-                  if (navKey != null) _FloatingBackButton(navigatorKey: navKey),
-                ],
+              child: GlobalBottomBannerSlot(
+                child: Stack(
+                  children: [
+                    child ?? const SizedBox.shrink(),
+                    if (navKey != null) _FloatingBackButton(navigatorKey: navKey),
+                  ],
+                ),
               ),
             ),
           );

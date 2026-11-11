@@ -12,6 +12,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:jidoapp/services/subscription_service.dart';
 import 'package:jidoapp/widgets/subscription_sheet.dart';
 import 'package:jidoapp/main.dart' show navigatorKey;
+import 'package:jidoapp/ads_mock/banner_mock.dart' show kBannerMock;
 
 /// v5 실험 구성 — 시간조건/터치조건 고정, 국가축만 계속 실험
 ///
@@ -352,6 +353,13 @@ class AdService {
   }
 
   Future<void> initialize() async {
+    if (kBannerMock) {
+      // BANNER MOCK ONLY: no consent form, experiment, logging or interstitials.
+      // MobileAds is initialised only so the official TEST banner can load.
+      await _initMobileAds();
+      if (!_consentFlowCompleter.isCompleted) _consentFlowCompleter.complete();
+      return;
+    }
     _isPremium = SubscriptionService.instance.isPremium;
     await _assignExperimentGroupIfNeeded();
     _logAppOpenEvent(); // 리텐션(D3/D7)·마지막 접속일 계측용 — 매 실행마다 1건
@@ -557,6 +565,7 @@ class AdService {
   // ─── Interstitial ────────────────────────────────────────────────────────
 
   void loadInterstitialAd() {
+    if (kBannerMock) return;
     if (_isPremium) return;
     if (_interstitialAd != null) return;
     if (_isLoadingInterstitial) return; // 이미 요청 중이면 중복 요청하지 않음
@@ -688,6 +697,7 @@ class AdService {
   /// 이탈(삭제 추정)을 근사할 수 있음. 앱이 실제로 삭제됐는지는 원천적으로
   /// 알 수 없어서 어디까지나 근사치.
   Future<void> _logAppOpenEvent() async {
+    if (kBannerMock) return;
     try {
       await FirebaseFirestore.instance.collection('app_open_events').add({
         'adExperimentGroup': _groupLabel,
@@ -702,6 +712,7 @@ class AdService {
   /// 광고 요청(load 시도) 횟수 기록 — 노출(impression)과 나눠서
   /// 그룹별 fill rate(노출/요청)를 계산할 수 있게 함.
   Future<void> _logAdRequestToFirestore() async {
+    if (kBannerMock) return;
     try {
       await FirebaseFirestore.instance.collection('ad_request_events').add({
         'adExperimentGroup': _groupLabel,
@@ -719,6 +730,7 @@ class AdService {
   /// 소요시간·터치수 계측용. _queueAd()에서 캡처되어 _presentPendingAd()가
   /// _pendingTriggerSource 등에 옮겨 담은 값을 그대로 씀.
   Future<void> _logAdImpressionToFirestore() async {
+    if (kBannerMock) return;
     try {
       await FirebaseFirestore.instance.collection('ad_impression_events').add({
         'adExperimentGroup': _groupLabel,
@@ -744,6 +756,7 @@ class AdService {
     required String precision,
     required String adSourceName,
   }) async {
+    if (kBannerMock) return;
     try {
       await FirebaseFirestore.instance.collection('ad_revenue_events').add({
         'adExperimentGroup': _groupLabel,
@@ -772,6 +785,7 @@ class AdService {
   /// 또는 터치/시간 조건이 겹쳐서 만족되는 경우 등) 아무 것도 하지 않고
   /// 조용히 무시한다.
   void _queueAd(String triggerSource) {
+    if (kBannerMock) return;
     if (_shouldPauseAds) return;
     if (_isAdPending) return; // 이미 pending 중 — 중복 queue 금지
 
@@ -896,6 +910,7 @@ class AdService {
     String? errorDomain,
     String? errorMessage,
   }) async {
+    if (kBannerMock) return;
     try {
       await FirebaseFirestore.instance.collection('ad_show_issue_events').add({
         'reason': reason, // 'show_failed' | 'stale_discarded'
@@ -939,6 +954,7 @@ class AdService {
   /// 목적상 자연스럽게 흐르도록 둠), 이미 조건을 만족한 pending 광고가
   /// 있으므로 추가로 queue를 시도하지 않는다.
   void recordGlobalTouch() {
+    if (kBannerMock) return;
     if (_shouldPauseAds) return;
     if (_isPostTutorialGraceActive) return; // 유예 기간엔 터치 트리거 비활성
 

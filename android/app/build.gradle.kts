@@ -32,7 +32,8 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.ahnlee.jidoapp"
+        // BANNER MOCK ONLY: side-by-side debug install next to the Play build.
+        applicationId = "com.example.jidoapp"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         multiDexEnabled = true
@@ -42,7 +43,7 @@ android {
     }
 
     signingConfigs {
-        create("release") {
+        if (keystorePropertiesFile.exists()) create("release") {
             // key.properties 기준( android/key.properties ) 상대경로를 file(...)로 해석
             keyAlias = keystoreProperties["keyAlias"] as String
             keyPassword = keystoreProperties["keyPassword"] as String
@@ -53,7 +54,7 @@ android {
 
     buildTypes {
         getByName("release") {
-            signingConfig = signingConfigs.getByName("release")
+            signingConfig = signingConfigs.findByName("release")
 
             // R8 코드 축소/난독화를 명시적으로 켜서
             // mapping.txt가 확실히 생성되고 .aab에 자동 포함되도록 함
@@ -65,6 +66,10 @@ android {
             )
         }
         // debug는 기본 debug keystore 사용(건드릴 필요 없음)
+    }
+    // BANNER MOCK ONLY: profile build stays debuggable so adb run-as can toggle the banner.
+    buildTypes.configureEach {
+        if (name == "profile") isDebuggable = true
     }
 }
 

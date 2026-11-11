@@ -66,6 +66,7 @@
 // rounds solved and best single-round path length) is what's saved to the
 // leaderboard.
 
+import 'package:jidoapp/ads_mock/banner_mock.dart' show BannerMock;
 import 'dart:convert';
 import 'package:jidoapp/services/screen_tracking.dart';
 import 'dart:math';
@@ -1317,6 +1318,7 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
 
   void _finishRun() {
     setState(() => _finished = true);
+    BannerMock.resultShowing.value = true;
     GameAdService.instance.notifyGameFinished();
     _saveRecord();
   }
@@ -1345,6 +1347,7 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
       _bestPathLength = 0;
       _recorded = false;
       _finished = false;
+      BannerMock.resultShowing.value = false;
     });
     _newRound();
   }

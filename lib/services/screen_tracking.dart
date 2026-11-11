@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/ads_mock/banner_mock.dart' show kBannerMock, BannerMock;
 
 typedef TrackingSink =
     Future<void> Function(String event, Map<String, Object> data);
@@ -123,7 +124,7 @@ class ScreenTracking with WidgetsBindingObserver {
     String event,
     Map<String, Object> data,
   ) async {
-    if (!enabled) return;
+    if (!enabled || kBannerMock) return;
     final analytics = FirebaseAnalytics.instance;
     await analytics.logEvent(name: event, parameters: data);
     if (event == 'travelog_screen_view') {
@@ -190,6 +191,9 @@ class ScreenTracking with WidgetsBindingObserver {
             (best == null || scope.priority > best.priority)) {
           best = scope;
         }
+      }
+      if (kBannerMock && _top is! PopupRoute) {
+        BannerMock.currentScreen.value = best?.name;
       }
       if (best != null) {
         ledger.show(_top, best.name, screenGroups[best.name]);

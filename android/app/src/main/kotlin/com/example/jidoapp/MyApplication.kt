@@ -9,6 +9,8 @@ class MyApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        // BANNER MOCK ONLY: debug mock builds must not report to TikTok.
+        if ((applicationInfo.flags and android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE) != 0) return
 
         val ttConfig = TTConfig(
             applicationContext,

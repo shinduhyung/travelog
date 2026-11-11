@@ -1,3 +1,4 @@
+import 'package:jidoapp/ads_mock/banner_mock.dart' show kBannerMock, BannerMock;
 import 'dart:async';
 import 'dart:io';
 
@@ -43,6 +44,7 @@ class RewardedUnlockService extends ChangeNotifier {
 
   /// Starts loading the next rewarded ad if none is ready. Safe to call often.
   void preload() {
+    if (kBannerMock) return;
     if (!isSupported) return;
     if (SubscriptionService.instance.isPremium) return;
     if (_ad != null || _loading) return;

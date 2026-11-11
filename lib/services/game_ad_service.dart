@@ -17,6 +17,7 @@
 //     On leaving Respawn, one ad shows immediately, but only if at least
 //     one respawn was actually drawn during that visit.
 
+import 'package:jidoapp/ads_mock/banner_mock.dart' show kBannerMock, BannerMock;
 import 'dart:async';
 import 'dart:io';
 
@@ -137,6 +138,7 @@ class GameAdService {
   // ── Ad loading / showing ─────────────────────────────────────────────────
 
   void _preloadAd() {
+    if (kBannerMock) return;
     if (_isPremium || _interstitialAd != null || _isLoadingAd) return;
     // 동의(UMP)/MobileAds 초기화가 끝나기 전에는 요청하지 않는다.
     if (!AdService.instance.adsInitialized) return;
