@@ -37,6 +37,10 @@ class BannerAds {
   /// Set by game screens while their game-over / result view is showing.
   static final ValueNotifier<bool> resultShowing = ValueNotifier(false);
 
+  /// Height of the banner currently shown above the main nav bar (0 when none).
+  /// Main tabs add it to their bottom spacer so the last items can scroll clear.
+  static final ValueNotifier<double> aboveNavHeight = ValueNotifier(0);
+
   /// True once consent is done and the Mobile Ads SDK is ready.
   static final ValueNotifier<bool> ready = ValueNotifier(false);
 
@@ -121,7 +125,10 @@ class BannerAds {
 /// One anchored adaptive banner. A fresh ad is requested each time it is
 /// built for a new screen; AdMob refreshes it on the ad unit's interval.
 class TravelogBanner extends StatefulWidget {
-  const TravelogBanner({super.key});
+  const TravelogBanner({super.key, this.reportHeight});
+
+  /// Receives the banner slot height while this banner is on screen.
+  final ValueNotifier<double>? reportHeight;
   @override
   State<TravelogBanner> createState() => _TravelogBannerState();
 }
@@ -188,12 +195,18 @@ class _TravelogBannerState extends State<TravelogBanner> {
       _size = size;
       _loaded = false;
     });
+    widget.reportHeight?.value = size.height.toDouble();
     old?.dispose();
     await ad.load();
   }
 
   @override
   void dispose() {
+    final report = widget.reportHeight;
+    if (report != null) {
+      // Defer: dispose runs during a frame and listeners rebuild other widgets.
+      WidgetsBinding.instance.addPostFrameCallback((_) => report.value = 0);
+    }
     _retry?.cancel();
     _ad?.dispose();
     super.dispose();
@@ -219,8 +232,21 @@ class AboveNavBannerSlot extends StatelessWidget {
   Widget build(BuildContext context) => ListenableBuilder(
         listenable: BannerAds._changes,
         builder: (context, _) => BannerAds.visibleFor(BannerPlacement.aboveNav)
-            ? const TravelogBanner()
+            ? TravelogBanner(reportHeight: BannerAds.aboveNavHeight)
             : const SizedBox.shrink(),
+      );
+}
+
+/// Bottom spacer for the main tabs' scroll views. The tabs draw under the
+/// floating nav bar, so they end with fixed empty space; this grows it by the
+/// banner height while a banner sits above the nav bar.
+class NavBarBottomSpacer extends StatelessWidget {
+  const NavBarBottomSpacer({super.key, this.height = 120});
+  final double height;
+  @override
+  Widget build(BuildContext context) => ValueListenableBuilder<double>(
+        valueListenable: BannerAds.aboveNavHeight,
+        builder: (context, banner, _) => SizedBox(height: height + banner),
       );
 }
 

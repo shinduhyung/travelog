@@ -3,6 +3,7 @@ import 'package:jidoapp/widgets/new_tag.dart';
 import 'package:jidoapp/widgets/next_adventure_card.dart';
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/ads/banner_ads.dart' show NavBarBottomSpacer;
 import 'package:jidoapp/l10n/app_localizations.dart';
 // ⭐️ Firebase Auth와 명칭 충돌을 막기 위해 custom_auth로 alias 지정
 import 'package:jidoapp/providers/auth_provider.dart' as custom_auth;
@@ -450,7 +451,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: const MyHubBoard(),
                 ),
-                const SizedBox(height: 120),
+                const NavBarBottomSpacer(), // nav bar (+ banner) clearance
               ],
             ),
           ),

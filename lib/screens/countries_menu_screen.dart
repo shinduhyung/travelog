@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/ads/banner_ads.dart' show NavBarBottomSpacer;
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'dart:async';
 import 'package:jidoapp/services/country_regions_notice_service.dart';
@@ -1263,7 +1264,7 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                           ],
                         ),
                       ),
-                      const SizedBox(height: 120),
+                      const NavBarBottomSpacer(), // nav bar (+ banner) clearance
                     ],
                   ),
                 );

@@ -6,6 +6,7 @@ import 'dart:typed_data';
 import 'package:collection/collection.dart';
 import 'package:country_flags/country_flags.dart';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/ads/banner_ads.dart' show NavBarBottomSpacer;
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:jidoapp/providers/city_provider.dart';
@@ -1428,7 +1429,7 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                             ],
                           ),
                         ),
-                        const SizedBox(height: 120),
+                        const NavBarBottomSpacer(), // nav bar (+ banner) clearance
                       ],
                     ),
                   );
