@@ -346,8 +346,10 @@ class SocialShortcut extends StatelessWidget {
       ),
     );
     if (!isNew) return tile;
+    // passthrough keeps the tile's full width inside the Row's Expanded
     return Stack(
       clipBehavior: Clip.none,
+      fit: StackFit.passthrough,
       children: [
         tile,
         const Positioned(top: -8, right: -6, child: IgnorePointer(child: NewTag())),
