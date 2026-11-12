@@ -37,7 +37,7 @@ class TravelogPollHistoryScreen extends StatelessWidget {
           {'code': 'FR', 'label': 'France', 'ko': '프랑스'},
           {'code': 'TH', 'label': 'Thailand', 'ko': '태국'},
         ],
-        'counts': {'IT': 32, 'JP': 22, 'MX': 17, 'FR': 17, 'TH': 12},
+        'counts': {'JP': 34, 'IT': 27, 'TH': 14, 'FR': 13, 'MX': 12},
       });
     }
     return DiscoverScaffold(

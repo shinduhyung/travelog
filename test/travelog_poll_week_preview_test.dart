@@ -37,11 +37,11 @@ void main() {
         'MN',
       ]);
       expect(data['previous'][0]['counts'], {
-        'IT': 32,
-        'JP': 22,
-        'MX': 17,
-        'FR': 17,
-        'TH': 12,
+        'JP': 34,
+        'IT': 27,
+        'TH': 14,
+        'FR': 13,
+        'MX': 12,
       });
       expect(
         DateTime.parse(

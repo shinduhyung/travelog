@@ -15,6 +15,13 @@ function validate(config) {
 function active(polls,now){return polls.find(p=>now>=Date.parse(p.opensAt)&&now<Date.parse(p.releaseAt))||null;}
 function view(poll,ownVote,now,counts){
  const released=now>=Date.parse(poll.releaseAt);
- return {...poll,released,choice:ownVote||null,...(released?{counts:Object.fromEntries(poll.options.map(o=>[o.code,counts?.[o.code]||0]))}:{})};
+ // displayCounts (set in the schedule) is shown instead of the tallied votes.
+ const {displayCounts,...rest}=poll,shown=displayCounts||counts;
+ return {...rest,released,choice:ownVote||null,...(released?{counts:Object.fromEntries(poll.options.map(o=>[o.code,shown?.[o.code]||0]))}:{})};
 }
-module.exports={validate,active,view};
+// A remote schedule without displayCounts inherits them from the bundled one.
+function withDisplayCounts(polls,bundled){
+ const byId=new Map(bundled.filter(p=>p.displayCounts).map(p=>[p.id,p.displayCounts]));
+ return polls.map(p=>p.displayCounts||!byId.has(p.id)?p:{...p,displayCounts:byId.get(p.id)});
+}
+module.exports={validate,active,view,withDisplayCounts};

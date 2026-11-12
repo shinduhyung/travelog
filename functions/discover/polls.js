@@ -8,7 +8,7 @@ const opts={maxInstances:2,timeoutSeconds:60};
 let cached=null,expires=0;
 async function schedule(){
  if(cached&&Date.now()<expires)return cached;
- try{const [data]=await admin.storage().bucket().file('config/travelog_polls.json').download();cached=model.validate(JSON.parse(data.toString('utf8').replace(/^\uFEFF/,'')));}
+ try{const [data]=await admin.storage().bucket().file('config/travelog_polls.json').download();cached=model.withDisplayCounts(model.validate(JSON.parse(data.toString('utf8').replace(/^\uFEFF/,''))),fallback.polls);}
  catch(error){console.warn('Using bundled poll schedule:',error.code||error.name);cached=model.validate(fallback);}
  expires=Date.now()+60000;return cached;
 }

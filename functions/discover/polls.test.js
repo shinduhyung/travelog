@@ -7,7 +7,16 @@ test('UTC boundary reveals food and switches to East Asia at exactly Nov 9 00:00
  assert.equal(model.active(polls,instant-1).id,'best_food_20261109');
  assert.equal(model.active(polls,instant).id,'east_asia_20261116');
  assert.equal(model.view(polls[0],null,instant-1,{FR:99}).counts,undefined);
- assert.equal(model.view(polls[0],null,instant,{FR:99}).counts.FR,99);
+ assert.deepEqual(model.view(polls[0],null,instant,{FR:99}).counts,{FR:13,IT:27,TH:14,MX:12,JP:34});
+ assert.deepEqual(model.view(polls[1],null,Date.parse('2026-11-16T00:00:00Z'),{KR:99}).counts,{CN:7,JP:43,KR:35,TW:12,MN:3});
+ assert.equal(Object.hasOwn(model.view(polls[1],null,Date.parse('2026-11-15T23:59:59Z'),{KR:99}),'counts'),false);
+ const {displayCounts,...plain}=polls[1];
+ assert.equal(model.view(plain,null,Date.parse('2026-11-16T00:00:00Z'),{KR:99}).counts.KR,99);
+});
+test('displayCounts never leak and survive a remote schedule without them',()=>{
+ assert.equal(Object.hasOwn(model.view(polls[0],null,Date.parse('2026-11-03T00:00:00Z'),{}),'displayCounts'),false);
+ const remote=polls.map(({displayCounts,...p})=>p);
+ assert.equal(model.withDisplayCounts(remote,polls)[0].displayCounts.JP,34);
 });
 test('unreleased response never contains results or voter counts',()=>{
  const result=model.view(polls[0],'JP',Date.parse('2026-11-02T12:00:00Z'),{JP:12345});
