@@ -89,6 +89,10 @@ const List<String> kBottomScreens = [
   'higher_or_lower_difficulty',
   'flag_guess_lobby', 'which_is_farther_lobby', 'border_chain_lobby',
   'timezone_impostor_lobby', 'higher_or_lower_lobby',
+  // Social (needs sign-in; captured on the phone). Duel game stays banner-free.
+  'social_profile', 'social_badges', 'social_category_list', 'social_friends',
+  'social_leaderboard', 'social_compare', 'social_duels', 'social_stats',
+  'social_friend_stats', 'social_site_image', 'social_board_locked',
 ];
 /// Active game screens: banner only on the game-over / result view.
 const List<String> kResultScreens = [
