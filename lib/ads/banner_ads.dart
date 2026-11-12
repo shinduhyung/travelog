@@ -238,16 +238,26 @@ class AboveNavBannerSlot extends StatelessWidget {
 }
 
 /// Bottom spacer for the main tabs' scroll views. The tabs draw under the
-/// floating nav bar, so they end with fixed empty space; this grows it by the
-/// banner height while a banner sits above the nav bar.
+/// floating nav bar (Scaffold.extendBody), so they end with empty space that
+/// lets the last card scroll clear of it. The space is the larger of:
+///  - [height] plus the banner above the nav bar, and
+///  - the real nav bar height (MediaQuery bottom padding, which includes the
+///    banner and the system navigation bar) plus [gap].
+/// The fixed 120 alone was too small on 3-button-navigation phones.
 class NavBarBottomSpacer extends StatelessWidget {
-  const NavBarBottomSpacer({super.key, this.height = 120});
+  const NavBarBottomSpacer({super.key, this.height = 120, this.gap = 20});
   final double height;
+  final double gap;
   @override
-  Widget build(BuildContext context) => ValueListenableBuilder<double>(
-        valueListenable: BannerAds.aboveNavHeight,
-        builder: (context, banner, _) => SizedBox(height: height + banner),
-      );
+  Widget build(BuildContext context) {
+    final navInset = MediaQuery.paddingOf(context).bottom;
+    return ValueListenableBuilder<double>(
+      valueListenable: BannerAds.aboveNavHeight,
+      builder: (context, banner, _) => SizedBox(
+        height: (height + banner) > (navInset + gap) ? height + banner : navInset + gap,
+      ),
+    );
+  }
 }
 
 /// Wraps the app's Navigator: for pushed screens with a bottom placement the
