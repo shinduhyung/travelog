@@ -94,7 +94,7 @@ class BannerAds {
   // Active game screens: banner only on the game-over / result view.
   static const Set<String> _result = {
     'flag_guess_game', 'which_is_farther_game', 'border_chain_game',
-    'respawn_game', 'timezone_impostor_game', 'higher_or_lower_game',
+    'timezone_impostor_game', 'higher_or_lower_game',
   };
 
   // Pushed screens: banner anchored at the bottom, above the safe area.
@@ -114,6 +114,8 @@ class BannerAds {
     'border_chain_difficulty', 'respawn_mode',
     'timezone_impostor_difficulty', 'higher_or_lower_mode',
     'higher_or_lower_difficulty',
+    // Respawn has no game-over: every draw is a result, so the banner stays on.
+    'respawn_game',
     'flag_guess_lobby', 'which_is_farther_lobby', 'border_chain_lobby',
     'timezone_impostor_lobby', 'higher_or_lower_lobby',
     'social_profile', 'social_badges', 'social_category_list', 'social_friends',

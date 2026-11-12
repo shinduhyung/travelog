@@ -27,6 +27,7 @@ import 'dart:convert';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/ads/banner_ads.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:provider/provider.dart';
@@ -991,6 +992,7 @@ class _GameScreenState extends State<_GameScreen> {
 
   void _finish() {
     setState(() => _phase = _RoundPhase.complete);
+    BannerAds.resultShowing.value = true;
     GameAdService.instance.notifyGameFinished();
     _save();
   }
@@ -1013,6 +1015,7 @@ class _GameScreenState extends State<_GameScreen> {
   }
 
   void _retry() {
+    BannerAds.resultShowing.value = false;
     setState(() {
       _roundIndex = 0;
       _totalScore = 0;
