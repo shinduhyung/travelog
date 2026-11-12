@@ -27,7 +27,8 @@ def main():
     ]
     print(' '.join(command), flush=True)
     if not args.dry_run:
-        subprocess.run(command, cwd=ROOT, check=True)
+        # flutter is flutter.bat on Windows, which needs the shell to resolve.
+        subprocess.run(command, cwd=ROOT, check=True, shell=sys.platform == 'win32')
 
 
 if __name__ == '__main__':
