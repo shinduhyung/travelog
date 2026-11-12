@@ -10,12 +10,17 @@ import 'package:flutter/material.dart';
 
 import 'data/geo_data.dart';
 import 'screens/duel_game_screen.dart';
+import 'screens/badges_screen.dart';
+import 'screens/category_list_screen.dart';
+import 'screens/compare/compare_screen.dart';
+import 'screens/leaderboard_screen.dart';
 import 'screens/duels_screen.dart';
 import 'screens/friends_screen.dart';
 import 'screens/profile_screen.dart';
 import 'screens/stats_screen.dart';
 import 'services/social_store.dart';
 import 'theme.dart';
+import 'package:jidoapp/services/screen_tracking.dart';
 import 'widgets/world_map.dart';
 
 class SocialHub {
@@ -111,10 +116,30 @@ Route<T> socialRoute<T>(WidgetBuilder builder) => MaterialPageRoute<T>(
           child: Builder(
             builder: (context) => ColoredBox(
               color: Theme.of(context).scaffoldBackgroundColor,
-              child: SafeArea(top: false, child: DuelInviteListener(child: Builder(builder: builder))),
+              child: SafeArea(top: false, child: DuelInviteListener(child: Builder(builder: _tracked(builder)))),
             ),
           ),
         );
         return store == null ? page : SocialScope(store: store, child: page);
       },
     );
+
+/// Screen-tracking names for social pages. socialRoute wraps every page in a theme
+/// and scope, so the page is tagged here instead of in the typed route registry.
+const Map<Type, String> _socialScreenNames = {
+  ProfileScreen: 'social_profile',
+  BadgesScreen: 'social_badges',
+  CategoryListScreen: 'social_category_list',
+  FriendsScreen: 'social_friends',
+  LeaderboardScreen: 'social_leaderboard',
+  CompareScreen: 'social_compare',
+  DuelsScreen: 'social_duels',
+  DuelGameScreen: 'social_duel_game',
+  StatsScreen: 'social_stats',
+  FriendStatsScreen: 'social_friend_stats',
+};
+
+WidgetBuilder _tracked(WidgetBuilder builder) => (context) {
+      final page = builder(context);
+      return AnalyticsScreen(name: _socialScreenNames[page.runtimeType], child: page);
+    };

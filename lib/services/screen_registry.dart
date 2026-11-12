@@ -4,6 +4,16 @@ import '../screens/discover_screen.dart' as discover_hub;
 import '../screens/discover_match_screen.dart' as discover_match;
 import '../screens/discover_quiz_screen.dart' as discover_quiz;
 import 'package:flutter/material.dart';
+import '../widgets/city_report_screen.dart' as city_report;
+import '../widgets/country_regions_section.dart' as country_regions;
+import '../screens/travelog_polls_screen.dart' as polls;
+import '../screens/travelog_poll_history_screen.dart' as poll_history;
+import '../games/flag_guess.dart' as g_flag;
+import '../games/which_is_farther.dart' as g_farther;
+import '../games/border_chain.dart' as g_border;
+import '../games/respawn.dart' as g_respawn;
+import '../games/timezone_impostor.dart' as g_tz;
+import '../games/higher_or_lower.dart' as g_hol;
 import '../screens/login_prompt_screen.dart' as s0;
 import '../screens/onboarding_tutorial_screen.dart' as s1;
 import '../screens/welcome_screen.dart' as s2;
@@ -133,6 +143,17 @@ const Map<Type, String> screenWidgetNames = {
   discover_hub.DiscoverScreen: 'discover',
   discover_match.DiscoverMatchScreen: 'discover_match',
   discover_quiz.DiscoverQuizScreen: 'discover_quiz',
+  city_report.CityReportScreen: 'city_report',
+  country_regions.CountryRegionsMapScreen: 'country_regions_map',
+  polls.TravelogPollsScreen: 'travelog_polls',
+  poll_history.TravelogPollHistoryScreen: 'travelog_poll_history',
+  poll_history.TravelogPollResultScreen: 'travelog_poll_result',
+  g_flag.FlagGuessDifficultyScreen: 'flag_guess_difficulty',
+  g_farther.WhichIsFartherDifficultyScreen: 'which_is_farther_difficulty',
+  g_border.BorderChainDifficultyScreen: 'border_chain_difficulty',
+  g_respawn.RespawnModeScreen: 'respawn_mode',
+  g_tz.TimezoneImpostorDifficultyScreen: 'timezone_impostor_difficulty',
+  g_hol.HigherOrLowerModeScreen: 'higher_or_lower_mode',
   s0.LoginPromptScreen: 'login_prompt',
   s1.OnboardingTutorialScreen: 'onboarding_tutorial',
   s2.WelcomeScreen: 'welcome',

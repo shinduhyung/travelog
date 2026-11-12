@@ -24,6 +24,7 @@
 //       - assets/data/timezone_impostor_cities.json
 
 import 'dart:convert';
+import 'package:jidoapp/services/screen_tracking.dart';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -455,7 +456,7 @@ class TimezoneImpostorDifficultyScreen extends StatelessWidget {
                 difficulty: _TzDifficulty.easy,
                 onTap: () => Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (_) => _LobbyScreen(difficulty: _TzDifficulty.easy)),
+                  MaterialPageRoute(builder: (_) => AnalyticsScreen(name: 'timezone_impostor_lobby', child: _LobbyScreen(difficulty: _TzDifficulty.easy))),
                 ),
               ),
               const SizedBox(height: 14),
@@ -463,7 +464,7 @@ class TimezoneImpostorDifficultyScreen extends StatelessWidget {
                 difficulty: _TzDifficulty.medium,
                 onTap: () => Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (_) => _LobbyScreen(difficulty: _TzDifficulty.medium)),
+                  MaterialPageRoute(builder: (_) => AnalyticsScreen(name: 'timezone_impostor_lobby', child: _LobbyScreen(difficulty: _TzDifficulty.medium))),
                 ),
               ),
               const SizedBox(height: 14),
@@ -471,7 +472,7 @@ class TimezoneImpostorDifficultyScreen extends StatelessWidget {
                 difficulty: _TzDifficulty.hard,
                 onTap: () => Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (_) => _LobbyScreen(difficulty: _TzDifficulty.hard)),
+                  MaterialPageRoute(builder: (_) => AnalyticsScreen(name: 'timezone_impostor_lobby', child: _LobbyScreen(difficulty: _TzDifficulty.hard))),
                 ),
               ),
               const SizedBox(height: 14),
@@ -483,7 +484,7 @@ class TimezoneImpostorDifficultyScreen extends StatelessWidget {
                       difficulty: _TzDifficulty.insane,
                       onTap: () => Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (_) => _LobbyScreen(difficulty: _TzDifficulty.insane)),
+                        MaterialPageRoute(builder: (_) => AnalyticsScreen(name: 'timezone_impostor_lobby', child: _LobbyScreen(difficulty: _TzDifficulty.insane))),
                       ),
                     );
                   }
@@ -502,7 +503,7 @@ class TimezoneImpostorDifficultyScreen extends StatelessWidget {
                             if (context.mounted) {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (_) => _LobbyScreen(difficulty: _TzDifficulty.insane)),
+                                MaterialPageRoute(builder: (_) => AnalyticsScreen(name: 'timezone_impostor_lobby', child: _LobbyScreen(difficulty: _TzDifficulty.insane))),
                               );
                             }
                           }
@@ -685,7 +686,7 @@ class _LobbyScreenState extends State<_LobbyScreen> {
     await GameAdService.instance.requestStartGame();
     await Navigator.push(
       context,
-      MaterialPageRoute(builder: (_) => _GameScreen(difficulty: widget.difficulty)),
+      MaterialPageRoute(builder: (_) => AnalyticsScreen(name: 'timezone_impostor_game', child: _GameScreen(difficulty: widget.difficulty))),
     );
     _reload();
   }

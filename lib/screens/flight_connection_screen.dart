@@ -1,6 +1,7 @@
 // lib/screens/flight_connection_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/services/screen_tracking.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/airline_model.dart';
 import 'package:provider/provider.dart';
@@ -30,10 +31,10 @@ class _FlightConnectionScreenState extends State<FlightConnectionScreen> {
   void _showItineraryBuilder(BuildContext context, {FlightLog? initialLog, FlightConnection? existingConnection}) {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (_) => _ItineraryBuilderScreen(
+        builder: (_) => AnalyticsScreen(name: 'itinerary_builder', child: _ItineraryBuilderScreen(
           initialLog: initialLog,
           existingConnection: existingConnection,
-        ),
+        )),
         fullscreenDialog: true,
       ),
     );

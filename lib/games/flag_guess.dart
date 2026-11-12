@@ -13,6 +13,7 @@
 // the same place. To add this game somewhere, just:
 //
 //   import 'package:jidoapp/games/flag_guess.dart';
+import 'package:jidoapp/services/screen_tracking.dart';
 //   ...
 //   Navigator.push(context, MaterialPageRoute(
 //     builder: (_) => const FlagGuessDifficultyScreen(),
@@ -1318,7 +1319,7 @@ class FlagGuessDifficultyScreen extends StatelessWidget {
   void _openLobby(BuildContext context, _FlagGuessDifficulty difficulty) {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (_) => _FlagGuessLobbyScreen(difficulty: difficulty)),
+      MaterialPageRoute(builder: (_) => AnalyticsScreen(name: 'flag_guess_lobby', child: _FlagGuessLobbyScreen(difficulty: difficulty))),
     );
   }
 }
@@ -1463,7 +1464,7 @@ class _FlagGuessLobbyScreenState extends State<_FlagGuessLobbyScreen> {
     await GameAdService.instance.requestStartGame();
     await Navigator.push(
       context,
-      MaterialPageRoute(builder: (_) => _FlagGuessGameScreen(difficulty: widget.difficulty)),
+      MaterialPageRoute(builder: (_) => AnalyticsScreen(name: 'flag_guess_game', child: _FlagGuessGameScreen(difficulty: widget.difficulty))),
     );
     // The game screen saves its record on game-over before popping back
     // here, so a fresh load will include the just-finished run.
