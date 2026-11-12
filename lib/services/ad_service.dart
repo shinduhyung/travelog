@@ -75,6 +75,9 @@ class AdService {
   /// UMP 동의 + (iOS) ATT 프롬프트 흐름이 끝나면 완료된다.
   Future<void> get consentFlowDone => _consentFlowCompleter.future;
 
+  /// True once MobileAds.initialize() finished after consent (banners wait for it).
+  bool get mobileAdsInitialized => _mobileAdsInitialized;
+
   // ─── 로드 실패 재시도 ────────────────────────────────────────────────────
   // 로드 실패 시 지수 백오프(15·30·60·120·120초)로 최대 5회까지 재시도한다.
   // 5회를 넘기면 멈추고, 이후는 기존처럼 화면 전환 시점의 로드에 맡긴다.

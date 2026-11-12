@@ -25,6 +25,7 @@ import 'dart:convert';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/ads/banner_ads.dart' show BannerAds;
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -1912,6 +1913,7 @@ class _FlagGuessGameScreenState extends State<_FlagGuessGameScreen> {
       _gameOver = true;
       _endReason = reason;
     });
+    BannerAds.resultShowing.value = true;
     GameAdService.instance.notifyGameFinished();
     _saveRecord(reason);
   }
@@ -1942,6 +1944,7 @@ class _FlagGuessGameScreenState extends State<_FlagGuessGameScreen> {
       _bestRoundScore = 0;
       _combo = 0;
       _gameOver = false;
+      BannerAds.resultShowing.value = false;
       _endReason = null;
       _recorded = false;
       _rounds = _buildRoundOrder(widget.difficulty).take(_maxRounds).toList();

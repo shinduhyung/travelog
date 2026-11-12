@@ -32,6 +32,7 @@ import 'dart:math';
 
 import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:flutter/material.dart';
+import 'package:jidoapp/ads/banner_ads.dart' show BannerAds;
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -1197,6 +1198,7 @@ class _WhichIsFartherGameScreenState extends State<_WhichIsFartherGameScreen> {
       _gameOver = true;
       _endReason = reason;
     });
+    BannerAds.resultShowing.value = true;
     GameAdService.instance.notifyGameFinished();
     _saveRecord(reason);
   }
@@ -1228,6 +1230,7 @@ class _WhichIsFartherGameScreenState extends State<_WhichIsFartherGameScreen> {
       _bestRoundScore = 0;
       _combo = 0;
       _gameOver = false;
+      BannerAds.resultShowing.value = false;
       _endReason = null;
       _recorded = false;
     });

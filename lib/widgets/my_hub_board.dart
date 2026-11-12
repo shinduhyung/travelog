@@ -16,6 +16,7 @@ import 'package:jidoapp/screens/discover_screen.dart';
 import 'package:jidoapp/screens/settings_screen.dart';
 import 'package:jidoapp/screens/trip_log_list_screen.dart';
 import 'package:jidoapp/screens/visa_screen.dart';
+import 'package:jidoapp/widgets/new_tag.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -33,12 +34,14 @@ class MyHubItem {
   /// 로그인해야 열리는 화면인지 (설정만 아니다)
   final bool needsLogin;
 
-  const MyHubItem(this.title, this.icon, this.color, this.builder, {this.needsLogin = true});
+  final bool isNew;
+  const MyHubItem(this.title, this.icon, this.color, this.builder, {this.needsLogin = true, this.isNew = false});
 }
 
 final List<MyHubItem> myHubItems = [
   MyHubItem('Trip Log', Icons.auto_stories_rounded, const Color(0xFFF97316), (_) => const TripLogListScreen()),
-  MyHubItem('Discover', Icons.search_rounded, const Color(0xFF2563EB), (_) => const DiscoverScreen()),
+  MyHubItem('Discover', Icons.search_rounded, const Color(0xFF2563EB), (_) => const DiscoverScreen(),
+      isNew: true),
   MyHubItem('Favorites', Icons.favorite_rounded, const Color(0xFFEC4899), (_) => const FavoritesScreen()),
   MyHubItem('Calendar', Icons.calendar_month_rounded, const Color(0xFFEF4444), (_) => const CalendarScreen()),
   MyHubItem('Passport', Icons.book_rounded, const Color(0xFF8B5CF6), (_) => const PassportScreen()),
@@ -75,6 +78,7 @@ class MyHubBoard extends StatelessWidget {
           icon: item.icon,
           color: item.color,
           label: tr(item.title),
+          isNew: item.isNew,
           onTap: () => openMyHubItem(context, item),
         ),
       _ShortcutTile(
@@ -138,6 +142,7 @@ class _ShortcutTile extends StatelessWidget {
   final Color color;
   final String label;
   final bool filled;
+  final bool isNew;
   final VoidCallback onTap;
 
   const _ShortcutTile({
@@ -146,6 +151,7 @@ class _ShortcutTile extends StatelessWidget {
     required this.label,
     required this.onTap,
     this.filled = false,
+    this.isNew = false,
   });
 
   @override
@@ -155,6 +161,9 @@ class _ShortcutTile extends StatelessWidget {
       behavior: HitTestBehavior.opaque,
       child: Column(
         children: [
+          Stack(
+            clipBehavior: Clip.none,
+            children: [
           Container(
             width: 48,
             height: 48,
@@ -170,6 +179,9 @@ class _ShortcutTile extends StatelessWidget {
               borderRadius: BorderRadius.circular(16),
             ),
             child: Icon(icon, color: filled ? Colors.white : color, size: 23),
+          ),
+              if (isNew) const Positioned(top: -8, right: -14, child: NewTag()),
+            ],
           ),
           const SizedBox(height: 7),
           Padding(

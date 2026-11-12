@@ -90,6 +90,10 @@ class ScreenVisitLedger {
 }
 
 class ScreenTracking with WidgetsBindingObserver {
+  /// Analytics name of the screen on top (null for unnamed screens). Popups
+  /// keep the screen underneath. Banner placement listens to this.
+  static final ValueNotifier<String?> currentScreen = ValueNotifier(null);
+
   ScreenTracking._() {
     _clock.start();
     ledger = ScreenVisitLedger(sink: _firebaseSink, now: () => _clock.elapsed);
@@ -191,6 +195,7 @@ class ScreenTracking with WidgetsBindingObserver {
           best = scope;
         }
       }
+      if (_top is! PopupRoute) currentScreen.value = best?.name;
       if (best != null) {
         ledger.show(_top, best.name, screenGroups[best.name]);
         ledger.resume('overlay');

@@ -1,6 +1,7 @@
 // My Trips 화면의 Travelog Social 메뉴: 보석빛 카드 + 바로가기 3개 (프로필 / 친구 / 통계)
 import 'package:flutter/material.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
+import 'package:jidoapp/widgets/new_tag.dart';
 
 class SocialMenu extends StatelessWidget {
   const SocialMenu({
@@ -37,7 +38,7 @@ class SocialMenu extends StatelessWidget {
             ),
             const SizedBox(width: 8),
             Expanded(
-              child: SocialShortcut(icon: Icons.bar_chart_rounded, label: 'Stats', onTap: onStats),
+              child: SocialShortcut(icon: Icons.bar_chart_rounded, label: 'Stats', isNew: true, onTap: onStats),
             ),
           ],
         ),
@@ -281,6 +282,7 @@ class SocialShortcut extends StatelessWidget {
   final String label;
   final String? caption;
   final int badge;
+  final bool isNew;
   final VoidCallback onTap;
 
   const SocialShortcut({
@@ -289,6 +291,7 @@ class SocialShortcut extends StatelessWidget {
     required this.label,
     this.caption,
     this.badge = 0,
+    this.isNew = false,
     required this.onTap,
   });
 
@@ -297,7 +300,7 @@ class SocialShortcut extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Localizations.maybeLocaleOf(context);
-    return GestureDetector(
+    final tile = GestureDetector(
       onTap: onTap,
       child: Container(
         height: 74,
@@ -341,6 +344,14 @@ class SocialShortcut extends StatelessWidget {
           ),
         ),
       ),
+    );
+    if (!isNew) return tile;
+    return Stack(
+      clipBehavior: Clip.none,
+      children: [
+        tile,
+        const Positioned(top: -8, right: -6, child: IgnorePointer(child: NewTag())),
+      ],
     );
   }
 }

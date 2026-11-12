@@ -70,6 +70,7 @@ import 'dart:convert';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/ads/banner_ads.dart' show BannerAds;
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -1316,6 +1317,7 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
 
   void _finishRun() {
     setState(() => _finished = true);
+    BannerAds.resultShowing.value = true;
     GameAdService.instance.notifyGameFinished();
     _saveRecord();
   }
@@ -1344,6 +1346,7 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
       _bestPathLength = 0;
       _recorded = false;
       _finished = false;
+      BannerAds.resultShowing.value = false;
     });
     _newRound();
   }

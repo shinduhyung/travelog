@@ -1,6 +1,7 @@
 // lib/main_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/ads/banner_ads.dart';
 import 'package:jidoapp/services/screen_tracking.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/screens/cities_menu_screen.dart';
@@ -82,7 +83,11 @@ class _MainScreenState extends State<MainScreen> {
         ),
         child: SafeArea(
           top: false,
-          child: Padding(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const AboveNavBannerSlot(),
+              Padding(
             padding: const EdgeInsets.only(left: 16, right: 16, bottom: 8),
             child: SizedBox(
               height: 70,
@@ -136,6 +141,8 @@ class _MainScreenState extends State<MainScreen> {
                 }),
               ),
             ),
+          ),
+            ],
           ),
         ),
       ),
