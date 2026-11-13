@@ -282,66 +282,12 @@ class SubscriptionService extends ChangeNotifier {
     final String currencyCode = details?.currencyCode ?? 'USD';
 
     if (!isRestore) {
-      // --------------------------------------------------
-      // Meta Purchase
-      // --------------------------------------------------
-      try {
-        await _facebookAppEvents.logPurchase(
-          amount: price,
-          currency: currencyCode,
-        );
-
-        debugPrint(
-          '[SubscriptionService] Meta Purchase sent: '
-          '$price $currencyCode',
-        );
-      } catch (e) {
-        // 광고 이벤트 실패 때문에 실제 구독 처리가 실패하면 안 됨
-        debugPrint('[SubscriptionService] Meta Purchase error: $e');
-      }
-
-      // --------------------------------------------------
-      // Firebase Purchase (Google Ads 앱 전환용)
-      // --------------------------------------------------
-      try {
-        await FirebaseAnalytics.instance.logPurchase(
-          currency: currencyCode,
-          value: price,
-          transactionId: purchase.purchaseID,
-          items: [
-            AnalyticsEventItem(
-              itemId: productId,
-              itemName: productId,
-              price: price,
-              quantity: 1,
-            ),
-          ],
-        );
-      } catch (e) {
-        debugPrint('[SubscriptionService] Firebase Purchase error: $e');
-      }
-
-      // --------------------------------------------------
-      // TikTok Purchase
-      // --------------------------------------------------
-      if (Platform.isAndroid) {
-        try {
-          await _tiktokChannel.invokeMethod('trackPurchase', {
-            'value': price,
-            'currency': currencyCode,
-            'productId': productId,
-          });
-
-          debugPrint(
-            '[SubscriptionService] TikTok Purchase sent: '
-            '$price $currencyCode / $productId',
-          );
-        } catch (e) {
-          // TikTok 광고 이벤트 실패해도
-          // 실제 프리미엄 활성화에는 영향 없음
-          debugPrint('[SubscriptionService] TikTok Purchase error: $e');
-        }
-      }
+      await _logPurchaseEvents(
+        productId: productId,
+        price: price,
+        currencyCode: currencyCode,
+        transactionId: purchase.purchaseID,
+      );
     }
 
     // --------------------------------------------------
@@ -421,6 +367,26 @@ class SubscriptionService extends ChangeNotifier {
                   ? Timestamp.fromDate(AdService.instance.assignedAt!)
                   : null,
             });
+
+            // 결제가 앱 밖에서 끝나거나(결제창 도중 앱 종료, 지연 결제 승인 등)
+            // 다음 실행 때 처음 감지된 신규 구매는 purchased가 아니라 restored로만 들어와서
+            // 위의 광고 구매 이벤트(Meta·Firebase·TikTok)가 통째로 빠졌다.
+            // 이 주문 문서를 지금 처음 만든 경우 = 처음 보는 주문이므로 여기서 한 번만 보낸다.
+            // 갱신은 신규 구매가 아니라서 제외하고, 이 기능 배포 전의 오래된 구매가
+            // 뒤늦게 처음 기록되며 신규로 집계되는 일을 막으려고 최근 결제만 보낸다.
+            if (isRestore &&
+                !isRenewal &&
+                _isRecentTransaction(purchase, const Duration(days: 3))) {
+              debugPrint(
+                '[SubscriptionService] first-seen order $orderId arrived as restored — sending purchase events',
+              );
+              await _logPurchaseEvents(
+                productId: productId,
+                price: price,
+                currencyCode: currencyCode,
+                transactionId: purchase.purchaseID,
+              );
+            }
           }
         } catch (e) {
           debugPrint('[SubscriptionService] Firestore save error: $e');
@@ -500,6 +466,91 @@ class SubscriptionService extends ChangeNotifier {
     debugPrint(
       '[SubscriptionService] premium activated ($productId, restore=$isRestore)',
     );
+  }
+
+  /// 신규 구매 1건에 대한 광고·분석 구매 이벤트(Meta, Firebase, TikTok)를 보낸다.
+  /// 각 이벤트 실패가 실제 구독 처리를 막으면 안 되므로 개별로 감싼다.
+  Future<void> _logPurchaseEvents({
+    required String productId,
+    required double price,
+    required String currencyCode,
+    required String? transactionId,
+  }) async {
+    // --------------------------------------------------
+    // Meta Purchase
+    // --------------------------------------------------
+    try {
+      await _facebookAppEvents.logPurchase(
+        amount: price,
+        currency: currencyCode,
+      );
+
+      debugPrint(
+        '[SubscriptionService] Meta Purchase sent: '
+        '$price $currencyCode',
+      );
+    } catch (e) {
+      // 광고 이벤트 실패 때문에 실제 구독 처리가 실패하면 안 됨
+      debugPrint('[SubscriptionService] Meta Purchase error: $e');
+    }
+
+    // --------------------------------------------------
+    // Firebase Purchase (Google Ads 앱 전환용)
+    // --------------------------------------------------
+    try {
+      await FirebaseAnalytics.instance.logPurchase(
+        currency: currencyCode,
+        value: price,
+        transactionId: transactionId,
+        items: [
+          AnalyticsEventItem(
+            itemId: productId,
+            itemName: productId,
+            price: price,
+            quantity: 1,
+          ),
+        ],
+      );
+      debugPrint(
+        '[SubscriptionService] Firebase Purchase sent: '
+        '$price $currencyCode / $productId',
+      );
+    } catch (e) {
+      debugPrint('[SubscriptionService] Firebase Purchase error: $e');
+    }
+
+    // --------------------------------------------------
+    // TikTok Purchase
+    // --------------------------------------------------
+    if (Platform.isAndroid) {
+      try {
+        await _tiktokChannel.invokeMethod('trackPurchase', {
+          'value': price,
+          'currency': currencyCode,
+          'productId': productId,
+        });
+
+        debugPrint(
+          '[SubscriptionService] TikTok Purchase sent: '
+          '$price $currencyCode / $productId',
+        );
+      } catch (e) {
+        // TikTok 광고 이벤트 실패해도
+        // 실제 프리미엄 활성화에는 영향 없음
+        debugPrint('[SubscriptionService] TikTok Purchase error: $e');
+      }
+    }
+  }
+
+  /// purchase.transactionDate(epoch millis 문자열)가 [window] 안이면 true.
+  /// 날짜가 없으면 오래된 구매일 수 있으므로 false.
+  bool _isRecentTransaction(PurchaseDetails purchase, Duration window) {
+    final millis = int.tryParse(purchase.transactionDate ?? '');
+    if (millis == null) return false;
+    final age = DateTime.now().difference(
+      DateTime.fromMillisecondsSinceEpoch(millis),
+    );
+    return age >= Duration.zero && age <= window;
   }
 
   /// Starts a purchase for [productId] — pass [yearlyProductIdToOffer],
