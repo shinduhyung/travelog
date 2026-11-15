@@ -3,6 +3,7 @@ import 'package:jidoapp/widgets/automatic_back_guard.dart';
 import 'package:jidoapp/services/social_notification_service.dart';
 import 'dart:async';
 import 'package:jidoapp/services/screen_tracking.dart';
+import 'package:jidoapp/services/launch_paywall_service.dart';
 import 'package:jidoapp/services/screen_registry.dart';
 import 'dart:ui';
 import 'dart:convert';
@@ -906,14 +907,17 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
         status = await AppTrackingTransparency.requestTrackingAuthorization();
       }
 
-      if (status == TrackingStatus.authorized) {
-        await facebookAppEvents.setAdvertiserTracking(enabled: true);
-        await facebookAppEvents.activateApp();
-        debugPrint("✅ ATT already authorized: Meta SDK tracking active");
-      } else {
-        await facebookAppEvents.setAdvertiserTracking(enabled: false);
-        debugPrint("🚫 ATT status: $status — tracking disabled");
-      }
+      final authorized = status == TrackingStatus.authorized;
+      await facebookAppEvents.setAdvertiserTracking(enabled: authorized);
+      // 추적 동의 여부와 상관없이 앱 실행 이벤트는 보낸다. 동의하지 않은
+      // 사용자는 위 setAdvertiserTracking(false) 때문에 IDFA 없이 익명으로만
+      // 집계된다(메타 집계 이벤트 측정·SKAdNetwork용).
+      await facebookAppEvents.activateApp();
+      debugPrint(
+        authorized
+            ? "✅ ATT authorized: Meta SDK tracking active"
+            : "🚫 ATT status: $status — tracking disabled, anonymous events only",
+      );
     } catch (e) {
       debugPrint("ATT Error: $e");
     }
@@ -1089,6 +1093,9 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
       });
     }
 
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      LaunchPaywallService.instance.maybeShow();
+    });
     return const MainScreen(initialIndex: 0);
   }
 

@@ -80,6 +80,14 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
   _PlanChoice _selected = _PlanChoice.yearly;
 
   @override
+  void initState() {
+    super.initState();
+    if (!SubscriptionService.instance.isPremium) {
+      SubscriptionService.instance.logPaywallShown(widget.triggerContext);
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     Localizations.maybeLocaleOf(context);
     return Consumer<SubscriptionService>(

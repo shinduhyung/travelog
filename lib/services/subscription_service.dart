@@ -751,6 +751,11 @@ class SubscriptionService extends ChangeNotifier {
     }
   }
 
+  /// Logs that the paywall sheet was shown, so view → checkout conversion
+  /// can be computed per trigger.
+  void logPaywallShown(String? triggerContext) =>
+      _logFunnelEvent('paywall_shown', '', triggerContext);
+
   /// Fire-and-forget funnel logging for the paywall → checkout → purchase
   /// pipeline (mirrors the existing ad_revenue_events pattern). Never
   /// affects the actual purchase flow if it fails.
