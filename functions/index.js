@@ -10,6 +10,8 @@ Object.assign(exports, require('./discover/friend_requests'));
 Object.assign(exports, require('./discover/polls'));
 // 제휴업체용 쿠폰 사용 집계 (Play 실시간 알림 → partner_events → 업체 전용 페이지) — functions/partner_system.js
 Object.assign(exports, require('./partner_system'));
+// 애플 App Store Server Notifications 수신 (제휴업체 코드·전환 추적, iOS) — functions/apple_notifications.js
+Object.assign(exports, require('./apple_notifications'));
 
 // Flight price + booking link Cloud Functions (RapidAPI Sky-scrapper proxy) —
 // see functions/flight_functions.js for the implementation.

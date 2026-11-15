@@ -142,5 +142,21 @@ service cloud.firestore {
     match /subscription_funnel_events/{docId} {
       allow create: if true;
     }
+
+    // Apple Search Ads(AdServices) 어트리뷰션 — 설치당 1회, 쓰기 전용.
+    // docId = 로그인 uid(본인만) 또는 게스트 설치 ID(생성만).
+    match /adservices_attribution/{docId} {
+      function asaKeysOk() {
+        return onlyKeys(['attribution', 'orgId', 'campaignId', 'adGroupId',
+          'keywordId', 'countryOrRegion', 'conversionType', 'clickDate',
+          'adId', 'claimType', 'platform', 'appVersion', 'uid', 'deviceId',
+          'createdAt']);
+      }
+      allow create: if asaKeysOk()
+        && (request.resource.data.get('uid', null) == null
+            || (isSelf(docId) && request.resource.data.uid == docId));
+      allow update: if asaKeysOk() && isSelf(docId)
+        && request.resource.data.get('uid', null) == docId;
+    }
   }
 }

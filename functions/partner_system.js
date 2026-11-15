@@ -1,29 +1,42 @@
-// 제휴업체용 쿠폰 사용 집계 시스템.
+// 제휴업체용 쿠폰 사용·전환 집계 시스템.
 //
 // 흐름
-//   1) Play가 구독 이벤트를 Pub/Sub 주제 play-rtdn으로 보낸다 (Play Console > 수익 창출 설정 > 실시간 알림).
-//   2) recordPlayTrial이 새 구독(SUBSCRIPTION_PURCHASED)만 골라 purchases.subscriptionsv2.get으로
-//      그 구독이 쓴 전용(커스텀) 코드를 조회한다. 앱이 orders에 기록하지 못해도(로그인 상태 구매 누락 버그)
-//      구글이 직접 알려주므로 빠지지 않는다.
-//   3) partners 문서의 codes에 그 코드가 있으면 partner_events에 한 건 기록한다.
-//   4) partnerStats 페이지가 토큰 링크로 업체 본인의 건수와 정산 예상액만 보여준다.
+//   안드로이드: Play가 구독 이벤트를 Pub/Sub 주제 play-rtdn으로 보낸다 (Play Console > 수익 창출 설정 > 실시간 알림).
+//   iOS: 애플이 App Store Server Notifications를 appleNotifications로 보낸다 (apple_notifications.js).
+//   두 경로 모두 partner_lifecycle.js가 partner_events에 "구독 1건의 현재 상태"를 기록한다.
+//     체험 시작(trial) → 유료 전환(paid) / 만료(expired) / 환불(refunded)
+//   partnerStats 페이지가 토큰 링크로 업체 본인의 퍼널과 정산 예상액만 보여준다.
 //
 // Firestore 컬렉션 (클라이언트 접근은 firestore.rules 기본 거부, Functions의 Admin SDK만 읽고 쓴다)
-//   partners/{partnerId}        { name, token, codes: [..], rewardPerTrial: 1, currency: 'USD' }
-//   play_subscription_starts/{orderId}   Play가 알려준 신규 구독 전체 (코드 유무와 무관, 중복 방지용)
-//   partner_events/{orderId}    { partnerId, code, platform, productId, startedAt, regionCode, isTest }
+//   partners/{partnerId}   { name, token, codes: [..], appleOffers: [..], rewardPerTrial: 1, rewardPerConversion: 4,
+//                            minPayout: 10, currency: 'USD', countTestPurchases?: bool }
+//   play_subscription_starts/{orderId}   Play가 알려준 신규 구독 전체 (중복 방지용)
+//   partner_events/{key}   구독 1건의 현재 상태 (partner_lifecycle.js 참고)
 //
-// 서비스 계정: 이 파일의 함수는 play-revenue-reader로 실행한다 (Play Console에 이미 등록된 계정).
-// 키 파일 없이 런타임 기본 자격 증명으로 Play API를 호출한다.
+// 서비스 계정: recordPlayTrial은 play-revenue-reader로 실행한다 (Play Console에 이미 등록된 계정).
+// 키 파일 없이 런타임 기본 자격 증명으로 Play API를 호출한다. 이 파일은 푸시 알림을 보내지 않는다.
 
 const { onMessagePublished } = require("firebase-functions/v2/pubsub");
 const { onRequest } = require("firebase-functions/v2/https");
+const { onSchedule } = require("firebase-functions/v2/scheduler");
 const admin = require("firebase-admin");
 const { google } = require("googleapis");
+const { renderPartnerPage } = require("./partner_page");
+const { findPartner, createEvent, handlePlayLifecycle, decidePlayReconcile, PLAY } = require("./partner_lifecycle");
+const { recordPlayLifecycle, recordPlayVoided } = require("./subscription_lifecycle");
+
+// 모든 구독의 생애주기 기록 (subscription_lifecycle.js). 실패해도 제휴 처리를 막거나 Pub/Sub 재시도를 일으키지 않는다.
+async function recordLifecycleSafe(db, msg, event, sub) {
+  try {
+    const r = await recordPlayLifecycle(db, { msg, messageId: event.data?.message?.messageId, sub });
+    console.log(`[lifecycle] play type=${msg.subscriptionNotification?.notificationType} -> ${r}`);
+  } catch (e) {
+    console.error("[lifecycle] play record failed:", e);
+  }
+}
 
 const PACKAGE_NAME = "com.ahnlee.jidoapp";
 const READER_SA = "id-play-revenue-reader@proboscis-2025.iam.gserviceaccount.com";
-const SUBSCRIPTION_PURCHASED = 4; // https://developer.android.com/google/play/billing/rtdn-reference
 
 let _playClient = null;
 async function getPlayClient() {
@@ -33,6 +46,14 @@ async function getPlayClient() {
   });
   _playClient = google.androidpublisher({ version: "v3", auth: await auth.getClient() });
   return _playClient;
+}
+
+
+// 로그용 구독 상태 요약 (토큰 등 민감값은 넣지 않는다). 실제 구글 응답에서 체험/정가 단계가 어떻게 보이는지 확인하는 용도.
+function summarizeSub(sub) {
+  const item = sub?.lineItems?.[0] ?? {};
+  const phase = item.offerPhase ? Object.keys(item.offerPhase)[0] : null;
+  return `state=${sub?.subscriptionState} phase=${phase} expiry=${item.expiryTime} autoRenew=${item.autoRenewingPlan?.autoRenewEnabled} latestOrder=${sub?.latestOrderId} test=${sub?.testPurchase != null}`;
 }
 
 exports.recordPlayTrial = onMessagePublished(
@@ -46,20 +67,45 @@ exports.recordPlayTrial = onMessagePublished(
       return;
     }
 
+    if (msg.reconcile === true) {
+      await reconcileAll(admin.firestore(), await getPlayClient());
+      return;
+    }
+
     if (msg.testNotification) {
       console.log("[partner] RTDN test notification received");
       return;
     }
+    // 환불·취소된 주문 (구독 생애주기 기록만, 제휴 처리 없음). 실패해도 재시도시키지 않는다.
+    if (msg.voidedPurchaseNotification && (!msg.packageName || msg.packageName === PACKAGE_NAME)) {
+      try { console.log(`[lifecycle] play voided -> ${await recordPlayVoided(admin.firestore(), { msg, messageId: event.data?.message?.messageId })}`); }
+      catch (e) { console.error("[lifecycle] play voided record failed:", e); }
+      return;
+    }
     const n = msg.subscriptionNotification;
-    if (!n || n.notificationType !== SUBSCRIPTION_PURCHASED) return;
+    if (!n) return;
     if (msg.packageName && msg.packageName !== PACKAGE_NAME) return;
 
+    const db = admin.firestore();
     const client = await getPlayClient();
-    const res = await client.purchases.subscriptionsv2.get({
-      packageName: PACKAGE_NAME,
-      token: n.purchaseToken,
-    });
-    const sub = res.data;
+    const getSub = async () => (await client.purchases.subscriptionsv2.get({ packageName: PACKAGE_NAME, token: n.purchaseToken })).data;
+
+    // 신규 구독이 아닌 이벤트: 갱신(체험→유료 전환), 해지, 만료, 환불
+    if (n.notificationType !== PLAY.PURCHASED) {
+      // 모든 알림 유형을 구독 생애주기로 기록하고, 제휴 처리는 기존과 같은 4가지 유형만 한다.
+      const partnerType = [PLAY.RENEWED, PLAY.CANCELED, PLAY.EXPIRED, PLAY.REVOKED].includes(n.notificationType);
+      let sub = null;
+      try { sub = await getSub(); console.log(`[partner] sub-summary type=${n.notificationType} ${summarizeSub(sub)}`); }
+      catch (e) { console.error(`[partner] subscriptionsv2.get failed on type=${n.notificationType}:`, e.message); }
+      await recordLifecycleSafe(db, msg, event, sub);
+      if (!partnerType) return;
+      const result = await handlePlayLifecycle(db, { type: n.notificationType, purchaseToken: n.purchaseToken, sub });
+      console.log(`[partner] lifecycle type=${n.notificationType} -> ${result}`);
+      return;
+    }
+
+    const sub = await getSub();
+    await recordLifecycleSafe(db, msg, event, sub);
     const item = (sub.lineItems ?? [])[0] ?? {};
     const code = item.signupPromotion?.vanityCode?.promotionCode ?? null;
     const orderId = sub.latestOrderId;
@@ -68,7 +114,6 @@ exports.recordPlayTrial = onMessagePublished(
       return;
     }
 
-    const db = admin.firestore();
     const base = {
       platform: "android",
       productId: item.productId ?? n.subscriptionId ?? null,
@@ -76,7 +121,7 @@ exports.recordPlayTrial = onMessagePublished(
       promotionType: item.signupPromotion?.oneTimeCode ? "oneTimeCode"
         : item.signupPromotion?.vanityCode ? "vanityCode" : null,
       startedAt: sub.startTime ? admin.firestore.Timestamp.fromDate(new Date(sub.startTime))
-        : admin.firestore.FieldValue.serverTimestamp(),
+        : admin.firestore.Timestamp.now(),
       regionCode: sub.regionCode ?? null,
       isTest: sub.testPurchase != null,
       subscriptionState: sub.subscriptionState ?? null,
@@ -95,23 +140,53 @@ exports.recordPlayTrial = onMessagePublished(
     console.log(`[partner] ${orderId} product=${base.productId} code=${code ?? "-"} type=${base.promotionType ?? "-"}`);
     if (!code) return;
 
-    const partners = await db.collection("partners").where("codes", "array-contains", code).limit(1).get();
-    if (partners.empty) {
+    const partner = await findPartner(db, [code]);
+    if (!partner) {
       console.log(`[partner] code ${code} has no partner`);
       return;
     }
-    await db.collection("partner_events").doc(orderId).set({
-      partnerId: partners.docs[0].id,
+    await createEvent(db, orderId, {
+      partnerId: partner.id,
       ...base,
+      purchaseToken: n.purchaseToken,
+      status: item.offerPhase?.basePrice ? "paid" : "trial",
+      lastEvent: "PURCHASED",
     });
   }
 );
 
-function esc(s) {
-  return String(s ?? "").replace(/[&<>"']/g, (c) => (
-    { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
-  ));
+// 체험 중으로 기록된 안드로이드 구독의 실제 상태를 구글에 직접 물어 맞춘다 (알림 누락·지연 대비 안전망).
+// 확신할 수 없으면 바꾸지 않는다. Cloud Scheduler가 매일 play-rtdn 주제에 {"reconcile":true}를 보내 깨운다
+// (예약 작업이 함수를 직접 호출하려면 별도 인증 권한이 필요해서, 이미 권한이 있는 알림 수신 경로를 재사용한다).
+async function reconcileAll(db, client) {
+  const snap = await db.collection("partner_events").where("status", "==", "trial").limit(300).get();
+  let checked = 0, changed = 0, skipped = 0, errors = 0;
+  for (const d of snap.docs) {
+    const ev = d.data();
+    if (ev.platform !== "android" || !ev.purchaseToken) { skipped++; continue; }
+    try {
+      const sub = (await client.purchases.subscriptionsv2.get({ packageName: PACKAGE_NAME, token: ev.purchaseToken })).data;
+      const r = decidePlayReconcile(ev, sub);
+      checked++;
+      if (r.patch) {
+        await d.ref.update({ ...r.patch, lastEvent: "RECONCILE", reconciledAt: admin.firestore.Timestamp.now() });
+        changed++;
+      }
+      console.log(`[reconcile] ${d.id} ${r.result} | ${summarizeSub(sub)}`);
+    } catch (e) {
+      errors++;
+      console.error(`[reconcile] ${d.id} error:`, e.message);
+    }
+  }
+  console.log(`[reconcile] done checked=${checked} changed=${changed} skipped=${skipped} errors=${errors}`);
 }
+
+// 매일 06:00(서울)에 reconcileAll을 실행한다. 새로 만든 직후 몇 분은 호출 권한 반영 지연으로 401이 날 수 있으나 곧 정상화된다(실제 확인).
+// 같은 점검은 play-rtdn 주제에 {"reconcile":true}를 한 번 보내 수동으로도 돌릴 수 있다.
+exports.reconcilePlayTrials = onSchedule(
+  { schedule: "every day 06:00", timeZone: "Asia/Seoul", serviceAccount: READER_SA },
+  async () => { await reconcileAll(admin.firestore(), await getPlayClient()); }
+);
 
 // 업체 전용 페이지. 토큰을 아는 사람만 본다. 개인정보(유저 id, 이메일 등)는 담지 않고 건수·날짜·국가만.
 exports.partnerStats = onRequest({ cors: false }, async (req, res) => {
@@ -132,36 +207,20 @@ exports.partnerStats = onRequest({ cors: false }, async (req, res) => {
   }
   const partnerDoc = found.docs[0];
   const partner = partnerDoc.data();
-  const reward = Number(partner.rewardPerTrial ?? 1);
-  const currency = partner.currency ?? "USD";
 
   const events = (await db.collection("partner_events").where("partnerId", "==", partnerDoc.id).get())
     .docs.map((d) => d.data())
     .filter((e) => !e.isTest || partner.countTestPurchases === true)
     .sort((a, b) => b.startedAt.toMillis() - a.startedAt.toMillis());
 
-  const byCode = {};
-  for (const e of events) byCode[e.code] = (byCode[e.code] ?? 0) + 1;
-
-  const rows = events.slice(0, 200).map((e) => `<tr>
-    <td>${esc(e.startedAt.toDate().toISOString().slice(0, 10))}</td>
-    <td>${esc(e.code)}</td><td>${esc(e.regionCode ?? "")}</td><td>Android</td></tr>`).join("");
-  const codeRows = (partner.codes ?? []).map((c) =>
-    `<tr><td>${esc(c)}</td><td>${byCode[c] ?? 0}</td></tr>`).join("");
-  const total = events.length;
-
-  res.status(200).type("html").send(`<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow"><title>Travelog partner stats</title>
-<style>body{font:16px/1.5 system-ui,sans-serif;max-width:640px;margin:0 auto;padding:24px 16px;color:#1a1a2e}
-h1{font-size:22px}.big{font-size:40px;font-weight:700;margin:4px 0}
-table{border-collapse:collapse;width:100%;margin:8px 0 24px}th,td{text-align:left;padding:8px;border-bottom:1px solid #e5e7eb}
-.card{background:#f4f7fb;border-radius:12px;padding:16px;margin:16px 0}.muted{color:#6b7280;font-size:14px}</style></head>
-<body><h1>${esc(partner.name)} — Travelog partner stats</h1>
-<div class="card"><div class="muted">Valid trials started with your codes</div><div class="big">${total}</div>
-<div class="muted">Estimated earnings: <b>${esc(currency)} ${(total * reward).toFixed(2)}</b> (${esc(currency)} ${reward.toFixed(2)} per trial)</div></div>
-<h2>Your codes</h2><table><tr><th>Code</th><th>Trials</th></tr>${codeRows}</table>
-<h2>Recent trials</h2><table><tr><th>Date</th><th>Code</th><th>Country</th><th>Store</th></tr>${rows || '<tr><td colspan="4" class="muted">No trials yet.</td></tr>'}</table>
-<p class="muted">Counts update within minutes of a trial starting. Android only for now; iOS counts are added separately.</p>
-</body></html>`);
+  const normalized = events.map((e) => ({
+    code: e.code,
+    regionCode: e.regionCode ?? null,
+    startedAt: e.startedAt.toDate(),
+    platform: e.platform ?? "android",
+    status: e.status ?? "trial",
+    trialCanceled: !!e.trialCanceledAt,
+    convertedAt: e.convertedAt?.toDate?.() ?? null,
+  }));
+  res.status(200).type("html").send(renderPartnerPage({ partner, events: normalized }));
 });
