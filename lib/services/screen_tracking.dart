@@ -4,6 +4,8 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+import 'adservices_attribution.dart';
+
 typedef TrackingSink =
     Future<void> Function(String event, Map<String, Object> data);
 
@@ -139,6 +141,9 @@ class ScreenTracking with WidgetsBindingObserver {
   }
 
   void start() {
+    // Apple Search Ads attribution: fire-and-forget, once per install (iOS).
+    // Lives here because start() runs right after Firebase init in main.dart.
+    unawaited(AdServicesAttribution.runOnce());
     if (!enabled || _disposed || _heartbeat != null) return;
     WidgetsBinding.instance.addObserver(this);
     didChangeAppLifecycleState(

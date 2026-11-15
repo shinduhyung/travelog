@@ -168,7 +168,165 @@ class SubscriptionService extends ChangeNotifier {
 
     if (!_debugForceNonPremium) {
       await _iap.restorePurchases();
+      // 만료 확인은 앱 시작을 늦추지 않도록 기다리지 않고 백그라운드로 돌린다.
+      unawaited(_verifyEntitlementOnStartup());
     }
+  }
+
+  // ─── 구독 만료 확인 ─────────────────────────────────────────────────────
+  // 예전엔 _setPremium(false)를 부르는 곳이 없어서, 해지한 월간/연간 구독자도
+  // 프리미엄이 영원히 유지됐다. 스토어가 "확실히" 구독 없음이라고 답했을 때만
+  // 내린다. 오류·타임아웃·오프라인·애매한 응답은 전부 "판단 불가"로 보고 유지.
+
+  static const Set<String> _subscriptionIds = {
+    kMonthlyId,
+    kLegacyYearlyId,
+    kYearlyId,
+  };
+
+  static const Duration _entitlementCheckTimeout = Duration(seconds: 20);
+
+  /// iOS: 만료일이 지나도 결제 재시도/유예 중일 수 있어 이만큼은 더 봐준다.
+  static const Duration _expiryGrace = Duration(days: 3);
+
+  /// _setPremium(true)가 불릴 때마다 증가. 확인 도중 구매/복원으로 프리미엄이
+  /// 켜졌으면 확인 결과(조회 시작 시점 기준)를 버리기 위해 쓴다.
+  int _premiumActivationSeq = 0;
+
+  bool _entitlementCheckRunning = false;
+
+  Future<void> _verifyEntitlementOnStartup() async {
+    if (_debugForceNonPremium) return;
+    if (!_isPremium || _isLifetime) return; // 내릴 게 없거나 평생 이용권
+    if (!_isAvailable) return;
+    if (_entitlementCheckRunning) return;
+    _entitlementCheckRunning = true;
+
+    final int seqAtStart = _premiumActivationSeq;
+    try {
+      final _EntitlementCheck result;
+      if (Platform.isAndroid) {
+        result = await _checkAndroidEntitlement().timeout(
+          _entitlementCheckTimeout,
+        );
+      } else if (Platform.isIOS) {
+        result = await _checkIosEntitlement().timeout(
+          _entitlementCheckTimeout,
+        );
+      } else {
+        return;
+      }
+
+      debugPrint(
+        '[SubscriptionService] entitlement check: ${result.state.name} '
+        '(${result.productId ?? '-'})',
+      );
+
+      if (result.state != _EntitlementState.notEntitled) return;
+
+      // 확인 중에 구매/복원이 들어왔거나, 결제가 진행 중이거나, 그 사이 평생
+      // 이용권이 잡혔으면 내리지 않는다.
+      if (_premiumActivationSeq != seqAtStart ||
+          _isLoading ||
+          _isLifetime ||
+          !_isPremium) {
+        return;
+      }
+
+      await _downgradeExpired(result.productId ?? _activeProductId);
+    } on TimeoutException {
+      debugPrint('[SubscriptionService] entitlement check timed out — keep premium');
+    } catch (e) {
+      debugPrint('[SubscriptionService] entitlement check error: $e — keep premium');
+    } finally {
+      _entitlementCheckRunning = false;
+    }
+  }
+
+  /// Android: Play Billing queryPurchases는 "현재 보유 중인" 구매만 돌려준다
+  /// (만료·해지 완료·계정 보류 구독은 빠짐). 그래서 오류 없이 끝났는데 우리
+  /// 상품이 하나도 없으면 = 권한 없음. restorePurchases()는 결과가 0건이면
+  /// 스트림에 아무것도 안 보내서 완료 신호로 쓸 수 없으므로 이걸 직접 쓴다.
+  Future<_EntitlementCheck> _checkAndroidEntitlement() async {
+    final addition = _iap
+        .getPlatformAddition<InAppPurchaseAndroidPlatformAddition>();
+    final response = await addition.queryPastPurchases();
+
+    if (response.error != null) {
+      debugPrint(
+        '[SubscriptionService] queryPastPurchases error: '
+        '${response.error!.code} ${response.error!.message}',
+      );
+      return const _EntitlementCheck(_EntitlementState.unknown);
+    }
+
+    for (final p in response.pastPurchases) {
+      // 보류(pending) 결제도 일단 보유로 본다 — 내리는 쪽으로는 보수적으로.
+      if (p.productID == kLifetimeId || _subscriptionIds.contains(p.productID)) {
+        return _EntitlementCheck(_EntitlementState.entitled, p.productID);
+      }
+    }
+    return const _EntitlementCheck(_EntitlementState.notEntitled);
+  }
+
+  /// iOS: StoreKit2(이 패키지 버전의 기본값)의 Transaction.all을
+  /// SK2Transaction.transactions()로 받아 구독 만료일(expirationDate)을 직접 본다.
+  /// (restorePurchases()는 SK2에서 currentEntitlements를 쓰지만 0건이면 역시
+  /// 아무것도 안 보내고, Dart 쪽에 currentEntitlements를 직접 주는 API는 없다.)
+  ///
+  /// 권한 없음으로 판단하는 조건 (전부 만족해야 함):
+  ///  - 평생 이용권 트랜잭션이 하나도 없음
+  ///  - 우리 구독 상품 트랜잭션이 최소 1건 있음 (0건이면 기기 이전 직후 등
+  ///    아직 동기화가 안 된 상태일 수 있어 판단 불가로 본다)
+  ///  - 모든 구독 트랜잭션에 만료일이 있고, 가장 늦은 만료일 + 3일이 이미 지남
+  Future<_EntitlementCheck> _checkIosEntitlement() async {
+    if (!InAppPurchaseStoreKitPlatform.isStoreKit2Enabled) {
+      // StoreKit1 복원은 만료된 트랜잭션도 돌려줘서 믿을 수 없다 → 판단 안 함.
+      return const _EntitlementCheck(_EntitlementState.unknown);
+    }
+
+    final transactions = await SK2Transaction.transactions();
+
+    DateTime? latestExpiry;
+    String? latestProductId;
+    var sawSubscription = false;
+
+    for (final t in transactions) {
+      if (t.productId == kLifetimeId) {
+        return _EntitlementCheck(_EntitlementState.entitled, t.productId);
+      }
+      if (!_subscriptionIds.contains(t.productId)) continue;
+      sawSubscription = true;
+
+      final millis = int.tryParse(t.expirationDate ?? '');
+      if (millis == null) {
+        // 구독인데 만료일을 모르면 판단 불가.
+        return const _EntitlementCheck(_EntitlementState.unknown);
+      }
+      final expiry = DateTime.fromMillisecondsSinceEpoch(millis);
+      if (latestExpiry == null || expiry.isAfter(latestExpiry)) {
+        latestExpiry = expiry;
+        latestProductId = t.productId;
+      }
+    }
+
+    if (!sawSubscription || latestExpiry == null) {
+      return const _EntitlementCheck(_EntitlementState.unknown);
+    }
+
+    if (latestExpiry.add(_expiryGrace).isAfter(DateTime.now())) {
+      return _EntitlementCheck(_EntitlementState.entitled, latestProductId);
+    }
+    return _EntitlementCheck(_EntitlementState.notEntitled, latestProductId);
+  }
+
+  Future<void> _downgradeExpired(String? productId) async {
+    debugPrint(
+      '[SubscriptionService] subscription expired — premium off ($productId)',
+    );
+    // 재구독 시 기존 가격(레거시 연간)을 계속 보여주도록 _activeProductId는 남겨둔다.
+    await _setPremium(false);
+    unawaited(_logFunnelEvent('premium_expired', productId ?? 'unknown', 'startup_check'));
   }
 
   /// 캐시에 있으면 그대로, 없으면 스토어에서 해당 상품만 조회해 캐시에 넣는다.
@@ -302,7 +460,7 @@ class SubscriptionService extends ChangeNotifier {
     if (Platform.isAndroid && purchase is GooglePlayPurchaseDetails) {
       final orderId = purchase.billingClientPurchase.orderId;
 
-      if (orderId != null && orderId.isNotEmpty) {
+      if (orderId.isNotEmpty) {
         final docRef = FirebaseFirestore.instance
             .collection('orders')
             .doc(orderId);
@@ -654,6 +812,7 @@ class SubscriptionService extends ChangeNotifier {
     await prefs.setBool(_prefKeyIsPremium, value);
 
     if (value) {
+      _premiumActivationSeq++;
       _hasEverBeenPremium = true;
 
       await prefs.setBool(_prefKeyHasEverBeenPremium, true);
@@ -710,4 +869,13 @@ class AdServiceSubscriptionBridge {
   void onPremiumActivated() => _onActivated?.call();
 
   void onPremiumDeactivated() => _onDeactivated?.call();
+}
+
+enum _EntitlementState { entitled, notEntitled, unknown }
+
+class _EntitlementCheck {
+  const _EntitlementCheck(this.state, [this.productId]);
+
+  final _EntitlementState state;
+  final String? productId;
 }

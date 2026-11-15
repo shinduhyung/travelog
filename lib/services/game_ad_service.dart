@@ -23,6 +23,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
+import 'package:jidoapp/ads/ad_revenue_logger.dart';
 import 'package:jidoapp/services/ad_service.dart';
 import 'package:jidoapp/services/subscription_service.dart';
 
@@ -148,6 +149,14 @@ class GameAdService {
       request: const AdRequest(),
       adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (ad) {
+          ad.onPaidEvent = (ad, valueMicros, precision, currencyCode) =>
+              AdRevenueLogger.fromPaidEvent(
+                ad,
+                valueMicros,
+                precision,
+                currencyCode,
+                format: AdRevenueLogger.formatGameInterstitial,
+              );
           _interstitialAd = ad;
           _adLoadedAt = DateTime.now();
           _isLoadingAd = false;

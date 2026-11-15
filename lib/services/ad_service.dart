@@ -1,4 +1,5 @@
 import 'package:jidoapp/services/preserved_ad_pause.dart';
+import 'package:jidoapp/ads/ad_revenue_logger.dart';
 import 'dart:async';
 import 'package:jidoapp/services/screen_tracking.dart';
 import 'dart:io';
@@ -601,10 +602,11 @@ class AdService {
                   },
                 );
 
-                _logAdRevenueToFirestore(
+                AdRevenueLogger.log(
+                  format: AdRevenueLogger.formatInterstitial,
                   revenue: revenue,
                   currencyCode: currencyCode,
-                  precision: precision.toString(),
+                  precision: precision,
                   adSourceName: adSourceName,
                 );
               };
@@ -735,30 +737,6 @@ class AdService {
       });
     } catch (e) {
       debugPrint('[AdService] impression log error: $e');
-    }
-  }
-
-  /// 그룹별 실제 광고 ARPU 계산용 원시 이벤트 기록.
-  /// precision을 같이 남겨서 0원 이벤트가 estimated/unknown 때문인지 나중에 구분 가능.
-  /// 실패해도 실제 광고 노출/과금 흐름에는 영향 주지 않음.
-  Future<void> _logAdRevenueToFirestore({
-    required double revenue,
-    required String currencyCode,
-    required String precision,
-    required String adSourceName,
-  }) async {
-    try {
-      await FirebaseFirestore.instance.collection('ad_revenue_events').add({
-        'adExperimentGroup': _groupLabel,
-        'deviceId': _deviceId,
-        'revenue': revenue,
-        'currencyCode': currencyCode,
-        'precision': precision,
-        'adSourceName': adSourceName,
-        'timestamp': FieldValue.serverTimestamp(),
-      });
-    } catch (e) {
-      debugPrint('[AdService] revenue log error: $e');
     }
   }
 

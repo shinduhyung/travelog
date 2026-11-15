@@ -12,6 +12,7 @@ import 'package:facebook_app_events/facebook_app_events.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:jidoapp/ads/ad_revenue_logger.dart';
 import 'package:jidoapp/services/ad_service.dart';
 import 'package:jidoapp/services/screen_tracking.dart';
 import 'package:jidoapp/services/subscription_service.dart';
@@ -189,6 +190,14 @@ class _TravelogBannerState extends State<TravelogBanner> {
             'ad_format': 'banner',
             'ad_experiment_group': AdService.instance.experimentGroup,
           });
+          AdRevenueLogger.fromPaidEvent(
+            ad,
+            valueMicros,
+            precision,
+            currencyCode,
+            format: AdRevenueLogger.formatBanner,
+            placement: BannerAds.placementFor(ScreenTracking.currentScreen.value).name,
+          );
         },
       ),
     );

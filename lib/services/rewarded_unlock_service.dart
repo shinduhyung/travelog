@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
+import 'package:jidoapp/ads/ad_revenue_logger.dart';
 import 'package:jidoapp/services/ad_service.dart';
 import 'package:jidoapp/services/subscription_service.dart';
 
@@ -90,6 +91,16 @@ class RewardedUnlockService extends ChangeNotifier {
 
     final completer = Completer<RewardedUnlockResult>();
     var earned = false;
+
+    ad.onPaidEvent = (ad, valueMicros, precision, currencyCode) =>
+        AdRevenueLogger.fromPaidEvent(
+          ad,
+          valueMicros,
+          precision,
+          currencyCode,
+          format: AdRevenueLogger.formatRewarded,
+          placement: statKey,
+        );
 
     // Keep the timed interstitial from firing on top of the rewarded video.
     AdService.instance.setUiOverlayActive();
