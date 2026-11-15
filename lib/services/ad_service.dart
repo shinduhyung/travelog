@@ -189,8 +189,31 @@ class AdService {
   static const String _iosInterstitialAdUnitId =
       'ca-app-pub-3945470636956441/5308407850';
 
-  String get _adUnitId =>
-      Platform.isIOS ? _iosInterstitialAdUnitId : _realInterstitialAdUnitId;
+  // Unity가 막혔을 때 쓰는 대체 광고 단위. 미디에이션 그룹에 넣지 않아서
+  // AdMob (default) 그룹 = AdMob Network만 받는다(Unity 없음).
+  // Android: interstitial_main_v2 / iOS: travelog_apple_interstitial_games
+  static const String _androidNoUnityAdUnitId =
+      'ca-app-pub-3945470636956441/4168811842';
+  static const String _iosNoUnityAdUnitId =
+      'ca-app-pub-3945470636956441/7830493670';
+
+  // Unity Ads가 "Can't show a new ad unit when ad unit is already open"
+  // (오류 506)을 한 번 내면, 그 실행 동안에는 Unity가 계속 같은 이유로 show를
+  // 거절한다(2026-11 실측: 한 기기에서 518회 연속 실패). 그래서 이 오류를 본
+  // 뒤에는 앱이 다시 켜질 때까지 Unity가 없는 대체 광고 단위로 받는다.
+  bool _unityBlockedThisSession = false;
+  static const int _unityAlreadyOpenErrorCode = 506;
+
+  // 한 광고 차례당 show 실패 후 재시도는 1번까지만. 실패→재로드→또 실패가
+  // 화면 전환마다 끝없이 반복되는 것을 막는다.
+  bool _showRetryUsedForCurrentTurn = false;
+
+  String get _adUnitId {
+    if (_unityBlockedThisSession) {
+      return Platform.isIOS ? _iosNoUnityAdUnitId : _androidNoUnityAdUnitId;
+    }
+    return Platform.isIOS ? _iosInterstitialAdUnitId : _realInterstitialAdUnitId;
+  }
 
   void _onPremiumActivated() {
     _isPremium = true;
@@ -646,14 +669,29 @@ class AdService {
                     '[AdService] failed to show: code=${error.code} '
                     'domain=${error.domain} msg=${error.message}',
                   );
+                  final String failedSource = _shownAdSource ?? adSourceName;
                   _logAdShowIssueToFirestore(
                     reason: 'show_failed',
-                    adSourceName: _shownAdSource ?? adSourceName,
+                    adSourceName: failedSource,
                     adAgeSeconds: _shownAdAgeSeconds,
                     errorCode: error.code,
                     errorDomain: error.domain,
                     errorMessage: error.message,
                   );
+                  if (!_unityBlockedThisSession &&
+                      error.code == _unityAlreadyOpenErrorCode &&
+                      failedSource.toLowerCase().contains('unity')) {
+                    _unityBlockedThisSession = true;
+                    _logAdShowIssueToFirestore(
+                      reason: 'unity_blocked_fallback',
+                      adSourceName: failedSource,
+                      errorCode: error.code,
+                    );
+                    debugPrint(
+                      '[AdService] Unity stuck (506) - using no-Unity ad unit '
+                      'for the rest of this session',
+                    );
+                  }
                   ad.dispose();
                   _interstitialAd = null;
                   // 띄우기에 실패했으면 이번 광고 차례를 버리지 않고 다시
@@ -758,6 +796,7 @@ class AdService {
 
     final now = DateTime.now();
     _isAdPending = true;
+    _showRetryUsedForCurrentTurn = false; // 새 광고 차례 — 재시도 기회 1번 다시 부여
     _queuedTriggerSource = triggerSource;
     // "조건을 만족한 바로 그 순간"의 값을 캡처 — 화면 전환을 기다리는 동안
     // 흐른 시간/터치는 이 계측값에 반영되지 않는다(원래 조건 충족 시점
@@ -860,6 +899,13 @@ class AdService {
   /// 돌려놓아서, 재시도로 노출될 때도 최초 조건 충족 시점 기준으로 기록된다.
   void _restorePendingAfterShowFailure() {
     if (_isPremium) return;
+    if (_showRetryUsedForCurrentTurn) {
+      // 이미 한 번 재시도했는데 또 실패 — 이번 차례는 포기하고 다음 조건
+      // 충족(130초/40터치)을 기다린다. 무한 실패 루프 방지.
+      _refreshTimerState();
+      return;
+    }
+    _showRetryUsedForCurrentTurn = true;
     _isAdPending = true;
     _queuedTriggerSource = _pendingTriggerSource ?? 'timer';
     _queuedElapsedSeconds = _pendingElapsedSeconds;
@@ -879,8 +925,10 @@ class AdService {
   }) async {
     try {
       await FirebaseFirestore.instance.collection('ad_show_issue_events').add({
-        'reason': reason, // 'show_failed' | 'stale_discarded'
+        // 'show_failed' | 'stale_discarded' | 'unity_blocked_fallback'
+        'reason': reason,
         'adSourceName': adSourceName,
+        'unityBlocked': _unityBlockedThisSession,
         'adAgeSeconds': adAgeSeconds,
         'errorCode': errorCode,
         'errorDomain': errorDomain,
