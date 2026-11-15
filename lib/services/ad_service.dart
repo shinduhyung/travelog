@@ -178,6 +178,28 @@ class AdService {
   bool get _countryScreenAdsEnabledForGroup =>
       _countryAdGroup == CountryAdGroup.allow;
 
+  // ─── 배너 A/B 테스트 (Android 전용) ──────────────────────────────────────
+  // Android 기기를 50:50으로 'banner_on'(배너 표시) / 'banner_off'(배너 전과
+  // 동일, 배너 없음)로 한 번 배정하고 영구 고정한다. iOS는 실험 대상이 아니라
+  // 그룹이 null이고 배너는 항상 켜져 있다. 그룹은 app_open_events와
+  // ad_revenue_events에 bannerAbGroup으로 남고, 구독 기록과는 deviceId로
+  // 이어서 그룹별 광고 수익·리텐션·구독을 비교한다.
+  static const String _prefKeyBannerAb = 'banner_ab_v1';
+  static const String _prefKeyBannerAbAssignedAt = 'banner_ab_v1_assigned_at';
+  static const String bannerAbOn = 'banner_on';
+  static const String bannerAbOff = 'banner_off';
+
+  String? _bannerAbGroup;
+  DateTime? _bannerAbAssignedAt;
+  bool _bannerAbAssignedThisLaunch = false;
+  bool _isFirstLaunch = false;
+
+  /// 'banner_on' / 'banner_off' (Android), iOS는 null.
+  String? get bannerAbGroup => _bannerAbGroup;
+
+  /// 배너를 보여도 되는 그룹인지. 'banner_off' 그룹만 false.
+  bool get bannersEnabled => _bannerAbGroup != bannerAbOff;
+
   // Show subscription sheet every 3 ad dismissals
   static const int _subscriptionPromptEvery = 3;
 
@@ -381,6 +403,7 @@ class AdService {
   Future<void> initialize() async {
     _isPremium = SubscriptionService.instance.isPremium;
     await _assignExperimentGroupIfNeeded();
+    await _assignBannerAbIfNeeded();
     _logAppOpenEvent(); // 리텐션(D3/D7)·마지막 접속일 계측용 — 매 실행마다 1건
 
     // ─── GDPR/UMP consent 흐름 ────────────────────────────────────────────
@@ -460,6 +483,33 @@ class AdService {
     }
   }
 
+  /// Android 기기를 배너 A/B 그룹에 한 번 배정한다(50:50, 이후 고정).
+  /// 이미 배너를 보던 기존 사용자도 여기서 처음 배정되며, 'banner_off'가
+  /// 되면 다음 실행부터 배너가 사라진다.
+  Future<void> _assignBannerAbIfNeeded() async {
+    if (!Platform.isAndroid) return;
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      String? group = prefs.getString(_prefKeyBannerAb);
+      if (group != bannerAbOn && group != bannerAbOff) {
+        group = Random().nextBool() ? bannerAbOn : bannerAbOff;
+        final now = DateTime.now();
+        await prefs.setString(_prefKeyBannerAb, group);
+        await prefs.setString(_prefKeyBannerAbAssignedAt, now.toIso8601String());
+        _bannerAbAssignedAt = now;
+        _bannerAbAssignedThisLaunch = true;
+        debugPrint('[AdService] banner A/B group assigned: $group');
+      } else {
+        final savedAt = prefs.getString(_prefKeyBannerAbAssignedAt);
+        _bannerAbAssignedAt = savedAt != null ? DateTime.tryParse(savedAt) : null;
+      }
+      _bannerAbGroup = group;
+    } catch (e) {
+      // 배정 실패 시 그룹 없음 = 배너 켜짐(기존 동작), 실험 집계에서는 빠진다.
+      debugPrint('[AdService] banner A/B assign error: $e');
+    }
+  }
+
   /// 최초 1회 배정. 시간조건/터치조건은 고정값(130초/40회)을 그대로 쓰고,
   /// 국가축(1=block/2=allow)만 완전 무작위로 배정. 이후 영구 고정.
   /// pref 키는 v5 그대로 유지 — 국가축만 계속 실험 중이므로 재배정할
@@ -469,6 +519,7 @@ class AdService {
 
     String? deviceId = prefs.getString(_prefKeyDeviceId);
     final bool isNewDeviceId = deviceId == null;
+    _isFirstLaunch = isNewDeviceId;
     if (isNewDeviceId) {
       deviceId = _generateDeviceId();
       await prefs.setString(_prefKeyDeviceId, deviceId);
@@ -735,6 +786,12 @@ class AdService {
       await FirebaseFirestore.instance.collection('app_open_events').add({
         'adExperimentGroup': _groupLabel,
         'deviceId': _deviceId,
+        'platform': Platform.isIOS ? 'ios' : 'android',
+        'firstLaunch': _isFirstLaunch,
+        if (_bannerAbGroup != null) 'bannerAbGroup': _bannerAbGroup,
+        if (_bannerAbAssignedAt != null)
+          'bannerAbAssignedAt': Timestamp.fromDate(_bannerAbAssignedAt!),
+        if (_bannerAbAssignedThisLaunch) 'bannerAbAssignedThisLaunch': true,
         'timestamp': FieldValue.serverTimestamp(),
       });
     } catch (e) {

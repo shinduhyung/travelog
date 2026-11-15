@@ -73,6 +73,8 @@ class BannerAds {
 
   static bool visibleFor(BannerPlacement slot) {
     if (!ready.value || SubscriptionService.instance.isPremium) return false;
+    // Android banner A/B test: the 'banner_off' group keeps the pre-banner app.
+    if (!AdService.instance.bannersEnabled) return false;
     final p = placementFor(ScreenTracking.currentScreen.value);
     if (slot == BannerPlacement.bottom && p == BannerPlacement.result) {
       return resultShowing.value;

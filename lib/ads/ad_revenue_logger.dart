@@ -37,6 +37,7 @@ class AdRevenueLogger {
       final String? screenName = screen ?? ScreenTracking.currentScreen.value;
       await FirebaseFirestore.instance.collection('ad_revenue_events').add({
         'adExperimentGroup': svc.experimentGroup,
+        if (svc.bannerAbGroup != null) 'bannerAbGroup': svc.bannerAbGroup,
         'deviceId': svc.deviceId,
         'revenue': revenue,
         'currencyCode': currencyCode,
