@@ -1,6 +1,8 @@
 package com.example.jidoapp
 
 import android.util.Log
+import com.android.installreferrer.api.InstallReferrerClient
+import com.android.installreferrer.api.InstallReferrerStateListener
 import com.tiktok.TikTokBusinessSdk
 import com.tiktok.appevents.contents.TTContentParams
 import com.tiktok.appevents.contents.TTContentsEventConstants
@@ -15,10 +17,60 @@ class MainActivity : FlutterActivity() {
     companion object {
         private const val CHANNEL = "com.ahnlee.jidoapp/tiktok_events"
         private const val TAG = "TikTokPurchase"
+        private const val REFERRER_CHANNEL = "com.ahnlee.jidoapp/install_referrer"
     }
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
+
+        // Play 설치 리퍼러: 어떤 광고(구글 gclid, 메타 utm_content 등)로 설치됐는지 남기기 위함
+        MethodChannel(
+            flutterEngine.dartExecutor.binaryMessenger,
+            REFERRER_CHANNEL
+        ).setMethodCallHandler { call, result ->
+            if (call.method != "getInstallReferrer") {
+                result.notImplemented()
+                return@setMethodCallHandler
+            }
+            var replied = false
+            fun reply(value: Map<String, Any?>?) {
+                if (replied) return
+                replied = true
+                runOnUiThread { result.success(value) }
+            }
+            try {
+                val client = InstallReferrerClient.newBuilder(applicationContext).build()
+                client.startConnection(object : InstallReferrerStateListener {
+                    override fun onInstallReferrerSetupFinished(responseCode: Int) {
+                        try {
+                            if (responseCode == InstallReferrerClient.InstallReferrerResponse.OK) {
+                                val d = client.installReferrer
+                                reply(
+                                    mapOf(
+                                        "referrer" to d.installReferrer,
+                                        "clickTs" to d.referrerClickTimestampSeconds,
+                                        "installTs" to d.installBeginTimestampSeconds,
+                                        "instantExperience" to d.googlePlayInstantParam
+                                    )
+                                )
+                            } else {
+                                reply(mapOf("error" to "response_$responseCode"))
+                            }
+                        } catch (e: Exception) {
+                            reply(mapOf("error" to (e.message ?: "exception")))
+                        } finally {
+                            try { client.endConnection() } catch (_: Exception) {}
+                        }
+                    }
+
+                    override fun onInstallReferrerServiceDisconnected() {
+                        reply(mapOf("error" to "disconnected"))
+                    }
+                })
+            } catch (e: Exception) {
+                reply(mapOf("error" to (e.message ?: "exception")))
+            }
+        }
 
         MethodChannel(
             flutterEngine.dartExecutor.binaryMessenger,

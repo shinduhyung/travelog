@@ -118,6 +118,14 @@ service cloud.firestore {
       allow update: if changedOnly(['deviceId', 'localeCountryCode']);
     }
 
+    // Play 설치 리퍼러 (기기당 1건, 문서 ID = deviceId). 읽기는 Functions/관리자만.
+    match /install_referrers/{deviceId} {
+      allow create: if onlyKeys(['deviceId', 'referrer', 'clickTs', 'installTs',
+          'instantExperience', 'error', 'platform', 'recordedAt'])
+        && request.resource.data.deviceId == deviceId
+        && request.resource.data.get('referrer', '').size() < 2000;
+    }
+
     match /app_open_events/{docId} {
       allow create: if true;
     }

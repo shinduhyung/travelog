@@ -99,6 +99,14 @@ class SubscriptionService extends ChangeNotifier {
   Future<void> initialize() async {
     final prefs = await SharedPreferences.getInstance();
 
+    // 광고 구매 이벤트 보완 경로(restored)의 기준 시각: 이 시각 이전 결제는 보내지 않는다.
+    if (prefs.getInt(_prefKeyAdLedgerSince) == null) {
+      await prefs.setInt(
+        _prefKeyAdLedgerSince,
+        DateTime.now().millisecondsSinceEpoch,
+      );
+    }
+
     _isPremium = _debugForceNonPremium
         ? false
         : (prefs.getBool(_prefKeyIsPremium) ?? false);
@@ -439,14 +447,16 @@ class SubscriptionService extends ChangeNotifier {
     final double price = details?.rawPrice ?? 0.0;
     final String currencyCode = details?.currencyCode ?? 'USD';
 
-    if (!isRestore) {
-      await _logPurchaseEvents(
-        productId: productId,
-        price: price,
-        currencyCode: currencyCode,
-        transactionId: purchase.purchaseID,
-      );
-    }
+    // 광고 구매 이벤트(Meta·Firebase·TikTok)는 주문 문서 존재 여부와 무관하게
+    // 기기 안의 기록으로 한 번만 보낸다. 서버(스토어 알림)가 orders 문서를 앱보다
+    // 먼저 만들면 예전 '문서를 처음 만들 때만 보냄' 보완 경로가 막혔기 때문.
+    await _maybeLogPurchaseEvents(
+      purchase,
+      isRestore: isRestore,
+      isLifetime: isLifetimePurchase,
+      price: price,
+      currencyCode: currencyCode,
+    );
 
     // --------------------------------------------------
     // Android 주문 정보 Firestore 저장 — isRestore와 무관하게 항상 실행.
@@ -526,25 +536,6 @@ class SubscriptionService extends ChangeNotifier {
                   : null,
             });
 
-            // 결제가 앱 밖에서 끝나거나(결제창 도중 앱 종료, 지연 결제 승인 등)
-            // 다음 실행 때 처음 감지된 신규 구매는 purchased가 아니라 restored로만 들어와서
-            // 위의 광고 구매 이벤트(Meta·Firebase·TikTok)가 통째로 빠졌다.
-            // 이 주문 문서를 지금 처음 만든 경우 = 처음 보는 주문이므로 여기서 한 번만 보낸다.
-            // 갱신은 신규 구매가 아니라서 제외하고, 이 기능 배포 전의 오래된 구매가
-            // 뒤늦게 처음 기록되며 신규로 집계되는 일을 막으려고 최근 결제만 보낸다.
-            if (isRestore &&
-                !isRenewal &&
-                _isRecentTransaction(purchase, const Duration(days: 3))) {
-              debugPrint(
-                '[SubscriptionService] first-seen order $orderId arrived as restored — sending purchase events',
-              );
-              await _logPurchaseEvents(
-                productId: productId,
-                price: price,
-                currencyCode: currencyCode,
-                transactionId: purchase.purchaseID,
-              );
-            }
           }
         } catch (e) {
           debugPrint('[SubscriptionService] Firestore save error: $e');
@@ -624,6 +615,82 @@ class SubscriptionService extends ChangeNotifier {
     debugPrint(
       '[SubscriptionService] premium activated ($productId, restore=$isRestore)',
     );
+  }
+
+  static const _prefKeyAdEventIds = 'ad_purchase_event_ids';
+  static const _prefKeyAdLedgerSince = 'ad_purchase_ledger_since';
+  static const _recentPurchaseWindow = Duration(days: 3);
+
+  /// 앱이 직접 시작한 결제(productId → 시작 시각). iOS에서 재구독·업그레이드처럼
+  /// 원본 거래 ID가 이전 것과 같은 신규 결제를 갱신과 구분하는 데 쓴다.
+  final Map<String, DateTime> _checkoutStartedAt = {};
+
+  /// 신규 결제면 광고 구매 이벤트를 한 번만 보낸다.
+  /// - 갱신 결제는 보내지 않는다 (Android: orderId에 '..', iOS: 원본 거래 ID가 다름).
+  /// - restored로 들어온 결제는 최근 3일 이내이고, 이 기록 장치가 생긴 뒤의 결제만 보낸다
+  ///   (업데이트·재설치 직후 예전 구매가 다시 신규로 잡히는 것을 막음).
+  /// - 같은 주문은 기기 안 기록으로 한 번만 보낸다.
+  Future<void> _maybeLogPurchaseEvents(
+    PurchaseDetails purchase, {
+    required bool isRestore,
+    required bool isLifetime,
+    required double price,
+    required String currencyCode,
+  }) async {
+    try {
+      String? key;
+      bool isRenewal = false;
+
+      if (Platform.isAndroid && purchase is GooglePlayPurchaseDetails) {
+        key = purchase.billingClientPurchase.orderId;
+        isRenewal = !isLifetime && key.contains('..');
+      } else if (Platform.isIOS) {
+        key = purchase.purchaseID;
+        if (key != null && !isLifetime) {
+          final original = await _extractOriginalTransactionId(purchase);
+          final startedAt = _checkoutStartedAt[purchase.productID];
+          final startedHere = startedAt != null &&
+              DateTime.now().difference(startedAt) < const Duration(hours: 2);
+          isRenewal = original != null && original != key && !startedHere;
+        }
+      } else {
+        key = purchase.purchaseID;
+      }
+
+      if (key == null || key.isEmpty) return;
+
+      final prefs = await SharedPreferences.getInstance();
+      final sent = prefs.getStringList(_prefKeyAdEventIds) ?? <String>[];
+      if (sent.contains(key)) return;
+
+      if (isRenewal) {
+        debugPrint('[SubscriptionService] $key is a renewal — no purchase event');
+        return;
+      }
+
+      if (isRestore) {
+        if (!_isRecentTransaction(purchase, _recentPurchaseWindow)) return;
+        final since = prefs.getInt(_prefKeyAdLedgerSince);
+        final millis = int.tryParse(purchase.transactionDate ?? '');
+        if (since == null || millis == null || millis < since) return;
+        debugPrint(
+          '[SubscriptionService] new purchase $key arrived as restored — sending purchase events',
+        );
+      }
+
+      await _logPurchaseEvents(
+        productId: purchase.productID,
+        price: price,
+        currencyCode: currencyCode,
+        transactionId: key,
+      );
+
+      sent.add(key);
+      if (sent.length > 50) sent.removeRange(0, sent.length - 50);
+      await prefs.setStringList(_prefKeyAdEventIds, sent);
+    } catch (e) {
+      debugPrint('[SubscriptionService] purchase event check error: $e');
+    }
   }
 
   /// 신규 구매 1건에 대한 광고·분석 구매 이벤트(Meta, Firebase, TikTok)를 보낸다.
@@ -726,6 +793,7 @@ class SubscriptionService extends ChangeNotifier {
     }
 
     _logFunnelEvent('checkout_started', productId, triggerContext);
+    _checkoutStartedAt[productId] = DateTime.now();
 
     _setLoading(true);
 

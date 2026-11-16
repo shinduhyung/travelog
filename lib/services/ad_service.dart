@@ -11,6 +11,7 @@ import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'package:facebook_app_events/facebook_app_events.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:jidoapp/services/subscription_service.dart';
+import 'package:jidoapp/services/install_referrer_service.dart';
 import 'package:jidoapp/widgets/subscription_sheet.dart';
 import 'package:jidoapp/main.dart' show navigatorKey;
 
@@ -404,6 +405,7 @@ class AdService {
     _isPremium = SubscriptionService.instance.isPremium;
     await _assignExperimentGroupIfNeeded();
     await _assignBannerAbIfNeeded();
+    unawaited(InstallReferrerService.recordOnce(_deviceId));
     _logAppOpenEvent(); // 리텐션(D3/D7)·마지막 접속일 계측용 — 매 실행마다 1건
 
     // ─── GDPR/UMP consent 흐름 ────────────────────────────────────────────
