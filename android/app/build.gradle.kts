@@ -68,9 +68,15 @@ android {
     }
 }
 
+configurations.all {
+    exclude(group = "com.pangle.global", module = "tiktok-business-android-sdk-comp")
+}
+
 dependencies {
-    // TikTok App Events SDK
-    implementation("com.github.tiktok:tiktok-business-android-sdk:1.5.0")
+    // TikTok App Events SDK. Pangle (gma_mediation_pangle) pulls the same classes
+    // as com.pangle.global:tiktok-business-android-sdk-comp 1.6.1, so use the same
+    // version here and exclude the Pangle copy below.
+    implementation("com.github.tiktok:tiktok-business-android-sdk:1.6.1")
 
     // TikTok SDK dependencies
     implementation("androidx.lifecycle:lifecycle-process:2.3.1")

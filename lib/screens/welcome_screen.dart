@@ -26,6 +26,8 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   void initState() {
     super.initState();
     AdService.instance.setTutorialActive();
+    AdService.instance
+        .logTutorialStep(step: -1, stepName: 'welcome', action: 'view');
     _ctrl = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 700),
@@ -118,14 +120,22 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                     // 신규 유저 버튼
                     _PrimaryButton(
                       label: "Get Started",
-                      onTap: widget.onStartTutorial,
+                      onTap: () {
+                        AdService.instance.logTutorialStep(
+                            step: -1, stepName: 'welcome', action: 'complete');
+                        widget.onStartTutorial();
+                      },
                     ),
                     const SizedBox(height: 14),
 
                     // 기존 유저 로그인 버튼
                     _SecondaryButton(
                       label: "I already have an account",
-                      onTap: _openLoginPrompt,
+                      onTap: () {
+                        AdService.instance.logTutorialStep(
+                            step: -1, stepName: 'welcome', action: 'login');
+                        _openLoginPrompt();
+                      },
                     ),
 
                     const SizedBox(height: 36),

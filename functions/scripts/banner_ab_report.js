@@ -99,7 +99,8 @@ async function main() {
     const row = rows[dev.group];
     row.devices += 1;
     if (dev.newInstall) row.newInstalls += 1;
-    const dayIdx = new Set(dev.opens.map((t) => Math.floor((t - dev.assignedAt) / DAY)).filter((i) => i >= 0));
+    // assignedAt is the device clock, open timestamps are server time: clamp small skew to day 0.
+    const dayIdx = new Set(dev.opens.map((t) => Math.max(0, Math.floor((t - dev.assignedAt) / DAY))));
     row.activeDays += dayIdx.size;
     const age = Math.floor((now - dev.assignedAt) / DAY);
     for (const n of RETENTION_DAYS) {

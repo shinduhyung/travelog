@@ -107,6 +107,7 @@ class _OnboardingTutorialScreenState extends State<OnboardingTutorialScreen>
   void initState() {
     super.initState();
     AdService.instance.setTutorialActive();
+    _logStep('view');
     _fadeCtrl = AnimationController(vsync: this, duration: const Duration(milliseconds: 500));
     _fadeAnim = CurvedAnimation(parent: _fadeCtrl, curve: Curves.easeOut);
     _slideCtrl = AnimationController(vsync: this, duration: const Duration(milliseconds: 450));
@@ -124,9 +125,37 @@ class _OnboardingTutorialScreenState extends State<OnboardingTutorialScreen>
     super.dispose();
   }
 
+  static const List<String> _stepNames = [
+    'home_country',
+    'passport_airport',
+    'highlights',
+    'popular_countries',
+    'gawc_cities',
+    'top_landmarks',
+  ];
+
+  /// 단계별 진입/완료 기록 (단계별 이탈 지점 분석용).
+  void _logStep(String action) {
+    final int? selections = switch (_step) {
+      2 => _visitedHighlights.length,
+      3 => _visitedPopular.length,
+      4 => _visitedGawcCities.length,
+      5 => _visitedTopLandmarks.length,
+      _ => null,
+    };
+    AdService.instance.logTutorialStep(
+      step: _step,
+      stepName: _step < _stepNames.length ? _stepNames[_step] : 'step_$_step',
+      action: action,
+      selections: action == 'complete' ? selections : null,
+    );
+  }
+
   void _animateToNext() {
+    _logStep('complete');
     _fadeCtrl.reverse().then((_) {
       setState(() => _step++);
+      _logStep('view');
       _searchQuery = '';
       _fadeCtrl.forward();
       _slideCtrl..reset()..forward();
@@ -134,6 +163,7 @@ class _OnboardingTutorialScreenState extends State<OnboardingTutorialScreen>
   }
 
   void _finishOnboarding() {
+    _logStep('complete');
     final countryProvider = context.read<CountryProvider>();
     final landmarksProvider = context.read<LandmarksProvider>();
     final cityProvider = context.read<CityProvider>();

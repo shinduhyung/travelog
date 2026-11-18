@@ -151,6 +151,12 @@ service cloud.firestore {
       allow create: if true;
     }
 
+    // 웰컴/튜토리얼 단계별 진입·완료 (단계별 이탈 분석용, 쓰기 전용)
+    match /tutorial_step_events/{docId} {
+      allow create: if onlyKeys(['deviceId', 'platform', 'firstLaunch', 'bannerAbGroup',
+          'step', 'stepName', 'action', 'selections', 'elapsedMs', 'timestamp']);
+    }
+
     // Apple Search Ads(AdServices) 어트리뷰션 — 설치당 1회, 쓰기 전용.
     // docId = 로그인 uid(본인만) 또는 게스트 설치 ID(생성만).
     match /adservices_attribution/{docId} {

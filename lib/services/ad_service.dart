@@ -801,6 +801,37 @@ class AdService {
     }
   }
 
+  /// 웰컴/튜토리얼 단계별 진입·완료 기록. 단계별 이탈 지점(어느 단계에서
+  /// 앱을 닫는지)을 보기 위함. action: 'view' | 'complete'.
+  /// step: 웰컴 = -1, 튜토리얼 = 0~5. 실패해도 튜토리얼 흐름엔 영향 없음.
+  DateTime? _tutorialFlowStartedAt;
+
+  Future<void> logTutorialStep({
+    required int step,
+    required String stepName,
+    required String action,
+    int? selections,
+  }) async {
+    _tutorialFlowStartedAt ??= DateTime.now();
+    try {
+      await FirebaseFirestore.instance.collection('tutorial_step_events').add({
+        'deviceId': _deviceId,
+        'platform': Platform.isIOS ? 'ios' : 'android',
+        'firstLaunch': _isFirstLaunch,
+        if (_bannerAbGroup != null) 'bannerAbGroup': _bannerAbGroup,
+        'step': step,
+        'stepName': stepName,
+        'action': action,
+        if (selections != null) 'selections': selections,
+        'elapsedMs':
+            DateTime.now().difference(_tutorialFlowStartedAt!).inMilliseconds,
+        'timestamp': FieldValue.serverTimestamp(),
+      });
+    } catch (e) {
+      debugPrint('[AdService] tutorial step log error: $e');
+    }
+  }
+
   /// 광고 요청(load 시도) 횟수 기록 — 노출(impression)과 나눠서
   /// 그룹별 fill rate(노출/요청)를 계산할 수 있게 함.
   Future<void> _logAdRequestToFirestore() async {

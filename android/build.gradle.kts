@@ -3,6 +3,8 @@ allprojects {
         google()
         mavenCentral()
         maven("https://jitpack.io")
+        // Pangle SDK (gma_mediation_pangle) is only published here.
+        maven("https://artifact.bytedance.com/repository/pangle/")
     }
 }
 val newBuildDir: Directory = rootProject.layout.buildDirectory.dir("../../build").get()
