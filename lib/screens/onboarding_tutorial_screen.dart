@@ -203,6 +203,17 @@ class _OnboardingTutorialScreenState extends State<OnboardingTutorialScreen>
         cityProvider.setVisitedStatus(cityName, true);
       }
     }
+    // Onboarding A/B: visited-country count at the end of onboarding, to
+    // compare with the 'direct_add' group (step 11 'direct_countries').
+    AdService.instance.logTutorialStep(
+      step: 6,
+      stepName: 'tutorial_countries',
+      action: 'complete',
+      selections: {
+        if (_selectedHomeCountry != null) _selectedHomeCountry!.name,
+        ..._visitedPopular,
+      }.length,
+    );
 
     // 온보딩 완료 → 인앱 튜토리얼 대기 플래그 설정
     SharedPreferences.getInstance().then((prefs) {

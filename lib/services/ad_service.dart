@@ -198,8 +198,43 @@ class AdService {
   /// 'banner_on' / 'banner_off' (Android), iOS는 null.
   String? get bannerAbGroup => _bannerAbGroup;
 
-  /// 배너를 보여도 되는 그룹인지. 'banner_off' 그룹만 false.
-  bool get bannersEnabled => _bannerAbGroup != bannerAbOff;
+  /// 배너를 보여도 되는지. 배너 A/B 결과(배너 O가 총 광고 수익 −38%)로
+  /// Android는 그룹과 상관없이 배너를 끈다. 그룹 배정과 태그 기록은 그대로
+  /// 둬서, 기존 banner_on 기기도 배너가 꺼진 뒤 수익이 회복되는지 볼 수 있다.
+  /// iOS는 실험 대상이 아니었으므로 그대로 켜 둔다.
+  bool get bannersEnabled => !Platform.isAndroid;
+
+  // ─── 온보딩 A/B 테스트 (신규 설치만, Android·iOS) ─────────────────────────
+  // 'tutorial'    : 웰컴 → 튜토리얼 6단계 (기존)
+  // 'direct_add'  : 웰컴 → 바로 My Trips, Countries의 + 버튼으로 가본 국가
+  //                 등록을 유도하는 코치마크
+  // 처음 설치한 기기(새 deviceId)에만 한 번 배정하고 영구 고정한다. 기존
+  // 사용자는 null(온보딩을 다시 보지 않음). app_open_events,
+  // ad_revenue_events, tutorial_step_events에 onboardingAbGroup으로 남는다.
+  static const String _prefKeyOnboardingAb = 'onboarding_ab_v1';
+  static const String onboardingAbTutorial = 'tutorial';
+  static const String onboardingAbDirectAdd = 'direct_add';
+  String? _onboardingAbGroup;
+
+  /// 'tutorial' / 'direct_add' (이 버전 이후 새로 설치한 기기), 그 외 null.
+  String? get onboardingAbGroup => _onboardingAbGroup;
+
+  Future<void> _assignOnboardingAbIfNeeded() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      String? group = prefs.getString(_prefKeyOnboardingAb);
+      if (group == null && _isFirstLaunch) {
+        group = Random().nextBool()
+            ? onboardingAbTutorial
+            : onboardingAbDirectAdd;
+        await prefs.setString(_prefKeyOnboardingAb, group);
+        debugPrint('[AdService] onboarding A/B group assigned: $group');
+      }
+      _onboardingAbGroup = group;
+    } catch (e) {
+      debugPrint('[AdService] onboarding A/B assign error: $e');
+    }
+  }
 
   // Show subscription sheet every 3 ad dismissals
   static const int _subscriptionPromptEvery = 3;
@@ -405,6 +440,7 @@ class AdService {
     _isPremium = SubscriptionService.instance.isPremium;
     await _assignExperimentGroupIfNeeded();
     await _assignBannerAbIfNeeded();
+    await _assignOnboardingAbIfNeeded();
     unawaited(InstallReferrerService.recordOnce(_deviceId));
     _logAppOpenEvent(); // 리텐션(D3/D7)·마지막 접속일 계측용 — 매 실행마다 1건
 
@@ -794,6 +830,7 @@ class AdService {
         if (_bannerAbAssignedAt != null)
           'bannerAbAssignedAt': Timestamp.fromDate(_bannerAbAssignedAt!),
         if (_bannerAbAssignedThisLaunch) 'bannerAbAssignedThisLaunch': true,
+        if (_onboardingAbGroup != null) 'onboardingAbGroup': _onboardingAbGroup,
         'timestamp': FieldValue.serverTimestamp(),
       });
     } catch (e) {
@@ -819,6 +856,7 @@ class AdService {
         'platform': Platform.isIOS ? 'ios' : 'android',
         'firstLaunch': _isFirstLaunch,
         if (_bannerAbGroup != null) 'bannerAbGroup': _bannerAbGroup,
+        if (_onboardingAbGroup != null) 'onboardingAbGroup': _onboardingAbGroup,
         'step': step,
         'stepName': stepName,
         'action': action,

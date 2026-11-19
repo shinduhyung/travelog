@@ -1,5 +1,6 @@
 // lib/screens/my_trips_tab_screen.dart
 import 'package:jidoapp/widgets/new_tag.dart';
+import 'package:jidoapp/widgets/direct_add_coach.dart';
 import 'package:jidoapp/widgets/next_adventure_card.dart';
 import 'dart:convert';
 import 'package:flutter/material.dart';
@@ -95,10 +96,26 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
   @override
   void initState() {
     super.initState();
+    DirectAddCoach.pending.addListener(_onCoachPending);
     WidgetsBinding.instance.addPostFrameCallback((_) {
+      _onCoachPending();
       _loadTravelerType();
       _loadQuizDefaultMode();
       _loadSocialCounts();
+    });
+  }
+
+  @override
+  void dispose() {
+    DirectAddCoach.pending.removeListener(_onCoachPending);
+    super.dispose();
+  }
+
+  // Onboarding A/B 'direct_add': point at the Countries "+" once laid out.
+  void _onCoachPending() {
+    if (!DirectAddCoach.pending.value) return;
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) DirectAddCoach.maybeShow(context);
     });
   }
 
@@ -1084,6 +1101,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                   ? visitedCountryCount / totalCountryCount
                   : 0.0,
               progressColor: countriesColor,
+              buttonKey: DirectAddCoach.buttonKey,
               isAddButton: true,
               isRainbow: false,
               isLoading: isCountriesLoading,
@@ -1173,6 +1191,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
     required VoidCallback onButtonTap,
     bool isLoading = false,
     String? emoji,
+    Key? buttonKey,
   }) {
     return Row(
       children: [
@@ -1275,6 +1294,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
         ),
         const SizedBox(width: 12),
         GestureDetector(
+          key: buttonKey,
           onTap: onButtonTap,
           child: Container(
             width: 36,

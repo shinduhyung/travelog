@@ -31,6 +31,7 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'package:jidoapp/screens/login_screen.dart';
 import 'package:jidoapp/screens/onboarding_tutorial_screen.dart';
 import 'package:jidoapp/screens/welcome_screen.dart';
+import 'package:jidoapp/widgets/direct_add_coach.dart';
 import 'package:jidoapp/main_screen.dart';
 
 import 'package:jidoapp/widgets/plane_loading_logo.dart';
@@ -1068,6 +1069,18 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
         name: 'welcome',
         child: WelcomeScreen(
           onStartTutorial: () {
+            // Onboarding A/B: 'direct_add' skips the tutorial and lands on
+            // My Trips with a coach mark on the Countries "+" button.
+            if (AdService.instance.onboardingAbGroup ==
+                AdService.onboardingAbDirectAdd) {
+              DirectAddCoach.onFinished = _completeTutorial;
+              DirectAddCoach.pending.value = true;
+              setState(() {
+                _showWelcome = false;
+                _showTutorial = false;
+              });
+              return;
+            }
             setState(() => _showWelcome = false);
             setState(() => _showTutorial = true);
           },

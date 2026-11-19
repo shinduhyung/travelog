@@ -38,6 +38,8 @@ class AdRevenueLogger {
       await FirebaseFirestore.instance.collection('ad_revenue_events').add({
         'adExperimentGroup': svc.experimentGroup,
         if (svc.bannerAbGroup != null) 'bannerAbGroup': svc.bannerAbGroup,
+        if (svc.onboardingAbGroup != null)
+          'onboardingAbGroup': svc.onboardingAbGroup,
         'deviceId': svc.deviceId,
         'revenue': revenue,
         'currencyCode': currencyCode,
