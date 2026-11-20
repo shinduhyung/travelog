@@ -60,7 +60,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyBBx8NpMO7EBFQt1UDMgTmqhvhxAn2XQ5I',
-    appId: '1:127546533956:ios:eba708b0acd53d41b87411',
+    appId: '1:127546533956:ios:989304ba9bbec4f4b87411',
     messagingSenderId: '127546533956',
     projectId: 'proboscis-2025',
     storageBucket: 'proboscis-2025.firebasestorage.app',
