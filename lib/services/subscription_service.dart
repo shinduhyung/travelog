@@ -480,14 +480,28 @@ class SubscriptionService extends ChangeNotifier {
           // 로그인 상태면 이미 기록된 주문에 내 uid를 붙인다 (로그인 전에 산 주문은 uid가 비어 있어서
           // 서버가 누구 구독인지 모름 → 소셜 프로필 등급이 안 뜸). 규칙상 uid가 비었거나 내 것일 때만 된다.
           // 문서가 없으면 not-found → 아래에서 새로 기록한다.
+          // 서버(RTDN)가 먼저 만든 주문에도 이 기기 ID를 붙인다. 그래야 설치 출처
+          // (install_referrers/{deviceId})와 주문을 이어 광고별 구독을 셀 수 있다.
+          // 게스트(uid 없음)도 붙인다. 기기 ID는 처음 붙은 값만 유지된다(규칙).
           final uid = FirebaseAuth.instance.currentUser?.uid;
-          if (uid != null) {
+          final deviceId = AdService.instance.deviceId;
+          final link = <String, dynamic>{
+            if (uid != null) 'uid': uid,
+            if (deviceId != null && deviceId.isNotEmpty) 'deviceId': deviceId,
+          };
+          if (link.isNotEmpty) {
             try {
-              await docRef.update({'uid': uid});
-              debugPrint('[SubscriptionService] order $orderId linked to account (isRestore=$isRestore)');
+              await docRef.update(link);
+              debugPrint('[SubscriptionService] order $orderId linked (uid=${uid != null}, device=${link.containsKey('deviceId')}, isRestore=$isRestore)');
               orderLinked = true;
             } on FirebaseException catch (e) {
-              if (e.code != 'not-found') {
+              if (e.code == 'permission-denied' && uid != null && link.length > 1) {
+                // 다른 기기 ID가 이미 붙은 주문(기기 변경 후 복원) → uid만 붙인다.
+                try {
+                  await docRef.update({'uid': uid});
+                } on FirebaseException catch (_) {}
+                orderLinked = true;
+              } else if (e.code != 'not-found') {
                 debugPrint('[SubscriptionService] order $orderId not linked: ${e.code}');
                 orderLinked = true; // 다른 계정의 주문이면 건드리지 않는다
               }
@@ -516,6 +530,15 @@ class SubscriptionService extends ChangeNotifier {
 
             final int priceAmountMicros = (price * 1000000).round();
 
+            // 실제 결제 시각. 재설치·기기 변경 후 복원으로 옛 주문이 처음 기록될 때
+            // '지금'으로 저장하면 몇 달 전 결제가 오늘 신규 결제처럼 집계된다.
+            // 갱신 주문(..N)은 이 값이 최초 구매 시각일 수 있어 서버 시각을 쓰고,
+            // 늦게 들어온 갱신은 서버(notifyNewSubscription)가 Play 결제일로 바로잡는다.
+            final int billingMillis = purchase.billingClientPurchase.purchaseTime;
+            final Object purchaseTimeValue = (!isRenewal && billingMillis > 0)
+                ? Timestamp.fromMillisecondsSinceEpoch(billingMillis)
+                : FieldValue.serverTimestamp();
+
             await docRef.set({
               'orderId': orderId,
               'originalOrderId': originalOrderId,
@@ -523,7 +546,7 @@ class SubscriptionService extends ChangeNotifier {
               'productId': productId,
               'isLifetime': isLifetimePurchase,
               'isRenewal': isRenewal,
-              'purchaseTime': FieldValue.serverTimestamp(),
+              'purchaseTime': purchaseTimeValue,
               'platform': 'android',
               'status': 'purchased',
               'priceAmountMicros': priceAmountMicros,
@@ -591,6 +614,17 @@ class SubscriptionService extends ChangeNotifier {
                 'priceCurrencyCode': currencyCode,
                 'uid': FirebaseAuth.instance.currentUser?.uid,
               }, SetOptions(merge: true));
+          // 설치 출처(Apple Ads 귀속 adservices_attribution.deviceId)와 잇기 위한 기기 ID.
+          // 따로 써서, 다른 기기 ID가 이미 붙은 주문이면(규칙상 거부) 위 기록은 그대로 둔다.
+          final deviceId = AdService.instance.deviceId;
+          if (deviceId != null && deviceId.isNotEmpty) {
+            try {
+              await FirebaseFirestore.instance
+                  .collection('orders')
+                  .doc(transactionId)
+                  .update({'deviceId': deviceId});
+            } on FirebaseException catch (_) {}
+          }
         } catch (e) {
           debugPrint('[SubscriptionService] Firestore save error: $e');
         }

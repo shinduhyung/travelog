@@ -101,7 +101,10 @@ service cloud.firestore {
           || isSelf(request.resource.data.uid))
         && changedOnly(['orderId', 'originalTransactionId', 'productId', 'isLifetime',
           'purchaseTime', 'platform', 'status', 'priceAmountMicros',
-          'priceCurrencyCode', 'uid']);
+          'priceCurrencyCode', 'uid', 'deviceId'])
+        // 기기 ID(광고 출처 연결용)는 처음 붙은 값만 유지
+        && (resource.data.get('deviceId', null) == null
+          || request.resource.data.get('deviceId', null) == resource.data.get('deviceId', null));
     }
 
     // ── 푸시 토큰 (로그인 전에도 기록됨, 읽기는 Functions/관리자만) ─────────
