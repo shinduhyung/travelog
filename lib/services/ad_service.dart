@@ -5,6 +5,8 @@ import 'package:jidoapp/services/screen_tracking.dart';
 import 'dart:io';
 import 'dart:math';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter/foundation.dart' show kReleaseMode;
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:app_tracking_transparency/app_tracking_transparency.dart';
@@ -149,8 +151,10 @@ class AdService {
       'ad_experiment_assignment_doc_id';
 
   // [변경] 시간조건/터치조건 고정값. 더 이상 범위 랜덤 배정하지 않음.
-  static const int _fixedTimeCondition = 130; // 초
-  static const int _fixedTouchCondition = 40; // 회 (35 -> 40)
+  // 2026-11-20: 배너를 끄면서 전면광고 빈도를 소폭 올림 (130초/40회 -> 115초/35회).
+  // 저장된 그룹 라벨의 숫자와 상관없이 모든 기기에 이 값을 쓴다.
+  static const int _fixedTimeCondition = 115; // 초
+  static const int _fixedTouchCondition = 35; // 회
 
   int _cooldownSeconds = _fixedTimeCondition;
   CountryAdGroup _countryAdGroup = CountryAdGroup.block;
@@ -195,14 +199,19 @@ class AdService {
   bool _bannerAbAssignedThisLaunch = false;
   bool _isFirstLaunch = false;
 
+  /// A genuinely new install: new deviceId AND no trace of an older install
+  /// (no ad experiment group, no finished tutorial). Very old installs that
+  /// predate the deviceId get a new deviceId too, so the extra checks keep
+  /// them out of new-user experiments.
+  bool _isFreshInstall = false;
+
   /// 'banner_on' / 'banner_off' (Android), iOS는 null.
   String? get bannerAbGroup => _bannerAbGroup;
 
-  /// 배너를 보여도 되는지. 배너 A/B 결과(배너 O가 총 광고 수익 −38%)로
-  /// Android는 그룹과 상관없이 배너를 끈다. 그룹 배정과 태그 기록은 그대로
-  /// 둬서, 기존 banner_on 기기도 배너가 꺼진 뒤 수익이 회복되는지 볼 수 있다.
-  /// iOS는 실험 대상이 아니었으므로 그대로 켜 둔다.
-  bool get bannersEnabled => !Platform.isAndroid;
+  /// 배너를 보여도 되는지. 배너 A/B 결과(배너 O가 총 광고 수익 −34%)로
+  /// Android·iOS 모두 배너를 끈다. 그룹 배정과 태그 기록은 그대로 둬서,
+  /// 기존 banner_on 기기도 배너가 꺼진 뒤 수익이 회복되는지 볼 수 있다.
+  bool get bannersEnabled => false;
 
   // ─── 온보딩 A/B 테스트 (신규 설치만, Android·iOS) ─────────────────────────
   // 'tutorial'    : 웰컴 → 튜토리얼 6단계 (기존)
@@ -223,7 +232,13 @@ class AdService {
     try {
       final prefs = await SharedPreferences.getInstance();
       String? group = prefs.getString(_prefKeyOnboardingAb);
-      if (group == null && _isFirstLaunch) {
+      // Test builds only: --dart-define=ONBOARDING_AB_FORCE=direct_add
+      // (or tutorial) pins the group. Empty in release builds.
+      const forced = String.fromEnvironment('ONBOARDING_AB_FORCE');
+      if (forced == onboardingAbTutorial || forced == onboardingAbDirectAdd) {
+        group = forced;
+        await prefs.setString(_prefKeyOnboardingAb, group);
+      } else if (group == null && _isFreshInstall) {
         group = Random().nextBool()
             ? onboardingAbTutorial
             : onboardingAbDirectAdd;
@@ -233,6 +248,18 @@ class AdService {
       _onboardingAbGroup = group;
     } catch (e) {
       debugPrint('[AdService] onboarding A/B assign error: $e');
+    }
+    // Firebase Analytics user properties, so GA4 (retention, engagement,
+    // in-app purchase revenue, screen views) can be split by group too.
+    try {
+      final analytics = FirebaseAnalytics.instance;
+      await analytics.setUserProperty(
+          name: 'onboarding_ab', value: _onboardingAbGroup ?? 'none');
+      if (_bannerAbGroup != null) {
+        await analytics.setUserProperty(name: 'banner_ab', value: _bannerAbGroup);
+      }
+    } catch (e) {
+      debugPrint('[AdService] analytics user property error: $e');
     }
   }
 
@@ -267,6 +294,9 @@ class AdService {
   bool _showRetryUsedForCurrentTurn = false;
 
   String get _adUnitId {
+    // Debug/profile builds use Google's test interstitial so test phones never
+    // request live ads.
+    if (!kReleaseMode) return 'ca-app-pub-3940256099942544/1033173712';
     if (_unityBlockedThisSession) {
       return Platform.isIOS ? _iosNoUnityAdUnitId : _androidNoUnityAdUnitId;
     }
@@ -565,6 +595,9 @@ class AdService {
     _deviceId = deviceId;
 
     String? saved = prefs.getString(_prefKeyExperimentGroup);
+    _isFreshInstall = isNewDeviceId &&
+        saved == null &&
+        prefs.getString('onboarding_tutorial_version') == null;
 
     if (saved == null) {
       final countryIndex = Random().nextInt(2); // 0~1 -> 1(block)/2(allow)
@@ -657,13 +690,12 @@ class AdService {
   }
 
   void _applyGroupLabel(String label) {
-    _groupLabel = label;
     final parts = label.split('-'); // ["130", "1", "40"]
-    _cooldownSeconds =
-        int.tryParse(parts.isNotEmpty ? parts[0] : '') ?? _fixedTimeCondition;
     final countryDigit = int.tryParse(parts.length > 1 ? parts[1] : '1') ?? 1;
-    _touchThreshold =
-        int.tryParse(parts.length > 2 ? parts[2] : '') ?? _fixedTouchCondition;
+    // 시간/터치 조건은 저장값 대신 현재 고정값을 쓰고, 기록용 라벨도 맞춰 둔다.
+    _cooldownSeconds = _fixedTimeCondition;
+    _touchThreshold = _fixedTouchCondition;
+    _groupLabel = '$_fixedTimeCondition-$countryDigit-$_fixedTouchCondition';
 
     _countryAdGroup = countryDigit == 2
         ? CountryAdGroup.allow
@@ -876,6 +908,7 @@ class AdService {
     try {
       await FirebaseFirestore.instance.collection('ad_request_events').add({
         'adExperimentGroup': _groupLabel,
+        if (_onboardingAbGroup != null) 'onboardingAbGroup': _onboardingAbGroup,
         'deviceId': _deviceId,
         'timestamp': FieldValue.serverTimestamp(),
       });
@@ -893,6 +926,7 @@ class AdService {
     try {
       await FirebaseFirestore.instance.collection('ad_impression_events').add({
         'adExperimentGroup': _groupLabel,
+        if (_onboardingAbGroup != null) 'onboardingAbGroup': _onboardingAbGroup,
         'deviceId': _deviceId,
         'triggerSource': _pendingTriggerSource ?? 'unknown',
         'elapsedSecondsSinceLastAd': _pendingElapsedSeconds,

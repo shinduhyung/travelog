@@ -1,5 +1,6 @@
 // lib/screens/countries_map_screen.dart
 
+import 'package:jidoapp/widgets/direct_add_coach.dart';
 import 'dart:ui'; // 글래스모피즘 효과
 import 'package:flutter/material.dart';
 import 'package:jidoapp/services/screen_tracking.dart';
@@ -99,11 +100,16 @@ class CountriesMapScreen extends StatefulWidget {
   final bool initialShowRegions;
   final List<HighlightGroup>? highlightGroups;
 
+  /// Onboarding 'direct_add' step 2: spotlight the "+" button once the map is
+  /// ready, and open the country picker when it is tapped.
+  final bool showAddCoach;
+
   const CountriesMapScreen({
     super.key,
     this.region,
     this.initialShowRegions = false,
     this.highlightGroups,
+    this.showAddCoach = false,
   });
 
   @override
@@ -159,6 +165,9 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
   void initState() {
     super.initState();
     _showRegions = widget.initialShowRegions;
+    if (widget.showAddCoach) {
+      WidgetsBinding.instance.addPostFrameCallback((_) => _coachAddWhenReady());
+    }
 
     _isHighlightMode = widget.highlightGroups != null && widget.highlightGroups!.isNotEmpty;
     if (_isHighlightMode) {
@@ -837,11 +846,42 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
+        key: _addButtonKey,
         backgroundColor: const Color(0xFF2C3E50),
         foregroundColor: Colors.white,
         elevation: 4,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        onPressed: provider.isLoading ? null : () {
+        onPressed: provider.isLoading ? null : () => _openAddSheet(provider),
+        child: const Icon(Icons.add_rounded, size: 28),
+      ),
+    );
+  }
+
+  final GlobalKey _addButtonKey = GlobalKey(debugLabel: 'map_add_button');
+
+  Future<void> _coachAddWhenReady() async {
+    final provider = Provider.of<CountryProvider>(context, listen: false);
+    for (var i = 0; i < 50 && mounted && provider.isLoading; i++) {
+      await Future.delayed(const Duration(milliseconds: 100));
+    }
+    // Let the route transition finish before measuring the button.
+    await Future.delayed(const Duration(milliseconds: 350));
+    if (!mounted || provider.isLoading) return;
+    final tapped = await DirectAddCoach.spotlight(
+      context,
+      targetKey: _addButtonKey,
+      step: 2,
+      totalSteps: 2,
+      emoji: '✈️',
+      title: tr('Pick your countries'),
+      body: tr('Tap + and check every country you have been to.'),
+    );
+    if (tapped == null || !mounted) return;
+    DirectAddCoach.log(12, 'direct_map_add', tapped ? 'complete' : 'skip');
+    if (tapped) _openAddSheet(provider);
+  }
+
+  Future<void> _openAddSheet(CountryProvider provider) async {
           List<Country> countriesForSelection;
           if (widget.highlightGroups != null && widget.highlightGroups!.isNotEmpty) {
             final allHighlightedCodes = widget.highlightGroups!.expand((group) => group.countryCodes).toSet();
@@ -851,7 +891,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
             countriesForSelection = isWorldView ? provider.allCountries : provider.allCountries.where((c) => c.continent == widget.region).toList();
           }
 
-          showModalBottomSheet(
+          await showModalBottomSheet(
             context: context, isScrollControlled: true,
             backgroundColor: Colors.transparent,
             builder: (_) => DraggableScrollableSheet(
@@ -874,10 +914,6 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
               },
             ),
           );
-        },
-        child: const Icon(Icons.add_rounded, size: 28),
-      ),
-    );
   }
 
   Widget _buildIconButton({required IconData icon, required VoidCallback onPressed, required String tooltip, bool selected = false}) {

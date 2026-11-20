@@ -587,6 +587,14 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
                               if (await inAppReview.isAvailable()) {
                                 await inAppReview.requestReview();
                                 await prefs.setBool('review_requested', true);
+                                // Rating prompt shown (per-group comparison;
+                                // the star rating itself is not visible to apps).
+                                AdService.instance.logTutorialStep(
+                                  step: 20,
+                                  stepName: 'review_prompt',
+                                  action: 'view',
+                                  selections: newTotal,
+                                );
                               }
                             }
                           }

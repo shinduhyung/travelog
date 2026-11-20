@@ -1016,6 +1016,20 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
   Future<void> _checkTutorial() async {
     final authProvider = context.read<AuthProvider>();
 
+    // Test builds only: --dart-define=ONBOARDING_FORCE_SHOW=true shows the
+    // welcome/onboarding flow on every launch, even on a used install.
+    const forceShow = bool.fromEnvironment('ONBOARDING_FORCE_SHOW');
+    if (forceShow) {
+      isOnboardingActive = true;
+      if (mounted) {
+        setState(() {
+          _showTutorial = false;
+          _showWelcome = true;
+        });
+      }
+      return;
+    }
+
     if (authProvider.isAuthenticated) {
       isOnboardingActive = false;
       if (mounted) {
