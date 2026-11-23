@@ -140,7 +140,8 @@ class AdService {
   // 시간 트리거만 180초짜리로 동작한다. 이 유예 기간 중 첫 광고가 뜨는
   // 순간 플래그가 꺼지고, 그 다음부터는 평소의 130초/40터치 OR 로직으로
   // 정상 전환된다.
-  static const int _postTutorialGraceSeconds = 180; // 3분
+  // 2026-11-23: 180초 -> 120초. 첫 광고만 앞당기고 그 뒤 간격(115초/35회)은 그대로.
+  static const int _postTutorialGraceSeconds = 120; // 2분
   bool _isPostTutorialGraceActive = false;
 
   // ─── 시간조건(130초 고정) × 국가선택(1/2) × 터치조건(40회 고정) ─────────
@@ -203,7 +204,8 @@ class AdService {
   /// (no ad experiment group, no finished tutorial). Very old installs that
   /// predate the deviceId get a new deviceId too, so the extra checks keep
   /// them out of new-user experiments.
-  bool _isFreshInstall = false;
+  // ignore: unused_field
+  bool _isFreshInstall = false; // kept for future new-install-only experiments
 
   /// 'banner_on' / 'banner_off' (Android), iOS는 null.
   String? get bannerAbGroup => _bannerAbGroup;
@@ -238,13 +240,9 @@ class AdService {
       if (forced == onboardingAbTutorial || forced == onboardingAbDirectAdd) {
         group = forced;
         await prefs.setString(_prefKeyOnboardingAb, group);
-      } else if (group == null && _isFreshInstall) {
-        group = Random().nextBool()
-            ? onboardingAbTutorial
-            : onboardingAbDirectAdd;
-        await prefs.setString(_prefKeyOnboardingAb, group);
-        debugPrint('[AdService] onboarding A/B group assigned: $group');
       }
+      // 2026-11-23: A/B 종료, 모든 신규 설치는 기존 튜토리얼. 새 배정은 하지
+      // 않고, 이미 배정된 기기의 그룹 태그만 계속 남겨 장기 비교에 쓴다.
       _onboardingAbGroup = group;
     } catch (e) {
       debugPrint('[AdService] onboarding A/B assign error: $e');
