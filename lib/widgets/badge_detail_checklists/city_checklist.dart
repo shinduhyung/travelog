@@ -15,6 +15,13 @@ class CityChecklist {
     required this.showCityDetailSheet,
   });
 
+  static String _countryIsoForCity(CityProvider cityProvider, String cityName) {
+    for (final c in cityProvider.allCities) {
+      if (c.name == cityName) return c.countryIsoA2;
+    }
+    return '';
+  }
+
   Widget buildCityChecklist(BuildContext context, CityProvider cityProvider) {
     if (achievement.targetIsoCodes == null) {
       return const SizedBox.shrink();
@@ -32,11 +39,8 @@ class CityChecklist {
         final cityName = targetCities[index];
         final bool isVisited = visitedCities.contains(cityName);
 
-        final city = cityProvider.allCities.firstWhere(
-              (c) => c.name == cityName,
-          orElse: () => cityProvider.allCities.first,
-        );
-        final countryIsoA2 = city.countryIsoA2;
+        // 이름을 못 찾으면 엉뚱한 나라(목록 첫 도시) 대신 국기를 비워 둔다.
+        final countryIsoA2 = _countryIsoForCity(cityProvider, cityName);
 
         final cityVisitDetail = cityProvider.visitDetails[cityName];
         final double rating = cityVisitDetail?.rating ?? 0.0;
@@ -156,11 +160,8 @@ class CityChecklist {
       itemBuilder: (context, index) {
         final cityName = targetCityNames[index];
 
-        final city = cityProvider.allCities.firstWhere(
-              (c) => c.name == cityName,
-          orElse: () => cityProvider.allCities.first,
-        );
-        final countryIsoA2 = city.countryIsoA2;
+        // 이름을 못 찾으면 엉뚱한 나라(목록 첫 도시) 대신 국기를 비워 둔다.
+        final countryIsoA2 = _countryIsoForCity(cityProvider, cityName);
 
         final cityVisitDetail = cityProvider.visitDetails[cityName];
         final double rating = cityVisitDetail?.rating ?? 0.0;
@@ -322,11 +323,8 @@ class CityChecklist {
       itemBuilder: (context, index) {
         final cityName = visitedCities[index];
 
-        final city = cityProvider.allCities.firstWhere(
-              (c) => c.name == cityName,
-          orElse: () => cityProvider.allCities.first,
-        );
-        final countryIsoA2 = city.countryIsoA2;
+        // 이름을 못 찾으면 엉뚱한 나라(목록 첫 도시) 대신 국기를 비워 둔다.
+        final countryIsoA2 = _countryIsoForCity(cityProvider, cityName);
 
         final cityVisitDetail = cityProvider.visitDetails[cityName];
         final double rating = cityVisitDetail?.rating ?? 0.0;

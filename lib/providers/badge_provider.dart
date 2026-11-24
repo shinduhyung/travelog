@@ -1033,7 +1033,7 @@ class BadgeProvider with ChangeNotifier {
       category: AchievementCategory.Landmarks,
       targetIsoCodes: {
         'Hagia Sophia', 'Topkapi Palace', 'Blue Mosque',
-        'Basilica Cistern', 'Galata Tower', 'Grand Bazaar', 'Dolmabahce Palace'
+        'Basilica Cistern', 'Galata Tower', 'Grand Bazaar of Istanbul', 'Dolmabahce Palace'
       },
     ),
     Achievement(
@@ -4925,12 +4925,12 @@ class BadgeProvider with ChangeNotifier {
       id: 'morocco_imperial_cities',
       requiresSubscription: true,
       name: 'Imperial Cities',
-      description: 'Visit Fez, Marrakesh, Meknes, and Rabat.',
+      description: 'Visit Fes, Marrakesh, Meknes, and Rabat.',
       difficulty: AchievementDifficulty.Adventurer,
       points: 10,
       imagePath: 'assets/badges/morocco_imperial_cities.png',
       category: AchievementCategory.City,
-      targetIsoCodes: {'Fez', 'Marrakesh', 'Meknes', 'Rabat'},
+      targetIsoCodes: {'Fes', 'Marrakesh', 'Meknes', 'Rabat'},
     ),
     Achievement(
       id: 'india_golden_triangle',

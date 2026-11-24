@@ -116,6 +116,18 @@ List<City> _parseGaWCJson(String jsonStr) {
 }
 
 // Merge cities15000 (Map) and cities (Stats)
+/// Duplicate city names whose plain name should go to a specific country
+/// instead of the most populous one. Others get "Name(1)", "Name(2)", ...
+const Map<String, String> _preferredCountryForDuplicateName = {
+  'Valencia': 'ES', // Spain over Venezuela (user report 2026-11)
+};
+
+/// Old city names that may still be in saved user data, mapped to the
+/// current name. Applied when visit records and the home city are loaded.
+const Map<String, String> _legacyCityNames = {
+  'Washington, D.C.': 'Washington D.C.',
+};
+
 List<City> _mergeAndProcessCities(Map<String, dynamic> message) {
   final String cities15000Json = message['cities15000Json'];
   final String citiesJson = message['citiesJson'];
@@ -148,6 +160,34 @@ List<City> _mergeAndProcessCities(Map<String, dynamic> message) {
       int popB = (b['population'] as num?)?.toInt() ?? 0;
       return popB.compareTo(popA);
     });
+
+    // 대표 이름(접미사 없는 이름)은 통계 데이터(cities.json)와 같은 나라의
+    // 도시가 가져가야 한다. 인구 1위에 통계를 붙이면 Victoria(세이셸 통계 +
+    // 홍콩 좌표), Hamilton(버뮤다 통계 + 캐나다 좌표)처럼 섞인다.
+    final stat = statsMap[cityName];
+    final preferredIso =
+        _preferredCountryForDuplicateName[cityName] ?? stat?.countryIsoA2;
+    if (preferredIso != null && preferredIso.isNotEmpty) {
+      // 저장된 방문 기록이 "Name(1)" 같은 이름을 키로 쓰므로, 다른 도시들의
+      // 번호가 밀리지 않게 삽입/이동이 아니라 자리 맞바꾸기만 한다.
+      final idx = group.indexWhere((c) => c['country_code'] == preferredIso);
+      if (idx > 0) {
+        final top = group[0];
+        group[0] = group[idx];
+        group[idx] = top;
+      } else if (idx < 0 && stat != null && stat.latitude != 0) {
+        // 지도 데이터에 그 나라 도시가 없으면(예: Panama City는 미국 것만 있음)
+        // 통계 데이터의 좌표로 대표 도시를 만들고, 기존 1위는 맨 뒤 번호로.
+        group.add(group[0]);
+        group[0] = {
+          'name': cityName,
+          'latitude': stat.latitude,
+          'longitude': stat.longitude,
+          'country_code': stat.countryIsoA2,
+          'population': stat.population,
+        };
+      }
+    }
 
     for (int i = 0; i < group.length; i++) {
       final item = group[i];
@@ -541,6 +581,7 @@ class CityProvider with ChangeNotifier {
       await _loadVisitDetails(remoteUserData);
       await _loadSettings(remoteUserData);
       await _loadHomeCity(remoteUserData);
+      await _migrateCityKeysV1(remoteUserData);
 
       if (_countryProvider != null) {
         _syncCityCountryNames();
@@ -1050,11 +1091,16 @@ class CityProvider with ChangeNotifier {
       if (detailsString != null) {
         final Map<String, dynamic> decodedMap = json.decode(detailsString);
         _visitDetails.clear();
-        decodedMap.forEach((key, value) {
+        decodedMap.forEach((rawKey, value) {
           try {
+            final key = _legacyCityNames[rawKey] ?? rawKey;
+            if (key != rawKey) {
+              if (_visitDetails.containsKey(key)) return;
+              value = Map<String, dynamic>.from(value)..['name'] = key;
+            }
             _visitDetails[key] = CityVisitDetail.fromJson(value);
           } catch (e) {
-            print('[CityProvider] Error parsing visit detail: $key');
+            print('[CityProvider] Error parsing visit detail: $rawKey');
           }
         });
       }
@@ -1137,6 +1183,7 @@ class CityProvider with ChangeNotifier {
         await prefs.remove('homeCityName');
       }
     }
+    _homeCityName = _legacyCityNames[_homeCityName] ?? _homeCityName;
   }
 
   void setUseDefaultCityRankingBarColor(bool value) async {
@@ -1495,8 +1542,84 @@ class CityProvider with ChangeNotifier {
     await _loadVisitDetails(remoteData);
     await _loadSettings(remoteData);
     await _loadHomeCity(remoteData);
+    await _migrateCityKeysV1(remoteData);
     await _loadCustomCities(remoteData);
     notifyListeners();
+  }
+
+  // ─── 저장된 도시 키 1회 이전 (2026-11 동명 도시 정리) ─────────────────────
+  // 동명 도시의 대표 이름을 통계 국가/지정 국가 쪽으로 맞추면서, 예전에
+  // "Name(k)"로 저장됐던 진짜 도시가 이제 "Name"이 됐다. 저장 키를 한 번만
+  // 옮긴다(이후 새로 저장되는 "Valencia(1)" = 베네수엘라를 다시 옮기면 안 됨).
+  static const String _cityKeyMigrationV1Flag = 'cityKeyMigrationV1';
+  static const Map<String, String> _cityKeyMigrationV1 = {
+    'Valencia(1)': 'Valencia', // 스페인 (예전 'Valencia'는 베네수엘라였음)
+    'Douglas(1)': 'Douglas', // Isle of Man
+    'George Town(1)': 'George Town', // Cayman Islands
+    'Hamilton(4)': 'Hamilton', // Bermuda
+    'Saint-Pierre(1)': 'Saint-Pierre', // Saint Pierre and Miquelon
+    'Stanley(1)': 'Stanley', // Falkland Islands
+    'Victoria(6)': 'Victoria', // Seychelles
+  };
+
+  Future<void> _migrateCityKeysV1(Map<String, dynamic>? remoteData) async {
+    final prefs = await SharedPreferences.getInstance();
+    if (prefs.getBool(_cityKeyMigrationV1Flag) == true ||
+        remoteData?[_cityKeyMigrationV1Flag] == true) {
+      return;
+    }
+
+    bool changed = false;
+    String? home = _homeCityName;
+    _cityKeyMigrationV1.forEach((from, to) {
+      final moving = _visitDetails.remove(from);
+      if (moving == null) {
+        if (home == from) home = to;
+        return;
+      }
+      changed = true;
+      final existing = _visitDetails[to];
+      if (existing == null) {
+        _visitDetails[to] = moving.copyWith(name: to);
+        if (home == from) home = to;
+      } else if (from == 'Valencia(1)') {
+        // 둘 다 있으면 예전 'Valencia'(베네수엘라)와 맞바꾼다.
+        _visitDetails[from] = existing.copyWith(name: from);
+        _visitDetails[to] = moving.copyWith(name: to);
+        if (home == from) {
+          home = to;
+        } else if (home == to) {
+          home = from;
+        }
+      } else {
+        // 예전 'Name'도 같은 나라로 표시됐으므로 하나로 합친다.
+        _visitDetails[to] = existing.copyWith(
+          visitDateRanges: [...existing.visitDateRanges, ...moving.visitDateRanges],
+          hasLived: existing.hasLived || moving.hasLived,
+          rating: existing.rating > 0 ? existing.rating : moving.rating,
+        );
+        if (home == from) home = to;
+      }
+    });
+
+    if (changed) await _saveVisitDetails();
+    if (home != _homeCityName) {
+      _homeCityName = home;
+      await prefs.setString('homeCityName', home!);
+    }
+
+    await prefs.setBool(_cityKeyMigrationV1Flag, true);
+    final user = _auth.currentUser;
+    if (user != null) {
+      try {
+        await _firestore.collection('users').doc(user.uid).set({
+          _cityKeyMigrationV1Flag: true,
+          'homeCityName': _homeCityName,
+        }, SetOptions(merge: true));
+      } catch (e) {
+        print('[CityProvider] city key migration flag save failed: $e');
+      }
+    }
   }
 
   // ─── 케이스 1: 로컬 데이터를 Firestore로 업로드 ─────────────────────────

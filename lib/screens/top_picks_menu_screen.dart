@@ -11,7 +11,6 @@ import 'package:jidoapp/screens/landmarks_list_screen.dart';
 import 'package:jidoapp/screens/instagram_ranking_screen.dart';
 import 'package:jidoapp/screens/top_landmarks_screen.dart';
 import 'package:jidoapp/screens/top_buildings_screen.dart';
-import 'package:jidoapp/screens/top_bridges_screen.dart';
 import 'package:jidoapp/screens/top_statues_screen.dart';
 import 'package:jidoapp/screens/top_falls_screen.dart';
 import 'package:jidoapp/screens/top_mountains_screen.dart';

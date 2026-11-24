@@ -493,7 +493,6 @@ const Map<String, String> screenGroups = {
   'landmark_stats': '3-2',
   'landmark_cities': '3-2',
   'landmark_visit_log': '3-2',
-  'top_bridges': '3-2',
   'top_buildings': '3-2',
   'top_falls': '3-2',
   'top_lakes': '3-2',
