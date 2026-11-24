@@ -1,7 +1,9 @@
 """Build worldwide region asset; see tool/admin1_data.md for regeneration."""
-import argparse, collections, hashlib, json
+import argparse, collections, hashlib, json, sys
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'tool' / 'admin1_overrides'))
+from apply import apply as apply_overrides  # noqa: E402
 LEGACY = set('AE AR AT AU BR CA CH CN DE EG ES FR GB GR ID IN IT JP KR MX MY NL PH PT RU TH TR US VN ZA'.split())
 EXCLUDED = {'Indian Ocean Ter.', 'Siachen Glacier', 'Antarctica', 'N. Cyprus', 'Northern Cyprus', 'Ashmore and Cartier Is.'}
 SUPPLEMENTS = {'KI': 'KIR', 'TV': 'TUV', 'NU': 'NIU'}
@@ -72,7 +74,12 @@ def main():
             validate_geometry(f['geometry'])
         output.extend(regions)
         report[iso]={'name':country['properties']['name'],'status':'whole_area' if whole else 'subdivisions','count':0 if whole else len(regions),'source':'geoBoundaries' if iso in SUPPLEMENTS else 'Natural Earth'}
-    for f in legacy: validate_geometry(f['geometry'])
+    # Country overrides (Malta districts, Crimea under Ukraine) — see tool/admin1_overrides.
+    output=apply_overrides(output, read(args.existing)['features'])
+    for f in output: validate_geometry(f['geometry'])
+    for iso in ('MT','RU','UA'):
+        report[iso]['count']=sum(1 for f in output if f['properties']['iso_a2']==iso and f['properties'].get('name') and not f['properties'].get('whole_area'))
+    legacy=[f for f in legacy if f['properties']['iso_a2'] in LEGACY]
     assert identity_hash(legacy)==identity_hash([f for f in output if f['properties']['iso_a2'] in LEGACY])
     asset=ROOT/'assets/admin1_regions.geojson'
     write(asset,{'type':'FeatureCollection','features':output})

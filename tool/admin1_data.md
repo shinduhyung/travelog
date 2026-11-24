@@ -17,6 +17,15 @@ The app retains the original 30-country geometry, names, and ISO visit keys.
 
 The combined file is a collection: each underlying dataset retains the above license. App code is separate. Original source files and reproducible transformation instructions are provided here and in the manifest.
 
+## Country overrides
+
+`tool/admin1_overrides/apply.py` runs inside the builder (and can be run alone on the committed asset):
+
+- Malta: the 68 local councils are dissolved into the 6 NSO statistical districts (`mt_districts.json`, with its source). Keys are `MT::<district>`.
+- Crimea (`UA-43`) and Sevastopol (`UA-40`) belong to Ukraine (the country outline in `assets/custom.geo.json` matches).
+
+Changing a country's regions changes saved visit keys. Running the script also writes `assets/admin1_key_migration.json` (old key -> new key per country). The app applies it once per user (`SubregionProvider`, flag `subregionKeyMigrationV<version>`). Bump `MIGRATION_VERSION` when adding new moves.
+
 ## Regenerate
 
 From the project root in PowerShell, download the Natural Earth GeoJSON to `build/admin1/natural_earth_admin1.geojson`. Download https://www.geoboundaries.org/api/current/gbOpen/ALL/ADM1/ to `build/admin1/geoboundaries_adm1_catalog.json`. For KIR, TUV, NIU, download that country's `simplifiedGeometryGeoJSON` URL from the catalog to `build/admin1/gb_KIR.geojson`, `gb_TUV.geojson`, `gb_NIU.geojson`. For exact supplement versions, use the pinned links in the committed coverage manifest (geoBoundaries commit 9469f09).

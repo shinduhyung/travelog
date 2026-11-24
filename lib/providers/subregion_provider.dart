@@ -2,6 +2,7 @@
 
 import 'package:jidoapp/services/country_region_access.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 import 'package:jidoapp/models/admin_region.dart';
@@ -103,8 +104,68 @@ class SubregionProvider with ChangeNotifier {
       }
     }
 
+    await _applyKeyMigration();
     _isLoading = false;
     notifyListeners();
+  }
+
+  // ─── 지역 키 1회 이전 ────────────────────────────────────────────────────
+  // 나라의 지역 구성이 바뀌면(몰타 68개 지방의회 → 6개 통계 구역, 크림·
+  // 세바스토폴 러시아 → 우크라이나) 저장된 키를 새 키로 옮긴다.
+  // 표는 tool/admin1_overrides/apply.py가 만든 assets/admin1_key_migration.json.
+  static const String _keyMigrationVersionKey = 'subregionKeyMigrationVersion';
+
+  Future<void> _applyKeyMigration() async {
+    try {
+      final table = json.decode(
+        await rootBundle.loadString('assets/admin1_key_migration.json'),
+      ) as Map<String, dynamic>;
+      final int version = table['version'] as int;
+      final prefs = await SharedPreferences.getInstance();
+      final user = _auth.currentUser;
+      int done = prefs.getInt(_keyMigrationVersionKey) ?? 0;
+      if (user != null && done < version) {
+        final doc = await UserDocLoader.instance.load(user.uid);
+        final remote = doc.data()?[_keyMigrationVersionKey];
+        if (remote is int && remote > done) done = remote;
+      }
+      if (done >= version) return;
+
+      final changed = migrateVisitedRegionKeys(_visitedSubregions, table);
+      if (changed) await _saveVisitedSubregions();
+      await prefs.setInt(_keyMigrationVersionKey, version);
+      if (user != null) {
+        await _firestore.collection('users').doc(user.uid).set({
+          _keyMigrationVersionKey: version,
+        }, SetOptions(merge: true));
+      }
+    } catch (e) {
+      if (kDebugMode) debugPrint('[SubregionProvider] key migration failed: $e');
+    }
+  }
+
+  /// [visited]의 키를 [table]('moves': from/to 나라 ISO A3 + 옛 키 → 새 키)
+  /// 대로 옮긴다. 자식 지역 중 하나라도 방문했으면 새 지역도 방문.
+  /// 바뀐 게 있으면 true. 테스트용으로 public static.
+  static bool migrateVisitedRegionKeys(
+    Map<String, Set<String>> visited,
+    Map<String, dynamic> table,
+  ) {
+    bool changed = false;
+    for (final move in (table['moves'] as List).cast<Map<String, dynamic>>()) {
+      final from = move['from'] as String;
+      final to = move['to'] as String;
+      final keys = Map<String, String>.from(move['keys'] as Map);
+      final source = visited[from];
+      if (source == null) continue;
+      for (final entry in keys.entries) {
+        if (!source.remove(entry.key)) continue;
+        visited.putIfAbsent(to, () => <String>{}).add(entry.value);
+        changed = true;
+      }
+      if (source.isEmpty && from != to) visited.remove(from);
+    }
+    return changed;
   }
 
   // 2. 데이터 저장 (로컬 + 서버)
@@ -251,6 +312,7 @@ class SubregionProvider with ChangeNotifier {
       }
     }
 
+    await _applyKeyMigration();
     _isLoading = false;
     notifyListeners();
   }
