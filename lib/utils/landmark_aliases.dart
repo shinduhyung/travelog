@@ -17,6 +17,24 @@ const landmarkAliases = <String, String>{
   'Sé Cathedral': 'Sao Paulo Cathedral',
   'Mercado Municipal': 'Mercado Municipal de Sao Paulo',
   'Stone Forest': 'Shilin Stone Forest',
+  // 2026-11-24 landmark audit: merged duplicates and fixed names.
+  'Nijmeh Square ': 'Nijmeh Square',
+  'Plaza Mayor, Salamance': 'Plaza Mayor, Salamanca',
+  'Wieskyrche': 'Wieskirche',
+  'Parliament Haus': 'National Parliament House',
+  'Sogne River': 'Sognefjord',
+  'Simien Lava Desert': 'Danakil Depression',
+  'Lujan Basilica': 'Basilica de Lujan',
+  'Jefferson Memorial': 'Thomas Jefferson Memorial',
+  'Great Market Hall': 'Central Market Hall',
+  'Old Arbat Street': 'Arbat Street',
+  'Muzeul Național al Satului': 'Village Museum',
+  'Ixchel Museum of Indigenous Textiles': 'Museo Ixchel del Traje Indígena',
+  'Archiginnasio of Bologna': "Palazzo dell'Archiginnasio anatomical theatre",
+  'Golden Hall': 'Golden Roof',
+  'Drum and Bell Towers': 'Drum Tower',
+  'Binondo': 'Binondo Chinatown',
+  'Eureka Tower': 'Melbourne Skydeck',
 };
 
 String canonicalLandmarkName(String name) => landmarkAliases[name] ?? name;
