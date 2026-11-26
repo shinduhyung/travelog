@@ -6,7 +6,7 @@
 최신 커밋: `f6518c4` (chore: release Android 1.0.13 (104) / iOS 1.0.36 (1))
 
 ## 할 일
-1. 최신 코드 받기: `python3 scripts/sync_project.py` → `git log -1`이 `f6518c4`인지 확인
+1. 최신 코드 받기: `python3 scripts/sync_project.py` → `git log -1`이 `0295d67` 이후인지 확인
 2. `flutter pub get` (새 asset 파일이 추가됐으므로 필수)
 3. `docs/ios_handoff_2026-11-24_data_fixes.md`의 지역 테스트 9개와 화면 확인 항목을 실행
 4. `platform_versions.json`의 iOS가 `1.0.36` / `1`인지 확인
